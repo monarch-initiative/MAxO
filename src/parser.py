@@ -13,4 +13,4 @@ for child in list(body):
                 print(child.text)
             if(child.tag=='sec'):
                 for sec_child in child:
-                    print sec_child.text               
+                    print (sec_child.text)
