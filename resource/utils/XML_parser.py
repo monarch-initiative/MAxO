@@ -46,8 +46,10 @@ if __name__ == "__main__":
     for file in files_to_parse:
         export_path = EXPORT_FOLDER + disease_name(file) + '.txt'
         extracted = extract_Management(file)
+        url = "http://www.ncbi.nlm.nih.gov/books/n/gene/" + disease_name(file)
         if (not extracted == ''):
             export = open(export_path, 'w+')
+            export.write(url)
             export.write(extracted)
             export.close()
 
