@@ -37,6 +37,8 @@ def extract_sec(section):
             extractedText = extractedText + " " + extract_text_from_p(child).rstrip()
         if (child.tag == 'title'):
             extractedText = extractedText + '\n\n' + child.text.lstrip() + '\n\n'
+        if (child.tag == 'table-wrap'):
+            extractedText = extractedText + '\n\n' + extract_text_from_p(child).rstrip() + '\n\n'
     return extractedText
 
 
@@ -80,11 +82,15 @@ if __name__ == "__main__":
     for file in files_to_parse:
         export_path = EXPORT_FOLDER + disease_name(file) + '.txt'
         extracted = extract_Management(file)
+        lines = []
+        for line in extracted.split('\n'):
+            lines.append(line.lstrip())
+        extracted_formated = '\n'.join(lines)
         url = "http://www.ncbi.nlm.nih.gov/books/n/gene/" + disease_name(file)
         if (not extracted == ''):
             export = open(export_path, 'w+')
             export.write(url)
-            export.write(extracted)
+            export.write(extracted_formated)
             export.close()
 
 
