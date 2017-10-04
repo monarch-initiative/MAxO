@@ -15,7 +15,7 @@ def extract_sec(section):
     extractedText = ''
     for child in section.iter():
         if (child.tag == 'p'):
-            extractedText = extractedText + " " + extract_text_from_p(child)
+            extractedText = extractedText + " " + extract_text_from_p(child).rstrip()
         if (child.tag == 'title'):
             extractedText = extractedText + '\n\n' + child.text.lstrip() + '\n\n'
     return extractedText
