@@ -17,7 +17,7 @@ def extract_sec(section):
         if (child.tag == 'p'):
             extractedText = extractedText + " " + extract_text_from_p(child)
         if (child.tag == 'title'):
-            extractedText = extractedText + '\n\n' + child.text + '\n\n'
+            extractedText = extractedText + '\n\n' + child.text.lstrip() + '\n\n'
     return extractedText
 
 # It extracts all texts from the Management section, excluding links in the texts
