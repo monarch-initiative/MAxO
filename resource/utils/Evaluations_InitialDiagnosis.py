@@ -27,6 +27,13 @@ def get_texts_between(filepath, start_line, end_line):
     return '\n'.join(evaluation_initial_diagonosis)
 
 def get_short_sentences(filepath, threshold, short_sentences):
+    """
+    Retrieve the most frequent sentences/phrases
+
+    :param filepath: path to target file
+    :param threshold: max number of words
+    :param short_sentences: a dictionary for storing sentences and their number of appearance
+    """
     for line in iter(open(filepath)):
         # replace all ';' and '.' to linebreaker so that they can be break into individual sentences
         for sentence in line.replace(';', '\n').replace('.', '\n').split('\n'):
@@ -38,11 +45,43 @@ def get_short_sentences(filepath, threshold, short_sentences):
                     short_sentences[sentence.strip()] = 1
 
 
-def main():
+def dict_to_file(dict, path):
+    """ Save a dictionary to a file
+
+    :param dict: target dictionary
+    :param path: where to save the file
+    """
+    try:
+        file = open(path, 'w')
+    except OSError:
+        print('Cannot create file')
+    for item in dict:
+        file.write(str(item) + '\t' + str(dict[item]) + '\n')
+    file.close()
+
+
+def order_dictionary(dict):
+    """
+    Sort a dictionary based on the value (reverse)
+
+    :param dict: unordered dictionary
+    :return: ordered dictionary
+    """
+    return OrderedDict(sorted(dict.items(), key=lambda t: t[1], reverse=True))
+
+
+def frequent_sentences_initial_diagnosis():
+    """
+    Get the most frequent sentences in "Evaluation following Initial Diagnosis"
+    Threshold is set at 10 words.
+
+    :return: a text table with the most frequent sentences/phrases that are less than 10 words
+    """
     start_line = 'Evaluations Following Initial Diagnosis'
     end_line = 'Treatment of Manifestations'
+    path_evaluation_initial_diagnosis = '../Evaluation_initial_Diagnosis_all_disease.txt'
     try:
-        Evaluation_initial_Diagnosis = open('../Evaluation_initial_Diagnosis_all_disease.txt', 'w')
+        Evaluation_initial_Diagnosis = open(path_evaluation_initial_diagnosis, 'w')
     except OSError:
         print('Cannot create file')
     all_files = glob.glob('../Gene_Reviews_Extracted/*.txt')
@@ -50,19 +89,41 @@ def main():
         Evaluation_initial_Diagnosis.write(get_texts_between(file, start_line, end_line))
     Evaluation_initial_Diagnosis.close()
 
+
     short_sentences = {}
-    filepath = '../Evaluation_initial_Diagnosis_all_disease.txt'
+    target = '../Evaluation_initial_Diagnosis_all_disease.txt'
     threshold = 10
-    get_short_sentences(filepath, threshold, short_sentences)
-    most_freqent_10 = OrderedDict(sorted(short_sentences.items(), key=lambda t: t[1], reverse=True))
+    get_short_sentences(target, threshold, short_sentences)
+    most_freqent_10 = order_dictionary(short_sentences)
+    dict_to_file(most_freqent_10, '../most_frequent_phrase_10_words_initial_diagnosis.txt')
+
+
+def frequent_sentences_all_management():
+    """
+        Get the most frequent sentences in the entire Management section
+        Threshold is set at 10 words. Note: results not very good.
+
+        :return: a text table with the most frequent sentences/phrases that are less than 10 words
+        """
+    start_line = 'Management'
+    end_line = '++++++++++++++++++++++++++++++++++++'
+
     try:
-        most_frequent = open('../most_frequent_phrase_10_words.txt', 'w')
+        entire_management = open('../management_all_disease.txt', 'w')
     except OSError:
         print('Cannot create file')
-    for item in most_freqent_10:
-        most_frequent.write(str(item) + '\t'+ str(most_freqent_10[item]) + '\n')
-    most_frequent.close()
+    all_files = glob.glob('../Gene_Reviews_Extracted/*.txt')
+    for file in all_files:
+        entire_management.write(get_texts_between(file, start_line, end_line))
+    entire_management.close()
 
+    short_sentences = {}
+    target = '../management_all_disease.txt'
+    threshold = 10
+    get_short_sentences(target, threshold, short_sentences)
+    most_freqent_10 = order_dictionary(short_sentences)
+    dict_to_file(most_freqent_10, '../most_frequent_phrase_10_words_entire_management.txt')
 
 if __name__ == '__main__':
-    main()
+    frequent_sentences_initial_diagnosis()
+    #frequent_sentences_all_management()
