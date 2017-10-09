@@ -36,7 +36,7 @@ def get_short_sentences(filepath, threshold, short_sentences):
     """
     for line in iter(open(filepath)):
         # replace all ';' and '.' to linebreaker so that they can be break into individual sentences
-        for sentence in line.replace(';', '\n').replace('.', '\n').split('\n'):
+        for sentence in line.lower().replace(';', '\n').replace('.', '\n').split('\n'):
                 # for each sentence, get the number of words; put words <= threshold to dictionary
             if sentence.strip() and len(sentence.strip()) > 2 and len(re.split('\W', sentence)) <= threshold:
                 if sentence.strip() in short_sentences.keys():
@@ -124,6 +124,15 @@ def frequent_sentences_all_management():
     most_freqent_10 = order_dictionary(short_sentences)
     dict_to_file(most_freqent_10, '../most_frequent_phrase_10_words_entire_management.txt')
 
+def frequent_after_manual_parsing():
+    short_sentences = {}
+    target = '../manual_parse_Evaluation_initial_Diagnosis_all_disease.text'
+    threshold = 10
+    get_short_sentences(target, threshold, short_sentences)
+    most_freqent_10 = order_dictionary(short_sentences)
+    dict_to_file(most_freqent_10, '../most_frequent_phrase_10_words_initial_diagnosis_manual_parsing.txt')
+
 if __name__ == '__main__':
     frequent_sentences_initial_diagnosis()
     #frequent_sentences_all_management()
+    frequent_after_manual_parsing()
