@@ -1,6 +1,8 @@
 import glob
 from collections import OrderedDict
 import re
+import os
+from XML_parser import disease_name
 
 
 def get_texts_between(filepath, start_line, end_line):
@@ -92,11 +94,28 @@ def frequent_sentences_initial_diagnosis():
 
     short_sentences = {}
     target = '../Evaluation_initial_Diagnosis_all_disease.txt'
-    threshold = 10
+    threshold = 15
     get_short_sentences(target, threshold, short_sentences)
     most_freqent_10 = order_dictionary(short_sentences)
-    dict_to_file(most_freqent_10, '../most_frequent_phrase_10_words_initial_diagnosis.txt')
+    dict_to_file(most_freqent_10, '../most_frequent_phrase_15_words_initial_diagnosis.txt')
 
+def section_initial_diagnosis():
+    """
+    Save the paragraph Evaluations Following Initial Diagnosis into individual files.
+
+    """
+    start_line = 'Evaluations Following Initial Diagnosis'
+    end_line = 'Treatment of Manifestations'
+    folder = '../Gene_Reviews_Extracted/Evaluations_Initial_Diagnosis/'
+    all_files = glob.glob('../Gene_Reviews_Extracted/*.txt')
+    for file in all_files:
+        try:
+            path_evaluation_initial_diagnosis = ''.join([folder, 'initial_', disease_name(file), '.txt'])
+            Evaluation_initial_Diagnosis = open(path_evaluation_initial_diagnosis, 'w')
+        except OSError:
+            print('Cannot create file')
+        Evaluation_initial_Diagnosis.write(get_texts_between(file, start_line, end_line))
+        Evaluation_initial_Diagnosis.close()
 
 def frequent_sentences_all_management():
     """
@@ -136,3 +155,4 @@ if __name__ == '__main__':
     frequent_sentences_initial_diagnosis()
     #frequent_sentences_all_management()
     frequent_after_manual_parsing()
+    section_initial_diagnosis()
