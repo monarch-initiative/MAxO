@@ -5,6 +5,7 @@ from nltk.corpus import wordnet
 
 # for all grammars
 grammars = []
+extracted = {}
 
 
 def unusual_word(text):
@@ -79,7 +80,8 @@ def subtree_string(tree, grammar):
     """Extract the strings from extracted chunk"""
     for subtree in tree.subtrees():
         if subtree.label() == grammar.split(':')[0].strip():
-            print(' '.join([text for (text, tag) in subtree.leaves()]))
+            extracted = ' '.join([text for (text, tag) in subtree.leaves()])
+            print(extracted) # TODO: return a list of strings
 
 
 def add_grammar(new_grammar):
@@ -107,11 +109,21 @@ def main():
     gene_reviews = PlaintextCorpusReader(corpus_root, '.*')
 
     # define grammar for interested phrases
-    grammar = "VP: {<VB><.*>*<TO><VB><JJ.*>*<NN.*>$}"
+    grammar = "NP: {<JJ.*|DT>*<NN.*>*<IN|DT>*<NN.*><TO>}" # e.g. Evaluation of the palate to
     add_grammar(grammar)
-    parseall(gene_reviews)
 
-   # parse(gene_reviews, grammar)
+    grammar = "NP: {<JJ.*|DT>*<NN.*>*<CC><JJ.*|DT>*<NN.*>*<TO>}"
+    add_grammar(grammar)
+
+    grammar = "VP: {<VB|VBJ><JJ.*|DT>*<NN.*><CC>*<JJ.*|DT>*<NN.*>*}"
+    add_grammar(grammar)
+    # just parse the most recent grammar
+    #parse(gene_reviews, grammar)
+
+    # parse with all grammars
+    print(grammars)
+    parseall(gene_reviews)
+    #TODO: save to a list
 """
 
     for ids in gene_reviews.fileids():
