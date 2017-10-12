@@ -2,10 +2,11 @@ import nltk
 from nltk.corpus import PlaintextCorpusReader
 from nltk.corpus import stopwords
 from nltk.corpus import wordnet
+from collections import defaultdict
+from Evaluations_InitialDiagnosis import order_dictionary, dict_to_file
 
 # for all grammars
 grammars = []
-extracted = {}
 
 
 def unusual_word(text):
@@ -76,28 +77,31 @@ def phrase_retrieval(grammar, sentence):
     return cp.parse(sentence)
 
 
-def subtree_string(tree, grammar):
-    """Extract the strings from extracted chunk"""
+def subtree_string(tree, grammar, dict_default):
+    """Extract the strings from extracted chunk. Return a dictionary."""
     for subtree in tree.subtrees():
         if subtree.label() == grammar.split(':')[0].strip():
-            extracted = ' '.join([text for (text, tag) in subtree.leaves()])
-            print(extracted) # TODO: return a list of strings
+            phrase = ' '.join([text for (text, tag) in subtree.leaves()])
+            dict_default[phrase.lower()] += 1 # TODO: return a list of strings
 
+
+def string_to_dict(string, dict_default):
+    dict_default[string] += 1
 
 def add_grammar(new_grammar):
     grammars.append(new_grammar)
 
 
-def parseall(text_corpus):
+def parseall(text_corpus, dict_default):
     for grammar in grammars:
-        parse(text_corpus, grammar)
+        parse(text_corpus, grammar, dict_default)
 
 
-def parse(text_corpus, new_grammar):
+def parse(text_corpus, new_grammar, dict_default):
     for ids in text_corpus.fileids():
         for sent in text_preprocess(text_corpus.raw(ids)):
             tree = phrase_retrieval(new_grammar, sent)
-            subtree_string(tree, new_grammar)
+            subtree_string(tree, new_grammar, dict_default)
 
 
 
@@ -107,6 +111,7 @@ def main():
     # read in all text files
     corpus_root = '../Gene_Reviews_Extracted/Evaluations_Initial_Diagnosis'
     gene_reviews = PlaintextCorpusReader(corpus_root, '.*')
+    extracted_phrases = defaultdict(int) # use it to save extracted phrases
 
     # define grammar for interested phrases
     grammar = "NP: {<JJ.*|DT>*<NN.*>*<IN|DT>*<NN.*><TO>}" # e.g. Evaluation of the palate to
@@ -118,19 +123,14 @@ def main():
     grammar = "VP: {<VB|VBJ><JJ.*|DT>*<NN.*><CC>*<JJ.*|DT>*<NN.*>*}"
     add_grammar(grammar)
     # just parse the most recent grammar
-    #parse(gene_reviews, grammar)
+    #parse(gene_reviews, grammar, extracted_phrases)
 
     # parse with all grammars
     print(grammars)
-    parseall(gene_reviews)
-    #TODO: save to a list
-"""
+    parseall(gene_reviews, extracted_phrases)
+    extracted_phrases = order_dictionary(extracted_phrases)
+    dict_to_file(extracted_phrases, '../auto_parse_NLTK.txt')
 
-    for ids in gene_reviews.fileids():
-        for sent in text_preprocess(gene_reviews.raw(ids)):
-            tree = phrase_retrieval(grammar, sent)
-            subtree_string(tree, grammar)
-"""
 
 if __name__ == '__main__':
     main()
