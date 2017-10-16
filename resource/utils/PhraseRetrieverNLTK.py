@@ -126,7 +126,7 @@ def main():
     add_grammar(grammar)
 
     # modify the following grammar for testing, use add_grammar(grammar) to export the list to file
-    grammar = "VP: {<VB><JJ.*>*<NN*>*<TO|IN><JJ.*|DT>*<JJ>*<NN.*>}"
+    grammar = "VP: {<VB><JJ.*>*<NN*>*<TO|IN><.*>*<JJ.*|DT>*<JJ>*<NN.*>}"
 
     # parse the most recent grammar, and print in console for review
     test_dict = defaultdict(int)
