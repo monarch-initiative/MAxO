@@ -122,12 +122,13 @@ def main():
     grammar = "NP: {<JJ.*|DT>*<NN.*>*<CC><JJ.*|DT>*<NN.*>*<TO>}"
     add_grammar(grammar)
 
-    grammar = "VP: {<VB|VB|NNJ><JJ.*|DT>*<NN.*><CC>*<JJ.*|DT>*<NN.*>*}"
+    grammar = "VP: {<VB|NNJ><JJ.*|DT>*<NN.*><CC>*<JJ.*|DT>*<NN.*>*}"
     add_grammar(grammar)
 
-    grammar = "VP: {<VB.*>*<JJ.*> <NN> <IN> <.*><NN.*>}"
+    # modify the following grammar for testing, use add_grammar(grammar) to export the list to file
+    grammar = "VP: {<VB><JJ.*>*<NN*>*<TO|IN><JJ.*|DT>*<JJ>*<NN.*>}"
 
-    # parse the most recent grammar, and print in console
+    # parse the most recent grammar, and print in console for review
     test_dict = defaultdict(int)
     parse(gene_reviews, grammar, test_dict)
     for (string, freq) in order_dictionary(test_dict).items():
