@@ -78,33 +78,35 @@ def phrase_retrieval(grammar, sentence):
 
 
 def subtree_string(tree, grammar, dict_default):
-    """Extract the strings from extracted chunk. Return a dictionary."""
+    """Extract strings from extracted chunk. Return a dictionary.
+
+    @tree: a tree representation of tokenized sentences. Subtree contains chunks that have been extracted.
+    @grammar: the grammar used to extract chunks. It is needed to identify target subtrees (chunks)
+    @dict_default: a defaultdict where to put extracted phrases to
+    """
     for subtree in tree.subtrees():
         if subtree.label() == grammar.split(':')[0].strip():
             phrase = ' '.join([text for (text, tag) in subtree.leaves()])
-            dict_default[phrase.lower()] += 1 # TODO: return a list of strings
+            dict_default[phrase.lower()] += 1
 
-
-def string_to_dict(string, dict_default):
-    dict_default[string] += 1
 
 def add_grammar(new_grammar):
+    """Add new grammars"""
     grammars.append(new_grammar)
 
 
 def parseall(text_corpus, dict_default):
+    """Parse text corpus with all grammars that are defined, and export to a defaultdict"""
     for grammar in grammars:
         parse(text_corpus, grammar, dict_default)
 
 
 def parse(text_corpus, new_grammar, dict_default):
+    """Parse text corpus with one grammar, and export to a defaultdict"""
     for ids in text_corpus.fileids():
         for sent in text_preprocess(text_corpus.raw(ids)):
             tree = phrase_retrieval(new_grammar, sent)
             subtree_string(tree, new_grammar, dict_default)
-
-
-
 
 
 def main():
@@ -120,17 +122,24 @@ def main():
     grammar = "NP: {<JJ.*|DT>*<NN.*>*<CC><JJ.*|DT>*<NN.*>*<TO>}"
     add_grammar(grammar)
 
-    grammar = "VP: {<VB|VBJ><JJ.*|DT>*<NN.*><CC>*<JJ.*|DT>*<NN.*>*}"
+    grammar = "VP: {<VB|VB|NNJ><JJ.*|DT>*<NN.*><CC>*<JJ.*|DT>*<NN.*>*}"
     add_grammar(grammar)
-    # just parse the most recent grammar
-    #parse(gene_reviews, grammar, extracted_phrases)
 
+    grammar = "VP: {<VB.*>*<JJ.*> <NN> <IN> <.*><NN.*>}"
+
+    # parse the most recent grammar, and print in console
+    test_dict = defaultdict(int)
+    parse(gene_reviews, grammar, test_dict)
+    for (string, freq) in order_dictionary(test_dict).items():
+        print (string, '\t', freq)
+
+"""
     # parse with all grammars
     print(grammars)
     parseall(gene_reviews, extracted_phrases)
     extracted_phrases = order_dictionary(extracted_phrases)
     dict_to_file(extracted_phrases, '../auto_parse_NLTK.txt')
-
+"""
 
 if __name__ == '__main__':
     main()
