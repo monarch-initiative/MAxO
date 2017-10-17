@@ -89,6 +89,39 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/MAO_0020208 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/MAO_0020208">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020035"/>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020210"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/MAO_0020070"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/MAO_0020009"/>
+        <rdfs:label>requiresTreatment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020210 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/MAO_0020210">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020036"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/MAO_0020009"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/MAO_0020070"/>
+        <rdfs:label>treatsSymptom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020211 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/MAO_0020211">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/MAO_0020030"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/MAO_0020070"/>
+        <rdfs:label>hasSymptoms</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -208,12 +241,12 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020012">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020009"/>
-        <rdfs:label>&apos;examination&apos;</rdfs:label>
+        <rdfs:label>examination method</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAO_0020012"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget>&apos;examination&apos;</owl:annotatedTarget>
+        <owl:annotatedTarget>examination method</owl:annotatedTarget>
         <rdfs:comment>list of tests (methods) to assess/evaluation a function</rdfs:comment>
     </owl:Axiom>
     
@@ -352,7 +385,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020039">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020006"/>
-        <rdfs:label>&apos;functional process&apos;</rdfs:label>
+        <rdfs:label>physiological function</rdfs:label>
     </owl:Class>
     
 
@@ -589,7 +622,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020065">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020058"/>
-        <rdfs:label>liver function test</rdfs:label>
+        <rdfs:label>liver function</rdfs:label>
     </owl:Class>
     
 
@@ -640,9 +673,14 @@
     <!-- http://purl.obolibrary.org/obo/MAO_0020070 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020070">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0031113"/>
         <rdfs:label>&apos;symptom&apos;</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAO_0020070"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget>&apos;symptom&apos;</owl:annotatedTarget>
+        <rdfs:comment>could be HPO terms</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -1647,15 +1685,6 @@ source: http://sydneynorthneurology.com.au/visual-evoked-potential-vep/</rdfs:co
     
 
 
-    <!-- http://purl.obolibrary.org/obo/MAO_0020176 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020176">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020058"/>
-        <rdfs:label>thyroid function</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/MAO_0020177 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020177">
@@ -1991,6 +2020,15 @@ source: http://www.chop.edu/conditions-diseases/laryngomalacia</rdfs:comment>
         <owl:annotatedTarget>&apos;urinalysis&apos;</owl:annotatedTarget>
         <rdfs:comment>a test of urine to detect a wide range of disorders, such as urinary tract infections, kidney disease and diabetes</rdfs:comment>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020212 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020212">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020038"/>
+        <rdfs:label>skin</rdfs:label>
+    </owl:Class>
     
 
 
