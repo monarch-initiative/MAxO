@@ -116,8 +116,20 @@
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/MAO_0020211">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/MAO_0020030"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/MAO_0020224"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/MAO_0020070"/>
         <rdfs:label>hasSymptoms</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020290 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/MAO_0020290">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020208"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/MAO_0020289"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/MAO_0020058"/>
+        <rdfs:label>requires assessment</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -410,12 +422,12 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020041">
         <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/MAO_0020058"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020009"/>
-        <rdfs:label>to evaluate</rdfs:label>
+        <rdfs:label>to evaluate a function</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAO_0020041"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget>to evaluate</owl:annotatedTarget>
+        <owl:annotatedTarget>to evaluate a function</owl:annotatedTarget>
         <rdfs:comment>by methods in &apos;examination&apos;</rdfs:comment>
     </owl:Axiom>
     
@@ -574,7 +586,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020058">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020009"/>
-        <rdfs:label>to assess</rdfs:label>
+        <rdfs:label>to assess a function</rdfs:label>
     </owl:Class>
     
 
@@ -1981,8 +1993,8 @@ source: http://www.chop.edu/conditions-diseases/laryngomalacia</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/MAO_0020203 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020203">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020010"/>
-        <rdfs:label>pancreatic cancer surveillance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020224"/>
+        <rdfs:label>pancreatic cancer</rdfs:label>
     </owl:Class>
     
 
@@ -2050,7 +2062,7 @@ source: http://www.chop.edu/conditions-diseases/laryngomalacia</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/MAO_0020214 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020214">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020226"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020240"/>
         <rdfs:label>excessive sunlight</rdfs:label>
     </owl:Class>
     
@@ -2059,7 +2071,7 @@ source: http://www.chop.edu/conditions-diseases/laryngomalacia</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/MAO_0020215 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020215">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020233"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020245"/>
         <rdfs:label>ultraviolet radiation</rdfs:label>
     </owl:Class>
     
@@ -2068,7 +2080,7 @@ source: http://www.chop.edu/conditions-diseases/laryngomalacia</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/MAO_0020216 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020216">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020233"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020245"/>
         <rdfs:label>ionizing radiation</rdfs:label>
     </owl:Class>
     
@@ -2214,6 +2226,540 @@ source: http://www.chop.edu/conditions-diseases/laryngomalacia</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020233">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020007"/>
         <rdfs:label>medical factors</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020234 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020234">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020231"/>
+        <rdfs:label>smoking</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020235 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020235">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020231"/>
+        <rdfs:label>fasting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020236 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020236">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020232"/>
+        <rdfs:label>Valproic Acid</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAO_0020236"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget>Valproic Acid</owl:annotatedTarget>
+        <rdfs:comment>is used to treat seizure disorders, mental/mood conditions (such as manic phase of bipolar disorder), and to prevent migraine headaches. It works by restoring the balance of certain natural substances (neurotransmitters) in the brain.
+
+source: https://www.webmd.com/drugs/2/drug-8885/valproic-acid-oral/details</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020237 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020237">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020227"/>
+        <rdfs:label>sports</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020238 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020238">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020237"/>
+        <rdfs:label>contact sports</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020239 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020239">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020237"/>
+        <rdfs:label>competitive sports</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020240 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020240">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020226"/>
+        <rdfs:label>sunlight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020241 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020241">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020226"/>
+        <rdfs:label>UV</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020242 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020242">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020232"/>
+        <rdfs:label>estrogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020243 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020243">
+        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/MAO_0020266"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020229"/>
+        <rdfs:label>excess protein intake</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020244 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020244">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020233"/>
+        <rdfs:label>exposure to communicable diseases</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020245 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020245">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020233"/>
+        <rdfs:label>radiation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020246 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020246">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020233"/>
+        <rdfs:label>blood transfusion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020247 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020247">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020229"/>
+        <rdfs:label>saffron</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020248 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020248">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020229"/>
+        <rdfs:label>nuts</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020249 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020249">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020252"/>
+        <rdfs:label>mussel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020250 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020250">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020229"/>
+        <rdfs:label>dark chocolate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020251 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020251">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020229"/>
+        <rdfs:label>meat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020252 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020252">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020229"/>
+        <rdfs:label>seafood</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020253 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020253">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020070"/>
+        <rdfs:label>hypertension</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020254 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020254">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020007"/>
+        <rdfs:label>psychological stress</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020255 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020255">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020007"/>
+        <rdfs:label>therapy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020256 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020256">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020255"/>
+        <rdfs:label>iron therapy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020257 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020257">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020232"/>
+        <rdfs:label>oxidant drug</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020258 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020258">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020232"/>
+        <rdfs:label>antimalarial</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020259 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020259">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020233"/>
+        <rdfs:label>supplement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020260 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020260">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020259"/>
+        <rdfs:label>iron supplement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020261 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020261">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020232"/>
+        <rdfs:label>medications known to prolong qt intervals</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020262 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020262">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020226"/>
+        <rdfs:label>sudden changes in environment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020263 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020263">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020227"/>
+        <rdfs:label>over-sedation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020264 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020264">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020014"/>
+        <rdfs:label>splenectomy</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAO_0020264"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget>splenectomy</owl:annotatedTarget>
+        <rdfs:comment>a surgical procedure to remove your spleen</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020265 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020265">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020232"/>
+        <rdfs:label>azathioprine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020266 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020266">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020229"/>
+        <rdfs:label>excess amino acids intake</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020267 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020267">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020229"/>
+        <rdfs:label>starvation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020268 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020268">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020232"/>
+        <rdfs:label>intravenous steroids</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020269 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020269">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020232"/>
+        <rdfs:label>hepatotoxic drugs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020270 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020270">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020007"/>
+        <rdfs:label>occupation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020271 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020271">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020270"/>
+        <rdfs:label>occupations requiring quick responses or good balance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020272 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020272">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020270"/>
+        <rdfs:label>arc welding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020273 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020273">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020226"/>
+        <rdfs:label>Asbestos</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAO_0020273"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget>Asbestos</owl:annotatedTarget>
+        <rdfs:comment>a set of six naturally occurring silicate minerals</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020274 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020274">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020232"/>
+        <rdfs:label>vagotonic agents</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020275 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020275">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020232"/>
+        <rdfs:label>α-adrenergic agonists</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020276 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020276">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020232"/>
+        <rdfs:label>β-adrenergic antagonists</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020277 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020277">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020232"/>
+        <rdfs:label>tricyclic antidepressants</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020278 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020278">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020232"/>
+        <rdfs:label>first-generation antihistamines</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020279 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020279">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020232"/>
+        <rdfs:label>cocaine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020280 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020280">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020232"/>
+        <rdfs:label>class 1c antiarrhythmic drugs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020281 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020281">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020232"/>
+        <rdfs:label>class 1a agents</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020282 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020282">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020229"/>
+        <rdfs:label>excess fat intake</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020283 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020283">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020285"/>
+        <rdfs:label>extreme temperatures</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020284 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020284">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020232"/>
+        <rdfs:label>glucocorticoids</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020285 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020285">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020226"/>
+        <rdfs:label>temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020286 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020286">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020285"/>
+        <rdfs:label>heat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020287 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020287">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020229"/>
+        <rdfs:label>excess phosphate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020288 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020288">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020070"/>
+        <rdfs:label>renal cysts</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020289 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020289">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020010"/>
+        <rdfs:label>routine functional assessment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAO_0020291 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAO_0020291">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAO_0020010"/>
+        <rdfs:label>consult an expert</rdfs:label>
     </owl:Class>
     
 
