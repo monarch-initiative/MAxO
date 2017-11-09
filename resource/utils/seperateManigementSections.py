@@ -63,7 +63,7 @@ def section_of_management_all_disease():
                       '_all_diseases.txt']) for str in section_lines[:len(section_lines) - 1]]
 
     for i in range(len(paths)):
-        with open(paths[i], 'a') as file_to_write_to:
+        with open(paths[i], 'w') as file_to_write_to:
             for file in all_files:
                     file_to_write_to.write(get_texts_between(file, section_lines[i], section_lines[(i + 1) :]))
 
@@ -78,8 +78,8 @@ def section_of_management_individual():
                for str in section_lines[:len(section_lines) - 1]]
     print(folders)
 
-    prefixs = ['initial_', 'manifestation_', 'prevention1_','prevention2_', 'surveillance_', 'avoidance_',
-               'therapies_on_going'] # 7 folders
+    prefixs = ['initial___', 'manifestation___', 'prevention1___','prevention2___', 'surveillance___', 'avoidance___',
+               'relatives___'] # 7 folders
     print(prefixs)
     for i in range(len(folders)):
         if not os.path.isdir(folders[i]):
