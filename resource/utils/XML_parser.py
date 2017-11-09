@@ -81,6 +81,23 @@ def disease_name(filepath):
     name_pos = len(path_split) - 1
     return path_split[name_pos].split('.')[0]
 
+def gene_NBKid():
+    """
+    Returns a dictionary of relationships between gene symbols and NBKid
+    :return:
+    """
+    gene_NBKid_dict = {}
+    with open('../GRtitle_shortname_NBKid.txt', 'r', encoding='latin') as file:
+        for line in file.readlines():
+            elem = line.split('\t')
+            gene = elem[0]
+            NBKid = elem[2]
+            if gene not in gene_NBKid_dict.keys():
+                gene_NBKid_dict[gene] = NBKid
+            else:
+                if gene_NBKid_dict[gene] != NBKid:
+                    print('one gene corresponds to multiple NBKid!')
+    return gene_NBKid_dict
 
 if __name__ == "__main__":
     files_to_parse = glob.glob("../gene_NBK1116/*.nxml")
