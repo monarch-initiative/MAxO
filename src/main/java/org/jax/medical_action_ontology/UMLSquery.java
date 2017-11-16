@@ -24,7 +24,7 @@ public class UMLSquery implements Runnable {
 	static RestTicketClient ticketClient = new RestTicketClient(API_KEY);
 	static String ticket = ticketClient.getTgt();
 	static String version = "2017AB";
-	static String outdir = "main/resources/Ontology_Terms/Multithreading_test/";
+	static String outdir = "src/main/resources/Ontology_Terms/Multithreading_test/";
 	private Path file;
 
 	public UMLSquery(Path file) {
@@ -39,7 +39,7 @@ public class UMLSquery implements Runnable {
 
 		do {
 			pageNumber++;
-			System.out.printf("Fetching result for page $d: \n", pageNumber);
+			System.out.printf("Fetching result for page %d: \n", pageNumber);
 			RestAssured.baseURI = "https://uts-ws.nlm.nih.gov";
 			Response response = given()
 					.request().with()

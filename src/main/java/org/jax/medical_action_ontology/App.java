@@ -14,7 +14,7 @@ public class App
 {
     public static void main(String[] args) {
 
-        Path indir = Paths.get("main/resources/Ontology_Terms/Most_Frequent_Sens");
+        Path indir = Paths.get("src/main/resources/Ontology_Terms/Most_Frequent_Sens");
         ArrayList<Thread> threads = new ArrayList<>();
         try (DirectoryStream<Path> files = Files.newDirectoryStream(indir)) {
             for (Path file : files) {
@@ -27,7 +27,7 @@ public class App
                 thread.start();
             }
              **/
-            //TODO: Fix-if run threads individually, no problem; if run all threads, some threads terminates before completing their task.
+            //TODO: Fix-if run threads individually, no problem; if run all threads, some threads terminates before processing entire file.
            // threads.get(1).start(); //entire management
             threads.get(3).start();
 
