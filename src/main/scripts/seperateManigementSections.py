@@ -24,7 +24,7 @@ section_lines = ['Evaluations Following Initial Diagnosis',
                  'Evaluation of Relatives at Risk',
                  'Therapies Under Investigation']
 
-all_files = glob.glob('../Gene_Reviews_Extracted/*.txt')
+all_files = glob.glob('../resources/Gene_Reviews_Extracted/*.txt')
 
 
 def get_texts_between(filepath, start_line, end_lines):
@@ -56,7 +56,7 @@ def section_of_management_all_disease():
     Divide the Management of each disease into subsections,
     and combine the same subsections of all diseases into a single file.
     """
-    new_folder = '../Gene_Reviews_Extracted/Sections_combined/'
+    new_folder = '../resources/Gene_Reviews_Extracted/Sections_combined/'
     if not os.path.isdir(new_folder):
         os.mkdir(new_folder)
     paths = [''.join([new_folder, str.replace('/', '_').replace(' ', '_'),
@@ -74,7 +74,7 @@ def section_of_management_individual():
     and save each subsection in invidual files.
 
     """
-    folders = [''.join(['../Gene_Reviews_Extracted/', str.replace('/', '_').replace(' ', '_'), '/'])
+    folders = [''.join(['../resources/Gene_Reviews_Extracted/', str.replace('/', '_').replace(' ', '_'), '/'])
                for str in section_lines[:len(section_lines) - 1]]
     print(folders)
 
@@ -95,7 +95,7 @@ def all_section_of_management_in_one():
     Combine the Management section of each disease into one single file.
 
     """
-    with open('../management_all_disease.txt', 'a') as entire_management:
+    with open('../resources/management_all_disease.txt', 'w') as entire_management:
         for file in all_files:
             entire_management.write(get_texts_between(file, section_lines[0], ['***************']))
 

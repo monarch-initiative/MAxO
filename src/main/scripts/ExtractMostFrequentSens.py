@@ -140,40 +140,40 @@ def frequent_sentences_all_management():
         :return: a text table with the most frequent sentences/phrases that are less than 10 words
         """
     short_sentences = {}
-    target = '../management_all_disease.txt'
+    target = '../resources/management_all_disease.txt'
     threshold = 10
     get_short_sentences(target, threshold, short_sentences)
     most_freqent_10 = order_dictionary(short_sentences)
-    dict_to_file(most_freqent_10, '../most_frequent_phrase_10_words_entire_management.txt')
+    dict_to_file(most_freqent_10, '../resources/Ontology_Terms/most_frequent_phrase_10_words_entire_management.txt')
 
 def frequent_after_manual_parsing():
     short_sentences = {}
-    target = '../manual_parse_Evaluation_initial_Diagnosis_all_disease.text'
+    target = '../resources/manual_parse_Evaluation_initial_Diagnosis_all_disease.text'
     threshold = 10
     get_short_sentences(target, threshold, short_sentences)
     most_freqent_10 = order_dictionary(short_sentences)
-    dict_to_file(most_freqent_10, '../most_frequent_phrase_10_words_initial_diagnosis_manual_parsing.txt')
+    dict_to_file(most_freqent_10, '../resources/Ontology_Terms/most_frequent_phrase_10_words_initial_diagnosis_manual_parsing.txt')
 
 def get_ontology_terms():
     # get the most frequent sentences (no more than 10 words) of each subsection of management
-    target_files = glob.glob('../Gene_Reviews_Extracted/Sections_combined/*.txt')
+    target_files = glob.glob('../resources/Gene_Reviews_Extracted/Sections_combined/*.txt')
     for target in target_files:
-        out = ''.join(['../Ontology_Terms/Most_Frequent_Sens/most_frequent_10_', target.split('/')[-1]])
+        out = ''.join(['../resources/Ontology_Terms/Most_Frequent_Sens/most_frequent_10_', target.split('/')[-1]])
         frequent_sentences(target, out, threshold=10)
 
     # get the most frequent sentences (no more than 10 words) in the entire Management section
-    target = '../management_all_disease.txt'
-    out = '../Ontology_Terms/Most_Frequent_Sens/most_frequent_10_entire_management.txt'
+    target = '../resources/management_all_disease.txt'
+    out = '../resources/Ontology_Terms/Most_Frequent_Sens/most_frequent_10_entire_management.txt'
     frequent_sentences(target, out, threshold=10)
 
     # get the most frequent sentences (no more than 10 words) in the entire Management section after some manual parsing
-    target = '../manual_parse_Evaluation_initial_Diagnosis_all_disease.text'
-    out = '../Ontology_Terms/Most_Frequent_Sens/most_frequent_10_Evaluations_Following_Initial_Diagnosis_all_diseases_manually_parsed.txt'
+    target = '../resources/manual_parse_Evaluation_initial_Diagnosis_all_disease.text'
+    out = '../resources/Ontology_Terms/Most_Frequent_Sens/most_frequent_10_Evaluations_Following_Initial_Diagnosis_all_diseases_manually_parsed.txt'
     frequent_sentences(target, out, threshold=10)
 
 def get_ontology_terms_and_origin():
     try:
-        os.mkdir('../Ontology_Terms/Most_Frequent_Sens_and_Origin')
+        os.mkdir('../resources/Ontology_Terms/Most_Frequent_Sens_and_Origin')
     except FileExistsError:
         pass
     # get the most frequent sentences (no more than 10) of avoidance section
@@ -188,25 +188,25 @@ def get_ontology_terms_and_origin():
     input_folders = ['Agents_Circumstances_to_Avoid', 'Evaluation_of_Relatives_at_Risk',
                      'Evaluations_Following_Initial_Diagnosis', 'Prevention_of_Primary_Manifestations',
                      'Prevention_of_Secondary_Complications', 'Surveillance', 'Treatment_of_Manifestations']
-    out_folder = '../Ontology_Terms/Most_Frequent_Sens_and_Origin/'
+    out_folder = '../resources/Ontology_Terms/Most_Frequent_Sens_and_Origin/'
     for input_folder in input_folders:
-        target_files = glob.glob('../Gene_Reviews_Extracted/' + input_folder + '/*.txt')
+        target_files = glob.glob('../resources/Gene_Reviews_Extracted/' + input_folder + '/*.txt')
         out_file = out_folder + 'most_frequent_10_' + input_folder + '.txt'
         frequent_sentences_and_origin(target_files, out_file, threshold=10)
 
     # get the most frequent sentences (no more than 10 words) in the entire Management section
-    target = glob.glob('../Gene_Reviews_Extracted/*.txt')
-    out = '../Ontology_Terms/Most_Frequent_Sens_and_Origin/most_frequent_10_entire_management.txt'
+    target = glob.glob('../resources/Gene_Reviews_Extracted/*.txt')
+    out = '../resources/Ontology_Terms/Most_Frequent_Sens_and_Origin/most_frequent_10_entire_management.txt'
     frequent_sentences_and_origin(target, out, threshold=10)
 
     # get the most frequent sentences (no more than 10 words) in the entire Management section after some manual parsing
-    target = ['../manual_parse_Evaluation_initial_Diagnosis_all_disease.text']
+    target = ['../resources/manual_parse_Evaluation_initial_Diagnosis_all_disease.text']
     print('Unalbe to find origin on manully parsed data')
 
 
 def get_ontology_terms_and_xref():
     try:
-        os.mkdir('../Ontology_Terms/Most_Frequent_Sens_and_Xref')
+        os.mkdir('../resources/Ontology_Terms/Most_Frequent_Sens_and_Xref')
     except FileExistsError:
         pass
     # get the most frequent sentences (no more than 10) of avoidance section
@@ -214,19 +214,19 @@ def get_ontology_terms_and_xref():
     input_folders = ['Agents_Circumstances_to_Avoid', 'Evaluation_of_Relatives_at_Risk',
                      'Evaluations_Following_Initial_Diagnosis', 'Prevention_of_Primary_Manifestations',
                      'Prevention_of_Secondary_Complications', 'Surveillance', 'Treatment_of_Manifestations']
-    out_folder = '../Ontology_Terms/Most_Frequent_Sens_and_Xref/'
+    out_folder = '../resources/Ontology_Terms/Most_Frequent_Sens_and_Xref/'
     for input_folder in input_folders:
-        target_files = glob.glob('../Gene_Reviews_Extracted/' + input_folder + '/*.txt')
+        target_files = glob.glob('../resources/Gene_Reviews_Extracted/' + input_folder + '/*.txt')
         out_file = out_folder + 'most_frequent_10_' + input_folder + '.txt'
         frequent_sentences_and_xref(target_files, out_file, threshold=10)
 
     # get the most frequent sentences (no more than 10 words) in the entire Management section
-    target = glob.glob('../Gene_Reviews_Extracted/*.txt')
-    out = '../Ontology_Terms/Most_Frequent_Sens_and_Xref/most_frequent_10_entire_management.txt'
+    target = glob.glob('../resources/Gene_Reviews_Extracted/*.txt')
+    out = '../resources/Ontology_Terms/Most_Frequent_Sens_and_Xref/most_frequent_10_entire_management.txt'
     frequent_sentences_and_xref(target, out, threshold=10)
 
     # get the most frequent sentences (no more than 10 words) in the entire Management section after some manual parsing
-    target = ['../manual_parse_Evaluation_initial_Diagnosis_all_disease.text']
+    target = ['../resources/manual_parse_Evaluation_initial_Diagnosis_all_disease.text']
     print('Unalbe to find origin on manully parsed data')
 
 

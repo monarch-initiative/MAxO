@@ -9,15 +9,12 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
-/**
- * Hello world!
- *
- */
+
 public class App 
 {
     public static void main(String[] args) {
 
-        Path indir = Paths.get("../../MAO/resource/Ontology_Terms/Most_Frequent_Sens");
+        Path indir = Paths.get("main/resources/Ontology_Terms/Most_Frequent_Sens");
         ArrayList<Thread> threads = new ArrayList<>();
         try (DirectoryStream<Path> files = Files.newDirectoryStream(indir)) {
             for (Path file : files) {

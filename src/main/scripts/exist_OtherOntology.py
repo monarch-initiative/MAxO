@@ -3,7 +3,7 @@ import networkx
 import os
 import glob
 
-
+# oboselete. Better use the Java program to search UMLS
 class Ontology:
     def __init__(self, path):
         self.ontology = obonet.read_obo(path)
@@ -39,22 +39,24 @@ def ontologies_has_query(ontologies, query):
 
 
 def main():
-    chebi = Ontology('../Other_ontologies/chebi.obo')
-    hp = Ontology('../Other_ontologies/hp.obo')
-    uberon = Ontology('../Other_ontologies/uberon.obo')
+    dir_ontology = '../resources/Other_ontologies/'
+    chebi = Ontology(dir_ontology + 'chebi.obo')
+    hp = Ontology(dir_ontology + 'hp.obo')
+    uberon = Ontology(dir_ontology + 'uberon.obo')
 
     ontologies = {'chebi': chebi,
                   'hp': hp,
                   'uberon': uberon}
 
-    query_files = glob.glob('../Ontology_Terms/Most_Frequent_Sens/*.txt')
+    query_files = glob.glob('../resources/Ontology_Terms/Most_Frequent_Sens/*.txt')
     for query_file in query_files:
-        destin_file_path = '../Ontology_Terms/Most_Frequent_Sens_and_Xref/' + query_file.split('/')[-1]
+        destin_file_path = '../resources/Ontology_Terms/Most_Frequent_Sens_and_Xref/' + query_file.split('/')[-1]
         destin_file = open(destin_file_path, 'w')
         for lines in open(query_file, 'r').readlines():
             query = lines.split('\t')[0]
             destin_file.write(query + '\t' + ontologies_has_query(ontologies, query) + '\n')
         destin_file.close()
+
 if __name__ == '__main__':
     main()
 

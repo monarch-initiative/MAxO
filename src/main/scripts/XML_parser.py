@@ -2,6 +2,7 @@ import xml.etree.ElementTree as ET
 import glob
 import os
 
+#!/usr/bin/env python
 
 def extract_text_from_p(element):
     """ Extract texts from elements with a tag "p"
@@ -87,7 +88,7 @@ def gene_NBKid():
     :return:
     """
     gene_NBKid_dict = {}
-    with open('../GRtitle_shortname_NBKid.txt', 'r', encoding='latin') as file:
+    with open('../resources/GRtitle_shortname_NBKid.txt', 'r', encoding='latin') as file:
         for line in file.readlines():
             elem = line.split('\t')
             gene = elem[0]
@@ -100,12 +101,12 @@ def gene_NBKid():
     return gene_NBKid_dict
 
 if __name__ == "__main__":
-    files_to_parse = glob.glob("../gene_NBK1116/*.nxml")
+    files_to_parse = glob.glob("../resources/gene_NBK1116/*.nxml")
     try:
-        os.mkdir("../Gene_Reviews_Extracted")
+        os.mkdir("../resources/Gene_Reviews_Extracted")
     except FileExistsError:
-        pass
-    EXPORT_FOLDER = '../Gene_Reviews_Extracted/'
+        print("Folder already exists!\nContinue processing...")
+    EXPORT_FOLDER = '../resources/Gene_Reviews_Extracted/'
     for file in files_to_parse:
         export_path = EXPORT_FOLDER + disease_name(file) + '.txt'
         extracted = extract_Management(file)

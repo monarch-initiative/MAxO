@@ -24,7 +24,7 @@ public class UMLSquery implements Runnable {
 	static RestTicketClient ticketClient = new RestTicketClient(API_KEY);
 	static String ticket = ticketClient.getTgt();
 	static String version = "2017AB";
-	static String outdir = "../../MAO/resource/Ontology_Terms/Multithreading_test/";
+	static String outdir = "main/resources/Ontology_Terms/Multithreading_test/";
 	private Path file;
 
 	public UMLSquery(Path file) {
