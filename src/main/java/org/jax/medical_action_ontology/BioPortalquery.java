@@ -1,4 +1,7 @@
 package org.jax.medical_action_ontology;
+import com.jayway.jsonpath.Configuration;
+import com.jayway.jsonpath.JsonPath;
+import com.jayway.jsonpath.spi.mapper.JacksonMappingProvider;
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.response.Response;
 
@@ -30,7 +33,7 @@ public class BioPortalquery {
 
     public static void query(String term) {
 
-        int pageNumber = 2;
+        int pageNumber = 1;
         System.out.printf("Fetching result for page %d: \n", pageNumber);
         RestAssured.baseURI = "http://data.bioontology.org";
         Response response = given()
@@ -38,12 +41,14 @@ public class BioPortalquery {
                     .param("apikey", api_key)
                     .param("include", "prefLabel")
                     //.param("with_exact_match", true)
-                    .param("pageNumber", pageNumber)
-                    .param("pagesize", 50)
+                    .param("page", pageNumber)
+                    .param("pagesize", 5)
                     //.param("include_views", true) //unsure what it does
                     .param("include_views", false)
                     .param("display_context", false)
                     .param("display_links", false)
+                    .param("ontology", "CHEBI")
+                    .param("roots_only", true)
                 .expect()
                     .statusCode(200)
                 .get("search?q=" + term);
@@ -51,11 +56,43 @@ public class BioPortalquery {
         String output = response.getBody().asString();
 
         System.out.println(output);
+        Configuration config = Configuration.builder().mappingProvider(new JacksonMappingProvider()).build();
+        BioPortalSearchResult[] results = JsonPath.using(config).parse(output).read("$.collection", BioPortalSearchResult[].class);
 
     }
 
+    private class BioPortalSearchResult {
+        private String prefLabel;
+        private String id;
+        private String type;
+
+        public void setPrefLabel(String prefLabel) {
+            this.prefLabel = prefLabel;
+        }
+
+        public String getPrefLabel() {
+            return this.prefLabel;
+        }
+
+        public void setId(String id) {
+            this.id = id;
+        }
+
+        public String getId() {
+            return this.id;
+        }
+
+        public void setType(String type) {
+            this.type = type;
+        }
+
+        public String getType() {
+            return this.type;
+        }
+    }
+
     public static void main(String[] args) {
-        query("alcohol");
+        query("valproic acid");
     }
 
 }
