@@ -1,0 +1,43 @@
+pattern_name: avoid_consumption_of_foods
+classes:
+  avoidance of food: MAO:0020229
+  food entity: FOODON:03411564 
+  Thing: 'owl:Thing'
+relations:
+  has input: RO:0002352
+
+annotationProperties:
+  hasExactSynonym: oio:hasExactSynonym
+  def: "oio:hasDefinition"
+  reference: "oio:hasDbXref"
+
+vars:
+  food: "'food entity'"
+  Xref: "'Thing'"
+
+name:
+  text: "avoid consumption of %s"
+  vars:
+    - food
+
+annotations:
+  - annotationProperty: hasExactSynonym
+    text: "%s should be avoided"
+    vars:
+      - food
+
+  - annotationProperty: def
+    text: "A medical requirement of avoiding the consumption of %s. Negligence of the advice may interfere with disease treatment, prolong the recovery phase or even cause severe complications."
+    vars:
+      - food
+
+  - annotationProperty: reference
+    text: "refer to %s"
+    vars:
+      - Xref
+  
+equivalentTo:
+  text: "'avoidance of food' and ('has input' some %s)"
+  vars:
+    - food
+
