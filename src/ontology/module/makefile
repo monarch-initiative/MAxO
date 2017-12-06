@@ -10,27 +10,24 @@ avoid_foods-merged.owl:avoid_foods.owl xfoodon.owl xro.owl
 avoid_foods.owl:avoid_foods.tsv ${REF_ONTOLOGY_DIR}foodon-merged.owl
 	dosdp-tools generate --obo-prefixes=true --prefixes=../pattern/prefixes.yaml --template=../pattern/avoid_consumption_of_foods.yaml --infile=avoid_foods.tsv --ontology=../other_ontology/foodon-merged.owl --outfile=$@
 
-foodon-merged.owl:foodon.owl
+${REF_ONTOLOGY_DIR}foodon-merged.owl:${REF_ONTOLOGY_DIR}foodon.owl
 	robot merge --input $< --output $@
 
-foodon.owl:
+${REF_ONTOLOGY_DIR}foodon.owl:
 	mkdir -p ../other_ontology
 	$(DOWNLOAD) $@ 'https://raw.githubusercontent.com/FoodOntology/foodon/master/foodon.owl'
 
-xfoodon.owl:foodon-merged.owl food_terms.tsv
-	robot extract --method BOT --input ../other_ontology/foodon-merged.owl --term-file foods_terms.tsv --output xfoodon.owl -p "FOODON:http://purl.obolibrary.org/obo/FOODON_"
-	rm $^
+xfoodon.owl:${REF_ONTOLOGY_DIR}foodon-merged.owl food_terms.tsv
+	robot extract --method BOT --input ../other_ontology/foodon-merged.owl --term-file food_terms.tsv --output xfoodon.owl -p "FOODON:http://purl.obolibrary.org/obo/FOODON_"
+	rm food_terms.tsv
 
 food_terms.tsv:avoid_foods.tsv
 	cut -f 2 $< | sed '1d' > $@
 
-xro.owl:ro.owl ro_terms.tsv
+xro.owl:${REF_ONTOLOGY_DIR}ro.owl ro_terms.tsv
 	robot extract --method BOT --input ../other_ontology/ro.owl --term-file ro_terms.tsv --output xro.owl
-	rm $^
 
-ro.owl:
-	mkdir -p ../other_ontology
+${REF_ONTOLOGY_DIR}ro.owl:
+	mkdir -p ../other_ontology/
 	$(DOWNLOAD) $@ 'https://raw.githubusercontent.com/oborel/obo-relations/master/ro.owl'
 
-ro_terms.tsv:avoid_foods.tsv
-	cut -f 2 $< | sed '1d' > $@ 
