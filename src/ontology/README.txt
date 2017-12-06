@@ -1,4 +1,4 @@
-My method of creating ontologies modules
+STEPS of creating ontologies modules
 
 Goal: create medical action ontology with dosdp-tools and try to use existing ontologies as much as we can
 
