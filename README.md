@@ -15,5 +15,10 @@ Set up is similar to the HP edit set up (see the wikipage for editors)
 * Finally, tick the box "remember last ID between Protege sessions"
 
 ## RANGES:
+High level terms: 1-10,000 (top two levels)
 Peter: range 10,001-20,000
 Aaron: range 20,001-30,000
+
+avoid consumption of foods: 20001
+	range: 20,001 - 21,000
+ 
