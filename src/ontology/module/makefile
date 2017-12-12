@@ -1,7 +1,12 @@
 #create a module for MAO classes like "avoid_the_consumption_of_XXX"
+#then merge to MedAct.owl
 
 DOWNLOAD=curl -o
 REF_ONTOLOGY_DIR=../other_ontology/
+
+../MedAct.owl:avoid_foods-merged.owl
+	robot merge --input $@ --input $< --output $@
+	rm $<
 
 avoid_foods-merged.owl:avoid_foods.owl xfoodon.owl xro.owl
 	robot merge --input avoid_foods.owl --input xfoodon.owl --input xro.owl --output $@
