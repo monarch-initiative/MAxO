@@ -1,0 +1,36 @@
+pattern_name: biopsy_by_location
+
+classes:
+  med_action: MAXO:0000001
+
+relations:
+  med_action has location: RO:0004026
+
+vars:
+  med_action: "'medical action'"
+  location: "owl:Thing"
+
+name:
+  text: "%s of %s"
+  vars:
+   - med_action
+   - location
+
+annotations:
+  - annotationProperty: oio:hasExactSynonym
+    text: "%s %s"
+    vars:
+     - location
+     - med_action
+
+def:
+  text: "A %s is the removal of tissue from the %s."
+  vars:
+    - med_action
+    - location
+
+equivalentTo:
+  text: "%s and 'med_action has location' some %s"
+  vars:
+    - med_action
+    - location
