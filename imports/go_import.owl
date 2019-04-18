@@ -11,7 +11,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/imports/go_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2019-04-17/imports/go_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2019-04-18/imports/go_import.owl"/>
     </owl:Ontology>
     
 
@@ -49,7 +49,33 @@
 
     <!-- http://purl.obolibrary.org/obo/IAO_0100001 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0100001"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0100001">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">term replaced by</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Term not to be used for direct annotation</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Term not to be used for direct manual annotation</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/go#goslim_agr -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#goslim_agr">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AGR slim</rdfs:comment>
+    </owl:AnnotationProperty>
     
 
 
@@ -77,6 +103,14 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase Drosophila GO ribbon slim</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/go#goslim_generic -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#goslim_generic">
@@ -89,6 +123,14 @@
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#goslim_metagenomics">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metagenomics GO slim</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/go#goslim_mouse -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#goslim_mouse">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mouse GO slim</rdfs:comment>
     </owl:AnnotationProperty>
     
 
@@ -131,6 +173,12 @@
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#created_by -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by"/>
@@ -153,7 +201,9 @@
 
     <!-- http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_broad_synonym</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -175,7 +225,9 @@
 
     <!-- http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_narrow_synonym</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -195,6 +247,14 @@
     
 
 
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasSynonymType -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasSynonymType">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_synonym_type</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#id -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
@@ -206,6 +266,12 @@
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in_subset</rdfs:label>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#is_metadata_tag -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#is_metadata_tag"/>
     
 
 

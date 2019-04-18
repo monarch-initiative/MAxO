@@ -8,13 +8,16 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 Ontology(<urn:unnamed:ontology#ont1>
 
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000129>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000460>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0001062>))
+Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/biopsy_by_location.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns/abnormalAnatomicalEntity.yaml>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002314>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002573>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0004026>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/title>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
@@ -24,6 +27,14 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 ############################
 #   Classes
 ############################
+
+# Class: <http://purl.obolibrary.org/obo/upheno/patterns-dev/biopsy_by_location.yaml> (Biopsy of 'location')
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/upheno/patterns-dev/biopsy_by_location.yaml> "Removal of tissue from the 'location'."^^xsd:string)
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/upheno/patterns-dev/biopsy_by_location.yaml> "biopsy_by_location"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/upheno/patterns-dev/biopsy_by_location.yaml> "'location' biopsy"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/upheno/patterns-dev/biopsy_by_location.yaml> "Biopsy of 'location'"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/upheno/patterns-dev/biopsy_by_location.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000129> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004026> owl:Thing)))
 
 # Class: <http://purl.obolibrary.org/obo/upheno/patterns/abnormalAnatomicalEntity.yaml> (abnormal 'anatomical entity')
 
