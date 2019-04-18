@@ -1,4 +1,10 @@
 pattern_name: biopsy_by_location
+pattern_iri: http://purl.obolibrary.org/obo/upheno/patterns-dev/biopsy_by_location.yaml
+description: ""
+
+contributors:
+  - https://orcid.org/0000-0001-7941-2961
+  - https://orcid.org/0000-0002-7356-1779
 
 classes:
   biopsy: MAXO:0000129
@@ -6,7 +12,10 @@ classes:
 
 relations:
   med_action has location: RO:0004026
-
+  
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym 
+  
 vars:
   location: "'location'"
 
@@ -16,7 +25,7 @@ name:
    - location
 
 annotations:
-  - annotationProperty: oio:hasExactSynonym
+  - annotationProperty: exact_synonym
     text: "%s biopsy"
     vars:
      - location
