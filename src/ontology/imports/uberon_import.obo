@@ -1,0 +1,235 @@
+format-version: 1.2
+data-version: maxo/releases/2019-04-17/imports/uberon_import.owl
+ontology: maxo/imports/uberon_import
+
+[Term]
+id: UBERON:0001062
+name: anatomical entity
+namespace: uberon
+def: "Biological entity that is either an individual member of a biological species or constitutes the structural organization of an individual member of a biological species." [FMA:62955, http://orcid.org/0000-0001-9114-8737]
+subset: upper_level
+xref: AAO:0010841
+xref: AEO:0000000
+xref: BILA:0000000
+xref: birnlex:6
+xref: CARO:0000000
+xref: EHDAA2:0002229
+xref: FBbt:10000000
+xref: FBbt_root:00000000
+xref: FMA:62955
+xref: HAO:0000000
+xref: http://linkedlifedata.com/resource/umls/id/C1515976
+xref: MA:0000001
+xref: NCIT:C12219
+xref: TAO:0100000
+xref: TGMA:0001822
+xref: UMLS:C1515976 {source="ncithesaurus:Anatomic_Structure_System_or_Substance"}
+xref: WBbt:0000100
+xref: XAO:0000000
+xref: ZFA:0100000
+
+[Typedef]
+id: capable_of
+name: capable of
+namespace: uberon
+xref: RO:0002215
+is_a: functionally_related_to ! functionally related to
+
+[Typedef]
+id: capable_of_part_of
+name: capable of part of
+namespace: uberon
+xref: RO:0002216
+is_a: functionally_related_to ! functionally related to
+
+[Typedef]
+id: contains_process
+name: contains process
+namespace: uberon
+xref: BFO:0000067
+
+[Typedef]
+id: curator_notes
+name: curator notes
+namespace: uberon
+xref: IAO:0000232
+is_metadata_tag: true
+
+[Typedef]
+id: dc-creator
+name: creator
+namespace: uberon
+xref: http://purl.org/dc/elements/1.1/creator
+is_metadata_tag: true
+
+[Typedef]
+id: dc-source
+name: derived from resource
+namespace: uberon
+xref: http://purl.org/dc/elements/1.1/source
+is_metadata_tag: true
+
+[Typedef]
+id: developmentally_contributes_to
+name: developmentally_contributes_to
+namespace: uberon
+xref: RO:0002255
+holds_over_chain: develops_into part_of
+is_a: has_potential_to_developmentally_contribute_to ! has potential to developmentally contribute to
+
+[Typedef]
+id: developmentally_preceded_by
+name: developmentally preceded by
+namespace: uberon
+xref: RO:0002258
+
+[Typedef]
+id: develops_from
+name: develops_from
+namespace: uberon
+xref: RO:0002202
+holds_over_chain: part_of develops_from
+is_transitive: true
+is_a: has_developmental_contribution_from ! has developmental contribution from
+inverse_of: develops_into ! develops_into
+transitive_over: part_of ! part of
+
+[Typedef]
+id: develops_into
+name: develops_into
+namespace: uberon
+xref: RO:0002203
+is_a: has_potential_to_develop_into ! has potential to develop into
+
+[Typedef]
+id: editor_note
+name: editor note
+namespace: uberon
+xref: IAO:0000116
+is_metadata_tag: true
+
+[Typedef]
+id: example_of_usage
+name: example of usage
+namespace: uberon
+xref: IAO:0000112
+is_metadata_tag: true
+
+[Typedef]
+id: foaf-page
+name: page
+namespace: uberon
+xref: http://xmlns.com/foaf/0.1/page
+is_metadata_tag: true
+
+[Typedef]
+id: functionally_related_to
+name: functionally related to
+namespace: uberon
+xref: RO:0002328
+
+[Typedef]
+id: has_component
+name: has component
+namespace: uberon
+xref: RO:0002180
+is_a: has_part ! has part
+
+[Typedef]
+id: has_developmental_contribution_from
+name: has developmental contribution from
+namespace: uberon
+xref: RO:0002254
+holds_over_chain: has_part develops_from
+is_transitive: true
+
+[Typedef]
+id: has_part
+name: has part
+namespace: uberon
+xref: BFO:0000051
+is_transitive: true
+
+[Typedef]
+id: has_potential_to_develop_into
+name: has potential to develop into
+namespace: uberon
+def: "x has the potential to develop into y iff x develops into y or if x is capable of developing into y" []
+xref: RO:0002387
+
+[Typedef]
+id: has_potential_to_developmentally_contribute_to
+name: has potential to developmentally contribute to
+namespace: uberon
+def: "x has potential to developmentrally contribute to y iff x developmentally contributes to y or x is capable of developmentally contributing to y" []
+xref: RO:0002385
+
+[Typedef]
+id: has_potential_to_directly_develop_into
+name: has potential to directly develop into
+namespace: uberon
+def: "x has potential to directly develop into y iff x directly develops into y or x is capable of directly developing into y" []
+xref: RO:0002388
+
+[Typedef]
+id: immediately_preceded_by
+name: immediately_preceded_by
+namespace: uberon
+def: "X immediately_preceded_by Y iff: end(X) simultaneous_with start(Y)" []
+synonym: "directly preceded by" EXACT []
+synonym: "is directly preceded by" EXACT []
+synonym: "is immediately preceded by" EXACT [SIO:000251]
+synonym: "starts_at_end_of" EXACT []
+xref: RO:0002087
+property_value: seeAlso SIO:000251
+property_value: UBPROP:0000001 "A non-transitive temporal relation in which one process immediately precedes another process, such that there is no interval of time between the two processes[SIO:000251]." xsd:string {source="SIO:000251"}
+is_a: preceded_by ! preceded_by
+
+[Typedef]
+id: input_of
+name: input of
+namespace: uberon
+xref: RO:0002352
+is_a: functionally_related_to ! functionally related to
+
+[Typedef]
+id: overlaps
+name: overlaps
+namespace: uberon
+def: "A overlaps B if they share some part in common." []
+xref: RO:0002131
+expand_expression_to: "BFO_0000051 some (BFO_0000050 some ?Y)" []
+
+[Typedef]
+id: part_of
+name: part of
+namespace: uberon
+xref: BFO:0000050
+is_transitive: true
+inverse_of: has_part ! has part
+
+[Typedef]
+id: part_of_structure_that_is_capable_of
+name: part of structure that is capable of
+namespace: uberon
+xref: RO:0002329
+holds_over_chain: part_of capable_of
+is_a: functionally_related_to ! functionally related to
+
+[Typedef]
+id: preceded_by
+name: preceded_by
+namespace: uberon
+def: "X preceded_by Y iff: end(Y) before_or_simultaneous_with start(X)" []
+synonym: "is preceded by" EXACT [SIO:000249]
+synonym: "takes place after" EXACT [Allen:precedes]
+xref: BFO:0000062
+is_transitive: true
+
+[Typedef]
+id: precedes
+name: precedes
+namespace: uberon
+xref: BFO:0000063
+is_transitive: true
+
