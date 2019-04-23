@@ -1,11 +1,11 @@
 format-version: 1.2
-data-version: maxo/releases/2019-04-18/maxo-full.obo
+data-version: maxo/releases/2019-04-23/maxo-full.obo
 ontology: maxo/maxo-full.obo
 property_value: dc-creator "Aaron Zhang" xsd:string
 property_value: dc-creator "Leigh Carmody" xsd:string
 property_value: dc-creator "Peter Robinson" xsd:string
-property_value: http://purl.org/dc/elements/1.1/description "None" xsd:string
-property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
+property_value: dc-description "None" xsd:string
+property_value: dc-title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license "Unspecified" xsd:string
 
 [Term]
@@ -94,6 +94,15 @@ property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 id: BFO:0000006
 name: spatial region
 is_a: BFO:0000141 ! immaterial entity
+property_value: BFO:0000179 "s-region" xsd:string
+property_value: BFO:0000180 "SpatialRegion" xsd:string
+property_value: editor_note "BFO 2 Reference: Spatial regions do not participate in processes." xsd:string
+property_value: editor_note "Spatial region doesn't have a closure axiom because the subclasses don't exhaust all possibilites. An example would be the union of a spatial point and a spatial line that doesn't overlap the point, or two spatial lines that intersect at a single point. In both cases the resultant spatial region is neither 0-dimensional, 1-dimensional, 2-dimensional, or 3-dimensional." xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/0000002", comment="per discussion with Barry Smith"}
+property_value: IAO:0000600 "A spatial region is a continuant entity that is a continuant_part_of spaceR as defined relative to some frame R. (axiom label in BFO2 Reference: [035-001])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/035-001"}
+property_value: IAO:0000601 "All continuant parts of spatial regions are spatial regions. (axiom label in BFO2 Reference: [036-001])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/036-001"}
+property_value: IAO:0000602 "(forall (x y t) (if (and (SpatialRegion x) (continuantPartOfAt y x t)) (SpatialRegion y))) // axiom label in BFO2 CLIF: [036-001] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/036-001"}
+property_value: IAO:0000602 "(forall (x) (if (SpatialRegion x) (Continuant x))) // axiom label in BFO2 CLIF: [035-001] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/035-001"}
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 
 [Term]
 id: BFO:0000015
@@ -279,7 +288,7 @@ is_a: BFO:0000141 ! immaterial entity
 id: CARO:0010000
 name: multicellular anatomical structure
 is_a: CARO:0000003 ! connected anatomical structure
-relationship: RO:0002207 CARO:0010000 ! directly develops from multicellular anatomical structure
+relationship: directly_develops_from CARO:0010000 ! multicellular anatomical structure
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/caro.owl
 
 [Term]
@@ -291,7 +300,7 @@ is_a: BFO:0000004 ! independent continuant
 id: CL:0000000
 name: cell
 is_a: CARO:0000003 ! connected anatomical structure
-relationship: RO:0002207 CL:0000000 ! directly develops from cell
+relationship: directly_develops_from CL:0000000 ! cell
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/cl.owl
 
 [Term]
@@ -888,7 +897,14 @@ name: receptor regulator activity
 namespace: molecular_function
 def: "The function of interacting (directly or indirectly) with receptors such that the proportion of receptors in the active form is changed." [GOC:ceb]
 is_a: GO:0098772 ! molecular function regulator
-relationship: part_of GO:0010469 ! regulation of signaling receptor activity
+
+[Term]
+id: GO:0030546
+name: signaling receptor activator activity
+namespace: molecular_function
+def: "The function of interacting (directly or indirectly) with receptors such that the proportion of receptors in the active form is increased." [GOC:ceb]
+synonym: "receptor activator activity" BROAD []
+is_a: GO:0030545 ! receptor regulator activity
 
 [Term]
 id: GO:0031323
@@ -1208,9 +1224,11 @@ comment: Definition discussed in https://github.com/geneontology/go-ontology/iss
 subset: goslim_chembl
 synonym: "receptor agonist activity" BROAD [GOC:molecular_function_refactoring]
 synonym: "signaling molecule" EXACT []
+synonym: "signaling receptor ligand activity" EXACT []
 synonym: "vitamin D receptor activator activity" NARROW []
 is_a: GO:0005102 ! signaling receptor binding
-is_a: GO:0030545 ! receptor regulator activity
+is_a: GO:0030546 ! signaling receptor activator activity
+relationship: part_of GO:0007165 ! signal transduction
 created_by: midori
 creation_date: 2010-09-13T04:51:59Z
 
@@ -1928,13 +1946,6 @@ property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:23:10Z xsd:da
 property_value: MAXO:0000060 "A service delivery system that provides palliative care/medicine when life expectancy is 6 months or less and when curative or life-prolonging therapy is no longer indicated." xsd:string {http://purl.obolibrary.org/obo/MAXO_0000024="PMID:22190887"}
 
 [Term]
-id: MAXO:0000023
-name: Vaccination
-is_a: MAXO:0000150 ! Disease-specific preventative care
-relationship: dc-creator http://orcid.org/0000-0001-7941-2961
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-07T20:53:13Z xsd:dateTime
-
-[Term]
 id: MAXO:0000025
 name: End-of life care
 is_a: MAXO:0000021 ! Palliative care
@@ -1991,41 +2002,6 @@ name: Behavioral avoidance
 is_a: MAXO:0000151 ! Avoidance intervention
 relationship: dc-creator http://orcid.org/0000-0001-7941-2961
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-09T21:01:11Z xsd:dateTime
-
-[Term]
-id: MAXO:0000033
-name: Activity avoidance
-is_a: MAXO:0000032 ! Behavioral avoidance
-relationship: dc-creator http://orcid.org/0000-0001-7941-2961
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-09T21:04:05Z xsd:dateTime
-
-[Term]
-id: MAXO:0000034
-name: Impact activities avoidance
-is_a: MAXO:0000033 ! Activity avoidance
-relationship: dc-creator http://orcid.org/0000-0001-7941-2961
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-09T21:04:45Z xsd:dateTime
-
-[Term]
-id: MAXO:0000035
-name: Isometric exercise avoidance
-is_a: MAXO:0000033 ! Activity avoidance
-relationship: dc-creator http://orcid.org/0000-0001-7941-2961
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-09T21:05:29Z xsd:dateTime
-
-[Term]
-id: MAXO:0000036
-name: Contact sports avoidance
-is_a: MAXO:0000034 ! Impact activities avoidance
-relationship: dc-creator http://orcid.org/0000-0001-7941-2961
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-09T21:12:40Z xsd:dateTime
-
-[Term]
-id: MAXO:0000037
-name: SCUBA diving avoidance
-is_a: MAXO:0000033 ! Activity avoidance
-relationship: dc-creator http://orcid.org/0000-0001-7941-2961
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-09T21:13:19Z xsd:dateTime
 
 [Term]
 id: MAXO:0000038
@@ -2102,7 +2078,7 @@ property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:03:43Z xsd:da
 [Term]
 id: MAXO:0000049
 name: Activity avoidance
-is_a: MAXO:0000151 ! Avoidance intervention
+is_a: MAXO:0000032 ! Behavioral avoidance
 relationship: dc-creator http://orcid.org/0000-0001-7941-2961
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:11:57Z xsd:dateTime
 
@@ -2120,13 +2096,6 @@ name: Isometric exercise avoidance
 is_a: MAXO:0000049 ! Activity avoidance
 relationship: dc-creator http://orcid.org/0000-0001-7941-2961
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:13:10Z xsd:dateTime
-
-[Term]
-id: MAXO:0000052
-name: SCUBA diving avoidance
-is_a: MAXO:0000049 ! Activity avoidance
-relationship: dc-creator http://orcid.org/0000-0001-7941-2961
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:18:33Z xsd:dateTime
 
 [Term]
 id: MAXO:0000053
@@ -2167,7 +2136,7 @@ property_value: MAXO:0000039 "Drug therapy" xsd:string
 [Term]
 id: MAXO:0000061
 name: Antibacterial
-is_a: MAXO:0000325 ! Biopsy of head
+is_a: MAXO:0000325 ! Anti-infectives
 relationship: dc-creator http://orcid.org/0000-0001-7941-2961
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T18:59:44Z xsd:dateTime
 
@@ -2600,6 +2569,7 @@ property_value: MAXO:0000060 "Immunization is the process whereby a person is ma
 id: MAXO:0000119
 name: Vaccination
 is_a: MAXO:0000120 ! Active immunization
+is_a: MAXO:0000150 ! Disease-specific preventative care
 relationship: dc-creator http://orcid.org/0000-0001-7941-2961
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-20T00:25:05Z xsd:dateTime
 property_value: MAXO:0000060 "A vaccine is a biological preparation that improves immunity to a particular disease. A vaccine typically contains an agent that resembles a disease-causing microorganism, and is often made from weakened or killed forms of the microbe, its toxins or one of its surface proteins." xsd:string {http://purl.obolibrary.org/obo/MAXO_0000024="WHO"}
@@ -2888,7 +2858,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000158
 name: Antiparasitics
-is_a: MAXO:0000325 ! Biopsy of head
+is_a: MAXO:0000325 ! Anti-infectives
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:53:06Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2958,7 +2928,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000168
 name: Antiviral
-is_a: MAXO:0000325 ! Biopsy of head
+is_a: MAXO:0000325 ! Anti-infectives
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:57:52Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -3000,7 +2970,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000174
 name: Antifungals
-is_a: MAXO:0000325 ! Biopsy of head
+is_a: MAXO:0000325 ! Anti-infectives
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:02:00Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -3200,6 +3170,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000202
 name: Sulfonamides
 is_a: MAXO:0000061 ! Antibacterial
+is_a: MAXO:0000300 ! Inflammatory bowel disease agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:27:30Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -3329,6 +3300,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000220
 name: Glucocorticoids
 is_a: MAXO:0000169 ! Anti-inflammatory
+is_a: MAXO:0000300 ! Inflammatory bowel disease agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:44:08Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -3377,7 +3349,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000227
 name: Antimycobacterials
-is_a: MAXO:0000325 ! Biopsy of head
+is_a: MAXO:0000325 ! Anti-infectives
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:48:12Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -3897,24 +3869,10 @@ property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:01:33Z xsd:da
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
-id: MAXO:0000301
-name: Glucocorticoids
-is_a: MAXO:0000300 ! Inflammatory bowel disease agents
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:02:18Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
-
-[Term]
 id: MAXO:0000302
 name: Salycylates
 is_a: MAXO:0000300 ! Inflammatory bowel disease agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:02:35Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
-
-[Term]
-id: MAXO:0000303
-name: Sulfonamides
-is_a: MAXO:0000300 ! Inflammatory bowel disease agents
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:02:48Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3969,7 +3927,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000311
 name: Otic agents
-is_a: MAXO:0000325 ! Biopsy of head
+is_a: MAXO:0000325 ! Anti-infectives
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:08:34Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -4067,17 +4025,20 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000325
 name: Anti-infectives
+is_a: MAXO:0000058 ! Pharmacotherapy
+property_value: http://purl.org/dc/elements/1.1/date 2019-04-10T19:56:29Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000326
 name: Biopsy of head
 def: "Removal of tissue from the head." []
 synonym: "head biopsy" EXACT []
-is_a: MAXO:0000058 ! Pharmacotherapy
 is_a: MAXO:0000129 ! Biopsy
 is_a: OGMS:0000031 ! disease
 intersection_of: MAXO:0000129 ! Biopsy
 intersection_of: RO:0004026 UBERON:0000033 ! disease has location head
 relationship: RO:0004026 UBERON:0000033 ! disease has location head
-property_value: http://purl.org/dc/elements/1.1/date 2019-04-10T19:56:29Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: OGMS:0000031
@@ -19991,20 +19952,7 @@ property_value: IAO:0000111 "inheres in" xsd:string
 property_value: IAO:0000118 "inheres_in" xsd:string
 property_value: RO:0001900 RO:0001901
 is_a: RO:0002314 ! inheres in part of
-inverse_of: RO:0000053 ! bearer of
-
-[Typedef]
-id: RO:0000053
-name: bearer of
-def: "a relation between an independent continuant (the bearer) and a specifically dependent continuant (the dependent), in which the dependent specifically depends on the bearer for its existence" []
-property_value: editor_note "A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist." xsd:string
-property_value: example_of_usage "this apple is bearer of this red color" xsd:string
-property_value: example_of_usage "this vase is bearer of this fragility" xsd:string
-property_value: IAO:0000111 "bearer of" xsd:string
-property_value: IAO:0000118 "bearer_of" xsd:string
-property_value: IAO:0000118 "is bearer of" xsd:string
-property_value: RO:0001900 RO:0001901
-range: BFO:0000020 ! specifically dependent continuant
+inverse_of: bearer_of ! bearer of
 
 [Typedef]
 id: RO:0000056
@@ -20047,29 +19995,7 @@ property_value: RO:0001900 RO:0001901
 domain: BFO:0000040 ! material entity
 range: BFO:0000004 ! independent continuant
 holds_over_chain: located_in part_of
-inverse_of: RO:0001019 ! contains
-
-[Typedef]
-id: RO:0001019
-name: contains
-subset: ro-eco
-property_value: IAO:0000111 "contains" xsd:string
-property_value: RO:0001900 RO:0001901
-
-[Typedef]
-id: RO:0002000
-name: 2D boundary of
-def: "a relation between a 2D immaterial entity (the boundary) and a material entity, in which the boundary delimits the material entity" []
-property_value: editor_note "A 2D boundary may have holes and gaps, but it must be a single connected entity, not an aggregate of several disconnected parts." xsd:string
-property_value: editor_note "Although the boundary is two-dimensional, it exists in three-dimensional space and thus has a 3D shape." xsd:string
-property_value: example_of_usage "the surface of my skin is a 2D boundary of my body" xsd:string
-property_value: IAO:0000118 "2D_boundary_of" xsd:string
-property_value: IAO:0000118 "boundary of" xsd:string
-property_value: IAO:0000118 "is 2D boundary of" xsd:string
-property_value: IAO:0000118 "is boundary of" xsd:string
-property_value: RO:0001900 RO:0001901
-is_a: RO:0002323 ! mereotopologically related to
-inverse_of: has_boundary ! has 2D boundary
+inverse_of: contains ! contains
 
 [Typedef]
 id: RO:0002013
@@ -20202,20 +20128,6 @@ is_a: RO:0002323 ! mereotopologically related to
 expand_expression_to: "BFO_0000051 exactly 0 (BFO_0000050 some ?Y)" []
 
 [Typedef]
-id: RO:0002207
-name: directly develops from
-def: "Candidate definition: x directly_develops from y if and only if there exists some developmental process (GO:0032502) p such that x and y both participate in p, and x is the output of p and y is the input of p, and a substantial portion of the matter of x comes from y, and the start of x is coincident with or after the end of y." []
-comment: TODO - add child relations from DOS
-property_value: IAO:0000114 IAO:0000125
-property_value: IAO:0000117 "Chris Mungall" xsd:string
-property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
-property_value: IAO:0000117 "has developmental precursor" xsd:string
-property_value: IAO:0000119 "FBbt" xsd:string
-property_value: RO:0002575 RO:0002202
-is_a: develops_from ! develops from
-inverse_of: RO:0002210 ! directly develops into
-
-[Typedef]
 id: RO:0002210
 name: directly develops into
 def: "inverse of directly develops from" []
@@ -20258,27 +20170,6 @@ property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000119 https://en.wikipedia.org/wiki/Allen%27s_interval_algebra
 domain: BFO:0000003 ! occurrent
 range: BFO:0000003 ! occurrent
-
-[Typedef]
-id: RO:0002225
-name: develops from part of
-def: "x develops from part of y if and only if there exists some z such that x develops from z and z is part of y" []
-property_value: IAO:0000114 IAO:0000125
-property_value: IAO:0000117 "Chris Mungall" xsd:string
-holds_over_chain: RO:0002207 part_of
-is_a: develops_from ! develops from
-
-[Typedef]
-id: RO:0002226
-name: develops in
-def: "x develops_in y if x is located in y whilst x is developing" []
-property_value: IAO:0000114 IAO:0000125
-property_value: IAO:0000117 "Chris Mungall" xsd:string
-property_value: IAO:0000119 "EHDAA2" xsd:string
-property_value: IAO:0000119 "Jonathan Bard, EHDAA2" xsd:string
-domain: CARO:0000000 ! anatomical entity
-holds_over_chain: RO:0002207 located_in
-is_a: developmentally_preceded_by ! developmentally preceded by
 
 [Typedef]
 id: RO:0002231
@@ -20822,16 +20713,6 @@ range: CARO:0000003 ! connected anatomical structure
 is_a: functionally_related_to ! functionally related to
 
 [Typedef]
-id: RO:0002571
-name: lumen of
-def: "x lumen_of y iff x is the space or substance that is part of y and does not cross any of the inner membranes or boundaries of y that is maximal with respect to the volume of the convex hull." []
-subset: ro-eco
-property_value: IAO:0000117 "Chris Mungall" xsd:string
-property_value: IAO:0000119 GOC:cjm xsd:string
-range: BFO:0000040 ! material entity
-is_a: part_of ! part of
-
-[Typedef]
 id: RO:0002573
 name: has modifier
 def: "A relation that holds between an attribute or a qualifier and another attribute." []
@@ -21096,6 +20977,39 @@ xref: UBPROP:0000002
 is_metadata_tag: true
 
 [Typedef]
+id: bearer_of
+name: bearer of
+namespace: uberon
+def: "a relation between an independent continuant (the bearer) and a specifically dependent continuant (the dependent), in which the dependent specifically depends on the bearer for its existence" []
+xref: RO:0000053
+property_value: editor_note "A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist." xsd:string
+property_value: example_of_usage "this apple is bearer of this red color" xsd:string
+property_value: example_of_usage "this vase is bearer of this fragility" xsd:string
+property_value: IAO:0000111 "bearer of" xsd:string
+property_value: IAO:0000118 "bearer_of" xsd:string
+property_value: IAO:0000118 "is bearer of" xsd:string
+property_value: RO:0001900 RO:0001901
+range: BFO:0000020 ! specifically dependent continuant
+
+[Typedef]
+id: boundary_of
+name: 2D boundary of
+name: boundary of
+namespace: uberon
+def: "a relation between a 2D immaterial entity (the boundary) and a material entity, in which the boundary delimits the material entity" []
+xref: RO:0002000
+property_value: editor_note "A 2D boundary may have holes and gaps, but it must be a single connected entity, not an aggregate of several disconnected parts." xsd:string
+property_value: editor_note "Although the boundary is two-dimensional, it exists in three-dimensional space and thus has a 3D shape." xsd:string
+property_value: example_of_usage "the surface of my skin is a 2D boundary of my body" xsd:string
+property_value: IAO:0000118 "2D_boundary_of" xsd:string
+property_value: IAO:0000118 "boundary of" xsd:string
+property_value: IAO:0000118 "is 2D boundary of" xsd:string
+property_value: IAO:0000118 "is boundary of" xsd:string
+property_value: RO:0001900 RO:0001901
+is_a: RO:0002323 ! mereotopologically related to
+inverse_of: has_boundary ! has 2D boundary
+
+[Typedef]
 id: bounding_layer_of
 name: bounding layer of
 namespace: uberon
@@ -21228,6 +21142,15 @@ domain: BFO:0000004 ! independent continuant
 is_a: RO:0002323 ! mereotopologically related to
 
 [Typedef]
+id: contains
+name: contains
+namespace: uberon
+subset: ro-eco
+xref: RO:0001019
+property_value: IAO:0000111 "contains" xsd:string
+property_value: RO:0001900 RO:0001901
+
+[Typedef]
 id: contains_process
 name: contains process
 namespace: uberon
@@ -21292,10 +21215,24 @@ xref: http://purl.org/dc/elements/1.1/creator
 is_metadata_tag: true
 
 [Typedef]
+id: dc-description
+name: description
+namespace: uberon
+xref: http://purl.org/dc/elements/1.1/description
+is_metadata_tag: true
+
+[Typedef]
 id: dc-source
 name: derived from resource
 namespace: uberon
 xref: http://purl.org/dc/elements/1.1/source
+is_metadata_tag: true
+
+[Typedef]
+id: dc-title
+name: title
+namespace: uberon
+xref: http://purl.org/dc/elements/1.1/title
 is_metadata_tag: true
 
 [Typedef]
@@ -21404,6 +21341,34 @@ inverse_of: develops_into ! develops_into
 transitive_over: part_of ! part of
 
 [Typedef]
+id: develops_from_part_of
+name: develops from part of
+name: develops_from_part_of
+namespace: uberon
+def: "x develops from part of y if and only if there exists some z such that x develops from z and z is part of y" []
+xref: RO:0002225
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+holds_over_chain: directly_develops_from part_of
+is_a: develops_from ! develops from
+
+[Typedef]
+id: develops_in
+name: develops in
+name: develops_in
+namespace: uberon
+def: "x develops_in y if x is located in y whilst x is developing" []
+comment: This relation take from EHDAA2 - precise semantics yet to be defined
+xref: RO:0002226
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000119 "EHDAA2" xsd:string
+property_value: IAO:0000119 "Jonathan Bard, EHDAA2" xsd:string
+domain: CARO:0000000 ! anatomical entity
+holds_over_chain: directly_develops_from located_in
+is_a: developmentally_preceded_by ! developmentally preceded by
+
+[Typedef]
 id: develops_into
 name: develops into
 name: develops_into
@@ -21419,6 +21384,23 @@ is_transitive: true
 is_a: has_potential_to_develop_into ! has potential to develop into
 is_a: has_potential_to_directly_develop_into ! has potential to directly develop into
 is_a: RO:0002286 ! developmentally succeeded by
+
+[Typedef]
+id: directly_develops_from
+name: directly develops from
+name: directly_develops_from
+namespace: uberon
+def: "Candidate definition: x directly_develops from y if and only if there exists some developmental process (GO:0032502) p such that x and y both participate in p, and x is the output of p and y is the input of p, and a substantial portion of the matter of x comes from y, and the start of x is coincident with or after the end of y." []
+comment: TODO - add child relations from DOS
+xref: RO:0002207
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
+property_value: IAO:0000117 "has developmental precursor" xsd:string
+property_value: IAO:0000119 "FBbt" xsd:string
+property_value: RO:0002575 RO:0002202
+is_a: develops_from ! develops from
+inverse_of: RO:0002210 ! directly develops into
 
 [Typedef]
 id: dorsal_to
@@ -21828,7 +21810,7 @@ xref: RO:0002495
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: RO:0002575 RO:0002494
 property_value: seeAlso SIO:000658
-is_a: RO:0002207 ! directly develops from
+is_a: directly_develops_from ! directly_develops_from
 is_a: transformation_of ! transformation of
 
 [Typedef]
@@ -21915,6 +21897,13 @@ is_a: functionally_related_to ! functionally related to
 is_a: RO:0000056 ! participates in
 
 [Typedef]
+id: is_count_of
+name: is count of
+namespace: uberon
+xref: UBPROP:0000100
+is_metadata_tag: true
+
+[Typedef]
 id: located_in
 name: located in
 name: located_in
@@ -21950,6 +21939,18 @@ is_transitive: true
 inverse_of: located_in ! located in
 
 [Typedef]
+id: lumen_of
+name: lumen of
+namespace: uberon
+def: "x lumen_of y iff x is the space or substance that is part of y and does not cross any of the inner membranes or boundaries of y that is maximal with respect to the volume of the convex hull." []
+subset: ro-eco
+xref: RO:0002571
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000119 GOC:cjm xsd:string
+range: BFO:0000040 ! material entity
+is_a: part_of ! part of
+
+[Typedef]
 id: luminal_space_of
 name: luminal space of
 namespace: uberon
@@ -21958,8 +21959,8 @@ subset: ro-eco
 xref: RO:0002572
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 domain: BFO:0000141 ! immaterial entity
+is_a: lumen_of ! lumen of
 is_a: part_of ! part of
-is_a: RO:0002571 ! lumen of
 
 [Typedef]
 id: member_of
@@ -22072,9 +22073,9 @@ name: pharyngeal arch number
 namespace: uberon
 def: "x pharyngeal_arch_number N if and only if (i) x is a pharyngeal arch, and (ii) x is ancestrally pharyngeal arch number N in a series of pharyngeal arches repeated along a antero-posterior axis, with arch_number 1 being the mandibular arch." [https://orcid.org/0000-0002-6601-2165]
 xref: UBPROP:0000103
+property_value: is_count_of UBERON:0002539
+property_value: preceding_element_is BSPO:0000096
 property_value: terminology_notes "gill arch N = PA N-2. the term branchial_arch is ambiguous." xsd:string
-property_value: UBPROP:0000100 UBERON:0002539
-property_value: UBPROP:0000101 BSPO:0000096
 is_metadata_tag: true
 
 [Typedef]
@@ -22147,6 +22148,14 @@ range: BFO:0000003 ! occurrent
 holds_over_chain: part_of precedes
 is_transitive: true
 is_a: RO:0002222 ! temporally related to
+
+[Typedef]
+id: preceding_element_is
+name: preceding element is
+namespace: uberon
+def: "A property used in conjunction with repeated_element_number to indicate an axis and directionality along that axis. If P preceding_element_is R, and P is_count_of S, and X P N, and X' P N+1, then it follows that every X R some X', and the class expression [S and R some X' and inv(R) some X] is empty (i.e. X is followed by X', with no intermediates)" [https://orcid.org/0000-0002-6601-2165]
+xref: UBPROP:0000101
+is_metadata_tag: true
 
 [Typedef]
 id: present_in_taxon

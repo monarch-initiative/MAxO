@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2019-04-18/maxo-base.obo
+data-version: maxo/releases/2019-04-23/maxo-base.obo
 ontology: maxo/maxo-base.obo
 property_value: http://purl.org/dc/elements/1.1/creator "Aaron Zhang" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
@@ -169,13 +169,6 @@ property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:23:10Z xsd:da
 property_value: MAXO:0000060 "A service delivery system that provides palliative care/medicine when life expectancy is 6 months or less and when curative or life-prolonging therapy is no longer indicated." xsd:string {http://purl.obolibrary.org/obo/MAXO_0000024="PMID:22190887"}
 
 [Term]
-id: MAXO:0000023
-name: Vaccination
-is_a: MAXO:0000150 ! Disease-specific preventative care
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7941-2961
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-07T20:53:13Z xsd:dateTime
-
-[Term]
 id: MAXO:0000025
 name: End-of life care
 is_a: MAXO:0000021 ! Palliative care
@@ -232,41 +225,6 @@ name: Behavioral avoidance
 is_a: MAXO:0000151 ! Avoidance intervention
 property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7941-2961
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-09T21:01:11Z xsd:dateTime
-
-[Term]
-id: MAXO:0000033
-name: Activity avoidance
-is_a: MAXO:0000032 ! Behavioral avoidance
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7941-2961
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-09T21:04:05Z xsd:dateTime
-
-[Term]
-id: MAXO:0000034
-name: Impact activities avoidance
-is_a: MAXO:0000033 ! Activity avoidance
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7941-2961
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-09T21:04:45Z xsd:dateTime
-
-[Term]
-id: MAXO:0000035
-name: Isometric exercise avoidance
-is_a: MAXO:0000033 ! Activity avoidance
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7941-2961
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-09T21:05:29Z xsd:dateTime
-
-[Term]
-id: MAXO:0000036
-name: Contact sports avoidance
-is_a: MAXO:0000034 ! Impact activities avoidance
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7941-2961
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-09T21:12:40Z xsd:dateTime
-
-[Term]
-id: MAXO:0000037
-name: SCUBA diving avoidance
-is_a: MAXO:0000033 ! Activity avoidance
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7941-2961
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-09T21:13:19Z xsd:dateTime
 
 [Term]
 id: MAXO:0000038
@@ -343,6 +301,7 @@ property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:03:43Z xsd:da
 [Term]
 id: MAXO:0000049
 name: Activity avoidance
+is_a: MAXO:0000032 ! Behavioral avoidance
 is_a: MAXO:0000151 ! Avoidance intervention
 property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7941-2961
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:11:57Z xsd:dateTime
@@ -361,13 +320,6 @@ name: Isometric exercise avoidance
 is_a: MAXO:0000049 ! Activity avoidance
 property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7941-2961
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:13:10Z xsd:dateTime
-
-[Term]
-id: MAXO:0000052
-name: SCUBA diving avoidance
-is_a: MAXO:0000049 ! Activity avoidance
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7941-2961
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:18:33Z xsd:dateTime
 
 [Term]
 id: MAXO:0000053
@@ -408,7 +360,7 @@ property_value: MAXO:0000039 "Drug therapy" xsd:string
 [Term]
 id: MAXO:0000061
 name: Antibacterial
-is_a: MAXO:0000325 ! Biopsy of head
+is_a: MAXO:0000325 ! Anti-infectives
 property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7941-2961
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T18:59:44Z xsd:dateTime
 
@@ -841,6 +793,7 @@ property_value: MAXO:0000060 "Immunization is the process whereby a person is ma
 id: MAXO:0000119
 name: Vaccination
 is_a: MAXO:0000120 ! Active immunization
+is_a: MAXO:0000150 ! Disease-specific preventative care
 property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7941-2961
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-20T00:25:05Z xsd:dateTime
 property_value: MAXO:0000060 "A vaccine is a biological preparation that improves immunity to a particular disease. A vaccine typically contains an agent that resembles a disease-causing microorganism, and is often made from weakened or killed forms of the microbe, its toxins or one of its surface proteins." xsd:string {http://purl.obolibrary.org/obo/MAXO_0000024="WHO"}
@@ -1129,7 +1082,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000158
 name: Antiparasitics
-is_a: MAXO:0000325 ! Biopsy of head
+is_a: MAXO:0000325 ! Anti-infectives
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:53:06Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1199,7 +1152,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000168
 name: Antiviral
-is_a: MAXO:0000325 ! Biopsy of head
+is_a: MAXO:0000325 ! Anti-infectives
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:57:52Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1241,7 +1194,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000174
 name: Antifungals
-is_a: MAXO:0000325 ! Biopsy of head
+is_a: MAXO:0000325 ! Anti-infectives
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:02:00Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1441,6 +1394,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000202
 name: Sulfonamides
 is_a: MAXO:0000061 ! Antibacterial
+is_a: MAXO:0000300 ! Inflammatory bowel disease agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:27:30Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1570,6 +1524,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000220
 name: Glucocorticoids
 is_a: MAXO:0000169 ! Anti-inflammatory
+is_a: MAXO:0000300 ! Inflammatory bowel disease agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:44:08Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1618,7 +1573,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000227
 name: Antimycobacterials
-is_a: MAXO:0000325 ! Biopsy of head
+is_a: MAXO:0000325 ! Anti-infectives
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:48:12Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2138,24 +2093,10 @@ property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:01:33Z xsd:da
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
-id: MAXO:0000301
-name: Glucocorticoids
-is_a: MAXO:0000300 ! Inflammatory bowel disease agents
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:02:18Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
-
-[Term]
 id: MAXO:0000302
 name: Salycylates
 is_a: MAXO:0000300 ! Inflammatory bowel disease agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:02:35Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
-
-[Term]
-id: MAXO:0000303
-name: Sulfonamides
-is_a: MAXO:0000300 ! Inflammatory bowel disease agents
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:02:48Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -2210,7 +2151,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000311
 name: Otic agents
-is_a: MAXO:0000325 ! Biopsy of head
+is_a: MAXO:0000325 ! Anti-infectives
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:08:34Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2308,12 +2249,15 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000325
 name: Anti-infectives
+is_a: MAXO:0000058 ! Pharmacotherapy
+property_value: http://purl.org/dc/elements/1.1/date 2019-04-10T19:56:29Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000326
 name: Biopsy of head
 def: "Removal of tissue from the head." []
 synonym: "head biopsy" EXACT []
-is_a: MAXO:0000058 ! Pharmacotherapy
 intersection_of: MAXO:0000129 ! Biopsy
 intersection_of: RO:0004026 UBERON:0000033
-property_value: http://purl.org/dc/elements/1.1/date 2019-04-10T19:56:29Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
 
