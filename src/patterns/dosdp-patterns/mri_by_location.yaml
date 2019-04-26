@@ -1,0 +1,53 @@
+pattern_name: mri_by_location
+pattern_iri: http://purl.obolibrary.org/obo/upheno/patterns-dev/mri_by_location.yaml
+description: ""
+
+contributors:
+  - https://orcid.org/0000-0001-7941-2961
+  - https://orcid.org/0000-0002-7356-1779
+
+classes:
+  mri: MAXO:0000424
+  location: owl:Thing
+
+relations:
+  med_action has location: RO:0004026
+  
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym 
+  
+vars:
+  location: "'location'"
+
+name:
+  text: "MRI of the %"
+  vars:
+   - location
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "%s MRI"
+    vars:
+     - location
+     
+     annotations:
+  - annotationProperty: exact_synonym
+    text: "%s magnetic resonance imaging"
+    vars:
+     - location
+
+   annotations:
+  - annotationProperty: exact_synonym
+    text: "Nuclear magnetic resonance imaging of the %"
+    vars:
+     - location
+def:
+  text: "Magnetic resonance imaging of the %s."
+  vars:
+    - location
+
+equivalentTo:
+  text: "'mri' and 'med_action has location' some %s"
+  vars:
+    - location
+   

@@ -324,6 +324,10 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000322>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000323>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000324>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000325>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000424>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000429>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000430>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001000>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/MAXO_0000024>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/MAXO_0000039>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/MAXO_0000060>))
@@ -403,11 +407,11 @@ AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000004> "2018
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000004> "Surgical procedure"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000004> <http://purl.obolibrary.org/obo/MAXO_0000002>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000005> (Imaging procedure)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000005> (Therapeutic imaging procedure)
 
 AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/MAXO_0000005> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000005> "2018-11-16T20:10:50Z"^^xsd:dateTime)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000005> "Imaging procedure"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000005> "Therapeutic imaging procedure"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000005> <http://purl.obolibrary.org/obo/MAXO_0000002>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000006> (Laboratory procedure)
@@ -1295,8 +1299,9 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000136> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000137> (Positron Emission Tomography)
 
-AnnotationAssertion(Annotation(<http://purl.obolibrary.org/obo/MAXO_0000024> "NCIT:C17007") <http://purl.obolibrary.org/obo/MAXO_0000039> <http://purl.obolibrary.org/obo/MAXO_0000137> "PET scan")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/MAXO_0000060> <http://purl.obolibrary.org/obo/MAXO_0000137> "A technique for measuring the gamma radiation produced by collisions of electrons and positrons (anti-electrons) within living tissue. In positron emission tomography (PET), a subject is given a dose of a positron-emitting radionuclide attached to a metabolically active substance (for example, 2-fluoro-2-deoxy-D-glucose (FDG), which is similar to a naturally occurring sugar, glucose, with the addition of a radioactive fluorine atom). When living tissue containing the positron emitter is bombarded by electrons, gamma radiation produced by collisions of electrons and positrons is detected by a scanner, revealing in fine detail the tissue location of the metabolically-active substance administered.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/MAXO_0000024> <http://purl.obolibrary.org/obo/MAXO_0000137> "NCIT:C17007")
+AnnotationAssertion(Annotation(<http://purl.obolibrary.org/obo/MAXO_0000024> "NCIT:C17007") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION>) <http://purl.obolibrary.org/obo/MAXO_0000039> <http://purl.obolibrary.org/obo/MAXO_0000137> "PET scan")
+AnnotationAssertion(Annotation(<http://purl.obolibrary.org/obo/MAXO_0000024> "NCIT:C17007") <http://purl.obolibrary.org/obo/MAXO_0000060> <http://purl.obolibrary.org/obo/MAXO_0000137> "A technique for measuring the gamma radiation produced by collisions of electrons and positrons (anti-electrons) within living tissue. In positron emission tomography (PET), a subject is given a dose of a positron-emitting radionuclide attached to a metabolically active substance (for example, 2-fluoro-2-deoxy-D-glucose (FDG), which is similar to a naturally occurring sugar, glucose, with the addition of a radioactive fluorine atom). When living tissue containing the positron emitter is bombarded by electrons, gamma radiation produced by collisions of electrons and positrons is detected by a scanner, revealing in fine detail the tissue location of the metabolically-active substance administered.")
 AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/MAXO_0000137> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000137> "2019-01-20T19:19:15Z"^^xsd:dateTime)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000137> "Positron Emission Tomography"@en)
@@ -1454,11 +1459,12 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <h
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000158> "Antiparasitics"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000158> <http://purl.obolibrary.org/obo/MAXO_0000325>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000159> (Analgesic)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000159> (Analgesic pharmacotherapeutic agents)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/MAXO_0000039> <http://purl.obolibrary.org/obo/MAXO_0000159> "Analgesics")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000159> "2019-01-22T17:53:16Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000159> <http://orcid.org/0000-0001-7941-2961>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000159> "Analgesic"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000159> "Analgesic pharmacotherapeutic agents"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000159> <http://purl.obolibrary.org/obo/MAXO_0000058>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000160> (Antidepressant)
@@ -1695,11 +1701,11 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <h
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000192> "Other cardiovascular agents"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000192> <http://purl.obolibrary.org/obo/MAXO_0000181>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000193> (Non-opiod analgesics)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000193> (Non-opioid analgesics)
 
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000193> "2019-01-22T18:22:25Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000193> <http://orcid.org/0000-0001-7941-2961>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000193> "Non-opiod analgesics"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000193> "Non-opioid analgesics"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000193> <http://purl.obolibrary.org/obo/MAXO_0000159>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000194> (Opioid analgesics)
@@ -2264,12 +2270,12 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <h
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000272> "Proton pump inhibitors"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000272> <http://purl.obolibrary.org/obo/MAXO_0000267>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000273> (Gastrointestinal agents, other)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000273> (obsolete Gastrointestinal agents, other)
 
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000273> "2019-01-22T20:38:50Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000273> <http://orcid.org/0000-0001-7941-2961>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000273> "Gastrointestinal agents, other"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000273> <http://purl.obolibrary.org/obo/MAXO_0000267>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000273> "obsolete Gastrointestinal agents, other"^^xsd:string)
+AnnotationAssertion(owl:deprecated <http://purl.obolibrary.org/obo/MAXO_0000273> "true"^^xsd:boolean)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000274> (Genitourinary agents)
 
@@ -2620,6 +2626,50 @@ AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000325> "2019
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000325> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000325> "Anti-infectives"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000325> <http://purl.obolibrary.org/obo/MAXO_0000058>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000424> (Medical magnetic resonance imaging)
+
+AnnotationAssertion(Annotation(<http://purl.obolibrary.org/obo/MAXO_0000024> "NCIT:C16809") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000424> "Imaging that uses radiofrequency waves and a strong magnetic field rather than x-rays to provide amazingly clear and detailed pictures of internal organs and tissues. The technique is valuable for the diagnosis of many pathologic conditions, including cancer, heart and vascular disease, stroke, and joint and musculoskeletal disorders.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/MAXO_0000024> <http://purl.obolibrary.org/obo/MAXO_0000424> "NCIT:C16809")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/MAXO_0000039> <http://purl.obolibrary.org/obo/MAXO_0000424> "MRI scan for therapeutics")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/MAXO_0000039> <http://purl.obolibrary.org/obo/MAXO_0000424> "Nuclear magnetic resonance imaging for medical therapy")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/MAXO_0000039> <http://purl.obolibrary.org/obo/MAXO_0000424> "Therapeutic MRI")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000424> "2019-04-26T17:25:14Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000424> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000424> "Medical magnetic resonance imaging"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000424> <http://purl.obolibrary.org/obo/MAXO_0000005>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000429> (External beam radiation therapy)
+
+AnnotationAssertion(Annotation(<http://purl.obolibrary.org/obo/MAXO_0000024> "NCIT:C15751") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000429> "Radiation therapy in which high-energy beams are delivered to the tumor from outside of the body.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/MAXO_0000024> <http://purl.obolibrary.org/obo/MAXO_0000429> "NCIT:C15751")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/MAXO_0000082> <http://purl.obolibrary.org/obo/MAXO_0000429> "External radiation therapy")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000429> "2019-04-26T19:28:21Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000429> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000429> "External beam radiation therapy"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000429> <http://purl.obolibrary.org/obo/MAXO_0000014>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000430> (Internal radiation therapy)
+
+AnnotationAssertion(Annotation(<http://purl.obolibrary.org/obo/MAXO_0000024> "NCIT:C15195") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000430> "A type of radiation therapy in which radioactive material is placed inside the body, into a tumor or body cavity.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/MAXO_0000024> <http://purl.obolibrary.org/obo/MAXO_0000430> "NCIT:C15195")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/MAXO_0000039> <http://purl.obolibrary.org/obo/MAXO_0000430> "Brachytherapy")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/MAXO_0000039> <http://purl.obolibrary.org/obo/MAXO_0000430> "Internal radiation brachytherapy")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000430> "2019-04-26T19:28:57Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000430> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000430> "Internal radiation therapy"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000430> <http://purl.obolibrary.org/obo/MAXO_0000014>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0001000> (Functional magnetic resonance imaging)
+
+AnnotationAssertion(Annotation(<http://purl.obolibrary.org/obo/MAXO_0000024> "NCIT:C17958") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0001000> "A type of MRI that takes a series of images of an organ in quick succession and statistically analyzes the differences between the images.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/MAXO_0000024> <http://purl.obolibrary.org/obo/MAXO_0001000> "NCIT:C17958")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/MAXO_0000039> <http://purl.obolibrary.org/obo/MAXO_0001000> "Functional MRI")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/MAXO_0000039> <http://purl.obolibrary.org/obo/MAXO_0001000> "fMRI")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0001000> "2019-04-26T20:04:29Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0001000> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0001000> "Functional magnetic resonance imaging"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001000> <http://purl.obolibrary.org/obo/MAXO_0000424>)
 
 
 )
