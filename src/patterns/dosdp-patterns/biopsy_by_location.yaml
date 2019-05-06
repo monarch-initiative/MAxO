@@ -11,7 +11,7 @@ classes:
   location: owl:Thing
 
 relations:
-  med_action has location: RO:0004026
+  has_input: RO:0002233
   
 annotationProperties:
   exact_synonym: oio:hasExactSynonym 
@@ -20,7 +20,7 @@ vars:
   location: "'location'"
 
 name:
-  text: "Biopsy of %s"
+  text: "biopsy of %s"
   vars:
    - location
 
@@ -36,7 +36,7 @@ def:
     - location
 
 equivalentTo:
-  text: "'biopsy' and 'med_action has location' some %s"
+  text: "'biopsy' and 'has_input' some %s"
   vars:
     - location
    
