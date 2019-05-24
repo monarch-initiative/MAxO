@@ -12,13 +12,18 @@ classes:
 
 relations:
   has_input: RO:0002233
+  part_of: BFO:00000050
   
 annotationProperties:
   exact_synonym: oio:hasExactSynonym 
-  
+  created_by: oio:created_by
+  date: dc:date
+ 
 vars:
   location: "'location'"
-
+  date: "'date'"
+  created_by: "'created_by'"
+  
 name:
   text: "biopsy of %s"
   vars:
@@ -29,14 +34,23 @@ annotations:
     text: "%s biopsy"
     vars:
      - location
-
+     
+  - annotationProperty: date
+    text: "%s"
+    vars:
+     - date
+     
+  - annotationProperty: created_by
+    text: "%s"
+    vars:
+     - created_by
 def:
   text: "Removal of tissue from the %s."
   vars:
     - location
 
 equivalentTo:
-  text: "'biopsy''has_input' ('part_of' some %s)"
+  text: "'biopsy' and 'has_input' some ('part_of' some %s)"
   vars:
     - location
    
