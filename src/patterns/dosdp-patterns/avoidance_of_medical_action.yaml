@@ -1,5 +1,5 @@
-pattern_name: biopsy_by_location
-pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/biopsy_by_location.yaml
+pattern_name: avoidance_of_medical_action
+pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_medical_action.yaml
 description: ""
 
 contributors:
@@ -7,12 +7,11 @@ contributors:
   - https://orcid.org/0000-0002-7356-1779
 
 classes:
-  biopsy: MAXO:0000129
-  location: owl:Thing
+  avoidance: MAXO:0001012
+  medical_action: MAXO:0001012
 
 relations:
-  has_input: RO:0002233
-  part_of: BFO:00000050
+  modifying_medical_action: MAXO:0001013
   
 annotationProperties:
   exact_synonym: oio:hasExactSynonym 
@@ -20,20 +19,24 @@ annotationProperties:
   date: dc:date
  
 vars:
-  location: "'location'"
   date: "'date'"
   created_by: "'created_by'"
   
 name:
-  text: "biopsy of %s"
+  text: "%s avoidance"
   vars:
-   - location
+   - medical_action
 
 annotations:
   - annotationProperty: exact_synonym
-    text: "%s biopsy"
+    text: "avoiding %s"
     vars:
-     - location
+     - medical_action
+  
+  - annotationProperty: exact_synonym
+    text: "avoid %s"
+    vars:
+     - medical_action
      
   - annotationProperty: date
     text: "%s"
@@ -45,12 +48,12 @@ annotations:
     vars:
      - created_by
 def:
-  text: "Removal of tissue from the %s."
+  text: "Avoid the administration or use of %s."
   vars:
-    - location
+    - medical_action
 
 equivalentTo:
-  text: "'biopsy' and 'has_input' some ('part_of' some %s)"
+  text: "'avoidance' and 'modifying_medical_action' some %s"
   vars:
-    - location
+    - medical_action
    
