@@ -327,6 +327,8 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001007>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001008>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001009>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001010>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001014>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0001015>))
 Declaration(AnnotationProperty(dce:creator))
 Declaration(AnnotationProperty(dce:date))
 Declaration(AnnotationProperty(dce:description))
@@ -336,6 +338,17 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#cre
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://purl.obolibrary.org/obo/MAXO_0001015> (avoided medical action)
+
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0001015> "2019-06-12T14:23:27Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0001015> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0001015> "avoided medical action"@en)
+
 
 
 ############################
@@ -2652,6 +2665,13 @@ AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#has
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0001010> "white blood cell count")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0001010> "leukocyte count"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001010> <http://purl.obolibrary.org/obo/MAXO_0001006>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0001014> (medical action avoidance)
+
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0001014> "2019-06-12T14:22:47Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0001014> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0001014> "medical action avoidance"@en)
+EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0001014> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/MAXO_0001015> <http://purl.obolibrary.org/obo/MAXO_0000001>)))
 
 
 )

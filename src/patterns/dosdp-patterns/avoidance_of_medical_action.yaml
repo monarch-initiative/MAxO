@@ -7,11 +7,11 @@ contributors:
   - https://orcid.org/0000-0002-7356-1779
 
 classes:
-  avoidance: MAXO:0001012
-  medical_action: MAXO:0001012
+  avoidance: MAXO:0001014
+  medical_action: MAXO:0000001
 
 relations:
-  modifying_medical_action: MAXO:0001013
+  avoided_medical_action: MAXO:0001015
   
 annotationProperties:
   exact_synonym: oio:hasExactSynonym 
@@ -21,6 +21,7 @@ annotationProperties:
 vars:
   date: "'date'"
   created_by: "'created_by'"
+  medical_action: "'medical_action'"
   
 name:
   text: "%s avoidance"
@@ -53,7 +54,7 @@ def:
     - medical_action
 
 equivalentTo:
-  text: "'avoidance' and 'modifying_medical_action' some %s"
+  text: "'avoidance' and 'avoided_medical_action' some %s"
   vars:
     - medical_action
    
