@@ -1,5 +1,5 @@
 # Medical Action Ontology (MAXO)
-
+This ontology is about action that alleviate clinical problems.
 
 # License
 
