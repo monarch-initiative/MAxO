@@ -1,0 +1,67 @@
+pattern_name: avoidance_of_food
+pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_medical_action.yaml
+description: ""
+
+contributors:
+  - https://orcid.org/0000-0001-7941-2961
+  - https://orcid.org/0000-0002-7356-1779
+  - https://orcid.org/0000-0002-7463-6306
+
+classes:
+  avoidance: MAXO:0001014
+  medical_action: MAXO:0000001
+  food_material: FOODON:00002403
+  
+relations:
+  avoided_medical_action: MAXO:0001015
+  
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym 
+  created_by: oio:created_by
+  date: dc:date
+ 
+vars:
+  date: "'date'"
+  created_by: "'created_by'"
+  medical_action: "'medical_action'"
+  
+name:
+  text: "%s %s avoidance"
+  vars:
+   - food_material
+   - medical_action
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "avoiding %s %s"
+    vars:
+     - food_material
+     - medical_action
+  
+  - annotationProperty: exact_synonym
+    text: "avoid %s %s"
+    vars:
+     - food_material
+     - medical_action
+     
+  - annotationProperty: date
+    text: "%s"
+    vars:
+     - date
+     
+  - annotationProperty: created_by
+    text: "%s"
+    vars:
+     - created_by
+def:
+  text: "A medical requirement of avoiding the %s of %s."
+  vars:
+    - medical_action
+    - food_material
+
+equivalentTo:
+  text: "'avoidance' and ('avoided_medical_action' some ('%s' and has_input some %s))"
+  vars:
+    - medical_action
+    - food_material
+   
