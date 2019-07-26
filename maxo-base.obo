@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: maxo/releases/2019-05-17/maxo-base.obo
-ontology: maxo/maxo-base.obo
+data-version: maxo/releases/2019-07-26/maxo-base.owl
+ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Aaron Zhang" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
@@ -12,12 +12,18 @@ property_value: http://purl.org/dc/terms/license "Unspecified" xsd:string
 id: MAXO:0000001
 name: medical action
 def: "A clinically prescribed procedure, therapy, intervention, or recommendation." []
+synonym: "health care process" NARROW [OGMS:0000096]
+xref: OGMS:0000096
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:07:28Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000002
 name: therapeutic procedure
+def: "An action or administration of therapeutic agents to produce an effect that is intended to alter or stop a pathologic process." [NCIT:C49236]
+synonym: "treatment" NARROW []
+xref: NCIT:C49236
+xref: OGMS:0000112
 is_a: MAXO:0000001 ! medical action
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:08:29Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -25,6 +31,11 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000003
 name: diagnostic procedure
+def: "Any procedure or test to diagnose a disease or disorder." [NCIT:C18020]
+synonym: "diagnostic technique" EXACT []
+synonym: "diagnostic test" EXACT []
+xref: NCIT:C18020
+xref: OGMS:0000104
 is_a: MAXO:0000002 ! therapeutic procedure
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:10:20Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -32,6 +43,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000004
 name: surgical procedure
+def: "A diagnostic or treatment procedure performed by manual and/or instrumental means, often involving an incision and the removal or replacement of a diseased organ or tissue; of or relating to or involving or used in surgery or requiring or amenable to treatment by surgery." [NCIT:C15329]
+synonym: "operation" EXACT []
+synonym: "surgery" EXACT []
+synonym: "surgical intervention" EXACT []
+synonym: "surgical operation" EXACT []
+xref: NCIT:C15329
 is_a: MAXO:0000002 ! therapeutic procedure
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:10:35Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -39,6 +56,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000005
 name: therapeutic imaging procedure
+def: "Any technology or method that aids in the visualization of any biological process, cell, tissue or organ for use in screening, diagnosis, surgical procedures or therapy." [NCIT:C17369]
+synonym: "imaging procedure" EXACT []
+synonym: "imaging technique" EXACT []
+synonym: "medical imaging" EXACT []
+synonym: "therapeutic imaging technique" EXACT []
+xref: NCIT:C17369
 is_a: MAXO:0000002 ! therapeutic procedure
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:10:50Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -46,6 +69,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000006
 name: clinical laboratory procedure
+def: "Any procedure that involves testing or manipulating a sample of blood, urine, or other body substance in a laboratory setting for diagnosis, treatment, or therapy." [http://orcid.org/0000-0001-7941-2961, NCIT_C25294]
+synonym: "clinical lab tests" EXACT []
+synonym: "clinical laboratory tests" EXACT []
+synonym: "clinical test" EXACT []
+synonym: "lab test" EXACT []
+xref: NCIT:C25294
 is_a: MAXO:0000002 ! therapeutic procedure
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:11:26Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -53,7 +82,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000008
 name: therapeutic intervention
-def: "All manners of treatment, be they pharmaceuticals, invasive procedures, etc. to relieve illness and injury in attempts to bring the body back to its normal state." [https://doi.org/10.1016/B978-0-12-410516-4.00003-3]
+def: "All manners of treatment, be they pharmaceuticals, invasive procedures, etc. to relieve illness and injury in attempts to bring the body back to its normal state." [ISBN-10:0124105165]
 xref: NCIT:C25218
 is_a: MAXO:0000001 ! medical action
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:11:45Z xsd:dateTime
@@ -61,7 +90,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000009
-name: nutritional intervention
+name: nutrition intervention
+def: "Behavioral or regulatory nutritional interventions aim at modifying nutritional intake which have an impact on health outcomes." [http://orcid.org/0000-0001-7941-2961]
+synonym: "nutritional intervention" EXACT []
 is_a: MAXO:0000008 ! therapeutic intervention
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:12:00Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -69,8 +100,17 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000010
 name: cognitive and behavioral intervention
+def: "Cognitive and behavioral interventions are therapies that are designed to decrease symptoms and foster the belief that one has control over thoughts, beliefs, attitudes, and skills to facilitate coping." [https://orcid.org/0000-0002-7463-6306, PMID:22796302]
+synonym: "cognitive and behavioral therapies" EXACT []
+synonym: "cognitive and behavioral therapy" EXACT []
+synonym: "cognitive and behavioural intervention" EXACT []
+synonym: "cognitive behavior therapy" EXACT []
+synonym: "cognitive behavioral therapy" EXACT []
+synonym: "cognitive behaviour therapy" EXACT []
+synonym: "cognitive behavioural therapy" EXACT []
 xref: NCIT:C116519
 xref: NCIT:C15184
+xref: NCIT:C64345
 is_a: MAXO:0000008 ! therapeutic intervention
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:12:16Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -78,6 +118,16 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000011
 name: physical therapy
+def: "The treatment of deformity or disease through mechanical force and movement, including both active and passive exercises, intended to ameliorate injury, increase mobility, and improve overall function." [NCIT:C15302]
+synonym: "physiatric procedure" EXACT []
+synonym: "physical medicine procedure" EXACT []
+synonym: "physical therapeutics" EXACT []
+synonym: "physical therapy procedure" EXACT []
+synonym: "physiothearpy" EXACT []
+synonym: "physiotherapy procedure" EXACT []
+synonym: "PT" EXACT ABBREVIATION []
+xref: NCIT:C15302
+xref: OGMS:0000115
 is_a: MAXO:0000008 ! therapeutic intervention
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:12:31Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -85,6 +135,13 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000013
 name: complementary and alternative medical therapy
+def: "Complementary and alternative medicine (CAM) or “complementary health approaches” are a group of diverse medical and health care practices and products that are not presently considered to be part of conventional medicine." [NCCIH]
+synonym: "CAM therapy" EXACT []
+synonym: "complementary medicine" NARROW []
+synonym: "complementary or alternative medical procedure" EXACT []
+synonym: "complementary therapy" NARROW []
+xref: NCIT:C51976
+xref: SCDO:0000271
 is_a: MAXO:0000008 ! therapeutic intervention
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-07T19:24:28Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -92,6 +149,14 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000014
 name: radiation therapy
+def: "Treatment of a disease by means of exposure of the target or the whole body to radiation. Radiation therapy is often used as part of curative therapy and occasionally as a component of palliative treatment for cancer. Other uses include total body irradiation prior to transplantation." [NCIT:C15313]
+synonym: "radiation" EXACT []
+synonym: "radiation therapy procedure" EXACT []
+synonym: "radiotherapeutics" EXACT []
+synonym: "radiotherapy" EXACT []
+synonym: "RT" EXACT ABBREVIATION []
+xref: NCIT:C15313
+xref: OGMS:0000116
 is_a: MAXO:0000008 ! therapeutic intervention
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:20:38Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -99,6 +164,13 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000015
 name: biologic therapy
+def: "A type of treatment that uses substances derived from or made by living organisms to treat disease; this includes both naturally occurring and synthetic products." [NCIT:C15187]
+synonym: "biologic therapies" EXACT []
+synonym: "biological response modifier therapy" EXACT []
+synonym: "biological therapy" EXACT []
+synonym: "biotheraphy" EXACT []
+synonym: "BRM therapy" EXACT ABBREVIATION []
+xref: NCIT:C15187
 is_a: MAXO:0000008 ! therapeutic intervention
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:20:54Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -106,6 +178,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000016
 name: cellular therapy
+def: "Cell therapy is therapy in which cellular material is injected into a patient." [PMID:24471045]
+synonym: "cell therapy" EXACT []
+synonym: "cellular therapies" EXACT []
+xref: NCIT:C70601
 is_a: MAXO:0000015 ! biologic therapy
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:21:19Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -114,6 +190,11 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000017
 name: preventative therapeutics
 def: "A therapy or action designed to prevent disease or ailment." []
+synonym: "preventative clinical measures" EXACT []
+synonym: "preventative medical actions" EXACT []
+synonym: "preventative medical measures" EXACT []
+synonym: "preventative therapies" EXACT []
+synonym: "preventative therapy" EXACT []
 is_a: MAXO:0000001 ! medical action
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:21:49Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -122,6 +203,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000018
 name: biomarker analysis
 def: "A broad subcategory of medical signs or objective indications of medical state which can be measured accurately and reproducibly." [PMID:20978388]
+xref: NCIT:C63333
 is_a: MAXO:0000017 ! preventative therapeutics
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:22:04Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -130,6 +212,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000020
 name: behavioral preventative care
 def: "A behavioral modification or implementation of a behavior designed to prevent disease or ailment." []
+synonym: "behavioral preventative therapeutics" EXACT []
+synonym: "preventative behavior therapy" EXACT []
+synonym: "preventative behavioral therapy" EXACT []
 is_a: MAXO:0000017 ! preventative therapeutics
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:22:48Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -138,6 +223,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000021
 name: palliative therapeutics
 def: "An approach that improves the quality of life of patients and their families facing the problems associated with life-threatening illness, through the prevention and relief of suffering by means of early identification and impeccable assessment and treatment of pain and other problems, physical, psychosocial, and spiritual’." [PMID:27162584]
+synonym: "supportive care" NARROW []
+xref: NCIT:C101516
+xref: NCIT:C15747
 is_a: MAXO:0000001 ! medical action
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:23:01Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -146,6 +234,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000022
 name: hospice care
 def: "A service delivery system that provides palliative care/medicine when life expectancy is 6 months or less and when curative or life-prolonging therapy is no longer indicated." [PMID:22190887]
+xref: NCIT:C15252
 is_a: MAXO:0000025 ! end-of life care
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:23:10Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -154,6 +243,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000025
 name: end-of life care
 def: "Care for patients with a progressive life-limiting disease with a prognosis of months or less." [PMID:23796586]
+synonym: "end-of-life treatment management" EXACT []
+xref: NCIT:C67359
 is_a: MAXO:0000021 ! palliative therapeutics
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-09T20:15:05Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -162,7 +253,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000031
 name: life support
 def: "Any medical procedure used to sustain the life of a patient in critical condition." [NCIT:C95171]
+synonym: "life support care" EXACT []
 xref: NCIT:C95171
+xref: OMIT:0009105
 is_a: MAXO:0000025 ! end-of life care
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-09T20:25:04Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -250,6 +343,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000049
 name: therapeutic avoidance of physical activity
+is_a: MAXO:0000011 ! physical therapy
 is_a: MAXO:0000032 ! therapeutic behavior avoidance
 is_a: MAXO:0000151 ! therapeutic avoidance intervention
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:11:57Z xsd:dateTime
@@ -301,42 +395,60 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000058
 name: pharmacotherapy
-synonym: "Drug therapy" EXACT []
+def: "Any substance introduced into a living organism with therapeutic or diagnostic purpose." [CHEBI:52217 ]
+comment: Medical treatment by means of drugs. {xref="http://orcid.org/0000-0001-7941-2961"}
+synonym: "drug therapy" EXACT []
+synonym: "drug treatment" EXACT []
+synonym: "medication therapy" EXACT []
+synonym: "pharmaceutical" EXACT []
+synonym: "pharmaceutical treatment" EXACT []
+synonym: "pharmacological treament" EXACT []
+xref: CHEBI:52217
 is_a: MAXO:0000008 ! therapeutic intervention
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T18:20:06Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000061
-name: antibacterial
-is_a: MAXO:0000325 ! anti-infectives
+name: antibacterial agents
+def: "A drug used to treat or prevent bacterial infections." [CHEBI:36047]
+synonym: "antibacterial drugs" EXACT []
+xref: CHEBI:36047
+is_a: MAXO:0001021 ! antimicrobial agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T18:59:44Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000062
 name: antineoplastics agents
+def: "A substance that inhibits or prevents the proliferation of neoplasms." [CHEBI:35610]
+synonym: "anticancer agents" BROAD []
+synonym: "antineoplastic drugs" BROAD []
+synonym: "antineoplastic drugs" EXACT []
+synonym: "cytostatic agents" EXACT []
+synonym: "cytostatics" EXACT []
+xref: CHEBI:35610
 is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T19:01:01Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
-id: MAXO:0000064
-name: therapeutic activity intervention
-is_a: MAXO:0000008 ! therapeutic intervention
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T19:02:22Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
-
-[Term]
 id: MAXO:0000065
 name: aerobic exercise therapy
-is_a: MAXO:0000064 ! therapeutic activity intervention
+def: "A medical recommendation of sustained exercise that places an increased oxygen demand on the cardiovascular system and promotes an increased efficiency of the body's use of oxygen." [http://orcid.org/0000-0001-7941-2961, NCIT:C39774]
+synonym: "aerobic activity" EXACT []
+synonym: "aerobic exercise" EXACT []
+xref: NCIT:C39774
+is_a: MAXO:0000011 ! physical therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T19:02:35Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000066
 name: oxygen therapy
+def: "The administration of oxygen to an individual, usually to aid in respiration." [NCIT:C94624]
+synonym: "supplemental oxygen therapy." EXACT []
+xref: NCIT:C94624
 is_a: MAXO:0000008 ! therapeutic intervention
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T19:14:17Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -350,22 +462,43 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000068
-name: transplantation
+name: transplantation surgical procedure
+def: "Transference of a tissue or organ within an individual, between individuals of the same species, or between individuals of different species." [NCIT:C15342]
+synonym: "grafting procedure" NARROW []
+synonym: "transplant procedure" EXACT []
+synonym: "transplantation" EXACT []
+synonym: "transplantation surgery" EXACT []
+xref: NCIT:C15342
+xref: OBI:0000105
 is_a: MAXO:0000004 ! surgical procedure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T19:15:04Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000069
-name: lung transplantation
-is_a: MAXO:0000068 ! transplantation
+name: lung transplantation surgical procedure
+def: "The surgical transfer of one or both lungs from one individual to another." [NCIT:C15274]
+synonym: "lung grafting" EXACT []
+synonym: "lung transplantation" EXACT []
+synonym: "lung transplantation surgery" EXACT []
+synonym: "transplantation of lung" EXACT []
+synonym: "transplantation of the lung" EXACT []
+xref: NCIT:C15274
+is_a: MAXO:0000068 ! transplantation surgical procedure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T19:15:13Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000070
-name: liver transplantation
-is_a: MAXO:0000068 ! transplantation
+name: liver transplantation surgical procedure
+def: "The transfer of a healthy liver allograft from a donor to a patient." [NCIT:C15271]
+synonym: "hepatic transplantation" EXACT []
+synonym: "liver grafting" EXACT []
+synonym: "liver transplantation" EXACT []
+synonym: "surgical transplantation of the liver" EXACT []
+synonym: "transplantation of liver" EXACT []
+xref: NCIT:C15271
+is_a: MAXO:0000068 ! transplantation surgical procedure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T19:15:21Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -381,7 +514,7 @@ id: MAXO:0000072
 name: ultrasonography
 def: "A technique in which high-frequency sound waves are bounced off internal organs and the echo pattern is converted into a 2 dimensional picture of the structures beneath the transducer." [NCIT:C17230]
 synonym: "2-dimensional ultrasound imaging" EXACT [NCIT:C17230]
-synonym: "Ultrasound" EXACT [NCIT:C17230]
+synonym: "ultrasound" EXACT [NCIT:C17230]
 xref: NCIT:C17230
 is_a: MAXO:0000005 ! therapeutic imaging procedure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T19:32:35Z xsd:dateTime
@@ -397,6 +530,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000074
 name: pancreatic function test
+xref: NCIT:C97101
 is_a: MAXO:0000075 ! digestive system test
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T19:35:19Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -411,6 +545,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000076
 name: liver function test
+def: "The quantitative measurement of liver enzymes in the blood, which is useful in assessing the functional state of a patient's liver. Liver function tests include the measurement of albumin, alanine transaminase, aspartate transaminase, alkaline phosphatase, bilirubin, and gamma glutamyl transferase." [NCIT:C74954]
+xref: NCIT:C74954
 is_a: MAXO:0000075 ! digestive system test
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T19:35:59Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -419,7 +555,11 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000077
 name: behavioral counseling
 def: "The act of receiving professional guidance in resolving personal conflicts and emotional problems." [NCIT:C61547]
+synonym: "behavioural counseling" EXACT []
 synonym: "counseling intervention" EXACT [NCIT:C61547]
+synonym: "NCIT:C63474" EXACT []
+synonym: "psychotherapy" NARROW []
+xref: NCIT:C15308
 xref: NCIT:C61547
 is_a: MAXO:0000010 ! cognitive and behavioral intervention
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T19:44:32Z xsd:dateTime
@@ -439,6 +579,7 @@ id: MAXO:0000079
 name: genetic counseling
 def: "The process whereby an expert in hereditary disorders provides information about risk and clinical burden of a disorder or disorders to patients or relatives in families with genetic disorders as an aid to making informed and responsible decisions about marriage, children, early diagnosis, and handling disability." [NCIT:C15240]
 xref: NCIT:C15240
+xref: SCDO:0000443
 is_a: MAXO:0000077 ! behavioral counseling
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T19:48:00Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -446,6 +587,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000080
 name: stress management therapy
+synonym: "stress management" NARROW []
 xref: NCIT:C67032
 is_a: MAXO:0000077 ! behavioral counseling
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T19:49:24Z xsd:dateTime
@@ -456,6 +598,7 @@ id: MAXO:0000081
 name: tobacco cessation counseling
 def: "A process by which a health professional provides education, recommendations, or interventions to help clients stop using tobacco products." [NCIT:C101244]
 synonym: "smoking cessation" NARROW [http://orcid.org/0000-0001-7941-2961]
+synonym: "smoking cessation counseling" EXACT []
 xref: NCIT:C101244
 is_a: MAXO:0000077 ! behavioral counseling
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T19:51:07Z xsd:dateTime
@@ -475,6 +618,7 @@ id: MAXO:0000084
 name: meditation therapy
 def: "Continuous and profound contemplation or musing on a subject or series of subjects of a deep or abstruse nature; contemplation of spiritual matters." [NCIT:C51975]
 xref: NCIT:C51975
+xref: SCDO:0000741
 is_a: MAXO:0000013 ! complementary and alternative medical therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T20:32:30Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -492,6 +636,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000086
 name: chiropractic therapy
 def: "An alternative medical system that focuses on the relationship between bodily structure (primarily that of the spine) and function, and how that relationship affects the preservation and restoration of health. Chiropractors use manipulative therapy as an integral treatment tool." [NCIT:C15204]
+synonym: "chiropractic therapies" EXACT []
+synonym: "chiropractic treatment" EXACT []
+synonym: "chriropratic medicine" EXACT []
 xref: NCIT:C15204
 is_a: MAXO:0000013 ! complementary and alternative medical therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T20:35:28Z xsd:dateTime
@@ -501,6 +648,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000087
 name: massage therapy
 def: "A therapeutic method of manipulation, methodical pressure, friction, and kneading of the body." [NCIT:C15276]
+synonym: "massage" EXACT []
+synonym: "massage and body work" EXACT []
 xref: NCIT:C15276
 is_a: MAXO:0000013 ! complementary and alternative medical therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T20:36:55Z xsd:dateTime
@@ -509,24 +658,36 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000088
 name: dietary intervention
-is_a: MAXO:0000009 ! nutritional intervention
+def: "Any alteration or treatment in an individual's diet with a planned goal, usually designed to improve the individual's overall health." [NCIT:C15447]
+synonym: "behavioral nutritional intervention" RELATED []
+synonym: "diet" NARROW []
+xref: NCIT:C15447
+is_a: MAXO:0000009 ! nutrition intervention
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T20:39:14Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000089
 name: calorie restrictive diets
-xref: NCIT:C64891
+def: "The restriction of energy (calorie) intake below the amount required for weight maintenance." [PMID:23748374]
+synonym: "calorie restriction" EXACT []
+synonym: "LCD" EXACT ABBREVIATION []
+synonym: "low calorie diet" EXACT []
+synonym: "primarily food‐based low‐calorie diet" NARROW []
 is_a: MAXO:0000088 ! dietary intervention
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T20:39:29Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000090
-name: enteral tube feeding
+name: enteral nutrition
 def: "Delivery of enteral nutrition via a tube placed into the stomach, duodenum, or jejunum." [NCIT:C93322]
+synonym: "EN" EXACT ABBREVIATION []
+synonym: "enteral nutrition support" EXACT []
+synonym: "enteral tube feeding" EXACT []
+synonym: "tube feeding" EXACT []
 xref: NCIT:C93322
-is_a: MAXO:0000009 ! nutritional intervention
+is_a: MAXO:0000009 ! nutrition intervention
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T20:40:39Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -577,7 +738,13 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000098
 name: fasting intervention
-is_a: MAXO:0000009 ! nutritional intervention
+def: "Abstinence from all or some kinds of food or drink, particularly for religious observance, medical nutrition therapy, or prior to a medical procedure." [https://orcid.org/0000-0002-7463-6306, PMID:16630428, PMID:27499591]
+synonym: "fasting" EXACT []
+synonym: "intermittant fasting" NARROW []
+synonym: "nil per os" EXACT []
+synonym: "therapeutic fasting" EXACT []
+xref: NCIT:C63663
+is_a: MAXO:0000009 ! nutrition intervention
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:01:21Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -642,6 +809,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000107
 name: multivitamin supplementation
+def: "A dietary supplement containing all or most of the vitamins that may not be readily available in the diet. Vitamins may be classified according to their solubility either in lipids (vitamins A, D, E, K, F) or in water (vitamins C, B-complex). Present in minute amounts in various foods, vitamins are essential to maintaining normal metabolism and biochemical functions." [NCIT:C1654]
+xref: NCIT:C1654
 is_a: MAXO:0000106 ! nutritional supplementation
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:08:59Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -649,6 +818,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000108
 name: iron supplementation
+def: "Oral iron supplementation is an effective and well‐studied option to replenish iron stores." [PMID:28328083]
+synonym: "iron replacement therapy" NARROW []
+synonym: "oral iron supplementation" EXACT []
 is_a: MAXO:0000106 ! nutritional supplementation
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:09:25Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -689,8 +861,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000113
 name: gavage
 def: "Administration of nutritional support by means of a tube passed into the stomach." [NCIT:C73430]
+synonym: "gastrogavage" EXACT []
 xref: NCIT:C73430
-is_a: MAXO:0000009 ! nutritional intervention
+is_a: MAXO:0000090 ! enteral nutrition
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:13:59Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -698,8 +871,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000114
 name: total parenteral nutrition
 def: "Total parenteral nutrition formulated for intravenous administration in patients who cannot eat or cannot get enough nutrients from the foods they eat.  It is a liquid mixture of proteins, carbohydrates, fats, vitamins, minerals and other nutrients." [NCIT:C29484]
+synonym: "hyperalimentation" NARROW []
+synonym: "TPN" EXACT ABBREVIATION []
 xref: NCIT:C29484
-is_a: MAXO:0000009 ! nutritional intervention
+is_a: MAXO:0000009 ! nutrition intervention
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:16:22Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -707,6 +882,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000115
 name: memory intervention
 def: "Any action taken for the purpose of improving or maintaining an individual's memory." []
+synonym: "memory aids" NARROW []
+synonym: "working memory interventions" EXACT []
 xref: NCIT:C116526
 is_a: MAXO:0000010 ! cognitive and behavioral intervention
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:26:54Z xsd:dateTime
@@ -715,6 +892,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000116
 name: smoking prevention
+def: "A behavioral modification or implementation of a behavior designed to prevent smoking." [https://orcid.org/0000-0002-7463-6306]
+synonym: "prevent smoking" EXACT []
 xref: NCIT:C16114
 is_a: MAXO:0000020 ! behavioral preventative care
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:33:17Z xsd:dateTime
@@ -725,6 +904,9 @@ id: MAXO:0000117
 name: contraception
 def: "The prevention of conception or impregnation by the use of devices or drugs or surgery." [NCIT:C37932]
 synonym: "birth control" EXACT [NCIT:C37932]
+synonym: "conception prevention" EXACT []
+synonym: "contraceptive management" EXACT []
+synonym: "pregnancy prevention" EXACT []
 xref: NCIT:C37932
 is_a: MAXO:0000017 ! preventative therapeutics
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:34:14Z xsd:dateTime
@@ -734,6 +916,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000118
 name: preventative immunization
 def: "Immunization is the process whereby a person is made immune or resistant to an infectious disease, typically by the administration of a vaccine." [WHO]
+synonym: "immunization" EXACT [NCIT:C15258, OBI:1110094]
+xref: NCIT:C15258
+xref: OBI:1110094
 is_a: MAXO:0000017 ! preventative therapeutics
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:36:12Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -742,6 +927,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000120
 name: active immunization
 def: "Active immunity refers to the process of exposing the body to an antigen to generate an adaptive immune response: the response takes days/weeks to develop but may be long lasting—even lifelong." [PMID:18045976]
+xref: IDO:0000498
+xref: NCIT:C15416
+xref: VO:0000491
 is_a: MAXO:0000118 ! preventative immunization
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-20T00:31:42Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -750,6 +938,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000121
 name: passive immunization
 def: "Passive immunity refers to the process of providing IgG antibodies to protect against infection; it gives immediate, but short-lived protection." [PMID:18045976]
+xref: NCIT:C15259
+xref: OBI:0001174
+xref: VO:0000492
 is_a: MAXO:0000118 ! preventative immunization
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-20T00:31:52Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -774,6 +965,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000125
 name: audiometric test
 def: "Testing conducted utilizing a manual or microprocessor audiometer to test for hearing loss." [NCIT:C38036]
+synonym: "hearing exam" EXACT []
+synonym: "hearing test" EXACT []
 xref: NCIT:C38036
 is_a: MAXO:0000124 ! disease screening
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-20T00:42:26Z xsd:dateTime
@@ -792,6 +985,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000127
 name: genetic testing
 def: "The process of isolating and testing the DNA of an embryo or a person to detect the presence of genetic alterations or defects that may predispose to the future development of a disease or disorder." [NCIT:C15709]
+synonym: "genetic analysis" EXACT []
 xref: NCIT:C15709
 is_a: MAXO:0000124 ! disease screening
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-20T00:46:22Z xsd:dateTime
@@ -800,15 +994,20 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000128
 name: prenatal screening
+def: "Any test performed during pregnancy to assess fetal health and to detect for genetic abnormalities and various disorders." [NCIT:C92721]
+synonym: "pregnancy related screening" EXACT []
+synonym: "pregnancy related screening test" EXACT []
 is_a: MAXO:0000003 ! diagnostic procedure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-20T00:51:25Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000129
-name: biopsy
+name: biopsy procedure
 def: "An examination of tissue removed from the body to assess the presence, cause, or extent of a disease." []
+synonym: "biopsy" EXACT []
 xref: NCIT:C15189
+xref: OPMI:0000274
 is_a: MAXO:0000003 ! diagnostic procedure
 property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7941-2961
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-20T00:52:34Z xsd:dateTime
@@ -817,6 +1016,7 @@ property_value: http://purl.org/dc/elements/1.1/date 2019-01-20T00:52:34Z xsd:da
 id: MAXO:0000130
 name: endoscopic procedure
 def: "A diagnostic or therapeutic procedure in which an endoscope is inserted in a tubular organ to examine the structural architecture and/or remove abnormal tissues." [NCIT:C16546]
+synonym: "endoscopic exam" EXACT []
 synonym: "endoscopy" EXACT [NCIT:C16546]
 xref: NCIT:C16546
 is_a: MAXO:0000002 ! therapeutic procedure
@@ -825,14 +1025,17 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000131
-name: endoscopy by site
+name: location specific endoscopy
+synonym: "endoscopy by site" EXACT []
 is_a: MAXO:0000130 ! endoscopic procedure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-20T01:03:18Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000132
-name: endoscopy technique
+name: specific technique endoscopy
+synonym: "endoscopy by type" EXACT []
+synonym: "specific type endoscopy" EXACT []
 is_a: MAXO:0000130 ! endoscopic procedure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-20T01:03:28Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -843,7 +1046,7 @@ name: balloon-guided endoscopic procedure
 def: "An endoscopic technique that allows deep intubation of the small intestine while using a standard endoscope. An inflatable balloon attached to the endoscope's tip acts as a stabilizer and a second balloon that is advanced ahead of the endoscope acts as a pulling device." [NCIT:C64865]
 synonym: "balloon-guided endoscopy" EXACT []
 xref: NCIT:C64865
-is_a: MAXO:0000132 ! endoscopy technique
+is_a: MAXO:0000132 ! specific technique endoscopy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-20T18:48:29Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -852,7 +1055,7 @@ id: MAXO:0000134
 name: chromoendoscopy
 def: "Endoscopy that employs the use of tissue stains to increase tissue contrast, and enhance the ability to identify various tissue dysplasia and other abnormalities." [NCIT:C116476]
 xref: NCIT:C116476
-is_a: MAXO:0000132 ! endoscopy technique
+is_a: MAXO:0000132 ! specific technique endoscopy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-20T18:51:12Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -862,7 +1065,7 @@ name: high-resolution microendoscopy
 def: "A low-cost, high-resolution imaging tool consisting of a 1-mm diameter fiber-optic bundle that produces subcellular imaging at 1,000x magnification and 4 micrometer resolution, allowing for minimally invasive bioimaging." [NCIT:C116480]
 synonym: "HRME" EXACT ABBREVIATION []
 xref: NCIT:C116480
-is_a: MAXO:0000132 ! endoscopy technique
+is_a: MAXO:0000132 ! specific technique endoscopy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-20T19:03:17Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -880,7 +1083,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000138
 name: contrast-enhanced untrasound
 def: "Ultrasound imaging following the administration of a microbubble contrast agent." [NCIT:C148281]
-synonym: "CEUS" EXACT [NCIT:C148281]
+synonym: "CEUS" EXACT ABBREVIATION []
 xref: NCIT:C148281
 is_a: MAXO:0000072 ! ultrasonography
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-21T20:17:52Z xsd:dateTime
@@ -888,8 +1091,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000139
-name: autopsy
+name: autopsy procedure
 def: "A postmortem examination of the body that includes an examination of the internal organs and structures after dissection to determine the cause of death and the nature of pathological changes." [NCIT:C25153]
+synonym: "autopsy" EXACT []
 xref: NCIT:C25153
 is_a: MAXO:0000004 ! surgical procedure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-21T20:33:46Z xsd:dateTime
@@ -934,7 +1138,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000144
 name: histological procedure
-def: "Technique or procedure used for the study of the microanatomy of tissues and their cellular structure; usually involves microscopic examination of tissue slices." [NCIT:C16680]
+def: "Technique or procedure used for the study of the microanatomy of tissues and their cellular structure for the diagnosis or treatment of a disease." [http://orcid.org/0000-0001-7941-2961, NCIT:C16680]
+synonym: "histological test" EXACT []
 xref: NCIT:C16680
 is_a: MAXO:0000006 ! clinical laboratory procedure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-21T21:04:01Z xsd:dateTime
@@ -951,8 +1156,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000146
-name: cell count for clinical pathology
-def: "A procedure to determine the number of cells in a sample. Also used to mean the result of such a procedure." [NCIT:C48938]
+name: clinical pathology cell count
+def: "A procedure to determine the number of cells in a clinical sample." [http://orcid.org/0000-0001-7941-2961, NCIT:C48938]
+synonym: "cell count" EXACT []
+xref: NCIT:C48938
 is_a: MAXO:0000145 ! clinical pathology procedure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-21T21:16:16Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -961,14 +1168,18 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000147
 name: hematology test
 def: "A laboratory test to measure hematopoietic components and investigate hematologic disorders in a blood sample." [NCIT:C49286]
+xref: NCIT:C49286
 is_a: MAXO:0000006 ! clinical laboratory procedure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-21T21:22:45Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000148
-name: oxygen capacity measurement
+name: oxygen capacity measurement test
 def: "The determination of the maximum amount of oxygen that can be combined chemically with hemoglobin in a volume of blood." [NCIT:C96614]
+synonym: "OXYCAP" EXACT ABBREVIATION []
+synonym: "oxygen capacity measurement" EXACT []
+synonym: "oxygen capacity test" EXACT []
 xref: NCIT:C96614
 is_a: MAXO:0000147 ! hematology test
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-21T21:29:03Z xsd:dateTime
@@ -976,10 +1187,13 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000149
-name: hematocrit measurement
+name: hematocrit measurement test
 def: "A measure of the volume of red blood cells expressed as a percentage of the total blood volume. Normal in males is 43-49%, in females 37-43%." [NCIT:C64796]
 synonym: "erythrocyte volume fraction" EXACT [NCIT:C64796]
+synonym: "EVF" EXACT ABBREVIATION []
+synonym: "HCT" EXACT ABBREVIATION []
 synonym: "packed cell volume" EXACT [NCIT:C64796]
+synonym: "PCV" EXACT ABBREVIATION []
 xref: NCIT:C64796
 is_a: MAXO:0000147 ! hematology test
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-21T21:32:32Z xsd:dateTime
@@ -988,6 +1202,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000151
 name: therapeutic avoidance intervention
+def: "A medical recommendation to avoid a particular therapy, intervention, medication, or procedure." [http://orcid.org/0000-0001-7941-2961]
+synonym: "avoid activity" NARROW []
+synonym: "avoid drug" NARROW []
+synonym: "avoid medication" NARROW []
+synonym: "avoid procedure" EXACT []
+synonym: "avoid therapy" EXACT []
 is_a: MAXO:0000008 ! therapeutic intervention
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-07T19:23:10Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -1010,29 +1230,54 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000157
 name: antiparkinson agents
-is_a: MAXO:0000058 ! pharmacotherapy
+def: "A drug used in the treatment of Parkinson's disease." [CHEBI:48407]
+synonym: "antiparkinson agent" EXACT []
+synonym: "antiparkinson drug" EXACT []
+synonym: "antiparkinson drugs" EXACT []
+synonym: "antiparkinsonian agent" EXACT []
+synonym: "antiparkisonian agents" EXACT []
+synonym: "antiparkisonian drugs" EXACT []
+xref: CHEBI:48407
+xref: NCIT:C38149
+is_a: MAXO:0000260 ! central nervous system agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:52:48Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000158
-name: antiparasitics
-is_a: MAXO:0000325 ! anti-infectives
+name: antiparasitic agents
+def: "A substance used to treat or prevent parasitic infections." [CHEBI:35442]
+synonym: "antiparasitic drugs" EXACT []
+synonym: "antiparasitics" EXACT []
+xref: CHEBI:35442
+is_a: MAXO:0000325 ! anti-infectives agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:53:06Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000159
 name: analgesic pharmacotherapeutic agents
+def: "An agent capable of relieving pain without the loss of consciousness or without producing anaesthesia. In addition, analgesic is a role played by a compound which is exhibited by a capability to cause a reduction of pain symptoms." [CHEBI:35480]
+synonym: "analgesic" EXACT []
 synonym: "Analgesics" EXACT []
+xref: CHEBI:35480
+xref: NCIT_C241
 is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:53:16Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000160
-name: antidepressant
-is_a: MAXO:0000058 ! pharmacotherapy
+name: antidepressant agents
+def: "Antidepressants are mood-stimulating drugs used primarily in the treatment of affective disorders and related conditions." [CHEBI:35469]
+synonym: "antidepressant drugs" EXACT []
+synonym: "antidepressants" EXACT []
+synonym: "thymoanaleptics" EXACT []
+synonym: "thymoleptic agents" EXACT []
+synonym: "thymoleptic drugs" EXACT []
+synonym: "thymoleptics" EXACT []
+xref: CHEBI:35469
+is_a: MAXO:0001022 ! psychotropic agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:53:33Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1052,21 +1297,48 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000163
-name: anxiolytics
-is_a: MAXO:0000058 ! pharmacotherapy
+name: anxiolytic agents
+def: "Anxiolytic drugs are agents that alleviate anxiety, tension, and anxiety disorders, promote sedation, and have a calming effect without affecting clarity of consciousness or neurologic conditions." [CHEBI:35474]
+synonym: "anti-anxiety agents" EXACT []
+synonym: "anti-anxiety drugs" EXACT []
+synonym: "anxiolytic agent" EXACT []
+synonym: "anxiolytics" EXACT []
+synonym: "minor tranquilisers" EXACT []
+synonym: "minor tranquilizers" EXACT []
+synonym: "minor tranquilizing agents" EXACT []
+synonym: "minor tranquilizing drugs" EXACT []
+xref: CHEBI:35474
+is_a: MAXO:0001023 ! tranquilizing agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:54:43Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000164
 name: antigout agents
+def: "Substance that may reduce inflammation, stimulate elimination of uric acid, or increase production of uric acid." [NCIT:C29733]
+synonym: "anti-gout agents" EXACT []
+synonym: "anti-gout combination medicine" EXACT []
+synonym: "anti-gout drugs" EXACT []
+synonym: "anti-gout preparation" EXACT []
+synonym: "antigout agent" EXACT []
+synonym: "antigout combination medicine" EXACT []
+synonym: "antigout drugs" EXACT []
+synonym: "antigout preparation" EXACT []
+xref: NCIT:C29733
 is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:55:18Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000165
-name: diuretic
+name: diuretic agents
+def: "An agent that promotes the excretion of urine through its effects on kidney function" [CHEBI:35498]
+synonym: "diuretic agent" EXACT []
+synonym: "diuretic drug" EXACT []
+synonym: "diuretic drugs" EXACT []
+synonym: "diuretics" EXACT []
+xref: CHEBI:35498
+xref: NCIT:C448
 is_a: MAXO:0000181 ! cardiovascular agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:55:27Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -1074,34 +1346,70 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000166
 name: antipsychotic agents
-is_a: MAXO:0000058 ! pharmacotherapy
+def: "Antipsychotic drugs are agents that control agitated psychotic behaviour, alleviate acute psychotic states, reduce psychotic symptoms, and exert a quieting effect." [CHEBI:35476]
+synonym: "antipsychotic drug" EXACT []
+synonym: "antipsychotics" EXACT []
+synonym: "major tranquilizers" EXACT []
+synonym: "neuroleptic agents" EXACT []
+synonym: "neuroleptics" EXACT []
+xref: CHEBI:35476
+is_a: MAXO:0001023 ! tranquilizing agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:57:29Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000167
-name: anticonvulsant
-is_a: MAXO:0000058 ! pharmacotherapy
+name: anticonvulsant agents
+def: "A drug used to prevent seizures or reduce their severity." [CHEBI:35623]
+synonym: "anti-convulsant" EXACT []
+synonym: "anti-convulsive agent" EXACT []
+synonym: "anticonvulsant" EXACT []
+synonym: "anticonvulsant drugs" EXACT []
+synonym: "anticonvulsive agents" EXACT []
+synonym: "antiepileptic" EXACT []
+synonym: "antiepileptics" EXACT []
+xref: CHEBI:35623
+xref: NCIT:C264
+is_a: MAXO:0000260 ! central nervous system agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:57:37Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000168
-name: antiviral
-is_a: MAXO:0000325 ! anti-infectives
+name: antiviral agents
+def: "A substance used in the prophylaxis or therapy of virus diseases." [CHEBI:36044]
+synonym: "anti-viral drug" EXACT []
+synonym: "anti-virus drugs" EXACT []
+synonym: "antiviral drugs" EXACT []
+xref: CHEBI:36044
+is_a: MAXO:0001021 ! antimicrobial agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:57:52Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000169
-name: anti-inflammatory
+name: anti-inflammatory agents
+def: "Any compound that has anti-inflammatory effects." [CHEBI:67079]
+synonym: "anti-inflammatory agent" EXACT []
+synonym: "anti-inflammatory drugs" EXACT []
+synonym: "antiinflammatory agents" EXACT []
+synonym: "antiinflammatory drugs" EXACT []
+xref: CHEBI:67079
 is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:58:04Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000170
-name: anesthetic
+name: anesthetic agent
+def: "Substance which produces loss of feeling or sensation." [CHEBI:38867]
+synonym: "anaesthesia" EXACT []
+synonym: "anaesthetic" EXACT []
+synonym: "anaesthetics" EXACT []
+synonym: "anesthesia" EXACT []
+synonym: "anesthetic drug" EXACT []
+xref: CHEBI:38867
+xref: NCIT:C245
 is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:59:57Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -1109,7 +1417,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000171
 name: antidementia agents
-is_a: MAXO:0000058 ! pharmacotherapy
+is_a: MAXO:0000260 ! central nervous system agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:00:43Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1123,14 +1431,29 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000173
 name: antiemetics agents
+synonym: "A drug used to prevent nausea or vomiting. An antiemetic may act by a wide range of mechanisms: it might affect the medullary control centres (the vomiting centre and the chemoreceptive trigger zone) or affect the peripheral receptors." EXACT [CHEBI:50919]
+synonym: "anti-emetic agents" EXACT []
+synonym: "anti-emetic drugs" EXACT []
+synonym: "anti-emetics" EXACT []
+synonym: "antiemetic drugs" EXACT []
+synonym: "antiemetics" EXACT []
+xref: CHEBI:50919
+xref: NCIT:C267
 is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:01:53Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000174
-name: antifungals
-is_a: MAXO:0000325 ! anti-infectives
+name: antifungals agents
+def: "Any antifungal drug used to prevent or treat fungal infections in humans or animals." [CHEBI:86327]
+synonym: "anti-fungal drugs" EXACT []
+synonym: "anti-fungal medication" EXACT []
+synonym: "antifungal drugs" EXACT []
+synonym: "antifungals" EXACT []
+synonym: "pharmaceutical fungicide" NARROW []
+xref: CHEBI:86327
+is_a: MAXO:0000325 ! anti-infectives agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:02:00Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1143,7 +1466,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000176
-name: blood modifiers
+name: hematologic agents
+def: "Drug that acts on blood and blood-forming organs and those that affect the hemostatic system." [CHEBI:50248]
+synonym: "blood modifiers" EXACT []
+synonym: "blood modifying agents" EXACT []
+synonym: "hematologic agent" EXACT []
+xref: CHEBI:50248
 is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:11:44Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -1151,93 +1479,218 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000177
 name: coagulants
-is_a: MAXO:0000176 ! blood modifiers
+is_a: MAXO:0000176 ! hematologic agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:11:58Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000178
-name: anticoagulants
-is_a: MAXO:0000176 ! blood modifiers
+name: anticoagulant agents
+def: "An agent that prevents blood clotting." [CHEBI:50249]
+synonym: "anticoagulant agent" EXACT []
+synonym: "anticoagulant drugs" EXACT []
+synonym: "anticoagulants" EXACT []
+xref: CHEBI:50249
+is_a: MAXO:0000176 ! hematologic agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:12:06Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000179
 name: blood formation products
-is_a: MAXO:0000176 ! blood modifiers
+is_a: MAXO:0000176 ! hematologic agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:12:20Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000180
-name: platelet aggregation inhibitors
-is_a: MAXO:0000176 ! blood modifiers
+name: platelet aggregation inhibitor agents
+def: "A drug or agent which antagonizes or impairs any mechanism leading to blood platelet aggregation, whether during the phases of activation and shape change or following the dense-granule release reaction and stimulation of the prostaglandin-thromboxane system." [CHEBI:50427]
+synonym: "platelet aggregation inhibitor" EXACT []
+synonym: "platelet aggregation inhibitor agent" EXACT []
+synonym: "platelet aggregation inhibitors" EXACT []
+xref: CHEBI:50427
+is_a: MAXO:0000176 ! hematologic agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:12:39Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000181
 name: cardiovascular agents
+def: "A drug that affects the rate or intensity of cardiac contraction, blood vessel diameter or blood volume." [CHEBI:35554]
+synonym: "agent affecting cardiovascular system" EXACT []
+synonym: "cardiovascular agent" EXACT []
+synonym: "cardiovascular drug" EXACT []
+synonym: "cardiovascular drugs" EXACT []
+synonym: "cardiovascular system agents" EXACT []
+synonym: "cardiovascular system drugs" EXACT []
+xref: CHEBI:35554
+xref: NCIT:C78274
 is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:13:06Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000182
-name: alpha-adrenergic modifiers
-is_a: MAXO:0000181 ! cardiovascular agents
+name: alpha-adrenergic agents
+def: "Any drug that acts on an alpha-adrenergic receptor." [CHEBI:48539]
+synonym: "a-adrenergic agents" EXACT []
+synonym: "a-adrenergic drugs" EXACT []
+synonym: "a-adrenergic receptor agents" EXACT []
+synonym: "a-adrenergic receptor drugs" EXACT []
+synonym: "alpha adrenergic drugs" EXACT []
+synonym: "alpha adrenergic receptor agents" EXACT []
+synonym: "alpha adrenergic receptor drugs" EXACT []
+synonym: "alpha adrenergics" EXACT []
+synonym: "alpha-adrenergic agent" EXACT []
+synonym: "alpha-adrenergic drug" EXACT []
+synonym: "alpha-adrenergic drugs" EXACT []
+synonym: "alpha-adrenergic modifiers" EXACT []
+synonym: "alpha-adrenergic modifying agents" EXACT []
+synonym: "alpha-adrenergic receptor agents" EXACT []
+synonym: "alpha-adrenergic receptor drug" EXACT []
+synonym: "alpha-adrenergic receptor drugs" EXACT []
+xref: CHEBI:48539
+is_a: MAXO:0001025 ! adrenergic agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:14:42Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000183
-name: alpha-adrenergic agonists
-is_a: MAXO:0000182 ! alpha-adrenergic modifiers
+name: alpha-adrenergic agonist agents
+def: "An agent that selectively binds to and activates alpha-adrenergic receptors." [CHEBI:48539]
+synonym: "a-adrenergic agonists" EXACT []
+synonym: "a-adrentergic agonist drugs" EXACT []
+synonym: "a-adronergic receptor agonists" EXACT []
+synonym: "alpha adrenergic agonist agents" EXACT []
+synonym: "alpha adrenergic agonist drugs" EXACT []
+synonym: "alpha adrenergic agonits" EXACT []
+synonym: "alpha adrenergic receptor agonists" EXACT []
+synonym: "alpha adrentergic receptor agonist agents" EXACT []
+synonym: "alpha-adrenergic agonists" EXACT []
+synonym: "alpha-adrenergic receptor agonist drugs" EXACT []
+synonym: "alpha-adrenergic receptor agonists" EXACT []
+synonym: "alpha-adrenoceptor agonist agents" EXACT []
+synonym: "alpha-adrenoceptor agonist drugs" EXACT []
+synonym: "alpha-adrenoceptor agonists" EXACT []
+xref: CHEBI:48539
+is_a: MAXO:0000182 ! alpha-adrenergic agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:15:26Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000184
-name: alpha-adrenergic antagonists
+name: alpha-adrenergic antagonist agents
+def: "An agent that binds to but does not activate alpha-adrenergic receptors thereby blocking the actions of endogenous or exogenous alpha-adrenergic agonists." [CHEBI:37890]
+synonym: "a-adrenergic antagonist agents" EXACT []
+synonym: "a-adrenergic antagonists" EXACT []
+synonym: "a-adrenergic receptor antagonist drugs" EXACT []
+synonym: "alpha adrentergic antagonist drugs" EXACT []
+synonym: "alpha blockers" EXACT []
 synonym: "Alpha-adrenergic blocking agents" EXACT []
-is_a: MAXO:0000182 ! alpha-adrenergic modifiers
+synonym: "alpha-adrenergic receptor antagonist drugs" EXACT []
+synonym: "alpha-adrenergic receptor blockaders" EXACT []
+synonym: "alpha-adrenertic receptor antagonist agents" EXACT []
+synonym: "alpha-adrenoceptor antagonists" EXACT []
+synonym: "alpha-adrentergic antagonist agent" EXACT []
+synonym: "alpha-adrentergic antagonist drug" EXACT []
+synonym: "alpha-adrentergic antagonist drugs" EXACT []
+synonym: "alpha-adrentergic blockaders" EXACT []
+synonym: "alpha-adrentergic blockers" EXACT []
+synonym: "alpha-adrentergic receptor blockers" EXACT []
+xref: CHEBI:37890
+is_a: MAXO:0000182 ! alpha-adrenergic agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:15:59Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000185
-name: antiarrythmics
+name: antiarrythmic agents
+def: "A drug used for the treatment or prevention of cardiac arrhythmias. Anti-arrhythmia drugs may affect the polarisation-repolarisation phase of the action potential, its excitability or refractoriness, or impulse conduction or membrane responsiveness within cardiac fibres." [CHEBI:38070]
+synonym: "anti-arrhythmic agents" EXACT []
+synonym: "anti-arrhythmic drugs" EXACT []
+synonym: "antiarrhythmic agent" EXACT []
+synonym: "antiarrhythmic drug" EXACT []
+synonym: "antiarrhythmic drugs" EXACT []
+synonym: "antiarrhythmics" EXACT []
+xref: CHEBI:38070
+xref: NCIT:C47793
 is_a: MAXO:0000181 ! cardiovascular agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:17:04Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000186
-name: beta-adrenergic modifiers
-is_a: MAXO:0000181 ! cardiovascular agents
+name: beta-adrenergic agents
+def: "Any of the drugs that act on beta-adrenergic receptors." [CHEBI:48540]
+synonym: "b-adrenergic drugs" EXACT []
+synonym: "beta adrenergic receptor agents" EXACT []
+synonym: "beta adrenergic receptor drugs" EXACT []
+synonym: "beta-adrenergic agent" EXACT []
+synonym: "beta-adrenergic drug" EXACT []
+synonym: "beta-adrenergic drugs" EXACT []
+synonym: "beta-adrenergic modifiers" EXACT []
+synonym: "beta-adrenergic modifying agents" EXACT []
+synonym: "beta-adrenergic modifying drugs" EXACT []
+synonym: "beta-adrenergics" EXACT []
+xref: CHEBI:48540
+is_a: MAXO:0001025 ! adrenergic agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:17:27Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000187
-name: beta-adrenergic antagonists
+name: beta-adrenergic antagonist agents
+def: "An agent that binds to but does not activate beta-adrenergic receptors thereby blocking the actions of endogenous or exogenous beta-adrenergic agonists." [CHEBI:35530]
+synonym: "b-adrenergic antagonists" EXACT []
+synonym: "b-adrenergic receptor antagonists" EXACT []
+synonym: "beta adrenergic antagonist agent" EXACT []
+synonym: "beta adrenergic antagonist drugs" EXACT []
+synonym: "beta adrenergic receptor antagonists" EXACT []
 synonym: "Beta blockers" EXACT []
+synonym: "beta-adrenergic antagonist agent" EXACT []
 synonym: "Beta-adrenergic blocking agents" EXACT []
-is_a: MAXO:0000186 ! beta-adrenergic modifiers
+synonym: "beta-adrenergic receptor antagonist agents" EXACT []
+synonym: "beta-adrenergic receptor antagonist drugs" EXACT []
+synonym: "beta-adrenergic receptor antagonists" EXACT []
+synonym: "beta-adrenergic receptor blockaders" EXACT []
+synonym: "beta-adrenoceptor antagonists" EXACT []
+xref: CHEBI:35530
+is_a: MAXO:0000186 ! beta-adrenergic agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:17:55Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000188
 name: calcium channel blocking agents
+def: "One of a class of drugs that acts by selective inhibition of calcium influx through cell membranes or on the release and binding of calcium in intracellular pools." [CHEBI:38215]
+synonym: "Ca2+ channel antagonists" EXACT ABBREVIATION []
+synonym: "Ca2+ channel blockers" EXACT ABBREVIATION []
+synonym: "Ca2+ channel blocking agents" EXACT ABBREVIATION []
+synonym: "calcium channel antagonist agents" EXACT []
+synonym: "calcium channel antagonist drugs" EXACT []
+synonym: "calcium channel antagonists" EXACT []
+synonym: "calcium channel blockers" EXACT []
+synonym: "calcium channel blocking agent" EXACT []
+synonym: "calcium channel blocking drugs" EXACT []
+xref: CHEBI:38215
 is_a: MAXO:0000181 ! cardiovascular agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:18:47Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000189
-name: dyslipidemics
+name: dyslipidemic agents
+def: "An agent that reduces plasma lipids, such as cholesterol or low density lipoproteins (LDL), acting systemically or locally (intestines) to decrease fat digestion, absorption, production, and accumulation in the plasma and reducing pathogenic atherosclerosis and thrombosis." [NCIT:C29703]
+synonym: "anti-lipidemic agent" EXACT []
+synonym: "antilipidemic agents" EXACT []
+synonym: "antilipidemic drugs" EXACT []
+synonym: "dyslipidemia agents" EXACT []
+synonym: "dyslipidemia drug" EXACT []
+synonym: "dyslipidemic agent" EXACT []
+synonym: "dyslipidemic drug" EXACT []
+synonym: "dyslipidemic drugs" EXACT []
+xref: NCIT:C29703
 is_a: MAXO:0000181 ! cardiovascular agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:19:20Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -1251,7 +1704,17 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000191
-name: vasodilators
+name: vasodilator agents
+def: "A drug used to cause dilation of the blood vessels." [CHEBI:35620]
+synonym: "vasodilating agents" EXACT []
+synonym: "vasodilating drugs" EXACT []
+synonym: "vasodilator" EXACT []
+synonym: "vasodilator agent" EXACT []
+synonym: "vasodilator drug" EXACT []
+synonym: "vasodilator drugs" EXACT []
+synonym: "vasodilators" EXACT []
+xref: CHEBI:35620
+xref: NCIT:C29707
 is_a: MAXO:0000181 ! cardiovascular agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:20:06Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -1265,71 +1728,93 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000193
-name: non-opioid analgesics
+name: non-opioid analgesics agents
+def: "A drug that has principally analgesic, antipyretic and anti-inflammatory actions. Non-narcotic analgesics do not bind to opioid receptors" [CHEBI:35481]
+synonym: "non-narcotic analgesic" EXACT []
+synonym: "non-narctotic analgesic agents" EXACT []
+synonym: "non-opioid analgesics" EXACT []
+xref: CHEBI:35481
 is_a: MAXO:0000159 ! analgesic pharmacotherapeutic agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:22:25Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000194
-name: opioid analgesics
+name: opioid analgesics agents
+def: "A narcotic or opioid substance, synthetic or semisynthetic agent producing profound analgesia, drowsiness, and changes in mood." [CHEBI:35482]
+synonym: "narcotic analgesic" EXACT []
+synonym: "narcotic analgesics" EXACT []
+synonym: "narcotics" BROAD []
+synonym: "opioid" EXACT []
+synonym: "opioid analgesics" EXACT []
+xref: CHEBI:35482
 is_a: MAXO:0000159 ! analgesic pharmacotherapeutic agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:22:42Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000195
-name: local anesthetic
-is_a: MAXO:0000170 ! anesthetic
+name: local anesthetic agents
+def: "Any member of a group of drugs that reversibly inhibit the propagation of signals along nerves. Wide variations in potency, stability, toxicity, water-solubility and duration of action determine the route used for administration, e.g. topical, intravenous, epidural or spinal block." [CHEBI:36333]
+synonym: "epidural" NARROW []
+synonym: "local anaesthesia" EXACT []
+synonym: "local anaesthetics" EXACT []
+synonym: "local anesthesia" EXACT []
+synonym: "local anesthetics" EXACT []
+synonym: "spinal block" NARROW []
+synonym: "topical anesthesia" NARROW []
+synonym: "topical anesthetic" NARROW []
+xref: CHEBI:36333
+is_a: MAXO:0000170 ! anesthetic agent
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:24:45Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000196
 name: Aminoglycosides
-is_a: MAXO:0000061 ! antibacterial
+is_a: MAXO:0000061 ! antibacterial agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:25:15Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000197
 name: Beta-lactam, cephalosporins
-is_a: MAXO:0000061 ! antibacterial
+is_a: MAXO:0000061 ! antibacterial agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:25:44Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000198
 name: Beta-lactam, penicillins
-is_a: MAXO:0000061 ! antibacterial
+is_a: MAXO:0000061 ! antibacterial agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:26:03Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000199
 name: Beta-lactam, other
-is_a: MAXO:0000061 ! antibacterial
+is_a: MAXO:0000061 ! antibacterial agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:26:17Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000200
 name: Macrolides
-is_a: MAXO:0000061 ! antibacterial
+is_a: MAXO:0000061 ! antibacterial agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:26:31Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000201
 name: Quinolones
-is_a: MAXO:0000061 ! antibacterial
+is_a: MAXO:0000061 ! antibacterial agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:26:50Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000202
 name: sulfonamides
-is_a: MAXO:0000061 ! antibacterial
+is_a: MAXO:0000061 ! antibacterial agents
 is_a: MAXO:0000300 ! inflammatory bowel disease agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:27:30Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -1337,21 +1822,21 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000203
 name: Tetracyclines
-is_a: MAXO:0000061 ! antibacterial
+is_a: MAXO:0000061 ! antibacterial agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:28:05Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000204
 name: Antibacterials, other
-is_a: MAXO:0000061 ! antibacterial
+is_a: MAXO:0000061 ! antibacterial agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:28:20Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000205
 name: calcium channel modifying agents
-is_a: MAXO:0000167 ! anticonvulsant
+is_a: MAXO:0000167 ! anticonvulsant agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:28:49Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1359,28 +1844,28 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000206
 name: gamma-aminobutyric acid augmenting agents
 synonym: "GABA augmenting agents" EXACT []
-is_a: MAXO:0000167 ! anticonvulsant
+is_a: MAXO:0000167 ! anticonvulsant agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:29:21Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000207
 name: glutamate reducing agents
-is_a: MAXO:0000167 ! anticonvulsant
+is_a: MAXO:0000167 ! anticonvulsant agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:29:56Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000208
 name: sodium channel inhibitors
-is_a: MAXO:0000167 ! anticonvulsant
+is_a: MAXO:0000167 ! anticonvulsant agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:30:15Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000209
 name: anticonvulsants, other
-is_a: MAXO:0000167 ! anticonvulsant
+is_a: MAXO:0000167 ! anticonvulsant agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:30:31Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1409,7 +1894,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000213
 name: monoamine oxidase inhibitors
 synonym: "MAO inhibitors" EXACT []
-is_a: MAXO:0000160 ! antidepressant
+is_a: MAXO:0000160 ! antidepressant agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:36:08Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1417,21 +1902,21 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000214
 name: serotonin/norepinephrine reuptake inhibitors
 synonym: "SNRIs" EXACT []
-is_a: MAXO:0000160 ! antidepressant
+is_a: MAXO:0000160 ! antidepressant agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:40:17Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000215
 name: tricyclics
-is_a: MAXO:0000160 ! antidepressant
+is_a: MAXO:0000160 ! antidepressant agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:41:18Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000216
 name: antidepressants, other
-is_a: MAXO:0000160 ! antidepressant
+is_a: MAXO:0000160 ! antidepressant agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:41:31Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1460,23 +1945,29 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000220
-name: glucocorticoids
-is_a: MAXO:0000169 ! anti-inflammatory
+name: glucocorticoid agents
+synonym: "glucocorticoids" EXACT []
+is_a: MAXO:0000169 ! anti-inflammatory agents
 is_a: MAXO:0000300 ! inflammatory bowel disease agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:44:08Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000221
-name: nonsteroidal anti-inflammatory drugs
-is_a: MAXO:0000169 ! anti-inflammatory
+name: nonsteroidal anti-inflammatory agents
+def: "An anti-inflammatory drug that is not a steroid. In addition to anti-inflammatory actions, non-steroidal anti-inflammatory drugs have analgesic, antipyretic, and platelet-inhibitory actions. They act by blocking the synthesis of prostaglandins by inhibiting cyclooxygenase, which converts arachidonic acid to cyclic endoperoxides, precursors of prostaglandins." [CHEBI:35475]
+synonym: "non-steroidal anti-inflammatory drugs" EXACT []
+synonym: "NSAID" EXACT ABBREVIATION []
+synonym: "NSAIDs" EXACT ABBREVIATION []
+xref: CHEBI:35475
+is_a: MAXO:0000169 ! anti-inflammatory agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:44:26Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000222
 name: antimigraine agents
-is_a: MAXO:0000058 ! pharmacotherapy
+is_a: MAXO:0000260 ! central nervous system agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:45:01Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1510,22 +2001,34 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000227
-name: antimycobacterials
-is_a: MAXO:0000325 ! anti-infectives
+name: antimycobacterial agents
+def: "A drug used to treat or prevent infections caused by Mycobacteria, a genus of actinobacteria. Aerobic and nonmotile, members of the genus include the pathogens responsible for causing tuberculosis and leprosy." [CHEBI:64912]
+synonym: "antimycobacterial drugs" EXACT []
+synonym: "antimycobacterials" EXACT []
+synonym: "antimycobacterium" EXACT []
+xref: CHEBI:64912
+is_a: MAXO:0000061 ! antibacterial agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:48:12Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000228
 name: antituberculars
-is_a: MAXO:0000227 ! antimycobacterials
+def: "A substance that kills or slows the growth of Mycobacterium tuberculosis and is used in the treatment of tuberculosis." [CHEBI:33231]
+synonym: "antitubercular drugs" EXACT []
+synonym: "tuberculostatic agent" NARROW []
+xref: CHEBI:33231
+is_a: MAXO:0000227 ! antimycobacterial agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:49:27Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000229
-name: antimycobacterials, other
-is_a: MAXO:0000227 ! antimycobacterials
+name: leprostatic agents
+def: "A substance that suppresses Mycobacterium leprae, ameliorates the clinical manifestations of leprosy, and/or reduces the incidence and severity of leprous reactions." [CHEBI:35816]
+synonym: "leprostatic drugs" EXACT []
+xref: CHEBI:35816
+is_a: MAXO:0000227 ! antimycobacterial agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:49:45Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1545,14 +2048,23 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000232
-name: antiestrogen modifiers
+name: antiestrogen agents
+def: "A drug which acts to reduce estrogenic activity in the body, either by reducing the amount of estrogen or by reducing the activity of whatever estrogen is present." [CHEBI:50751]
+synonym: "anti-oestrogenic drug" EXACT []
+synonym: "anti-oestronogenic agents" EXACT []
+synonym: "antiestrogen drugs" EXACT []
+synonym: "antiestrogenic drug" EXACT []
+synonym: "antiestrogent modifiers" EXACT []
+synonym: "antioestrogenic agent" EXACT []
+xref: CHEBI:50751
 is_a: MAXO:0000062 ! antineoplastics agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:51:20Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000233
-name: antimetabolites
+name: antimetabolite agents
+synonym: "antimetabolites" EXACT []
 is_a: MAXO:0000062 ! antineoplastics agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:51:33Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -1587,22 +2099,42 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000239
-name: anthelmintics
-is_a: MAXO:0000156 ! antispastic agents
+name: anthelmintic agents
+def: "Substance intended to kill parasitic worms (helminths)." [CHEBI:35443]
+synonym: "anthelminitic agent" EXACT []
+synonym: "anthelmintic drug" EXACT []
+synonym: "anthelmintic drugs" EXACT []
+synonym: "antihelminthics" EXACT []
+synonym: "vermicides" NARROW []
+synonym: "vermifuges" EXACT []
+xref: CHEBI:35443
+is_a: MAXO:0000158 ! antiparasitic agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:57:26Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000240
-name: antiprotozoals
-is_a: MAXO:0000156 ! antispastic agents
+name: antiprotozoal agents
+def: "Any antimicrobial drug which is used to treat or prevent protozoal infections." [CHEBI:35820]
+synonym: "antiprotozoal agent" EXACT []
+synonym: "antiprotozoal drugs" EXACT []
+synonym: "antiprotozoals" EXACT []
+xref: CHEBI:35820
+is_a: MAXO:0000158 ! antiparasitic agents
+is_a: MAXO:0001021 ! antimicrobial agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:57:54Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000241
-name: pediculicides/ scabicides
-is_a: MAXO:0000156 ! antispastic agents
+name: ectoparasiticidic agents
+def: "An agent used to as a treament of ectoparasitic infestations." [http://orcid.org/0000-0001-7941-2961]
+synonym: "ectoparasiticides" EXACT []
+synonym: "ectoparasiticidic agent" EXACT []
+synonym: "ectoparasiticidic drug" EXACT []
+synonym: "ectoparasiticidic drugs" EXACT []
+xref: CHEBI:38956
+is_a: MAXO:0000158 ! antiparasitic agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:58:53Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1610,13 +2142,22 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000242
 name: anti-cytomegalovirus agents
 synonym: "Anti-CMV agents" EXACT []
-is_a: MAXO:0000168 ! antiviral
+is_a: MAXO:0000168 ! antiviral agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:59:18Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000243
 name: atypical antipsychotic agents
+def: "Antipsychotic drugs which can have different modes of action but which tend to be less likely than first generation antipsychotics to cause extrapyramidal motor control disabilities such as body rigidity or Parkinson's disease-type movements." [CHEBI:65191]
+synonym: "atypical antipsychotic agent" EXACT []
+synonym: "atypical antipsychotic drug" EXACT []
+synonym: "atypical antipsychotic drugs" EXACT []
+synonym: "atypical antipsychotics" EXACT []
+synonym: "second generation antipsychotic agents" EXACT []
+synonym: "second generation antipsychotic drugs" EXACT []
+synonym: "second generation antipsychotics" EXACT []
+xref: CHEBI:65191
 is_a: MAXO:0000166 ! antipsychotic agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T19:00:47Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -1624,6 +2165,16 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000244
 name: conventional antipsychotics agents
+def: "Antipsychotic drugs which can have different modes of action but which tend to be more likely than second generation antipsychotics to cause extrapyramidal motor control disabilities such as body rigidity or Parkinson's disease-type movements; such body movements can become permanent even after treatment has ceased." [CHEBI:65190]
+synonym: "conventional antipsychotic drugs" EXACT []
+synonym: "conventional antipsychotics" EXACT []
+synonym: "first generation antipsychotic agents" EXACT []
+synonym: "first generation antipsychotics" EXACT []
+synonym: "first generation antipsychtic drug" EXACT []
+synonym: "typical antipsychotic agent" EXACT []
+synonym: "typical antipsychotic drugs" EXACT []
+synonym: "typical antipsychotics" EXACT []
+xref: CHEBI:65190
 is_a: MAXO:0000166 ! antipsychotic agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T19:01:06Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -1638,14 +2189,14 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000246
 name: antihepatitis agents
-is_a: MAXO:0000168 ! antiviral
+is_a: MAXO:0000168 ! antiviral agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:15:16Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000247
 name: antiherpetic agents
-is_a: MAXO:0000168 ! antiviral
+is_a: MAXO:0000168 ! antiviral agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:15:33Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1653,13 +2204,15 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000248
 name: anti-human immunodeficiency virus agents
 synonym: "Anti-HIV agents" EXACT []
-is_a: MAXO:0000168 ! antiviral
+is_a: MAXO:0000168 ! antiviral agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:16:07Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000249
 name: anti-HIV fusion inhibitors
+def: "A drug which interferes with the binding, fusion and entry of an HIV virion to a human cell. By blocking this step in HIV's replication cycle, such agents slow the progression from HIV infection to AIDS." [CHEBI:59886]
+xref: CHEBI:59886
 is_a: MAXO:0000248 ! anti-human immunodeficiency virus agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:18:25Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -1688,28 +2241,38 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000253
 name: anti-influenza agents
-is_a: MAXO:0000168 ! antiviral
+is_a: MAXO:0000168 ! antiviral agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:21:48Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000254
 name: anxiolytics, other
-is_a: MAXO:0000163 ! anxiolytics
+is_a: MAXO:0000163 ! anxiolytic agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:22:10Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000255
 name: antidepressant anxiolytics
-is_a: MAXO:0000163 ! anxiolytics
+is_a: MAXO:0000163 ! anxiolytic agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:32:25Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000256
-name: bipolar agents
-is_a: MAXO:0000058 ! pharmacotherapy
+name: antimanic agents
+def: "Antimanic drugs are agents used to treat bipolar disorders or mania associated with other affective disorders." [CHEBI:35477]
+synonym: "antimanic agent" EXACT []
+synonym: "antimanic agents" EXACT []
+synonym: "antimanic drug" EXACT []
+synonym: "antimanic drugs" EXACT []
+synonym: "antimanics" EXACT []
+synonym: "bipolar agent" EXACT []
+synonym: "bipolar agents" EXACT []
+synonym: "bipolar disorder agents" EXACT []
+xref: CHEBI:35477
+is_a: MAXO:0001023 ! tranquilizing agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:33:05Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1772,13 +2335,33 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000265
 name: dermatological agents
+def: "A drug used to treat or prevent skin disorders or for the routine care of skin." [CHEBI:50177]
+synonym: "dermatologic agent" EXACT []
+synonym: "dermatologic drug" EXACT []
+synonym: "dermatologic drugs" EXACT []
+xref: CHEBI:50177
 is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:36:09Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000266
-name: enzyme replacements and modifiers
+name: enzyme replacements and modifier agents
+synonym: "enzyme modifier agents" NARROW []
+synonym: "enzyme modifying agents" NARROW []
+synonym: "enzyme modifying drugs" NARROW []
+synonym: "enzyme replacement agents" NARROW []
+synonym: "enzyme replacement and modifier drugs" EXACT []
+synonym: "enzyme replacement and modifying agents" EXACT []
+synonym: "enzyme replacement and modifying drugs" EXACT []
+synonym: "enzyme replacement therapies" NARROW []
+synonym: "enzyme replacement therapy" NARROW []
+synonym: "enzyme replacements" NARROW []
+synonym: "enzyme replacements and modifier agent" EXACT []
+synonym: "enzyme therapies" EXACT []
+synonym: "enzyme therapy" EXACT []
+synonym: "enzyme therapy agents" EXACT []
+xref: NCIT:C71592
 is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:36:28Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -1786,22 +2369,40 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000267
 name: gastrointestinal agents
+def: "A drug used for its effects on the gastrointestinal system, e.g. controlling gastric acidity, regulating gastrointestinal motility and water flow, and improving digestion." [CHEBI:55324]
+synonym: "gastrointestinal agent" EXACT []
+synonym: "gastrointestinal drug" EXACT []
+synonym: "gastrointestinal drugs" EXACT []
+xref: CHEBI:55324
 is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:36:38Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000268
-name: gastrointestinal antispasmodics
+name: gastrointestinal antispasmodics agents
+synonym: "gastrointestinal anti-spasmodic agents" EXACT []
+synonym: "gastrointestinal antispasmodic agent" EXACT []
+synonym: "gastrointestinal antispasmodic drugs" EXACT []
+synonym: "gastrointestinal antispasmodics" EXACT []
 is_a: MAXO:0000267 ! gastrointestinal agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:37:00Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000269
-name: histamine2 blocking agents
+name: H2-receptor antagonist agents
+def: "H2-receptor antagonists are the drugs that selectively bind to but do not activate histamine H2 receptors, thereby blocking the actions of endogenous histamine." [CHEBI:37961]
+synonym: "H2 blockers" EXACT []
 synonym: "H2 blocking agents" EXACT []
+synonym: "H2 receptor antagonists" EXACT []
+synonym: "H2 receptor blockaders" EXACT []
+synonym: "H2-receptor blocker" EXACT []
+synonym: "histamine H2 receptor antagonist" EXACT []
+synonym: "histamine H2 receptor antagonists" EXACT []
 synonym: "Histamine2 antagonists" EXACT []
+synonym: "histamine2 blocking agents" EXACT []
+xref: CHEBI:37961
 is_a: MAXO:0000267 ! gastrointestinal agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:37:14Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -1815,14 +2416,23 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000271
-name: gastrointestinal protectants
+name: gastrointestinal protectant agents
+synonym: "gastrointestinal protectant drugs" EXACT []
+synonym: "gastrointestinal protectants" EXACT []
 is_a: MAXO:0000267 ! gastrointestinal agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:38:16Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000272
-name: proton pump inhibitors
+name: proton pump inhibitor agents
+def: "Any one of the substituted benzimidazole compounds with anti-ulcer activity. A proton pump inhibitor is orally administered in the neutrally charged, inactive form and, upon entering the acidic environment of the parietal cell, gets protonated and converted into its active form. The active form will covalently and irreversibly bind to the proton pump, the H+/K+-ATPase, located on the surface of parietal cells. This leads to an inhibition of the transport of hydrogen ions, in exchange for potassium ions, into the gastric lumen and results in an inhibition of gastric acid secretion." [NCIT:C29723]
+synonym: "PPI" EXACT ABBREVIATION []
+synonym: "PPI agents" EXACT ABBREVIATION []
+synonym: "PPI drugs" EXACT ABBREVIATION []
+synonym: "proton pump inhibitor drugs" EXACT []
+synonym: "proton pump inhibitors" EXACT []
+xref: NCIT:C29723
 is_a: MAXO:0000267 ! gastrointestinal agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:38:35Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -1898,6 +2508,16 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000283
 name: hormone modifying agents
+def: "Any agent that can alter hormone levels or modulate hormone effects." [NCIT:C147908]
+synonym: "hormone modifiers" EXACT []
+synonym: "hormone modifying agent" EXACT []
+synonym: "hormone modifying drug" EXACT []
+synonym: "hormone modifying drugs" EXACT []
+synonym: "hormone therapies" EXACT []
+synonym: "hormone therapy" EXACT []
+synonym: "hormone therapy agents" EXACT []
+synonym: "hormone therapy drugs" EXACT []
+xref: NCIT:C147908
 is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:49:54Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -1982,20 +2602,57 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000295
 name: immunological agents
+def: "Any substance that induces, enhances, restores or suppresses the host's immune system, or an agent that utilizes or is derived from a component of the immune system." [NCIT:C308]
+synonym: "biological response modifier" EXACT []
+synonym: "biomodulators" EXACT []
+synonym: "BRM" EXACT ABBREVIATION []
+synonym: "immune factors" EXACT []
+synonym: "immune mediators" EXACT []
+synonym: "immune modulators" EXACT []
+synonym: "immune regulators" EXACT []
+synonym: "immunological agent" EXACT []
+synonym: "immunomodulating agent" EXACT []
+synonym: "immunomodulators" EXACT []
+synonym: "immunomodulatory agent" EXACT []
+synonym: "immunotherapeutic agent" EXACT []
+synonym: "immunotherapeutic agents" EXACT []
+synonym: "immunotherapy" EXACT []
+synonym: "immunotherapy agent" EXACT []
+xref: CHEBI:50846
+xref: NCIT:C308
 is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:00:01Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000296
-name: immune stimulants
+name: immune stimulant agents
+def: "A substance that augments, stimulates, activates, potentiates, or modulates the immune response at either the cellular or humoral level. A classical agent (Freund's adjuvant, BCG, Corynebacterium parvum, et al.) contains bacterial antigens. It could also be endogenous (e.g., histamine, interferon, transfer factor, tuftsin, interleukin-1). Its mode of action is either non-specific, resulting in increased immune responsiveness to a wide variety of antigens, or antigen-specific, i.e., affecting a restricted type of immune response to a narrow group of antigens. The therapeutic efficacy is related to its antigen-specific immunoadjuvanticity." [CHEBI:50847]
+synonym: "immune stimulant agent" EXACT []
+synonym: "immunoactivator" EXACT []
+synonym: "immunoadjuvant" EXACT []
+synonym: "immunologic adjuvant" EXACT []
+synonym: "immunological adjuvant" EXACT []
+synonym: "immunological adjuvants" EXACT []
+synonym: "immunopotentiator" EXACT []
+synonym: "immunostimulant" EXACT []
+synonym: "immunostimulants" EXACT []
+xref: CHEBI:50847
 is_a: MAXO:0000295 ! immunological agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:00:13Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000297
-name: immune suppressants
+name: immune suppressant agents
+def: "An agent that suppresses immune function by one of several mechanisms of action. Classical cytotoxic immunosuppressants act by inhibiting DNA synthesis. Others may act through activation of T-cells or by inhibiting the activation of helper cells. In addition, an immunosuppressive agent is a role played by a compound which is exhibited by a capability to diminish the extent and/or voracity of an immune response." [CHEBI:35705]
+synonym: "immune suppressant agent" EXACT []
+synonym: "immunosuppressant agents" EXACT []
+synonym: "immunosuppressants" EXACT []
+synonym: "immunosuppressive agents" EXACT []
+synonym: "immunosuppressor agents" EXACT []
+xref: CHEBI:35705
+xref: NCIT:C574
 is_a: MAXO:0000295 ! immunological agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:00:25Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -2008,16 +2665,9 @@ property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:00:40Z xsd:da
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
-id: MAXO:0000299
-name: immunomodulators
-is_a: MAXO:0000295 ! immunological agents
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:00:48Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
-
-[Term]
 id: MAXO:0000300
 name: inflammatory bowel disease agents
-is_a: MAXO:0000058 ! pharmacotherapy
+is_a: MAXO:0000267 ! gastrointestinal agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:01:33Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2038,6 +2688,16 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000305
 name: ophthalmic agents
+def: "Any compound used for the treatment of eye conditions or eye diseases." [CHEBI:66981]
+synonym: "ophthalmic agent" EXACT []
+synonym: "ophthalmic drugs" EXACT []
+synonym: "ophthalmics" EXACT []
+synonym: "ophthalmological agents" EXACT []
+synonym: "ophthalmologicals" EXACT []
+synonym: "ophthalmology agent" EXACT []
+synonym: "ophthalmology agents" EXACT []
+synonym: "ophthalmology drug" EXACT []
+xref: CHEBI:66981
 is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:04:40Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -2080,20 +2740,32 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000311
 name: otic agents
-is_a: MAXO:0000325 ! anti-infectives
+is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:08:34Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000312
 name: respiratory tract agents
+def: "An agent that exerts a physiologic effect on any anatomic entity that is part of the respiratory tract and airways." [NCIT:C78273]
+synonym: "Agent Affecting Respiratory System" EXACT []
+synonym: "respiratory tract agent" EXACT []
+synonym: "respiratory tract drugs" EXACT []
+xref: NCIT:C78273
 is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:08:56Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000313
-name: antihistamines
+name: antihistamine agents
+def: "Histamine antagonists are the drugs that bind to but do not activate histamine receptors, thereby blocking the actions of histamine or histamine agonists." [CHEBI:37956]
+synonym: "antihistamines" EXACT []
+synonym: "antihistimine drugs" EXACT []
+synonym: "histamine antagonist" EXACT []
+synonym: "histamine receptor blocker" EXACT []
+synonym: "histamine receptor blockers" EXACT []
+xref: CHEBI:37956
 is_a: MAXO:0000312 ! respiratory tract agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:09:06Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -2107,14 +2779,21 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000315
-name: antileukotrienes
+name: antileukotriene agents
+synonym: "antileukotrienes" EXACT []
 is_a: MAXO:0000312 ! respiratory tract agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:09:53Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000316
-name: bronchodilators
+name: bronchodilator agents
+def: "An agent that causes an increase in the expansion of a bronchus or bronchial tubes." [CHEBI:35523]
+synonym: "bronchodilator agent" EXACT []
+synonym: "bronchodilators" EXACT []
+synonym: "broncholytic agent" EXACT []
+xref: CHEBI:35523
+xref: NCIT:C319
 is_a: MAXO:0000312 ! respiratory tract agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:10:11Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -2122,21 +2801,21 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000317
 name: anticholinergic bronchodilators
-is_a: MAXO:0000316 ! bronchodilators
+is_a: MAXO:0000316 ! bronchodilator agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:10:37Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000318
 name: phosphodiesterase inhibitor bronchodilators
-is_a: MAXO:0000316 ! bronchodilators
+is_a: MAXO:0000316 ! bronchodilator agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:11:08Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000319
 name: sympathomimetic bronchodilators
-is_a: MAXO:0000316 ! bronchodilators
+is_a: MAXO:0000316 ! bronchodilator agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:11:37Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2163,21 +2842,47 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000323
-name: sedatives/hypnotics
-is_a: MAXO:0000058 ! pharmacotherapy
+name: sedatives and hypnotic agents
+def: "A central nervous system depressant used to induce drowsiness or sleep or to reduce psychological excitement or anxiety." [CHEBI:35717]
+synonym: "hypnotic agents" EXACT []
+synonym: "hypnotic drugs" EXACT []
+synonym: "hypnotics" EXACT []
+synonym: "sedative agent" EXACT []
+synonym: "sedative agents" EXACT []
+synonym: "sedative and hypnotic drugs" EXACT []
+synonym: "sedative drug" EXACT []
+synonym: "sedative drugs" EXACT []
+synonym: "sedative-hypnotic drugs" EXACT []
+synonym: "sedatives" EXACT []
+synonym: "sedatives and hypnotics" EXACT []
+synonym: "sedatives/hypnotics" EXACT []
+xref: CHEBI:35717
+xref: NCIT:C29756
+is_a: MAXO:0001022 ! psychotropic agents
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:14:36Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000324
 name: skeletal muscle relaxants
+def: "A drug used to produce muscle relaxation (excepting neuromuscular blocking agents). Its primary clinical and therapeutic use is the treatment of muscle spasm and immobility associated with strains, sprains, and injuries of the back and, to a lesser degree, injuries to the neck. Also used for the treatment of a variety of clinical conditions that have in common only the presence of skeletal muscle hyperactivity, for example, the muscle spasms that can occur in multiple sclerosis." [CHEBI:51371]
+synonym: "muscle relaxants" EXACT []
+synonym: "skeletal muscle relaxant" EXACT []
+xref: CHEBI:51371
+xref: NCIT:C29696
 is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:14:48Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000325
-name: anti-infectives
+name: anti-infectives agents
+def: "A substance used in the prophylaxis or therapy of infectious diseases." [CHEBI:35441]
+synonym: "anti-infective drug" EXACT []
+synonym: "anti-infectives" EXACT []
+synonym: "antiinfective agents" EXACT []
+synonym: "antiinfective drug" EXACT []
+xref: CHEBI:35441
 is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-04-10T19:56:29Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -2185,697 +2890,795 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000326
 name: biopsy of head
-def: "abc" []
+def: "Removal of tissue from the head." []
 synonym: "head biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-01-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000327
 name: biopsy of abdomen
-def: "dke" []
+def: "Removal of tissue from the abdomen." []
 synonym: "abdomen biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000328
 name: biopsy of adipose tissue
 def: "Removal of tissue from the adipose tissue." []
 synonym: "adipose tissue biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000329
 name: biopsy of adrenal cortex
 def: "Removal of tissue from the adrenal cortex." []
 synonym: "adrenal cortex biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000330
 name: biopsy of adrenal gland
 def: "Removal of tissue from the adrenal gland." []
 synonym: "adrenal gland biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000331
 name: biopsy of anal canal
 def: "Removal of tissue from the anal canal." []
 synonym: "anal canal biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000332
 name: biopsy of anus
 def: "Removal of tissue from the anus." []
 synonym: "anus biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000333
 name: biopsy of aorta
 def: "Removal of tissue from the aorta." []
 synonym: "aorta biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000334
 name: biopsy of body of uterus
 def: "Removal of tissue from the body of uterus." []
 synonym: "body of uterus biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000335
 name: biopsy of bone element
 def: "Removal of tissue from the bone element." []
 synonym: "bone element biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000336
 name: biopsy of bone marrow
 def: "Removal of tissue from the bone marrow." []
 synonym: "bone marrow biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000337
 name: biopsy of bone tissue
 def: "Removal of tissue from the bone tissue." []
 synonym: "bone tissue biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000338
 name: biopsy of brain
 def: "Removal of tissue from the brain." []
 synonym: "brain biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000339
 name: biopsy of brainstem
 def: "Removal of tissue from the brainstem." []
 synonym: "brainstem biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000340
 name: biopsy of breast
 def: "Removal of tissue from the breast." []
 synonym: "breast biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000341
 name: biopsy of bronchus
 def: "Removal of tissue from the bronchus." []
 synonym: "bronchus biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000342
 name: biopsy of caecum
 def: "Removal of tissue from the caecum." []
 synonym: "caecum biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000343
 name: biopsy of cardiac ventricle
 def: "Removal of tissue from the cardiac ventricle." []
 synonym: "cardiac ventricle biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000344
 name: biopsy of cerebellum
 def: "Removal of tissue from the cerebellum." []
 synonym: "cerebellum biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000345
 name: biopsy of cerebral cortex
 def: "Removal of tissue from the cerebral cortex." []
 synonym: "cerebral cortex biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000346
 name: biopsy of chest wall
 def: "Removal of tissue from the chest wall." []
 synonym: "chest wall biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000347
 name: biopsy of chordate pharynx
 def: "Removal of tissue from the chordate pharynx." []
 synonym: "chordate pharynx biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000348
 name: biopsy of choroid plexus
 def: "Removal of tissue from the choroid plexus." []
 synonym: "choroid plexus biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000349
 name: biopsy of cochlea
 def: "Removal of tissue from the cochlea." []
 synonym: "cochlea biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000350
 name: biopsy of colon
 def: "Removal of tissue from the colon." []
 synonym: "colon biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000351
 name: biopsy of colorectum
 def: "Removal of tissue from the colorectum." []
 synonym: "colorectum biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000352
 name: biopsy of dermis
 def: "Removal of tissue from the dermis." []
 synonym: "dermis biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000353
 name: biopsy of diaphragm
 def: "Removal of tissue from the diaphragm." []
 synonym: "diaphragm biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000354
 name: biopsy of dorsal plus ventral thalamus
 def: "Removal of tissue from the dorsal plus ventral thalamus." []
 synonym: "dorsal plus ventral thalamus biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000355
 name: biopsy of duodenum
 def: "Removal of tissue from the duodenum." []
 synonym: "duodenum biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000356
 name: biopsy of endocardium
 def: "Removal of tissue from the endocardium." []
 synonym: "endocardium biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000357
 name: biopsy of endocrine pancreas
 def: "Removal of tissue from the endocrine pancreas." []
 synonym: "endocrine pancreas biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000358
 name: biopsy of endometrium
 def: "Removal of tissue from the endometrium." []
 synonym: "endometrium biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000359
 name: biopsy of esophagus
 def: "Removal of tissue from the esophagus." []
 synonym: "esophagus biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000360
 name: biopsy of eye
 def: "Removal of tissue from the eye." []
 synonym: "eye biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000361
 name: biopsy of fallopian tube
 def: "Removal of tissue from the fallopian tube." []
 synonym: "fallopian tube biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000362
 name: biopsy of frontal lobe
 def: "Removal of tissue from the frontal lobe." []
 synonym: "frontal lobe biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000363
 name: biopsy of gall bladder
 def: "Removal of tissue from the gall bladder." []
 synonym: "gall bladder biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000364
 name: biopsy of genitourinary system
 def: "Removal of tissue from the genitourinary system." []
 synonym: "genitourinary system biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000365
 name: biopsy of gonad
 def: "Removal of tissue from the gonad." []
 synonym: "gonad biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000366
 name: biopsy of heart
 def: "Removal of tissue from the heart." []
 synonym: "heart biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000367
 name: biopsy of hypopharynx
 def: "Removal of tissue from the hypopharynx." []
 synonym: "hypopharynx biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000368
 name: biopsy of hypothalamus
 def: "Removal of tissue from the hypothalamus." []
 synonym: "hypothalamus biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000369
 name: biopsy of intestine
 def: "Removal of tissue from the intestine." []
 synonym: "intestine biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000370
 name: biopsy of jaw skeleton
 def: "Removal of tissue from the jaw skeleton." []
 synonym: "jaw skeleton biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000371
 name: biopsy of lacrimal apparatus
 def: "Removal of tissue from the lacrimal apparatus." []
 synonym: "lacrimal apparatus biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000372
 name: biopsy of large intestine
 def: "Removal of tissue from the large intestine." []
 synonym: "large intestine biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000373
 name: biopsy of larynx
 def: "Removal of tissue from the larynx." []
 synonym: "larynx biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2962
 
 [Term]
 id: MAXO:0000374
 name: biopsy of limb
 def: "Removal of tissue from the limb." []
 synonym: "limb biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2963
 
 [Term]
 id: MAXO:0000375
 name: biopsy of lip
 def: "Removal of tissue from the lip." []
 synonym: "lip biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2964
 
 [Term]
 id: MAXO:0000376
 name: biopsy of liver
 def: "Removal of tissue from the liver." []
 synonym: "liver biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2965
 
 [Term]
 id: MAXO:0000377
 name: biopsy of lower respiratory tract
 def: "Removal of tissue from the lower respiratory tract." []
 synonym: "lower respiratory tract biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2966
 
 [Term]
 id: MAXO:0000378
 name: biopsy of lower urinary tract
 def: "Removal of tissue from the lower urinary tract." []
 synonym: "lower urinary tract biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2967
 
 [Term]
 id: MAXO:0000379
 name: biopsy of lumbar region of vertebral column
 def: "Removal of tissue from the lumbar region of vertebral column." []
 synonym: "lumbar region of vertebral column biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2968
 
 [Term]
 id: MAXO:0000380
 name: biopsy of lung
 def: "Removal of tissue from the lung." []
 synonym: "lung biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2969
 
 [Term]
 id: MAXO:0000381
 name: biopsy of lymph node
 def: "Removal of tissue from the lymph node." []
 synonym: "lymph node biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2970
 
 [Term]
 id: MAXO:0000382
 name: biopsy of lymphatic part of lymphoid system
 def: "Removal of tissue from the lymphatic part of lymphoid system." []
 synonym: "lymphatic part of lymphoid system biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2971
 
 [Term]
 id: MAXO:0000383
 name: biopsy of mammalian vulva
 def: "Removal of tissue from the mammalian vulva." []
 synonym: "mammalian vulva biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2972
 
 [Term]
 id: MAXO:0000384
 name: biopsy of medulla oblongata
 def: "Removal of tissue from the medulla oblongata." []
 synonym: "medulla oblongata biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2973
 
 [Term]
 id: MAXO:0000385
 name: biopsy of mouth
 def: "Removal of tissue from the mouth." []
 synonym: "mouth biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2974
 
 [Term]
 id: MAXO:0000386
 name: biopsy of muscle organ
 def: "Removal of tissue from the muscle organ." []
 synonym: "muscle organ biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2975
 
 [Term]
 id: MAXO:0000387
 name: biopsy of muscle tissue
 def: "Removal of tissue from the muscle tissue." []
 synonym: "muscle tissue biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2976
 
 [Term]
 id: MAXO:0000388
 name: biopsy of nasolacrimal duct
 def: "Removal of tissue from the nasolacrimal duct." []
 synonym: "nasolacrimal duct biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2977
 
 [Term]
 id: MAXO:0000389
 name: biopsy of nasopharynx
 def: "Removal of tissue from the nasopharynx." []
 synonym: "nasopharynx biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2978
 
 [Term]
 id: MAXO:0000390
 name: biopsy of neck
 def: "Removal of tissue from the neck." []
 synonym: "neck biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2979
 
 [Term]
 id: MAXO:0000391
 name: biopsy of ovary
 def: "Removal of tissue from the ovary." []
 synonym: "ovary biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2980
 
 [Term]
 id: MAXO:0000392
 name: biopsy of pancreas
 def: "Removal of tissue from the pancreas." []
 synonym: "pancreas biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2981
 
 [Term]
 id: MAXO:0000393
 name: biopsy of penis
 def: "Removal of tissue from the penis." []
 synonym: "penis biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2982
 
 [Term]
 id: MAXO:0000394
 name: biopsy of perianal skin
 def: "Removal of tissue from the perianal skin." []
 synonym: "perianal skin biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2983
 
 [Term]
 id: MAXO:0000395
 name: biopsy of peritoneum
 def: "Removal of tissue from the peritoneum." []
 synonym: "peritoneum biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2984
 
 [Term]
 id: MAXO:0000396
 name: biopsy of pituitary gland
 def: "Removal of tissue from the pituitary gland." []
 synonym: "pituitary gland biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2985
 
 [Term]
 id: MAXO:0000397
 name: biopsy of pleura
 def: "Removal of tissue from the pleura." []
 synonym: "pleura biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2986
 
 [Term]
 id: MAXO:0000398
 name: biopsy of rectum
 def: "Removal of tissue from the rectum." []
 synonym: "rectum biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2987
 
 [Term]
 id: MAXO:0000399
 name: biopsy of retina
 def: "Removal of tissue from the retina." []
 synonym: "retina biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2988
 
 [Term]
 id: MAXO:0000400
 name: biopsy of saliva-secreting gland
 def: "Removal of tissue from the saliva-secreting gland." []
 synonym: "saliva-secreting gland biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2989
 
 [Term]
 id: MAXO:0000401
 name: biopsy of scrotum
 def: "Removal of tissue from the scrotum." []
 synonym: "scrotum biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2990
 
 [Term]
 id: MAXO:0000402
 name: biopsy of sebaceous gland
 def: "Removal of tissue from the sebaceous gland." []
 synonym: "sebaceous gland biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2991
 
 [Term]
 id: MAXO:0000403
 name: biopsy of small intestine
 def: "Removal of tissue from the small intestine." []
 synonym: "small intestine biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2992
 
 [Term]
 id: MAXO:0000404
 name: biopsy of spinal cord
 def: "Removal of tissue from the spinal cord." []
 synonym: "spinal cord biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2993
 
 [Term]
 id: MAXO:0000405
 name: biopsy of spleen
 def: "Removal of tissue from the spleen." []
 synonym: "spleen biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2994
 
 [Term]
 id: MAXO:0000406
 name: biopsy of stomach
 def: "Removal of tissue from the stomach." []
 synonym: "stomach biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2995
 
 [Term]
 id: MAXO:0000407
 name: biopsy of subglottis
 def: "Removal of tissue from the subglottis." []
 synonym: "subglottis biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2996
 
 [Term]
 id: MAXO:0000408
 name: biopsy of submandibular gland
 def: "Removal of tissue from the submandibular gland." []
 synonym: "submandibular gland biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2997
 
 [Term]
 id: MAXO:0000409
 name: biopsy of testis
 def: "Removal of tissue from the testis." []
 synonym: "testis biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2998
 
 [Term]
 id: MAXO:0000410
 name: biopsy of thymus
 def: "Removal of tissue from the thymus." []
 synonym: "thymus biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2999
 
 [Term]
 id: MAXO:0000411
 name: biopsy of thyroid gland
 def: "Removal of tissue from the thyroid gland." []
 synonym: "thyroid gland biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-3000
 
 [Term]
 id: MAXO:0000412
 name: biopsy of tongue
 def: "Removal of tissue from the tongue." []
 synonym: "tongue biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-3001
 
 [Term]
 id: MAXO:0000413
 name: biopsy of tonsil
 def: "Removal of tissue from the tonsil." []
 synonym: "tonsil biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-3002
 
 [Term]
 id: MAXO:0000414
 name: biopsy of trachea
 def: "Removal of tissue from the trachea." []
 synonym: "trachea biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-3003
 
 [Term]
 id: MAXO:0000415
 name: biopsy of upper digestive tract
 def: "Removal of tissue from the upper digestive tract." []
 synonym: "upper digestive tract biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-3004
 
 [Term]
 id: MAXO:0000416
 name: biopsy of upper respiratory tract
 def: "Removal of tissue from the upper respiratory tract." []
 synonym: "upper respiratory tract biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-3005
 
 [Term]
 id: MAXO:0000417
 name: biopsy of ureter
 def: "Removal of tissue from the ureter." []
 synonym: "ureter biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-3006
 
 [Term]
 id: MAXO:0000418
 name: biopsy of urethra
 def: "Removal of tissue from the urethra." []
 synonym: "urethra biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-3007
 
 [Term]
 id: MAXO:0000419
 name: biopsy of urinary bladder
 def: "Removal of tissue from the urinary bladder." []
 synonym: "urinary bladder biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-3008
 
 [Term]
 id: MAXO:0000420
 name: biopsy of uterine cervix
 def: "Removal of tissue from the uterine cervix." []
 synonym: "uterine cervix biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-3009
 
 [Term]
 id: MAXO:0000421
 name: biopsy of vagina
 def: "Removal of tissue from the vagina." []
 synonym: "vagina biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-3010
 
 [Term]
 id: MAXO:0000422
 name: biopsy of vermiform appendix
 def: "Removal of tissue from the vermiform appendix." []
 synonym: "vermiform appendix biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-3011
 
 [Term]
 id: MAXO:0000423
 name: biopsy of zone of skin
 def: "Removal of tissue from the zone of skin." []
 synonym: "zone of skin biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-3012
 
 [Term]
 id: MAXO:0000424
 name: medical magnetic resonance imaging
 def: "Imaging that uses radiofrequency waves and a strong magnetic field rather than x-rays to provide amazingly clear and detailed pictures of internal organs and tissues. The technique is valuable for the diagnosis of many pathologic conditions, including cancer, heart and vascular disease, stroke, and joint and musculoskeletal disorders." [NCIT:C16809]
-synonym: "MRI scan for therapeutics" EXACT []
-synonym: "Nuclear magnetic resonance imaging for medical therapy" EXACT []
-synonym: "Therapeutic MRI" EXACT []
+synonym: "MRI scan for therapeutics" EXACT hasSynonymType []
+synonym: "NMRI" EXACT ABBREVIATION []
+synonym: "nuclear magnetic resonance imaging for medical therapy" EXACT []
+synonym: "therapeutic MRI" EXACT ABBREVIATION []
 xref: NCIT:C16809
 is_a: MAXO:0000005 ! therapeutic imaging procedure
 property_value: http://purl.org/dc/elements/1.1/date 2019-04-26T17:25:14Z xsd:dateTime
@@ -2888,8 +3691,6 @@ def: "Magnetic resonance imaging of the head." []
 synonym: "head magnetic resonance imaging" EXACT []
 synonym: "head MRI" EXACT []
 synonym: "Nuclear magnetic resonance imaging of the head" EXACT []
-intersection_of: MAXO:0000424 ! medical magnetic resonance imaging
-intersection_of: RO:0002233 UBERON:0000033
 
 [Term]
 id: MAXO:0000426
@@ -2898,8 +3699,6 @@ def: "Magnetic resonance imaging of the abdomen." []
 synonym: "abdomen magnetic resonance imaging" EXACT []
 synonym: "abdomen MRI" EXACT []
 synonym: "Nuclear magnetic resonance imaging of the abdomen" EXACT []
-intersection_of: MAXO:0000424 ! medical magnetic resonance imaging
-intersection_of: RO:0002233 UBERON:0000916
 
 [Term]
 id: MAXO:0000427
@@ -2908,8 +3707,6 @@ def: "Magnetic resonance imaging of the brain." []
 synonym: "brain magnetic resonance imaging" EXACT []
 synonym: "brain MRI" EXACT []
 synonym: "Nuclear magnetic resonance imaging of the brain" EXACT []
-intersection_of: MAXO:0000424 ! medical magnetic resonance imaging
-intersection_of: RO:0002233 UBERON:0000955
 
 [Term]
 id: MAXO:0000428
@@ -2918,14 +3715,17 @@ def: "Magnetic resonance imaging of the chest." []
 synonym: "chest magnetic resonance imaging" EXACT []
 synonym: "chest MRI" EXACT []
 synonym: "Nuclear magnetic resonance imaging of the chest" EXACT []
-intersection_of: MAXO:0000424 ! medical magnetic resonance imaging
-intersection_of: RO:0002233 UBERON:0001443
 
 [Term]
 id: MAXO:0000429
 name: external beam radiation therapy
 def: "Radiation therapy in which high-energy beams are delivered to the tumor from outside of the body." [NCIT:C15751]
+synonym: "EBRT" EXACT ABBREVIATION []
+synonym: "external beam radiotherapeutics" EXACT []
+synonym: "external beam radiotherapy" EXACT []
+synonym: "external beam RT" EXACT ABBREVIATION []
 synonym: "External radiation therapy" NARROW []
+synonym: "external-beam radiation" EXACT []
 xref: NCIT:C15751
 is_a: MAXO:0000014 ! radiation therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-04-26T19:28:21Z xsd:dateTime
@@ -2936,7 +3736,9 @@ id: MAXO:0000430
 name: internal radiation therapy
 def: "A type of radiation therapy in which radioactive material is placed inside the body, into a tumor or body cavity." [NCIT:C15195]
 synonym: "Brachytherapy" EXACT []
+synonym: "internal radiation" EXACT []
 synonym: "Internal radiation brachytherapy" EXACT []
+synonym: "radiation brachytherapy" EXACT []
 xref: NCIT:C15195
 is_a: MAXO:0000014 ! radiation therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-04-26T19:28:57Z xsd:dateTime
@@ -2949,15 +3751,13 @@ def: "Magnetic resonance imaging of the breast." []
 synonym: "breast magnetic resonance imaging" EXACT []
 synonym: "breast MRI" EXACT []
 synonym: "Nuclear magnetic resonance imaging of the breast" EXACT []
-intersection_of: MAXO:0000424 ! medical magnetic resonance imaging
-intersection_of: RO:0002233 UBERON:0000310
 
 [Term]
 id: MAXO:0001000
 name: functional magnetic resonance imaging
 def: "A type of MRI that takes a series of images of an organ in quick succession and statistically analyzes the differences between the images." [NCIT:C17958]
-synonym: "fMRI" EXACT []
-synonym: "Functional MRI" EXACT []
+synonym: "fMRI" EXACT ABBREVIATION []
+synonym: "Functional MRI" EXACT ABBREVIATION []
 xref: NCIT:C17958
 is_a: MAXO:0000424 ! medical magnetic resonance imaging
 property_value: http://purl.org/dc/elements/1.1/date 2019-04-26T20:04:29Z xsd:dateTime
@@ -2966,15 +3766,25 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001001
 name: gene therapy
-def: "Gene therapy involves the use of nucleic acids (DNA or RNA) for the treatment, cure or prevention of human disorders." [PMID: 24106209]
+def: "Gene therapy involves the use of nucleic acids (DNA or RNA) for the treatment, cure or prevention of human disorders." [PMID:24106209]
+synonym: "DNA therapy" EXACT []
+synonym: "gene therapies" EXACT []
+synonym: "gene transfer procedure" EXACT []
+synonym: "genetic therapy" EXACT []
+xref: NCIT:C15238
+xref: SCDO:0001344
 is_a: MAXO:0000015 ! biologic therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-05-07T16:28:50Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001002
-name: immunotherapy
+name: immunotherapy procedure
 def: "The goal of immunotherapy is to induce anti-disease (usually tumor) responses by reprogramming and augmenting immune surveillance, and reducing immune suppression." [PMID:29242097]
+synonym: "immune therapy" EXACT []
+synonym: "immunologically directed therapy" EXACT []
+xref: NCIT:C15262
+xref: OGMS:0000114
 is_a: MAXO:0000015 ! biologic therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-05-07T16:32:45Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3008,7 +3818,7 @@ synonym: "CBC" EXACT ABBREVIATION []
 synonym: "complete blood count" EXACT []
 synonym: "full blood count" EXACT []
 xref: NCIT:C28133
-is_a: MAXO:0000146 ! cell count for clinical pathology
+is_a: MAXO:0000146 ! clinical pathology cell count
 property_value: http://purl.org/dc/elements/1.1/date 2019-05-16T18:09:14Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -3050,5 +3860,190 @@ synonym: "white blood cell count" EXACT []
 xref: NCIT:C51948
 is_a: MAXO:0001006 ! blood cell count
 property_value: http://purl.org/dc/elements/1.1/date 2019-05-16T18:25:40Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001014
+name: medical action avoidance
+intersection_of: MAXO:0000001 ! medical action
+intersection_of: MAXO:0001015 MAXO:0000001 ! avoided medical action medical action
+property_value: http://purl.org/dc/elements/1.1/date 2019-06-12T14:22:47Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001016
+name: aerobic exercise therapy avoidance
+def: "Avoid the administration or use of aerobic exercise therapy." []
+synonym: "avoid aerobic exercise therapy" EXACT []
+synonym: "avoiding aerobic exercise therapy" EXACT []
+intersection_of: MAXO:0001014 ! medical action avoidance
+intersection_of: MAXO:0001015 MAXO:0000065 ! avoided medical action aerobic exercise therapy
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001017
+name: vaccination
+def: "Inoculating an individual with either killed or live agents to prevent contraction of a disease." [NCIT:C15258]
+xref: EFO:0004292
+xref: IDOMAL:0001040
+xref: NCIT:C15258
+xref: VO:0000002
+is_a: MAXO:0000120 ! active immunization
+property_value: http://purl.org/dc/elements/1.1/date 2019-06-14T15:47:12Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001018
+name: nutrition intake
+def: "Nutrition intake is the process of taking in of nutrients, especially by eating or drinking, considered in relation to the body’s dietary needs." [http://orcid.org/0000-0001-7941-2961]
+synonym: "dietary intake" NARROW []
+synonym: "eating" NARROW []
+synonym: "food consumption" NARROW []
+synonym: "food intake" NARROW []
+synonym: "ingesting" NARROW []
+synonym: "nutrient consumption" EXACT []
+synonym: "nutrient intake" EXACT []
+synonym: "nutrition consumption" EXACT []
+synonym: "nutritional intake" EXACT []
+synonym: "take nourishment" EXACT []
+is_a: MAXO:0000009 ! nutrition intervention
+property_value: http://purl.org/dc/elements/1.1/date 2019-07-23T18:14:54Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001019
+name: prenatal vitamin
+def: "A vitamin enriched supplement containing higher doses for specific nutrients such as folic acid, intended for women before, during and after pregnancy and also during their lactating phase." [NCIT:C92860]
+synonym: "antenatal supplements" EXACT []
+synonym: "antenatal vitamin supplements" EXACT []
+synonym: "antenatal vitamins" EXACT []
+synonym: "prenatal supplements" EXACT []
+synonym: "prenatal vitamin supplements" EXACT []
+xref: NCIT:C92860
+is_a: MAXO:0000107 ! multivitamin supplementation
+property_value: http://purl.org/dc/elements/1.1/date 2019-07-23T19:56:32Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001020
+name: general anesthetic agent
+def: "Substance that produces loss of consciousness." [CHEBI:38869]
+synonym: "general anaesthetic agents" EXACT []
+synonym: "general anaesthetics" EXACT []
+synonym: "general anesthesia" EXACT []
+synonym: "general anesthetics" EXACT []
+xref: CHEBI:38869
+is_a: MAXO:0000170 ! anesthetic agent
+property_value: http://purl.org/dc/elements/1.1/date 2019-07-24T15:53:13Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001021
+name: antimicrobial agents
+def: "A drug used to treat or prevent microbial infections." [CHEBI:36043]
+synonym: "antimicrobial drugs" EXACT []
+xref: CHEBI:36043
+is_a: MAXO:0000325 ! anti-infectives agents
+property_value: http://purl.org/dc/elements/1.1/date 2019-07-24T16:13:47Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001022
+name: psychotropic agents
+def: "A loosely defined grouping of drugs that have effects on psychological function." [CHEBI:35471]
+synonym: "psychoactive agents" EXACT []
+synonym: "psychoactive drugs" EXACT []
+synonym: "psychopharmaceuticals" EXACT []
+synonym: "psychotropic agent" EXACT []
+synonym: "psychotropic drug" EXACT []
+synonym: "psychotropic drugs" EXACT []
+xref: CHEBI:35471
+is_a: MAXO:0000260 ! central nervous system agents
+property_value: http://purl.org/dc/elements/1.1/date 2019-07-24T19:33:44Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001023
+name: tranquilizing agents
+synonym: "A traditional grouping of drugs said to have a soothing or calming effect on mood, thought or behaviour." EXACT [CHEBI:35473]
+synonym: "ataractic agents" EXACT []
+synonym: "tranquilisers" EXACT []
+synonym: "tranquilising agents" EXACT []
+synonym: "tranquilising drug" EXACT []
+synonym: "tranquilizers" EXACT []
+synonym: "tranquilizing agent" EXACT []
+synonym: "tranquilizing drug" EXACT []
+synonym: "tranquilizing drugs" EXACT []
+xref: CHEBI:35473
+is_a: MAXO:0001022 ! psychotropic agents
+property_value: http://purl.org/dc/elements/1.1/date 2019-07-24T19:39:15Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001025
+name: adrenergic agents
+def: "Any agent that acts on an adrenergic receptor or affects adrenergic signal transduction." []
+synonym: "adrenergic" EXACT []
+synonym: "adrenergic agent" EXACT []
+synonym: "adrenergic drug" EXACT []
+synonym: "adrenergic drugs" EXACT []
+xref: CHEBI:37962
+xref: NCIT:C29747
+is_a: MAXO:0000181 ! cardiovascular agents
+property_value: http://purl.org/dc/elements/1.1/date 2019-07-25T14:32:48Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001026
+name: beta-adrenergic agonist agents
+def: "An agent that selectively binds to and activates beta-adrenergic receptors." [CHEBI:35522]
+synonym: "b-adrenergic agonist" EXACT []
+synonym: "b-adrenergic receptor agonist" EXACT []
+synonym: "beta adrenergic receptor agonist" EXACT []
+synonym: "beta-adrenergic agonist" EXACT []
+synonym: "beta-adrenergic agonist agent" EXACT []
+synonym: "beta-adrenergic agonist drugs" EXACT []
+synonym: "beta-adrenergic agonists" EXACT []
+synonym: "beta-adrenergic receptor  agonist drugs" EXACT []
+synonym: "beta-adrenergic receptor agonist" EXACT []
+synonym: "beta-adrenoceptor agonists" EXACT []
+xref: CHEBI:35522
+is_a: MAXO:0000186 ! beta-adrenergic agents
+property_value: http://purl.org/dc/elements/1.1/date 2019-07-25T14:42:00Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010000
+name: gluten intake avoidance
+def: "A medical requirement or recommendation of avoiding the intake of gluten." []
+synonym: "avoid gluten intake" EXACT []
+synonym: "avoiding gluten intake" EXACT []
+intersection_of: MAXO:0001018 ! nutrition intake
+intersection_of: MAXO:0001027 FOODON:03420177 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-07-11T09_00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010001
+name: liquid intake avoidance
+def: "A medical requirement or recommendation of avoiding the intake of liquid." []
+synonym: "avoid liquid intake" EXACT []
+synonym: "avoiding liquid intake" EXACT []
+intersection_of: MAXO:0001018 ! nutrition intake
+intersection_of: MAXO:0001027 FOODON:03412974 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-07-11T09_00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Typedef]
+id: MAXO:0001015
+name: avoided medical action
+property_value: http://purl.org/dc/elements/1.1/date 2019-06-12T14:23:27Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Typedef]
+id: MAXO:0001027
+name: avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2019-07-12T14:23:27Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
