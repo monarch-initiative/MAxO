@@ -9,11 +9,11 @@ contributors:
 
 classes:
   avoidance: MAXO:0001014
-  nutrition_intake: MAXO:0001018
-  food_material: FOODON:00002403
+  nutrition intake: MAXO:0001018
+  food material: FOODON:00002403
   
 relations:
-  avoided_medical_action: MAXO:0001015
+  avoided_food: MAXO:0001027
   
 annotationProperties:
   exact_synonym: oio:hasExactSynonym 
@@ -21,6 +21,7 @@ annotationProperties:
   date: dc:date
  
 vars:
+  food_material: "'food material'"
   date: "'date'"
   created_by: "'created_by'"
   
@@ -55,7 +56,7 @@ def:
     - food_material
 
 equivalentTo:
-  text: "'nutrition_intake' and (has_avoided_input some %s))"
+  text: "'nutrition intake' and ('avoided_food' some %s)"
   vars:
     - food_material
    

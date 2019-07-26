@@ -14,17 +14,19 @@ ONT=                        maxo
 ONTBASE=                    $(URIBASE)/$(ONT)
 EDIT_FORMAT=                owl
 SRC =                       $(ONT)-edit.$(EDIT_FORMAT)
-ROBOT=                      robot
+CATALOG=                    catalog-v001.xml
+ROBOT=                      robot --catalog $(CATALOG)
 RELEASEDIR=                 ../..
 PATTERNDIR=                 ../patterns
 REPORTDIR=                 reports
 SPARQLDIR =                 ../sparql
-REPORT_FAIL_ON =            none
+REPORT_FAIL_ON =            ERROR
 OBO_FORMAT_OPTIONS =        
 SPARQL_VALIDATION_CHECKS =  equivalent-classes trailing-whitespace owldef-self-reference xref-syntax nolabels
 SPARQL_EXPORTS =            basic-report class-count-by-prefix edges xrefs obsoletes synonyms
 
-TODAY   := $(shell date +%Y-%m-%d)
+TODAY ?= $(shell date +%Y-%m-%d)
+OBODATE ?= $(shell date +'%d:%m:%Y %H:%M')
 DOSDP_SCHEMA=                http:// # change to PURL when ready.
 PATTERN_TESTER=              simple_pattern_tester.py
 DOSDPT=                      dosdp-tools
@@ -35,7 +37,7 @@ PATTERN_RELEASE_FILES=       $(PATTERNDIR)/definitions.owl $(PATTERNDIR)/pattern
 FORMATS = $(sort  owl obo json owl)
 FORMATS_INCL_TSV = $(sort $(FORMAT) tsv)
 RELEASE_ARTEFACTS = $(sort  base full base full)
- 
+
 # ----------------------------------------
 # Top-level targets
 # ----------------------------------------
@@ -43,7 +45,7 @@ RELEASE_ARTEFACTS = $(sort  base full base full)
 .PHONY: .FORCE
 all: all_imports patterns all_main all_subsets sparql_test all_reports all_assets
 test: sparql_test all_reports
-	$(ROBOT) reason --input $(SRC) --reasoner ELK --output test.owl && rm test.owl && echo "Success"
+	$(ROBOT) reason --input $(SRC) --reasoner ELK  --equivalent-classes-allowed all --output test.owl && rm test.owl && echo "Success"
 
 ## -- main targets --
 ##
@@ -60,18 +62,18 @@ all_main: $(MAIN_FILES)
 ## By default this is the cross-product of IMPORT_MODULES x FORMATS
 
 
-IMPORTS =  iao go ro uberon
+IMPORTS =  iao go ro uberon foodon
 
 IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
 IMPORT_FILES = $(foreach n,$(IMPORT_ROOTS), $(foreach f,$(FORMATS), $(n).$(f)))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
 
 all_imports: $(IMPORT_FILES)
- 
+
 all_imports_owl: $(foreach n,$(IMPORT_ROOTS), $(n).owl)
- 
+
 all_imports_obo: $(foreach n,$(IMPORT_ROOTS), $(n).obo)
- 
+
 all_imports_json: $(foreach n,$(IMPORT_ROOTS), $(n).json)
 
 
@@ -102,7 +104,7 @@ all_patterns: $(PATTERN_FILES)
 ## -- dosdp pattern targets --
 ##
 
-OBO_REPORT = $(ONT)-edit-obo-report
+OBO_REPORT = $(SRC)-obo-report
 REPORTS = $(OBO_REPORT)
 REPORT_FILES = $(patsubst %, $(REPORTDIR)/%.tsv, $(REPORTS))
 
@@ -129,6 +131,7 @@ show_assets:
 
 KEEPRELATIONS=keeprelations.txt
 ONTOLOGYTERMS=ontologyterms.txt
+SIMPLESEED=simple_seed.txt
 
 # This should be executed by the release manager whenever time comes to make a release.
 # It will ensure that all assets/files are fresh, and will copy to release folder
@@ -147,14 +150,12 @@ prepare_initial_release: prepare_release
 
 
 $(ONT)-base.obo: $(ONT)-base.owl
-	$(ROBOT) annotate --input $< --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ \
-		convert --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
+	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
 $(ONT)-base.json: $(ONT)-base.owl
 	$(ROBOT) annotate --input $< --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ \
 		convert --check false -f json -o $@.tmp.json && mv $@.tmp.json $@
 $(ONT)-full.obo: $(ONT)-full.owl
-	$(ROBOT) annotate --input $< --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ \
-		convert --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
+	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
 $(ONT)-full.json: $(ONT)-full.owl
 	$(ROBOT) annotate --input $< --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ \
 		convert --check false -f json -o $@.tmp.json && mv $@.tmp.json $@
@@ -163,9 +164,8 @@ $(ONT).owl: $(ONT)-full.owl
 	$(ROBOT) annotate --input $< --ontology-iri $(URIBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY) \
 		convert -o $@.tmp.owl && mv $@.tmp.owl $@
 
-$(ONT).obo: $(ONT)-full.owl
-	$(ROBOT) annotate --input $< --ontology-iri $(URIBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY) \
-		convert --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
+$(ONT).obo: $(ONT).owl
+	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
 $(ONT).json: $(ONT)-full.owl
 	$(ROBOT) annotate --input $< --ontology-iri $(URIBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY) \
 		convert --check false -f json -o $@.tmp.json && mv $@.tmp.json $@
@@ -173,22 +173,22 @@ $(ONT).json: $(ONT)-full.owl
 # Initiating Step: Reason over source
 # ----------------------------------------
 
-ANNOTATE_VERSION_IRI = annotate -V $(ONTBASE)/releases/`date +%Y-%m-%d`/$@.owl
+ANNOTATE_VERSION_IRI = annotate -V $(ONTBASE)/releases/$(TODAY)/$@.owl
 
 # by default we use ELK to perform a reason-relax-reduce chain
 # after that we annotate the ontology with the release versionInfo
 
-OTHER_SRC = $(PATTERNDIR)/definitions.owl
+OTHER_SRC = $(PATTERNDIR)/definitions.owl 
 
 
-$(ONTOLOGYTERMS): $(SRC) all_imports
+$(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
 	$(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/maxo_terms.sparql $@
 
- 
 
- 
 
- 
+
+
+
 
 
 
@@ -196,14 +196,14 @@ $(ONTOLOGYTERMS): $(SRC) all_imports
 
 # base: OTHER sources of interest, such as definitions owl
 $(ONT)-base.owl: $(SRC) $(OTHER_SRC)
-	$(ROBOT) remove --input $< --select imports \
+	$(ROBOT) remove --input $< --select imports --trim false \
 		merge $(patsubst %, -i %, $(OTHER_SRC)) \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
 
 # Full: The full artefacts with imports merged, reasoned
 $(ONT)-full.owl: $(SRC) $(OTHER_SRC)
 	$(ROBOT) merge --input $< \
-		reason --reasoner ELK \
+		reason --reasoner ELK --equivalent-classes-allowed all \
 		relax \
 		reduce -r ELK \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
@@ -232,7 +232,7 @@ imports/%_terms_combined.txt: seed.txt imports/%_terms.txt
 #
 # This pattern uses ROBOT to generate an import module
 imports/%_import.owl: mirror/%.owl imports/%_terms_combined.txt
-	@if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -T imports/$*_terms_combined.txt --method BOT \
+	@if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -T imports/$*_terms_combined.txt --force true --method BOT \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: imports/%_import.owl
 
@@ -293,6 +293,16 @@ mirror/uberon.owl: mirror/uberon.trigger
 .PRECIOUS: mirror/%.owl
 
 
+## ONTOLOGY: foodon
+## Copy of foodon is re-downloaded whenever source changes
+mirror/foodon.trigger: $(SRC)
+
+mirror/foodon.owl: mirror/foodon.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/foodon.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+
 
 # ----------------------------------------
 # Subsets
@@ -326,8 +336,8 @@ sparql_test: $(SRC)
 # ----------------------------------------
 # ROBOT report
 # ----------------------------------------
-reports/%-obo-report.tsv: %.owl
-	$(ROBOT) report -i $< --fail-on $(REPORT_FAIL_ON) -o $@
+reports/%-obo-report.tsv: %
+	$(ROBOT) report -i $< --fail-on $(REPORT_FAIL_ON) --print 5 -o $@
 
 # ----------------------------------------
 # Sparql queries: Exports
@@ -400,7 +410,7 @@ $(PATTERNDIR)/data/manual/%.ofn: $(PATTERNDIR)/data/manual/%.tsv $(PATTERNDIR)/d
 # Generating the seed file from all the TSVs
 $(PATTERNDIR)/all_pattern_terms.txt: $(pattern_term_lists_default)   $(pattern_term_lists_manual) $(PATTERNDIR)/pattern_owl_seed.txt
 	cat $^ | sort | uniq > $@
-	
+
 $(PATTERNDIR)/pattern_owl_seed.txt: $(PATTERNDIR)/pattern.owl
 	@if [ $(IMP) = true ]; then $(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/terms.sparql $@; fi
 
@@ -408,7 +418,7 @@ $(PATTERNDIR)/data/default/%.txt: $(PATTERNDIR)/dosdp-patterns/%.yaml $(PATTERND
 	dosdp-tools terms --infile=$(word 2, $^) --template=$< --obo-prefixes=true --outfile=$@
 
 .PHONY: prepare_patterns
-prepare_patterns:	
+prepare_patterns:
 	touch $(pattern_term_lists_default)   $(pattern_term_lists_manual) &&\
   touch $(individual_patterns_default)   $(individual_patterns_manual)
 
@@ -419,8 +429,3 @@ $(PATTERNDIR)/data/manual/%.txt: $(PATTERNDIR)/dosdp-patterns/%.yaml $(PATTERNDI
 
 
 include maxo.Makefile
-
-
-
-
-

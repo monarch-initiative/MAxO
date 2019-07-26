@@ -1,0 +1,49 @@
+Prefix(:=<urn:unnamed:ontology#ont1#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<urn:unnamed:ontology#ont1>
+
+Declaration(Class(<http://purl.obolibrary.org/obo/FOODON_03412974>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FOODON_03420177>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001018>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0010000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0010001>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0001015>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/date>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#created_by>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0010000> (gluten intake avoidance)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0010000> "A medical requirement or recommendation of avoiding the intake of gluten."^^xsd:string)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/date> <http://purl.obolibrary.org/obo/MAXO_0010000> "http://purl.obolibrary.org/obo/2019-07-11T09_00:01Z"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0010000> "http://orcid.org/0000-0001-7941-2961"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0010000> "avoid gluten intake"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0010000> "avoiding gluten intake"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0010000> "gluten intake avoidance"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0010000> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0001018> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/MAXO_0001015> <http://purl.obolibrary.org/obo/FOODON_03420177>)))
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0010001> (liquid intake avoidance)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0010001> "A medical requirement or recommendation of avoiding the intake of liquid."^^xsd:string)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/date> <http://purl.obolibrary.org/obo/MAXO_0010001> "http://purl.obolibrary.org/obo/2019-07-11T09_00:01Z"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0010001> "http://orcid.org/0000-0001-7941-2961"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0010001> "avoid liquid intake"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0010001> "avoiding liquid intake"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0010001> "liquid intake avoidance"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0010001> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0001018> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/MAXO_0001015> <http://purl.obolibrary.org/obo/FOODON_03412974>)))
+
+
+)
