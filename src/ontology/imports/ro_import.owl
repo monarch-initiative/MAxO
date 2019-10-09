@@ -13,10 +13,11 @@
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/imports/ro_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2019-07-26/imports/ro_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2019-10-09/imports/ro_import.owl"/>
     </owl:Ontology>
     
 
@@ -100,12 +101,6 @@
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
         <rdfs:label xml:lang="en">definition source</rdfs:label>
     </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000136"/>
     
 
 
@@ -216,7 +211,7 @@ Where we have an annotation assertion
 
   &quot;directly P&quot; &quot;is direct form of&quot; &quot;P&quot;</obo:IAO_0000116>
         <obo:RO_0002423>If we have the annotation P is-direct-form-of Q, and we have inverses P&apos; and Q&apos;, then it follows that P&apos; is-direct-form-of Q&apos;</obo:RO_0002423>
-        <dc:creator>Chris Mungall</dc:creator>
+        <terms:creator>Chris Mungall</terms:creator>
         <rdfs:label>is direct form of</rdfs:label>
     </owl:AnnotationProperty>
     
@@ -294,12 +289,6 @@ Where we have an annotation assertion
     
 
 
-    <!-- http://purl.org/dc/elements/1.1/description -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
-    
-
-
     <!-- http://purl.org/dc/elements/1.1/source -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
@@ -309,6 +298,18 @@ Where we have an annotation assertion
     <!-- http://purl.org/dc/elements/1.1/title -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
     
 
 
@@ -624,6 +625,68 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000118 xml:lang="en">has_participant</obo:IAO_0000118>
         <dc:source>http://www.obofoundry.org/ro/#OBO_REL:has_participant</dc:source>
         <rdfs:label xml:lang="en">has participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000081 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000081">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+        <obo:IAO_0000112 xml:lang="en">this investigator role is a role of this person</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A role inheres in its bearer at all times for which the role exists, however the role need not be realized at all the times that the role exists.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">is role of</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">role_of</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">role of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000087 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000087">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <obo:IAO_0000112 xml:lang="en">this person has role this investigator role (more colloquially: this person has this role of investigator)</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A bearer can have many roles, and its roles can exist for different periods of time, but none of its roles can exist when the bearer does not exist. A role need not be realized at all the times that the role exists.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">has_role</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">has role</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0001000 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001000">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0001001"/>
+        <obo:IAO_0000112 xml:lang="en">this cell derives from this parent cell (cell division)</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this nucleus derives from this parent nucleus (nuclear division)</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115 xml:lang="en">a relation between two distinct material entities, the new entity and the old entity, in which the new entity begins to exist when the old entity ceases to exist, and the new entity inherits the significant portion of the matter of the old entity</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">This is a very general relation. More specific relations are preferred when applicable, such as &apos;directly develops from&apos;.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">derives_from</obo:IAO_0000118>
+        <obo:IAO_0000232>This relation is taken from the RO2005 version of RO. It may be obsoleted and replaced by relations with different definitions. See also the &apos;develops from&apos; family of relations.</obo:IAO_0000232>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
+        <rdfs:label xml:lang="en">derives from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0001001 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001001">
+        <obo:IAO_0000112 xml:lang="en">this parent cell derives into this cell (cell division)</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this parent nucleus derives into this nucleus (nuclear division)</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115 xml:lang="en">a relation between two distinct material entities, the old entity and the new entity, in which the new entity begins to exist when the old entity ceases to exist, and the new entity inherits the significant portion of the matter of the old entity</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">This is a very general relation. More specific relations are preferred when applicable, such as &apos;directly develops into&apos;. To avoid making statements about a future that may not come to pass, it is often better to use the backward-looking &apos;derives from&apos; rather than the forward-looking &apos;derives into&apos;.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">derives_into</obo:IAO_0000118>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
+        <rdfs:label xml:lang="en">derives into</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1039,6 +1102,10 @@ boundary_of: http://purl.obolibrary.org/obo/RO_0002000</obo:IAO_0000115>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000051"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002131"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002131"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
         </owl:propertyChainAxiom>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115>x overlaps y if and only if there exists some z such that x has part z and z part of y</obo:IAO_0000115>
@@ -1558,7 +1625,7 @@ Expands_to: T has_fasciculating_neuron_projection that synapse_in some R.</obo:I
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
         <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Allen%27s_interval_algebra"/>
         <obo:IAO_0000232>Do not use this relation directly. It is ended as a grouping for relations between occurrents involving the relative timing of their starts and ends.</obo:IAO_0000232>
-        <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://docs.google.com/document/d/1kBv1ep_9g3sTR-SD3jqzFqhuwo9TPNF-l-9fUDbO6rM/edit?pli=1</dc:source>
+        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://docs.google.com/document/d/1kBv1ep_9g3sTR-SD3jqzFqhuwo9TPNF-l-9fUDbO6rM/edit?pli=1</terms:source>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:comment>A relation that holds between two occurrents. This is a grouping relation that collects together all the Allen relations.</rdfs:comment>
         <rdfs:label xml:lang="en">temporally related to</rdfs:label>
@@ -1898,7 +1965,7 @@ Expands_to: T has_fasciculating_neuron_projection that synapse_in some R.</obo:I
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002411"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0004047"/>
         <obo:RO_0004049 rdf:resource="http://purl.obolibrary.org/obo/RO_0002411"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cjm</dc:creator>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cjm</terms:creator>
         <rdfs:comment>holds between x and y if and only if x is causally upstream of y and the progression of x increases the frequency, rate or extent of y</rdfs:comment>
         <rdfs:label>causally upstream of, positive effect</rdfs:label>
     </owl:ObjectProperty>
@@ -1911,7 +1978,7 @@ Expands_to: T has_fasciculating_neuron_projection that synapse_in some R.</obo:I
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002411"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0004046"/>
         <obo:RO_0004050 rdf:resource="http://purl.obolibrary.org/obo/RO_0002411"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cjm</dc:creator>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cjm</terms:creator>
         <rdfs:comment>holds between x and y if and only if x is causally upstream of y and the progression of x decreases the frequency, rate or extent of y</rdfs:comment>
         <rdfs:label>causally upstream of, negative effect</rdfs:label>
     </owl:ObjectProperty>
@@ -3270,6 +3337,17 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/RO_0002609 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002609">
+        <obo:IAO_0000115>A relationship that holds between two entities, where the relationship holds based on the presence or absence of statistical dependence relationship. The entities may be statistical variables, or they may be other kinds of entities such as diseases, chemical entities or processes.</obo:IAO_0000115>
+        <obo:IAO_0000232>Do not use this relation directly. It is intended as a grouping for a diverse set of relations, all involving cause and effect.</obo:IAO_0000232>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete related via dependence to</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0002629 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002629">
@@ -3576,6 +3654,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000016">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
         <rdfs:label xml:lang="en">disposition</rdfs:label>
     </owl:Class>
     
@@ -3626,6 +3705,16 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
         <obo:IAO_0000115 xml:lang="en">A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">specifically dependent continuant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000023">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <obo:IAO_0000115 xml:lang="en">A realizable entity  the manifestation of which brings about some result or end that is not essential to a continuant  in virtue of the kind of thing that it is but that can be served or participated in by that kind of continuant  in some kinds of natural, social or institutional contexts.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">role</rdfs:label>
     </owl:Class>
     
 
@@ -4752,9 +4841,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002019"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002327"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#z"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -4763,9 +4852,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002327"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#y"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#z"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002019"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#y"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>

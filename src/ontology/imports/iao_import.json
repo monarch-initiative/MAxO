@@ -221,6 +221,58 @@
       "type" : "INDIVIDUAL",
       "lbl" : "term split"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0001000",
+      "meta" : {
+        "definition" : {
+          "val" : "a relation between two distinct material entities, the new entity and the old entity, in which the new entity begins to exist when the old entity ceases to exist, and the new entity inherits the significant portion of the matter of the old entity",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "this cell derives from this parent cell (cell division)"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
+          "val" : "This is a very general relation. More specific relations are preferred when applicable, such as 'directly develops from'."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
+          "val" : "http://purl.obolibrary.org/obo/IAO_0000125"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
+          "val" : "derives_from"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "this nucleus derives from this parent nucleus (nuclear division)"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "derives from"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0001001",
+      "meta" : {
+        "definition" : {
+          "val" : "a relation between two distinct material entities, the old entity and the new entity, in which the new entity begins to exist when the old entity ceases to exist, and the new entity inherits the significant portion of the matter of the old entity",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
+          "val" : "derives_into"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "this parent cell derives into this cell (cell division)"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
+          "val" : "http://purl.obolibrary.org/obo/IAO_0000125"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "this parent nucleus derives into this nucleus (nuclear division)"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
+          "val" : "This is a very general relation. More specific relations are preferred when applicable, such as 'directly develops into'. To avoid making statements about a future that may not come to pass, it is often better to use the backward-looking 'derives from' rather than the forward-looking 'derives into'."
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "derives into"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000230",
       "meta" : {
         "basicPropertyValues" : [ {
@@ -706,10 +758,10 @@
           "val" : "(forall (x t) (if (and (IndependentContinuant x) (existsAt x t)) (exists (y) (and (Entity y) (specificallyDependsOnAt y x t))))) // axiom label in BFO2 CLIF: [018-002] "
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "a molecule"
+          "val" : "an organism"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "an organism"
+          "val" : "a molecule"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000602",
           "val" : "(iff (IndependentContinuant a) (and (Continuant a) (not (exists (b t) (specificallyDependsOnAt a b t))))) // axiom label in BFO2 CLIF: [017-002] "
@@ -1785,6 +1837,49 @@
       "type" : "PROPERTY",
       "lbl" : "denotes"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000081",
+      "meta" : {
+        "definition" : {
+          "val" : "a relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "this investigator role is a role of this person"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
+          "val" : "role_of"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
+          "val" : "A role inheres in its bearer at all times for which the role exists, however the role need not be realized at all the times that the role exists."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
+          "val" : "is role of"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "role of"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000087",
+      "meta" : {
+        "definition" : {
+          "val" : "a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
+          "val" : "has_role"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
+          "val" : "A bearer can have many roles, and its roles can exist for different periods of time, but none of its roles can exist when the bearer does not exist. A role need not be realized at all the times that the role exists."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "this person has role this investigator role (more colloquially: this person has this role of investigator)"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "has role"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000180",
       "meta" : {
         "definition" : {
@@ -1968,6 +2063,56 @@
       "type" : "PROPERTY",
       "lbl" : "contains process"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000023",
+      "meta" : {
+        "definition" : {
+          "val" : "A realizable entity  the manifestation of which brings about some result or end that is not essential to a continuant  in virtue of the kind of thing that it is but that can be served or participated in by that kind of continuant  in some kinds of natural, social or institutional contexts.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000602",
+          "val" : "(forall (x) (if (Role x) (RealizableEntity x))) // axiom label in BFO2 CLIF: [061-001] "
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "the role of a stone in marking a property boundary"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/BFO_0000180",
+          "val" : "Role"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
+          "val" : "BFO 2 Reference: One major family of examples of non-rigid universals involves roles, and ontologies developed for corresponding administrative purposes may consist entirely of representatives of entities of this sort. Thus ‘professor’, defined as follows,b instance_of professor at t =Def. there is some c, c instance_of professor role & c inheres_in b at t.denotes a non-rigid universal and so also do ‘nurse’, ‘student’, ‘colonel’, ‘taxpayer’, and so forth. (These terms are all, in the jargon of philosophy, phase sortals.) By using role terms in definitions, we can create a BFO conformant treatment of such entities drawing on the fact that, while an instance of professor may be simultaneously an instance of trade union member, no instance of the type professor role is also (at any time) an instance of the type trade union member role (any more than any instance of the type color is at any time an instance of the type length).If an ontology of employment positions should be defined in terms of roles following the above pattern, this enables the ontology to do justice to the fact that individuals instantiate the corresponding universals –  professor, sergeant, nurse – only during certain phases in their lives."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "the student role"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "John’s role of husband to Mary is dependent on Mary’s role of wife to John, and both are dependent on the object aggregate comprising John and Mary as member parts joined together through the relational quality of being married."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "the role of a building in serving as a military target"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+          "val" : "http://purl.obolibrary.org/obo/bfo.owl"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
+          "val" : "b is a role means: b is a realizable entity & b exists because there is some single bearer that is in some special physical, social, or institutional set of circumstances in which this bearer does not have to be& b is not such that, if it ceases to exist, then the physical make-up of the bearer is thereby changed. (axiom label in BFO2 Reference: [061-001])"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "the role of subject in a clinical trial"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/BFO_0000179",
+          "val" : "role"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "the priest role"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "the role of a boundary to demarcate two neighboring administrative territories"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "role"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000227",
       "meta" : {
         "basicPropertyValues" : [ {
@@ -2001,6 +2146,52 @@
       },
       "type" : "INDIVIDUAL",
       "lbl" : "failed exploratory term"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000024",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/BFO_0000179",
+          "val" : "fiat-object-part"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
+          "val" : "b is a fiat object part = Def. b is a material entity which is such that for all times t, if b exists at t then there is some object c such that b proper continuant_part of  c at t and c is demarcated from the remainder of c by a two-dimensional continuant fiat boundary. (axiom label in BFO2 Reference: [027-004])"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "the division of the planet into hemispheres"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "the Western hemisphere of the Earth"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+          "val" : "http://purl.obolibrary.org/obo/bfo.owl"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "the dorsal and ventral surfaces of the body"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
+          "val" : "BFO 2 Reference: Most examples of fiat object parts are associated with theoretically drawn divisions"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000602",
+          "val" : "(forall (x) (if (FiatObjectPart x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y) (and (Object y) (properContinuantPartOfAt x y t)))))))) // axiom label in BFO2 CLIF: [027-004] "
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "the upper and lower lobes of the left lung"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/BFO_0000180",
+          "val" : "FiatObjectPart"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "the division of the brain into regions"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "the FMA:regional parts of an intact human body."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "or with divisions drawn by cognitive subjects for practical reasons, such as the division of a cake (before slicing) into (what will become) slices (and thus member parts of an object aggregate). However, this does not mean that fiat object parts are dependent for their existence on divisions or delineations effected by cognitive subjects. If, for example, it is correct to conceive geological layers of the Earth as fiat object parts of the Earth, then even though these layers were first delineated in recent times, still existed long before such delineation and what holds of these layers (for example that the oldest layers are also the lowest layers) did not begin to hold because of our acts of delineation.Treatment of material entity in BFOExamples viewed by some as problematic cases for the trichotomy of fiat object part, object, and object aggregate include: a mussel on (and attached to) a rock, a slime mold, a pizza, a cloud, a galaxy, a railway train with engine and multiple carriages, a clonal stand of quaking aspen, a bacterial community (biofilm), a broken femur. Note that, as Aristotle already clearly recognized, such problematic cases – which lie at or near the penumbra of instances defined by the categories in question – need not invalidate these categories. The existence of grey objects does not prove that there are not objects which are black and objects which are white; the existence of mules does not prove that there are not objects which are donkeys and objects which are horses. It does, however, show that the examples in question need to be addressed carefully in order to show how they can be fitted into the proposed scheme, for example by recognizing additional subdivisions [29"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "fiat object part"
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000224",
       "meta" : {
@@ -2318,6 +2509,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0001000",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0001001"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000006",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000141"
@@ -2345,6 +2540,10 @@
       "sub" : "http://purl.obolibrary.org/obo/RO_0002000",
       "pred" : "inverseOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002002"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0000087",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000053"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000141",
       "pred" : "is_a",
@@ -2374,6 +2573,10 @@
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000078"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0000081",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000087"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000409",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000102"
@@ -2394,6 +2597,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000001"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0000081",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000052"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000004",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000002"
@@ -2405,6 +2612,10 @@
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000420",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000409"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000024",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000040"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0001015",
       "pred" : "inverseOf",
@@ -2453,6 +2664,10 @@
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000020",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000002"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000023",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000017"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000228",
       "pred" : "type",
@@ -2515,7 +2730,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/maxo/releases/2019-07-26/imports/iao_import.owl"
+      "version" : "http://purl.obolibrary.org/obo/maxo/releases/2019-10-09/imports/iao_import.owl"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],
@@ -2550,6 +2765,10 @@
       "predicateId" : "http://purl.obolibrary.org/obo/RO_0000056",
       "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000002" ],
       "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000003" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/RO_0000087",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000004" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000023" ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/RO_0000053",
       "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000020" ]
