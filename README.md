@@ -1,5 +1,5 @@
 # Medical Action Ontology (MAXO)
-This ontology is about actions that alleviate clinical problems.
+The Medical Action Ontology (MAxO) provides a structured vocabulary for medical procedures, interventions, therapies, and treatments.
 
 # License
 
@@ -13,14 +13,13 @@ This ontology is about actions that alleviate clinical problems.
 
  Please post issues at our github tracker. https://github.com/monarch-initiative/MAxO/issues
 
-
 ### Direct
 
  If you have questions, please contact leigh.carmody@jax.org or peter.robinson@jax.org
 
 ### Mailing list
 
-COMING SOON!
+If you would like email updates for releases medical-action-ontology-mailing-list@googlegroups.com
 
 
 
