@@ -1,9 +1,14 @@
+
+
+
+
 # Medical Action Ontology (MAXO)
 The Medical Action Ontology (MAxO) provides a structured vocabulary for medical procedures, interventions, therapies, and treatments.
 
 # License
 
- * TBD
+ * CC-BY 4.0
+
 
 # Project Homepage
 
