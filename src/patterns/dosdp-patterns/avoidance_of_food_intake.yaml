@@ -19,12 +19,15 @@ annotationProperties:
   exact_synonym: oio:hasExactSynonym 
   created_by: oio:created_by
   date: dc:date
+  comment: rdfs:comment
  
 vars:
   food_material: "'food material'"
+  
+data_vars:
   date: "'date'"
   created_by: "'created_by'"
-  
+  comment: "'comment'"
 name:
   text: "%s intake avoidance"
   vars:
@@ -50,6 +53,10 @@ annotations:
     text: "%s"
     vars:
      - created_by
+  - annotationProperty: comment
+    text: "%s"
+    vars:
+     - comment
 def:
   text: "A medical requirement or recommendation of avoiding the intake of %s."
   vars:
