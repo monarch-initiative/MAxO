@@ -20,6 +20,7 @@ annotationProperties:
   created_by: oio:created_by
   date: dc:date
   comment: rdfs:comment
+  xref: oio:hasDbXref
  
 vars:
   food_material: "'food material'"
@@ -28,6 +29,7 @@ data_vars:
   date: "'date'"
   created_by: "'created_by'"
   comment: "'comment'"
+  xref: "database cross reference"
 name:
   text: "%s intake avoidance"
   vars:
@@ -57,6 +59,11 @@ annotations:
     text: "%s"
     vars:
      - comment
+    
+  - annotationProperty: xref
+    text: "%s"
+    vars:
+     - xref
 def:
   text: "A medical requirement or recommendation of avoiding the intake of %s."
   vars:

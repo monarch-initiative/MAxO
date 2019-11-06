@@ -17,11 +17,17 @@ annotationProperties:
   exact_synonym: oio:hasExactSynonym 
   created_by: oio:created_by
   date: dc:date
+  comment: rdfs:comment
+  xref: oio:hasDbXref
  
 vars:
+  medical_action: "'medical_action'"
+  
+data_vars:
   date: "'date'"
   created_by: "'created_by'"
-  medical_action: "'medical_action'"
+  comment: "'comment'"
+  xref: "database cross reference"
   
 name:
   text: "%s avoidance"
@@ -48,6 +54,16 @@ annotations:
     text: "%s"
     vars:
      - created_by
+  
+  - annotationProperty: comment
+    text: "%s"
+    vars:
+     - comment
+    
+  - annotationProperty: xref
+    text: "%s"
+    vars:
+     - xref
 def:
   text: "Avoid the administration or use of %s."
   vars:

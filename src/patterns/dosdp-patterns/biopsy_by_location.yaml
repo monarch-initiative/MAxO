@@ -18,12 +18,17 @@ annotationProperties:
   exact_synonym: oio:hasExactSynonym 
   created_by: oio:created_by
   date: dc:date
+  comment: rdfs:comment
+  xref: oio:hasDbXref
  
 vars:
   location: "'location'"
+  
+data_vars:
   date: "'date'"
   created_by: "'created_by'"
-  
+  comment: "'comment'"
+  xref: "database cross reference"
 name:
   text: "biopsy of %s"
   vars:
@@ -44,6 +49,16 @@ annotations:
     text: "%s"
     vars:
      - created_by
+
+  - annotationProperty: comment
+    text: "%s"
+    vars:
+     - comment
+    
+  - annotationProperty: xref
+    text: "%s"
+    vars:
+     - xref
 def:
   text: "Removal of tissue from the %s."
   vars:

@@ -16,9 +16,19 @@ relations:
   
 annotationProperties:
   exact_synonym: oio:hasExactSynonym 
+  created_by: oio:created_by
+  date: dc:date
+  comment: rdfs:comment
+  xref: oio:hasDbXref
   
 vars:
   location: "'location'"
+
+data_vars:
+  date: "'date'"
+  created_by: "'created_by'"
+  comment: "'comment'"
+  xref: "database cross reference"
 
 name:
   text: "MRI of the %s"
@@ -40,6 +50,26 @@ annotations:
     text: "Nuclear magnetic resonance imaging of the %s"
     vars:
      - location
+     
+  - annotationProperty: date
+    text: "%s"
+    vars:
+     - date
+     
+  - annotationProperty: created_by
+    text: "%s"
+    vars:
+     - created_by
+     
+  - annotationProperty: comment
+    text: "%s"
+    vars:
+     - comment
+     
+  - annotationProperty: xref
+    text: "%s"
+    vars:
+     - xref
 def:
   text: "Magnetic resonance imaging of the %s."
   vars:
