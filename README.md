@@ -3,7 +3,7 @@ The Medical Action Ontology (MAxO) provides a structured vocabulary for medical 
 
 # License
 
-Maxo is available under CC-BY 4.0
+Maxo is available under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ![CC BY 4.0](https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png "CC-BY 4.0")
 
