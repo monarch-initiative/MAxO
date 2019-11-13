@@ -1,6 +1,6 @@
-pattern_name: avoidance_of_food_intake
-pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_food_intake.yaml
-description: "Medical recommendation to avoid the intake of a particular food or nutrition item."
+pattern_name: nutrition_supplementation
+pattern_iri: http://purl.obolibrary.org/obo/upheno/patterns-dev/nutrition_supplementation.yaml
+description: "Medical recommendation to supplement the diet with a particular food, vitamin, or nutrition item."
 
 contributors:
   - https://orcid.org/0000-0001-7941-2961
@@ -8,12 +8,11 @@ contributors:
   - https://orcid.org/0000-0002-7463-6306
 
 classes:
-  avoidance: MAXO:0001014
-  nutrition intake: MAXO:0001018
-  food material: FOODON:00002403
-  
+  nutritional supplementation: MAXO:0000106
+  chemical entity: CHEBI:24431
 relations:
-  avoided_food: MAXO:0001027
+  has_input: RO:0002233
+  part_of: BFO:0000050
   
 annotationProperties:
   exact_synonym: oio:hasExactSynonym 
@@ -21,47 +20,42 @@ annotationProperties:
   date: dc:date
   comment: rdfs:comment
   xref: oio:hasDbXref
- 
-vars:
-  food_material: "'food material'"
   
+vars:
+  chemical_entity: "'chemical entity'"
+
 data_vars:
   date: "'date'"
   created_by: "'created_by'"
   comment: "'comment'"
   xref: "database cross reference"
+
 name:
-  text: "%s intake avoidance"
+  text: "%s supplementation"
   vars:
-   - food_material
+   - chemical_entity
 
 annotations:
   - annotationProperty: exact_synonym
-    text: "avoiding %s intake"
+    text: "%s supplemental intake"
     vars:
-     - food_material
-  
+     - chemical_entity
+
   - annotationProperty: exact_synonym
-    text: "avoid %s intake"
+    text: "supplementation of %s"
     vars:
-     - food_material
-     
-  
+     - chemical_entity
+
   - annotationProperty: exact_synonym
-    text: "dietary %s restriction"
+    text: "dietary supplementation of %s"
     vars:
-     - food_material
-     
-  - annotationProperty: exact_synonym
-    text: "restriction of dietary %s"
-    vars:
-     - food_material
+     - chemical_entity
      
   - annotationProperty: date
     text: "%s"
     vars:
      - date
-
+     
   - annotationProperty: created_by
     text: "%s"
     vars:
@@ -71,18 +65,18 @@ annotations:
     text: "%s"
     vars:
      - comment
-    
+     
   - annotationProperty: xref
     text: "%s"
     vars:
      - xref
 def:
-  text: "A medical requirement or recommendation of avoiding the intake of %s."
+  text: "Addition of %s to a patient's diet for complete nutrition support."
   vars:
-    - food_material
+    - chemical_entity
 
 equivalentTo:
-  text: "'nutrition intake' and ('avoided_food' some %s)"
+  text: "'nutritional supplementation' and 'has_input' some ('part_of' some %s)"
   vars:
-    - food_material
+    - chemical_entity
    
