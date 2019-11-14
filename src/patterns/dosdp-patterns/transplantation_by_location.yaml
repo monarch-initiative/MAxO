@@ -1,13 +1,13 @@
-pattern_name: mri_by_location
-pattern_iri: http://purl.obolibrary.org/obo/upheno/patterns-dev/mri_by_location.yaml
-description: "Medical magnetic resonance imaging (MRI) of a specific body region, anatomy, or body part."
+pattern_name: transplantation_by_location
+pattern_iri: http://purl.obolibrary.org/obo/upheno/patterns-dev/transplantation_by_location.yaml
+description: "Transference of a specific tissue or organ."
 
 contributors:
   - https://orcid.org/0000-0001-7941-2961
   - https://orcid.org/0000-0002-7356-1779
 
 classes:
-  mri: MAXO:0000424
+  transplatation surgical procedure: MAXO_0000068
   location: owl:Thing
 
 relations:
@@ -31,23 +31,13 @@ data_vars:
   xref: "database cross reference"
 
 name:
-  text: "MRI of the %s"
+  text: "%s transplantation"
   vars:
    - location
 
 annotations:
   - annotationProperty: exact_synonym
-    text: "%s MRI"
-    vars:
-     - location
-
-  - annotationProperty: exact_synonym
-    text: "%s magnetic resonance imaging"
-    vars:
-     - location
-
-  - annotationProperty: exact_synonym
-    text: "Nuclear magnetic resonance imaging of the %s"
+    text: "transplantation of %s"
     vars:
      - location
      
@@ -71,12 +61,12 @@ annotations:
     vars:
      - xref
 def:
-  text: "Magnetic resonance imaging of the %s."
+  text: "The surgical transfer of a healthy %s to a patient."
   vars:
     - location
 
 equivalentTo:
-  text: "'mri' and 'has_input' some ('part_of' some %s)"
+  text: "'transplantation surgical procedure' and 'has_input' some ('part_of' some %s)"
   vars:
     - location
    
