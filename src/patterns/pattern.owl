@@ -8,8 +8,11 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 Ontology(<urn:unnamed:ontology#ont1>
 
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_24431>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FOODON_00002403>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000068>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000106>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000129>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000424>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001014>))
@@ -21,6 +24,8 @@ Declaration(Class(<http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_foo
 Declaration(Class(<http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_medical_action.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/maxo/patterns/biopsy_by_location.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/mri_by_location.yaml>))
+Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/nutrition_supplementation.yaml>))
+Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/transplantation_by_location.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns/abnormalAnatomicalEntity.yaml>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
@@ -93,6 +98,32 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/upheno/patterns-dev/mri_by_location.yaml> "'comment'"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/upheno/patterns-dev/mri_by_location.yaml> "MRI of the 'location'"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/upheno/patterns-dev/mri_by_location.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000424> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> owl:Thing))))
+
+# Class: <http://purl.obolibrary.org/obo/upheno/patterns-dev/nutrition_supplementation.yaml> ('chemical entity' supplementation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/upheno/patterns-dev/nutrition_supplementation.yaml> "Addition of 'chemical entity' to a the diet for complete nutrition support."^^xsd:string)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/date> <http://purl.obolibrary.org/obo/upheno/patterns-dev/nutrition_supplementation.yaml> "'date'"^^xsd:string)
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/upheno/patterns-dev/nutrition_supplementation.yaml> "nutrition_supplementation"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/upheno/patterns-dev/nutrition_supplementation.yaml> "'created_by'"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/upheno/patterns-dev/nutrition_supplementation.yaml> "database cross reference"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/upheno/patterns-dev/nutrition_supplementation.yaml> "'chemical entity' supplemental intake"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/upheno/patterns-dev/nutrition_supplementation.yaml> "dietary supplementation of 'chemical entity'"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/upheno/patterns-dev/nutrition_supplementation.yaml> "supplementation of 'chemical entity'"^^xsd:string)
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/upheno/patterns-dev/nutrition_supplementation.yaml> "'comment'"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/upheno/patterns-dev/nutrition_supplementation.yaml> "'chemical entity' supplementation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/upheno/patterns-dev/nutrition_supplementation.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000106> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CHEBI_24431>))))
+
+# Class: <http://purl.obolibrary.org/obo/upheno/patterns-dev/transplantation_by_location.yaml> ('location' transplantation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/upheno/patterns-dev/transplantation_by_location.yaml> "The surgical transfer of a healthy 'location' to a patient."^^xsd:string)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/date> <http://purl.obolibrary.org/obo/upheno/patterns-dev/transplantation_by_location.yaml> "'date'"^^xsd:string)
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/upheno/patterns-dev/transplantation_by_location.yaml> "transplantation_by_location"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/upheno/patterns-dev/transplantation_by_location.yaml> "'created_by'"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/upheno/patterns-dev/transplantation_by_location.yaml> "database cross reference"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/upheno/patterns-dev/transplantation_by_location.yaml> "transplantation of 'location'"^^xsd:string)
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/upheno/patterns-dev/transplantation_by_location.yaml> "'comment'"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/upheno/patterns-dev/transplantation_by_location.yaml> "'location' transplantation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/upheno/patterns-dev/transplantation_by_location.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000068> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> owl:Thing))))
 
 # Class: <http://purl.obolibrary.org/obo/upheno/patterns/abnormalAnatomicalEntity.yaml> (abnormal 'anatomical entity')
 
