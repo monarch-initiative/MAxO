@@ -1,15 +1,15 @@
-pattern_name: mri_by_location
-pattern_iri: http://purl.obolibrary.org/obo/upheno/patterns-dev/mri_by_location.yaml
-description: "Medical magnetic resonance imaging (MRI) of a specific body region, anatomy, or body part."
+pattern_name: nutrition_supplementation
+pattern_iri: http://purl.obolibrary.org/obo/upheno/patterns-dev/nutrition_supplementation.yaml
+description: "Medical recommendation to supplement the diet with a particular food, vitamin, or nutrition item."
 
 contributors:
   - https://orcid.org/0000-0001-7941-2961
   - https://orcid.org/0000-0002-7356-1779
+  - https://orcid.org/0000-0002-7463-6306
 
 classes:
-  mri: MAXO:0000424
-  location: owl:Thing
-
+  nutritional supplementation: MAXO:0000106
+  chemical entity: CHEBI:24431
 relations:
   has_input: RO:0002233
   part_of: BFO:0000050
@@ -22,7 +22,7 @@ annotationProperties:
   xref: oio:hasDbXref
   
 vars:
-  location: "'location'"
+  chemical_entity: "'chemical entity'"
 
 data_vars:
   date: "'date'"
@@ -31,25 +31,25 @@ data_vars:
   xref: "database cross reference"
 
 name:
-  text: "MRI of the %s"
+  text: "%s supplementation"
   vars:
-   - location
+   - chemical_entity
 
 annotations:
   - annotationProperty: exact_synonym
-    text: "%s MRI"
+    text: "%s supplemental intake"
     vars:
-     - location
+     - chemical_entity
 
   - annotationProperty: exact_synonym
-    text: "%s magnetic resonance imaging"
+    text: "supplementation of %s"
     vars:
-     - location
+     - chemical_entity
 
   - annotationProperty: exact_synonym
-    text: "Nuclear magnetic resonance imaging of the %s"
+    text: "dietary supplementation of %s"
     vars:
-     - location
+     - chemical_entity
      
   - annotationProperty: date
     text: "%s"
@@ -71,12 +71,12 @@ annotations:
     vars:
      - xref
 def:
-  text: "Magnetic resonance imaging of the %s."
+  text: "Addition of %s to a patient's diet for complete nutrition support."
   vars:
-    - location
+    - chemical_entity
 
 equivalentTo:
-  text: "'mri' and 'has_input' some ('part_of' some %s)"
+  text: "'nutritional supplementation' and 'has_input' some ('part_of' some %s)"
   vars:
-    - location
+    - chemical_entity
    
