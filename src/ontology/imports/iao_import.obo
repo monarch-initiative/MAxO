@@ -443,6 +443,14 @@ property_value: IAO:0000111 "morphology" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
 
 [Term]
+id: PATO:0001018
+name: physical quality
+def: "A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities." []
+is_a: PATO:0001241 ! physical object quality
+property_value: IAO:0000111 "physical quality" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
+
+[Term]
 id: PATO:0001241
 name: physical object quality
 def: "A quality which inheres in a continuant." []
@@ -596,6 +604,17 @@ domain: BFO:0000003 ! occurrent
 range: BFO:0000002 ! continuant
 
 [Typedef]
+id: RO:0000080
+name: quality of
+def: "a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence" []
+property_value: IAO:0000112 "this red color is a quality of this apple" xsd:string
+property_value: IAO:0000116 "A quality inheres in its bearer at all times for which the quality exists." xsd:string
+property_value: IAO:0000118 "is quality of" xsd:string
+property_value: IAO:0000118 "quality_of" xsd:string
+is_a: RO:0000052 ! inheres in
+inverse_of: RO:0000086 ! has quality
+
+[Typedef]
 id: RO:0000081
 name: role of
 def: "a relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence" []
@@ -605,6 +624,16 @@ property_value: IAO:0000118 "is role of" xsd:string
 property_value: IAO:0000118 "role_of" xsd:string
 is_a: RO:0000052 ! inheres in
 inverse_of: RO:0000087 ! has role
+
+[Typedef]
+id: RO:0000086
+name: has quality
+def: "a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence" []
+property_value: IAO:0000112 "this apple has quality this red color" xsd:string
+property_value: IAO:0000116 "A bearer can have many qualities, and its qualities can exist for different periods of time, but none of its qualities can exist when the bearer does not exist." xsd:string
+property_value: IAO:0000118 "has_quality" xsd:string
+range: BFO:0000019 ! quality
+is_a: RO:0000053 ! bearer of
 
 [Typedef]
 id: RO:0000087

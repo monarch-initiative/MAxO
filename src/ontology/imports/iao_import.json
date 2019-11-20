@@ -247,6 +247,23 @@
       "type" : "PROPERTY",
       "lbl" : "derives from"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0001018",
+      "meta" : {
+        "definition" : {
+          "val" : "A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "physical quality"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
+          "val" : "http://purl.obolibrary.org/obo/pato.owl"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "physical quality"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0001001",
       "meta" : {
         "definition" : {
@@ -758,10 +775,10 @@
           "val" : "(forall (x t) (if (and (IndependentContinuant x) (existsAt x t)) (exists (y) (and (Entity y) (specificallyDependsOnAt y x t))))) // axiom label in BFO2 CLIF: [018-002] "
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "an organism"
+          "val" : "a molecule"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "a molecule"
+          "val" : "an organism"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000602",
           "val" : "(iff (IndependentContinuant a) (and (Continuant a) (not (exists (b t) (specificallyDependsOnAt a b t))))) // axiom label in BFO2 CLIF: [017-002] "
@@ -1308,11 +1325,11 @@
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000602",
           "val" : "(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt y x t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [020-002] "
         }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "an aggregate of human beings."
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
           "val" : "BFO 2 Reference: ‘Matter’ is intended to encompass both mass and energy (we will address the ontological treatment of portions of energy in a later version of BFO). A portion of matter is anything that includes elementary particles among its proper or improper parts: quarks and leptons, including electrons, as the smallest particles thus far discovered; baryons (including protons and neutrons) at a higher level of granularity; atoms and molecules at still higher levels, forming the cells, organs, organisms and other material entities studied by biologists, the portions of rock studied by geologists, the fossils studied by paleontologists, and so on.Material entities are three-dimensional entities (entities extended in three spatial dimensions), as contrasted with the processes in which they participate, which are four-dimensional entities (entities extended also along the dimension of time).According to the FMA, material entities may have immaterial entities as parts – including the entities identified below as sites; for example the interior (or ‘lumen’) of your small intestine is a part of your body. BFO 2.0 embodies a decision to follow the FMA here."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "an aggregate of human beings."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/BFO_0000180",
           "val" : "MaterialEntity"
@@ -1860,6 +1877,29 @@
       "type" : "PROPERTY",
       "lbl" : "role of"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000080",
+      "meta" : {
+        "definition" : {
+          "val" : "a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
+          "val" : "A quality inheres in its bearer at all times for which the quality exists."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
+          "val" : "quality_of"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
+          "val" : "is quality of"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "this red color is a quality of this apple"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "quality of"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0000087",
       "meta" : {
         "definition" : {
@@ -1879,6 +1919,26 @@
       },
       "type" : "PROPERTY",
       "lbl" : "has role"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000086",
+      "meta" : {
+        "definition" : {
+          "val" : "a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "this apple has quality this red color"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
+          "val" : "has_quality"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
+          "val" : "A bearer can have many qualities, and its qualities can exist for different periods of time, but none of its qualities can exist when the bearer does not exist."
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "has quality"
     }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000180",
       "meta" : {
@@ -2581,6 +2641,14 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000102"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0001018",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0000080",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000086"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000103",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000225"
@@ -2681,6 +2749,10 @@
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000078"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0000086",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000053"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000102",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000027"
@@ -2708,6 +2780,10 @@
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000002",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0000080",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000052"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000030",
       "pred" : "http://purl.obolibrary.org/obo/IAO_0000136",
@@ -2769,6 +2845,9 @@
       "predicateId" : "http://purl.obolibrary.org/obo/RO_0000087",
       "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000004" ],
       "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000023" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/RO_0000086",
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000019" ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/RO_0000053",
       "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000020" ]
