@@ -1,5 +1,5 @@
 pattern_name: nutrition_supplementation
-pattern_iri: http://purl.obolibrary.org/obo/upheno/patterns-dev/nutrition_supplementation.yaml
+pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns-dev/nutrition_supplementation.yaml
 description: "Medical recommendation to supplement the diet with a particular food, vitamin, or nutrition item."
 
 contributors:
@@ -28,8 +28,11 @@ data_vars:
   date: "'date'"
   created_by: "'created_by'"
   comment: "'comment'"
-  xref: "database cross reference"
+  xref: "'xref'"
 
+data_list_vars:
+  syns: xsd:string
+  
 name:
   text: "%s supplementation"
   vars:
@@ -40,9 +43,8 @@ annotations:
     text: "%s supplemental intake"
     vars:
      - chemical_entity
-
   - annotationProperty: exact_synonym
-    text: "supplementation of %s"
+    text: "supplementation of %s" 
     vars:
      - chemical_entity
 
@@ -70,8 +72,12 @@ annotations:
     text: "%s"
     vars:
      - xref
+
+exact_synonym:
+  value: syns
+
 def:
-  text: "Addition of %s to a patient's diet for complete nutrition support."
+  text: "Addition of %s to a the diet for complete nutrition support."
   vars:
     - chemical_entity
 
