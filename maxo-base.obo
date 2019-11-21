@@ -1,12 +1,12 @@
 format-version: 1.2
-data-version: maxo/releases/2019-10-09/maxo-base.owl
+data-version: maxo/releases/2019-11-21/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Aaron Zhang" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "An ontology to represent medically relevant actions, procedures, therapies, interventions, and recommendations." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
-property_value: http://purl.org/dc/terms/license "Unspecified" xsd:string
+property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/ xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -192,6 +192,9 @@ synonym: "preventative medical actions" EXACT []
 synonym: "preventative medical measures" EXACT []
 synonym: "preventative therapies" EXACT []
 synonym: "preventative therapy" EXACT []
+synonym: "preventive medical actions" EXACT []
+synonym: "preventive medical measures" EXACT []
+synonym: "preventive therapeutics" EXACT []
 is_a: MAXO:0000001 ! medical action
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:21:49Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -210,6 +213,8 @@ id: MAXO:0000020
 name: behavioral preventative care
 def: "A behavioral modification or implementation of a behavior designed to prevent disease or ailment." []
 synonym: "behavioral preventative therapeutics" EXACT []
+synonym: "behavioral preventive care" EXACT []
+synonym: "behavioral preventive therapy" EXACT []
 synonym: "preventative behavior therapy" EXACT []
 synonym: "preventative behavioral therapy" EXACT []
 is_a: MAXO:0000017 ! preventative therapeutics
@@ -917,6 +922,7 @@ id: MAXO:0000118
 name: preventative immunization
 def: "Immunization is the process whereby a person is made immune or resistant to an infectious disease, typically by the administration of a vaccine." [WHO]
 synonym: "immunization" EXACT [NCIT:C15258, OBI:1110094]
+synonym: "preventive immunization" EXACT []
 xref: NCIT:C15258
 xref: OBI:1110094
 is_a: MAXO:0000017 ! preventative therapeutics
@@ -1286,23 +1292,23 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000162
-name: adrenal-modifying, hormonal agents
+name: adrenal-modifying, hormonal agent therapy
 is_a: MAXO:0000283 ! hormone modifying therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:54:15Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000163
-name: anxiolytic agents
+name: anxiolytic agent therapy
 def: "Anxiolytic drugs are agents that alleviate anxiety, tension, and anxiety disorders, promote sedation, and have a calming effect without affecting clarity of consciousness or neurologic conditions." [CHEBI:35474]
-synonym: "anti-anxiety agents" EXACT []
-synonym: "anti-anxiety drugs" EXACT []
-synonym: "anxiolytic agent" EXACT []
-synonym: "anxiolytics" EXACT []
-synonym: "minor tranquilisers" EXACT []
-synonym: "minor tranquilizers" EXACT []
-synonym: "minor tranquilizing agents" EXACT []
-synonym: "minor tranquilizing drugs" EXACT []
+synonym: "anti-anxiety agent therapy" EXACT []
+synonym: "anti-anxiety drug treatment" EXACT []
+synonym: "anxiolytic agent drug treatment" EXACT []
+synonym: "anxiolytics drug therapies" EXACT []
+synonym: "minor tranquiliser therapy" EXACT []
+synonym: "minor tranquilizer treatment" EXACT []
+synonym: "minor tranquilizing agent treatment" EXACT []
+synonym: "minor tranquilizing drug therapy" EXACT []
 xref: CHEBI:35474
 is_a: MAXO:0001023 ! tranquilizing agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:54:43Z xsd:dateTime
@@ -1341,13 +1347,13 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000166
-name: antipsychotic agents
+name: antipsychotic agent therapy
 def: "Antipsychotic drugs are agents that control agitated psychotic behaviour, alleviate acute psychotic states, reduce psychotic symptoms, and exert a quieting effect." [CHEBI:35476]
-synonym: "antipsychotic drug" EXACT []
-synonym: "antipsychotics" EXACT []
-synonym: "major tranquilizers" EXACT []
-synonym: "neuroleptic agents" EXACT []
-synonym: "neuroleptics" EXACT []
+synonym: "antipsychotic drug treatment" EXACT []
+synonym: "antipsychotic therapy" EXACT []
+synonym: "major tranquilizer drug treatment" EXACT []
+synonym: "neuroleptic agent treatment" EXACT []
+synonym: "neuroleptic therapies" EXACT []
 xref: CHEBI:35476
 is_a: MAXO:0001023 ! tranquilizing agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:57:29Z xsd:dateTime
@@ -1506,11 +1512,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000180
-name: platelet aggregation inhibitor agents
+name: platelet aggregation inhibitor agent therapy
 def: "A drug or agent which antagonizes or impairs any mechanism leading to blood platelet aggregation, whether during the phases of activation and shape change or following the dense-granule release reaction and stimulation of the prostaglandin-thromboxane system." [CHEBI:50427]
-synonym: "platelet aggregation inhibitor" EXACT []
-synonym: "platelet aggregation inhibitor agent" EXACT []
-synonym: "platelet aggregation inhibitors" EXACT []
+synonym: "platelet aggregation inhibitor agent treatment" EXACT []
+synonym: "platelet aggregation inhibitor therapy" EXACT []
 xref: CHEBI:50427
 is_a: MAXO:0000176 ! hematologic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:12:39Z xsd:dateTime
@@ -2044,7 +2049,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000224
-name: prophylactic antimigraine agents
+name: prophylactic antimigraine agent therapy
 def: "Use of medication to decrease the occurence of migraine headaches." [http://orcid.org/0000-0001-7941-2961]
 synonym: "prophylactic migraine headache treatment" EXACT []
 synonym: "prophylactic migraine therapy" EXACT []
@@ -2253,34 +2258,34 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000243
-name: atypical antipsychotic agents
+name: atypical antipsychotic agent therapy
 def: "Antipsychotic drugs which can have different modes of action but which tend to be less likely than first generation antipsychotics to cause extrapyramidal motor control disabilities such as body rigidity or Parkinson's disease-type movements." [CHEBI:65191]
-synonym: "atypical antipsychotic agent" EXACT []
-synonym: "atypical antipsychotic drug" EXACT []
-synonym: "atypical antipsychotic drugs" EXACT []
-synonym: "atypical antipsychotics" EXACT []
-synonym: "second generation antipsychotic agents" EXACT []
-synonym: "second generation antipsychotic drugs" EXACT []
-synonym: "second generation antipsychotics" EXACT []
+synonym: "atypical antipsychotic agent treatment" EXACT []
+synonym: "atypical antipsychotic drug therapies" EXACT []
+synonym: "atypical antipsychotic drug treatment" EXACT []
+synonym: "atypical antipsychotic therapies" EXACT []
+synonym: "second generation antipsychotic agent therapy" EXACT []
+synonym: "second generation antipsychotic drug treatment" EXACT []
+synonym: "second generation antipsychotic therapy" EXACT []
 xref: CHEBI:65191
-is_a: MAXO:0000166 ! antipsychotic agents
+is_a: MAXO:0000166 ! antipsychotic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T19:00:47Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000244
-name: conventional antipsychotic agents
+name: conventional antipsychotic agent therapy
 def: "Antipsychotic drugs which can have different modes of action but which tend to be more likely than second generation antipsychotics to cause extrapyramidal motor control disabilities such as body rigidity or Parkinson's disease-type movements; such body movements can become permanent even after treatment has ceased." [CHEBI:65190]
-synonym: "conventional antipsychotic drugs" EXACT []
-synonym: "conventional antipsychotics" EXACT []
-synonym: "first generation antipsychotic agents" EXACT []
-synonym: "first generation antipsychotic drug" EXACT []
-synonym: "first generation antipsychotics" EXACT []
-synonym: "typical antipsychotic agent" EXACT []
-synonym: "typical antipsychotic drugs" EXACT []
-synonym: "typical antipsychotics" EXACT []
+synonym: "conventional antipsychotic drug treatment" EXACT []
+synonym: "conventional antipsychotic therapies" EXACT []
+synonym: "first generation antipsychotic agent treatment" EXACT []
+synonym: "first generation antipsychotic drug treatment" EXACT []
+synonym: "first generation antipsychotic therapy" EXACT []
+synonym: "typical antipsychotic agent therapy" EXACT []
+synonym: "typical antipsychotic drug treatment" EXACT []
+synonym: "typical antipsychotic therapy" EXACT []
 xref: CHEBI:65190
-is_a: MAXO:0000166 ! antipsychotic agents
+is_a: MAXO:0000166 ! antipsychotic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T19:01:06Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2368,7 +2373,7 @@ id: MAXO:0000253
 name: anti-influenza agent therapy
 synonym: "anti-influenza drug therapy" EXACT []
 synonym: "anti-influenza drug treatment" EXACT []
-synonym: "flu shot threapy" NARROW []
+synonym: "flu shot therapy" NARROW []
 is_a: MAXO:0000168 ! antiviral agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:21:48Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -2376,22 +2381,22 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000255
 name: antidepressant anxiolytics
-is_a: MAXO:0000163 ! anxiolytic agents
+is_a: MAXO:0000163 ! anxiolytic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:32:25Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000256
-name: antimanic agents
+name: antimanic agent therapy
 def: "Antimanic drugs are agents used to treat bipolar disorders or mania associated with other affective disorders." [CHEBI:35477]
-synonym: "antimanic agent" EXACT []
-synonym: "antimanic agents" EXACT []
-synonym: "antimanic drug" EXACT []
-synonym: "antimanic drugs" EXACT []
+synonym: "antimanic agent drug treatment" EXACT []
+synonym: "antimanic agent treatment therapy" EXACT []
+synonym: "antimanic drug therapies" EXACT []
+synonym: "antimanic drug therapy" EXACT []
 synonym: "antimanics" EXACT []
-synonym: "bipolar agent" EXACT []
-synonym: "bipolar agents" EXACT []
-synonym: "bipolar disorder agents" EXACT []
+synonym: "bipolar agent drug therapy" EXACT []
+synonym: "bipolar agent drug treatment" EXACT []
+synonym: "bipolar disorder agent therapy" EXACT []
 xref: CHEBI:35477
 is_a: MAXO:0001023 ! tranquilizing agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:33:05Z xsd:dateTime
@@ -2606,27 +2611,28 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000279
 name: Glucocorticoids/ Mineralocorticoids
-is_a: MAXO:0000162 ! adrenal-modifying, hormonal agents
+is_a: MAXO:0000162 ! adrenal-modifying, hormonal agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:42:45Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000280
-name: pituitary-modifying, hormonal agents
+name: pituitary-modifying, hormonal agent therapy
 is_a: MAXO:0000283 ! hormone modifying therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:44:06Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000281
-name: prostaglandin-modifying, hormonal agents
+name: prostaglandin-modifying, hormonal agent therapy
 is_a: MAXO:0000283 ! hormone modifying therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:45:21Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000282
-name: sex hormone modifying agents
+name: sex hormone modifying agent therapy
+synonym: "sex hormone modifying drug treatment" EXACT []
 is_a: MAXO:0000283 ! hormone modifying therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:46:02Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -2650,78 +2656,81 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000284
-name: thyroid-modifying hormonal agents
+name: thyroid-modifying hormonal agent therapy
 is_a: MAXO:0000283 ! hormone modifying therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:51:04Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000285
-name: anabolic steroid modifying agents
-is_a: MAXO:0000282 ! sex hormone modifying agents
+name: anabolic steroid modifying agent therapy
+synonym: "anabolic steroid modifying drug treatment" EXACT []
+is_a: MAXO:0000282 ! sex hormone modifying agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:51:34Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000286
-name: androgen modifying agents
-is_a: MAXO:0000282 ! sex hormone modifying agents
+name: androgen modifying agent therapy
+is_a: MAXO:0000282 ! sex hormone modifying agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:51:44Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000287
-name: estrogen modifying agents
-is_a: MAXO:0000282 ! sex hormone modifying agents
+name: estrogen modifying agent therapy
+is_a: MAXO:0000282 ! sex hormone modifying agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:52:07Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000288
-name: progestin modifying agents
-is_a: MAXO:0000282 ! sex hormone modifying agents
+name: progestin modifying agent therapy
+synonym: "progestin modifying drug treatment" EXACT []
+is_a: MAXO:0000282 ! sex hormone modifying agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:52:15Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000289
-name: selective-estrogen receptor modifying agents
-is_a: MAXO:0000282 ! sex hormone modifying agents
+name: selective-estrogen receptor modifying agent therapy
+is_a: MAXO:0000282 ! sex hormone modifying agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:52:46Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000290
-name: parathyroid-suppressant hormonal agents
+name: parathyroid-suppressant hormonal agent therapy
 is_a: MAXO:0000283 ! hormone modifying therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:53:28Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000291
-name: androgen stimulants
-is_a: MAXO:0000286 ! androgen modifying agents
+name: androgen stimulant agent therapy
+is_a: MAXO:0000286 ! androgen modifying agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:54:46Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000292
-name: androgen suppressants
-is_a: MAXO:0000286 ! androgen modifying agents
+name: androgen suppressant agent therapy
+is_a: MAXO:0000286 ! androgen modifying agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:55:10Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000293
-name: thyroid-stimulating hormonal agents
-is_a: MAXO:0000284 ! thyroid-modifying hormonal agents
+name: thyroid-stimulating hormonal agent therapy
+is_a: MAXO:0000284 ! thyroid-modifying hormonal agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:59:15Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000294
-name: antithyroid agents
-is_a: MAXO:0000284 ! thyroid-modifying hormonal agents
+name: antithyroid agent therapy
+synonym: "anti-thyroid drug treatment" EXACT []
+is_a: MAXO:0000284 ! thyroid-modifying hormonal agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:59:33Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -3019,7 +3028,7 @@ id: MAXO:0000326
 name: biopsy of head
 def: "Removal of tissue from the head." []
 synonym: "head biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3027,7 +3036,7 @@ id: MAXO:0000327
 name: biopsy of abdomen
 def: "Removal of tissue from the abdomen." []
 synonym: "abdomen biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3035,7 +3044,7 @@ id: MAXO:0000328
 name: biopsy of adipose tissue
 def: "Removal of tissue from the adipose tissue." []
 synonym: "adipose tissue biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3043,7 +3052,7 @@ id: MAXO:0000329
 name: biopsy of adrenal cortex
 def: "Removal of tissue from the adrenal cortex." []
 synonym: "adrenal cortex biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3051,7 +3060,7 @@ id: MAXO:0000330
 name: biopsy of adrenal gland
 def: "Removal of tissue from the adrenal gland." []
 synonym: "adrenal gland biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3059,7 +3068,7 @@ id: MAXO:0000331
 name: biopsy of anal canal
 def: "Removal of tissue from the anal canal." []
 synonym: "anal canal biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3067,7 +3076,7 @@ id: MAXO:0000332
 name: biopsy of anus
 def: "Removal of tissue from the anus." []
 synonym: "anus biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3075,7 +3084,7 @@ id: MAXO:0000333
 name: biopsy of aorta
 def: "Removal of tissue from the aorta." []
 synonym: "aorta biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3083,7 +3092,7 @@ id: MAXO:0000334
 name: biopsy of body of uterus
 def: "Removal of tissue from the body of uterus." []
 synonym: "body of uterus biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3091,7 +3100,7 @@ id: MAXO:0000335
 name: biopsy of bone element
 def: "Removal of tissue from the bone element." []
 synonym: "bone element biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3099,7 +3108,7 @@ id: MAXO:0000336
 name: biopsy of bone marrow
 def: "Removal of tissue from the bone marrow." []
 synonym: "bone marrow biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3107,7 +3116,7 @@ id: MAXO:0000337
 name: biopsy of bone tissue
 def: "Removal of tissue from the bone tissue." []
 synonym: "bone tissue biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3115,7 +3124,7 @@ id: MAXO:0000338
 name: biopsy of brain
 def: "Removal of tissue from the brain." []
 synonym: "brain biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3123,7 +3132,7 @@ id: MAXO:0000339
 name: biopsy of brainstem
 def: "Removal of tissue from the brainstem." []
 synonym: "brainstem biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3131,7 +3140,7 @@ id: MAXO:0000340
 name: biopsy of breast
 def: "Removal of tissue from the breast." []
 synonym: "breast biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3139,7 +3148,7 @@ id: MAXO:0000341
 name: biopsy of bronchus
 def: "Removal of tissue from the bronchus." []
 synonym: "bronchus biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3147,7 +3156,7 @@ id: MAXO:0000342
 name: biopsy of caecum
 def: "Removal of tissue from the caecum." []
 synonym: "caecum biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3155,7 +3164,7 @@ id: MAXO:0000343
 name: biopsy of cardiac ventricle
 def: "Removal of tissue from the cardiac ventricle." []
 synonym: "cardiac ventricle biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3163,7 +3172,7 @@ id: MAXO:0000344
 name: biopsy of cerebellum
 def: "Removal of tissue from the cerebellum." []
 synonym: "cerebellum biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3171,7 +3180,7 @@ id: MAXO:0000345
 name: biopsy of cerebral cortex
 def: "Removal of tissue from the cerebral cortex." []
 synonym: "cerebral cortex biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3179,7 +3188,7 @@ id: MAXO:0000346
 name: biopsy of chest wall
 def: "Removal of tissue from the chest wall." []
 synonym: "chest wall biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3187,7 +3196,7 @@ id: MAXO:0000347
 name: biopsy of chordate pharynx
 def: "Removal of tissue from the chordate pharynx." []
 synonym: "chordate pharynx biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3195,7 +3204,7 @@ id: MAXO:0000348
 name: biopsy of choroid plexus
 def: "Removal of tissue from the choroid plexus." []
 synonym: "choroid plexus biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3203,7 +3212,7 @@ id: MAXO:0000349
 name: biopsy of cochlea
 def: "Removal of tissue from the cochlea." []
 synonym: "cochlea biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3211,7 +3220,7 @@ id: MAXO:0000350
 name: biopsy of colon
 def: "Removal of tissue from the colon." []
 synonym: "colon biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3219,7 +3228,7 @@ id: MAXO:0000351
 name: biopsy of colorectum
 def: "Removal of tissue from the colorectum." []
 synonym: "colorectum biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3227,7 +3236,7 @@ id: MAXO:0000352
 name: biopsy of dermis
 def: "Removal of tissue from the dermis." []
 synonym: "dermis biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3235,7 +3244,7 @@ id: MAXO:0000353
 name: biopsy of diaphragm
 def: "Removal of tissue from the diaphragm." []
 synonym: "diaphragm biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3243,7 +3252,7 @@ id: MAXO:0000354
 name: biopsy of dorsal plus ventral thalamus
 def: "Removal of tissue from the dorsal plus ventral thalamus." []
 synonym: "dorsal plus ventral thalamus biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3251,7 +3260,7 @@ id: MAXO:0000355
 name: biopsy of duodenum
 def: "Removal of tissue from the duodenum." []
 synonym: "duodenum biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3259,7 +3268,7 @@ id: MAXO:0000356
 name: biopsy of endocardium
 def: "Removal of tissue from the endocardium." []
 synonym: "endocardium biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3267,7 +3276,7 @@ id: MAXO:0000357
 name: biopsy of endocrine pancreas
 def: "Removal of tissue from the endocrine pancreas." []
 synonym: "endocrine pancreas biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3275,7 +3284,7 @@ id: MAXO:0000358
 name: biopsy of endometrium
 def: "Removal of tissue from the endometrium." []
 synonym: "endometrium biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3283,7 +3292,7 @@ id: MAXO:0000359
 name: biopsy of esophagus
 def: "Removal of tissue from the esophagus." []
 synonym: "esophagus biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3291,7 +3300,7 @@ id: MAXO:0000360
 name: biopsy of eye
 def: "Removal of tissue from the eye." []
 synonym: "eye biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3299,7 +3308,7 @@ id: MAXO:0000361
 name: biopsy of fallopian tube
 def: "Removal of tissue from the fallopian tube." []
 synonym: "fallopian tube biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3307,7 +3316,7 @@ id: MAXO:0000362
 name: biopsy of frontal lobe
 def: "Removal of tissue from the frontal lobe." []
 synonym: "frontal lobe biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3315,7 +3324,7 @@ id: MAXO:0000363
 name: biopsy of gall bladder
 def: "Removal of tissue from the gall bladder." []
 synonym: "gall bladder biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3323,7 +3332,7 @@ id: MAXO:0000364
 name: biopsy of genitourinary system
 def: "Removal of tissue from the genitourinary system." []
 synonym: "genitourinary system biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3331,7 +3340,7 @@ id: MAXO:0000365
 name: biopsy of gonad
 def: "Removal of tissue from the gonad." []
 synonym: "gonad biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3339,7 +3348,7 @@ id: MAXO:0000366
 name: biopsy of heart
 def: "Removal of tissue from the heart." []
 synonym: "heart biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3347,7 +3356,7 @@ id: MAXO:0000367
 name: biopsy of hypopharynx
 def: "Removal of tissue from the hypopharynx." []
 synonym: "hypopharynx biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3355,7 +3364,7 @@ id: MAXO:0000368
 name: biopsy of hypothalamus
 def: "Removal of tissue from the hypothalamus." []
 synonym: "hypothalamus biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3363,7 +3372,7 @@ id: MAXO:0000369
 name: biopsy of intestine
 def: "Removal of tissue from the intestine." []
 synonym: "intestine biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3371,7 +3380,7 @@ id: MAXO:0000370
 name: biopsy of jaw skeleton
 def: "Removal of tissue from the jaw skeleton." []
 synonym: "jaw skeleton biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3379,7 +3388,7 @@ id: MAXO:0000371
 name: biopsy of lacrimal apparatus
 def: "Removal of tissue from the lacrimal apparatus." []
 synonym: "lacrimal apparatus biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3387,7 +3396,7 @@ id: MAXO:0000372
 name: biopsy of large intestine
 def: "Removal of tissue from the large intestine." []
 synonym: "large intestine biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3395,7 +3404,7 @@ id: MAXO:0000373
 name: biopsy of larynx
 def: "Removal of tissue from the larynx." []
 synonym: "larynx biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2962
 
 [Term]
@@ -3403,7 +3412,7 @@ id: MAXO:0000374
 name: biopsy of limb
 def: "Removal of tissue from the limb." []
 synonym: "limb biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2963
 
 [Term]
@@ -3411,7 +3420,7 @@ id: MAXO:0000375
 name: biopsy of lip
 def: "Removal of tissue from the lip." []
 synonym: "lip biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2964
 
 [Term]
@@ -3419,7 +3428,7 @@ id: MAXO:0000376
 name: biopsy of liver
 def: "Removal of tissue from the liver." []
 synonym: "liver biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2965
 
 [Term]
@@ -3427,7 +3436,7 @@ id: MAXO:0000377
 name: biopsy of lower respiratory tract
 def: "Removal of tissue from the lower respiratory tract." []
 synonym: "lower respiratory tract biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2966
 
 [Term]
@@ -3435,7 +3444,7 @@ id: MAXO:0000378
 name: biopsy of lower urinary tract
 def: "Removal of tissue from the lower urinary tract." []
 synonym: "lower urinary tract biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2967
 
 [Term]
@@ -3443,7 +3452,7 @@ id: MAXO:0000379
 name: biopsy of lumbar region of vertebral column
 def: "Removal of tissue from the lumbar region of vertebral column." []
 synonym: "lumbar region of vertebral column biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2968
 
 [Term]
@@ -3451,7 +3460,7 @@ id: MAXO:0000380
 name: biopsy of lung
 def: "Removal of tissue from the lung." []
 synonym: "lung biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2969
 
 [Term]
@@ -3459,7 +3468,7 @@ id: MAXO:0000381
 name: biopsy of lymph node
 def: "Removal of tissue from the lymph node." []
 synonym: "lymph node biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2970
 
 [Term]
@@ -3467,7 +3476,7 @@ id: MAXO:0000382
 name: biopsy of lymphatic part of lymphoid system
 def: "Removal of tissue from the lymphatic part of lymphoid system." []
 synonym: "lymphatic part of lymphoid system biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2971
 
 [Term]
@@ -3475,7 +3484,7 @@ id: MAXO:0000383
 name: biopsy of mammalian vulva
 def: "Removal of tissue from the mammalian vulva." []
 synonym: "mammalian vulva biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2972
 
 [Term]
@@ -3483,7 +3492,7 @@ id: MAXO:0000384
 name: biopsy of medulla oblongata
 def: "Removal of tissue from the medulla oblongata." []
 synonym: "medulla oblongata biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2973
 
 [Term]
@@ -3491,7 +3500,7 @@ id: MAXO:0000385
 name: biopsy of mouth
 def: "Removal of tissue from the mouth." []
 synonym: "mouth biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2974
 
 [Term]
@@ -3499,7 +3508,7 @@ id: MAXO:0000386
 name: biopsy of muscle organ
 def: "Removal of tissue from the muscle organ." []
 synonym: "muscle organ biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2975
 
 [Term]
@@ -3507,7 +3516,7 @@ id: MAXO:0000387
 name: biopsy of muscle tissue
 def: "Removal of tissue from the muscle tissue." []
 synonym: "muscle tissue biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2976
 
 [Term]
@@ -3515,7 +3524,7 @@ id: MAXO:0000388
 name: biopsy of nasolacrimal duct
 def: "Removal of tissue from the nasolacrimal duct." []
 synonym: "nasolacrimal duct biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2977
 
 [Term]
@@ -3523,7 +3532,7 @@ id: MAXO:0000389
 name: biopsy of nasopharynx
 def: "Removal of tissue from the nasopharynx." []
 synonym: "nasopharynx biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2978
 
 [Term]
@@ -3531,7 +3540,7 @@ id: MAXO:0000390
 name: biopsy of neck
 def: "Removal of tissue from the neck." []
 synonym: "neck biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2979
 
 [Term]
@@ -3539,7 +3548,7 @@ id: MAXO:0000391
 name: biopsy of ovary
 def: "Removal of tissue from the ovary." []
 synonym: "ovary biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2980
 
 [Term]
@@ -3547,7 +3556,7 @@ id: MAXO:0000392
 name: biopsy of pancreas
 def: "Removal of tissue from the pancreas." []
 synonym: "pancreas biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2981
 
 [Term]
@@ -3555,7 +3564,7 @@ id: MAXO:0000393
 name: biopsy of penis
 def: "Removal of tissue from the penis." []
 synonym: "penis biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2982
 
 [Term]
@@ -3563,7 +3572,7 @@ id: MAXO:0000394
 name: biopsy of perianal skin
 def: "Removal of tissue from the perianal skin." []
 synonym: "perianal skin biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2983
 
 [Term]
@@ -3571,7 +3580,7 @@ id: MAXO:0000395
 name: biopsy of peritoneum
 def: "Removal of tissue from the peritoneum." []
 synonym: "peritoneum biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2984
 
 [Term]
@@ -3579,7 +3588,7 @@ id: MAXO:0000396
 name: biopsy of pituitary gland
 def: "Removal of tissue from the pituitary gland." []
 synonym: "pituitary gland biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2985
 
 [Term]
@@ -3587,7 +3596,7 @@ id: MAXO:0000397
 name: biopsy of pleura
 def: "Removal of tissue from the pleura." []
 synonym: "pleura biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2986
 
 [Term]
@@ -3595,7 +3604,7 @@ id: MAXO:0000398
 name: biopsy of rectum
 def: "Removal of tissue from the rectum." []
 synonym: "rectum biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2987
 
 [Term]
@@ -3603,7 +3612,7 @@ id: MAXO:0000399
 name: biopsy of retina
 def: "Removal of tissue from the retina." []
 synonym: "retina biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2988
 
 [Term]
@@ -3611,7 +3620,7 @@ id: MAXO:0000400
 name: biopsy of saliva-secreting gland
 def: "Removal of tissue from the saliva-secreting gland." []
 synonym: "saliva-secreting gland biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2989
 
 [Term]
@@ -3619,7 +3628,7 @@ id: MAXO:0000401
 name: biopsy of scrotum
 def: "Removal of tissue from the scrotum." []
 synonym: "scrotum biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2990
 
 [Term]
@@ -3627,7 +3636,7 @@ id: MAXO:0000402
 name: biopsy of sebaceous gland
 def: "Removal of tissue from the sebaceous gland." []
 synonym: "sebaceous gland biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2991
 
 [Term]
@@ -3635,7 +3644,7 @@ id: MAXO:0000403
 name: biopsy of small intestine
 def: "Removal of tissue from the small intestine." []
 synonym: "small intestine biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2992
 
 [Term]
@@ -3643,7 +3652,7 @@ id: MAXO:0000404
 name: biopsy of spinal cord
 def: "Removal of tissue from the spinal cord." []
 synonym: "spinal cord biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2993
 
 [Term]
@@ -3651,7 +3660,7 @@ id: MAXO:0000405
 name: biopsy of spleen
 def: "Removal of tissue from the spleen." []
 synonym: "spleen biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2994
 
 [Term]
@@ -3659,7 +3668,7 @@ id: MAXO:0000406
 name: biopsy of stomach
 def: "Removal of tissue from the stomach." []
 synonym: "stomach biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2995
 
 [Term]
@@ -3667,7 +3676,7 @@ id: MAXO:0000407
 name: biopsy of subglottis
 def: "Removal of tissue from the subglottis." []
 synonym: "subglottis biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2996
 
 [Term]
@@ -3675,7 +3684,7 @@ id: MAXO:0000408
 name: biopsy of submandibular gland
 def: "Removal of tissue from the submandibular gland." []
 synonym: "submandibular gland biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2997
 
 [Term]
@@ -3683,7 +3692,7 @@ id: MAXO:0000409
 name: biopsy of testis
 def: "Removal of tissue from the testis." []
 synonym: "testis biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2998
 
 [Term]
@@ -3691,7 +3700,7 @@ id: MAXO:0000410
 name: biopsy of thymus
 def: "Removal of tissue from the thymus." []
 synonym: "thymus biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2999
 
 [Term]
@@ -3699,7 +3708,7 @@ id: MAXO:0000411
 name: biopsy of thyroid gland
 def: "Removal of tissue from the thyroid gland." []
 synonym: "thyroid gland biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-3000
 
 [Term]
@@ -3707,7 +3716,7 @@ id: MAXO:0000412
 name: biopsy of tongue
 def: "Removal of tissue from the tongue." []
 synonym: "tongue biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-3001
 
 [Term]
@@ -3715,7 +3724,7 @@ id: MAXO:0000413
 name: biopsy of tonsil
 def: "Removal of tissue from the tonsil." []
 synonym: "tonsil biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-3002
 
 [Term]
@@ -3723,7 +3732,7 @@ id: MAXO:0000414
 name: biopsy of trachea
 def: "Removal of tissue from the trachea." []
 synonym: "trachea biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-3003
 
 [Term]
@@ -3731,7 +3740,7 @@ id: MAXO:0000415
 name: biopsy of upper digestive tract
 def: "Removal of tissue from the upper digestive tract." []
 synonym: "upper digestive tract biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-3004
 
 [Term]
@@ -3739,7 +3748,7 @@ id: MAXO:0000416
 name: biopsy of upper respiratory tract
 def: "Removal of tissue from the upper respiratory tract." []
 synonym: "upper respiratory tract biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-3005
 
 [Term]
@@ -3747,7 +3756,7 @@ id: MAXO:0000417
 name: biopsy of ureter
 def: "Removal of tissue from the ureter." []
 synonym: "ureter biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-3006
 
 [Term]
@@ -3755,7 +3764,7 @@ id: MAXO:0000418
 name: biopsy of urethra
 def: "Removal of tissue from the urethra." []
 synonym: "urethra biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-3007
 
 [Term]
@@ -3763,7 +3772,7 @@ id: MAXO:0000419
 name: biopsy of urinary bladder
 def: "Removal of tissue from the urinary bladder." []
 synonym: "urinary bladder biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-3008
 
 [Term]
@@ -3771,7 +3780,7 @@ id: MAXO:0000420
 name: biopsy of uterine cervix
 def: "Removal of tissue from the uterine cervix." []
 synonym: "uterine cervix biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-3009
 
 [Term]
@@ -3779,7 +3788,7 @@ id: MAXO:0000421
 name: biopsy of vagina
 def: "Removal of tissue from the vagina." []
 synonym: "vagina biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-3010
 
 [Term]
@@ -3787,7 +3796,7 @@ id: MAXO:0000422
 name: biopsy of vermiform appendix
 def: "Removal of tissue from the vermiform appendix." []
 synonym: "vermiform appendix biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-3011
 
 [Term]
@@ -3795,7 +3804,7 @@ id: MAXO:0000423
 name: biopsy of zone of skin
 def: "Removal of tissue from the zone of skin." []
 synonym: "zone of skin biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-3012
 
 [Term]
@@ -3818,6 +3827,8 @@ def: "Magnetic resonance imaging of the head." []
 synonym: "head magnetic resonance imaging" EXACT []
 synonym: "head MRI" EXACT []
 synonym: "Nuclear magnetic resonance imaging of the head" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000426
@@ -3826,6 +3837,8 @@ def: "Magnetic resonance imaging of the abdomen." []
 synonym: "abdomen magnetic resonance imaging" EXACT []
 synonym: "abdomen MRI" EXACT []
 synonym: "Nuclear magnetic resonance imaging of the abdomen" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000427
@@ -3834,6 +3847,8 @@ def: "Magnetic resonance imaging of the brain." []
 synonym: "brain magnetic resonance imaging" EXACT []
 synonym: "brain MRI" EXACT []
 synonym: "Nuclear magnetic resonance imaging of the brain" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000428
@@ -3842,6 +3857,8 @@ def: "Magnetic resonance imaging of the chest." []
 synonym: "chest magnetic resonance imaging" EXACT []
 synonym: "chest MRI" EXACT []
 synonym: "Nuclear magnetic resonance imaging of the chest" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000429
@@ -3878,6 +3895,8 @@ def: "Magnetic resonance imaging of the breast." []
 synonym: "breast magnetic resonance imaging" EXACT []
 synonym: "breast MRI" EXACT []
 synonym: "Nuclear magnetic resonance imaging of the breast" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000432
@@ -4190,7 +4209,7 @@ synonym: "avoid aerobic exercise therapy" EXACT []
 synonym: "avoiding aerobic exercise therapy" EXACT []
 intersection_of: MAXO:0001014 ! medical action avoidance
 intersection_of: MAXO:0001015 MAXO:0000065 ! avoided medical action aerobic exercise therapy
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-05-19T20_39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -4329,11 +4348,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0010000
 name: gluten intake avoidance
 def: "A medical requirement or recommendation of avoiding the intake of gluten." []
+comment: Intake may interfere with disease treatment, prolong the recovery phase, or cause complications.
 synonym: "avoid gluten intake" EXACT []
 synonym: "avoiding gluten intake" EXACT []
 intersection_of: MAXO:0001018 ! nutrition intake
 intersection_of: MAXO:0001027 FOODON:03420177 ! avoided food
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-07-11T09_00:01Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-07-11T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -4344,7 +4364,311 @@ synonym: "avoid liquid intake" EXACT []
 synonym: "avoiding liquid intake" EXACT []
 intersection_of: MAXO:0001018 ! nutrition intake
 intersection_of: MAXO:0001027 FOODON:03412974 ! avoided food
-property_value: http://purl.org/dc/elements/1.1/date http://purl.obolibrary.org/obo/2019-07-11T09_00:01Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-07-11T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010002
+name: protein extract, concentrate or isolate intake avoidance
+def: "A medical requirement or recommendation of avoiding the intake of protein extract, concentrate or isolate." []
+synonym: "avoid protein extract, concentrate or isolate intake" EXACT []
+synonym: "avoiding protein extract, concentrate or isolate intake" EXACT []
+intersection_of: MAXO:0001018 ! nutrition intake
+intersection_of: MAXO:0001027 FOODON:03420236 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T02:36:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010003
+name: fat or oil intake avoidance
+def: "A medical requirement or recommendation of avoiding the intake of fat or oil." []
+synonym: "avoid fat or oil intake" EXACT []
+synonym: "avoiding fat or oil intake" EXACT []
+intersection_of: MAXO:0001018 ! nutrition intake
+intersection_of: MAXO:0001027 FOODON:03420190 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T02:36:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010004
+name: amino-acid betaine supplementation
+def: "Addition of amino-acid betaine to a the diet for complete nutrition support." []
+synonym: "amino-acid betaine supplemental intake" EXACT []
+synonym: "dietary supplementation of amino-acid betaine" EXACT []
+synonym: "supplementation of amino-acid betaine" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-07-11T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010005
+name: folates supplementation
+def: "Addition of folates to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of folates" EXACT []
+synonym: "folates supplemental intake" EXACT []
+synonym: "supplementation of folates" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-07-11T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010006
+name: carnitine supplementation
+def: "Addition of carnitine to a the diet for complete nutrition support." []
+synonym: "carnitine supplemental intake" EXACT []
+synonym: "dietary supplementation of carnitine" EXACT []
+synonym: "supplementation of carnitine" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T02:36:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010007
+name: methionine supplementation
+def: "Addition of methionine to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of methionine" EXACT []
+synonym: "limited fat dietary intake" EXACT []
+synonym: "low fat dietary intake" EXACT []
+synonym: "methionine supplemental intake" EXACT []
+synonym: "non-fat dietary intake" EXACT []
+synonym: "supplementation of methionine" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T02:36:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010008
+name: creatine supplementation
+def: "Addition of creatine to a the diet for complete nutrition support." []
+synonym: "creatine supplemental intake" EXACT []
+synonym: "dietary supplementation of creatine" EXACT []
+synonym: "supplementation of creatine" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010009
+name: arginine supplementation
+def: "Addition of arginine to a the diet for complete nutrition support." []
+synonym: "arginine supplemental intake" EXACT []
+synonym: "dietary supplementation of arginine" EXACT []
+synonym: "supplementation of arginine" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010010
+name: biotins supplementation
+def: "Addition of biotins to a the diet for complete nutrition support." []
+synonym: "biotins supplemental intake" EXACT []
+synonym: "dietary supplementation of biotins" EXACT []
+synonym: "supplementation of biotins" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010011
+name: chenodeoxycholic acid supplementation
+def: "Addition of chenodeoxycholic acid to a the diet for complete nutrition support." []
+synonym: "chenodeoxycholic acid supplemental intake" EXACT []
+synonym: "dietary supplementation of chenodeoxycholic acid" EXACT []
+synonym: "supplementation of chenodeoxycholic acid" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010012
+name: coenzyme Q10 supplementation
+def: "Addition of coenzyme Q10 to a the diet for complete nutrition support." []
+synonym: "coenzyme Q10 supplemental intake" EXACT []
+synonym: "dietary supplementation of coenzyme Q10" EXACT []
+synonym: "supplementation of coenzyme Q10" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010013
+name: glycine supplementation
+def: "Addition of glycine to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of glycine" EXACT []
+synonym: "glycine supplemental intake" EXACT []
+synonym: "supplementation of glycine" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010014
+name: N-acetyl-L-cysteine supplementation
+def: "Addition of N-acetyl-L-cysteine to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of N-acetyl-L-cysteine" EXACT []
+synonym: "N-acetyl-L-cysteine supplemental intake" EXACT []
+synonym: "supplementation of N-acetyl-L-cysteine" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010015
+name: ornithine supplementation
+def: "Addition of ornithine to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of ornithine" EXACT []
+synonym: "ornithine supplemental intake" EXACT []
+synonym: "supplementation of ornithine" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010016
+name: riboflavin supplementation
+def: "Addition of riboflavin to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of riboflavin" EXACT []
+synonym: "riboflavin supplemental intake" EXACT []
+synonym: "supplementation of riboflavin" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010017
+name: vitamin B6 supplementation
+def: "Addition of vitamin B6 to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of vitamin B6" EXACT []
+synonym: "supplementation of vitamin B6" EXACT []
+synonym: "vitamin B6 supplemental intake" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010018
+name: citrulline supplementation
+def: "Addition of citrulline to a the diet for complete nutrition support." []
+synonym: "citrulline supplemental intake" EXACT []
+synonym: "dietary supplementation of citrulline" EXACT []
+synonym: "supplementation of citrulline" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010019
+name: thiamine supplementation
+def: "Addition of thiamine to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of thiamine" EXACT []
+synonym: "supplementation of thiamine" EXACT []
+synonym: "thiamine supplemental intake" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010020
+name: amino acid supplementation
+def: "Addition of amino acid to a the diet for complete nutrition support." []
+synonym: "amino acid supplemental intake" EXACT []
+synonym: "dietary supplementation of amino acid" EXACT []
+synonym: "supplementation of amino acid" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010021
+name: L-serine supplementation
+def: "Addition of L-serine to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of L-serine" EXACT []
+synonym: "L-serine supplemental intake" EXACT []
+synonym: "supplementation of L-serine" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010022
+name: uridine supplementation
+def: "Addition of uridine to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of uridine" EXACT []
+synonym: "supplementation of uridine" EXACT []
+synonym: "uridine supplemental intake" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010023
+name: medium-chain fatty acid supplementation
+def: "Addition of medium-chain fatty acid to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of medium-chain fatty acid" EXACT []
+synonym: "medium-chain fatty acid supplemental intake" EXACT []
+synonym: "supplementation of medium-chain fatty acid" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010024
+name: essential fatty acid supplementation
+def: "Addition of essential fatty acid to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of essential fatty acid" EXACT []
+synonym: "essential fatty acid supplemental intake" EXACT []
+synonym: "supplementation of essential fatty acid" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010025
+name: cholesterol supplementation
+def: "Addition of cholesterol to a the diet for complete nutrition support." []
+synonym: "cholesterol supplemental intake" EXACT []
+synonym: "dietary supplementation of cholesterol" EXACT []
+synonym: "supplementation of cholesterol" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010026
+name: elemental zinc supplementation
+def: "Addition of elemental zinc to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of elemental zinc" EXACT []
+synonym: "elemental zinc supplemental intake" EXACT []
+synonym: "supplementation of elemental zinc" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010027
+name: hydroxocobalamin supplementation
+def: "Addition of hydroxocobalamin to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of hydroxocobalamin" EXACT []
+synonym: "hydroxocobalamin supplemental intake" EXACT []
+synonym: "supplementation of hydroxocobalamin" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010028
+name: cyanocob(III)alamin supplementation
+def: "Addition of cyanocob(III)alamin to a the diet for complete nutrition support." []
+synonym: "cyanocob(III)alamin supplemental intake" EXACT []
+synonym: "dietary supplementation of cyanocob(III)alamin" EXACT []
+synonym: "supplementation of cyanocob(III)alamin" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010029
+name: methylcobalamin supplementation
+def: "Addition of methylcobalamin to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of methylcobalamin" EXACT []
+synonym: "methylcobalamin supplemental intake" EXACT []
+synonym: "supplementation of methylcobalamin" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010030
+name: bone marrow transplantation
+def: "The surgical transfer of a healthy bone marrow to a patient." []
+synonym: "transplantation of bone marrow" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2019-07-11T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010050
+name: beverage alcohol intake avoidance
+def: "A medical requirement or recommendation of avoiding the intake of beverage alcohol." []
+synonym: "avoid beverage alcohol intake" EXACT []
+synonym: "avoiding beverage alcohol intake" EXACT []
+intersection_of: MAXO:0001018 ! nutrition intake
+intersection_of: MAXO:0001027 FOODON:03310661 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2019-11-18T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
