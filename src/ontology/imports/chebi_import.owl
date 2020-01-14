@@ -9,11 +9,12 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:chebi="http://purl.obolibrary.org/obo/chebi/"
      xmlns:chebi1="http://purl.obolibrary.org/obo/chebi#2"
-     xmlns:chebi2="http://purl.obolibrary.org/obo/chebi#3"
-     xmlns:chebi3="http://purl.obolibrary.org/obo/chebi#1"
+     xmlns:chebi2="http://purl.obolibrary.org/obo/chebi#"
+     xmlns:chebi3="http://purl.obolibrary.org/obo/chebi#3"
+     xmlns:chebi4="http://purl.obolibrary.org/obo/chebi#1"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/imports/chebi_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2019-11-20/imports/chebi_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2020-01-14/imports/chebi_import.owl"/>
     </owl:Ontology>
     
 
@@ -49,9 +50,26 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/chebi#INN -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/chebi#INN">
+        <rdfs:label>INN</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/chebi#IUPAC_NAME -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/chebi#IUPAC_NAME">
+        <rdfs:label>IUPAC NAME</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/chebi#1_STAR -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/chebi#1_STAR">
+        <rdfs:comment>Preliminary entries</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
@@ -60,6 +78,7 @@
     <!-- http://purl.obolibrary.org/obo/chebi#2_STAR -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/chebi#2_STAR">
+        <rdfs:comment>Annotated by 3rd party</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
@@ -68,6 +87,7 @@
     <!-- http://purl.obolibrary.org/obo/chebi#3_STAR -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/chebi#3_STAR">
+        <rdfs:comment>Manually annotated by ChEBI Team</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
@@ -6899,7 +6919,6 @@
         <oboInOwl:hasDbXref>KNApSAcK:C00001208</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>LIPID_MAPS_instance:LMFA01010005</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PDBeChem:LEA</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PDBeChem:PEI</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:20507156</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PPDB:3130</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reaxys:969454</oboInOwl:hasDbXref>
@@ -24832,11 +24851,10 @@
         <chebi:monoisotopicmass>17.00274</chebi:monoisotopicmass>
         <oboInOwl:hasAlternativeId>CHEBI:24706</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>CHEBI:43171</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>PDBeChem:HYD</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PDBeChem:OH</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>HYDROXY GROUP</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>hydroxy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>hydroxy group</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>oxidanyl</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>-OH</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>hydroxyl</oboInOwl:hasRelatedSynonym>
@@ -24863,13 +24881,6 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>hydroxy group</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UniProt</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_43176"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>oxidanyl</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IUPAC</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/chebi#IUPAC_NAME"/>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_43176"/>
@@ -25219,7 +25230,7 @@
         <chebi:monoisotopicmass>15.99491</chebi:monoisotopicmass>
         <oboInOwl:hasAlternativeId>CHEBI:29353</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>CHEBI:44607</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>PDBeChem:OXO</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PDBeChem:O</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>OXO GROUP</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>oxo</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
@@ -25336,7 +25347,7 @@
         <chebi:monoisotopicmass>44.99765</chebi:monoisotopicmass>
         <oboInOwl:hasAlternativeId>CHEBI:23025</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>CHEBI:41420</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>PDBeChem:CBX</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PDBeChem:FMT</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>CARBOXY GROUP</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>carboxy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
@@ -25640,6 +25651,12 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_47891">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35341"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64709"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50160"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>Any steroid substituted by at least one carboxy group.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>steroid acids</oboInOwl:hasRelatedSynonym>
@@ -26199,6 +26216,12 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_50160">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_29067"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_47891"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>Any anion formed by loss of a proton from a steroid acid.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>steroid acid anions</oboInOwl:hasRelatedSynonym>
@@ -28097,9 +28120,9 @@
         <obo:IAO_0000115>Conjugate base of an L-alpha-amino acid arising from deprotonation of the C-1 carboxy group.</obo:IAO_0000115>
         <chebi:charge>-1</chebi:charge>
         <chebi:formula>C2H3NO2R</chebi:formula>
-        <chebi:mass>88.08520</chebi:mass>
+        <chebi:mass>73.051</chebi:mass>
         <chebi:monoisotopicmass>73.01638</chebi:monoisotopicmass>
-        <chebi:smiles>C[C@H](N)C([O-])=O</chebi:smiles>
+        <chebi:smiles>[C@H](C(=O)[O-])(N)*</chebi:smiles>
         <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>L-alpha-amino carboxylate</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>CHEBI:59814</oboInOwl:id>
@@ -28337,9 +28360,9 @@
         <obo:IAO_0000115>Any alpha-amino acid anion in which the parent amino acid has D-configuration.</obo:IAO_0000115>
         <chebi:charge>-1</chebi:charge>
         <chebi:formula>C2H3NO2R</chebi:formula>
-        <chebi:mass>88.08520</chebi:mass>
+        <chebi:mass>73.051</chebi:mass>
         <chebi:monoisotopicmass>73.01638</chebi:monoisotopicmass>
-        <chebi:smiles>C[C@@H](N)C([O-])=O</chebi:smiles>
+        <chebi:smiles>[C@@H](C(=O)[O-])(N)*</chebi:smiles>
         <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>D-alpha-amino acid anions</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>D-alpha-amino carboxylate</oboInOwl:hasRelatedSynonym>

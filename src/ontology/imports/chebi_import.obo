@@ -1,8 +1,8 @@
 format-version: 1.2
-data-version: maxo/releases/2019-11-20/imports/chebi_import.owl
-subsetdef: 1_STAR ""
-subsetdef: 2_STAR ""
-subsetdef: 3_STAR ""
+data-version: maxo/releases/2020-01-14/imports/chebi_import.owl
+subsetdef: 1_STAR "Preliminary entries"
+subsetdef: 2_STAR "Annotated by 3rd party"
+subsetdef: 3_STAR "Manually annotated by ChEBI Team"
 ontology: maxo/imports/chebi_import
 
 [Term]
@@ -1691,7 +1691,6 @@ xref: KEGG:C00803
 xref: KNApSAcK:C00001208
 xref: LIPID_MAPS_instance:LMFA01010005 "LIPID MAPS"
 xref: PDBeChem:LEA
-xref: PDBeChem:PEI
 xref: PMID:20507156 "Europe PMC"
 xref: PPDB:3130
 xref: Reaxys:969454 "Reaxys"
@@ -2561,8 +2560,8 @@ namespace: chebi_ontology
 subset: 3_STAR
 synonym: ">C=O" RELATED [IUPAC]
 synonym: "carbonyl" EXACT IUPAC_NAME [IUPAC]
-synonym: "carbonyl group" EXACT [UniProt]
 synonym: "carbonyl group" EXACT [ChEBI]
+synonym: "carbonyl group" EXACT [UniProt]
 is_a: CHEBI:51422 ! organodiyl group
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CO" xsd:string
@@ -7261,8 +7260,7 @@ synonym: "HYDROXY GROUP" EXACT [PDBeChem]
 synonym: "hydroxy group" EXACT [UniProt]
 synonym: "hydroxyl" RELATED [ChEBI]
 synonym: "hydroxyl group" RELATED [ChEBI]
-synonym: "oxidanyl" EXACT IUPAC_NAME [IUPAC]
-xref: PDBeChem:HYD
+xref: PDBeChem:OH
 is_a: CHEBI:33246 ! inorganic group
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "HO" xsd:string
@@ -7348,7 +7346,7 @@ subset: 3_STAR
 synonym: "=O" RELATED [IUPAC]
 synonym: "oxo" EXACT IUPAC_NAME [IUPAC]
 synonym: "OXO GROUP" EXACT [PDBeChem]
-xref: PDBeChem:OXO
+xref: PDBeChem:O
 is_a: CHEBI:33246 ! inorganic group
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "O" xsd:string
@@ -7398,7 +7396,7 @@ synonym: "-COOH" RELATED [IUPAC]
 synonym: "carboxy" EXACT IUPAC_NAME [IUPAC]
 synonym: "CARBOXY GROUP" EXACT [PDBeChem]
 synonym: "carboxyl group" RELATED [ChEBI]
-xref: PDBeChem:CBX
+xref: PDBeChem:FMT
 is_a: CHEBI:33249 ! organyl group
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CHO2" xsd:string
@@ -7501,6 +7499,7 @@ subset: 3_STAR
 synonym: "steroid acids" RELATED [ChEBI]
 is_a: CHEBI:35341 ! steroid
 is_a: CHEBI:64709 ! organic acid
+relationship: is_conjugate_acid_of CHEBI:50160 ! steroid acid anion
 
 [Term]
 id: CHEBI:48354
@@ -7703,6 +7702,7 @@ def: "Any anion formed by loss of a proton from a steroid acid." []
 subset: 3_STAR
 synonym: "steroid acid anions" RELATED [ChEBI]
 is_a: CHEBI:29067 ! carboxylic acid anion
+relationship: is_conjugate_base_of CHEBI:47891 ! steroid acid
 
 [Term]
 id: CHEBI:50247
@@ -8349,9 +8349,9 @@ is_a: CHEBI:33558 ! alpha-amino-acid anion
 relationship: is_conjugate_base_of CHEBI:15705 ! L-alpha-amino acid
 property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C2H3NO2R" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "88.08520" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "73.051" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "73.01638" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/smiles "C[C@H](N)C([O-])=O" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[C@H](C(=O)[O-])(N)*" xsd:string
 
 [Term]
 id: CHEBI:59869
@@ -8454,9 +8454,9 @@ is_a: CHEBI:33558 ! alpha-amino-acid anion
 relationship: is_conjugate_base_of CHEBI:16733 ! D-alpha-amino acid
 property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C2H3NO2R" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "88.08520" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "73.051" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "73.01638" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/smiles "C[C@@H](N)C([O-])=O" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[C@@H](C(=O)[O-])(N)*" xsd:string
 
 [Term]
 id: CHEBI:61115
