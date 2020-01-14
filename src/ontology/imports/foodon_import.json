@@ -2104,6 +2104,15 @@
       "type" : "CLASS",
       "lbl" : "sunflower plant"
     }, {
+      "id" : "http://schema.org/image",
+      "meta" : {
+        "definition" : {
+          "val" : "An image of the item. ,In Protege, this can be a URL.",
+          "xrefs" : [ ]
+        }
+      },
+      "type" : "PROPERTY"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/CHEBI_131927",
       "meta" : {
         "definition" : {
@@ -8726,11 +8735,11 @@
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000602",
           "val" : "(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt y x t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [020-002] "
         }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "BFO 2 Reference: ‘Matter’ is intended to encompass both mass and energy (we will address the ontological treatment of portions of energy in a later version of BFO). A portion of matter is anything that includes elementary particles among its proper or improper parts: quarks and leptons, including electrons, as the smallest particles thus far discovered; baryons (including protons and neutrons) at a higher level of granularity; atoms and molecules at still higher levels, forming the cells, organs, organisms and other material entities studied by biologists, the portions of rock studied by geologists, the fossils studied by paleontologists, and so on.Material entities are three-dimensional entities (entities extended in three spatial dimensions), as contrasted with the processes in which they participate, which are four-dimensional entities (entities extended also along the dimension of time).According to the FMA, material entities may have immaterial entities as parts – including the entities identified below as sites; for example the interior (or ‘lumen’) of your small intestine is a part of your body. BFO 2.0 embodies a decision to follow the FMA here."
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
           "val" : "an aggregate of human beings."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
+          "val" : "BFO 2 Reference: ‘Matter’ is intended to encompass both mass and energy (we will address the ontological treatment of portions of energy in a later version of BFO). A portion of matter is anything that includes elementary particles among its proper or improper parts: quarks and leptons, including electrons, as the smallest particles thus far discovered; baryons (including protons and neutrons) at a higher level of granularity; atoms and molecules at still higher levels, forming the cells, organs, organisms and other material entities studied by biologists, the portions of rock studied by geologists, the fossils studied by paleontologists, and so on.Material entities are three-dimensional entities (entities extended in three spatial dimensions), as contrasted with the processes in which they participate, which are four-dimensional entities (entities extended also along the dimension of time).According to the FMA, material entities may have immaterial entities as parts – including the entities identified below as sites; for example the interior (or ‘lumen’) of your small intestine is a part of your body. BFO 2.0 embodies a decision to follow the FMA here."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
           "val" : "the undetached arm of a human being"
@@ -10006,10 +10015,10 @@
           "val" : "(forall (x t) (if (and (IndependentContinuant x) (existsAt x t)) (exists (y) (and (Entity y) (specificallyDependsOnAt y x t))))) // axiom label in BFO2 CLIF: [018-002] "
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "a molecule"
+          "val" : "an organism"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "an organism"
+          "val" : "a molecule"
         } ]
       },
       "type" : "CLASS",
@@ -11400,13 +11409,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/UBERON_0000468"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_15428",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_26650"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_33906",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_33909"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_15428",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_26650"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_24833",
       "pred" : "is_a",
@@ -11536,13 +11545,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03420255"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/FOODON_00001745",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FOODON_00001242"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_51958",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_33832"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FOODON_00001745",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FOODON_00001242"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_00002131",
       "pred" : "is_a",
@@ -11608,13 +11617,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_00002286"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_61120",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_51143"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_78295",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_52211"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_61120",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_51143"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002577",
       "pred" : "is_a",
@@ -11640,13 +11649,13 @@
       "pred" : "http://purl.obolibrary.org/obo/RO_0002350",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03400277"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/FOODON_03411174",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FOODON_03411607"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_03304497",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_00001173"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FOODON_03411174",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FOODON_03411607"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_03420145",
       "pred" : "is_a",
@@ -11696,13 +11705,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CARO_0000003"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/UBERON_0000955",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FOODON_03420255"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_00002067",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_00001242"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/UBERON_0000955",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FOODON_03420255"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002198",
       "pred" : "is_a",
@@ -11892,13 +11901,13 @@
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002202"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/UBERON_0000178",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/UBERON_0006314"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_00003194",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_00002381"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/UBERON_0000178",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/UBERON_0006314"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_33671",
       "pred" : "is_a",
@@ -11912,13 +11921,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_36916"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_39418",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_26607"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_03411134",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03411297"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_39418",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_26607"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000015",
       "pred" : "is_a",
@@ -12428,13 +12437,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_63299"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/FOODON_03315173",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FOODON_00001248"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_03301977",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002350",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03400229"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FOODON_03315173",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FOODON_00001248"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002234",
       "pred" : "inverseOf",
@@ -12488,13 +12497,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_25741"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/UBERON_0000323",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/UBERON_0000922"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_38338",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_33860"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/UBERON_0000323",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/UBERON_0000922"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_39447",
       "pred" : "is_a",
@@ -12740,13 +12749,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_00001173"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_35341",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_51958"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_03411547",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03411017"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_35341",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_51958"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_03411365",
       "pred" : "is_a",
@@ -12980,13 +12989,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_33692"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/FOODON_03460216",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FOODON_03315169"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/UBERON_0000970",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03420255"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FOODON_03460216",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FOODON_03315169"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0000080",
       "pred" : "inverseOf",
@@ -13412,13 +13421,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03411001"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_33561",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_27081"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_33672",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_5686"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_33561",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_27081"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_33890",
       "pred" : "is_a",
@@ -13696,13 +13705,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_33832"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/FOODON_00002762",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FOODON_03301467"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_36586",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_36587"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FOODON_00002762",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FOODON_03301467"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_68452",
       "pred" : "is_a",
@@ -13812,13 +13821,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_23333"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_33497",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_23367"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_03400309",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03400172"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_33497",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_23367"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002218",
       "pred" : "subPropertyOf",
@@ -13916,13 +13925,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03411057"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/FOODON_00001635",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FOODON_00002153"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_51086",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_50906"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FOODON_00001635",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FOODON_00002153"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_38106",
       "pred" : "is_a",
@@ -14564,13 +14573,13 @@
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/RO_0002207",
       "allValuesFromEdges" : [ {
-        "sub" : "http://purl.obolibrary.org/obo/CL_0000000",
-        "pred" : "http://purl.obolibrary.org/obo/RO_0002207",
-        "obj" : "http://purl.obolibrary.org/obo/CL_0000000"
-      }, {
         "sub" : "http://purl.obolibrary.org/obo/CARO_0010000",
         "pred" : "http://purl.obolibrary.org/obo/RO_0002207",
         "obj" : "http://purl.obolibrary.org/obo/CARO_0010000"
+      }, {
+        "sub" : "http://purl.obolibrary.org/obo/CL_0000000",
+        "pred" : "http://purl.obolibrary.org/obo/RO_0002207",
+        "obj" : "http://purl.obolibrary.org/obo/CL_0000000"
       } ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/RO_0000057",
