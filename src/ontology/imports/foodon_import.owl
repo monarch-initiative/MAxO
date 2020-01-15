@@ -15,7 +15,7 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:oboInOwl1="http://purl.oboInOwllibrary.org/oboInOwl/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/imports/foodon_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2020-01-14/imports/foodon_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2020-01-15/imports/foodon_import.owl"/>
     </owl:Ontology>
     
 
@@ -302,6 +302,12 @@
     <!-- http://purl.org/dc/terms/license -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/rightsHolder -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rightsHolder"/>
     
 
 
@@ -4862,6 +4868,32 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001057 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001057">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00001015"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411140"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001015"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400143"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">plant fruit food product</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_00001079 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001079">
@@ -5845,6 +5877,23 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00002141 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002141">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00001057"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00001261"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001057"/>
+        <rdfs:label xml:lang="en">plant fruit vegetable food product</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_00002150 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002150">
@@ -5901,11 +5950,91 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00002180 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002180">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00002141"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411456"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002141"/>
+        <rdfs:label xml:lang="en">pumpkin food product</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_00002196 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002196">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03311737"/>
         <rdfs:label xml:lang="en">refined or partially-refined food product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00002232 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002232">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00001093"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411226"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001093"/>
+        <rdfs:label xml:lang="en">sesame food product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00002233 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002233">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00001172"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411226"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001172"/>
+        <rdfs:label xml:lang="en">sesame coated nut (snack)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00002271 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002271">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00002141"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411208"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002141"/>
+        <rdfs:label xml:lang="en">squash food product</rdfs:label>
     </owl:Class>
     
 
@@ -6005,6 +6134,36 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         </owl:equivalentClass>
         <oboInOwl:hasSynonym xml:lang="en">food</oboInOwl:hasSynonym>
         <rdfs:label xml:lang="en">food material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00002448 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002448">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00001261"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00003014"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_03411462"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001261"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000117 xml:lang="en">Damion Dooley</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym xml:lang="en">A zucchini food product is a food product deriving from either golden or green zucchini plant cultivars.</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">zucchini food product</rdfs:label>
     </owl:Class>
     
 
@@ -6356,6 +6515,49 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00003014 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00003014">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411190"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">Golden zucchini is a modern hybrid summer squash (Cucurbita pepo).</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0002-8844-9165"/>
+        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Zucchini"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-22T19:52:25Z</dc:date>
+        <oboInOwl:hasExactSynonym xml:lang="en">gold gush zucchini</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">golden delight zucchini</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">goldfinger zucchini</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">yellow zucchini</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">golden zucchini plant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00003015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00003015">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00002448"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002225"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_00003014"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002448"/>
+        <obo:IAO_0000115 xml:lang="en">A golden or yellow zucchini is a summer squash harvested from the golden zucchini cultivar.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0002-8844-9165"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-22T20:36:52Z</dc:date>
+        <oboInOwl:hasExactSynonym xml:lang="en">golden zucchini</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">yellow zucchini</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">golden zucchini squash (whole)</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_00003043 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00003043">
@@ -6695,6 +6897,37 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_03304870 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03304870">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002180"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03304497"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411456"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400305"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>SUBSET_SIREN:F4870</oboInOwl:hasDbXref>
+        <oboInOwl:inSubset>subset_siren</oboInOwl:inSubset>
+        <rdfs:comment xml:lang="en">SIREN DB annotation:
+* has quality &apos;whole, natural shape&apos; (http://purl.obolibrary.org/obo/FOODON_03430150)
+* has quality &apos;not heat-treated&apos; (http://purl.obolibrary.org/obo/FOODON_03440003)
+* derives from &apos;seed, skin present, germ present&apos; (http://purl.obolibrary.org/obo/FOODON_03420133)
+        </rdfs:comment>
+        <rdfs:label xml:lang="en">pumpkin seed (shell off)</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_03310006 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03310006">
@@ -6730,6 +6963,25 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_03310306 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03310306">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002232"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>SUBSET_SIREN:F10306</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="en">sesame</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>subset_siren</oboInOwl:inSubset>
+        <rdfs:comment xml:lang="en">SIREN DB annotation:
+* has quality &apos;whole, natural shape&apos; (http://purl.obolibrary.org/obo/FOODON_03430150)
+* has quality &apos;not heat-treated&apos; (http://purl.obolibrary.org/obo/FOODON_03440003)
+* derives from &apos;seed, skin present, germ present&apos; (http://purl.obolibrary.org/obo/FOODON_03420133)
+        </rdfs:comment>
+        <rdfs:label xml:lang="en">sesame seed</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_03310661 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03310661">
@@ -6752,6 +7004,46 @@ Each of these 3 primitives can be composed to yield a cross-product of different
 * formed as a result of &apos;food distillation process&apos; (http://purl.obolibrary.org/obo/FOODON_03460270)
         </rdfs:comment>
         <rdfs:label xml:lang="en">beverage alcohol</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03310943 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03310943">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00002448"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002225"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411462"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002448"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400152"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000117 xml:lang="en">Damion Dooley</obo:IAO_0000117>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasBroadSynonym xml:lang="en">zucchini</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>SUBSET_SIREN:F10943</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="en">green zucchini</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">zucchini squash</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">courgettes</oboInOwl:hasSynonym>
+        <oboInOwl:inSubset>subset_siren</oboInOwl:inSubset>
+        <rdfs:comment xml:lang="en">SIREN DB annotation:
+* has quality &apos;whole, natural shape&apos; (http://purl.obolibrary.org/obo/FOODON_03430150)
+* has quality &apos;not heat-treated&apos; (http://purl.obolibrary.org/obo/FOODON_03440003)
+* derives from &apos;fruit, peel present, core, pit or seed present&apos; (http://purl.obolibrary.org/obo/FOODON_03420140)
+        </rdfs:comment>
+        <rdfs:label xml:lang="en">zucchini squash (whole)</rdfs:label>
     </owl:Class>
     
 
@@ -6835,6 +7127,38 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_03315837 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03315837">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00001057"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03420294"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002353"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03000001"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001057"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>SUBSET_SIREN:F15837</oboInOwl:hasDbXref>
+        <oboInOwl:inSubset>subset_siren</oboInOwl:inSubset>
+        <rdfs:comment xml:lang="en">SIREN DB annotation:
+* has quality &apos;divided into pieces&apos; (http://purl.obolibrary.org/obo/FOODON_03430152)
+* derives from &apos;peel, core or seed&apos; (http://purl.obolibrary.org/obo/FOODON_03420110)
+        </rdfs:comment>
+        <rdfs:label xml:lang="en">fruit peel food product</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_03317197 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03317197">
@@ -6910,6 +7234,20 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=A0133</oboInOwl:hasDbXref>
         <oboInOwl:hasSynonym xml:lang="en">seasoning or flavoring</oboInOwl:hasSynonym>
         <rdfs:label xml:lang="en">flavoring or seasoning (us cfr)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03400143 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03400143">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400257"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000115 xml:lang="en">Fruit in all forms; includes fruit juices and fruit juice drinks, fruit butters, jellies, preserves, and related products.</obo:IAO_0000115>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=A0143</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonym xml:lang="en">pie filling, fruit</oboInOwl:hasSynonym>
+        <rdfs:label xml:lang="en">fruit or fruit product (us cfr)</rdfs:label>
     </owl:Class>
     
 
@@ -7235,6 +7573,18 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_03411006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411057"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1006</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">fruit used as vegetable</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_03411012 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411012">
@@ -7355,6 +7705,18 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_03411140 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411140">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411347"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1140</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">fruit-producing plant</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_03411156 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411156">
@@ -7392,6 +7754,90 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <oboInOwl:hasSynonym xml:lang="en">flavor-producing plant</oboInOwl:hasSynonym>
         <oboInOwl:hasSynonym xml:lang="en">herb-producing plant</oboInOwl:hasSynonym>
         <rdfs:label xml:lang="en">spice or flavor-producing plant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03411189 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411189">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3663"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001303"/>
+                                <owl:allValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3661"/>
+                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3662"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:allValuesFrom>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001303"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3660"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411208"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">Winter squash is an annual fruit representing several squash species within the genus Cucurbita. It differs from summer squash in that it is harvested and eaten in the mature fruit stage when the seeds within have matured fully and the skin has hardened into a tough rind. At this stage, most varieties of this fruit can be stored for use during the winter.</obo:IAO_0000115>
+        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Winter_squash"/>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <schema:image rdf:resource="https://upload.wikimedia.org/wikipedia/commons/b/bd/Squashes.jpg"/>
+        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1189</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="en">curcurbita</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">winter squash</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym xml:lang="en">Cucurbita moschata</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym xml:lang="en">Cucurbita pepo</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym xml:lang="en">cucurbita maxima</oboInOwl:hasNarrowSynonym>
+        <rdfs:label xml:lang="en">winter squash plant</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.strongertogether.coop/food-lifestyle/winter-squash-guide"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411189"/>
+        <owl:annotatedProperty rdf:resource="http://schema.org/image"/>
+        <owl:annotatedTarget rdf:resource="https://upload.wikimedia.org/wikipedia/commons/b/bd/Squashes.jpg"/>
+        <terms:license rdf:resource="http://creativecommons.org/licenses/by-sa/3.0"/>
+        <terms:rightsHolder>Californiacondor</terms:rightsHolder>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03411190 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411190">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411208"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>GRIN:12606</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MANSFELD:4153</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1190</oboInOwl:hasDbXref>
+        <oboInOwl:hasNarrowSynonym>Cucurbita pepo L.</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">cucurbita pepo</oboInOwl:hasSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">yellow crookneck squash</oboInOwl:hasSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">yellow squash</oboInOwl:hasSynonym>
+        <rdfs:label xml:lang="en">summer squash plant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03411208 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411208">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03412091"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1208</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">squash plant</rdfs:label>
     </owl:Class>
     
 
@@ -7441,6 +7887,30 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1223</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">mytilidae</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">mussel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03411226 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411226">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411017"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411174"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>DPNL 2003:13063</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GRIN:33749</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ITIS:505186</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MANSFELD:10138</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PLANTS:SEOR4</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://eol.org/pages/4428</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1226</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>simsim</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>Sesamum indicum L.</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Sesamum orientale L.</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">sesamum indicum</oboInOwl:hasSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">sesamum orientale</oboInOwl:hasSynonym>
+        <rdfs:label xml:lang="en">sesame plant</rdfs:label>
     </owl:Class>
     
 
@@ -7645,6 +8115,43 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_03411456 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411456">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001303"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3663"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001303"/>
+                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3663"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411017"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411174"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411189"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3663"/>
+        <oboInOwl:hasDbXref>DPNL 2003:9052</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GRIN:12606</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ITIS:22373</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PLANTS:CUPE</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://eol.org/pages/584410</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1456</oboInOwl:hasDbXref>
+        <oboInOwl:hasNarrowSynonym>Cucurbita pepo L.</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">cucurbita pepo</oboInOwl:hasSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">field pumpkin</oboInOwl:hasSynonym>
+        <rdfs:label xml:lang="en">pumpkin plant</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_03411459 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411459">
@@ -7657,6 +8164,44 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <oboInOwl:hasNarrowSynonym>Crocus sativus L.</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasSynonym xml:lang="en">crocus sativus</oboInOwl:hasSynonym>
         <rdfs:label xml:lang="en">saffron plant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03411462 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411462">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001303"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3663"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001303"/>
+                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3663"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411190"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000115 xml:lang="en">The zucchini or courgette is a summer squash which can reach nearly a meter in length, but which is usually harvested at half that size or less. Along with certain other squashes, it belongs to the species Cucurbita pepo. Zucchini can be dark or light green. A related hybrid, the golden zucchini, is a deep yellow or orange color.</obo:IAO_0000115>
+        <obo:IAO_0000119>WIKIPEDIA:Zucchini</obo:IAO_0000119>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3663"/>
+        <oboInOwl:hasDbXref>DPNL 2003:9052</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GRIN:12606</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ITIS:22373</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PLANTS:CUPE</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://eol.org/pages/584410</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1462</oboInOwl:hasDbXref>
+        <oboInOwl:hasNarrowSynonym>Cucurbita pepo L.</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">courgette</oboInOwl:hasSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">cucurbita pepo</oboInOwl:hasSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">cucurbita pepo var. melopepo cv. zucchini</oboInOwl:hasSynonym>
+        <rdfs:label xml:lang="en">zucchini plant</rdfs:label>
     </owl:Class>
     
 
@@ -7847,6 +8392,41 @@ obolibrary:FOODON_03412345 # lichen</obo:GENEPIO_0001763>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_03412091 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03412091">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001303"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3660"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001303"/>
+                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3660"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411006"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03414460"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">Cucurbita (Latin for gourd) is a genus of herbaceous vines in the gourd family, Cucurbitaceae, also known as cucurbits, native to the Andes and Mesoamerica. Five species are grown worldwide for their edible fruit, variously known as squash, pumpkin, or gourd depending on species, variety, and local parlance, and for their seeds.</obo:IAO_0000115>
+        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Cucurbita"/>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>GRIN:12957</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MANSFELD:4048</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B2091</oboInOwl:hasDbXref>
+        <oboInOwl:hasNarrowSynonym>Cucurbita maxima L. (Duch.)</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym xml:lang="en">pumpkin plant</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">cucurbita spp.</oboInOwl:hasSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">pumpkin, squash or gourd</oboInOwl:hasSynonym>
+        <rdfs:label xml:lang="en">squash, gourd or pumpkin plant</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_03412112 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03412112">
@@ -7880,6 +8460,47 @@ obolibrary:FOODON_03412345 # lichen</obo:GENEPIO_0001763>
         <oboInOwl:hasSynonym xml:lang="en">pelecypod</oboInOwl:hasSynonym>
         <oboInOwl:hasSynonym xml:lang="en">pelecypoda</oboInOwl:hasSynonym>
         <rdfs:label xml:lang="en">bivalve</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03412509 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03412509">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001303"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3662"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001303"/>
+                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3662"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411189"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">A type of winter squash that grows on a vine. It has a sweet, nutty taste similar to that of a pumpkin. It has tan-yellow skin and orange fleshy pulp with a compartment of seeds in the bottom. When ripe, it turns increasingly deep orange, and becomes sweeter and richer.</obo:IAO_0000115>
+        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Butternut_squash"/>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3662"/>
+        <oboInOwl:hasDbXref>DPNL 2003:9051</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GRIN:12601</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ITIS:22370</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MANSFELD:4090</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PLANTS:CUMO</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://eol.org/pages/584408</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B2509</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="en">butternut pumpkin</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">cucurbita moschata</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">cucurbita moschata var. butternut</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">gramma</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>Cucurbita moschata Duch.</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Cucurbita moschata Duchesne</oboInOwl:hasNarrowSynonym>
+        <rdfs:label xml:lang="en">butternut squash plant</rdfs:label>
     </owl:Class>
     
 
@@ -8008,6 +8629,27 @@ DIRECTIVE 2002/46/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 10 June 20
         <oboInOwl:hasSynonym xml:lang="en">onion</oboInOwl:hasSynonym>
         <oboInOwl:hasSynonym xml:lang="en">wild onion</oboInOwl:hasSynonym>
         <rdfs:label xml:lang="en">allium species</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03414460 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03414460">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03413357"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000115 xml:lang="en">The *Cucurbitaceae*, also called cucurbits and the gourd family, are a plant family consisting of about 965 species in around 95 genera, the most important of which are: 
+  *Cucurbita* - squash, pumpkin, zucchini, some gourds; 
+  *Lagenaria* - calabash, and others that are inedible; 
+  *Citrullus* - watermelon (*C. lanatus, C. colocynthis*) and others; 
+  *Cucumis* - cucumber (*C. sativus*), various melons; 
+  *Luffa* - luffa, loofah</obo:IAO_0000115>
+        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Cucurbitaceae"/>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B4460</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonym xml:lang="en">cucurbitaceae</oboInOwl:hasSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">gourd/squash family</oboInOwl:hasSynonym>
+        <rdfs:label xml:lang="en">gourd/squash family</rdfs:label>
     </owl:Class>
     
 
@@ -8736,6 +9378,30 @@ Previous. An information content entity is a non-realizable information entity t
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
         <rdfs:label xml:lang="en">centrally registered identifier symbol</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_3660 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3660"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_3661 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3661"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_3662 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3662"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_3663 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3663"/>
     
 
 

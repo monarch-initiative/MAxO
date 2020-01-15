@@ -1,11 +1,12 @@
 format-version: 1.2
-data-version: maxo/releases/2019-11-20/imports/go_import.owl
+data-version: maxo/releases/2020-01-15/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
 subsetdef: goslim_agr "AGR slim"
 subsetdef: goslim_aspergillus "Aspergillus GO slim"
 subsetdef: goslim_candida "Candida GO slim"
 subsetdef: goslim_chembl "ChEMBL protein targets summary"
+subsetdef: goslim_drosophila "Drosophila GO slim"
 subsetdef: goslim_flybase_ribbon "FlyBase Drosophila GO ribbon slim"
 subsetdef: goslim_generic "Generic GO slim"
 subsetdef: goslim_metagenomics "Metagenomics GO slim"
@@ -391,6 +392,7 @@ namespace: molecular_function
 def: "Catalysis of the transfer of a phosphate group, usually from ATP, to a substrate molecule." [ISBN:0198506732]
 comment: Note that this term encompasses all activities that transfer a single phosphate group; although ATP is by far the most common phosphate donor, reactions using other phosphate donors are included in this term.
 subset: goslim_chembl
+subset: goslim_drosophila
 subset: goslim_generic
 subset: goslim_metagenomics
 subset: goslim_plant
@@ -668,6 +670,7 @@ alt_id: GO:0019041
 def: "Receiving a signal and transmitting it in the cell to initiate a change in cell activity. A signal is a physical entity or change in state that is used to transfer information in order to trigger a response." [GOC:bf, GOC:signaling]
 subset: goslim_agr
 subset: goslim_chembl
+subset: goslim_drosophila
 subset: goslim_flybase_ribbon
 subset: goslim_metagenomics
 subset: goslim_mouse
@@ -864,6 +867,7 @@ alt_id: GO:0071884
 def: "The activity of a gene product that interacts with a receptor to effect a change in the activity of the receptor. Ligands may be produced by the same, or different, cell that expresses the receptor. Ligands may diffuse extracellularly from their point of origin to the receiving cell, or remain attached to an adjacent cell surface (e.g. Notch ligands)." [GOC:kv, GOC:molecular_function_refactoring, GOC:pdt]
 comment: Definition discussed in https://github.com/geneontology/go-ontology/issues/14220
 subset: goslim_chembl
+subset: goslim_drosophila
 synonym: "receptor agonist activity" BROAD [GOC:molecular_function_refactoring]
 synonym: "signaling molecule" EXACT []
 synonym: "signaling receptor ligand activity" EXACT []
@@ -923,7 +927,7 @@ synonym: "up-regulation of cellular process" EXACT []
 synonym: "upregulation of cellular process" EXACT []
 is_a: GO:0048518 ! positive regulation of biological process
 is_a: GO:0050794 ! regulation of cellular process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0009987 ! cellular process
 relationship: positively_regulates GO:0009987 ! cellular process
 
@@ -1030,7 +1034,7 @@ alt_id: GO:0051244
 def: "Any process that modulates the frequency, rate or extent of a cellular process, any of those that are carried out at the cellular level, but are not necessarily restricted to a single cell. For example, cell communication occurs among more than one cell, but occurs at the cellular level." [GOC:go_curators]
 synonym: "regulation of cellular physiological process" EXACT []
 is_a: GO:0050789 ! regulation of biological process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0009987 ! cellular process
 relationship: regulates GO:0009987 ! cellular process
 
