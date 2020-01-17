@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2019-11-22/maxo-base.owl
+data-version: maxo/releases/2020-01-15/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Aaron Zhang" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
@@ -54,7 +54,12 @@ synonym: "operation" EXACT []
 synonym: "surgery" EXACT []
 synonym: "surgical intervention" EXACT []
 synonym: "surgical operation" EXACT []
+xref: ERO:0000378
 xref: NCIT:C15329
+xref: NCIT:C17173
+xref: NCRO:0000228
+xref: OAE:0000067
+xref: SCDO:1000017
 is_a: MAXO:0000002 ! therapeutic procedure
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:10:35Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -204,7 +209,7 @@ id: MAXO:0000018
 name: biomarker analysis
 def: "A broad subcategory of medical signs or objective indications of medical state which can be measured accurately and reproducibly." [PMID:20978388]
 xref: NCIT:C63333
-is_a: MAXO:0000117 ! contraceptive prevention
+is_a: MAXO:0000117 ! contraceptive pregnancy prevention
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:22:04Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -225,7 +230,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000021
 name: palliative therapeutics
 def: "An approach that improves the quality of life of patients and their families facing the problems associated with life-threatening illness, through the prevention and relief of suffering by means of early identification and impeccable assessment and treatment of pain and other problems, physical, psychosocial, and spiritual’." [PMID:27162584]
+synonym: "comfort care" EXACT []
 synonym: "supportive care" NARROW []
+synonym: "symptom management" EXACT []
 xref: NCIT:C101516
 xref: NCIT:C15747
 is_a: MAXO:0000001 ! medical action
@@ -263,7 +270,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000032
-name: therapeutic behavior avoidance
+name: therapeutic avoidance of behavior
 is_a: MAXO:0000151 ! therapeutic avoidance intervention
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-09T21:01:11Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -272,7 +279,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000038
 name: therapeutic mental or psychological behavior avoidance
 synonym: "mental behavior avoidance for therapeutic purposes" EXACT []
-is_a: MAXO:0000032 ! therapeutic behavior avoidance
+is_a: MAXO:0000032 ! therapeutic avoidance of behavior
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-09T21:14:34Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -287,8 +294,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000041
 name: smoking avoidance
 synonym: "tobacco use avoidance" EXACT []
-is_a: MAXO:0000032 ! therapeutic behavior avoidance
-is_a: MAXO:0000053 ! therapeutic environmental exposure avoidance
+is_a: MAXO:0000032 ! therapeutic avoidance of behavior
+is_a: MAXO:0000053 ! therapeutic avoidance of environmental exposure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-09T21:16:11Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -345,7 +352,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000049
 name: therapeutic avoidance of physical activity
 is_a: MAXO:0000011 ! physical therapy
-is_a: MAXO:0000032 ! therapeutic behavior avoidance
+is_a: MAXO:0000032 ! therapeutic avoidance of behavior
 is_a: MAXO:0000151 ! therapeutic avoidance intervention
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:11:57Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -367,7 +374,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000053
-name: therapeutic environmental exposure avoidance
+name: therapeutic avoidance of environmental exposure
 is_a: MAXO:0000151 ! therapeutic avoidance intervention
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:50:37Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -375,21 +382,24 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000054
 name: radiation exposure avoidance
-is_a: MAXO:0000053 ! therapeutic environmental exposure avoidance
+is_a: MAXO:0000053 ! therapeutic avoidance of environmental exposure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:50:51Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000055
 name: sunlight avoidance
-is_a: MAXO:0000053 ! therapeutic environmental exposure avoidance
+is_a: MAXO:0000053 ! therapeutic avoidance of environmental exposure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:56:19Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000056
-name: therapeutic nutritional avoidance
+name: nutrition intake avoidance
+synonym: "food consumption avoidance" EXACT []
 is_a: MAXO:0000151 ! therapeutic avoidance intervention
+intersection_of: MAXO:0000009 ! nutrition intervention
+intersection_of: MAXO:0001027 FOODON:00002403 ! avoided food
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:56:39Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -422,7 +432,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000062
-name: antineoplastics agent therapy
+name: antineoplastic agent therapy
 def: "A substance that inhibits or prevents the proliferation of neoplasms." [CHEBI:35610]
 synonym: "anticancer agent therapy" BROAD []
 synonym: "antineoplastic drug therapy" BROAD []
@@ -507,7 +517,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000071
 name: chemical exposure avoidance
-is_a: MAXO:0000053 ! therapeutic environmental exposure avoidance
+is_a: MAXO:0000053 ! therapeutic avoidance of environmental exposure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T19:31:56Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -696,16 +706,9 @@ property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T20:40:39Z xsd:da
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
-id: MAXO:0000091
-name: alcohol consumption avoidance
-is_a: MAXO:0000056 ! therapeutic nutritional avoidance
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T20:54:36Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
-
-[Term]
 id: MAXO:0000092
 name: excessive alcohol avoidance
-is_a: MAXO:0000091 ! alcohol consumption avoidance
+is_a: MAXO:0010050 ! alcohol intake avoidance
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T20:54:50Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -713,7 +716,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000093
 name: estrogen-containing food avoidance
 comment: Some processed foods and soy contain large amounts of estrogen.
-is_a: MAXO:0000056 ! therapeutic nutritional avoidance
+is_a: MAXO:0000056 ! nutrition intake avoidance
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T20:55:05Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -721,21 +724,21 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000095
 name: excessive iron consumption avoidance
 comment: Some foods, particularly red meat, have high amounts of iron.
-is_a: MAXO:0000056 ! therapeutic nutritional avoidance
+is_a: MAXO:0000056 ! nutrition intake avoidance
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T20:59:49Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000096
 name: excessive protein consumption avoidance
-is_a: MAXO:0000056 ! therapeutic nutritional avoidance
+is_a: MAXO:0010002 ! protein intake avoidance
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:00:36Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000097
 name: fasting avoidance
-is_a: MAXO:0000056 ! therapeutic nutritional avoidance
+is_a: MAXO:0000009 ! nutrition intervention
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:01:13Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -754,52 +757,10 @@ property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:01:21Z xsd:da
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
-id: MAXO:0000099
-name: food consumption avoidance
-is_a: MAXO:0000056 ! therapeutic nutritional avoidance
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:01:41Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
-
-[Term]
-id: MAXO:0000100
-name: meat consumption avoidance
-is_a: MAXO:0000099 ! food consumption avoidance
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:01:56Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
-
-[Term]
-id: MAXO:0000101
-name: nut consumption avoidance
-is_a: MAXO:0000099 ! food consumption avoidance
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:02:30Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
-
-[Term]
-id: MAXO:0000102
-name: seafood consumption avoidance
-is_a: MAXO:0000099 ! food consumption avoidance
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:02:47Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
-
-[Term]
-id: MAXO:0000103
-name: mussels consumption avoidance
-is_a: MAXO:0000102 ! seafood consumption avoidance
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:03:00Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
-
-[Term]
 id: MAXO:0000104
 name: dietary iron supplementation avoidance
 is_a: MAXO:0000095 ! excessive iron consumption avoidance
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:05:54Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
-
-[Term]
-id: MAXO:0000105
-name: saffron consumption avoidance
-is_a: MAXO:0000099 ! food consumption avoidance
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:06:14Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -897,7 +858,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000117
-name: contraceptive prevention
+name: contraceptive pregnancy prevention
 def: "The prevention of conception or impregnation by the use of devices or drugs or surgery." [NCIT:C37932]
 synonym: "birth control" EXACT [NCIT:C37932]
 synonym: "conception prevention" EXACT []
@@ -1255,6 +1216,7 @@ synonym: "Analgesics therapy" EXACT []
 xref: CHEBI:35480
 xref: NCIT_C241
 is_a: MAXO:0000058 ! pharmacotherapy
+is_a: MAXO:0000457 ! pain management
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:53:16Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2109,7 +2071,7 @@ def: "An antineoplastic agent that replaces hydrogen atom(s) in nucleophilic moi
 xref: CHEBI:22333
 xref: NCIT:C1590
 xref: NCIT:C223
-is_a: MAXO:0000062 ! antineoplastics agent therapy
+is_a: MAXO:0000062 ! antineoplastic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:50:33Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2126,7 +2088,7 @@ synonym: "antiangiogenesis agent therapy" EXACT []
 synonym: "antiangiogenic agent drug treatment" EXACT []
 xref: CHEBI:48422
 xref: NCIT:C1742
-is_a: MAXO:0000062 ! antineoplastics agent therapy
+is_a: MAXO:0000062 ! antineoplastic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:50:46Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2142,7 +2104,7 @@ synonym: "antiestrogen modifier therapy" EXACT []
 synonym: "antiestrogenic drug therapy" EXACT []
 synonym: "antioestrogenic agent therapy" EXACT []
 xref: CHEBI:50751
-is_a: MAXO:0000062 ! antineoplastics agent therapy
+is_a: MAXO:0000062 ! antineoplastic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:51:20Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2151,7 +2113,7 @@ id: MAXO:0000233
 name: antimetabolite agent therapy
 synonym: "antimetabolite agent drug treatment" EXACT []
 synonym: "antimetabolites therapy" EXACT []
-is_a: MAXO:0000062 ! antineoplastics agent therapy
+is_a: MAXO:0000062 ! antineoplastic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:51:33Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2160,7 +2122,7 @@ id: MAXO:0000234
 name: aromatase inhibitor agent therapy
 synonym: "aromatase inhibitor drug therapy" EXACT []
 synonym: "aromatase inhibitor drug treatment" EXACT []
-is_a: MAXO:0000062 ! antineoplastics agent therapy
+is_a: MAXO:0000062 ! antineoplastic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:54:45Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2168,7 +2130,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000235
 name: antineoplastic molecular target inhibitor agent therapy
 synonym: "antineoplastic molecular target inhibitor drug treatment" EXACT []
-is_a: MAXO:0000062 ! antineoplastics agent therapy
+is_a: MAXO:0000062 ! antineoplastic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:55:15Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2177,7 +2139,7 @@ id: MAXO:0000236
 name: antineoplastic monoclonal antibody agent therapy
 synonym: "antineoplastic monoclonal antibodies therapy" EXACT []
 synonym: "antineoplastic monoclonal antibody drug treatment" EXACT []
-is_a: MAXO:0000062 ! antineoplastics agent therapy
+is_a: MAXO:0000062 ! antineoplastic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:55:45Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2186,7 +2148,7 @@ id: MAXO:0000237
 name: retinoid agent therapy
 synonym: "retinoid drug therapy" EXACT []
 synonym: "retinoid drug treatment" EXACT []
-is_a: MAXO:0000062 ! antineoplastics agent therapy
+is_a: MAXO:0000062 ! antineoplastic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:56:30Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -3472,7 +3434,7 @@ created_by: http://orcid.org/0000-0001-7941-2971
 
 [Term]
 id: MAXO:0000383
-name: biopsy of mammalian vulva
+name: vulva biopsy
 def: "Removal of tissue from the mammalian vulva." []
 synonym: "mammalian vulva biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
@@ -3496,7 +3458,7 @@ created_by: http://orcid.org/0000-0001-7941-2974
 
 [Term]
 id: MAXO:0000386
-name: biopsy of muscle organ
+name: muscle biopsy
 def: "Removal of tissue from the muscle organ." []
 synonym: "muscle organ biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
@@ -3792,7 +3754,7 @@ created_by: http://orcid.org/0000-0001-7941-3011
 
 [Term]
 id: MAXO:0000423
-name: biopsy of zone of skin
+name: skin biopsy
 def: "Removal of tissue from the zone of skin." []
 synonym: "zone of skin biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
@@ -4068,6 +4030,259 @@ property_value: http://purl.org/dc/elements/1.1/date 2019-10-08T19:26:15Z xsd:da
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0000447
+name: surgical excision
+def: "The surgical removal (cutting out) of part or all of a structure or organ." []
+synonym: "abscission" EXACT []
+synonym: "excision" BROAD []
+synonym: "surgical removal" EXACT []
+xref: NCIT:C15232
+is_a: MAXO:0000004 ! surgical procedure
+property_value: http://purl.org/dc/elements/1.1/date 2019-12-27T17:21:50Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000448
+name: surgical resection
+def: "Surgical removal (cutting out or off) without replacement of all of a body part or structure." []
+synonym: "resection" EXACT []
+is_a: MAXO:0000447 ! surgical excision
+property_value: http://purl.org/dc/elements/1.1/date 2019-12-27T17:45:26Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000449
+name: surgical extirpation
+def: "Taking or cutting out solid matter from a body part. The solid matter contained in the definition may be an abnormal byproduct of a biological function or a foreign body. It may be imbedded in a body part, or in the lumen of a tubular body part. The solid matter may or may not have been previously broken into pieces." [ICD-10-PCS]
+synonym: "extirpation" EXACT []
+is_a: MAXO:0000447 ! surgical excision
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-02T19:00:34Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000450
+name: surgical enucleation
+def: "A surgical procedure by which tissue or an organ (usually containing a tumor) is removed without rupture from a specific anatomic site." [NCIT:C48601]
+synonym: "enucleation" EXACT []
+is_a: MAXO:0000447 ! surgical excision
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-06T16:44:59Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000451
+name: implantation
+def: "A surgical procedure that places something in the human body." [NCIT:C51982]
+xref: NCIT:C51982
+is_a: MAXO:0000004 ! surgical procedure
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-06T18:21:08Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000452
+name: ablation therapy
+def: "The removal of material from the surface of an object by vaporization, chipping, or other erosive process." [https://doi.org/10.1016/B978-0-12-370610-2.50011-8]
+xref: https://doi.org/10.1016/B978-0-12-370610-2.50011-8
+xref: NCIT:C20985
+is_a: MAXO:0000002 ! therapeutic procedure
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-06T19:26:24Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000453
+name: laser ablation therapy
+def: "Removal, separation, detachment, extirpation, or eradication of a body part, pathway, or function by light amplification by stimulated emission of radiation." [NCIT:C111241]
+synonym: "photoablation therapy" EXACT []
+xref: NCIT:C111241
+is_a: MAXO:0000452 ! ablation therapy
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-06T19:30:40Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000454
+name: chemical ablation
+def: "Removal, separation, detachment, extirpation, or eradication of a body part, pathway, or function by chemical means." [NCIT:C111157]
+xref: NCIT:C111157
+is_a: MAXO:0000452 ! ablation therapy
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-06T19:35:01Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000455
+name: cryosurgery
+def: "The use of extreme cold to damage or destroy a body part, pathway, or function. The procedure is performed using small cryogenic probes during surgery, and has recently been applied to solitary sporadic renal tumor lesions." [NCIT:C15215]
+synonym: "cryoablation therapy" EXACT []
+synonym: "cryosurgical ablation therapy" EXACT []
+xref: NCIT:C15215
+is_a: MAXO:0000004 ! surgical procedure
+is_a: MAXO:0000456 ! thermal ablation therapy
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-06T19:45:30Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000456
+name: thermal ablation therapy
+def: "Thermal ablation refers to the destruction of tissue by extreme hyperthermia or hypothermia." [NCIT:C15670]
+xref: NCIT:C15670
+is_a: MAXO:0000452 ! ablation therapy
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-06T19:50:11Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000457
+name: pain management
+is_a: MAXO:0000002 ! therapeutic procedure
+is_a: MAXO:0000021 ! palliative therapeutics
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-08T17:26:31Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000458
+name: hydrotherapy
+def: "Hydrotherapy is the external or internal use of water in any of its forms (water, ice, steam) for health promotion or treatment of various diseases with various temperatures, pressure, duration, and site." [PMID:24926444]
+synonym: "hydropathy" EXACT []
+synonym: "hydrotherapy treatment" EXACT []
+synonym: "water cure" NARROW []
+synonym: "water therapy" EXACT []
+xref: OMIT:0008013
+xref: PMID:24926444
+is_a: MAXO:0000002 ! therapeutic procedure
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-08T17:32:42Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000459
+name: thermal hydrotherapy
+def: "Thermal hydrotherapy uses external or internal use of water in any of its forms (water, ice, steam) at temperatures above or below room temperature for health promotion or treatment of various diseases with various temperatures, pressure, duration, and site." []
+synonym: "bathing in thermal waters" NARROW []
+synonym: "hydro-thermal therapy" EXACT []
+synonym: "hydrothermal therapy" EXACT []
+synonym: "thermal water therapy" EXACT []
+is_a: MAXO:0000457 ! pain management
+is_a: MAXO:0000458 ! hydrotherapy
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-08T17:39:29Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000460
+name: therapeutic irrigation
+def: "Washing out a hollow organ by flushing with a fluid." [NCIT:C38068]
+synonym: "lavage" EXACT []
+xref: NCIT:C38068
+xref: OMIT:0008013
+is_a: MAXO:0000458 ! hydrotherapy
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-08T17:42:19Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000461
+name: warm water immersion therapy
+def: "Therapy where a substantial part of the body is immersed in warm water to produce a variety of therapeutic effects." [PMID:24926444]
+synonym: "hot bath therapy" EXACT []
+synonym: "hyperthermic immersion therapy" NARROW []
+synonym: "warm water bath therapy" EXACT []
+synonym: "warm water shower therapy" NARROW []
+is_a: MAXO:0000459 ! thermal hydrotherapy
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-08T18:05:56Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000462
+name: cold water immersion therapy
+def: "Therapy where a substantial part of the body is immersed in cold water to produce a variety of therapeutic effects." []
+synonym: "CWI therapy" EXACT ABBREVIATION []
+synonym: "ice bath therapy" EXACT []
+is_a: MAXO:0000459 ! thermal hydrotherapy
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-08T18:06:06Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000463
+name: contrast water therapy
+def: "A form of treatment where a limb or significant portion of the body is immersed in hot water immediately followed by the immersion into cold water. This procedure is repeated several times." []
+is_a: MAXO:0000459 ! thermal hydrotherapy
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-08T18:06:31Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000465
+name: aquatic exercise therapy
+is_a: MAXO:0000011 ! physical therapy
+is_a: MAXO:0000458 ! hydrotherapy
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-08T18:07:42Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000466
+name: breast duct lavage
+def: "A minimally-invasive procedure that permits sampling of breast ductal fluids for cytopathologic analysis." [NCIT:C51969]
+xref: NCIT:C51969
+is_a: MAXO:0000460 ! therapeutic irrigation
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-08T19:03:16Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000467
+name: bronchoaveolar lavage
+def: "Washing out the bronchi and alveoli by flushing with a fluid." [NCIT:C51913]
+xref: NCIT:C51913
+is_a: MAXO:0000460 ! therapeutic irrigation
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-08T19:03:33Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000468
+name: peritoneal lavage
+def: "A minimally invasive procedure that permits sampling of peritoneal fluid for cytopathologic analysis." [NCIT:C159340]
+synonym: "peritoneal washing" EXACT []
+xref: NCIT:C159340
+is_a: MAXO:0000460 ! therapeutic irrigation
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-08T19:03:46Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000469
+name: nasal lavage
+def: "The process in which the nasal cavity is washed to flush out mucus and debrise from the nose and sinuses with water or saline." []
+synonym: "nasal irrigation" EXACT []
+synonym: "nasal washing" EXACT []
+is_a: MAXO:0000460 ! therapeutic irrigation
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-08T19:04:02Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000470
+name: therapeutic procedure avoidance
+def: "Avoid the administration or use of therapeutic procedure." []
+synonym: "avoid therapeutic procedure" EXACT []
+synonym: "avoiding therapeutic procedure" EXACT []
+intersection_of: MAXO:0001014 ! medical action avoidance
+intersection_of: MAXO:0001015 MAXO:0000002 ! avoided medical action therapeutic procedure
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-12T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000471
+name: diagnostic procedure avoidance
+def: "Avoid the administration or use of diagnostic procedure." []
+synonym: "avoid diagnostic procedure" EXACT []
+synonym: "avoiding diagnostic procedure" EXACT []
+intersection_of: MAXO:0001014 ! medical action avoidance
+intersection_of: MAXO:0001015 MAXO:0000003 ! avoided medical action diagnostic procedure
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-12T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000472
+name: preventative therapeutics avoidance
+def: "Avoid the administration or use of preventative therapeutics." []
+synonym: "avoid preventative therapeutics" EXACT []
+synonym: "avoiding preventative therapeutics" EXACT []
+intersection_of: MAXO:0001014 ! medical action avoidance
+intersection_of: MAXO:0001015 MAXO:0000017 ! avoided medical action preventative therapeutics
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-12T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0001000
 name: functional magnetic resonance imaging procedure
 def: "A type of MRI that takes a series of images of an organ in quick succession and statistically analyzes the differences between the images." [NCIT:C17958]
@@ -4338,11 +4553,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0010000
 name: gluten intake avoidance
-def: "A medical requirement or recommendation of avoiding the intake of gluten." []
+def: "A medical requirement or recommendation of avoiding the consumption of gluten." []
 comment: Intake may interfere with disease treatment, prolong the recovery phase, or cause complications.
 synonym: "avoid gluten intake" EXACT []
 synonym: "avoiding gluten intake" EXACT []
-intersection_of: MAXO:0001018 ! nutrition intake
+synonym: "gluten consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
 intersection_of: MAXO:0001027 FOODON:03420177 ! avoided food
 property_value: http://purl.org/dc/elements/1.1/date 2019-07-11T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4350,21 +4566,23 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0010001
 name: liquid intake avoidance
-def: "A medical requirement or recommendation of avoiding the intake of liquid." []
+def: "A medical requirement or recommendation of avoiding the consumption of liquid." []
 synonym: "avoid liquid intake" EXACT []
 synonym: "avoiding liquid intake" EXACT []
-intersection_of: MAXO:0001018 ! nutrition intake
+synonym: "liquid consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
 intersection_of: MAXO:0001027 FOODON:03412974 ! avoided food
 property_value: http://purl.org/dc/elements/1.1/date 2019-07-11T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010002
-name: protein extract, concentrate or isolate intake avoidance
-def: "A medical requirement or recommendation of avoiding the intake of protein extract, concentrate or isolate." []
+name: protein intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of protein extract, concentrate or isolate." []
 synonym: "avoid protein extract, concentrate or isolate intake" EXACT []
 synonym: "avoiding protein extract, concentrate or isolate intake" EXACT []
-intersection_of: MAXO:0001018 ! nutrition intake
+synonym: "protein extract, concentrate or isolate consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
 intersection_of: MAXO:0001027 FOODON:03420236 ! avoided food
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T02:36:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4372,10 +4590,14 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0010003
 name: fat or oil intake avoidance
-def: "A medical requirement or recommendation of avoiding the intake of fat or oil." []
+def: "A medical requirement or recommendation of avoiding the consumption of fat or oil." []
 synonym: "avoid fat or oil intake" EXACT []
 synonym: "avoiding fat or oil intake" EXACT []
-intersection_of: MAXO:0001018 ! nutrition intake
+synonym: "fat or oil consumption avoidance" EXACT []
+synonym: "limited fat dietary intake" EXACT []
+synonym: "low fat dietary intake" EXACT []
+synonym: "non-fat dietary intake" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
 intersection_of: MAXO:0001027 FOODON:03420190 ! avoided food
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T02:36:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4652,13 +4874,149 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010050
-name: beverage alcohol intake avoidance
-def: "A medical requirement or recommendation of avoiding the intake of beverage alcohol." []
+name: alcohol intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of beverage alcohol." []
 synonym: "avoid beverage alcohol intake" EXACT []
 synonym: "avoiding beverage alcohol intake" EXACT []
-intersection_of: MAXO:0001018 ! nutrition intake
+synonym: "beverage alcohol consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
 intersection_of: MAXO:0001027 FOODON:03310661 ! avoided food
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-18T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010051
+name: fava bean intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of broad bean (whole)." []
+synonym: "avoid broad bean (whole) intake" EXACT []
+synonym: "avoiding broad bean (whole) intake" EXACT []
+synonym: "broad bean (whole) consumption avoidance" EXACT []
+synonym: "fava bean avoidance" EXACT []
+synonym: "fava bean consumption avoidance)" EXACT []
+synonym: "windsor bean intake avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:03301227 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-13T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010052
+name: meat food product intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of meat food product." []
+synonym: "avoid meat food product intake" EXACT []
+synonym: "avoiding meat food product intake" EXACT []
+synonym: "meat food product consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:00001006 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-13T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010053
+name: nut food product intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of nut food product." []
+synonym: "avoid nut food product intake" EXACT []
+synonym: "avoiding nut food product intake" EXACT []
+synonym: "nut food product consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:00001172 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-13T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010054
+name: saffron food product intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of saffron food product." []
+synonym: "avoid saffron food product intake" EXACT []
+synonym: "avoiding saffron food product intake" EXACT []
+synonym: "saffron food product consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:00003043 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-13T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010055
+name: seafood product intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of seafood product." []
+synonym: "avoid seafood product intake" EXACT []
+synonym: "avoiding seafood product intake" EXACT []
+synonym: "seafood product consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:00001046 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-13T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010056
+name: mussel food product intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of mussel food product." []
+synonym: "avoid mussel food product intake" EXACT []
+synonym: "avoiding mussel food product intake" EXACT []
+synonym: "mussel food product consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:00002051 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-13T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010057
+name: clove food product intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of clove food product." []
+synonym: "avoid clove food product intake" EXACT []
+synonym: "avoiding clove food product intake" EXACT []
+synonym: "clove food product consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:00001745 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-13T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010058
+name: dark chocolate intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of dark chocolate." []
+synonym: "avoid dark chocolate intake" EXACT []
+synonym: "avoiding dark chocolate intake" EXACT []
+synonym: "dark chocolate consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:03303588 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-13T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010059
+name: pumpkin seed intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of pumpkin seed (shell off)." []
+synonym: "avoid pumpkin seed (shell off) intake" EXACT []
+synonym: "avoiding pumpkin seed (shell off) intake" EXACT []
+synonym: "pumpkin seed (shell off) consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:03304870 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-13T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010060
+name: sesame seed intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of sesame seed." []
+synonym: "avoid sesame seed intake" EXACT []
+synonym: "avoiding sesame seed intake" EXACT []
+synonym: "sesame seed consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:03310306 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-13T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010061
+name: sunflower seed intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of sunflower seed (whole kernel, raw)." []
+synonym: "avoid sunflower seed (whole kernel, raw) intake" EXACT []
+synonym: "avoiding sunflower seed (whole kernel, raw) intake" EXACT []
+synonym: "sunflower seed (whole kernel, raw) consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:03304869 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-13T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -4703,7 +5061,7 @@ name: uncooked cornstarch supplementation
 def: "Supplementation of uncooked cornstarch intended to prevent hepatomegaly and hypoglycemia, typically for individuals with irregular hepatic glycogen storage. Supplementation can include both regular cornstarch and extended release cornstarch." [PMID:2403059, PMID:25266922, PMID:26303612]
 synonym: "administration of uncooked cornstarch" EXACT []
 synonym: "uncooked cornstarch therapy" EXACT []
-is_a: MAXO:0000088 ! dietary intervention
+is_a: MAXO:0000106 ! nutritional supplementation
 property_value: http://purl.org/dc/elements/1.1/date 2019-09-05T20:57:49Z xsd:dateTime
 created_by: http://orcid.org/0000-0002-7463-6306
 

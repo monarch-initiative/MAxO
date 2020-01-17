@@ -9,7 +9,7 @@ contributors:
 
 classes:
   avoidance: MAXO:0001014
-  nutrition intake: MAXO:0001018
+  nutrition intervention: MAXO:0000056
   food material: FOODON:00002403
   
 relations:
@@ -29,7 +29,10 @@ data_vars:
   date: "'date'"
   created_by: "'created_by'"
   comment: "'comment'"
-  xref: "database cross reference"
+  xref: "'database_cross_reference'"
+data_list_vars:
+  syns: xsd:string
+
 name:
   text: "%s intake avoidance"
   vars:
@@ -70,13 +73,15 @@ annotations:
     text: "%s"
     vars:
      - xref
+exact_synonym:
+  value: syns
 def:
   text: "A medical requirement or recommendation of avoiding the consumption of %s."
   vars:
     - food_material
 
 equivalentTo:
-  text: "'nutrition intake' and ('avoided_food' some %s)"
+  text: "'nutrition intervention' and ('avoided_food' some %s)"
   vars:
     - food_material
    
