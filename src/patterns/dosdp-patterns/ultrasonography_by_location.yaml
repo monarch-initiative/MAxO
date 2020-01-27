@@ -1,13 +1,13 @@
-pattern_name: transplantation_by_location
-pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns-dev/transplantation_by_location.yaml
-description: "Transference of a specific tissue or organ."
+pattern_name: ultrasonography_by_location
+pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/ultrasonography_by_location.yaml
+description: ""
 
 contributors:
   - https://orcid.org/0000-0001-7941-2961
   - https://orcid.org/0000-0002-7356-1779
 
 classes:
-  transplantation surgical procedure: MAXO:0000068
+  ultrasonography: MAXO:0000072
   location: owl:Thing
 
 relations:
@@ -20,10 +20,10 @@ annotationProperties:
   date: dc:date
   comment: rdfs:comment
   xref: oio:hasDbXref
-  
+ 
 vars:
   location: "'location'"
-
+  
 data_vars:
   date: "'date'"
   created_by: "'created_by'"
@@ -31,18 +31,36 @@ data_vars:
   xref: "database cross reference"
 data_list_vars:
   syns: xsd:string
-
 name:
-  text: "%s transplantation"
+  text: "%s ultrasonography"
   vars:
    - location
 
 annotations:
   - annotationProperty: exact_synonym
-    text: "transplantation of %s"
+    text: "ultrasonography of %"
     vars:
      - location
-     
+  - annotationProperty: exact_synonym
+    text: "sonography of %"
+    vars:
+     - location
+  - annotationProperty: exact_synonym
+    text: "% sonography"
+    vars:
+     - location
+  - annotationProperty: exact_synonym
+    text: "% ultrasound procedure"
+    vars:
+     - location
+  - annotationProperty: exact_synonym
+    text: "% ultrasound imaging procedure"
+    vars:
+     - location
+  - annotationProperty: exact_synonym
+    text: "% ultrasound examination"
+    vars:
+     - location  
   - annotationProperty: date
     text: "%s"
     vars:
@@ -52,12 +70,12 @@ annotations:
     text: "%s"
     vars:
      - created_by
-     
+
   - annotationProperty: comment
     text: "%s"
     vars:
      - comment
-     
+    
   - annotationProperty: xref
     text: "%s"
     vars:
@@ -67,12 +85,12 @@ annotations:
     vars:
      - syns
 def:
-  text: "The surgical transfer of a healthy %s to a patient."
+  text: "The use of ultrasound to produce images of structures in the %s."
   vars:
     - location
 
 equivalentTo:
-  text: "'transplantation surgical procedure' and 'has_input' some ('part_of' some %s)"
+  text: "'ultrasonography' and 'has_input' some ('part_of' some %s)"
   vars:
     - location
    
