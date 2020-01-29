@@ -1,11 +1,12 @@
 format-version: 1.2
-data-version: maxo/releases/2020-01-15/maxo-base.owl
+data-version: maxo/releases/2020-01-29/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Aaron Zhang" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "An ontology to represent medically relevant actions, procedures, therapies, interventions, and recommendations." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
+property_value: http://purl.org/dc/elements/1.1/type http://purl.obolibrary.org/obo/IAO_8000001 xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/ xsd:string
 
 [Term]
@@ -89,6 +90,11 @@ xref: NCIT:C25294
 is_a: MAXO:0000002 ! therapeutic procedure
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:11:26Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000008
+name: obsolete therapeutic intervention
+replaced_by: MAXO:0000002
 
 [Term]
 id: MAXO:0000009
@@ -270,34 +276,23 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000032
-name: therapeutic avoidance of behavior
-is_a: MAXO:0000151 ! therapeutic avoidance intervention
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-09T21:01:11Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
+name: obsolete therapeutic avoidance of behavior
+replaced_by: MAXO:0000525
 
 [Term]
 id: MAXO:0000038
-name: therapeutic mental or psychological behavior avoidance
-synonym: "mental behavior avoidance for therapeutic purposes" EXACT []
-is_a: MAXO:0000032 ! therapeutic avoidance of behavior
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-09T21:14:34Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
+name: obsolete therapeutic mental or psychological behavior avoidance
+replaced_by: MAXO:0000525
 
 [Term]
 id: MAXO:0000040
-name: stress avoidance
-is_a: MAXO:0000038 ! therapeutic mental or psychological behavior avoidance
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-09T21:15:36Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
+name: obsolete stress avoidance
+replaced_by: MAXO:0002008
 
 [Term]
 id: MAXO:0000041
-name: smoking avoidance
-synonym: "tobacco use avoidance" EXACT []
-is_a: MAXO:0000032 ! therapeutic avoidance of behavior
-is_a: MAXO:0000053 ! therapeutic avoidance of environmental exposure
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-09T21:16:11Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
+name: obsolete smoking avoidance
+replaced_by: MAXO:0002002
 
 [Term]
 id: MAXO:0000042
@@ -352,7 +347,6 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000049
 name: therapeutic avoidance of physical activity
 is_a: MAXO:0000011 ! physical therapy
-is_a: MAXO:0000032 ! therapeutic avoidance of behavior
 is_a: MAXO:0000151 ! therapeutic avoidance intervention
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:11:57Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -375,6 +369,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000053
 name: therapeutic avoidance of environmental exposure
+def: "A clinical recommendation to avoid or refrain from certain environmental exposures in order to maintain health or ameliorate symptoms." []
 is_a: MAXO:0000151 ! therapeutic avoidance intervention
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:50:37Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -397,9 +392,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000056
 name: nutrition intake avoidance
 synonym: "food consumption avoidance" EXACT []
-is_a: MAXO:0000151 ! therapeutic avoidance intervention
-intersection_of: MAXO:0000009 ! nutrition intervention
-intersection_of: MAXO:0001027 FOODON:00002403 ! avoided food
+is_a: MAXO:0000009 ! nutrition intervention
+intersection_of: MAXO:0001014 ! medical action avoidance
+intersection_of: MAXO:0001015 MAXO:0000009 ! avoided medical action nutrition intervention
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:56:39Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -457,11 +452,13 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000066
-name: oxygen therapy
+name: supplemental oxygen therapy
 def: "The administration of oxygen to an individual, usually to aid in respiration." [NCIT:C94624]
-synonym: "supplemental oxygen therapy." EXACT []
+comment: Inhalation of oxygen aimed at restoring toward normal any pathophysiologic alterations of gas exchange in the cardiopulmonary system, as by the use of a respirator, nasal catheter, tent, chamber, or mask. (From Dorland, 27th ed & Stedman, 25th ed) {xref="MeSH:D010102"}
+synonym: "oxygen inhalation therapy" EXACT []
+xref: MeSH:D010102
 xref: NCIT:C94624
-is_a: MAXO:0000002 ! therapeutic procedure
+is_a: MAXO:0000499 ! respiratory therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T19:14:17Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -524,9 +521,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000072
 name: ultrasonography procedure
-def: "A technique in which high-frequency sound waves are bounced off internal organs and the echo pattern is converted into a 2 dimensional picture of the structures beneath the transducer." [NCIT:C17230]
-synonym: "2-dimensional ultrasound imaging" EXACT [NCIT:C17230]
-synonym: "ultrasound" EXACT [NCIT:C17230]
+def: "The use of ultrasound to produce images of structures in the human body." []
+synonym: "sonography" EXACT []
+synonym: "ultrasound procedure" EXACT []
+xref: ERO:0001325
 xref: NCIT:C17230
 is_a: MAXO:0000005 ! therapeutic imaging procedure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T19:32:35Z xsd:dateTime
@@ -706,6 +704,11 @@ property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T20:40:39Z xsd:da
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0000091
+name: obsolete alcohol intake avoidance
+replaced_by: MAXO:0010050
+
+[Term]
 id: MAXO:0000092
 name: excessive alcohol avoidance
 is_a: MAXO:0010050 ! alcohol intake avoidance
@@ -757,11 +760,41 @@ property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:01:21Z xsd:da
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0000099
+name: obsolete food consumption avoidance
+replaced_by: MAXO:0000056
+
+[Term]
+id: MAXO:0000100
+name: obsolete meat consumption avoidance
+replaced_by: MAXO:0010052
+
+[Term]
+id: MAXO:0000101
+name: obsolete nut consumption avoidance
+replaced_by: MAXO:0010053
+
+[Term]
+id: MAXO:0000102
+name: obsolete seafood consumption avoidance
+replaced_by: MAXO:0010055
+
+[Term]
+id: MAXO:0000103
+name: obsolete mussel consumption avoidance
+replaced_by: MAXO:0010056
+
+[Term]
 id: MAXO:0000104
 name: dietary iron supplementation avoidance
 is_a: MAXO:0000095 ! excessive iron consumption avoidance
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:05:54Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000105
+name: obsolete saffron consumption avoidance
+replaced_by: MAXO:0010054
 
 [Term]
 id: MAXO:0000106
@@ -804,6 +837,11 @@ name: vitamin D supplementation
 is_a: MAXO:0000106 ! nutritional supplementation
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:09:59Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000111
+name: obsolete amino acid supplementation
+replaced_by: MAXO:0010020
 
 [Term]
 id: MAXO:0000112
@@ -1177,6 +1215,11 @@ def: "Administration of intravenous infusions of alpha-1 proteinase inhibitor at
 is_a: MAXO:0000015 ! biologic therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:27:25Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000156
+name: obsolete antispastic agents
+replaced_by: MAXO:0000245
 
 [Term]
 id: MAXO:0000157
@@ -1620,6 +1663,11 @@ property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:17:55Z xsd:da
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0000188
+name: obsolete calcium channel blocker agent therapy
+replaced_by: MAXO:0000434
+
+[Term]
 id: MAXO:0000189
 name: dyslipidemic agent therapy
 def: "An agent that reduces plasma lipids, such as cholesterol or low density lipoproteins (LDL), acting systemically or locally (intestines) to decrease fat digestion, absorption, production, and accumulation in the plasma and reducing pathogenic atherosclerosis and thrombosis." [NCIT:C29703]
@@ -1659,6 +1707,11 @@ xref: NCIT:C29707
 is_a: MAXO:0000181 ! cardiovascular agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:20:06Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000192
+name: obsolete other cardiovascular agent therapy
+replaced_by: MAXO:0000181
 
 [Term]
 id: MAXO:0000193
@@ -1747,6 +1800,11 @@ property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:26:03Z xsd:da
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0000199
+name: obsolete other beta-lactams
+replaced_by: MAXO:0000432
+
+[Term]
 id: MAXO:0000200
 name: macrolide antibacterial agent therapy
 def: "A macrocyclic lactone with a ring of twelve or more members which exhibits antibiotic activity." [CHEBI:25105]
@@ -1802,6 +1860,11 @@ property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:28:05Z xsd:da
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0000204
+name: obsolete other antibacterial agents
+replaced_by: MAXO:0000061
+
+[Term]
 id: MAXO:0000205
 name: calcium channel modifying agent therapy
 synonym: "calcium channel modifier drug therapy" EXACT []
@@ -1846,6 +1909,11 @@ property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:30:15Z xsd:da
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0000209
+name: obsolete anticonvulsants, other
+replaced_by: MAXO:0000167
+
+[Term]
 id: MAXO:0000210
 name: cholinesterase inhibitor therapy
 def: "They are a group of drugs that block the normal breakdown of acetylcholine (ACh) into acetate and choline and thereby increase both the levels and duration of actions of acetylcholine found in the central and peripheral nervous system." [PMID:31335056]
@@ -1869,6 +1937,11 @@ synonym: "glutamatergic drug treatment" EXACT []
 is_a: MAXO:0000171 ! antidementia agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:33:33Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000212
+name: obsolete antidementia agents, other
+replaced_by: MAXO:0000171
 
 [Term]
 id: MAXO:0000213
@@ -1916,6 +1989,11 @@ xref: NCIT:C94727
 is_a: MAXO:0000160 ! antidepressant agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:41:18Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000216
+name: obsolete antidepressants, other
+replaced_by: MAXO:0000160
 
 [Term]
 id: MAXO:0000217
@@ -2332,6 +2410,11 @@ property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:21:48Z xsd:da
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0000254
+name: obsolete anxiolytics, other
+replaced_by: MAXO:0000163
+
+[Term]
 id: MAXO:0000255
 name: antidepressant anxiolytics
 is_a: MAXO:0000163 ! anxiolytic agent therapy
@@ -2420,6 +2503,11 @@ synonym: "non-stimulant Attention Deficient Hyperactivity Disorder agent therapy
 is_a: MAXO:0000437 ! ADHD agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:35:24Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000263
+name: obsolete non-amphetamines, other
+replaced_by: MAXO:0000262
 
 [Term]
 id: MAXO:0000264
@@ -2534,6 +2622,11 @@ property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:38:35Z xsd:da
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0000273
+name: obsolete Gastrointestinal agents, other
+is_obsolete: true
+
+[Term]
 id: MAXO:0000274
 name: genitourinary agent therapy
 is_a: MAXO:0000058 ! pharmacotherapy
@@ -2560,6 +2653,11 @@ name: phosphate binders agent therapy
 is_a: MAXO:0000274 ! genitourinary agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:40:24Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000278
+name: obsolete genitourinary agents, other
+replaced_by: MAXO:0000274
 
 [Term]
 id: MAXO:0000279
@@ -2691,9 +2789,6 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000295
 name: immunological agent therapy
 def: "Any substance that induces, enhances, restores or suppresses the host's immune system, or an agent that utilizes or is derived from a component of the immune system." [NCIT:C308]
-synonym: "biological response modifier therapy" EXACT []
-synonym: "biomodulator treatment therapy" EXACT []
-synonym: "BRM treatment therapy" EXACT ABBREVIATION []
 synonym: "immune factor therapy" EXACT []
 synonym: "immune mediator treatment therapy" EXACT []
 synonym: "immune modulator therapy" EXACT []
@@ -2708,6 +2803,7 @@ synonym: "immunotherapy treatment" EXACT []
 xref: CHEBI:50846
 xref: NCIT:C308
 is_a: MAXO:0000058 ! pharmacotherapy
+is_a: MAXO:0001002 ! immunotherapy procedure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:00:01Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2825,6 +2921,11 @@ property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:06:19Z xsd:da
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0000310
+name: obsolete ophthalmic agents, other
+replaced_by: MAXO:0000305
+
+[Term]
 id: MAXO:0000311
 name: otic agent therapy
 is_a: MAXO:0000058 ! pharmacotherapy
@@ -2928,6 +3029,11 @@ synonym: "pulmonary antihypertensive drug treatment" EXACT []
 is_a: MAXO:0000312 ! respiratory tract agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:12:15Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000322
+name: obsolete respiratory tract agents, other
+replaced_by: MAXO:0000312
 
 [Term]
 id: MAXO:0000323
@@ -4283,6 +4389,520 @@ property_value: http://purl.org/dc/elements/1.1/date 2020-01-12T20:39:14Z xsd:st
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0000473
+name: medical device implantation
+def: "The implantation of a piece of mechanical or electronic equipment that is useful for prevention, diagnosis, monitoring, or treatment of disease or other conditions." []
+synonym: "implantation of a medical device" EXACT []
+synonym: "medical instrument implantation" NARROW []
+synonym: "medical machine implantation" NARROW []
+xref: ERO:0001092
+xref: NCIT:C16830
+is_a: MAXO:0000451 ! implantation
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T14:58:18Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000474
+name: implantable cardioverter-defibrillator placement
+def: "Implantation of a battery-powered device that is placed under the skin (typically in the left upper chest) with electrode wires that lead into the heart (typically lodging in the apex or septum of the right ventricle). The device can detect abnormal heart rhythms and deliver low-energy or high-energy shocks to interrupt malignant arrhythmia and thereby prevent sudden death." []
+synonym: "automated implantable cardioverter defibrillator placement" EXACT []
+synonym: "ICD placement" EXACT ABBREVIATION []
+synonym: "implantable cardioverter-defibrillator implantation" EXACT []
+xref: NCIt:C93238
+xref: UMLS_CUI:C0162589
+is_a: MAXO:0000473 ! medical device implantation
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T16:54:00Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000475
+name: surgical denervation
+def: "The resection or complete surgical removal of a nerve." []
+is_a: MAXO:0000004 ! surgical procedure
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T17:09:07Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000476
+name: left cardiac sympathetic denervation
+def: "Left cardiac sympathetic denervation (LCSD) is a surgical antiadrenergic intervention with a strong antiarrhythmic effect. LCSD consists in the removal of the left thoracic sympathetic chain and paravertebral ganglia from T1 to T4." [PMID:30972341]
+synonym: "LCSD" EXACT ABBREVIATION []
+xref: PMID:30972341
+is_a: MAXO:0000475 ! surgical denervation
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T17:11:04Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000477
+name: orthopedic procedure
+synonym: "Any procedure relating to the branch of medicine dealing with the correction of deformities of bones or muscles." EXACT []
+synonym: "orthopaedic procedure" EXACT []
+xref: MeSH:D019637
+is_a: MAXO:0000002 ! therapeutic procedure
+is_a: MAXO:0000483 ! medical professional consultation
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T17:50:35Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000478
+name: orthopedic consultation
+def: "Any consultation with an orthopedics professional relating the correction of deformities of bones or muscles." []
+synonym: "orthopaedic consult" EXACT []
+synonym: "orthopedic consult" EXACT []
+is_a: MAXO:0000477 ! orthopedic procedure
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T17:50:52Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000479
+name: orthopedic surgery
+def: "A surgical procedure to treat and correct deformities, diseases, and injuries to the skeletal system, its articulations, and associated structures." [NCIT:C16186]
+synonym: "orthopedic surgical procedure" EXACT []
+xref: NCIT:C16186
+is_a: MAXO:0000004 ! surgical procedure
+is_a: MAXO:0000477 ! orthopedic procedure
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T17:51:02Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000480
+name: obsolete orthopedic consultation
+replaced_by: MAXO:0000478
+
+[Term]
+id: MAXO:0000481
+name: orthotic services
+def: "Orthotic services provide prescription insoles, braces, splints, callipers, footwear, spinal jackets and helmets which help people recover from or avoid injury, or live with lifelong conditions." []
+is_a: MAXO:0000477 ! orthopedic procedure
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T18:01:00Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000482
+name: orthotic device usage
+def: "The recommendation of the use of an orthosis or multiple orthoses, which are externally applied device used to modify the structural and functional characteristics of the neuromuscular and skeletal system." [PMID:26835739]
+synonym: "orthoses usage" EXACT []
+xref: PMID:26835739
+is_a: MAXO:0000481 ! orthotic services
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T18:02:48Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000483
+name: medical professional consultation
+is_a: MAXO:0000003 ! diagnostic procedure
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T18:30:15Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000484
+name: bone lengthening procedure
+def: "Increase in the longest dimension of a bone to correct anatomical deficiencies, congenital, traumatic, or as a result of disease. The lengthening is not restricted to long bones. The usual surgical methods are internal fixation and distraction." [MeSH:D001852]
+synonym: "leg lengthening" NARROW []
+synonym: "limb lengthening procedure" EXACT []
+xref: MeSH:D001852
+xref: OMIT:0003210
+is_a: MAXO:0000479 ! orthopedic surgery
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-21T19:47:30Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000485
+name: Ilizarov procedure
+def: "A bone fixation technique using an external fixator for lengthening limbs, correcting pseudarthroses and other deformities, and assisting the healing of otherwise hopeless traumatic or pathological fractures and infections, such as chronic osteomyelitis." [MeSH:D018889]
+synonym: "Ilizarov technique" EXACT []
+xref: MeSH:D018889
+is_a: MAXO:0000484 ! bone lengthening procedure
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-21T19:52:10Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000486
+name: distraction osteogenesis
+def: "Bone lengthening by gradual mechanical distraction. An external fixation device produces the distraction across the bone plate. The technique was originally applied to long bones but in recent years the method has been adapted for use with mandibular implants in maxillofacial surgery." [MeSH:D019857]
+xref: MeSH:D019857
+is_a: MAXO:0000484 ! bone lengthening procedure
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-21T20:01:15Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000487
+name: clinical measurement
+def: "A measurement performed in a clinical setting using clinician's observations and instrument data to inform patient care and research." [PMID:2647562]
+synonym: "clinical assessment" EXACT []
+xref: CMO:0000000
+xref: PMID:2647562
+is_a: MAXO:0000003 ! diagnostic procedure
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-21T20:29:43Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000488
+name: body temperature measurement
+def: "An assessment of body temperature." []
+xref: CMO:0000015
+xref: GeneReviews:NBK331
+is_a: MAXO:0000487 ! clinical measurement
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-21T20:35:51Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000489
+name: vital signs measurement
+def: "The act of assessing an individual's current temperature, heart rate, respiratory rate, pulse oxygenation, and blood pressure." [NCIT:C49672]
+synonym: "VSTEST" EXACT ABBREVIATION []
+xref: NCIT:C49672
+is_a: MAXO:0000487 ! clinical measurement
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-21T20:43:33Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000490
+name: heart rate measurement
+def: "An assessment of the number of heartbeats per unit time, usually expressed as beats per minute." []
+synonym: "HR measurement" EXACT ABBREVIATION []
+xref: CMO:0000002
+xref: NCIT:C49677
+is_a: MAXO:0000489 ! vital signs measurement
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-21T20:47:05Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000491
+name: pulse assessment
+def: "Assessment and recording of arterial pulses in any of a number of locations. The observer should note its intensity, rate, rhythm, and if any blood vessel tenderness, tortuosity, or nodularity exists." []
+xref: GeneReveiws:NBK350
+is_a: MAXO:0000489 ! vital signs measurement
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-21T20:59:19Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000492
+name: respiratory rate assessment
+def: "The rate of breathing (inhalation and exhalation) measured within in a unit time, usually expressed as breaths per minute." [NCIT:C49678]
+xref: CMO:0000289
+xref: NCIT:C49678
+is_a: MAXO:0000489 ! vital signs measurement
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-21T21:04:00Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000493
+name: cardiovascular diagnostic procedure
+def: "Procedure to evaluate the structure and/or function of the cardiovascular system." []
+synonym: "cardiovascular measurement" EXACT []
+xref: CMO:0000001
+xref: NCIT:C100084
+is_a: MAXO:0000003 ! diagnostic procedure
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-21T21:09:50Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000494
+name: blood pressure measurement
+def: "Measurement of the pressure on the walls of the vessels as blood moves around the body. Systolic blood pressure is the pressure when the heart beats – while the heart muscle is contracting (squeezing) and pumping oxygen-rich blood into the blood vessels. Diastolic blood pressure is the pressure on the blood vessels when the heart muscle relaxes. The diastolic pressure is always lower than the systolic pressure." []
+synonym: "blood pressure assessment" EXACT []
+synonym: "blood pressure monitoring" EXACT []
+xref: CMO:0000003
+xref: https://www.ncbi.nlm.nih.gov/books/NBK279251
+is_a: MAXO:0000493 ! cardiovascular diagnostic procedure
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-21T21:13:22Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000495
+name: auscultatory blood pressure measurement
+def: "Monitoring blood pressure with a sphygmomanometer and a stethoscope to hear blood flow." []
+comment: Although the auscultatory method using mercury sphygmomanometer is regarded as the ‘gold standard’ for office blood pressure measurement, widespread implementation of the ban in use of mercury sphygmomanometers continues to diminish the role of this technique. {xref="PMID:20937442"}
+synonym: "ausculatory sphygmomanometer blood pressure measurement" EXACT []
+synonym: "auscultatory blood pressure measurement process" EXACT []
+synonym: "auscultatory blood pressure monitoring" EXACT []
+xref: MMO:0000055
+xref: NCIT:C69318
+xref: PMID:20937442
+xref: VSO:0000001
+is_a: MAXO:0000497 ! noninvasive blood pressure measurement
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-22T15:29:56Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000496
+name: oscillometric blood pressure measurement
+synonym: "A blood pressure measurement using a sphygmomanometer and an electronic pressure sensor (transducer) that detects blood flow by the presence of ocillations in the cuff pressure." EXACT []
+xref: NCIT:C69319
+xref: PMID:20937442
+xref: VSO:0000026
+is_a: MAXO:0000497 ! noninvasive blood pressure measurement
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-22T20:49:15Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000497
+name: noninvasive blood pressure measurement
+def: "A method for monitoring blood pressure without requiring instruments introduced into the body." []
+synonym: "non-invasive blood presure measurement" EXACT []
+xref: NCIT:C69319
+xref: PMID:20937442
+xref: VSO:0000024
+is_a: MAXO:0000494 ! blood pressure measurement
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-22T21:01:49Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000498
+name: invasive blood pressure measurement
+def: "An intra-arterial method of monitoring blood pressure." []
+xref: VSO:0000023
+is_a: MAXO:0000494 ! blood pressure measurement
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-22T21:18:39Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000499
+name: respiratory therapy
+def: "Any form of treatment that acts to improve or assist with respiratory function." [NCIT:C15322]
+xref: NCIT:C15322
+is_a: MAXO:0000002 ! therapeutic procedure
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-23T15:55:17Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000500
+name: airway management
+def: "A set of maneuvers or medical procedures performed to prevent and relieve airway obstruction. This ensures an open pathway for gas exchange between a patient's lungs and the atmosphere." [PMID:18675024]
+xref: MeSH:D058109
+is_a: MAXO:0000499 ! respiratory therapy
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-23T15:56:57Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000501
+name: endotracheal extubation
+def: "Removal of an endotracheal tube from the patient." [MeSH:D060666]
+synonym: "airway extubation" EXACT []
+synonym: "tracheal extubation" EXACT []
+xref: MeSH:D060666
+xref: NCIT:C50819
+is_a: MAXO:0000500 ! airway management
+is_a: MAXO:0000518 ! extubation procedure
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-23T16:07:45Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000502
+name: endotracheal intubation
+def: "A procedure involving placement of a tube into the trachea through the mouth or nose in order to provide a patient with oxygen and anesthesia." [MeSH:D007442]
+synonym: "airway intubation" EXACT []
+synonym: "intratracheal intubation" EXACT []
+synonym: "tracheal intubation" EXACT []
+xref: MeSH:D007442
+xref: NCIT:C116648
+is_a: MAXO:0000500 ! airway management
+is_a: MAXO:0000517 ! intubation procedure
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-23T16:16:19Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000503
+name: artificial respiration
+def: "Any method of artificial breathing that employs mechanical or non-mechanical means to force the air into and out of the lungs. Artificial respiration or ventilation is used in individuals who have stopped breathing or have respiratory insufficiency to increase their intake of oxygen (O2) and excretion of carbon dioxide (CO2)." []
+synonym: "artificial ventilation" EXACT []
+synonym: "mechanical ventilation" EXACT []
+is_a: MAXO:0000500 ! airway management
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-23T16:34:17Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000504
+name: tracheostomy
+def: "Surgical formation of an opening into the trachea through the neck, or the opening so created." [MeSH:D014139]
+comment: Tracheostomy and tracheotomy are sometimes used interchangeably, but tracheotomy is simply a surgical incision of the trachea. {xref="MeSH:D014140"}
+is_a: MAXO:0000004 ! surgical procedure
+is_a: MAXO:0000500 ! airway management
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-23T16:48:07Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000505
+name: mask ventilation
+def: "A manual method for maintaining oxygenation using a mask." []
+synonym: "bag-mask ventilation" NARROW []
+is_a: MAXO:0000506 ! noninvasive ventilation
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-23T17:41:09Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000506
+name: noninvasive ventilation
+def: "Techniques for administering artificial respiration without the need for intratracheal intubation." [MeSH:D063087]
+synonym: "non-invasive ventilation" EXACT []
+xref: MeSH:D063087
+is_a: MAXO:0000503 ! artificial respiration
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-23T17:52:50Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000507
+name: high-frequency ventilation
+def: "Ventilatory support system using frequencies from 60-900 cycles/min or more. Three types of systems have been distinguished on the basis of rates, volumes, and the system used." [MeSH:D006612]
+synonym: "high frequency oscillation ventilation" EXACT []
+synonym: "high frequency positive pressure ventilation" EXACT []
+xref: MeSH:D006612
+is_a: MAXO:0000503 ! artificial respiration
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-23T17:57:32Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000508
+name: liquid ventilation
+def: "A technique of mechanical ventilation in which the lungs are insufflated with an oxygenated perfluorochemical liquid rather than an oxygen-containing gas mixture." [PMID:22043370]
+synonym: "liquid-assisted ventilation" EXACT []
+xref: MeSH:D021061
+is_a: MAXO:0000503 ! artificial respiration
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-23T18:01:24Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000509
+name: positive-pressure respiration
+def: "A method of mechanical ventilation in which pressure is maintained to increase the volume of gas remaining in the lungs at the end of expiration, thus reducing the shunting of blood through the lungs and improving gas exchange." [MeSH:D011175]
+synonym: "positive end expiratory pressure technique" EXACT []
+synonym: "positive-pressure ventilation" EXACT []
+xref: MeSH:D011175
+is_a: MAXO:0000503 ! artificial respiration
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-23T18:06:14Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000510
+name: negative-pressure respiration
+def: "Assisted ventilation by applying intermittent subatmospheric pressure around the thorax, abdomen, or airway and periodically expand the chest wall and inflate the lungs. These devices used include the tank ventilators (\"iron lung\"), Portalung, Pneumowrap, and chest cuirass (\"tortoise shell\")." []
+synonym: "negative-pressure ventilation" EXACT []
+xref: MeSH:D015919
+is_a: MAXO:0000503 ! artificial respiration
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-23T18:22:46Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000511
+name: bilevel positive airway pressure ventilation
+def: "A form of non-invasive mechanical pressure support ventilation that uses a time-cycled change of the applied positive airway pressure level to support spontaneous breathing activity." [NCIT:C124039]
+synonym: "BiPAP ventilation" EXACT ABBREVIATION []
+synonym: "biphasic positive airway pressure ventilation" EXACT []
+synonym: "inspiratory positive-pressure ventilation" EXACT []
+synonym: "intermittent positive-pressure ventilation" EXACT []
+synonym: "IPPV" EXACT ABBREVIATION []
+xref: MeSH:D007385
+xref: NCIT:C124039
+is_a: MAXO:0000506 ! noninvasive ventilation
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-23T18:27:45Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000512
+name: continuous positive airway pressure ventilation
+def: "A form of non-invasive mechanical pressure support ventilation that uses a continuous positive airway pressure level to support spontaneous breathing activity." [NCIT:C124040]
+synonym: "airway pressure release ventilation" EXACT []
+synonym: "APRV ventilation" EXACT ABBREVIATION []
+synonym: "bilevel continuous positive airway pressure ventilation" EXACT []
+synonym: "biphasic continuous positive airway pressure ventilation" EXACT []
+synonym: "CPAP ventilation" EXACT ABBREVIATION []
+synonym: "nasal continuous positive airway pressure ventilation" EXACT []
+synonym: "nCPAP ventilation" EXACT ABBREVIATION []
+xref: MeSH:D045422
+xref: NCIT:C124040
+is_a: MAXO:0000506 ! noninvasive ventilation
+is_a: MAXO:0000509 ! positive-pressure respiration
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-23T18:31:36Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000513
+name: postural drainage
+def: "A rehabilitation therapy for removal of copious mucus secretion from the lung of patients with diseases. The patient's head is placed in a downward incline (so the trachea is inferior to the affected area) for 15 to 20 minute sessions." []
+synonym: "postural respiratory drainage" EXACT []
+synonym: "pulmonary postural drainage" EXACT []
+xref: MeSH:D015916
+is_a: MAXO:0000516 ! chest physiotherapy
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-23T19:45:07Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000514
+name: chest wall oscillation
+def: "A respiratory support system used to remove mucus and clear airway by oscillating pressure on the chest." [MeSH:D035641]
+synonym: "external chest wall oscillation" EXACT []
+synonym: "high-frequency chest compression" EXACT []
+synonym: "high-frequency chest wall oscillation" EXACT []
+xref: MeSH:D035641
+is_a: MAXO:0000516 ! chest physiotherapy
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-23T20:18:02Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000515
+name: extracorporeal membrane oxygenation
+def: "Application of a life support system that circulates the blood through an oxygenating system, which may consist of a pump, a membrane oxygenator, and a heat exchanger." [MeSH:D015199]
+synonym: "ECLS treatment" EXACT ABBREVIATION []
+synonym: "ECMO treatment" EXACT ABBREVIATION []
+synonym: "extracorporeal life support" EXACT []
+xref: MeSH:D015199
+is_a: MAXO:0000499 ! respiratory therapy
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-23T20:23:16Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000516
+name: chest physiotherapy
+def: "Chest physical therapy (CPT or Chest PT) is an airway clearance technique (ACT) to drain the lungs, and may include percussion (clapping), vibration, deep breathing, and huffing or coughing." []
+synonym: "chest physical therapy" EXACT []
+synonym: "Chest PT" EXACT []
+synonym: "CPT" EXACT []
+is_a: MAXO:0000011 ! physical therapy
+is_a: MAXO:0000499 ! respiratory therapy
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-23T20:32:18Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000517
+name: intubation procedure
+def: "The insertion of a cannula or tube into a hollow body organ." [NCIT:C37981]
+xref: ERO:0001108
+xref: MeSH:D007440
+xref: NCIT:C37981
+is_a: MAXO:0000002 ! therapeutic procedure
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-23T20:44:41Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000518
+name: extubation procedure
+def: "The removal of a previously inserted tube from a hollow organ or passageway, often from the airway." [NCIT:C50819]
+xref: NCIT:C50819
+is_a: MAXO:0000002 ! therapeutic procedure
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-23T20:48:40Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000520
+name: obstetric ultrasonography
+def: "Use of medical ultrasonography in pregnancy where sound waves are used to create a real-time visual image of the developing fetus in the uterus. Imaging can include the mother's ovaries and uterus as well." []
+synonym: "obstetric sonography" EXACT []
+synonym: "prenatal ultrasound procedure" EXACT []
+is_a: MAXO:0000072 ! ultrasonography procedure
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T19:29:52Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000525
+name: cognitive and behavioral intervention avoidance
+def: "A clinical recommendation to avoid or refrain from certain behaviors in order to maintain health or ameliorate symptoms." []
+synonym: "behavior avoidance for therapeutic purposes" EXACT []
+is_a: MAXO:0000010 ! cognitive and behavioral intervention
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-29T17:35:05Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0001000
 name: functional magnetic resonance imaging procedure
 def: "A type of MRI that takes a series of images of an organ in quick succession and statistically analyzes the differences between the images." [NCIT:C17958]
@@ -4548,6 +5168,100 @@ synonym: "beta-adrenoceptor agonists" EXACT []
 xref: CHEBI:35522
 is_a: MAXO:0000186 ! beta-adrenergic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-07-25T14:42:00Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0002000
+name: cannabis consumption avoidance
+def: "A medical requirement or recommendation of avoiding cannabis consumption." []
+synonym: "avoid cannabis consumption" EXACT []
+synonym: "cessation of cannabis consumption" EXACT []
+intersection_of: MAXO:0000525 ! cognitive and behavioral intervention avoidance
+intersection_of: MAXO:0000521 NBO:0045004 ! avoided behavior
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-28T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0002001
+name: tobacco consumption avoidance
+def: "A medical requirement or recommendation of avoiding tobacco consumption." []
+synonym: "avoid tobacco consumption" EXACT []
+synonym: "cessation of tobacco consumption" EXACT []
+intersection_of: MAXO:0000525 ! cognitive and behavioral intervention avoidance
+intersection_of: MAXO:0000521 NBO:0045000 ! avoided behavior
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-28T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0002002
+name: smoking behavior avoidance
+def: "A medical requirement or recommendation of avoiding smoking behavior." []
+synonym: "avoid smoking behavior" EXACT []
+synonym: "cessation of smoking behavior" EXACT []
+intersection_of: MAXO:0000525 ! cognitive and behavioral intervention avoidance
+intersection_of: MAXO:0000521 NBO:0015005 ! avoided behavior
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-28T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0002003
+name: consumption of an addictive substance avoidance
+def: "A medical requirement or recommendation of avoiding consumption of an addictive substance." []
+synonym: "avoid consumption of an addictive substance" EXACT []
+synonym: "cessation of consumption of an addictive substance" EXACT []
+intersection_of: MAXO:0000525 ! cognitive and behavioral intervention avoidance
+intersection_of: MAXO:0000521 NBO:0001884 ! avoided behavior
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-28T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0002004
+name: agitation avoidance
+def: "A medical requirement or recommendation of avoiding agitation behavior." []
+synonym: "avoid agitation behavior" EXACT []
+intersection_of: MAXO:0000525 ! cognitive and behavioral intervention avoidance
+intersection_of: MAXO:0000521 NBO:0000129 ! avoided behavior
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-28T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0002005
+name: fear or anxiety avoidance
+def: "A medical requirement or recommendation of avoiding fear/anxiety related behavior." []
+synonym: "avoid fear/anxiety related behavior" EXACT []
+intersection_of: MAXO:0000525 ! cognitive and behavioral intervention avoidance
+intersection_of: MAXO:0000521 NBO:0000018 ! avoided behavior
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-28T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0002006
+name: sexual activity avoidance
+def: "A medical requirement or recommendation of avoiding sexual activity." []
+synonym: "avoid sexual activity" EXACT []
+intersection_of: MAXO:0000525 ! cognitive and behavioral intervention avoidance
+intersection_of: MAXO:0000521 NBO:0000034 ! avoided behavior
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-28T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0002007
+name: copulation avoidance
+def: "A medical requirement or recommendation of avoiding copulation." []
+synonym: "avoid copulation" EXACT []
+intersection_of: MAXO:0000525 ! cognitive and behavioral intervention avoidance
+intersection_of: MAXO:0000521 NBO:0000060 ! avoided behavior
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-28T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0002008
+name: stress avoidance
+def: "A medical requirement or recommendation of avoiding stress related behavior." []
+synonym: "avoid stress related behavior" EXACT []
+intersection_of: MAXO:0000525 ! cognitive and behavioral intervention avoidance
+intersection_of: MAXO:0000521 NBO:0000469 ! avoided behavior
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-28T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -4873,6 +5587,109 @@ property_value: http://purl.org/dc/elements/1.1/date 2019-07-11T09:00:01Z xsd:st
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0010031
+name: bone grafting
+def: "The surgical transfer of a healthy bone tissue to a patient." []
+synonym: "transplantation of bone tissue" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T10:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010032
+name: cardiac transplantation
+def: "The surgical transfer of a healthy heart to a patient." []
+synonym: "heart transplantation" EXACT []
+synonym: "transplantation of heart" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T10:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010033
+name: umbilical cord blood transplantation
+def: "The surgical transfer of a healthy umbilical cord blood to a patient." []
+synonym: "cord blood transplantation" EXACT []
+synonym: "transplantation of umbilical cord blood" EXACT []
+synonym: "UCBT" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T10:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010034
+name: corneal transplantation
+def: "The surgical transfer of a healthy cornea to a patient." []
+synonym: "transplantation of cornea" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T10:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010035
+name: dura mater graft
+def: "The surgical transfer of a healthy dura mater to a patient." []
+synonym: "dura mater transplantation" EXACT []
+synonym: "transplantation of dura mater" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T10:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010036
+name: intestinal transplantation
+def: "The surgical transfer of a healthy intestine to a patient." []
+synonym: "transplantation of intestine" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T10:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010037
+name: small intestine transplantation
+def: "The surgical transfer of a healthy small intestine to a patient." []
+synonym: "small bowel transplantation" EXACT []
+synonym: "transplantation of small intestine" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T10:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010038
+name: lung transplantation
+def: "The surgical transfer of a healthy lung to a patient." []
+synonym: "transplantation of lung" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T10:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010039
+name: organ transplantation
+def: "The surgical transfer of a healthy organ to a patient." []
+synonym: "transplantation of organ" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T10:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010040
+name: ovarian transplantation
+def: "The surgical transfer of a healthy ovary to a patient." []
+synonym: "ovary transplantation" EXACT []
+synonym: "transplantation of ovary" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T10:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010041
+name: skin grafting
+def: "The surgical transfer of a healthy zone of skin to a patient." []
+synonym: "skin transplantation" EXACT []
+synonym: "transplantation of zone of skin" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T10:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010042
+name: thymic transplantation
+def: "The surgical transfer of a healthy thymus to a patient." []
+synonym: "transplantation of thymus" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T10:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0010050
 name: alcohol intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of beverage alcohol." []
@@ -5020,6 +5837,317 @@ property_value: http://purl.org/dc/elements/1.1/date 2020-01-13T11:00:00Z xsd:st
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0010200
+name: abdominal ultrasonography
+def: "The use of ultrasound to produce images of structures in the abdomen." []
+synonym: "abdomen sonography" EXACT []
+synonym: "abdomen ultrasound examination" EXACT []
+synonym: "abdomen ultrasound imaging procedure" EXACT []
+synonym: "abdomen ultrasound procedure" EXACT []
+synonym: "sonography of abdomen" EXACT []
+synonym: "ultrasonography of abdomen" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010201
+name: uterine ultrasonography
+def: "The use of ultrasound to produce images of structures in the body of uterus." []
+synonym: "body of uterus sonography" EXACT []
+synonym: "body of uterus ultrasound examination" EXACT []
+synonym: "body of uterus ultrasound imaging procedure" EXACT []
+synonym: "body of uterus ultrasound procedure" EXACT []
+synonym: "sonography of body of uterus" EXACT []
+synonym: "ultrasonography of body of uterus" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010202
+name: breast ultrasonography
+def: "The use of ultrasound to produce images of structures in the breast." []
+synonym: "breast sonography" EXACT []
+synonym: "breast ultrasound examination" EXACT []
+synonym: "breast ultrasound imaging procedure" EXACT []
+synonym: "breast ultrasound procedure" EXACT []
+synonym: "sonography of breast" EXACT []
+synonym: "ultrasonography of breast" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010203
+name: echocardiography
+def: "The use of ultrasound to produce images of structures in the heart." []
+synonym: "heart sonography" EXACT []
+synonym: "heart ultrasound examination" EXACT []
+synonym: "heart ultrasound imaging procedure" EXACT []
+synonym: "heart ultrasound procedure" EXACT []
+synonym: "sonography of heart" EXACT []
+synonym: "ultrasonography of heart" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010204
+name: liver ultrasonography
+def: "The use of ultrasound to produce images of structures in the liver." []
+synonym: "liver sonography" EXACT []
+synonym: "liver ultrasound examination" EXACT []
+synonym: "liver ultrasound imaging procedure" EXACT []
+synonym: "liver ultrasound procedure" EXACT []
+synonym: "sonography of liver" EXACT []
+synonym: "ultrasonography of liver" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2965
+
+[Term]
+id: MAXO:0010205
+name: lung ultrasonography
+def: "The use of ultrasound to produce images of structures in the lung." []
+synonym: "lung sonography" EXACT []
+synonym: "lung ultrasound examination" EXACT []
+synonym: "lung ultrasound imaging procedure" EXACT []
+synonym: "lung ultrasound procedure" EXACT []
+synonym: "sonography of lung" EXACT []
+synonym: "ultrasonography of lung" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2969
+
+[Term]
+id: MAXO:0010206
+name: lymph node ultrasonography
+def: "The use of ultrasound to produce images of structures in the lymph node." []
+synonym: "lymph node sonography" EXACT []
+synonym: "lymph node ultrasound examination" EXACT []
+synonym: "lymph node ultrasound imaging procedure" EXACT []
+synonym: "lymph node ultrasound procedure" EXACT []
+synonym: "sonography of lymph node" EXACT []
+synonym: "ultrasonography of lymph node" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2970
+
+[Term]
+id: MAXO:0010207
+name: musculoskeletal ultrasonography
+def: "The use of ultrasound to produce images of structures in the musculoskeletal system." []
+synonym: "musculoskeletal system sonography" EXACT []
+synonym: "musculoskeletal system ultrasound examination" EXACT []
+synonym: "musculoskeletal system ultrasound imaging procedure" EXACT []
+synonym: "musculoskeletal system ultrasound procedure" EXACT []
+synonym: "sonography of musculoskeletal system" EXACT []
+synonym: "ultrasonography of musculoskeletal system" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2975
+
+[Term]
+id: MAXO:0010208
+name: neck ultrasonography
+def: "The use of ultrasound to produce images of structures in the neck." []
+synonym: "neck sonography" EXACT []
+synonym: "neck ultrasound examination" EXACT []
+synonym: "neck ultrasound imaging procedure" EXACT []
+synonym: "neck ultrasound procedure" EXACT []
+synonym: "sonography of neck" EXACT []
+synonym: "ultrasonography of neck" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2979
+
+[Term]
+id: MAXO:0010209
+name: pancreatic ultrasonography
+def: "The use of ultrasound to produce images of structures in the pancreas." []
+synonym: "pancreas sonography" EXACT []
+synonym: "pancreas ultrasound examination" EXACT []
+synonym: "pancreas ultrasound imaging procedure" EXACT []
+synonym: "pancreas ultrasound procedure" EXACT []
+synonym: "sonography of pancreas" EXACT []
+synonym: "ultrasonography of pancreas" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2981
+
+[Term]
+id: MAXO:0010210
+name: rectal ultrasonography
+def: "The use of ultrasound to produce images of structures in the rectum." []
+synonym: "rectum sonography" EXACT []
+synonym: "rectum ultrasound examination" EXACT []
+synonym: "rectum ultrasound imaging procedure" EXACT []
+synonym: "rectum ultrasound procedure" EXACT []
+synonym: "sonography of rectum" EXACT []
+synonym: "ultrasonography of rectum" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2987
+
+[Term]
+id: MAXO:0010211
+name: scrotal ultrasonography
+def: "The use of ultrasound to produce images of structures in the scrotum." []
+synonym: "scrotum sonography" EXACT []
+synonym: "scrotum ultrasound examination" EXACT []
+synonym: "scrotum ultrasound imaging procedure" EXACT []
+synonym: "scrotum ultrasound procedure" EXACT []
+synonym: "sonography of scrotum" EXACT []
+synonym: "ultrasonography of scrotum" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2990
+
+[Term]
+id: MAXO:0010212
+name: spleen ultrasonography
+def: "The use of ultrasound to produce images of structures in the spleen." []
+synonym: "sonography of spleen" EXACT []
+synonym: "spleen sonography" EXACT []
+synonym: "spleen ultrasound examination" EXACT []
+synonym: "spleen ultrasound imaging procedure" EXACT []
+synonym: "spleen ultrasound procedure" EXACT []
+synonym: "ultrasonography of spleen" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2994
+
+[Term]
+id: MAXO:0010213
+name: stomach ultrasonography
+def: "The use of ultrasound to produce images of structures in the stomach." []
+synonym: "sonography of stomach" EXACT []
+synonym: "stomach sonography" EXACT []
+synonym: "stomach ultrasound examination" EXACT []
+synonym: "stomach ultrasound imaging procedure" EXACT []
+synonym: "stomach ultrasound procedure" EXACT []
+synonym: "ultrasonography of stomach" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2995
+
+[Term]
+id: MAXO:0010214
+name: thyroid ultrasonography
+def: "The use of ultrasound to produce images of structures in the thyroid gland." []
+synonym: "sonography of thyroid gland" EXACT []
+synonym: "thyroid gland sonography" EXACT []
+synonym: "thyroid gland ultrasound examination" EXACT []
+synonym: "thyroid gland ultrasound imaging procedure" EXACT []
+synonym: "thyroid gland ultrasound procedure" EXACT []
+synonym: "ultrasonography of thyroid gland" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-3000
+
+[Term]
+id: MAXO:0010215
+name: bladder ultrasonography
+def: "The use of ultrasound to produce images of structures in the urinary bladder." []
+synonym: "sonography of urinary bladder" EXACT []
+synonym: "ultrasonography of urinary bladder" EXACT []
+synonym: "urinary bladder sonography" EXACT []
+synonym: "urinary bladder ultrasound examination" EXACT []
+synonym: "urinary bladder ultrasound imaging procedure" EXACT []
+synonym: "urinary bladder ultrasound procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-3008
+
+[Term]
+id: MAXO:0010216
+name: vaginal ultrasonography
+def: "The use of ultrasound to produce images of structures in the vagina." []
+synonym: "sonography of vagina" EXACT []
+synonym: "ultrasonography of vagina" EXACT []
+synonym: "vagina sonography" EXACT []
+synonym: "vagina ultrasound examination" EXACT []
+synonym: "vagina ultrasound imaging procedure" EXACT []
+synonym: "vagina ultrasound procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-3010
+
+[Term]
+id: MAXO:0010217
+name: renal ultrasonography
+def: "The use of ultrasound to produce images of structures in the kidney." []
+synonym: "kidney sonography" EXACT []
+synonym: "kidney ultrasound examination" EXACT []
+synonym: "kidney ultrasound imaging procedure" EXACT []
+synonym: "kidney ultrasound procedure" EXACT []
+synonym: "sonography of kidney" EXACT []
+synonym: "ultrasonography of kidney" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-3010
+
+[Term]
+id: MAXO:0010218
+name: carotid ultrasonography
+def: "The use of ultrasound to produce images of structures in the carotid artery segment." []
+synonym: "carotid artery segment sonography" EXACT []
+synonym: "carotid artery segment ultrasound examination" EXACT []
+synonym: "carotid artery segment ultrasound imaging procedure" EXACT []
+synonym: "carotid artery segment ultrasound procedure" EXACT []
+synonym: "carotid ultrasound imaging" EXACT []
+synonym: "sonography of carotid artery segment" EXACT []
+synonym: "ultrasonography of carotid artery segment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-3010
+
+[Term]
+id: MAXO:0010219
+name: pelvis ultrasonography
+def: "The use of ultrasound to produce images of structures in the pelvic region of trunk." []
+synonym: "pelvic region of trunk sonography" EXACT []
+synonym: "pelvic region of trunk ultrasound examination" EXACT []
+synonym: "pelvic region of trunk ultrasound imaging procedure" EXACT []
+synonym: "pelvic region of trunk ultrasound procedure" EXACT []
+synonym: "pelvic sonography" EXACT []
+synonym: "pelvis sonography" EXACT []
+synonym: "sonography of pelvic region of trunk" EXACT []
+synonym: "ultrasonography of pelvic region of trunk" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-3010
+
+[Term]
+id: MAXO:0010220
+name: prostate ultrasonography
+def: "The use of ultrasound to produce images of structures in the prostate gland." []
+synonym: "prostate gland sonography" EXACT []
+synonym: "prostate gland ultrasound examination" EXACT []
+synonym: "prostate gland ultrasound imaging procedure" EXACT []
+synonym: "prostate gland ultrasound procedure" EXACT []
+synonym: "sonography of prostate gland" EXACT []
+synonym: "ultrasonography of prostate gland" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-3010
+
+[Term]
+id: MAXO:0010221
+name: testicular ultrasonography
+name: venous ultrasonography
+def: "The use of ultrasound to produce images of structures in the testis." []
+def: "The use of ultrasound to produce images of structures in the venous blood vessel." []
+synonym: "sonography of testis" EXACT []
+synonym: "sonography of venous blood vessel" EXACT []
+synonym: "testis sonography" EXACT []
+synonym: "testis ultrasound examination" EXACT []
+synonym: "testis ultrasound imaging procedure" EXACT []
+synonym: "testis ultrasound procedure" EXACT []
+synonym: "ultrasonography of testis" EXACT []
+synonym: "ultrasonography of venous blood vessel" EXACT []
+synonym: "venous blood vessel sonography" EXACT []
+synonym: "venous blood vessel ultrasound examination" EXACT []
+synonym: "venous blood vessel ultrasound imaging procedure" EXACT []
+synonym: "venous blood vessel ultrasound procedure" EXACT []
+synonym: "venous sonography" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-3010
+
+[Term]
+id: MAXO:0010222
+name: neurosonology
+def: "The use of ultrasound to produce images of structures in the brain." []
+synonym: "brain sonography" EXACT []
+synonym: "brain ultrasound examination" EXACT []
+synonym: "brain ultrasound imaging procedure" EXACT []
+synonym: "brain ultrasound procedure" EXACT []
+synonym: "sonography of brain" EXACT []
+synonym: "ultrasonography of brain" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-3010
+
+[Term]
 id: MAXO:0030010
 name: ketogenic diet intake
 def: "The ketogenic diet is a high-fat, low-carbohydrate, adequate-protein diet that mimics a fasting state, resulting in the substitution of ketone bodies as a source of energy. The ketogenic diet can be used to reduce recurrent epileptic seizures in individuals with intractable epilepsy. Intractable epilepsy is defined as epilepsy that failed to respond to three or more antiepileptic drugs." [PMID:23419562, PMID:27759811, PMID:28701250]
@@ -5064,6 +6192,12 @@ synonym: "uncooked cornstarch therapy" EXACT []
 is_a: MAXO:0000106 ! nutritional supplementation
 property_value: http://purl.org/dc/elements/1.1/date 2019-09-05T20:57:49Z xsd:dateTime
 created_by: http://orcid.org/0000-0002-7463-6306
+
+[Typedef]
+id: MAXO:0000521
+name: avoided behavior
+property_value: http://purl.org/dc/elements/1.1/date 2020-01-28T19:01:13Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Typedef]
 id: MAXO:0001015
