@@ -1,6 +1,6 @@
-pattern_name: avoidance_of_food_intake_by_severity
-pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_food_intake.yaml
-description: "Medical recommendation to avoid the severity intake of a particular food or nutrition item."
+pattern_name: avoidance_of_excessive_food_intake
+pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_excessive_food_intake.yaml
+description: "Medical recommendation to avoid the excessive intake of a particular food or nutrition item."
 
 contributors:
   - https://orcid.org/0000-0001-7941-2961
@@ -11,11 +11,9 @@ classes:
   avoidance: MAXO:0001014
   nutrition intervention: MAXO:0000056
   food material: FOODON:00002403
-  severity: MAXO:0000522
   
 relations:
-  avoided_food: MAXO:0001027
-  has_modifier: RO:0002573
+  avoided_excessive_food_intake: MAXO:0001028
   
 annotationProperties:
   exact_synonym: oio:hasExactSynonym 
@@ -36,28 +34,24 @@ data_list_vars:
   syns: xsd:string
 
 name:
-  text: "%s %s intake avoidance"
+  text: "excessive %s intake avoidance"
   vars:
-   - severity
    - food_material
 
 annotations:
   - annotationProperty: exact_synonym
-    text: "avoiding %s %s intake"
+    text: "avoiding excessive %s intake"
     vars:
-     - severity
      - food_material
   
   - annotationProperty: exact_synonym
-    text: "avoid % %s intake"
+    text: "avoid excessive %s intake"
     vars:
-     - severity 
      - food_material
      
   - annotationProperty: exact_synonym
-    text: "%s %s consumption avoidance"
+    text: "excessive %s consumption avoidance"
     vars:
-     - severity
      - food_material
      
   - annotationProperty: date
@@ -79,16 +73,17 @@ annotations:
     text: "%s"
     vars:
      - xref
+
 exact_synonym:
   value: syns
+
 def:
-  text: "A medical requirement or recommendation of avoiding the consumption of %s."
+  text: "A medical requirement or recommendation of avoiding the excessive consumption of %s."
   vars:
     - food_material
 
 equivalentTo:
-  text: "'nutrition intervention' and ('avoided_food' some %s) and ('has_modifier' some %s))"
+  text: "'nutrition intervention' and ('avoided_excessive_food_intake' some %s)"
   vars:
     - food_material
-    - severity
-   
+
