@@ -48,7 +48,7 @@ RELEASE_ARTEFACTS = $(sort  base full base full)
 .PHONY: .FORCE
 all: odkversion all_imports patterns all_main all_subsets sparql_test all_reports all_assets
 test: odkversion sparql_test all_reports
-	$(ROBOT) reason --input $(SRC) --reasoner ELK  --equivalent-classes-allowed all --exclude-tautologies structural --output test.owl && rm test.owl && echo "Success"
+	$(ROBOT) reason --input $(SRC) --reasoner ELK  --equivalent-classes-allowed asserted-only --exclude-tautologies structural --output test.owl && rm test.owl && echo "Success"
 
 odkversion:
 	echo "ODK Makefile version: $(ODK_VERSION) (this is the version of the ODK with which this Makefile was generated, not the version of the ODK you are running)" &&\
@@ -72,7 +72,7 @@ all_main: $(MAIN_FILES)
 ## By default this is the cross-product of IMPORT_MODULES x FORMATS
 
 
-IMPORTS =  iao go ro uberon foodon chebi
+IMPORTS =  iao go ro uberon foodon nbo hp chebi
 
 IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
 IMPORT_FILES = $(foreach n,$(IMPORT_ROOTS), $(foreach f,$(FORMATS), $(n).$(f)))
@@ -188,7 +188,7 @@ ANNOTATE_VERSION_IRI = annotate -V $(ONTBASE)/releases/$(TODAY)/$@.owl
 # by default we use ELK to perform a reason-relax-reduce chain
 # after that we annotate the ontology with the release versionInfo
 
-OTHER_SRC = $(PATTERNDIR)/definitions.owl 
+OTHER_SRC = $(PATTERNDIR)/definitions.owl  ../templates/obsolete.owl ../templates/replaced.owl ../templates/xrefs.owl
 
 
 $(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
@@ -203,17 +203,18 @@ $(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
 
 
 
-
 # base: OTHER sources of interest, such as definitions owl
 $(ONT)-base.owl: $(SRC) $(OTHER_SRC)
 	$(ROBOT) remove --input $< --select imports --trim false \
 		merge $(patsubst %, -i %, $(OTHER_SRC)) \
-		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
+		annotate --annotation http://purl.org/dc/elements/1.1/type http://purl.obolibrary.org/obo/IAO_8000001 \
+		--ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ \
+		--output $@.tmp.owl && mv $@.tmp.owl $@
 
 # Full: The full artefacts with imports merged, reasoned
 $(ONT)-full.owl: $(SRC) $(OTHER_SRC)
 	$(ROBOT) merge --input $< \
-		reason --reasoner ELK --equivalent-classes-allowed all --exclude-tautologies structural \
+		reason --reasoner ELK --equivalent-classes-allowed asserted-only --exclude-tautologies structural \
 		relax \
 		reduce -r ELK \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
@@ -254,6 +255,25 @@ imports/%_import.obo: imports/%_import.owl
 	@if [ $(IMP) = true ]; then $(ROBOT) convert --check false -i $< -f obo -o $@.tmp.obo && mv $@.tmp.obo $@; fi
 imports/%_import.json: imports/%_import.owl
 	@if [ $(IMP) = true ]; then $(ROBOT) convert --check false -i $< -f json -o $@.tmp.json && mv $@.tmp.json $@; fi
+
+# ----------------------------------------
+# Components
+# ----------------------------------------
+# Some ontologies contain external and internal components. A component is included in the ontology in its entirety.
+
+../templates/%: .FORCE
+	touch $@
+.PRECIOUS: ../templates/%
+
+
+
+
+
+
+
+
+
+
 
 
 # ----------------------------------------
@@ -311,6 +331,26 @@ mirror/foodon.trigger: $(SRC)
 
 mirror/foodon.owl: mirror/foodon.trigger
 	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/foodon.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+
+## ONTOLOGY: nbo
+## Copy of nbo is re-downloaded whenever source changes
+mirror/nbo.trigger: $(SRC)
+
+mirror/nbo.owl: mirror/nbo.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/nbo.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+
+## ONTOLOGY: hp
+## Copy of hp is re-downloaded whenever source changes
+mirror/hp.trigger: $(SRC)
+
+mirror/hp.owl: mirror/hp.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/hp.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
@@ -398,9 +438,9 @@ pattern_schema_checks: update_patterns
 
 #This command is a workaround for the absence of -N and -i in wget of alpine (the one ODK depend on now). It downloads all patterns specified in external.txt
 update_patterns: .FORCE
-	rm -f $(PATTERNDIR)/dosdp-patterns/*.yaml.1
+	rm -f $(PATTERNDIR)/dosdp-patterns/*.yaml.1 || true
 	wget -i $(PATTERNDIR)/dosdp-patterns/external.txt --backups=1 -P $(PATTERNDIR)/dosdp-patterns
-	rm -f $(PATTERNDIR)/dosdp-patterns/*.yaml.1
+	rm -f $(PATTERNDIR)/dosdp-patterns/*.yaml.1 || true
 
 
 $(PATTERNDIR)/pattern.owl: pattern_schema_checks update_patterns
