@@ -101,6 +101,67 @@ xref: Reactome:R-HSA-170846 "TGFBR2 recruits TGFBR1"
 is_a: GO:0005488 ! binding
 
 [Term]
+id: GO:0005575
+name: cellular_component
+namespace: cellular_component
+alt_id: GO:0008372
+def: "A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome)." [GOC:pdt, NIF_Subcellular:sao1337158144]
+comment: Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code "no data" (ND), is used to indicate this.
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+synonym: "cell or subcellular entity" EXACT []
+synonym: "cellular component" EXACT []
+synonym: "subcellular entity" RELATED [NIF_Subcellular:nlx_subcell_100315]
+xref: NIF_Subcellular:sao1337158144
+
+[Term]
+id: GO:0005622
+name: intracellular
+namespace: cellular_component
+def: "The living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm." [ISBN:0198506732]
+subset: gocheck_do_not_annotate
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_plant
+synonym: "internal to cell" EXACT []
+synonym: "nucleocytoplasm" RELATED [GOC:mah]
+synonym: "protoplasm" EXACT []
+synonym: "protoplast" RELATED [GOC:mah]
+xref: Wikipedia:Intracellular
+is_a: GO:0005575 ! cellular_component
+
+[Term]
+id: GO:0005634
+name: nucleus
+namespace: cellular_component
+def: "A membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated. In most cells, the nucleus contains all of the cell's chromosomes except the organellar chromosomes, and is the site of RNA synthesis and processing. In some species, or in specialized cell types, RNA metabolism or DNA replication may be absent." [GOC:go_curators]
+subset: goslim_agr
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_drosophila
+subset: goslim_flybase_ribbon
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_mouse
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+synonym: "cell nucleus" EXACT []
+synonym: "horsetail nucleus" NARROW [GOC:al, GOC:mah, GOC:vw, PMID:15030757]
+xref: MIPS_funcat:70.10
+xref: NIF_Subcellular:sao1702920020
+xref: Wikipedia:Cell_nucleus
+is_a: GO:0043231 ! intracellular membrane-bounded organelle
+
+[Term]
 id: GO:0006793
 name: phosphorus metabolic process
 namespace: biological_process
@@ -662,6 +723,31 @@ intersection_of: positively_regulates GO:0016301 ! kinase activity
 relationship: positively_regulates GO:0016301 ! kinase activity
 
 [Term]
+id: GO:0035556
+name: intracellular signal transduction
+namespace: biological_process
+alt_id: GO:0007242
+alt_id: GO:0007243
+alt_id: GO:0023013
+alt_id: GO:0023034
+def: "The process in which a signal is passed on to downstream components within the cell, which become activated themselves to further propagate the signal and finally trigger a change in the function or state of the cell." [GOC:bf, GOC:jl, GOC:signaling, ISBN:3527303782]
+subset: goslim_drosophila
+synonym: "intracellular protein kinase cascade" NARROW [GOC:signaling]
+synonym: "intracellular signal transduction pathway" NARROW []
+synonym: "intracellular signaling cascade" RELATED [GOC:signaling]
+synonym: "intracellular signaling chain" EXACT [ISBN:3527303782]
+synonym: "intracellular signaling pathway" RELATED []
+synonym: "protein kinase cascade" NARROW [GOC:signaling]
+synonym: "signal transduction via intracellular signaling cascade" RELATED []
+synonym: "signal transmission via intracellular cascade" NARROW []
+is_a: GO:0007165 ! signal transduction
+intersection_of: GO:0007165 ! signal transduction
+intersection_of: occurs_in GO:0005622 ! intracellular
+relationship: occurs_in GO:0005622 ! intracellular
+created_by: rfoulger
+creation_date: 2010-05-14T01:14:37Z
+
+[Term]
 id: GO:0038023
 name: signaling receptor activity
 namespace: molecular_function
@@ -772,6 +858,48 @@ intersection_of: negatively_regulates GO:0003824 ! catalytic activity
 relationship: negatively_regulates GO:0003824 ! catalytic activity
 
 [Term]
+id: GO:0043226
+name: organelle
+namespace: cellular_component
+def: "Organized structure of distinctive morphology and function. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, and prokaryotic structures such as anammoxosomes and pirellulosomes. Excludes the plasma membrane." [GOC:go_curators]
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_pir
+xref: NIF_Subcellular:sao1539965131
+xref: Wikipedia:Organelle
+is_a: GO:0110165 ! cellular anatomical entity
+
+[Term]
+id: GO:0043227
+name: membrane-bounded organelle
+namespace: cellular_component
+def: "Organized structure of distinctive morphology and function, bounded by a single or double lipid bilayer membrane. Includes the nucleus, mitochondria, plastids, vacuoles, and vesicles. Excludes the plasma membrane." [GOC:go_curators]
+synonym: "membrane-enclosed organelle" EXACT []
+xref: NIF_Subcellular:sao414196390
+is_a: GO:0043226 ! organelle
+
+[Term]
+id: GO:0043229
+name: intracellular organelle
+namespace: cellular_component
+def: "Organized structure of distinctive morphology and function, occurring within the cell. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton. Excludes the plasma membrane." [GOC:go_curators]
+subset: goslim_pir
+is_a: GO:0043226 ! organelle
+intersection_of: GO:0043226 ! organelle
+intersection_of: part_of GO:0005622 ! intracellular
+relationship: part_of GO:0005622 ! intracellular
+
+[Term]
+id: GO:0043231
+name: intracellular membrane-bounded organelle
+namespace: cellular_component
+def: "Organized structure of distinctive morphology and function, bounded by a single or double lipid bilayer membrane and occurring within the cell. Includes the nucleus, mitochondria, plastids, vacuoles, and vesicles. Excludes the plasma membrane." [GOC:go_curators]
+subset: goslim_pir
+synonym: "intracellular membrane-enclosed organelle" EXACT []
+is_a: GO:0043227 ! membrane-bounded organelle
+is_a: GO:0043229 ! intracellular organelle
+
+[Term]
 id: GO:0043393
 name: regulation of protein binding
 namespace: biological_process
@@ -825,6 +953,20 @@ synonym: "cellular metabolism" EXACT []
 synonym: "intermediary metabolism" RELATED [GOC:mah]
 is_a: GO:0008152 ! metabolic process
 is_a: GO:0009987 ! cellular process
+
+[Term]
+id: GO:0044464
+name: obsolete cell part
+namespace: cellular_component
+def: "OBSOLETE. Any constituent part of a cell, the basic structural and functional unit of all organisms." [GOC:jl]
+comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
+subset: gocheck_do_not_annotate
+subset: goslim_pir
+synonym: "cellular subcomponent" EXACT [NIF_Subcellular:sao628508602]
+synonym: "protoplast" RELATED [GOC:mah]
+xref: NIF_Subcellular:sao628508602
+is_obsolete: true
+consider: CL:0000000
 
 [Term]
 id: GO:0045936
@@ -1209,6 +1351,15 @@ is_a: GO:0003674 ! molecular_function
 relationship: part_of GO:0065009 ! regulation of molecular function
 
 [Term]
+id: GO:0110165
+name: cellular anatomical entity
+namespace: cellular_component
+def: "A part of a cellular organism that is either an immaterial entity or a material entity with granularity above the level of a protein complex but below that of an anatomical system. Or, a substance produced by a cellular organism with granularity above the level of a protein complex." [GOC:kmv]
+is_a: GO:0005575 ! cellular_component
+created_by: kmv
+creation_date: 2019-08-12T18:01:37Z
+
+[Term]
 id: GO:1900120
 name: regulation of receptor binding
 namespace: biological_process
@@ -1255,6 +1406,124 @@ intersection_of: positively_regulates GO:0005102 ! signaling receptor binding
 relationship: positively_regulates GO:0005102 ! signaling receptor binding
 created_by: bf
 creation_date: 2012-02-22T11:41:00Z
+
+[Term]
+id: GO:1902531
+name: regulation of intracellular signal transduction
+namespace: biological_process
+alt_id: GO:0010627
+def: "Any process that modulates the frequency, rate or extent of intracellular signal transduction." [GOC:dph, GOC:signaling, GOC:tb, GOC:TermGenie]
+synonym: "regulation of intracellular protein kinase cascade" NARROW []
+synonym: "regulation of intracellular signal transduction pathway" NARROW [GOC:TermGenie]
+synonym: "regulation of intracellular signaling cascade" EXACT [GOC:TermGenie]
+synonym: "regulation of intracellular signaling chain" EXACT [GOC:TermGenie]
+synonym: "regulation of intracellular signaling pathway" RELATED [GOC:TermGenie]
+synonym: "regulation of signal transduction via intracellular signaling cascade" RELATED [GOC:TermGenie]
+synonym: "regulation of signal transmission via intracellular cascade" NARROW [GOC:TermGenie]
+is_a: GO:0009966 ! regulation of signal transduction
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0035556 ! intracellular signal transduction
+relationship: regulates GO:0035556 ! intracellular signal transduction
+created_by: bf
+creation_date: 2013-12-02T11:32:52Z
+
+[Term]
+id: GO:1902532
+name: negative regulation of intracellular signal transduction
+namespace: biological_process
+alt_id: GO:0010741
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of intracellular signal transduction." [GOC:dph, GOC:signaling, GOC:tb, GOC:TermGenie]
+synonym: "down regulation of intracellular signal transduction" EXACT [GOC:TermGenie]
+synonym: "down regulation of intracellular signal transduction pathway" NARROW [GOC:TermGenie]
+synonym: "down regulation of intracellular signaling cascade" NARROW [GOC:TermGenie]
+synonym: "down regulation of intracellular signaling chain" EXACT [GOC:TermGenie]
+synonym: "down regulation of intracellular signaling pathway" RELATED [GOC:TermGenie]
+synonym: "down regulation of signal transduction via intracellular signaling cascade" RELATED [GOC:TermGenie]
+synonym: "down regulation of signal transmission via intracellular cascade" NARROW [GOC:TermGenie]
+synonym: "down-regulation of intracellular signal transduction" EXACT [GOC:TermGenie]
+synonym: "down-regulation of intracellular signal transduction pathway" NARROW [GOC:TermGenie]
+synonym: "down-regulation of intracellular signaling cascade" RELATED [GOC:TermGenie]
+synonym: "down-regulation of intracellular signaling chain" EXACT [GOC:TermGenie]
+synonym: "down-regulation of intracellular signaling pathway" RELATED [GOC:TermGenie]
+synonym: "down-regulation of signal transduction via intracellular signaling cascade" RELATED [GOC:TermGenie]
+synonym: "down-regulation of signal transmission via intracellular cascade" RELATED [GOC:TermGenie]
+synonym: "downregulation of intracellular signal transduction" EXACT [GOC:TermGenie]
+synonym: "downregulation of intracellular signal transduction pathway" NARROW [GOC:TermGenie]
+synonym: "downregulation of intracellular signaling cascade" NARROW [GOC:TermGenie]
+synonym: "downregulation of intracellular signaling chain" EXACT [GOC:TermGenie]
+synonym: "downregulation of intracellular signaling pathway" RELATED [GOC:TermGenie]
+synonym: "downregulation of signal transduction via intracellular signaling cascade" RELATED [GOC:TermGenie]
+synonym: "downregulation of signal transmission via intracellular cascade" NARROW [GOC:TermGenie]
+synonym: "inhibition of intracellular signal transduction" NARROW [GOC:TermGenie]
+synonym: "inhibition of intracellular signal transduction pathway" NARROW [GOC:TermGenie]
+synonym: "inhibition of intracellular signaling cascade" NARROW [GOC:TermGenie]
+synonym: "inhibition of intracellular signaling chain" NARROW [GOC:TermGenie]
+synonym: "inhibition of intracellular signaling pathway" RELATED [GOC:TermGenie]
+synonym: "inhibition of signal transduction via intracellular signaling cascade" RELATED [GOC:TermGenie]
+synonym: "inhibition of signal transmission via intracellular cascade" NARROW [GOC:TermGenie]
+synonym: "negative regulation of intracellular protein kinase cascade" EXACT []
+synonym: "negative regulation of intracellular signal transduction pathway" NARROW [GOC:TermGenie]
+synonym: "negative regulation of intracellular signaling cascade" EXACT [GOC:TermGenie]
+synonym: "negative regulation of intracellular signaling chain" EXACT [GOC:TermGenie]
+synonym: "negative regulation of intracellular signaling pathway" RELATED [GOC:TermGenie]
+synonym: "negative regulation of signal transduction via intracellular signaling cascade" RELATED [GOC:TermGenie]
+synonym: "negative regulation of signal transmission via intracellular cascade" NARROW [GOC:TermGenie]
+is_a: GO:0009968 ! negative regulation of signal transduction
+is_a: GO:1902531 ! regulation of intracellular signal transduction
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0035556 ! intracellular signal transduction
+relationship: negatively_regulates GO:0035556 ! intracellular signal transduction
+created_by: bf
+creation_date: 2013-12-02T11:33:01Z
+
+[Term]
+id: GO:1902533
+name: positive regulation of intracellular signal transduction
+namespace: biological_process
+alt_id: GO:0010740
+def: "Any process that activates or increases the frequency, rate or extent of intracellular signal transduction." [GOC:BHF, GOC:dph, GOC:signaling, GOC:tb, GOC:TermGenie]
+synonym: "activation of intracellular signal transduction" NARROW [GOC:TermGenie]
+synonym: "activation of intracellular signal transduction pathway" NARROW [GOC:TermGenie]
+synonym: "activation of intracellular signaling cascade" NARROW [GOC:TermGenie]
+synonym: "activation of intracellular signaling chain" NARROW [GOC:TermGenie]
+synonym: "activation of intracellular signaling pathway" RELATED [GOC:TermGenie]
+synonym: "activation of signal transduction via intracellular signaling cascade" RELATED [GOC:TermGenie]
+synonym: "activation of signal transmission via intracellular cascade" NARROW [GOC:TermGenie]
+synonym: "positive regulation of intracellular protein kinase cascade" NARROW []
+synonym: "positive regulation of intracellular signal transduction pathway" NARROW [GOC:TermGenie]
+synonym: "positive regulation of intracellular signaling cascade" RELATED [GOC:TermGenie]
+synonym: "positive regulation of intracellular signaling chain" EXACT [GOC:TermGenie]
+synonym: "positive regulation of intracellular signaling pathway" RELATED [GOC:TermGenie]
+synonym: "positive regulation of signal transduction via intracellular signaling cascade" RELATED [GOC:TermGenie]
+synonym: "positive regulation of signal transmission via intracellular cascade" NARROW [GOC:TermGenie]
+synonym: "up regulation of intracellular signal transduction" EXACT [GOC:TermGenie]
+synonym: "up regulation of intracellular signal transduction pathway" NARROW [GOC:TermGenie]
+synonym: "up regulation of intracellular signaling cascade" RELATED [GOC:TermGenie]
+synonym: "up regulation of intracellular signaling chain" EXACT [GOC:TermGenie]
+synonym: "up regulation of intracellular signaling pathway" RELATED [GOC:TermGenie]
+synonym: "up regulation of signal transduction via intracellular signaling cascade" RELATED [GOC:TermGenie]
+synonym: "up regulation of signal transmission via intracellular cascade" NARROW [GOC:TermGenie]
+synonym: "up-regulation of intracellular signal transduction" EXACT [GOC:TermGenie]
+synonym: "up-regulation of intracellular signal transduction pathway" NARROW [GOC:TermGenie]
+synonym: "up-regulation of intracellular signaling cascade" RELATED [GOC:TermGenie]
+synonym: "up-regulation of intracellular signaling chain" EXACT [GOC:TermGenie]
+synonym: "up-regulation of intracellular signaling pathway" RELATED [GOC:TermGenie]
+synonym: "up-regulation of signal transduction via intracellular signaling cascade" RELATED [GOC:TermGenie]
+synonym: "up-regulation of signal transmission via intracellular cascade" NARROW [GOC:TermGenie]
+synonym: "upregulation of intracellular signal transduction" EXACT [GOC:TermGenie]
+synonym: "upregulation of intracellular signal transduction pathway" NARROW [GOC:TermGenie]
+synonym: "upregulation of intracellular signaling cascade" RELATED [GOC:TermGenie]
+synonym: "upregulation of intracellular signaling chain" EXACT [GOC:TermGenie]
+synonym: "upregulation of intracellular signaling pathway" RELATED [GOC:TermGenie]
+synonym: "upregulation of signal transduction via intracellular signaling cascade" RELATED [GOC:TermGenie]
+synonym: "upregulation of signal transmission via intracellular cascade" NARROW [GOC:TermGenie]
+is_a: GO:0009967 ! positive regulation of signal transduction
+is_a: GO:1902531 ! regulation of intracellular signal transduction
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0035556 ! intracellular signal transduction
+relationship: positively_regulates GO:0035556 ! intracellular signal transduction
+created_by: bf
+creation_date: 2013-12-02T11:33:10Z
 
 [Term]
 id: GO:2000272

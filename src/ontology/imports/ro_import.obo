@@ -117,6 +117,13 @@ name: immaterial anatomical entity
 is_a: BFO:0000141 ! immaterial entity
 
 [Term]
+id: CARO:0000014
+name: cell part
+is_a: CARO:0000003 ! connected anatomical structure
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/caro.owl
+property_value: IAO:0000589 "cell part (CARO)" xsd:string
+
+[Term]
 id: CARO:0001000
 name: multi-cell-part structure
 is_a: CARO:0000003 ! connected anatomical structure
@@ -159,6 +166,12 @@ name: catalytic activity
 is_a: GO:0003674 ! molecular_function
 
 [Term]
+id: GO:0005634
+name: nucleus
+is_a: GO:0044464 ! cell part
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
 id: GO:0008150
 name: biological_process
 is_a: BFO:0000015 ! process
@@ -177,6 +190,12 @@ is_a: GO:0003824 ! catalytic activity
 id: GO:0016772
 name: transferase activity, transferring phosphorus-containing groups
 is_a: GO:0016740 ! transferase activity
+
+[Term]
+id: GO:0044464
+name: cell part
+is_a: CARO:0000014 ! cell part
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
 
 [Term]
 id: GO:0050896

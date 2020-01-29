@@ -236,6 +236,17 @@ Where we have an annotation assertion
     
 
 
+    <!-- http://purl.obolibrary.org/obo/RO_0002604 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002604">
+        <obo:IAO_0000112>&apos;anterior end of organism&apos; is-opposite-of &apos;posterior end of organism&apos;</obo:IAO_0000112>
+        <obo:IAO_0000112>&apos;increase in temperature&apos; is-opposite-of &apos;decrease in temperature&apos;</obo:IAO_0000112>
+        <obo:IAO_0000115>x is the opposite of y if there exists some distance metric M, and there exists no z such as M(x,z) &lt;= M(x,y) or M(y,z) &lt;= M(y,x).</obo:IAO_0000115>
+        <rdfs:label>is opposite of</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0004049 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0004049">
@@ -3891,6 +3902,17 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CARO_0000014 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CARO_0000014">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000003"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/caro.owl"/>
+        <obo:IAO_0000589>cell part (CARO)</obo:IAO_0000589>
+        <rdfs:label xml:lang="en">cell part</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CARO_0001000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CARO_0001000">
@@ -3977,6 +3999,16 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0005634 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005634">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044464"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/go.owl"/>
+        <rdfs:label xml:lang="en">nucleus</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0008150 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0008150">
@@ -4015,6 +4047,16 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0016772">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0016740"/>
         <rdfs:label>transferase activity, transferring phosphorus-containing groups</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0044464 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044464">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000014"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/go.owl"/>
+        <rdfs:label xml:lang="en">cell part</rdfs:label>
     </owl:Class>
     
 
