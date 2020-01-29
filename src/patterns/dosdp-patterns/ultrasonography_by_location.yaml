@@ -20,7 +20,7 @@ annotationProperties:
   date: dc:date
   comment: rdfs:comment
   xref: oio:hasDbXref
- 
+
 vars:
   location: "'location'"
   
@@ -29,8 +29,10 @@ data_vars:
   created_by: "'created_by'"
   comment: "'comment'"
   xref: "database cross reference"
+
 data_list_vars:
   syns: xsd:string
+
 name:
   text: "%s ultrasonography"
   vars:
@@ -38,50 +40,49 @@ name:
 
 annotations:
   - annotationProperty: exact_synonym
-    text: "ultrasonography of %"
+    text: "ultrasonography of %s"
     vars:
      - location
   - annotationProperty: exact_synonym
-    text: "sonography of %"
+    text: "sonography of %s"
     vars:
      - location
   - annotationProperty: exact_synonym
-    text: "% sonography"
+    text: "%s sonography"
     vars:
      - location
   - annotationProperty: exact_synonym
-    text: "% ultrasound procedure"
+    text: "%s ultrasound procedure"
     vars:
      - location
   - annotationProperty: exact_synonym
-    text: "% ultrasound imaging procedure"
+    text: "%s ultrasound imaging procedure"
     vars:
      - location
   - annotationProperty: exact_synonym
-    text: "% ultrasound examination"
+    text: "%s ultrasound examination"
     vars:
-     - location  
+     - location
   - annotationProperty: date
     text: "%s"
     vars:
      - date
-     
   - annotationProperty: created_by
     text: "%s"
     vars:
      - created_by
-
   - annotationProperty: comment
     text: "%s"
     vars:
      - comment
-    
   - annotationProperty: xref
     text: "%s"
     vars:
      - xref
+
 exact_synonym:
   value: syns
+
 def:
   text: "The use of ultrasound to produce images of structures in the %s."
   vars:
@@ -91,4 +92,4 @@ equivalentTo:
   text: "'ultrasonography' and 'has_input' some ('part_of' some %s)"
   vars:
     - location
-   
+

@@ -16,6 +16,7 @@ Import(<http://purl.obolibrary.org/obo/maxo/imports/chebi_import.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/imports/foodon_import.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/imports/go_import.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/imports/iao_import.owl>)
+Import(<http://purl.obolibrary.org/obo/maxo/imports/nbo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/imports/ro_import.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/imports/uberon_import.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/patterns/definitions.owl>)
@@ -401,6 +402,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000516>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000517>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000518>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000520>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000525>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001002>))
@@ -426,6 +428,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0030010>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0030011>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0030012>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0030018>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0000521>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0001015>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0001027>))
 Declaration(AnnotationProperty(dce:creator))
@@ -441,6 +444,12 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 ############################
 #   Object Properties
 ############################
+
+# Object Property: <http://purl.obolibrary.org/obo/MAXO_0000521> (avoided behavior)
+
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000521> "2020-01-28T19:01:13Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000521> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000521> "avoided behavior"@en)
 
 # Object Property: <http://purl.obolibrary.org/obo/MAXO_0001015> (avoided medical action)
 
@@ -720,39 +729,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000031> "life support care"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000031> <http://purl.obolibrary.org/obo/MAXO_0000025>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000032> (therapeutic avoidance of behavior)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000032> "A clinical recommendation to avoid or refrain from certain behaviors in order to maintain health or ameliorate symptoms.")
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000032> "2019-01-09T21:01:11Z"^^xsd:dateTime)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000032> <http://orcid.org/0000-0001-7941-2961>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000032> "therapeutic avoidance of behavior"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000032> <http://purl.obolibrary.org/obo/MAXO_0000151>)
-
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000038> (therapeutic mental or psychological behavior avoidance)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000038> "A clinical recommendation to avoid or refrain from certain psychological behaviors in order to maintain health or ameliorate symptoms.")
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000038> "2019-01-09T21:14:34Z"^^xsd:dateTime)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000038> <http://orcid.org/0000-0001-7941-2961>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000038> "mental behavior avoidance for therapeutic purposes")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000038> "therapeutic mental or psychological behavior avoidance"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000038> <http://purl.obolibrary.org/obo/MAXO_0000032>)
-
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000040> (stress avoidance)
-
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000040> "2019-01-09T21:15:36Z"^^xsd:dateTime)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000040> <http://orcid.org/0000-0001-7941-2961>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000040> "stress avoidance"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000040> <http://purl.obolibrary.org/obo/MAXO_0000038>)
-
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000041> (smoking avoidance)
-
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000041> "2019-01-09T21:16:11Z"^^xsd:dateTime)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000041> <http://orcid.org/0000-0001-7941-2961>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000041> "tobacco use avoidance")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000041> "smoking avoidance"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000041> <http://purl.obolibrary.org/obo/MAXO_0000032>)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000041> <http://purl.obolibrary.org/obo/MAXO_0000053>)
-
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000042> (therapeutic disease avoidance)
 
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000042> "2019-01-11T19:39:19Z"^^xsd:dateTime)
@@ -808,7 +784,6 @@ AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000049> "2019
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000049> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000049> "therapeutic avoidance of physical activity"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000049> <http://purl.obolibrary.org/obo/MAXO_0000011>)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000049> <http://purl.obolibrary.org/obo/MAXO_0000032>)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000049> <http://purl.obolibrary.org/obo/MAXO_0000151>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000050> (therapeutic impact activities avoidance)
@@ -854,8 +829,8 @@ AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000056> "2019
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000056> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000056> "food consumption avoidance")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000056> "nutrition intake avoidance"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0000056> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000009> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/MAXO_0001027> <http://purl.obolibrary.org/obo/FOODON_00002403>)))
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000056> <http://purl.obolibrary.org/obo/MAXO_0000151>)
+EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0000056> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0001014> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/MAXO_0001015> <http://purl.obolibrary.org/obo/MAXO_0000009>)))
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000056> <http://purl.obolibrary.org/obo/MAXO_0000009>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000058> (pharmacotherapy)
 
@@ -3948,13 +3923,6 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000479> "or
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000479> <http://purl.obolibrary.org/obo/MAXO_0000004>)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000479> <http://purl.obolibrary.org/obo/MAXO_0000477>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000480> (orthopedic consult)
-
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000480> "2020-01-20T18:00:50Z"^^xsd:dateTime)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000480> <http://orcid.org/0000-0001-7941-2961>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000480> "orthopedic consult"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000480> <http://purl.obolibrary.org/obo/MAXO_0000477>)
-
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000481> (orthotic services)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000481> "Orthotic services provide prescription insoles, braces, splints, callipers, footwear, spinal jackets and helmets which help people recover from or avoid injury, or live with lifelong conditions.")
@@ -4379,6 +4347,15 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000520> "obstetric ultrasonography"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000520> <http://purl.obolibrary.org/obo/MAXO_0000072>)
 
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000525> (cognitive and behavioral intervention avoidance)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000525> "A clinical recommendation to avoid or refrain from certain behaviors in order to maintain health or ameliorate symptoms.")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000525> "2020-01-29T17:35:05Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000525> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000525> "behavior avoidance for therapeutic purposes")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000525> "cognitive and behavioral intervention avoidance"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000525> <http://purl.obolibrary.org/obo/MAXO_0000010>)
+
 # Class: <http://purl.obolibrary.org/obo/MAXO_0001000> (functional magnetic resonance imaging procedure)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NCIT:C17958") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0001000> "A type of MRI that takes a series of images of an organ in quick succession and statistically analyzes the differences between the images.")
@@ -4682,4 +4659,7 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0030018> "un
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0030018> <http://purl.obolibrary.org/obo/MAXO_0000106>)
 
 
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0001028> "2019-07-12T14:23:27Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0001028> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0001028> "avoided excessive intake of food"@en)
 )
