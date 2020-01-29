@@ -1,0 +1,89 @@
+pattern_name: avoidance_of_excessive_food_intake
+pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_excessive_food_intake.yaml
+description: "Medical recommendation to avoid the excessive intake of a particular food or nutrition item."
+
+contributors:
+  - https://orcid.org/0000-0001-7941-2961
+  - https://orcid.org/0000-0002-7356-1779
+  - https://orcid.org/0000-0002-7463-6306
+
+classes:
+  avoidance: MAXO:0001014
+  nutrition intervention: MAXO:0000056
+  food material: FOODON:00002403
+  
+relations:
+  avoided_excessive_food_intake: MAXO:0001028
+  
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym 
+  created_by: oio:created_by
+  date: dc:date
+  comment: rdfs:comment
+  xref: oio:hasDbXref
+ 
+vars:
+  food_material: "'food material'"
+  
+data_vars:
+  date: "'date'"
+  created_by: "'created_by'"
+  comment: "'comment'"
+  xref: "'database_cross_reference'"
+data_list_vars:
+  syns: xsd:string
+
+name:
+  text: "excessive %s intake avoidance"
+  vars:
+   - food_material
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "avoiding excessive %s intake"
+    vars:
+     - food_material
+  
+  - annotationProperty: exact_synonym
+    text: "avoid excessive %s intake"
+    vars:
+     - food_material
+     
+  - annotationProperty: exact_synonym
+    text: "excessive %s consumption avoidance"
+    vars:
+     - food_material
+     
+  - annotationProperty: date
+    text: "%s"
+    vars:
+     - date
+
+  - annotationProperty: created_by
+    text: "%s"
+    vars:
+     - created_by
+     
+  - annotationProperty: comment
+    text: "%s"
+    vars:
+     - comment
+    
+  - annotationProperty: xref
+    text: "%s"
+    vars:
+     - xref
+
+exact_synonym:
+  value: syns
+
+def:
+  text: "A medical requirement or recommendation of avoiding the excessive consumption of %s."
+  vars:
+    - food_material
+
+equivalentTo:
+  text: "'nutrition intervention' and ('avoided_excessive_food_intake' some %s)"
+  vars:
+    - food_material
+
