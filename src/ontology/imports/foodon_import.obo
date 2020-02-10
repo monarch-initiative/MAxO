@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2020-01-29/imports/foodon_import.owl
+data-version: maxo/releases/2020-02-10/imports/foodon_import.owl
 subsetdef: ro-eco ""
 subsetdef: RO:0002259 ""
 ontology: maxo/imports/foodon_import
@@ -2338,8 +2338,6 @@ name: bean food product
 def: "A bean vegetable food product is a human or animal food product - such as a snap, shell or dry bean product - derived from the fruit pod, seed, or leaf of one of several genera of the flowering plant family Fabaceae." []
 is_a: FOODON:00001264 ! legume food product
 is_a: FOODON:00002153 ! plant seed vegetable food product
-intersection_of: FOODON:00001264 ! legume food product
-intersection_of: RO:0001000 FOODON:03412010 ! derives from pigeon pea plant
 property_value: IAO:0000116 "Note, this was previously labelled \"Bean (vegetable) food product\". We have been listing both dry and freshly harvested moist beans here, so have broadened the name scope." xsd:string
 property_value: IAO:0000117 "Damion Dooley" xsd:string
 property_value: seeAlso http://purl.obolibrary.org/obo/FOODON_00002428 xsd:anyURI
@@ -3721,9 +3719,8 @@ name: shellfish
 def: "The term shellfish is used both broadly and specifically. For regulatory purposes it is often narrowly defined as filter-feeding molluscs such as clams, mussels, and oyster to the exclusion of crustaceans and all else. Although their shells may differ, all shellfish are invertebrates. [https://en.wikipedia.org/wiki/Shellfish]" []
 comment: Covers both freshwater and saltwater organisms
 xref: http://www.langual.org/langual_thesaurus.asp?termid=B1433
+is_a: FOODON:00001293 ! shellfish food product
 is_a: FOODON:00002581 ! aquatic invertebrate
-union_of: FOODON:00001293 ! shellfish food product
-union_of: FOODON:00002581 ! aquatic invertebrate
 property_value: IAO:0000114 IAO:0000428
 property_value: IAO:0000412 http://langual.org xsd:string
 
@@ -4352,9 +4349,6 @@ def: "The hard, central part of an apple, pear, etc., that contains the seeds (S
 comment: LanguaL curation note: Renamed from *FRUIT OR BERRY, CORE ONLY* in LanguaL 2008.
 xref: http://www.langual.org/langual_thesaurus.asp?termid=C0293
 is_a: FOODON:03420167 ! fruit part
-intersection_of: BFO:0000051 PO:0009085 ! has part exocarp
-intersection_of: BFO:0000051 PO:0009086 ! has part endocarp
-intersection_of: BFO:0000051 PO:0009087 ! has part mesocarp
 disjoint_from: FOODON:03420294 ! fruit peel (anatomical part)
 disjoint_from: FOODON:03420295 ! fruit seed (anatomical part)
 property_value: IAO:0000114 IAO:0000428
