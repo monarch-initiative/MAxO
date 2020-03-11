@@ -76,7 +76,7 @@ all_main: $(MAIN_FILES)
 ## By default this is the cross-product of IMPORT_MODULES x FORMATS
 
 
-IMPORTS =  iao go ro uberon foodon nbo hp chebi
+IMPORTS =  iao go ro uberon foodon chebi
 
 IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -161,7 +161,7 @@ $(ONT).owl: $(ONT)-full.owl
 $(ONT).obo: $(ONT).owl
 	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
 $(ONT).json: $(ONT)-full.owl
-	$(ROBOT) annotate --input $< --ontology-iri $(URIBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY) \
+	$(ROBOT) annotate --input $< --ontology-iri $(URIBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ \
 		convert --check false -f json -o $@.tmp.json && mv $@.tmp.json $@
 # ----------------------------------------
 # Initiating Step: Reason over source
@@ -172,7 +172,7 @@ ANNOTATE_VERSION_IRI = annotate -V $(ONTBASE)/releases/$(TODAY)/$@.owl
 # by default we use ELK to perform a reason-relax-reduce chain
 # after that we annotate the ontology with the release versionInfo
 
-OTHER_SRC = $(PATTERNDIR)/definitions.owl  ../templates/obsolete.owl ../templates/replaced.owl ../templates/xrefs.owl
+OTHER_SRC = $(PATTERNDIR)/definitions.owl 
 
 
 $(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
@@ -211,15 +211,15 @@ $(ONT)-full.owl: $(SRC) $(OTHER_SRC)
 # These live in the imports/ folder
 
 $(SRCMERGED): $(SRC)
-	$(ROBOT) remove --input $< --select imports --trim true \
+	$(ROBOT) remove --input $< --select imports --trim false \
 		merge  $(patsubst %, -i %, $(OTHER_SRC)) -o $@
 
 $(PRESEED): $(SRCMERGED)
-	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/terms.sparql $@.tmp &&\
+	$(ROBOT) query -f csv -i $< --query ../sparql/terms.sparql $@.tmp &&\
 	cat $@.tmp | sort | uniq >  $@
 
 $(SIMPLESEED): $(SRCMERGED) $(ONTOLOGYTERMS)
-	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/simple-seed.sparql $@.tmp &&\
+	$(ROBOT) query -f csv -i $< --query ../sparql/simple-seed.sparql $@.tmp &&\
 	cat $@.tmp $(ONTOLOGYTERMS) | sort | uniq >  $@ &&\
 	echo "http://www.geneontology.org/formats/oboInOwl#SubsetProperty" >> $@ &&\
 	echo "http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty" >> $@
@@ -252,24 +252,6 @@ imports/%_import.obo: imports/%_import.owl
 	@if [ $(IMP) = true ]; then $(ROBOT) convert --check false -i $< -f obo -o $@.tmp.obo && mv $@.tmp.obo $@; fi
 imports/%_import.json: imports/%_import.owl
 	@if [ $(IMP) = true ]; then $(ROBOT) convert --check false -i $< -f json -o $@.tmp.json && mv $@.tmp.json $@; fi
-
-# ----------------------------------------
-# Components
-# ----------------------------------------
-# Some ontologies contain external and internal components. A component is included in the ontology in its entirety.
-
-../templates/%: .FORCE
-	touch $@
-.PRECIOUS: ../templates/%
-
-
-
-
-
-
-
-
-
 
 
 # ----------------------------------------
@@ -327,26 +309,6 @@ mirror/foodon.trigger: $(SRC)
 
 mirror/foodon.owl: mirror/foodon.trigger
 	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/foodon.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
-
-.PRECIOUS: mirror/%.owl
-
-
-## ONTOLOGY: nbo
-## Copy of nbo is re-downloaded whenever source changes
-mirror/nbo.trigger: $(SRC)
-
-mirror/nbo.owl: mirror/nbo.trigger
-	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/nbo.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
-
-.PRECIOUS: mirror/%.owl
-
-
-## ONTOLOGY: hp
-## Copy of hp is re-downloaded whenever source changes
-mirror/hp.trigger: $(SRC)
-
-mirror/hp.owl: mirror/hp.trigger
-	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/hp.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
