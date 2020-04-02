@@ -1,13 +1,13 @@
-pattern_name: ultrasonography_by_location
-pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/ultrasonography_by_location.yaml
-description: "ultrasonography of a partical part of the body"
+pattern_name: ct_by_location
+pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/ct_by_location.yaml
+description: "computed tomography of a partical part of the body"
 
 contributors:
   - https://orcid.org/0000-0001-7941-2961
   - https://orcid.org/0000-0002-7356-1779
 
 classes:
-  ultrasonography: MAXO:0000072
+  ct: MAXO:0000571
   location: owl:Thing
 
 relations:
@@ -34,33 +34,33 @@ data_list_vars:
   syns: xsd:string
 
 name:
-  text: "%s ultrasonography"
+  text: "%s CT"
   vars:
    - location
 
 annotations:
   - annotationProperty: exact_synonym
-    text: "ultrasonography of %s"
+    text: "CT of %s"
     vars:
      - location
   - annotationProperty: exact_synonym
-    text: "sonography of %s"
+    text: "CAT scan of %s"
     vars:
      - location
   - annotationProperty: exact_synonym
-    text: "%s sonography"
+    text: "%s CAT scan"
     vars:
      - location
   - annotationProperty: exact_synonym
-    text: "%s ultrasound procedure"
+    text: "%s computed tomography"
     vars:
      - location
   - annotationProperty: exact_synonym
-    text: "%s ultrasound imaging procedure"
+    text: "%s computerized axial tomography"
     vars:
      - location
   - annotationProperty: exact_synonym
-    text: "%s ultrasound examination"
+    text: "%s CT examination"
     vars:
      - location
   - annotationProperty: date
@@ -84,12 +84,12 @@ exact_synonym:
   value: syns
 
 def:
-  text: "The use of ultrasound to produce images of structures in the %s."
+  text: "The use of computed tomography to produce images of structures of the %s."
   vars:
     - location
 
 equivalentTo:
-  text: "'ultrasonography' and 'has_input' some ('part_of' some %s)"
+  text: "'ct' and 'has_input' some ('part_of' some %s)"
   vars:
     - location
 
