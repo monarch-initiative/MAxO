@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2020-02-10/imports/nbo_import.owl
+data-version: maxo/releases/2020-04-14/imports/nbo_import.owl
 subsetdef: 1_STAR "Preliminary entries"
 subsetdef: 3_STAR "Manually annotated by ChEBI Team"
 subsetdef: abnormal_slim "Abnormal/normal slim"
@@ -37,7 +37,7 @@ subsetdef: pheno_slim "Phenotype slim"
 subsetdef: phenotype_rcn "A subset specifically created for the 2012 Phenotype RCN meeting. Includes some human-specific terms that may eventually be removed when they are adequately represented with part of relationships in FMA"
 subsetdef: ro-eco ""
 subsetdef: RO:0002259 ""
-subsetdef: scalar_slim ""
+subsetdef: scalar_slim "Scalar slim"
 subsetdef: uberon_slim "Uberon slim - subset that excludes obscure terms and deep compositional terms"
 subsetdef: upper_level "abstract upper-level terms not directly useful for analysis"
 subsetdef: value_slim "Value slim"
@@ -498,8 +498,8 @@ namespace: chebi_ontology
 subset: 3_STAR
 synonym: ">C=O" RELATED [IUPAC]
 synonym: "carbonyl" EXACT IUPAC_NAME [IUPAC]
-synonym: "carbonyl group" EXACT [ChEBI]
 synonym: "carbonyl group" EXACT [UniProt]
+synonym: "carbonyl group" EXACT [ChEBI]
 is_a: CHEBI:51422 ! organodiyl group
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CO" xsd:string
@@ -28254,6 +28254,39 @@ relationship: has_potential_to_develop_into UBERON:0002120 ! pronephros
 relationship: immediate_transformation_of UBERON:0007297 {source="Bgee:AN"} ! presumptive pronephric mesoderm
 relationship: part_of UBERON:0003064 {source="ZFA"} ! intermediate mesoderm
 property_value: external_definition "Portion of tissue that consists of the mesenchymal precursor to the pronephric kidney and that begins to separate from the intermediate mesoderm at NF stage 21 and epithelializes by NF stage 30.[AAO]" xsd:string {date_retrieved="2012-06-20", external_class="AAO:0011090", ontology="AAO", source="XAO:curator"}
+
+[Term]
+id: UBERON:0005725
+name: olfactory system
+namespace: uberon
+def: "A sensory system that is capable of olfacttion (the sensory perception of smell)." [http://orcid.org/0000-0002-6601-2165]
+subset: efo_slim
+subset: pheno_slim
+subset: vertebrate_core
+xref: AAO:0000334
+xref: AAO:0000978
+xref: BILA:0000144
+xref: EFO:0001973
+xref: EMAPA:36004
+xref: FMA:7190
+xref: http://linkedlifedata.com/resource/umls/id/C0228065
+xref: http://www.snomedbrowser.com/Codes/Details/362290002
+xref: MA:0002445
+xref: NCIT:C94501
+xref: NLXANAT:090806
+xref: Olfactory:system
+xref: OpenCyc:Mx4rvViw75wpEbGdrcN5Y29ycA
+xref: TAO:0001149
+xref: UMLS:C0228065 {source="ncithesaurus:Olfactory_System"}
+xref: XAO:0003196
+xref: ZFA:0001149
+is_a: UBERON:0005726 ! chemosensory system
+relationship: existence_ends_during UBERON:0000066 ! fully formed stage
+property_value: editor_note "consider splitting into main and accessory. See also: vomeronasal organ" xsd:string
+property_value: editor_note "we make the relationship to nervous system 'overlaps', as the olfactory system includes e.g. apertures in the cranium that are not part of the nervous system" xsd:string
+property_value: external_definition "The olfactory system is the sensory system used for olfaction, or the sense of smell. Most mammals and reptiles have two distinct parts to their olfactory system: a main olfactory system and an accessory olfactory system. The main olfactory system detects volatile, airborne substances, while the accessory olfactory system senses fluid-phase stimuli. Behavioral evidence indicates that most often, the stimuli detected by the accessory olfactory system are pheromones. The olfactory system is often spoken of along with the gustatory system as the chemosensory senses because both transduce chemical signals into perception[WP][Wikipedia:Olfactory_system]." xsd:string {source="Olfactory:system"}
+property_value: external_definition "The sensory system used for olfaction (the sense of smell).[AAO]" xsd:string {date_retrieved="2012-06-20", external_class="AAO:0000978", ontology="AAO", source="AAO:EJS"}
+property_value: taxon_notes "In mammals, the main olfactory system detects odorants that are inhaled through the nose, where they contact the main olfactory epithelium, which contains various olfactory receptors. These olfactory receptors are membrane proteins of bipolar olfactory receptor neurons in the olfactory epithelium. Rather than binding specific ligands like most receptors, olfactory receptors display affinity for a range of odor molecules. Olfactory neurons transduce receptor activation into electrical signals in neurons. The signals travel along the olfactory nerve, which belongs to the peripheral nervous system. This nerve terminates in the olfactory bulb, which belongs to the central nervous system. The complex set of olfactory receptors on different olfactory neurons can distinguish a new odor from the background environmental odors and determine the concentration of the odor[WP]." xsd:string
 
 [Term]
 id: UBERON:0005726

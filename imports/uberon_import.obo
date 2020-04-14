@@ -1,6 +1,7 @@
 format-version: 1.2
-data-version: maxo/releases/2020-02-10/imports/uberon_import.owl
+data-version: maxo/releases/2020-04-14/imports/uberon_import.owl
 subsetdef: cumbo "CUMBO"
+subsetdef: cyclostome_subset "cyclostome structures"
 subsetdef: developmental_classification "developmental_classification"
 subsetdef: early_development "A class that represents an early developmental structure, like a blastocyst. This part of the ontology is undergoing review to remove inappropriate grouping classes."
 subsetdef: efo_slim "EFO slim"
@@ -76,6 +77,33 @@ relationship: part_of UBERON:0000995 ! uterus
 property_value: external_definition "The narrow caudal end of the uterus that opens into the vagina. [TFD][VHOG]" xsd:string {date_retrieved="2012-09-17", external_class="VHOG:0001359", ontology="VHOG", source="http://bgee.unil.ch/", source="http://medical-dictionary.thefreedictionary.com/uterine+cervix"}
 property_value: has_relational_adjective "cervical" xsd:string
 property_value: homology_notes "The evolution of mammals is associated with radical changes in their reproductive biology, particularly the structure and function of the female reproductive organs. These changes include the evolution of the uterus, cervix, vagina, placenta and specialized cell types associated with each of those structures.[well established][VHOG]" xsd:string {date_retrieved="2012-09-17", external_class="VHOG:0001359", ontology="VHOG", source="http://bgee.unil.ch/", source="DOI:10.1098/rspb.2004.2848 Lynch VJ, Roth JJ, Takahashi K, Dunn CW, Nonaka DF, Stopper GF, Wagner GP, Adaptive evolution of HoxA-11 and HoxA-13 at the origin of the uterus in mammals. Proceedings of the Royal Society of London, Series B (2004)"}
+
+[Term]
+id: UBERON:0000003
+name: naris
+namespace: uberon
+def: "Orifice of the olfactory system. The naris is the route by which odorants enter the olfactory system[MAH]." [http://orcid.org/0000-0001-9114-8737]
+subset: uberon_slim
+subset: vertebrate_core
+xref: AAO:0000311
+xref: EHDAA2:0001225
+xref: EHDAA:9083
+xref: EMAPA:17847
+xref: galen:Naris
+xref: http://www.snomedbrowser.com/Codes/Details/272650008
+xref: MA:0000282
+xref: VHOG:0000663
+is_a: UBERON:0000161 ! orifice
+intersection_of: UBERON:0000161 ! orifice
+intersection_of: connects UBERON:0001707 ! nasal cavity
+intersection_of: part_of UBERON:0005725 ! olfactory system
+relationship: connects UBERON:0001707 ! nasal cavity
+relationship: part_of UBERON:0000033 {source="ZFA"} ! head
+relationship: part_of UBERON:0005725 ! olfactory system
+property_value: external_definition "One of paired external openings of the nasal chamber.[AAO]" xsd:string {date_retrieved="2012-06-20", external_class="AAO:0000311", ontology="AAO", source="AAO:EJS"}
+property_value: external_ontology_notes "we have classified this as an orifice, according to FMA. Note that in FMA, orifices are immaterial entities, but in ZFA this is a surface structure" xsd:string {external_ontology="FMA"}
+property_value: homology_notes "Naris refer to the external and interior naris (choana) of tetrapods, and to anterior and posterior naris of zebrafish. It seems now accepted that the structure is homologous: The choana, a unique 'internal nostril' opening from the nasal sac into the roof of the mouth, is a key part of the tetrapod (land vertebrate) respiratory system. It was the first component of the tetrapod body plan to evolve, well before the origin of limbs, and is therefore crucial to our understanding of the beginning of the fish-tetrapod transition. (...) Here we present new material of Kenichthys, a 395-million-year-old fossil fish from China, that provides direct evidence for the origin of the choana and establishes its homology: it is indeed a displaced posterior external nostril that, during a brief transitional stage illustrated by Kenichthys, separated the maxilla from the premaxilla.[well established][VHOG]" xsd:string {date_retrieved="2012-09-17", external_class="VHOG:0000663", ontology="VHOG", source="http://bgee.unil.ch/", source="DOI:10.1038/nature02843 Zhu M, Ahlberg PE, The origin of the internal nostril in tetrapodes. Nature (2004)"}
+property_value: taxon_notes "in actinopterygians, both pairs of nares are external. In tetrapods, the exhalant empties into the buccal cavity" xsd:string
 
 [Term]
 id: UBERON:0000004
@@ -3217,6 +3245,27 @@ relationship: part_of UBERON:0001242 ! intestinal mucosa
 property_value: external_ontology_notes "Note that some sources treat 'intestinal gland' as synonymous with crypts" xsd:string
 
 [Term]
+id: UBERON:0000341
+name: throat
+namespace: uberon
+def: "In anatomy, the throat is the anterior part of the neck, in front of the vertebral column. It consists of the pharynx and larynx. An important feature of the throat is the epiglottis, a flap which separates the esophagus from the trachea and prevents inhalation of food or drink. The throat contains various blood vessels, various pharyngeal muscles, the trachea (windpipe) and the esophagus. The hyoid bone and the clavicle are the only bones located in the throat of mammals. It is sometimes considered a synonym for fauces. [WP,unvetted]." [http://en.wikipedia.org/wiki/Throat]
+subset: pheno_slim
+synonym: "gula" RELATED LATIN []
+xref: BTO:0000828
+xref: EMAPA:37973 {source="MA:th"}
+xref: FMA:228738
+xref: http://en.wikipedia.org/wiki/Throat
+xref: http://linkedlifedata.com/resource/umls/id/C0230069
+xref: NCIT:C54272
+xref: OpenCyc:Mx4rwQtO_JwpEbGdrcN5Y29ycA
+xref: UMLS:C0230069 {source="ncithesaurus:Throat"}
+is_a: UBERON:0034929 ! external soft tissue zone
+relationship: depicted_by Throat:Diagram.png
+relationship: part_of UBERON:0000974 ! neck
+property_value: has_relational_adjective "gular" xsd:string
+property_value: taxon_notes "The hyoid bone and the clavicle are the only bones located in the throat of mammals." xsd:string
+
+[Term]
 id: UBERON:0000344
 name: mucosa
 namespace: uberon
@@ -3901,6 +3950,36 @@ intersection_of: UBERON:0000483 ! epithelium
 intersection_of: part_of UBERON:0002367 ! prostate gland
 relationship: part_of UBERON:0002367 ! prostate gland
 property_value: editor_note "TODO - check 2 FMA IDs" xsd:string
+
+[Term]
+id: UBERON:0000439
+name: arachnoid trabecula
+namespace: uberon
+def: "The arachnoid trabeculae are delicate strands of connective tissue that loosely connect the two innermost layers of the meninges -- the arachnoid mater and the pia mater. They are found within the subarachnoid space where cerebrospinal fluid is also found. Embryologically, the trabeculae are the remnants of the common precursor that forms both the arachnoid and pial layers of the meninges." [http://en.wikipedia.org/wiki/Arachnoid_trabeculae]
+synonym: "arachnoid trabeculae" RELATED PLURAL []
+synonym: "trabecula arachnoideum" RELATED LATIN []
+xref: Arachnoid:trabeculae
+xref: BTO:0002500
+xref: FMA:83979
+is_a: UBERON:0000440 ! trabecula
+is_a: UBERON:0010313 ! neural crest-derived structure
+intersection_of: UBERON:0000440 ! trabecula
+intersection_of: part_of UBERON:0002362 ! arachnoid mater
+relationship: part_of UBERON:0002362 ! arachnoid mater
+
+[Term]
+id: UBERON:0000440
+name: trabecula
+namespace: uberon
+def: "A small, often microscopic, tissue element in the form of a small beam, strut or rod, generally having a mechanical function, and usually but not necessarily composed of dense collagenous tissue. On histological section, a trabecula can look like a septum, but in three dimensions they are topologically distinct, with trabeculae being roughly rod or pillar-shaped and septa being sheet-like. Trabeculae are usually composed of dense fibrous tissue, i.e. mainly of collagen, and in most cases provide mechanical strengthening or stiffening to a soft solid organ, such as the spleen. They can be composed of other materials, such as bone or muscle[WP]." [GO:0060343, http://en.wikipedia.org/wiki/Trabecula]
+subset: grouping_class
+subset: pheno_slim
+xref: BTO:0002501
+xref: FMA:85273
+xref: http://en.wikipedia.org/wiki/Trabecula
+is_a: UBERON:0000064 ! organ part
+relationship: has_part UBERON:0002384 ! connective tissue
+property_value: has_relational_adjective "trabecular" xsd:string
 
 [Term]
 id: UBERON:0000442
@@ -11102,6 +11181,27 @@ property_value: taxon_notes "As a secretory organ serving exocrine and endocrine
 property_value: taxon_notes "The zebrafish does not have a discrete pancreas. Exocrine pancreatic tissue can be found scattered along the intestinal tract. The acinar structure of the exocrine pancreas is very similar to that of mammals and comprises cells with a very dark, basophilic cytoplasm" xsd:string
 
 [Term]
+id: UBERON:0001265
+name: trabecula of spleen
+namespace: uberon
+def: "A trabecula that is part of a spleen." [OBOL:automatic]
+synonym: "spleen trabeculum" EXACT []
+synonym: "splenic trabecula" EXACT []
+xref: EMAPA:35808
+xref: FMA:16027
+xref: http://en.wikipedia.org/wiki/Trabeculae_of_spleen
+xref: http://linkedlifedata.com/resource/umls/id/C0229688
+xref: http://www.snomedbrowser.com/Codes/Details/61987002
+xref: MA:0000758
+xref: NCIT:C33607
+xref: UMLS:C0229688 {source="ncithesaurus:Splenic_Trabecula"}
+is_a: UBERON:0000440 ! trabecula
+is_a: UBERON:0004120 ! mesoderm-derived structure
+intersection_of: UBERON:0000440 ! trabecula
+intersection_of: part_of UBERON:0002106 ! spleen
+relationship: part_of UBERON:1000024 {source="FMA"} ! parenchyma of spleen
+
+[Term]
 id: UBERON:0001268
 name: peritoneal fluid
 namespace: uberon
@@ -12652,6 +12752,7 @@ intersection_of: UBERON:0004765 ! skeletal element
 intersection_of: composed_primarily_of UBERON:0002481 ! bone tissue
 disjoint_from: UBERON:0001630 ! muscle organ
 disjoint_from: UBERON:0005090 ! muscle structure
+disjoint_from: UBERON:0010538 ! paired limb/fin segment
 relationship: composed_primarily_of UBERON:0002481 {source="VSAO-modified"} ! bone tissue
 property_value: axiom_lost_from_external_ontology "relationship loss: subclass specialized connective tissue (AAO:0000571)[AAO]" xsd:string {date_retrieved="2012-06-20", external_class="AAO:0000047", ontology="AAO"}
 property_value: external_definition "Also called osseous tissue, (Latin: os). Is a type of hard endoskeletal connective tissue found in many vertebrate animals. Bone is the main tissue of body organs that support body structures, protect internal organs, (in conjunction with muscles) facilitate movement; and are involved with cell formation, calcium metabolism, and mineral storage.[AAO]" xsd:string {date_retrieved="2012-06-20", external_class="AAO:0000047", ontology="AAO", source="AAO:LAP"}
@@ -13126,6 +13227,38 @@ subset: non_informative
 synonym: "organ neck" EXACT []
 xref: FMA:45733
 is_a: UBERON:0034944 {source="FMA"} ! zone of organ
+
+[Term]
+id: UBERON:0001567
+name: cheek
+namespace: uberon
+def: "A fleshy subdivision of one side of the face bounded by an eye, ear and the nose." [http://en.wikipedia.org/wiki/Cheek, http://orcid.org/0000-0002-6601-2165]
+subset: pheno_slim
+subset: uberon_slim
+synonym: "buccae" RELATED LATIN [http://en.wikipedia.org/wiki/Cheek]
+synonym: "jowl" RELATED [http://en.wikipedia.org/wiki/Cheek]
+xref: BTO:0001754
+xref: EMAPA:37451 {source="MA:th"}
+xref: FMA:46476
+xref: GAID:65
+xref: galen:Cheek
+xref: http://en.wikipedia.org/wiki/Cheek
+xref: http://linkedlifedata.com/resource/umls/id/C0007966
+xref: http://www.snomedbrowser.com/Codes/Details/182325008
+xref: MA:0002475
+xref: MESH:D002610
+xref: NCIT:C13070
+xref: OpenCyc:Mx4rvVi5WZwpEbGdrcN5Y29ycA
+xref: TAO:0002113
+xref: UMLS:C0007966 {source="ncithesaurus:Cheek"}
+is_a: UBERON:0015212 ! lateral structure
+is_a: UBERON:0034929 ! external soft tissue zone
+relationship: depicted_by Chica:cachetona.jpg
+relationship: in_lateral_side_of UBERON:0001456 {source="FMA-abduced-lr"} ! face
+relationship: part_of UBERON:0004089 ! midface
+property_value: external_definition "Surface structure that includes the scales, skin, and muscles that are located ventral and posterior to the eye.[TAO]" xsd:string {date_retrieved="2012-08-14", external_class="TAO:0002113", ontology="TAO", source="TAO:wd"}
+property_value: has_relational_adjective "buccal" xsd:string
+property_value: taxon_notes "In many animals the inside of the cheek is lined with mucous membrane covered with stratified squamous epithelium and supplied with secretions from buccal glands." xsd:string
 
 [Term]
 id: UBERON:0001568
@@ -15069,6 +15202,47 @@ property_value: has_relational_adjective "nasopharyngeal" xsd:string
 property_value: taxon_notes "In humans - in front it communicates through the choanae with the nasal cavities. On its lateral wall is the pharyngeal ostium of the auditory tube, somewhat triangular in shape, and bounded behind by a firm prominence, the torus tubarius or cushion, caused by the medial end of the cartilage of the tube which elevates the mucous membrane" xsd:string
 
 [Term]
+id: UBERON:0001729
+name: oropharynx
+namespace: uberon
+def: "the portion of the pharynx that lies between the soft palate and the upper edge of the epiglottis" [MGI:cwg, MP:0002252]
+subset: efo_slim
+subset: pheno_slim
+subset: uberon_slim
+synonym: "mesopharynx" RELATED [http://en.wikipedia.org/wiki/Pharynx]
+synonym: "oral part of pharynx" EXACT []
+synonym: "pars oralis pharyngis" RELATED LATIN [http://en.wikipedia.org/wiki/Oropharynx]
+xref: BTO:0005257
+xref: CALOHA:TS-0718
+xref: EFO:0001976
+xref: EHDAA2:0004082
+xref: EMAPA:25094
+xref: EV:0100067
+xref: FMA:54879
+xref: GAID:340
+xref: http://en.wikipedia.org/wiki/Oropharynx
+xref: http://linkedlifedata.com/resource/umls/id/C0521367
+xref: http://www.snomedbrowser.com/Codes/Details/263376008
+xref: MA:0000351
+xref: MAT:0000446
+xref: MESH:A03.867.603
+xref: NCIT:C12762
+xref: OpenCyc:Mx4rwACoxpwpEbGdrcN5Y29ycA
+xref: UMLS:C0521367 {source="ncithesaurus:Oropharynx"}
+xref: VHOG:0000457
+xref: VSAO:0000034
+xref: XAO:0004048
+is_a: UBERON:0004119 ! endoderm-derived structure
+is_a: UBERON:0013522 ! subdivision of tube
+relationship: contributes_to_morphology_of UBERON:0001042 ! chordate pharynx
+relationship: depicted_by Illu:pharynx.jpg
+relationship: develops_from UBERON:0010023 {source="ISBN:0073040584-table13.1"} ! dorsal part of pharyngeal pouch 2
+relationship: part_of UBERON:0001042 ! chordate pharynx
+relationship: part_of UBERON:0005409 ! alimentary part of gastrointestinal system
+property_value: external_definition "One of the three anatomic divisions of the pharynx that lies posterior to the mouth and is continuous above with the nasopharynx and below with the laryngopharynx. It extends behind the mouth from the soft palate above to the level of the hyoid bone below and contains the palatine and lingual tonsils. [TFD][VHOG]" xsd:string {date_retrieved="2012-09-17", external_class="VHOG:0000457", ontology="VHOG", source="http://bgee.unil.ch/", source="http://medical-dictionary.thefreedictionary.com/oropharynx"}
+property_value: has_relational_adjective "oropharyngeal" xsd:string
+
+[Term]
 id: UBERON:0001731
 name: cavity of pharynx
 namespace: uberon
@@ -15418,6 +15592,44 @@ relationship: has_developmental_contribution_from UBERON:0005239 {notes="motor",
 relationship: part_of UBERON:0001033 ! gustatory system
 property_value: external_definition "Nerve consisting of branchiomotor and visceral efferent fibers which branch and innervate the smooth muscles and glands of the heart, lungs, esophagus, and stomach as well as some throat muscles. Sensory fibers supply mucosa of the mouth and pharynx.[AAO]" xsd:string {date_retrieved="2012-06-20", external_class="AAO:0010475", ontology="AAO", source="AAO:EJS"}
 property_value: homology_notes "We conclude this section by listing some of the many synapomorphies of craniates, including (...) (5) cranial nerves (...) (reference 1); Phylogenetically, the cranial nerves are thought to have evolved from dorsal and ventral nerves of a few anterior spinal nerves that became incorporated into the braincase. Dorsal and ventral nerves fuse in the trunk but not in the head, and they produce two series: dorsal cranial nerves (V, VII, IX, and X) and ventral cranial nerves (III, IV, VI, and XIII) (reference 2).[well established][VHOG]" xsd:string {date_retrieved="2012-09-17", external_class="VHOG:0000737", ontology="VHOG", source="http://bgee.unil.ch/", source="ISBN:978-0030223693 Liem KF, Bemis WE, Walker WF, Grande L, Functional Anatomy of the Vertebrates: An Evolutionary Perspective (2001) p.43, ISBN:978-0072528305 Kardong KV, Vertebrates: Comparative Anatomy, Function, Evolution (2006) p.625"}
+
+[Term]
+id: UBERON:0001762
+name: turbinate bone
+namespace: uberon
+def: "the small curved bones that extends horizontally along the lateral wall of the nasal passage" [ISBN:0-683-40008-8, MP:0002244]
+subset: pheno_slim
+subset: uberon_slim
+synonym: "concha" RELATED [EMAPA:25093]
+synonym: "ossified nasal turbinal" EXACT []
+synonym: "ossified nasal turbinate" EXACT []
+synonym: "ossified turbinate" EXACT []
+synonym: "turbinal bone" EXACT []
+synonym: "turbinate bone" EXACT [EMAPA:25093]
+xref: EHDAA2:0004101
+xref: EMAPA:25093
+xref: GAID:224
+xref: http://linkedlifedata.com/resource/umls/id/C1266928
+xref: http://www.snomedbrowser.com/Codes/Details/361931007
+xref: MA:0000286
+xref: MESH:D014420
+xref: Nasal:concha
+xref: NCIT:C49594
+xref: OpenCyc:Mx4rv07bVJwpEbGdrcN5Y29ycA
+xref: UMLS:C1266928 {source="ncithesaurus:Nasal_Turbinate"}
+is_a: UBERON:0002513 ! endochondral bone
+is_a: UBERON:0005913 ! zone of bone organ
+is_a: UBERON:0010314 ! structure with developmental contribution from neural crest
+is_a: UBERON:0011164 ! neurocranium bone
+is_a: UBERON:0035612 ! nasal turbinal
+intersection_of: UBERON:0035612 ! nasal turbinal
+intersection_of: composed_primarily_of UBERON:0002481 ! bone tissue
+relationship: depicted_by http://upload.wikimedia.org/wikipedia/commons/e/e9/Gray153.png
+relationship: develops_from UBERON:0035007 ! nasal concha cartilage
+relationship: transformation_of UBERON:0035007 ! nasal concha cartilage
+property_value: external_ontology_notes "FMA considers nasal concha and nasal concha of ethmoid bone to be synonymous. We disambiguate these here" xsd:string {external_ontology="FMA"}
+property_value: taxon_notes "In humans, the turbinates divide the nasal airway into three groove-like air passages -and are responsible for forcing inhaled air to flow in a steady, regular pattern around the largest possible surface of cilia and climate controlling tissue." xsd:string {source="WP,unvetted"}
+property_value: taxon_notes "Turbinals are only ossified in birds and derived synapsids." xsd:string
 
 [Term]
 id: UBERON:0001766
@@ -16211,8 +16423,8 @@ namespace: uberon
 def: "Ganglion containing neurons that receive innervation from parasympathetic neurons in the central nervous system and subserves parasympathetic functions through innervation of smooth muscle, cardiac muscle and glands." [NLXANAT:100303]
 subset: pheno_slim
 subset: uberon_slim
-synonym: "ganglion parasympathicum" RELATED LATIN [http://en.wikipedia.org/wiki/Parasympathetic_ganglion]
 synonym: "ganglion parasympathicum" RELATED [BTO:0001256]
+synonym: "ganglion parasympathicum" RELATED LATIN [http://en.wikipedia.org/wiki/Parasympathetic_ganglion]
 xref: BTO:0001256
 xref: EHDAA2:0001400
 xref: EMAPA:32813
@@ -17872,6 +18084,28 @@ is_a: UBERON:0004814 ! upper respiratory tract epithelium
 intersection_of: UBERON:0000483 ! epithelium
 intersection_of: part_of UBERON:0001728 ! nasopharynx
 relationship: part_of UBERON:0001728 ! nasopharynx
+
+[Term]
+id: UBERON:0001952
+name: epithelium of oropharynx
+namespace: uberon
+def: "An epithelium that is part of a oropharynx [Automatically generated definition]." [OBOL:automatic]
+synonym: "oropharyngeal epithelium" EXACT []
+synonym: "oropharynx epithelial tissue" EXACT [OBOL:automatic]
+synonym: "oropharynx epithelium" EXACT [MA:0001605]
+xref: EHDAA2:0004083
+xref: EMAPA:37705 {source="MA:th"}
+xref: FMA:62453
+xref: http://linkedlifedata.com/resource/umls/id/C1179158
+xref: MA:0001605
+xref: NCIT:C49264
+xref: UMLS:C1179158 {source="ncithesaurus:Oropharynx_Epithelium"}
+is_a: UBERON:0003351 ! pharyngeal epithelium
+is_a: UBERON:0004808 ! gastrointestinal system epithelium
+intersection_of: UBERON:0000483 ! epithelium
+intersection_of: part_of UBERON:0001729 ! oropharynx
+relationship: part_of UBERON:0001729 ! oropharynx
+property_value: external_ontology_notes "Composition varies with species and time. This is classified as nonkeratinizing stratified squamous in FMA, unilaminar in EHDAA2; the majority of the pharyngeal epithelium is unilaminar in zebrafish" xsd:string {external_ontology="FMA"}
 
 [Term]
 id: UBERON:0001956
@@ -20577,6 +20811,28 @@ property_value: external_definition "The terminal region of the mid intestine is
 property_value: homology_notes "Intestinal surface area also is increased in amphibians and reptiles by internal folds and occasionally by a few villi. The intestine can be divided into a small intestine and a slightly wider large intestine.[well established][VHOG]" xsd:string {date_retrieved="2012-09-17", external_class="VHOG:0000055", ontology="VHOG", source="http://bgee.unil.ch/", source="ISBN:978-0030223693 Liem KF, Bemis WE, Walker WF, Grande L, Functional Anatomy of the Vertebrates: An Evolutionary Perspective (2001) p.566"}
 
 [Term]
+id: UBERON:0002109
+name: pair of nares
+namespace: uberon
+def: "Pair of nostrils." [http://en.wikipedia.org/wiki/Nares]
+subset: uberon_slim
+synonym: "nares" RELATED []
+synonym: "nares set" EXACT []
+synonym: "nostrils" EXACT []
+synonym: "pair of nostrils" EXACT []
+synonym: "set of nares" RELATED [FMA:72005]
+xref: FMA:72005
+xref: http://en.wikipedia.org/wiki/Nares
+xref: OpenCyc:Mx4rvViCLpwpEbGdrcN5Y29ycA
+is_a: UBERON:0034925 ! anatomical collection
+intersection_of: UBERON:0034925 ! anatomical collection
+intersection_of: has_member UBERON:0000003 {minCardinality="2", maxCardinality="2"} ! naris
+relationship: has_member UBERON:0000003 ! naris
+relationship: has_part UBERON:0000003 ! naris
+relationship: part_of UBERON:0000004 ! nose
+property_value: external_ontology_notes "this is a 'set of anatomical planes' in FMA" xsd:string {external_ontology="FMA"}
+
+[Term]
 id: UBERON:0002110
 name: gall bladder
 namespace: uberon
@@ -21393,6 +21649,26 @@ relationship: composed_primarily_of UBERON:0002384 ! connective tissue
 relationship: depicted_by Lymphknoten:(Schwein).jpg
 relationship: part_of UBERON:0000029 ! lymph node
 property_value: taxon_notes "from its internal surface are given off a number of membranous processes or trabeculae, consisting, in man, of connective tissue, with a small admixture of plain muscle fibers; but in many of the lower animals composed almost entirely of involuntary muscle[WP]" xsd:string
+
+[Term]
+id: UBERON:0002195
+name: trabecula of lymph node
+namespace: uberon
+def: "Membranous process coming from capsule of lymph node[WP]." [http://en.wikipedia.org/wiki/Lymph_node_trabeculae]
+subset: pheno_slim
+synonym: "lymph node trabecula" EXACT []
+synonym: "lymph node trabeculum" EXACT []
+xref: FMA:74605
+xref: http://en.wikipedia.org/wiki/Lymph_node_trabeculae
+xref: http://linkedlifedata.com/resource/umls/id/C1184179
+xref: MA:0000746
+xref: NCIT:C33035
+xref: UMLS:C1184179 {source="ncithesaurus:Lymph_Node_Trabecula"}
+is_a: UBERON:0000440 ! trabecula
+intersection_of: UBERON:0000440 ! trabecula
+intersection_of: part_of UBERON:0000029 ! lymph node
+relationship: depicted_by http://upload.wikimedia.org/wikipedia/commons/b/b3/Gray598.png
+relationship: part_of UBERON:0000029 ! lymph node
 
 [Term]
 id: UBERON:0002196
@@ -25246,6 +25522,33 @@ intersection_of: part_of UBERON:0001264 ! pancreas
 relationship: part_of UBERON:0001264 ! pancreas
 
 [Term]
+id: UBERON:0002529
+name: limb segment
+namespace: uberon
+def: "A major subdivision of a mature or developing limb, including both skeletal elements (or the mesenchyme that gives rise to the skeletal elements) and associated tissues, such as muscle, connective tissue, integument. Examples: autopod region, zeugopod region, stylopod region, metapodial region, arm region. Excludes the limb girdles." [https://orcid.org/0000-0002-6601-2165]
+synonym: "extremity part" RELATED []
+synonym: "free limb segment" EXACT [FMA:241863]
+synonym: "limb region" RELATED []
+synonym: "region of limb" RELATED []
+synonym: "segment of limb" EXACT []
+synonym: "subdivision of limb" EXACT []
+xref: FMA:241863
+xref: http://linkedlifedata.com/resource/umls/id/C1268195
+xref: MA:0002889
+xref: NCIT:C38630
+xref: UMLS:C1268195 {source="ncithesaurus:Extremity_Part"}
+is_a: UBERON:0010538 ! paired limb/fin segment
+intersection_of: UBERON:0010758 ! subdivision of organism along appendicular axis
+intersection_of: part_of UBERON:0002101 ! limb
+disjoint_from: UBERON:0010912 ! subdivision of skeleton
+relationship: existence_ends_during UBERON:0000066 ! fully formed stage
+relationship: existence_starts_during UBERON:0000068 ! embryo stage
+relationship: has_part UBERON:0014892 ! skeletal muscle organ
+relationship: part_of UBERON:0002101 ! limb
+property_value: editor_note "TODO - align this with the CARO2 class 'appendage segment'; note the FMA class does not appear to require repetition" xsd:string
+property_value: external_ontology_notes "FMA has both limb segment and free limb segment, the former includes the girdles. Note that MA uses the term more generally and includes A,S,Z,S+Z(arm/leg), whereas FMA is just A,S,Z" xsd:string {external_ontology="FMA"}
+
+[Term]
 id: UBERON:0002530
 name: gland
 namespace: uberon
@@ -27027,6 +27330,25 @@ property_value: editor_note "the relationship to mesoderm is weaker than develop
 property_value: external_definition "A mesh-like cell arrangement, less compact than an epithelium. Kimmel et al, 1995.[TAO]" xsd:string {date_retrieved="2012-08-14", external_class="TAO:0000393", ontology="TAO", source="ZFIN:curator"}
 property_value: external_definition "Portion of tissue consisting of loosely organized undifferentiated mesodermal cells that give rise to such structures as connective tissues, blood, lymphatics, bone, and cartilage.[AAO]" xsd:string {date_retrieved="2012-06-20", external_class="AAO:0010427", ontology="AAO", source="AAO:EJS"}
 property_value: has_relational_adjective "mesenchymal" xsd:string
+
+[Term]
+id: UBERON:0003112
+name: olfactory region
+namespace: uberon
+def: "Anatomical cluster that is located in the anterior region of the cranium and provides structural support for the olfactory organ." [TAO:0000351]
+subset: efo_slim
+synonym: "ethmoid region" RELATED [ZFA:0000351]
+xref: AAO:0010206
+xref: EFO:0003525
+xref: NCIT:C98765
+xref: TAO:0000351
+xref: XAO:0003172
+xref: ZFA:0000351
+is_a: UBERON:0034921 ! multi organ part structure
+relationship: part_of UBERON:0001703 ! neurocranium
+relationship: part_of UBERON:0002241 ! chondrocranium
+property_value: external_definition "Anatomical cluster that is located in the anterior region of the cranium and provides structural support for the peripheral olfactory organ.[TAO]" xsd:string {date_retrieved="2012-08-14", external_class="TAO:0000351", ontology="TAO", source="TAO:MAH"}
+property_value: external_definition "Anatomical cluster that is located in the anterior region of the neurocranium and provides structural support for the olfactory organs.[AAO]" xsd:string {date_retrieved="2012-06-20", external_class="AAO:0010206", ontology="AAO", source="AAO:EJS"}
 
 [Term]
 id: UBERON:0003113
@@ -29063,6 +29385,23 @@ is_a: UBERON:0010047 ! oral gland
 intersection_of: UBERON:0002530 ! gland
 intersection_of: part_of UBERON:0001723 ! tongue
 relationship: part_of UBERON:0001723 ! tongue
+
+[Term]
+id: UBERON:0003410
+name: oropharyngeal gland
+namespace: uberon
+def: "A gland that is part of a oropharynx [Automatically generated definition]." [OBOL:automatic]
+subset: organ_slim
+synonym: "gland of oral part of pharynx" EXACT [OBOL:automatic]
+synonym: "gland of oropharynx" EXACT [EMAPA:25095]
+synonym: "oral part of pharynx gland" EXACT [OBOL:automatic]
+synonym: "oropharynx gland" EXACT [OBOL:automatic]
+xref: EMAPA:25095
+is_a: UBERON:0003295 ! pharyngeal gland
+is_a: UBERON:0004119 ! endoderm-derived structure
+intersection_of: UBERON:0002530 ! gland
+intersection_of: part_of UBERON:0001729 ! oropharynx
+relationship: part_of UBERON:0001729 ! oropharynx
 
 [Term]
 id: UBERON:0003412
@@ -34060,6 +34399,24 @@ property_value: editor_note "note the FMA class is more narrow though, and is mo
 property_value: external_ontology_notes "in HP covers eyelid, eyebrow." xsd:string {external_ontology="HP:0000284"}
 
 [Term]
+id: UBERON:0004089
+name: midface
+namespace: uberon
+def: "The middle of the face including the nose and its associated bony structures[MW]." [HP:0000309, http://www.merriam-webster.com/medical/midface]
+subset: pheno_slim
+synonym: "lower face" RELATED []
+synonym: "midface/lower face" RELATED []
+synonym: "snout" RELATED SENSU [MA:0001910]
+xref: EMAPA:32806
+xref: FMA:285406
+xref: MA:0001910
+is_a: UBERON:0001444 ! subdivision of head
+relationship: contributes_to_morphology_of UBERON:0001456 ! face
+relationship: part_of UBERON:0001456 ! face
+property_value: editor_note "this class is currently a union of the snout (e.g. in mouse), the midface and the lower face. Note that in MA, snout includes the whole jaw and should thus be more alike the lower face than the midface, so its placement here is not strictly accurate. In future we might introduce specific classes for each of these, and include the full parthood relationships. if this is done, then care should be taken to preserve inferences such as an abnormality of the lower face being an abnormality of the midface." xsd:string
+property_value: has_relational_adjective "midfacial" xsd:string
+
+[Term]
 id: UBERON:0004111
 name: anatomical conduit
 namespace: uberon
@@ -37001,6 +37358,19 @@ relationship: part_of UBERON:0001280 {source="FMA", source="MA"} ! liver parench
 property_value: curator_notes "should not be confused with the anatomic lobes of the liver (caudate lobe, quadrate lobe, left lobe, and right lobe), or any of the functional lobe classification systems.[WP]" xsd:string
 
 [Term]
+id: UBERON:0004650
+name: tongue keratinized epithelium
+namespace: uberon
+def: "A keratinized stratified squamous epithelium that is part of a tongue." [OBOL:automatic]
+synonym: "keratinized epithelium of tongue" EXACT [FMA:74865]
+xref: FMA:74865
+xref: MA:0002787
+is_a: UBERON:0006919 ! tongue squamous epithelium
+is_a: UBERON:0012329 ! keratinized stratified squamous epithelium
+intersection_of: UBERON:0012329 ! keratinized stratified squamous epithelium
+intersection_of: part_of UBERON:0001723 ! tongue
+
+[Term]
 id: UBERON:0004663
 name: aorta wall
 namespace: uberon
@@ -37203,6 +37573,19 @@ xref: http://www.snomedbrowser.com/Codes/Details/244225009
 xref: MA:0001939
 is_a: UBERON:0001637 ! artery
 relationship: depicted_by http://upload.wikimedia.org/wikipedia/commons/b/b3/Costocervical_trunk_with_branches.png
+
+[Term]
+id: UBERON:0004692
+name: external naris epithelium
+namespace: uberon
+def: "An epithelium that is part of an external naris [Automatically generated definition]." [OBOL:automatic]
+xref: EMAPA:18596
+xref: MA:0001321
+is_a: UBERON:0019306 ! nose epithelium
+is_a: UBERON:0035036 ! naris epithelium
+intersection_of: UBERON:0000483 ! epithelium
+intersection_of: part_of UBERON:0005928 ! external naris
+relationship: part_of UBERON:0005928 ! external naris
 
 [Term]
 id: UBERON:0004695
@@ -37752,6 +38135,43 @@ relationship: has_member UBERON:0000982 ! skeletal joint
 relationship: part_of UBERON:0001434 {source="FMA"} ! skeletal system
 
 [Term]
+id: UBERON:0004771
+name: posterior nasal aperture
+namespace: uberon
+def: "Opening/conduit between the nasal cavity and the nasopharynx[AAO] The choanae are separated by the vomer[WP]." [AAO:0000093, http://en.wikipedia.org/wiki/Posterior_nasal_apertures]
+subset: pheno_slim
+synonym: "choana" BROAD [http://en.wikipedia.org/wiki/Choane, XAO:0000277]
+synonym: "choanae" RELATED PLURAL [VHOG:0000545]
+synonym: "internal naris" BROAD [MA:0001323]
+synonym: "nasopharyngeal naris" RELATED []
+synonym: "posterior choana" RELATED [HP:0004496]
+synonym: "posterior naris" RELATED [VHOG:0000545]
+synonym: "posterior nasal apperture" EXACT [XAO:0000277]
+xref: AAO:0000093
+xref: EHDAA2:0000242
+xref: EHDAA:7842
+xref: EMAPA:17849
+xref: FMA:53143
+xref: http://en.wikipedia.org/wiki/Posterior_nasal_apertures
+xref: http://www.snomedbrowser.com/Codes/Details/244507001
+xref: MA:0001323
+xref: VHOG:0000545
+xref: XAO:0000277
+is_a: UBERON:0010425 ! internal naris
+is_a: UBERON:0036253 ! orifice of skull
+intersection_of: UBERON:0010425 ! internal naris
+intersection_of: connects UBERON:0001707 ! nasal cavity
+intersection_of: connects UBERON:0001728 ! nasopharynx
+relationship: connects UBERON:0001728 ! nasopharynx
+relationship: depicted_by http://upload.wikimedia.org/wikipedia/commons/8/87/Gray855.png
+relationship: part_of UBERON:0003128 ! cranium
+property_value: external_definition "One of the paired openings from the nasal cavities into the pharynx. [Bemis_WE, Functional_Anatomy_of_the_Vertebrates:_An_Evolutionary_Perspective, Glossary_G-6, Grande_L, Liem_KF, Third_Edition_(2001)_Orlando_Fla.:_Harcourt_College_Publishers, Walker_WF][VHOG]" xsd:string {date_retrieved="2012-09-17", external_class="VHOG:0000545", ontology="VHOG", source="http://bgee.unil.ch/"}
+property_value: external_definition "Opening between the nasal cavity and the nasopharynx.[AAO]" xsd:string {date_retrieved="2012-06-20", external_class="AAO:0000093", ontology="AAO", source="AAO:LAP"}
+property_value: homology_notes "The choana, a unique 'internal nostril' opening from the nasal sac into the roof of the mouth, is a key part of the tetrapod (land vertebrate) respiratory system. It was the first component of the tetrapod body plan to evolve, well before the origin of limbs, and is therefore crucial to our understanding of the beginning of the fish-tetrapod transition. (...) Here we present new material of Kenichthys, a 395-million-year-old fossil fish from China, that provides direct evidence for the origin of the choana and establishes its homology: it is indeed a displaced posterior external nostril that, during a brief transitional stage illustrated by Kenichthys, separated the maxilla from the premaxilla.[well established][VHOG]" xsd:string {date_retrieved="2012-09-17", external_class="VHOG:0000545", ontology="VHOG", source="http://bgee.unil.ch/", source="DOI:10.1038/nature02843 Zhu M, Ahlberg PE, The origin of the internal nostril in tetrapodes. Nature (2004)"}
+property_value: taxon_notes "Fish don't have choanae, instead they have two pairs of external nostrils" xsd:string {source="WP"}
+property_value: taxon_notes "In addition to tetrapods, the lungfish has internal nostrils too. In tetrapods the exhalant nostril (choana) empties into the buccal cavity." xsd:string
+
+[Term]
 id: UBERON:0004777
 name: respiratory system submucosa
 namespace: uberon
@@ -38007,6 +38427,27 @@ is_a: UBERON:0019319 ! exocrine gland of integumental system
 intersection_of: UBERON:0000414 ! mucous gland
 intersection_of: part_of UBERON:0002097 ! skin of body
 property_value: editor_note "See comments for 'skin mucus'" xsd:string
+
+[Term]
+id: UBERON:0004791
+name: thymus trabecula
+namespace: uberon
+def: "the thymic connective tissue which extends into the parenchyma" [ISBN:0-397-51047-0, MGI:cwg, MP:0002370]
+subset: pheno_slim
+synonym: "thymic trabecula" EXACT [OBOL:automatic]
+synonym: "thymus gland trabecula" EXACT [OBOL:automatic]
+synonym: "trabecula of thymus" EXACT [OBOL:automatic]
+synonym: "trabecula of thymus gland" EXACT [OBOL:automatic]
+xref: http://linkedlifedata.com/resource/umls/id/C1515431
+xref: MA:0002674
+xref: NCIT:C33773
+xref: UMLS:C1515431 {source="ncithesaurus:Thymic_Trabecula"}
+is_a: UBERON:0000077 ! mixed endoderm/mesoderm-derived structure
+is_a: UBERON:0000440 ! trabecula
+intersection_of: UBERON:0000440 ! trabecula
+intersection_of: part_of UBERON:0002370 ! thymus
+relationship: contributes_to_morphology_of UBERON:0002370 ! thymus
+relationship: part_of UBERON:0002370 {source="MA"} ! thymus
 
 [Term]
 id: UBERON:0004792
@@ -40544,6 +40985,35 @@ is_a: UBERON:0004119 ! endoderm-derived structure
 intersection_of: UBERON:0000344 ! mucosa
 intersection_of: part_of UBERON:0001728 ! nasopharynx
 relationship: part_of UBERON:0001728 ! nasopharynx
+
+[Term]
+id: UBERON:0005023
+name: mucosa of oropharynx
+namespace: uberon
+def: "A mucosa that is part of a oropharynx [Automatically generated definition]." [OBOL:automatic]
+synonym: "mucosa of oral part of pharynx" EXACT [OBOL:automatic]
+synonym: "mucosa of organ of oral part of pharynx" EXACT [OBOL:automatic]
+synonym: "mucosa of organ of oropharynx" EXACT [OBOL:automatic]
+synonym: "mucous membrane of oral part of pharynx" EXACT [OBOL:automatic]
+synonym: "mucous membrane of oropharynx" EXACT [OBOL:automatic]
+synonym: "oral part of pharynx mucosa" EXACT [OBOL:automatic]
+synonym: "oral part of pharynx mucosa of organ" EXACT [OBOL:automatic]
+synonym: "oral part of pharynx mucous membrane" EXACT [OBOL:automatic]
+synonym: "oral part of pharynx organ mucosa" EXACT [OBOL:automatic]
+synonym: "organ mucosa of oral part of pharynx" EXACT [OBOL:automatic]
+synonym: "organ mucosa of oropharynx" EXACT [OBOL:automatic]
+synonym: "oropharynx mucosa" EXACT [OBOL:automatic]
+synonym: "oropharynx mucosa of organ" EXACT [OBOL:automatic]
+synonym: "oropharynx mucous membrane" EXACT [OBOL:automatic]
+synonym: "oropharynx organ mucosa" EXACT [OBOL:automatic]
+xref: FMA:54933
+xref: http://www.snomedbrowser.com/Codes/Details/144632009
+is_a: UBERON:0000355 ! pharyngeal mucosa
+is_a: UBERON:0004119 ! endoderm-derived structure
+is_a: UBERON:0004786 ! gastrointestinal system mucosa
+intersection_of: UBERON:0000344 ! mucosa
+intersection_of: part_of UBERON:0001729 ! oropharynx
+relationship: part_of UBERON:0001729 ! oropharynx
 
 [Term]
 id: UBERON:0005032
@@ -43970,6 +44440,39 @@ relationship: part_of UBERON:0003064 {source="ZFA"} ! intermediate mesoderm
 property_value: external_definition "Portion of tissue that consists of the mesenchymal precursor to the pronephric kidney and that begins to separate from the intermediate mesoderm at NF stage 21 and epithelializes by NF stage 30.[AAO]" xsd:string {date_retrieved="2012-06-20", external_class="AAO:0011090", ontology="AAO", source="XAO:curator"}
 
 [Term]
+id: UBERON:0005725
+name: olfactory system
+namespace: uberon
+def: "A sensory system that is capable of olfacttion (the sensory perception of smell)." [http://orcid.org/0000-0002-6601-2165]
+subset: efo_slim
+subset: pheno_slim
+subset: vertebrate_core
+xref: AAO:0000334
+xref: AAO:0000978
+xref: BILA:0000144
+xref: EFO:0001973
+xref: EMAPA:36004
+xref: FMA:7190
+xref: http://linkedlifedata.com/resource/umls/id/C0228065
+xref: http://www.snomedbrowser.com/Codes/Details/362290002
+xref: MA:0002445
+xref: NCIT:C94501
+xref: NLXANAT:090806
+xref: Olfactory:system
+xref: OpenCyc:Mx4rvViw75wpEbGdrcN5Y29ycA
+xref: TAO:0001149
+xref: UMLS:C0228065 {source="ncithesaurus:Olfactory_System"}
+xref: XAO:0003196
+xref: ZFA:0001149
+is_a: UBERON:0005726 ! chemosensory system
+relationship: existence_ends_during UBERON:0000066 ! fully formed stage
+property_value: editor_note "consider splitting into main and accessory. See also: vomeronasal organ" xsd:string
+property_value: editor_note "we make the relationship to nervous system 'overlaps', as the olfactory system includes e.g. apertures in the cranium that are not part of the nervous system" xsd:string
+property_value: external_definition "The olfactory system is the sensory system used for olfaction, or the sense of smell. Most mammals and reptiles have two distinct parts to their olfactory system: a main olfactory system and an accessory olfactory system. The main olfactory system detects volatile, airborne substances, while the accessory olfactory system senses fluid-phase stimuli. Behavioral evidence indicates that most often, the stimuli detected by the accessory olfactory system are pheromones. The olfactory system is often spoken of along with the gustatory system as the chemosensory senses because both transduce chemical signals into perception[WP][Wikipedia:Olfactory_system]." xsd:string {source="Olfactory:system"}
+property_value: external_definition "The sensory system used for olfaction (the sense of smell).[AAO]" xsd:string {date_retrieved="2012-06-20", external_class="AAO:0000978", ontology="AAO", source="AAO:EJS"}
+property_value: taxon_notes "In mammals, the main olfactory system detects odorants that are inhaled through the nose, where they contact the main olfactory epithelium, which contains various olfactory receptors. These olfactory receptors are membrane proteins of bipolar olfactory receptor neurons in the olfactory epithelium. Rather than binding specific ligands like most receptors, olfactory receptors display affinity for a range of odor molecules. Olfactory neurons transduce receptor activation into electrical signals in neurons. The signals travel along the olfactory nerve, which belongs to the peripheral nervous system. This nerve terminates in the olfactory bulb, which belongs to the central nervous system. The complex set of olfactory receptors on different olfactory neurons can distinguish a new odor from the background environmental odors and determine the concentration of the odor[WP]." xsd:string
+
+[Term]
 id: UBERON:0005726
 name: chemosensory system
 namespace: uberon
@@ -44616,6 +45119,51 @@ relationship: composed_primarily_of UBERON:0002481 ! bone tissue
 relationship: part_of UBERON:0001474 ! bone element
 
 [Term]
+id: UBERON:0005928
+name: external naris
+namespace: uberon
+def: "A naris that provides one of the small external openings of the head that give passage to air for breathing." [http://en.wikipedia.org/wiki/Nostril, http://orcid.org/0000-0002-6601-2165]
+subset: pheno_slim
+subset: vertebrate_core
+synonym: "anterior nares" RELATED PLURAL [VHOG:0000544]
+synonym: "anterior naris" RELATED [ZFA:0001427]
+synonym: "blowhole" NARROW [http://en.wikipedia.org/wiki/Blowhole_(anatomy)]
+synonym: "external nares" EXACT PLURAL []
+synonym: "naris" BROAD [ZFA:0000550]
+synonym: "nostril" EXACT [FMA:59645, XAO:0003033]
+xref: AAO:0000024
+xref: AAO:0000983
+xref: AAO:0010358
+xref: EHDAA2:0001275
+xref: EHDAA:9085
+xref: EMAPA:17848
+xref: FMA:59645
+xref: http://en.wikipedia.org/wiki/Nostril
+xref: http://linkedlifedata.com/resource/umls/id/C0595944
+xref: http://www.snomedbrowser.com/Codes/Details/276165005
+xref: MA:0001320
+xref: NCIT:C33178
+xref: OpenCyc:Mx4rvViCLpwpEbGdrcN5Y29ycA
+xref: TAO:0000550
+xref: UMLS:C0595944 {source="ncithesaurus:Nostril"}
+xref: VHOG:0000544
+xref: XAO:0003033
+xref: ZFA:0000550
+is_a: UBERON:0000003 ! naris
+is_a: UBERON:0003102 {source="ZFA"} ! surface structure
+is_a: UBERON:0004121 ! ectoderm-derived structure
+intersection_of: UBERON:0000003 ! naris
+intersection_of: connects UBERON:0001707 ! nasal cavity
+intersection_of: connects UBERON:0013514 ! space surrounding organism
+relationship: connects UBERON:0013514 ! space surrounding organism
+relationship: contributes_to_morphology_of UBERON:0000004 ! nose
+relationship: part_of UBERON:0000004 ! nose
+property_value: axiom_lost_from_external_ontology "relationship loss: subclass nasal opening (AAO:0000316)[AAO]" xsd:string {date_retrieved="2012-06-20", external_class="AAO:0000024", ontology="AAO"}
+property_value: external_definition "Hole on the nasal capsule that connects the nasal cavity with the exterior.[AAO]" xsd:string {date_retrieved="2012-06-20", external_class="AAO:0000024", ontology="AAO", source="AAO:LAP"}
+property_value: homology_notes "In a tetrapod, the nasal sac has an external naris (homologous with the anterior naris of the fish) (...).[well established][VHOG]" xsd:string {date_retrieved="2012-09-17", external_class="VHOG:0000544", ontology="VHOG", source="http://bgee.unil.ch/", source="ISBN:978-0072528305 Kardong KV, Vertebrates: Comparative Anatomy, Function, Evolution (2006) p.257 and Figure 7.27"}
+property_value: taxon_notes "Fish have two pairs of external nostrils." xsd:string
+
+[Term]
 id: UBERON:0005944
 name: axial skeleton plus cranial skeleton
 namespace: uberon
@@ -44642,6 +45190,21 @@ relationship: develops_from UBERON:0003089 ! sclerotome
 relationship: part_of UBERON:0011137 ! axial skeletal system
 property_value: external_definition "Skeletal subdivision of the central body axis including the cranium, vertebrae, notochord, ribs, and sternum.[VSAO]" xsd:string {date_retrieved="2012-08-14", external_class="VSAO:0000056", ontology="VSAO", source="PSPUB:0000170"}
 property_value: seeAlso http://purl.obolibrary.org/obo/uberon/docs/The-axial-skeleton xsd:anyURI
+
+[Term]
+id: UBERON:0005945
+name: neurocranial trabecula
+namespace: uberon
+subset: efo_slim
+synonym: "neurocranial trabeculae" EXACT PLURAL [ZFA:0001321]
+synonym: "trabecula" BROAD SENSU [ZFA:0001321]
+synonym: "trabecular cartilage" BROAD [ZFA:0001321]
+xref: EFO:0003677
+xref: TAO:0001321
+xref: ZFA:0001321
+is_a: UBERON:0000440 ! trabecula
+is_a: UBERON:0003932 {source="ZFA"} ! cartilage element of chondrocranium
+relationship: part_of UBERON:0003112 {source="ZFA"} ! olfactory region
 
 [Term]
 id: UBERON:0005953
@@ -45376,6 +45939,21 @@ xref: UMLS:C1518430 {source="ncithesaurus:Notochordal_Process"}
 xref: VHOG:0001213
 is_a: UBERON:0005423 ! developing anatomical structure
 relationship: develops_from UBERON:0000924 {source="EHDAA2"} ! ectoderm
+
+[Term]
+id: UBERON:0006272
+name: oronasal cavity
+namespace: uberon
+subset: emapa_ehdaa2
+xref: EHDAA2:0001331
+xref: EHDAA:5882
+xref: EMAPA:17200
+xref: VHOG:0001352
+is_a: UBERON:0002553 ! anatomical cavity
+relationship: developmentally_replaces UBERON:0009672 ! oronasal membrane
+relationship: part_of UBERON:0000166 ! oral opening
+relationship: part_of UBERON:0000922 ! embryo
+property_value: taxon_notes "In humans, the oronasal membrane ruptures during the seventh week, producing a single, large oronasal cavity" xsd:string {source="http://cwx.prenhall.com/bookbind/pubbooks/martini10/chapter24/custom3/deluxe-content.html"}
 
 [Term]
 id: UBERON:0006273
@@ -47126,6 +47704,22 @@ is_a: UBERON:0004804 ! oviduct epithelium
 intersection_of: UBERON:0000483 ! epithelium
 intersection_of: part_of UBERON:0000995 ! uterus
 relationship: part_of UBERON:0000995 ! uterus
+
+[Term]
+id: UBERON:0006956
+name: buccal mucosa
+namespace: uberon
+def: "The inner lining of the cheeks and lips." [http://www.medterms.com/]
+subset: pheno_slim
+xref: BTO:0003833
+xref: CALOHA:TS-2349
+xref: FMA:59785
+xref: http://linkedlifedata.com/resource/umls/id/C1578559
+xref: http://www.snomedbrowser.com/Codes/Details/16811007
+xref: NCIT:C12505
+xref: UMLS:C1578559 {source="ncithesaurus:Buccal_Mucosa"}
+is_a: UBERON:0003729 ! mouth mucosa
+relationship: part_of UBERON:0001567 ! cheek
 
 [Term]
 id: UBERON:0006957
@@ -49173,6 +49767,28 @@ intersection_of: part_of UBERON:0002358 ! peritoneum
 relationship: part_of UBERON:0001178 {source="FMA"} ! visceral peritoneum
 
 [Term]
+id: UBERON:0007827
+name: external nose
+namespace: uberon
+def: "External part of the nose containing the external nares." [http://orcid.org/0000-0002-6601-2165]
+subset: pheno_slim
+synonym: "nose" RELATED []
+xref: EMAPA:37831 {source="MA:th"}
+xref: FMA:59515
+xref: http://linkedlifedata.com/resource/umls/id/C0458561
+xref: http://www.snomedbrowser.com/Codes/Details/265785009
+xref: NCIT:C32566
+xref: UMLS:C0458561 {source="ncithesaurus:External_Nose"}
+is_a: UBERON:0004121 ! ectoderm-derived structure
+is_a: UBERON:0034929 ! external soft tissue zone
+intersection_of: UBERON:0034929 ! external soft tissue zone
+intersection_of: has_part UBERON:0005928 ! external naris
+intersection_of: part_of UBERON:0000004 ! nose
+relationship: has_part UBERON:0005928 ! external naris
+relationship: part_of UBERON:0000004 ! nose
+property_value: external_definition "Subdivision of face, the exterior of the nose, which consists of a root, dorsum, tip, columella, and right and left alae[FMA:59515]." xsd:string {source="FMA:59515"}
+
+[Term]
 id: UBERON:0007828
 name: girdle bone/zone
 namespace: uberon
@@ -49657,6 +50273,17 @@ intersection_of: part_of UBERON:0000310 ! breast
 relationship: part_of UBERON:0000310 ! breast
 
 [Term]
+id: UBERON:0008420
+name: buccal epithelium
+namespace: uberon
+def: "An epithelium that is part of a buccal mucosa." [OBOL:automatic]
+xref: BTO:0004803
+is_a: UBERON:0002424 ! oral epithelium
+intersection_of: UBERON:0000483 ! epithelium
+intersection_of: part_of UBERON:0006956 ! buccal mucosa
+relationship: part_of UBERON:0006956 {source="BTO"} ! buccal mucosa
+
+[Term]
 id: UBERON:0008429
 name: cervical vertebral foramen
 namespace: uberon
@@ -49753,6 +50380,50 @@ intersection_of: UBERON:0002532 ! epiblast (generic)
 intersection_of: develops_from UBERON:0000087 ! inner cell mass
 relationship: develops_from UBERON:0000087 {source="Wikipedia"} ! inner cell mass
 relationship: part_of UBERON:0000091 ! bilaminar disc
+
+[Term]
+id: UBERON:0008784
+name: lower limb segment
+namespace: uberon
+def: "A limb segment that is part of a hindlimb." [OBOL:automatic]
+synonym: "free lower limb segment" EXACT [FMA:24877]
+synonym: "free lower limb subdivision" EXACT [FMA:24877]
+synonym: "segment of free lower limb" EXACT [FMA:24877]
+synonym: "subdivision of free lower limb" EXACT [FMA:24877]
+xref: FMA:24877
+is_a: UBERON:0002529 ! limb segment
+intersection_of: UBERON:0002529 ! limb segment
+intersection_of: part_of UBERON:0002103 ! hindlimb
+relationship: part_of UBERON:0002103 ! hindlimb
+
+[Term]
+id: UBERON:0008785
+name: upper limb segment
+namespace: uberon
+def: "A limb segment that is part of a forelimb." [OBOL:automatic]
+synonym: "free upper limb segment" EXACT [FMA:24876]
+synonym: "free upper limb subdivision" EXACT [FMA:24876]
+synonym: "segment of free upper limb" EXACT [FMA:24876]
+synonym: "subdivision of free upper limb" EXACT [FMA:24876]
+xref: FMA:24876
+is_a: UBERON:0002529 ! limb segment
+intersection_of: UBERON:0002529 ! limb segment
+intersection_of: part_of UBERON:0002102 ! forelimb
+relationship: part_of UBERON:0002102 ! forelimb
+
+[Term]
+id: UBERON:0008803
+name: skin of cheek
+namespace: uberon
+def: "A zone of skin that is part of a cheek." [OBOL:automatic]
+subset: pheno_slim
+synonym: "cheek skin" EXACT [FMA:24759]
+xref: FMA:24759
+xref: http://www.snomedbrowser.com/Codes/Details/181472009
+is_a: UBERON:1000021 ! skin of face
+intersection_of: UBERON:0000014 ! zone of skin
+intersection_of: part_of UBERON:0001567 ! cheek
+relationship: part_of UBERON:0001567 ! cheek
 
 [Term]
 id: UBERON:0008811
@@ -51516,6 +52187,37 @@ relationship: part_of UBERON:0001052 ! rectum
 relationship: part_of UBERON:0012465 {source="cjm"} ! lumen of terminal part of digestive tract
 
 [Term]
+id: UBERON:0009671
+name: nasal fin
+namespace: uberon
+def: "The nasal fin is an epithelial seam that develops by fusion between the epithelial linings of the medial and lateral nasal swellings. Shortly after its formation the nasal fin regresses and is replaced by mesenchyme, with exception of its most posterior portion which remains as the bucconasal membrane." [https://doi.org/10.1002/aja.1001500308]
+xref: EHDAA2:0004548
+xref: FMA:295940
+is_a: UBERON:0005384 ! nasal cavity epithelium
+is_a: UBERON:0011642 ! oral epithelium from ectoderm
+relationship: existence_ends_during UBERON:0000068 ! embryo stage
+
+[Term]
+id: UBERON:0009672
+name: oronasal membrane
+namespace: uberon
+def: "The oronasal membrane separates the oral cavity and nasal cavity." [http://cwx.prenhall.com/bookbind/pubbooks/martini10/chapter24/custom3/deluxe-content.html]
+synonym: "bucconasal membrane" EXACT [EHDAA:7840]
+xref: EHDAA2:0000188
+xref: EHDAA:7840
+xref: EHDAA:7984
+xref: FMA:295942
+is_a: UBERON:0000481 {source="EHDAA2"} ! multi-tissue structure
+is_a: UBERON:0004119 ! endoderm-derived structure
+is_a: UBERON:0004121 ! ectoderm-derived structure
+is_a: UBERON:0010314 ! structure with developmental contribution from neural crest
+relationship: develops_from UBERON:0009671 {notes="posterior portion", source="EHDAA2"} ! nasal fin
+relationship: part_of UBERON:0000166 {source="EHDAA2"} ! oral opening
+relationship: part_of UBERON:0005384 {source="EHDAA2"} ! nasal cavity epithelium
+property_value: editor_note "split into two?" xsd:string
+property_value: taxon_notes "In humans, the oronasal membrane ruptures during the seventh week, producing a single, large oronasal cavity" xsd:string
+
+[Term]
 id: UBERON:0009676
 name: early telencephalic vesicle
 namespace: uberon
@@ -52245,6 +52947,23 @@ relationship: luminal_space_of UBERON:0001255 ! urinary bladder
 relationship: part_of UBERON:0001255 {source="FMA"} ! urinary bladder
 
 [Term]
+id: UBERON:0009959
+name: lumen of oropharynx
+namespace: uberon
+def: "A anatomical space that is enclosed by a oropharynx." [OBOL:automatic]
+synonym: "oropharyngeal cavity" EXACT [EHDAA2:0004556]
+synonym: "oropharynx lumen" EXACT [FMA:55095]
+xref: EHDAA2:0004556
+xref: FMA:55095
+is_a: UBERON:0000464 ! anatomical space
+intersection_of: UBERON:0000464 ! anatomical space
+intersection_of: luminal_space_of UBERON:0001729 ! oropharynx
+relationship: develops_from UBERON:0006272 {source="EHDAA2"} ! oronasal cavity
+relationship: luminal_space_of UBERON:0001729 ! oropharynx
+relationship: part_of UBERON:0001729 ! oropharynx
+relationship: part_of UBERON:0001731 ! cavity of pharynx
+
+[Term]
 id: UBERON:0009970
 name: epithelium of pancreatic duct
 namespace: uberon
@@ -52331,6 +53050,20 @@ xref: FBbt:00007229
 is_a: UBERON:0000062 {source="CARO"} ! organ
 is_a: UBERON:0034922 {source="CARO"} ! cell cluster
 disjoint_from: UBERON:0011216 {source="FBbt"} ! organ system subdivision
+
+[Term]
+id: UBERON:0010023
+name: dorsal part of pharyngeal pouch 2
+namespace: uberon
+synonym: "dorsal 2nd branchial pouch" EXACT []
+synonym: "dorsal branchial pouch 2 endoderm" RELATED []
+synonym: "dorsal elongation of second pouch endoderm" RELATED []
+synonym: "dorsal pharyngeal pouch 2" EXACT []
+synonym: "dorsal pharyngeal pouch 2 endoderm" RELATED []
+is_a: UBERON:0003258 ! endoderm of foregut
+is_a: UBERON:0005291 ! embryonic tissue
+relationship: part_of UBERON:0007123 ! pharyngeal pouch 2
+property_value: development_notes "in humans, persists as the tonsillar fossa - the endodermal lining covers the mesodermal lymphatic tissue to form the palatine tonsil[ISBN:1607950324]. the dorsal elongation of the second pouch endoderm of all mammals, with the exception of rodents, gives rise to the epithelial lining of palatine tonsils; in rodents, the ventral portion of the second pouch appears to degenerate whereas the remaining part is incorporated into the lateral border of the pharynx; it appears that rodents no longer require tonsils as their function is carried out by the NALT (Nose/Nasal-Associated Lymphoid Tissue) system in the upper respiratory tract" xsd:string {source="MP"}
 
 [Term]
 id: UBERON:0010031
@@ -52872,6 +53605,18 @@ intersection_of: part_of UBERON:0001456 ! face
 relationship: part_of UBERON:0001456 ! face
 
 [Term]
+id: UBERON:0010183
+name: liver trabecula
+namespace: uberon
+def: "A trabecula that is part of a liver" [GO:0060344, OBOL:automatic]
+synonym: "hepatic trabecula" RELATED []
+is_a: UBERON:0000440 ! trabecula
+is_a: UBERON:0004119 ! endoderm-derived structure
+intersection_of: UBERON:0000440 ! trabecula
+intersection_of: part_of UBERON:0002107 ! liver
+relationship: part_of UBERON:0002107 ! liver
+
+[Term]
 id: UBERON:0010186
 name: male urethral gland
 namespace: uberon
@@ -53390,6 +54135,7 @@ synonym: "stratified squamous nonkeratinizing epithelium" EXACT [http://orcid.or
 xref: FMA:45569
 xref: Nonkeratinized
 is_a: UBERON:0006915 {source="FMA"} ! stratified squamous epithelium
+disjoint_from: UBERON:0012329 ! keratinized stratified squamous epithelium
 
 [Term]
 id: UBERON:0010312
@@ -53859,6 +54605,47 @@ relationship: luminal_space_of UBERON:0000057 ! urethra
 relationship: part_of UBERON:0000057 ! urethra
 
 [Term]
+id: UBERON:0010399
+name: spleen trabecular artery
+namespace: uberon
+def: "one of the branches of the splenic artery[MP]" [http://en.wikipedia.org/wiki/Trabecular_arteries, MP:0002354]
+subset: pheno_slim
+synonym: "trabecular artery" RELATED []
+xref: http://linkedlifedata.com/resource/umls/id/C1710159
+xref: MA:0000759
+xref: NCIT:C49775
+xref: Trabecular:arteries
+xref: UMLS:C1710159 {source="ncithesaurus:Splenic_Trabecular_Artery"}
+is_a: UBERON:0003497 ! abdomen blood vessel
+is_a: UBERON:0004573 ! systemic artery
+intersection_of: UBERON:0001637 ! artery
+intersection_of: part_of UBERON:0001265 ! trabecula of spleen
+relationship: branching_part_of UBERON:0001194 {source="MP"} ! splenic artery
+relationship: contributes_to_morphology_of UBERON:0002106 ! spleen
+relationship: part_of UBERON:0001194 ! splenic artery
+relationship: part_of UBERON:0001265 ! trabecula of spleen
+property_value: external_definition "When the splenic artery passes into the trabecula of the spleen and branches, they become known as the trabecular arteries. When these arteries then reach the white pulp, and become covered with Periarteriolar lymphoid sheaths, the name changes again to central arteries (or central arterioles). Branches of the central arteries are given to the red pulp, and these are called penicillar arteries).[Wikipedia]" xsd:string {ontology="Wikipedia", source="Trabecular:arteries"}
+
+[Term]
+id: UBERON:0010400
+name: spleen trabecular vein
+namespace: uberon
+def: "one of the veins that feed the splenic vein" [http://en.wikipedia.org/wiki/Trabecular_veins, MP:0002228]
+subset: pheno_slim
+synonym: "trabecular vein" RELATED [http://en.wikipedia.org/wiki/Trabecular_veins]
+xref: http://linkedlifedata.com/resource/umls/id/C1710160
+xref: MA:0000760
+xref: NCIT:C49779
+xref: Trabecular:veins
+xref: UMLS:C1710160 {source="ncithesaurus:Splenic_Trabecular_Vein"}
+is_a: UBERON:0013126 ! vein of abdomen
+intersection_of: UBERON:0001638 ! vein
+intersection_of: part_of UBERON:0001265 ! trabecula of spleen
+relationship: contributes_to_morphology_of UBERON:0002106 ! spleen
+relationship: part_of UBERON:0001265 ! trabecula of spleen
+property_value: external_definition "The trabecular veins are the largest veins inside the spleen. It drains the blood collected in the sinuses of the pulp.[Wikipedia]" xsd:string {ontology="Wikipedia", source="Trabecular:veins"}
+
+[Term]
 id: UBERON:0010409
 name: ocular surface region
 namespace: uberon
@@ -53887,6 +54674,27 @@ is_a: UBERON:0000161 ! orifice
 intersection_of: UBERON:0000161 ! orifice
 intersection_of: part_of UBERON:0001556 ! lower urinary tract
 relationship: part_of UBERON:0001556 ! lower urinary tract
+
+[Term]
+id: UBERON:0010425
+name: internal naris
+namespace: uberon
+def: "A naris that is located inside the nasal cavity and connects to the pharynx." [http://orcid.org/0000-0002-6601-2165]
+subset: pheno_slim
+synonym: "choana" EXACT []
+synonym: "choanae" RELATED PLURAL []
+synonym: "internal choana" EXACT []
+synonym: "internal nares" RELATED PLURAL []
+synonym: "internal nostril" RELATED []
+xref: NCIT:C32856
+is_a: UBERON:0000003 ! naris
+intersection_of: UBERON:0000003 ! naris
+intersection_of: connects UBERON:0001707 ! nasal cavity
+intersection_of: connects UBERON:0006562 ! pharynx
+relationship: connects UBERON:0006562 ! pharynx
+relationship: fma_set_term FMA:76585
+property_value: has_relational_adjective "choanal" xsd:string
+property_value: taxon_notes "In humans the only internal naris is the posterior nasal aperture, which connects to the nasopharynx" xsd:string
 
 [Term]
 id: UBERON:0010427
@@ -54101,6 +54909,19 @@ intersection_of: part_of UBERON:0000080 ! mesonephros
 relationship: part_of UBERON:0000080 ! mesonephros
 
 [Term]
+id: UBERON:0010538
+name: paired limb/fin segment
+namespace: uberon
+def: "An appendage segment that is part of a limb/fin." [OBOL:automatic]
+subset: homology_grouping
+synonym: "limb/fin segment" EXACT []
+is_a: UBERON:0010758 ! subdivision of organism along appendicular axis
+intersection_of: UBERON:0010758 ! subdivision of organism along appendicular axis
+intersection_of: part_of UBERON:0004708 ! paired limb/fin
+disjoint_from: UBERON:0010912 ! subdivision of skeleton
+relationship: part_of UBERON:0004708 ! paired limb/fin
+
+[Term]
 id: UBERON:0010707
 name: appendage girdle complex
 namespace: uberon
@@ -54284,6 +55105,35 @@ property_value: has_relational_adjective "meningeal" xsd:string
 property_value: taxon_notes "In some primitive organisms, the meningeal cluster includes only the primitive meninx" xsd:string
 
 [Term]
+id: UBERON:0010758
+name: subdivision of organism along appendicular axis
+namespace: uberon
+def: "A major subdivision of an organism that divides an organism along an axis perpedicular to the main body anterior-posterior axis. In vertebrates, this is typically a fin or limb segment. In insects, this includes segments of appendages such as antennae, as well as segments of the insect leg." [https://orcid.org/0000-0002-6601-2165]
+subset: upper_level
+synonym: "appendage segment" EXACT [FBbt:00007018]
+synonym: "appendicular segment" EXACT []
+xref: FBbt:00007018
+is_a: UBERON:0000475 ! organism subdivision
+relationship: part_of UBERON:0000026 ! appendage
+
+[Term]
+id: UBERON:0010854
+name: skin of front of neck
+namespace: uberon
+def: "A skin of neck that is part of a throat." [OBOL:automatic]
+synonym: "skin of anterior neck" EXACT [FMA:23023]
+synonym: "skin of anterior part of neck" EXACT [FMA:23023]
+synonym: "skin of anterior portion of neck" EXACT [FMA:23023]
+synonym: "skin of throat" EXACT []
+xref: FMA:23023
+xref: http://www.snomedbrowser.com/Codes/Details/181482005
+is_a: UBERON:0001417 ! skin of neck
+intersection_of: UBERON:0001417 ! skin of neck
+intersection_of: part_of UBERON:0000341 ! throat
+relationship: part_of UBERON:0000341 ! throat
+relationship: part_of UBERON:0011154 ! gular region
+
+[Term]
 id: UBERON:0010881
 name: limb cartilage element
 namespace: uberon
@@ -54399,6 +55249,22 @@ intersection_of: part_of UBERON:0010708 ! pectoral complex
 relationship: part_of UBERON:0014793 {source="prolog"} ! musculature of pectoral complex
 property_value: editor_note "the MA class belongs here, based on its current child classes" xsd:string
 property_value: external_definition "Muscles of the pectoral girdle, arm, forearm, and hand (brachium, antebrachium, manus respectively).[AAO]" xsd:string {date_retrieved="2012-06-20", external_class="AAO:0010687", ontology="AAO", source="AAO:EJS"}
+
+[Term]
+id: UBERON:0010893
+name: median external naris
+namespace: uberon
+alt_id: UBERON:0012123
+def: "Am unpaired external naris that lies in the midline of the head." [OBOL:automatic]
+subset: cyclostome_subset
+synonym: "median anterior naris" EXACT []
+synonym: "median nostril" EXACT []
+synonym: "nasohypophysial opening" EXACT [http://tolweb.org/Hyperoartia]
+is_a: UBERON:0005928 ! external naris
+intersection_of: UBERON:0005928 ! external naris
+intersection_of: intersects_midsagittal_plane_of UBERON:0000033 ! head
+relationship: intersects_midsagittal_plane_of UBERON:0000033 ! head
+relationship: present_in_taxon NCBITaxon:7762
 
 [Term]
 id: UBERON:0010899
@@ -54715,6 +55581,16 @@ relationship: located_in UBERON:0000009 ! submucosa
 relationship: part_of UBERON:0003126 ! trachea
 
 [Term]
+id: UBERON:0011154
+name: gular region
+namespace: uberon
+def: "Surface structure that extends from the chin covering pharynx and larynx." [http://orcid.org/0000-0002-6601-2165]
+xref: TAO:0002286
+is_a: UBERON:0003102 {source="TAO"} ! surface structure
+relationship: part_of UBERON:0007811 ! craniocervical region
+property_value: external_definition "Surface structure that is the region between the chin and the isthmus. (from http://www.briancoad.com/Dictionary/introduction.htm).[TAO]" xsd:string {date_retrieved="2012-08-14", external_class="TAO:0002286", ontology="TAO", source="TAO:wd"}
+
+[Term]
 id: UBERON:0011156
 name: facial skeleton
 namespace: uberon
@@ -54908,6 +55784,17 @@ intersection_of: composed_primarily_of UBERON:0011824 ! fibrous connective tissu
 relationship: bounding_layer_of UBERON:0000304 ! tendon sheath
 relationship: composed_primarily_of UBERON:0011824 ! fibrous connective tissue
 relationship: part_of UBERON:0000304 ! tendon sheath
+
+[Term]
+id: UBERON:0011241
+name: ethmoid region
+namespace: uberon
+def: "The most anterior region of the braincase. Provides structural support for peripheral olfactory organ." [http://palaeos.com/vertebrates/bones/braincase/ethmoid.html, UBERONREF:0000007]
+xref: AAO:0000986
+is_a: UBERON:0034921 ! multi organ part structure
+relationship: has_developmental_contribution_from UBERON:0005945 ! neurocranial trabecula
+relationship: part_of UBERON:0003112 ! olfactory region
+property_value: curator_notes "currently this is not restricted to skeletal elements, unlike UBERONREF:0000007" xsd:string
 
 [Term]
 id: UBERON:0011249
@@ -55879,6 +56766,18 @@ relationship: luminal_space_of UBERON:0002185 ! bronchus
 relationship: part_of UBERON:0002185 {source="FMA"} ! bronchus
 
 [Term]
+id: UBERON:0012102
+name: buccal salivary gland
+namespace: uberon
+def: "A salivary gland that is part of a cheek." [OBOL:automatic]
+xref: FMA:59793
+xref: NCIT:C32237
+is_a: UBERON:0001044 ! saliva-secreting gland
+intersection_of: UBERON:0001044 ! saliva-secreting gland
+intersection_of: part_of UBERON:0001567 ! cheek
+relationship: part_of UBERON:0001567 ! cheek
+
+[Term]
 id: UBERON:0012125
 name: dermatological-muscosal system
 namespace: uberon
@@ -56405,6 +57304,16 @@ intersection_of: part_of UBERON:0035551 ! deep vasculature
 relationship: branching_part_of UBERON:0004688 {source="FMA"} ! costo-cervical trunk
 relationship: part_of UBERON:0004688 ! costo-cervical trunk
 relationship: part_of UBERON:0035551 ! deep vasculature
+
+[Term]
+id: UBERON:0012329
+name: keratinized stratified squamous epithelium
+namespace: uberon
+def: "Keratinized stratified squamous epithelium is a stratified squamous epithelium, the cells of which synthesize and accumulate keratin." [FMA:45568, http://en.wikipedia.org/wiki/Stratified_squamous_epithelium#Keratinized]
+synonym: "epithelium stratificatum squamosum cornificatum" EXACT LATIN [FMA:45568]
+xref: FMA:45568
+xref: Keratinized
+is_a: UBERON:0006915 ! stratified squamous epithelium
 
 [Term]
 id: UBERON:0012330
@@ -57659,6 +58568,16 @@ intersection_of: UBERON:0001328 ! lobe of prostate
 intersection_of: in_lateral_side_of UBERON:0002367 ! prostate gland
 relationship: in_lateral_side_of UBERON:0002367 ! prostate gland
 property_value: implements_design_pattern https://github.com/obophenotype/uberon/wiki/Modeling-paired-structures-Design-Pattern xsd:anyURI
+
+[Term]
+id: UBERON:0013645
+name: gular gland
+namespace: uberon
+def: "A gland that is part of the gular region (throat)" [http://orcid.org/0000-0002-6601-2165]
+is_a: UBERON:0003297 ! gland of integumental system
+intersection_of: UBERON:0002530 ! gland
+intersection_of: part_of UBERON:0011154 ! gular region
+relationship: part_of UBERON:0011154 ! gular region
 
 [Term]
 id: UBERON:0013685
@@ -59096,6 +60015,22 @@ intersection_of: part_of UBERON:0002072 ! hypodermis
 relationship: part_of UBERON:0002072 ! hypodermis
 
 [Term]
+id: UBERON:0015476
+name: nose skin
+namespace: uberon
+def: "A zone of skin that is part of a external nose." [OBOL:automatic]
+synonym: "external nasal skin" EXACT [FMA:24763]
+synonym: "skin of external nose" EXACT [FMA:24763]
+synonym: "skin of nose" EXACT [FMA:24763]
+xref: EMAPA:37684 {source="MA:th"}
+xref: FMA:24763
+xref: MA:0003090
+is_a: UBERON:1000021 ! skin of face
+intersection_of: UBERON:0000014 ! zone of skin
+intersection_of: part_of UBERON:0007827 ! external nose
+relationship: part_of UBERON:0007827 ! external nose
+
+[Term]
 id: UBERON:0015479
 name: scrotum skin
 namespace: uberon
@@ -59988,6 +60923,19 @@ intersection_of: has_potential_to_develop_into UBERON:0001044 ! saliva-secreting
 relationship: has_potential_to_develop_into UBERON:0001044 ! saliva-secreting gland
 
 [Term]
+id: UBERON:0017654
+name: buccal gland
+namespace: uberon
+def: "Any of the small racemose mucous glands in the mucous membrane lining the cheeks" [http://www.merriam-webster.com/medical/buccal%20gland]
+synonym: "cheek gland" RELATED []
+xref: BTO:0005767
+xref: http://www.snomedbrowser.com/Codes/Details/25421004
+is_a: UBERON:0000414 ! mucous gland
+intersection_of: UBERON:0000414 ! mucous gland
+intersection_of: part_of UBERON:0001567 ! cheek
+relationship: part_of UBERON:0001567 ! cheek
+
+[Term]
 id: UBERON:0017672
 name: abdominal viscera
 namespace: uberon
@@ -60589,6 +61537,19 @@ is_a: UBERON:0019304 ! sensory organ epithelium
 intersection_of: UBERON:0000483 ! epithelium
 intersection_of: part_of UBERON:0000004 ! nose
 relationship: part_of UBERON:0000004 ! nose
+
+[Term]
+id: UBERON:0019307
+name: epithelium of external nose
+namespace: uberon
+def: "Epithelial layer that is part of the external part of the nose." [http://orcid.org/0000-0002-6601-2165]
+synonym: "epithelium of skin of external nose" EXACT [FMA:63143]
+xref: FMA:63143
+is_a: UBERON:0012329 {source="FMA"} ! keratinized stratified squamous epithelium
+is_a: UBERON:0019306 ! nose epithelium
+intersection_of: UBERON:0000483 ! epithelium
+intersection_of: part_of UBERON:0007827 ! external nose
+relationship: part_of UBERON:0007827 ! external nose
 
 [Term]
 id: UBERON:0019319
@@ -61221,6 +62182,36 @@ intersection_of: part_of UBERON:0011595 ! jaw region
 relationship: part_of UBERON:0011595 ! jaw region
 
 [Term]
+id: UBERON:0035007
+name: nasal concha cartilage
+namespace: uberon
+synonym: "turbinal cartilage" EXACT []
+synonym: "turbinate bone primordium" EXACT [EMAPA:35890]
+synonym: "turbinate cartilage condensation" EXACT []
+synonym: "unossified nasal turbinal" EXACT []
+synonym: "unossified nasal turbinate" EXACT []
+synonym: "unossified turbinate" EXACT []
+xref: EMAPA:35890
+is_a: UBERON:0003932 ! cartilage element of chondrocranium
+is_a: UBERON:0035612 ! nasal turbinal
+intersection_of: UBERON:0035612 ! nasal turbinal
+intersection_of: composed_primarily_of UBERON:0002418 ! cartilage tissue
+relationship: has_potential_to_develop_into UBERON:0001762 ! turbinate bone
+property_value: external_ontology_notes "represented as a primordium in EMAPA - should be cartilage condensation" xsd:string {external_ontology="EMAPA"}
+
+[Term]
+id: UBERON:0035036
+name: naris epithelium
+namespace: uberon
+def: "An epithelium that is part of a naris [Automatically generated definition]." [OBOL:automatic]
+xref: EMAPA:35959
+xref: MA:0003172
+is_a: UBERON:0000483 ! epithelium
+intersection_of: UBERON:0000483 ! epithelium
+intersection_of: part_of UBERON:0000003 ! naris
+relationship: part_of UBERON:0000003 ! naris
+
+[Term]
 id: UBERON:0035037
 name: jaw epithelium
 namespace: uberon
@@ -61387,6 +62378,22 @@ relationship: branching_part_of UBERON:0001532 ! internal carotid artery
 relationship: part_of UBERON:0001532 ! internal carotid artery
 
 [Term]
+id: UBERON:0035240
+name: posterior wall of oropharynx
+namespace: uberon
+xref: FMA:55032
+xref: http://linkedlifedata.com/resource/umls/id/C0227155
+xref: http://www.snomedbrowser.com/Codes/Details/276960004
+xref: NCIT:C12240
+is_a: UBERON:0000328 ! gut wall
+is_a: UBERON:0004119 ! endoderm-derived structure
+intersection_of: UBERON:0000060 ! anatomical wall
+intersection_of: in_posterior_side_of UBERON:0001729 ! oropharynx
+intersection_of: part_of UBERON:0001729 ! oropharynx
+relationship: in_posterior_side_of UBERON:0001729 ! oropharynx
+relationship: part_of UBERON:0001729 ! oropharynx
+
+[Term]
 id: UBERON:0035267
 name: neck of gallbladder
 namespace: uberon
@@ -61403,6 +62410,23 @@ is_a: UBERON:0004119 ! endoderm-derived structure
 intersection_of: UBERON:0001560 ! neck of organ
 intersection_of: part_of UBERON:0002110 ! gall bladder
 relationship: part_of UBERON:0002110 ! gall bladder
+
+[Term]
+id: UBERON:0035286
+name: lateral wall of oropharynx
+namespace: uberon
+xref: FMA:55008
+xref: http://linkedlifedata.com/resource/umls/id/C0227156
+xref: http://www.snomedbrowser.com/Codes/Details/362125007
+xref: NCIT:C12239
+is_a: UBERON:0000328 ! gut wall
+is_a: UBERON:0004119 ! endoderm-derived structure
+is_a: UBERON:0015212 ! lateral structure
+intersection_of: UBERON:0000060 ! anatomical wall
+intersection_of: in_lateral_side_of UBERON:0001729 ! oropharynx
+intersection_of: part_of UBERON:0001729 ! oropharynx
+relationship: in_lateral_side_of UBERON:0001729 ! oropharynx
+relationship: part_of UBERON:0001729 ! oropharynx
 
 [Term]
 id: UBERON:0035295
@@ -61815,6 +62839,25 @@ intersection_of: located_in UBERON:0002363 ! dura mater
 relationship: located_in UBERON:0002363 ! dura mater
 relationship: part_of UBERON:0010743 ! meningeal cluster
 property_value: structure_notes "while Louveau et al (DOI:10.1038/nature14432) state this is within the CNS (thus overturning dogma about the presence of lymphatics in the CNS), in this ontology the dura" xsd:string
+
+[Term]
+id: UBERON:0035612
+name: nasal turbinal
+namespace: uberon
+def: "A skeletal element of the ethmoid region with complex morphology that are lined with mucuous membranes involved in either olfaction or air conditioning." [http://en.wikipedia.org/wiki/Nasal_concha, http://palaeos.com/vertebrates/bones/braincase/ethmoid.html, UBERON:cjm]
+synonym: "concha" RELATED [EMAPA:25093]
+synonym: "conchae nasales" RELATED LATIN [http://en.wikipedia.org/wiki/Nasal_concha]
+synonym: "nasal concha" RELATED []
+synonym: "nasal turbinal" EXACT []
+synonym: "nasal turbinal element" EXACT []
+synonym: "nasal turbinate" EXACT []
+synonym: "turbinal" EXACT [http://palaeos.com/vertebrates/bones/braincase/ethmoid.html]
+synonym: "turbinate" EXACT []
+is_a: UBERON:0010363 ! endochondral element
+relationship: located_in UBERON:0001707 ! nasal cavity
+relationship: part_of UBERON:0011241 {source="ISBN:0073040584"} ! ethmoid region
+property_value: editor_note "consult http://www.ncbi.nlm.nih.gov/pubmed/25312359 to add missing structures, e.g. ectoturbinals" xsd:string
+property_value: taxon_notes "unossified in dinosaurs[http://palaeos.com/vertebrates/bones/braincase/ethmoid.html]" xsd:string
 
 [Term]
 id: UBERON:0035639
