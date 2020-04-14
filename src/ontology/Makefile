@@ -76,7 +76,7 @@ all_main: $(MAIN_FILES)
 ## By default this is the cross-product of IMPORT_MODULES x FORMATS
 
 
-IMPORTS =  iao go ro uberon foodon chebi
+IMPORTS =  iao go ro uberon foodon nbo hp chebi
 
 IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -172,7 +172,7 @@ ANNOTATE_VERSION_IRI = annotate -V $(ONTBASE)/releases/$(TODAY)/$@.owl
 # by default we use ELK to perform a reason-relax-reduce chain
 # after that we annotate the ontology with the release versionInfo
 
-OTHER_SRC = $(PATTERNDIR)/definitions.owl 
+OTHER_SRC = $(PATTERNDIR)/definitions.owl  ../templates/obsolete.owl ../templates/replaced.owl ../templates/xrefs.owl
 
 
 $(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
@@ -253,6 +253,24 @@ imports/%_import.obo: imports/%_import.owl
 imports/%_import.json: imports/%_import.owl
 	@if [ $(IMP) = true ]; then $(ROBOT) convert --check false -i $< -f json -o $@.tmp.json && mv $@.tmp.json $@; fi
 
+# ----------------------------------------
+# Components
+# ----------------------------------------
+# Some ontologies contain external and internal components. A component is included in the ontology in its entirety.
+
+../templates/%: .FORCE
+	touch $@
+.PRECIOUS: ../templates/%
+
+
+
+
+
+
+
+
+
+
 
 # ----------------------------------------
 # Mirroring upstream ontologies
@@ -309,6 +327,26 @@ mirror/foodon.trigger: $(SRC)
 
 mirror/foodon.owl: mirror/foodon.trigger
 	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/foodon.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+
+## ONTOLOGY: nbo
+## Copy of nbo is re-downloaded whenever source changes
+mirror/nbo.trigger: $(SRC)
+
+mirror/nbo.owl: mirror/nbo.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/nbo.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+
+## ONTOLOGY: hp
+## Copy of hp is re-downloaded whenever source changes
+mirror/hp.trigger: $(SRC)
+
+mirror/hp.owl: mirror/hp.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/hp.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
