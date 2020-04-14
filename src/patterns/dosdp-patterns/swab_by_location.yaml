@@ -1,0 +1,77 @@
+pattern_name: swab_by_location
+pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/swab_by_location.yaml
+description: "Collection of biological material using a swab"
+
+contributors:
+  - https://orcid.org/0000-0001-7941-2961
+  - https://orcid.org/0000-0002-7356-1779
+
+classes:
+  swab: MAXO:0000548
+  location: owl:Thing
+
+relations:
+  has_input: RO:0002233
+  part_of: BFO:0000050
+  
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym 
+  created_by: oio:created_by
+  date: dc:date
+  comment: rdfs:comment
+  xref: oio:hasDbXref
+ 
+vars:
+  location: "'location'"
+  
+data_vars:
+  date: "'date'"
+  created_by: "'created_by'"
+  comment: "'comment'"
+  xref: "database cross reference"
+data_list_vars:
+  syns: xsd:string
+name:
+  text: "%s swab collection"
+  vars:
+   - location
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "swab collection of %s"
+    vars:
+     - location
+     
+  - annotationProperty: date
+    text: "%s"
+    vars:
+     - date
+     
+  - annotationProperty: created_by
+    text: "%s"
+    vars:
+     - created_by
+
+  - annotationProperty: comment
+    text: "%s"
+    vars:
+     - comment
+    
+  - annotationProperty: xref
+    text: "%s"
+    vars:
+     - xref
+
+exact_synonym:
+  value: syns
+
+def:
+  text: "Collection biological material from within the %s. A cotton swab is inserted into the opening and rotated and then withdrawn."
+  vars:
+    - location
+
+equivalentTo:
+  text: "'swab' and 'has_input' some ('part_of' some %s)"
+  vars:
+    - location
+   

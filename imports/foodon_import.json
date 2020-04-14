@@ -413,7 +413,7 @@
       "id" : "http://purl.obolibrary.org/obo/FOODON_03420294",
       "meta" : {
         "definition" : {
-          "val" : "The rind or skin of fruit (Source: Webster's)",
+          "val" : "The rind or skin of fruit",
           "xrefs" : [ ]
         },
         "xrefs" : [ {
@@ -428,6 +428,9 @@
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
           "val" : "LanguaL curation note: Renamed from *FRUIT OR BERRY, PEEL ONLY* in LanguaL 2008."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "Webster's Dictionary"
         } ]
       },
       "type" : "CLASS",
@@ -570,28 +573,34 @@
       "id" : "http://purl.obolibrary.org/obo/FOODON_03411347",
       "meta" : {
         "definition" : {
-          "val" : "Multicellular plants.",
+          "val" : "A multicellular eukaryote organism of the kingdom Plantae.",
           "xrefs" : [ ]
         },
         "xrefs" : [ {
           "val" : "http://www.langual.org/langual_thesaurus.asp?termid=B1347"
         } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2002/07/owl#deprecated",
+          "val" : "true"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "https://en.wikipedia.org/wiki/Plant"
+        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
           "val" : "http://langual.org"
         }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
-          "val" : "http://purl.obolibrary.org/obo/IAO_0000428"
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
+          "val" : "http://purl.obolibrary.org/obo/PO_0000003"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "http://orcid.org/0000-0002-8844-9165"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
           "val" : "http://purl.obolibrary.org/obo/PO_0000003"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "LanguaL curation note: For unicellular plants as well as for algae, mushrooms and yeast, use the appropriate narrower term under *ALGAE OR FUNGUS USED AS FOOD SOURCE*."
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "plant"
+      "lbl" : "obsolete: plant"
     }, {
       "id" : "http://purl.obolibrary.org/obo/FOODON_03411226",
       "meta" : {
@@ -5142,9 +5151,6 @@
           "xrefs" : [ ]
         },
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://www.madaboutberries.com/types-of-berries.html"
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
           "val" : "http://purl.obolibrary.org/obo/po.owl"
         } ]
@@ -5565,6 +5571,20 @@
       "id" : "http://purl.obolibrary.org/obo/FOODON_00002180",
       "type" : "CLASS",
       "lbl" : "pumpkin food product"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0001995",
+      "meta" : {
+        "definition" : {
+          "val" : "A quality that inheres in an entire organism or part of an organism.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
+          "val" : "http://purl.obolibrary.org/obo/pato.owl"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "organismal quality"
     }, {
       "id" : "http://purl.obolibrary.org/obo/FOODON_00001094",
       "meta" : {
@@ -7583,6 +7603,32 @@
       "type" : "CLASS",
       "lbl" : "Fabeae"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0009001",
+      "meta" : {
+        "definition" : {
+          "val" : "\"has substance added\" is a relation existing between a (physical) entity and a substance in which the entity has had the substance added to it at some point in time.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "Damion Dooley"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
+          "val" : "http://purl.obolibrary.org/obo/ro.owl"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "muffin 'has substance added' some 'baking soda'"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
+          "val" : "http://purl.obolibrary.org/obo/IAO_0000428"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
+          "val" : "The relation X 'has substance added' some Y doesn't imply that X still has Y in any detectable fashion subsequent to the addition. Water in dehydrated food or ice cubes are examples, as is food that undergoes chemical transformation. This definition should encompass recipe ingredients."
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "has substance added"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/NCIT_C944",
       "meta" : {
         "definition" : {
@@ -7738,11 +7784,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/FOODON_00002448",
       "meta" : {
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
+        "definition" : {
           "val" : "A zucchini food product is a food product deriving from either golden or green zucchini plant cultivars.",
           "xrefs" : [ ]
-        } ],
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Damion Dooley"
@@ -9658,6 +9703,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/FOODON_00003004",
       "meta" : {
+        "definition" : {
+          "val" : "A multicellular eukaryotic heterotrophic organism within the kingdom Animalia.",
+          "xrefs" : [ ]
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/elements/1.1/date",
           "val" : "2019-08-14T18:02:36Z"
@@ -9803,6 +9852,20 @@
       },
       "type" : "CLASS",
       "lbl" : "food (liquid)"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PO_0000003",
+      "meta" : {
+        "definition" : {
+          "val" : "A plant structure (PO:0005679) which is a whole organism.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
+          "val" : "http://purl.obolibrary.org/obo/po.owl"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "whole plant"
     }, {
       "id" : "http://purl.obolibrary.org/obo/CHEBI_47882",
       "meta" : {
@@ -11042,15 +11105,21 @@
       "id" : "http://purl.obolibrary.org/obo/FOODON_00001306",
       "meta" : {
         "definition" : {
-          "val" : "Fermented onions or pickled onion",
+          "val" : "Fermented pickled onion in Thai cuisine.",
           "xrefs" : [ ]
         },
         "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "https://books.google.ca/books?id=AUxaDwAAQBAJ&pg=PT181&lpg=PT181&q=Hom%20dong%20fermented"
+        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
           "val" : "http://purl.obolibrary.org/obo/IAO_0000122"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "http://orcid.org/0000-0002-1816-4260"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "https://www.crcpress.com/Handbook-of-Indigenous-Fermented-Foods-Revised-and-Expanded/Steinkraus/p/book/9780824793524"
         } ]
       },
       "type" : "CLASS",
@@ -11838,6 +11907,26 @@
       "type" : "CLASS",
       "lbl" : "d-block element atom"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/FOODON_00001563",
+      "meta" : {
+        "definition" : {
+          "val" : "A defining ingredient defines what a food is principally categorized as, rather than an ingredient listed by percentage of weight or volume. A food may have more than one defining ingredient.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
+          "val" : "For example, 'bean soup' has a defining ingredient of some 'bean (whole)'.  Similarly, spicy chicken wings require a defining ingredient of (usually minute) amounts of chilli. \n\nA soup may 'has ingredient' some bean, but that doesn't make it a 'bean soup', i.e. there should be no inference to that category. However, some classes may have that simple ingredient \"necessary and sufficient\" equivalency."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "FoodOn curators"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "Damion Dooley"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "has defining ingredient"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/CHEBI_36834",
       "meta" : {
         "definition" : {
@@ -12180,6 +12269,16 @@
       },
       "type" : "CLASS",
       "lbl" : "Vicia"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/FOODON_00002420",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "https://www.fda.gov/food/food-ingredients-packaging/overview-food-ingredients-additives-colors"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "has ingredient"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PO_0009085",
       "meta" : {
@@ -12993,6 +13092,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03411347"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/NCBITaxon_32524",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/NCBITaxon_32523"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_3992",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_17087"
@@ -13000,10 +13103,6 @@
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_59554",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_35366"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/NCBITaxon_32524",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/NCBITaxon_32523"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002202",
       "pred" : "inverseOf",
@@ -13104,6 +13203,10 @@
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_26979",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_38166"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FOODON_00002420",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0009001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002210",
       "pred" : "subPropertyOf",
@@ -13249,13 +13352,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/UBERON_0000468"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_15428",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_26650"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_33906",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_33909"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_15428",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_26650"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_24833",
       "pred" : "is_a",
@@ -13485,13 +13588,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_00002286"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_78295",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_52211"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_61120",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_51143"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_78295",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_52211"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002577",
       "pred" : "is_a",
@@ -13565,13 +13668,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_33575"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/FOODON_03400286",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FOODON_03400105"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_26932",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_38077"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FOODON_03400286",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FOODON_03400105"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_36916",
       "pred" : "is_a",
@@ -13589,13 +13692,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CARO_0000003"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/UBERON_0000955",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FOODON_03420255"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_00002067",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_00001242"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/UBERON_0000955",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FOODON_03420255"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002198",
       "pred" : "is_a",
@@ -13821,13 +13924,13 @@
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002202"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/FOODON_00003194",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FOODON_00002381"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/UBERON_0000178",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/UBERON_0006314"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FOODON_00003194",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FOODON_00002381"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_33671",
       "pred" : "is_a",
@@ -13841,13 +13944,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_36916"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/BFO_0000015",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000003"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_03411134",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03411297"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000015",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000003"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_39418",
       "pred" : "is_a",
@@ -13937,13 +14040,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03401270"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_38104",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_24532"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_03420175",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03420103"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_38104",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_24532"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/UBERON_0004734",
       "pred" : "is_a",
@@ -13961,6 +14064,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03411189"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/FOODON_03411579",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PO_0000003"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_00002781",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_00002780"
@@ -13977,13 +14084,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_131927"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_26650",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_83813"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_25741",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_25806"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_26650",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_83813"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_00001194",
       "pred" : "is_a",
@@ -14045,9 +14152,9 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/NCBITaxon_1329799"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/FOODON_00001931",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FOODON_00001181"
+      "sub" : "http://purl.obolibrary.org/obo/FOODON_00002131",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0001000",
+      "obj" : "http://purl.obolibrary.org/obo/PO_0000003"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_00002051",
       "pred" : "is_a",
@@ -14137,6 +14244,10 @@
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002131"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/FOODON_03411179",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PO_0000003"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_00002381",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_00001002"
@@ -14157,13 +14268,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/NCBITaxon_9989"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0002595",
-      "pred" : "subPropertyOf",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0002410"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_38313",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_25693"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002595",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002410"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_03460177",
       "pred" : "is_a",
@@ -14185,13 +14296,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03411048"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0001018",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/NCBITaxon_41665",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/NCBITaxon_186623"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0001018",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_03315169",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002350",
@@ -14493,6 +14604,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PO_0009007"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/FOODON_03411140",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PO_0000003"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002233",
       "pred" : "inverseOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002352"
@@ -14517,13 +14632,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/NCBITaxon_58024"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_38338",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_33860"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/UBERON_0000323",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/UBERON_0000922"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_38338",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_33860"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_39447",
       "pred" : "is_a",
@@ -14580,6 +14695,10 @@
       "sub" : "http://purl.obolibrary.org/obo/FOODON_00001305",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_00001054"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FOODON_03411047",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PO_0000003"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_03317197",
       "pred" : "is_a",
@@ -14645,13 +14764,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_00001092"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/NCBITaxon_163743",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/NCBITaxon_2233839"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_25384",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_33575"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/NCBITaxon_163743",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/NCBITaxon_2233839"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/NCBITaxon_3814",
       "pred" : "is_a",
@@ -14689,13 +14808,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03420148"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_75769",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_50733"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_03411208",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03412091"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_75769",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_50733"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/NCBITaxon_7952",
       "pred" : "is_a",
@@ -14705,13 +14824,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03412972"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_24669",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_33822"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_03414460",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03413357"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_24669",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_33822"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_16811",
       "pred" : "is_a",
@@ -14784,6 +14903,10 @@
       "sub" : "http://purl.obolibrary.org/obo/FOODON_03400267",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03400217"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0001995",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_00002115",
       "pred" : "is_a",
@@ -15009,6 +15132,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_24532"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/FOODON_03411013",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PO_0000003"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_30879",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_33822"
@@ -15065,17 +15192,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03412972"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/FOODON_00002131",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0001000",
-      "obj" : "http://purl.obolibrary.org/obo/FOODON_03411347"
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_37622",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_33256"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_64709",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_50860"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_37622",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_33256"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_24432",
       "pred" : "is_a",
@@ -15097,6 +15220,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_36834"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PO_0000003",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FOODON_03411564"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_00001079",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_00002645"
@@ -15109,13 +15236,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_33692"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/FOODON_03460216",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FOODON_03315169"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/UBERON_0000970",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03420255"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FOODON_03460216",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FOODON_03315169"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0000080",
       "pred" : "inverseOf",
@@ -15272,6 +15399,10 @@
       "sub" : "http://purl.obolibrary.org/obo/FOODON_00001258",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_00002158"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PO_0000003",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PO_0009011"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/NCBITaxon_78536",
       "pred" : "is_a",
@@ -15509,13 +15640,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_50860"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0002220",
-      "pred" : "subPropertyOf",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0002163"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_26834",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_33709"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002220",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002163"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_25367",
       "pred" : "is_a",
@@ -15577,13 +15708,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_33704"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0002217",
-      "pred" : "inverseOf",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0002218"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/UBERON_0001690",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03420127"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002217",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002218"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/NCBITaxon_9263",
       "pred" : "is_a",
@@ -15593,13 +15724,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03420152"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0000080",
-      "pred" : "subPropertyOf",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0000052"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_00002131",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002350",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03400129"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0000080",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000052"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002217",
       "pred" : "subPropertyOf",
@@ -15761,6 +15892,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_00001262"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/FOODON_00001563",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/FOODON_00002420"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/NCBITaxon_6544",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/NCBITaxon_6447"
@@ -15773,13 +15908,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_25696"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/FOODON_03303588",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0001000",
-      "obj" : "http://purl.obolibrary.org/obo/FOODON_03411012"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_33692",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_37577"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FOODON_03303588",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0001000",
+      "obj" : "http://purl.obolibrary.org/obo/FOODON_03411012"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_03304497",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002350",
@@ -15881,6 +16016,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03413751"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/FOODON_00001306",
+      "pred" : "http://purl.obolibrary.org/obo/FOODON_00001563",
+      "obj" : "http://purl.obolibrary.org/obo/FOODON_03411300"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_27363",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_33340"
@@ -15949,13 +16088,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_33832"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_36586",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_36587"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_00002762",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03301467"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_36586",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_36587"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_68452",
       "pred" : "is_a",
@@ -15997,13 +16136,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_00001015"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_26373",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_38101"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_16811",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_33704"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_26373",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_38101"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_03460130",
       "pred" : "is_a",
@@ -16033,6 +16172,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_25830"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/FOODON_00001306",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FOODON_00001258"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/UBERON_0001264",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03420106"
@@ -16049,13 +16192,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_00002451"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/FOODON_03400113",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FOODON_03400133"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_33256",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_32988"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FOODON_03400113",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FOODON_03400133"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_47857",
       "pred" : "is_a",
@@ -16093,13 +16236,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_00002381"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0002207",
-      "pred" : "inverseOf",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0002210"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/UBERON_0002370",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03420255"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002207",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002210"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000004",
       "pred" : "is_a",
@@ -16169,13 +16312,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_36963"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_5686",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_33595"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/NCBITaxon_311790",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/NCBITaxon_9347"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_5686",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_33595"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_17015",
       "pred" : "is_a",
@@ -16189,6 +16332,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_00002069"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_51086",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_50906"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_00001635",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_00002153"
@@ -16196,10 +16343,6 @@
       "sub" : "http://purl.obolibrary.org/obo/FOODON_03411566",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_03411057"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_51086",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_50906"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_38106",
       "pred" : "is_a",
@@ -16285,13 +16428,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_33273"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0002221",
-      "pred" : "subPropertyOf",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0002220"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_27081",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_33521"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002221",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002220"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FOODON_03412091",
       "pred" : "is_a",
@@ -16421,6 +16564,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FOODON_00002664"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/FOODON_03413357",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PO_0000003"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/NCBITaxon_3660",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/NCBITaxon_3650"
@@ -16482,7 +16629,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/maxo/releases/2020-02-10/imports/foodon_import.owl"
+      "version" : "http://purl.obolibrary.org/obo/maxo/releases/2020-04-14/imports/foodon_import.owl"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ {
@@ -16505,6 +16652,13 @@
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0001000",
         "fillerId" : "http://purl.obolibrary.org/obo/FOODON_03411174"
+      } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/FOODON_00001015",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/FOODON_00002381" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0001000",
+        "fillerId" : "http://purl.obolibrary.org/obo/PO_0000003"
       } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/FOODON_03315837",
@@ -16835,13 +16989,6 @@
         "fillerId" : "http://purl.obolibrary.org/obo/FOODON_03411459"
       } ]
     }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/FOODON_00001015",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/FOODON_00002381" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/RO_0001000",
-        "fillerId" : "http://purl.obolibrary.org/obo/FOODON_03411347"
-      } ]
-    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/FOODON_00001305",
       "genusIds" : [ "http://purl.obolibrary.org/obo/FOODON_00001054" ],
       "restrictions" : [ {
@@ -16925,6 +17072,10 @@
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/RO_0000053",
       "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000020" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/FOODON_00002420",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/FOODON_00002403" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/FOODON_00001002" ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/RO_0002207",
       "allValuesFromEdges" : [ {
