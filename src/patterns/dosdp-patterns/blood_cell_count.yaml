@@ -1,0 +1,83 @@
+pattern_name: blood_cell_count
+pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/blood_cell_count.yaml
+description: "measurement of the number of cells in blood"
+
+contributors:
+  - https://orcid.org/0000-0001-7941-2961
+  - https://orcid.org/0000-0002-7356-1779
+
+classes:
+  cell_count: MAXO:0000146
+  native_cell: CL:0000003
+
+relations:
+  has_input: RO:0002233
+  part_of: BFO:0000050
+  amount: PATO:0000070
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym 
+  created_by: oio:created_by
+  date: dc:date
+  comment: rdfs:comment
+  xref: oio:hasDbXref
+
+vars:
+  cell: "'native_cell'"
+  
+data_vars:
+  date: "'date'"
+  created_by: "'created_by'"
+  comment: "'comment'"
+  xref: "database cross reference"
+
+data_list_vars:
+  syns: xsd:string
+
+name:
+  text: "%s count"
+  vars:
+   - cell
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "%s cell count"
+    vars:
+     - cell
+  - annotationProperty: exact_synonym
+    text: "%s cell count measurement"
+    vars:
+     - cell
+  - annotationProperty: exact_synonym
+    text: "%s count test"
+    vars:
+     - cell
+  - annotationProperty: date
+    text: "%s"
+    vars:
+     - date
+  - annotationProperty: created_by
+    text: "%s"
+    vars:
+     - created_by
+  - annotationProperty: comment
+    text: "%s"
+    vars:
+     - comment
+  - annotationProperty: xref
+    text: "%s"
+    vars:
+     - xref
+
+exact_synonym:
+  value: syns
+
+def:
+  text: "A determination of the number of %s in a blood sample."
+  vars:
+    - cell
+
+equivalentTo:
+  text: "'cell_count' and 'has_input' some ('amount' some %s)"
+  vars:
+    - cell
+
