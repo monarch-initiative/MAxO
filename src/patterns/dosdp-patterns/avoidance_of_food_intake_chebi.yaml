@@ -1,5 +1,5 @@
-pattern_name: avoidance_of_food_intake_foodon
-pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_food_intake_foodon.yaml
+pattern_name: avoidance_of_food_intake_chebi
+pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_food_intake_chebi.yaml
 description: "Medical recommendation to avoid the intake of a particular food or nutrition item."
 
 contributors:
@@ -10,7 +10,7 @@ contributors:
 classes:
   avoidance: MAXO:0001014
   nutrition intake avoidance: MAXO:0000056
-  food material: FOODON:00002403
+  chemical entity: CHEBI:24431
   
 relations:
   avoided_food: MAXO:0001027
@@ -23,7 +23,7 @@ annotationProperties:
   xref: oio:hasDbXref
  
 vars:
-  food_material: "'food material'"
+  chemical_entity: "'chemical entity'"
   
 data_vars:
   date: "'date'"
@@ -34,26 +34,36 @@ data_list_vars:
   syns: xsd:string
 
 name:
-  text: "%s intake avoidance"
+  text: "dietary %s intake avoidance"
   vars:
-   - food_material
+   - chemical_entity
 
 annotations:
   - annotationProperty: exact_synonym
-    text: "avoiding %s intake"
+    text: "avoiding dietary %s intake"
     vars:
-     - food_material
+     - chemical_entity
   
   - annotationProperty: exact_synonym
     text: "avoid %s intake"
     vars:
-     - food_material
+     - chemical_entity
      
   - annotationProperty: exact_synonym
     text: "%s consumption avoidance"
     vars:
-     - food_material
+     - chemical_entity
      
+  - annotationProperty: exact_synonym
+    text: "%s restriction"
+    vars:
+     - chemical_entity
+     
+  - annotationProperty: exact_synonym
+    text: "%s restricted diet intake"
+    vars:
+     - chemical_entity
+           
   - annotationProperty: date
     text: "%s"
     vars:
@@ -78,10 +88,9 @@ exact_synonym:
 def:
   text: "A medical requirement or recommendation of avoiding the consumption of %s."
   vars:
-    - food_material
+    - chemical_entity
 
 equivalentTo:
   text: "'nutrition intake avoidance' and ('avoided_food' some %s)"
   vars:
-    - food_material
-   
+    - chemical_entity
