@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2020-04-14/maxo-base.owl
+data-version: maxo/releases/2020-05-14/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Aaron Zhang" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
@@ -7,7 +7,7 @@ property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:str
 property_value: http://purl.org/dc/elements/1.1/description "An ontology to represent medically relevant actions, procedures, therapies, interventions, and recommendations." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type http://purl.obolibrary.org/obo/IAO_8000001 xsd:string
-property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/ xsd:string
+property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
 
 [Term]
 id: MAXO:0000001
@@ -5628,8 +5628,12 @@ id: MAXO:0000595
 name: radiograph imaging procedure
 def: "A procedure producing an image on a radiosensitive surface by x-ray radiation that has penetrated and passed through a structure in order to diagnose or treat a patient." []
 synonym: "radiogram imaging procedure" EXACT []
+synonym: "radiographic imaging procedure" EXACT []
+synonym: "radiographic procedure" EXACT []
+synonym: "radiography" EXACT []
 synonym: "radiography imaging procedure" EXACT []
 synonym: "X-ray imaging procedure" EXACT []
+xref: NCIT:C38101
 xref: NCIT:C60727
 is_a: MAXO:0000005 ! clinical imaging procedure
 property_value: http://purl.org/dc/elements/1.1/date 2020-04-07T15:49:43Z xsd:dateTime
@@ -5736,6 +5740,9 @@ id: MAXO:0000606
 name: procalcitonin measurement
 def: "The determination of the amount of the procalcitonin in a sample." [NCIT:C103430]
 comment: A substance produced in response to bacterial infections and tissue injury.
+synonym: "procalcitonin level measurement" EXACT []
+synonym: "procalcitonin level test" EXACT []
+synonym: "procalcitonin test" EXACT []
 xref: NCIT:C103430
 is_a: MAXO:0000605 ! protein measurement
 property_value: http://purl.org/dc/elements/1.1/date 2020-04-07T21:30:45Z xsd:dateTime
@@ -5744,9 +5751,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000607
 name: D-dimer measurement
-def: "A quantification of a fibrinogen degradation product in blood used in the diagnosis of thrombosis." []
+def: "A quantification of a fibrin degradation product in blood used in the diagnosis of thrombosis." []
 synonym: "D dimer level test" EXACT []
-xref: EFO:0004507
+synonym: "fibrin degradation fragment test" EXACT []
+synonym: "fragment D-dimer test" EXACT []
 xref: NCIT:C82621
 is_a: MAXO:0000605 ! protein measurement
 property_value: http://purl.org/dc/elements/1.1/date 2020-04-07T21:37:45Z xsd:dateTime
@@ -5890,6 +5898,40 @@ synonym: "art-line placement" EXACT []
 synonym: "arterial line placement" EXACT []
 is_a: MAXO:0000473 ! medical device implantation
 property_value: http://purl.org/dc/elements/1.1/date 2020-04-08T20:20:40Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000622
+name: noninvasive positve-pressure ventilation
+def: "Allows delivery of positive-pressure ventilation with a tight-fitting nasal or facial mask that is attached to a continuous positive airway pressure (CPAP) or a bilevel positive airway pressure (BiPAP) machine." []
+synonym: "NIPPV" EXACT ABBREVIATION []
+synonym: "non-invasive positive pressure ventilation" EXACT []
+is_a: MAXO:0000506 ! noninvasive ventilation
+is_a: MAXO:0000509 ! positive controlled ventilation
+property_value: http://purl.org/dc/elements/1.1/date 2020-04-27T20:57:00Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000623
+name: nutrition counseling
+def: "Nutrition intervention for nutrition counseling is a supportive process, characterized by a collaborative counselor–patient/client relationship to establish food, nutrition and physical activity priorities, goals, and individualized action plans that acknowledge and foster responsibility for self-care to treat an existing condition and promote health." [] {comment="Reference: Academy of Nutrition and Dietetics. Nutrition Terminology Reference Manual (eNCPT): Dietetics Language for Nutrition Care 2014, Nutrition Intervention/Terms and Definitions/Nutrition Counseling (C), page-064, http://ncpt.webauthor.com"}
+synonym: "dietary counseling" EXACT []
+synonym: "nutritional counseling" EXACT []
+xref: http://orcid.org/0000-0002-7463-6306
+is_a: MAXO:0000077 ! behavioral counseling
+property_value: http://purl.org/dc/elements/1.1/date 2020-04-28T16:03:29Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000624
+name: nutrition assessment
+def: "An in-depth evaluation of an individual's food and nutrient intake, lifestyle, and medical history designed to help the individual either maintain their health status or attain a healthier status." [NCIT:C15286]
+synonym: "dietary assessment" EXACT []
+synonym: "nutritional assessment" EXACT []
+xref: http://orcid.org/0000-0002-7463-6306
+xref: NCIT:C15286
+is_a: MAXO:0000623 ! nutrition counseling
+property_value: http://purl.org/dc/elements/1.1/date 2020-04-28T16:12:44Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -6694,12 +6736,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0010050
 name: alcohol intake avoidance
-def: "A medical requirement or recommendation of avoiding the consumption of beverage alcohol." []
-synonym: "avoid beverage alcohol intake" EXACT []
-synonym: "avoiding beverage alcohol intake" EXACT []
-synonym: "beverage alcohol consumption avoidance" EXACT []
+def: "A medical requirement or recommendation of avoiding the consumption of alcoholic beverage." []
+synonym: "alcoholic beverage consumption avoidance" EXACT []
+synonym: "avoid alcoholic beverage intake" EXACT []
+synonym: "avoiding alcoholic beverage intake" EXACT []
 intersection_of: MAXO:0000056 ! nutrition intake avoidance
-intersection_of: MAXO:0001027 FOODON:03310661 ! avoided food
+intersection_of: MAXO:0001027 FOODON:00001579 ! avoided food
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-18T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -6711,7 +6753,7 @@ synonym: "avoid broad bean (whole) intake" EXACT []
 synonym: "avoiding broad bean (whole) intake" EXACT []
 synonym: "broad bean (whole) consumption avoidance" EXACT []
 synonym: "fava bean avoidance" EXACT []
-synonym: "fava bean consumption avoidance)" EXACT []
+synonym: "fava bean consumption avoidance" EXACT []
 synonym: "windsor bean intake avoidance" EXACT []
 intersection_of: MAXO:0000056 ! nutrition intake avoidance
 intersection_of: MAXO:0001027 FOODON:03301227 ! avoided food
@@ -6836,6 +6878,777 @@ synonym: "sunflower seed (whole kernel, raw) consumption avoidance" EXACT []
 intersection_of: MAXO:0000056 ! nutrition intake avoidance
 intersection_of: MAXO:0001027 FOODON:03304869 ! avoided food
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-13T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010062
+name: liver intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of liver (whole, raw)." []
+synonym: "avoid liver (whole, raw) intake" EXACT []
+synonym: "avoiding liver (whole, raw) intake" EXACT []
+synonym: "liver (whole, raw) consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:03309772 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010063
+name: egg intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of egg or egg component." []
+synonym: "avoid egg or egg component intake" EXACT []
+synonym: "avoiding egg or egg component intake" EXACT []
+synonym: "egg or egg component consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:03420194 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010064
+name: kidney intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of kidney (whole, raw)." []
+synonym: "avoid kidney (whole, raw) intake" EXACT []
+synonym: "avoiding kidney (whole, raw) intake" EXACT []
+synonym: "kidney (whole, raw) consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:03310898 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010065
+name: pea intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of peas (whole, rehydrated, canned)." []
+synonym: "avoid peas (whole, rehydrated, canned) intake" EXACT []
+synonym: "avoiding peas (whole, rehydrated, canned) intake" EXACT []
+synonym: "peas (whole, rehydrated, canned) consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:03306812 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010066
+name: bean intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of bean food product." []
+synonym: "avoid bean food product intake" EXACT []
+synonym: "avoiding bean food product intake" EXACT []
+synonym: "bean food product consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:00001635 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010067
+name: peanut intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of peanut (whole)." []
+synonym: "avoid peanut (whole) intake" EXACT []
+synonym: "avoiding peanut (whole) intake" EXACT []
+synonym: "peanut (whole) consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:00003206 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010068
+name: soy intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of soybean refined food product." []
+synonym: "avoid soybean refined food product intake" EXACT []
+synonym: "avoiding soybean refined food product intake" EXACT []
+synonym: "soya intake avoiance" EXACT []
+synonym: "soybean refined food product consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:00002264 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010069
+name: brassicas intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of 010  brassica (cole or cabbage) vegetables, head cabbage, flowerhead brassicas (vb) (ccpr)." []
+synonym: "010  brassica (cole or cabbage) vegetables, head cabbage, flowerhead brassicas (vb) (ccpr) consumption avoidance" EXACT []
+synonym: "avoid 010  brassica (cole or cabbage) vegetables, head cabbage, flowerhead brassicas (vb) (ccpr) intake" EXACT []
+synonym: "avoid brassicas intake" EXACT []
+synonym: "avoiding 010  brassica (cole or cabbage) vegetables, head cabbage, flowerhead brassicas (vb) (ccpr) intake" EXACT []
+synonym: "brassicas vegetable intake avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:03400675 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010070
+name: brussels sprout intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of brussels sprout vegetable food product." []
+synonym: "avoid brussels sprout vegetable food product intake" EXACT []
+synonym: "avoiding brussels sprout vegetable food product intake" EXACT []
+synonym: "brussels sprout vegetable food product consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:00001670 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010071
+name: broccoli intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of broccoli vegetable food product." []
+synonym: "avoid broccoli vegetable food product intake" EXACT []
+synonym: "avoiding broccoli vegetable food product intake" EXACT []
+synonym: "broccoli vegetable food product consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:00001666 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010072
+name: cabbage intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of cabbage vegetable food product." []
+synonym: "avoid cabbage vegetable food product intake" EXACT []
+synonym: "avoiding cabbage vegetable food product intake" EXACT []
+synonym: "cabbage vegetable food product consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:00001677 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010073
+name: cauliflower intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of cauliflower vegetable food product." []
+synonym: "avoid cauliflower vegetable food product intake" EXACT []
+synonym: "avoiding cauliflower vegetable food product intake" EXACT []
+synonym: "cauliflower vegetable food product consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:00001703 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010074
+name: rapeseed intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of rapeseed food product." []
+synonym: "avoid rapeseed food product intake" EXACT []
+synonym: "avoiding rapeseed food product intake" EXACT []
+synonym: "rapeseed food product consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:00002187 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010075
+name: rapeseed oil intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of rapeseed oil." []
+synonym: "avoid rapeseed oil intake" EXACT []
+synonym: "avoiding rapeseed oil intake" EXACT []
+synonym: "rapeseed oil consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:03310482 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010076
+name: rapeseed flour intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of rapeseed meal." []
+synonym: "avoid rapeseed meal intake" EXACT []
+synonym: "avoiding rapeseed meal intake" EXACT []
+synonym: "rapeseed meal consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:03310043 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010077
+name: cephalopod intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of cephalopod." []
+synonym: "avoid cephalopod intake" EXACT []
+synonym: "avoiding cephalopod intake" EXACT []
+synonym: "cephalopod consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:03412116 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010078
+name: crustacean intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of crustacean." []
+synonym: "avoid crustacean intake" EXACT []
+synonym: "avoiding crustacean intake" EXACT []
+synonym: "crustacean consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:03411374 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010079
+name: beer intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of beer." []
+synonym: "avoid beer intake" EXACT []
+synonym: "avoiding beer intake" EXACT []
+synonym: "beer consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:03301619 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010080
+name: corn syrup (high fructose) intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of corn syrup (high fructose)." []
+synonym: "avoid corn syrup (high fructose) intake" EXACT []
+synonym: "avoiding corn syrup (high fructose) intake" EXACT []
+synonym: "corn syrup (high fructose) consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:03315149 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010081
+name: sorbitol syrup intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of sorbitol syrup." []
+synonym: "avoid sorbitol syrup intake" EXACT []
+synonym: "avoiding sorbitol syrup intake" EXACT []
+synonym: "dietary sorbitol intake avoidance" EXACT []
+synonym: "sorbitol intake avoidance" EXACT []
+synonym: "sorbitol syrup consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:03413286 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010082
+name: human milk intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of human milk based food product." []
+synonym: "avoid human milk based food product intake" EXACT []
+synonym: "avoiding human milk based food product intake" EXACT []
+synonym: "human milk based food product consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:00001958 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010083
+name: cow milk intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of cow milk based food product." []
+synonym: "avoid cow milk based food product intake" EXACT []
+synonym: "avoiding cow milk based food product intake" EXACT []
+synonym: "bovine milk intake avoidance" EXACT []
+synonym: "cow milk based food product consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:00001771 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010084
+name: fruit intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of fruit (whole, raw)." []
+synonym: "avoid fruit (whole, raw) intake" EXACT []
+synonym: "avoiding fruit (whole, raw) intake" EXACT []
+synonym: "fruit (whole, raw) consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:03304644 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010085
+name: raw egg intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of hen egg (whole, shell off, raw)." []
+synonym: "avoid hen egg (whole, shell off, raw) intake" EXACT []
+synonym: "avoiding hen egg (whole, shell off, raw) intake" EXACT []
+synonym: "hen egg (whole, shell off, raw) consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:03301075 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010086
+name: fruit juice intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of fruit juice food product." []
+synonym: "avoid fruit juice food product intake" EXACT []
+synonym: "avoiding fruit juice food product intake" EXACT []
+synonym: "fruit juice food product consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:00001140 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010087
+name: cane juice intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of sugar cane juice (pure)." []
+synonym: "avoid sugar cane juice (pure) intake" EXACT []
+synonym: "avoiding sugar cane juice (pure) intake" EXACT []
+synonym: "sugar cane juice (pure) consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:03305288 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010088
+name: organ meat intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of organ meat." []
+synonym: "avoid organ meat intake" EXACT []
+synonym: "avoiding organ meat intake" EXACT []
+synonym: "organ meat consumption avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 FOODON:03420218 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010089
+name: dietary isoleucine intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of isoleucine." []
+synonym: "avoid isoleucine intake" EXACT []
+synonym: "avoiding dietary isoleucine intake" EXACT []
+synonym: "isoleucine consumption avoidance" EXACT []
+synonym: "isoleucine restricted diet intake" EXACT []
+synonym: "isoleucine restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:24898 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010090
+name: dietary arginine intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of arginine." []
+synonym: "arginine consumption avoidance" EXACT []
+synonym: "arginine restricted diet intake" EXACT []
+synonym: "arginine restriction" EXACT []
+synonym: "avoid arginine intake" EXACT []
+synonym: "avoiding dietary arginine intake" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:29016 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010091
+name: dietary lysine intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of lysine." []
+synonym: "avoid lysine intake" EXACT []
+synonym: "avoiding dietary lysine intake" EXACT []
+synonym: "lysine consumption avoidance" EXACT []
+synonym: "lysine restricted diet intake" EXACT []
+synonym: "lysine restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:25094 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010092
+name: dietary methionine intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of methionine." []
+synonym: "avoid methionine intake" EXACT []
+synonym: "avoiding dietary methionine intake" EXACT []
+synonym: "methionine consumption avoidance" EXACT []
+synonym: "methionine restricted diet intake" EXACT []
+synonym: "methionine restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:16811 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010093
+name: dietary glycine intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of glycine." []
+synonym: "avoid glycine intake" EXACT []
+synonym: "avoiding dietary glycine intake" EXACT []
+synonym: "glycine consumption avoidance" EXACT []
+synonym: "glycine restricted diet intake" EXACT []
+synonym: "glycine restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:15428 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010094
+name: dietary phenylalanine intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of phenylalanine." []
+synonym: "avoid phenylalanine intake" EXACT []
+synonym: "avoiding dietary phenylalanine intake" EXACT []
+synonym: "phenylalanine consumption avoidance" EXACT []
+synonym: "phenylalanine restricted diet intake" EXACT []
+synonym: "phenylalanine restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:28044 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010095
+name: dietary tyrosine intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of tyrosine." []
+synonym: "avoid tyrosine intake" EXACT []
+synonym: "avoiding dietary tyrosine intake" EXACT []
+synonym: "tyrosine consumption avoidance" EXACT []
+synonym: "tyrosine restricted diet intake" EXACT []
+synonym: "tyrosine restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:18186 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010096
+name: dietary sodium intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of sodium atom." []
+synonym: "avoid sodium atom intake" EXACT []
+synonym: "avoiding dietary sodium atom intake" EXACT []
+synonym: "sodium atom consumption avoidance" EXACT []
+synonym: "sodium atom restricted diet intake" EXACT []
+synonym: "sodium atom restriction" EXACT []
+synonym: "sodium restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:26708 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010097
+name: dietary galactose intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of galactose." []
+synonym: "avoid galactose intake" EXACT []
+synonym: "avoiding dietary galactose intake" EXACT []
+synonym: "galactose consumption avoidance" EXACT []
+synonym: "galactose restricted diet intake" EXACT []
+synonym: "galactose restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:28260 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010098
+name: cholesterol intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of cholesterol." []
+synonym: "avoid cholesterol intake" EXACT []
+synonym: "avoiding dietary cholesterol intake" EXACT []
+synonym: "cholesterol consumption avoidance" EXACT []
+synonym: "cholesterol restricted diet intake" EXACT []
+synonym: "cholesterol restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:16113 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010099
+name: dietary cholesterol intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of cholesterol." []
+synonym: "avoid cholesterol intake" EXACT []
+synonym: "avoiding dietary cholesterol intake" EXACT []
+synonym: "cholesterol consumption avoidance" EXACT []
+synonym: "cholesterol restricted diet intake" EXACT []
+synonym: "cholesterol restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:16113 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010100
+name: dietary iron intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of iron atom." []
+synonym: "avoid iron atom intake" EXACT []
+synonym: "avoiding dietary iron atom intake" EXACT []
+synonym: "dietary iron restriction" EXACT []
+synonym: "iron atom consumption avoidance" EXACT []
+synonym: "iron atom restricted diet intake" EXACT []
+synonym: "iron atom restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:18248 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010101
+name: dietary ascorbic acid intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of ascorbic acid." []
+synonym: "ascorbic acid consumption avoidance" EXACT []
+synonym: "ascorbic acid restricted diet intake" EXACT []
+synonym: "ascorbic acid restriction" EXACT []
+synonym: "avoid ascorbic acid intake" EXACT []
+synonym: "avoiding dietary ascorbic acid intake" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:22652 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010102
+name: dietary branched-chain amino acid intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of branched-chain amino acid." []
+synonym: "avoid branched chain amino acids ingestion" EXACT []
+synonym: "avoid branched-chain amino acid intake" EXACT []
+synonym: "avoiding dietary branched-chain amino acid intake" EXACT []
+synonym: "branched chain amino acid intake avoidance" EXACT []
+synonym: "branched chain amino acid restriction" EXACT []
+synonym: "branched-chain amino acid consumption avoidance" EXACT []
+synonym: "branched-chain amino acid restricted diet intake" EXACT []
+synonym: "branched-chain amino acid restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:22918 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010103
+name: dietary trimethylamine intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of trimethylamine." []
+synonym: "avoid trimethylamine intake" EXACT []
+synonym: "avoiding dietary trimethylamine intake" EXACT []
+synonym: "trimethylamine consumption avoidance" EXACT []
+synonym: "trimethylamine restricted diet intake" EXACT []
+synonym: "trimethylamine restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:18139 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010104
+name: dietary choline intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of choline." []
+synonym: "avoid choline intake" EXACT []
+synonym: "avoiding dietary choline intake" EXACT []
+synonym: "choline consumption avoidance" EXACT []
+synonym: "choline restricted diet intake" EXACT []
+synonym: "choline restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:15354 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010105
+name: dietary trimethylamine N-oxide intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of trimethylamine N-oxide." []
+synonym: "avoid trimethylamine N-oxide intake" EXACT []
+synonym: "avoiding dietary trimethylamine N-oxide intake" EXACT []
+synonym: "trimethylamine N-oxide consumption avoidance" EXACT []
+synonym: "trimethylamine N-oxide restricted diet intake" EXACT []
+synonym: "trimethylamine N-oxide restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:15724 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010106
+name: dietary lecithin intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of lecithin." []
+synonym: "avoid lecithin intake" EXACT []
+synonym: "avoiding dietary lecithin intake" EXACT []
+synonym: "lecithin consumption avoidance" EXACT []
+synonym: "lecithin restricted diet intake" EXACT []
+synonym: "lecithin restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:61995 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010107
+name: dietary sterol intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of sterol." []
+synonym: "avoid sterol intake" EXACT []
+synonym: "avoiding dietary sterol intake" EXACT []
+synonym: "sterol consumption avoidance" EXACT []
+synonym: "sterol restricted diet intake" EXACT []
+synonym: "sterol restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:15889 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010108
+name: dietary purine intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of purine." []
+synonym: "avoid purine intake" EXACT []
+synonym: "avoiding dietary purine intake" EXACT []
+synonym: "purine consumption avoidance" EXACT []
+synonym: "purine restricted diet intake" EXACT []
+synonym: "purine restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:35584 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010109
+name: dietary fructose intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of fructose." []
+synonym: "avoid fructose intake" EXACT []
+synonym: "avoiding dietary fructose intake" EXACT []
+synonym: "fructose consumption avoidance" EXACT []
+synonym: "fructose restricted diet intake" EXACT []
+synonym: "fructose restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:28757 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010110
+name: dietary lactose intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of lactose." []
+synonym: "avoid lactose intake" EXACT []
+synonym: "avoiding dietary lactose intake" EXACT []
+synonym: "lactose consumption avoidance" EXACT []
+synonym: "lactose restricted diet intake" EXACT []
+synonym: "lactose restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:17716 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010111
+name: dietary leucine intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of leucine." []
+synonym: "avoid leucine intake" EXACT []
+synonym: "avoiding dietary leucine intake" EXACT []
+synonym: "leucine consumption avoidance" EXACT []
+synonym: "leucine restricted diet intake" EXACT []
+synonym: "leucine restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:25017 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010112
+name: dietary oxalate intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of oxalate." []
+synonym: "avoid oxalate intake" EXACT []
+synonym: "avoiding dietary oxalate intake" EXACT []
+synonym: "oxalate consumption avoidance" EXACT []
+synonym: "oxalate restricted diet intake" EXACT []
+synonym: "oxalate restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:132952 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010113
+name: dietary phosphate intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of phosphate." []
+synonym: "avoid phosphate intake" EXACT []
+synonym: "avoiding dietary phosphate intake" EXACT []
+synonym: "phosphate consumption avoidance" EXACT []
+synonym: "phosphate restricted diet intake" EXACT []
+synonym: "phosphate restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:26020 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010114
+name: saturated fat intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of saturated fatty acid." []
+synonym: "avoid saturated fatty acid intake" EXACT []
+synonym: "avoiding dietary saturated fatty acid intake" EXACT []
+synonym: "saturated fatty acid consumption avoidance" EXACT []
+synonym: "saturated fatty acid restricted diet intake" EXACT []
+synonym: "saturated fatty acid restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:26607 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010115
+name: dietary calcium atom intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of calcium atom." []
+synonym: "avoid calcium atom intake" EXACT []
+synonym: "avoiding dietary calcium atom intake" EXACT []
+synonym: "calcium atom consumption avoidance" EXACT []
+synonym: "calcium atom restricted diet intake" EXACT []
+synonym: "calcium atom restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:22984 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010116
+name: dietary sucrose intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of sucrose." []
+synonym: "avoid sucrose intake" EXACT []
+synonym: "avoiding dietary sucrose intake" EXACT []
+synonym: "sucrose consumption avoidance" EXACT []
+synonym: "sucrose restricted diet intake" EXACT []
+synonym: "sucrose restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:17992 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010117
+name: dietary triglyceride intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of triglyceride." []
+synonym: "avoid triglyceride intake" EXACT []
+synonym: "avoiding dietary triglyceride intake" EXACT []
+synonym: "triglyceride consumption avoidance" EXACT []
+synonym: "triglyceride restricted diet intake" EXACT []
+synonym: "triglyceride restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:17855 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010118
+name: dietary riboflavin intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of riboflavin." []
+synonym: "avoid riboflavin intake" EXACT []
+synonym: "avoiding dietary riboflavin intake" EXACT []
+synonym: "B12 restriction" EXACT []
+synonym: "riboflavin consumption avoidance" EXACT []
+synonym: "riboflavin restricted diet intake" EXACT []
+synonym: "riboflavin restriction" EXACT []
+synonym: "vitamin B12 intake avoidance" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:17015 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010119
+name: dietary phytanic acid intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of phytanic acid." []
+synonym: "avoid phytanic acid intake" EXACT []
+synonym: "avoiding dietary phytanic acid intake" EXACT []
+synonym: "phytanic acid consumption avoidance" EXACT []
+synonym: "phytanic acid restricted diet intake" EXACT []
+synonym: "phytanic acid restriction" EXACT []
+intersection_of: MAXO:0000056 ! nutrition intake avoidance
+intersection_of: MAXO:0001027 CHEBI:16285 ! avoided food
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -7151,7 +7964,7 @@ created_by: http://orcid.org/0000-0001-7941-3010
 
 [Term]
 id: MAXO:0010301
-name: rectal swab
+name: rectal swab collection
 def: "Collection biological material from within the rectum. A cotton swab is inserted into the opening and rotated and then withdrawn." []
 synonym: "anal swab" EXACT []
 synonym: "swab collection of rectum" EXACT []
@@ -7160,7 +7973,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010302
-name: vaginal swab
+name: vaginal swab collection
 def: "Collection biological material from within the vagina. A cotton swab is inserted into the opening and rotated and then withdrawn." []
 synonym: "swab collection of vagina" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-27T20:39:14Z xsd:string
@@ -7168,7 +7981,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010303
-name: buccal swab
+name: buccal swab collection
 def: "Collection biological material from within the buccal mucosa. A cotton swab is inserted into the opening and rotated and then withdrawn." []
 synonym: "oral swab" EXACT []
 synonym: "swab collection of buccal mucosa" EXACT []
@@ -7185,7 +7998,7 @@ created_by: http://orcid.org/0000-0001-7941-2974
 
 [Term]
 id: MAXO:0010305
-name: nasopharyngeal swab
+name: nasopharyngeal swab collection
 def: "Collection biological material from within the nasopharynx. A cotton swab is inserted into the opening and rotated and then withdrawn." []
 synonym: "swab collection of nasopharynx" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-27T20:39:14Z xsd:string
@@ -7201,7 +8014,7 @@ created_by: http://orcid.org/0000-0001-7941-2978
 
 [Term]
 id: MAXO:0010307
-name: skin swab
+name: skin swab collection
 def: "Collection biological material from within the zone of skin. A cotton swab is inserted into the opening and rotated and then withdrawn." []
 synonym: "swab collection of zone of skin" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-27T20:39:14Z xsd:string
@@ -7209,7 +8022,7 @@ created_by: http://orcid.org/0000-0001-7941-2978
 
 [Term]
 id: MAXO:0010308
-name: oropharyngeal swab
+name: oropharyngeal swab collection
 def: "Collection biological material from within the oropharynx. A cotton swab is inserted into the opening and rotated and then withdrawn." []
 synonym: "swab collection of oropharynx" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-27T20:39:14Z xsd:string
@@ -7217,7 +8030,7 @@ created_by: http://orcid.org/0000-0001-7941-2978
 
 [Term]
 id: MAXO:0010309
-name: anterior nares swab
+name: anterior nares swab collection
 def: "Collection biological material from within the external naris. A cotton swab is inserted into the opening and rotated and then withdrawn." []
 synonym: "anterior naris swab" EXACT []
 synonym: "swab collection of external naris" EXACT []
@@ -7376,14 +8189,27 @@ property_value: http://purl.org/dc/elements/1.1/date 2020-03-30T20:39:14Z xsd:st
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0010322
+name: ketogenic diet intake avoidance
+def: "Avoid the administration or use of ketogenic diet intake." []
+synonym: "avoid ketogenic diet intake" EXACT []
+synonym: "avoiding ketogenic diet intake" EXACT []
+intersection_of: MAXO:0001014 ! medical action avoidance
+intersection_of: MAXO:0001015 MAXO:0030010 ! avoided medical action ketogenic diet intake
+property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0010351
 name: abdominal radiographic procedure
 def: "An imaging test that uses small amounts of radiation to produce pictures of abdomen." []
 synonym: "abdomen radiogram procedure" EXACT []
 synonym: "abdomen X-ray procedure" EXACT []
+synonym: "abdominal radiography" EXACT []
 synonym: "abdominal X-ray procedure" EXACT []
 synonym: "radiograph of abdomen" EXACT []
 synonym: "radiography of abdomen" EXACT []
+xref: NCIT:C38102
 property_value: http://purl.org/dc/elements/1.1/date 2020-04-07T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -7407,7 +8233,7 @@ synonym: "liver X-ray procedure" EXACT []
 synonym: "radiograph of liver" EXACT []
 synonym: "radiography of liver" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-04-07T20:39:14Z xsd:string
-created_by: http://orcid.org/0000-0001-7941-2965
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010354
@@ -7418,7 +8244,7 @@ synonym: "lung X-ray procedure" EXACT []
 synonym: "radiograph of lung" EXACT []
 synonym: "radiography of lung" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-04-07T20:39:14Z xsd:string
-created_by: http://orcid.org/0000-0001-7941-2969
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010355
@@ -7429,7 +8255,7 @@ synonym: "neck X-ray procedure" EXACT []
 synonym: "radiograph of neck" EXACT []
 synonym: "radiography of neck" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-04-07T20:39:14Z xsd:string
-created_by: http://orcid.org/0000-0001-7941-2979
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010356
@@ -7439,8 +8265,9 @@ synonym: "chest radiogram procedure" EXACT []
 synonym: "chest X-ray procedure" EXACT []
 synonym: "radiograph of chest" EXACT []
 synonym: "radiography of chest" EXACT []
+xref: NCIT:C38103
 property_value: http://purl.org/dc/elements/1.1/date 2020-04-07T20:39:14Z xsd:string
-created_by: http://orcid.org/0000-0001-7941-3010
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010357
@@ -7454,22 +8281,24 @@ synonym: "radiograph of lower limb segment" EXACT []
 synonym: "radiography of lower limb segment" EXACT []
 xref: NCIT:C20080
 property_value: http://purl.org/dc/elements/1.1/date 2020-04-07T20:39:14Z xsd:string
-created_by: http://orcid.org/0000-0001-7941-3010
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010358
-name: angiography
-def: "An imaging test that uses small amounts of radiation to produce pictures of blood vasculature." []
+name: angiography procedure
+def: "The X-ray examination of the blood vessels or chambers of the heart." []
+synonym: "angiography" EXACT []
 synonym: "blood vasculature radiogram procedure" EXACT []
 synonym: "blood vasculature X-ray procedure" EXACT []
 synonym: "radiograph of blood vasculature" EXACT []
 synonym: "radiography of blood vasculature" EXACT []
+xref: NCIT:C20080
 property_value: http://purl.org/dc/elements/1.1/date 2020-04-07T20:39:14Z xsd:string
-created_by: http://orcid.org/0000-0001-7941-3010
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010359
-name: pulmonary angiography
+name: pulmonary angiography procedure
 def: "An x-ray imaging technique that involves visualization of the pulmonary vasculature after fluoroscopy-guided catheter placement and injection of an iodinated contrast medium into the pulmonary circulation." []
 synonym: "pulmonary vascular system radiogram procedure" EXACT []
 synonym: "pulmonary vascular system X-ray procedure" EXACT []
@@ -7477,7 +8306,102 @@ synonym: "radiograph of pulmonary vascular system" EXACT []
 synonym: "radiography of pulmonary vascular system" EXACT []
 xref: NCIT:C154789
 property_value: http://purl.org/dc/elements/1.1/date 2020-04-07T20:39:14Z xsd:string
-created_by: http://orcid.org/0000-0001-7941-3010
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010360
+name: bronchography procedure
+def: "The radiographic examination of the tracheobronchial tree following the injection of a radiopaque material." []
+synonym: "bronchographic image procedure" EXACT []
+synonym: "bronchography" EXACT []
+synonym: "radiograph of tracheobronchial tree" EXACT []
+synonym: "radiography of tracheobronchial tree" EXACT []
+synonym: "tracheobronchial tree radiogram procedure" EXACT []
+synonym: "tracheobronchial tree X-ray procedure" EXACT []
+xref: NCIT:C38040
+property_value: http://purl.org/dc/elements/1.1/date 2020-04-27T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010361
+name: cholangiography procedure
+def: "The radiographic examination of the bile ducts after a contrast medium has been injected." []
+synonym: "biliary tree radiogram procedure" EXACT []
+synonym: "biliary tree X-ray procedure" EXACT []
+synonym: "cholangiographic procedure" EXACT []
+synonym: "cholangiography" EXACT []
+synonym: "radiograph of biliary tree" EXACT []
+synonym: "radiography of biliary tree" EXACT []
+xref: NCIT:C61508
+property_value: http://purl.org/dc/elements/1.1/date 2020-04-27T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010362
+name: cystography procedure
+def: "A radiographic procedure to obtain an image of the urinary bladder by filling the bladder with contrast medium." []
+synonym: "cystographic imaging procedure" EXACT []
+synonym: "cystography" EXACT []
+synonym: "radiograph of urinary bladder" EXACT []
+synonym: "radiography of urinary bladder" EXACT []
+synonym: "urinary bladder radiogram procedure" EXACT []
+synonym: "urinary bladder X-ray procedure" EXACT []
+xref: NCIT:C38049
+property_value: http://purl.org/dc/elements/1.1/date 2020-04-27T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010363
+name: mammography procedure
+def: "A type of radiography used specifically to examine breast tissue. The procedure utilizes a low-dose of x-rays or radiation to generate an image. A mammography exam or mammogram, is used as a screening tool to detect early breast cancer in women experiencing no symptoms and to detect and diagnose breast disease." []
+synonym: "breast radiogram procedure" EXACT []
+synonym: "breast X-ray procedure" EXACT []
+synonym: "mammography" EXACT []
+synonym: "radiograph of breast" EXACT []
+synonym: "radiography of breast" EXACT []
+xref: NCIT:C16818
+property_value: http://purl.org/dc/elements/1.1/date 2020-04-27T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010364
+name: myelography procedure
+def: "The radiographic examination of the spinal cord and nerve roots following the injection of a contrast medium into the spinal subarachnoid space. The X-rays taken may highlight conditions such as spinal tumors, spinal cord swelling and herniated discs." []
+synonym: "myelography" EXACT []
+synonym: "radiograph of spinal cord" EXACT []
+synonym: "radiography of spinal cord" EXACT []
+synonym: "spinal cord radiogram procedure" EXACT []
+synonym: "spinal cord X-ray procedure" EXACT []
+xref: NCIT:C20175
+property_value: http://purl.org/dc/elements/1.1/date 2020-04-27T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-29610
+
+[Term]
+id: MAXO:0010365
+name: total body radiography procedure
+def: "A radiologic test that involves the examination of the entire body in a single procedure." []
+synonym: "multicellular organism radiogram procedure" EXACT []
+synonym: "multicellular organism X-ray procedure" EXACT []
+synonym: "radiograph of multicellular organism" EXACT []
+synonym: "radiography of multicellular organism" EXACT []
+synonym: "total body radiography" EXACT []
+synonym: "whole body radiography" EXACT []
+xref: NCIT:C96640
+property_value: http://purl.org/dc/elements/1.1/date 2020-04-27T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0010366
+name: vaginography procedure
+def: "A radiographic examination of the vagina using the intravaginal injection of contrast medium." []
+synonym: "radiograph of vagina" EXACT []
+synonym: "radiography of vagina" EXACT []
+synonym: "vagina radiogram procedure" EXACT []
+synonym: "vagina X-ray procedure" EXACT []
+synonym: "vaginography" EXACT []
+xref: NCIT:C38096
+property_value: http://purl.org/dc/elements/1.1/date 2020-04-27T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0030010
