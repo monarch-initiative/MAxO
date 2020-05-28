@@ -521,6 +521,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000641>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000642>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000643>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000644>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000645>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001002>))
@@ -2505,11 +2506,10 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <h
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000210> "CHEBI:37733")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000210> "cholinesterase inhibitor drug treatment")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000210> "cholinesterase inhibitor medication therapy")
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION>) <http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/MAXO_0000210> "AChE inhibitor therapy")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/MAXO_0000210> "acetylcholinesterase inhibitor therapy")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:31335056") rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0000210> "Neurogenerative diseases such as Alzheimer disease, Parkinson disease, and Lewy body dementia are indications for cholinesterase inhibitor therapy.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000210> "cholinesterase inhibitor therapy"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000210> <http://purl.obolibrary.org/obo/MAXO_0000171>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000210> <http://purl.obolibrary.org/obo/MAXO_0000644>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000211> (glutamatergic pathway modifying agent therapy)
 
@@ -2679,6 +2679,9 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000224> <http://purl.obolibrary
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000225> "Medication given by mouth or by injection to treat myasthenia gravis.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000225> "2019-01-22T18:47:33Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000225> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000225> "anti-myasthenic drug therapy")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000225> "antimyasthenic drug therapy")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000225> "antimyasthenic medication therapy")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000225> "antimyasthenic agent therapy"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000225> <http://purl.obolibrary.org/obo/MAXO_0000058>)
 
@@ -5957,6 +5960,18 @@ AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000644> "2020
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000644> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000644> "enzyme modifying agent therapy"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000644> <http://purl.obolibrary.org/obo/MAXO_0000058>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000645> (acetylcholinesterase inhibitor therapy)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000645> "Use of an inhibitor that interferes with the action of enzyme acetylcholinesterase, which helps breaking down of acetylcholine into choline and acetic acid")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000645> "2020-05-28T19:16:31Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000645> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000645> "AChE inhibitor drug treatment")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000645> "AChE inhibitor medication treatment")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000645> "acetylcholinesterase inhibitor agent therapy")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000645> "acetylcholinesterase inhibitor drug therapy")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000645> "acetylcholinesterase inhibitor therapy"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000645> <http://purl.obolibrary.org/obo/MAXO_0000210>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0001000> (functional magnetic resonance imaging procedure)
 
