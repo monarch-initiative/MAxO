@@ -1,0 +1,22 @@
+pattern_name: pharmacotherapy_chemicalsubstance
+pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/pharmacotherapy_chemicalsubstance.yaml
+description: "use of a chemical substance for pharmacotherapy"
+
+contributors:
+  - https://orcid.org/0000-0001-7941-2961
+  - https://orcid.org/0000-0002-7356-1779
+
+classes:
+  pharmacotherapy: MAXO:0000058
+  chemical entity: CHEBI:24431
+
+relations:
+  inheres_in: RO:0000052
+
+vars:
+  chemical_entity: "'chemical entity'"
+
+equivalentTo:
+  text: "'pharmacotherapy' and ('inheres_in' some %s)"
+  vars:
+    - chemical_entity
