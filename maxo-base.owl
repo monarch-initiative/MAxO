@@ -11,7 +11,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/maxo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2020-06-12/maxo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2020-06-13/maxo-base.owl"/>
         <dc:creator>Aaron Zhang</dc:creator>
         <dc:creator>Leigh Carmody</dc:creator>
         <dc:creator>Peter Robinson</dc:creator>
@@ -548,9 +548,21 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_35442 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_35442"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_35457 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_35457"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_35469 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_35469"/>
     
 
 
@@ -569,6 +581,30 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_35472 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_35472"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_35473 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_35473"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_35474 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_35474"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_35476 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_35476"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_35477 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_35477"/>
     
 
 
@@ -659,6 +695,12 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_35705 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_35705"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_35717 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_35717"/>
     
 
 
@@ -755,6 +797,12 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_38462 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_38462"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_38623 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_38623"/>
     
 
 
@@ -956,6 +1004,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_50949 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_50949"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_51371 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_51371"/>
@@ -1067,6 +1121,18 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_64954 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_64954"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_65190 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_65190"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_65191 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_65191"/>
     
 
 
@@ -3826,8 +3892,19 @@
     <!-- http://purl.obolibrary.org/obo/MAXO_0000158 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000158">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35442"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000325"/>
-        <obo:IAO_0000115>A substance used to treat or prevent parasitic infections.</obo:IAO_0000115>
+        <obo:IAO_0000115>Use of a substance used to treat or prevent parasitic infections.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T17:53:06Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>CHEBI:35442</oboInOwl:hasDbXref>
@@ -3835,14 +3912,13 @@
         <oboInOwl:hasExactSynonym>antiparasitic drug therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>antiparasitics therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>antiparisitics drug treatment</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>treatment with anti-parasitic agent</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>treatment with anti-parasitic medication</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>treatment with antiparasitic agent</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>treatment with antiparasitic drug</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>treatment with antiparasitic medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">antiparasitic agent therapy</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000158"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A substance used to treat or prevent parasitic infections.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CHEBI:35442</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -3879,8 +3955,19 @@
     <!-- http://purl.obolibrary.org/obo/MAXO_0000160 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000160">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35469"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001022"/>
-        <obo:IAO_0000115>Antidepressants are mood-stimulating drugs used primarily in the treatment of affective disorders and related conditions.</obo:IAO_0000115>
+        <obo:IAO_0000115>Treatment with a mood-stimulating drugs used primarily in the treatment of affective disorders and related conditions.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T17:53:33Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>CHEBI:35469</oboInOwl:hasDbXref>
@@ -3892,12 +3979,6 @@
         <oboInOwl:hasExactSynonym>thymoleptics drug therapy</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">antidepressant agent therapy</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000160"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Antidepressants are mood-stimulating drugs used primarily in the treatment of affective disorders and related conditions.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CHEBI:35469</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -3944,8 +4025,19 @@
     <!-- http://purl.obolibrary.org/obo/MAXO_0000163 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000163">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35474"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001023"/>
-        <obo:IAO_0000115>Anxiolytic drugs are agents that alleviate anxiety, tension, and anxiety disorders, promote sedation, and have a calming effect without affecting clarity of consciousness or neurologic conditions.</obo:IAO_0000115>
+        <obo:IAO_0000115>Treatment with a drug that alleviate anxiety, tension, and anxiety disorders, promote sedation, and have a calming effect without affecting clarity of consciousness or neurologic conditions.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T17:54:43Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>CHEBI:35474</oboInOwl:hasDbXref>
@@ -3957,14 +4049,9 @@
         <oboInOwl:hasExactSynonym>minor tranquilizer treatment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>minor tranquilizing agent treatment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>minor tranquilizing drug therapy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>treatment with anxiolytic</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">anxiolytic agent therapy</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000163"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Anxiolytic drugs are agents that alleviate anxiety, tension, and anxiety disorders, promote sedation, and have a calming effect without affecting clarity of consciousness or neurologic conditions.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CHEBI:35474</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -4051,8 +4138,19 @@
     <!-- http://purl.obolibrary.org/obo/MAXO_0000166 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000166">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35476"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001023"/>
-        <obo:IAO_0000115>Antipsychotic drugs are agents that control agitated psychotic behaviour, alleviate acute psychotic states, reduce psychotic symptoms, and exert a quieting effect.</obo:IAO_0000115>
+        <obo:IAO_0000115>Treatment with an agent that control agitated psychotic behaviour, alleviate acute psychotic states, reduce psychotic symptoms, and exert a quieting effect.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T17:57:29Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>CHEBI:35476</oboInOwl:hasDbXref>
@@ -4061,14 +4159,11 @@
         <oboInOwl:hasExactSynonym>major tranquilizer drug treatment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>neuroleptic agent treatment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>neuroleptic therapies</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>treatment with antipsychotic agent</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>treatment with antipsychotic drug</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>treatment with antipsychotic medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">antipsychotic agent therapy</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000166"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Antipsychotic drugs are agents that control agitated psychotic behaviour, alleviate acute psychotic states, reduce psychotic symptoms, and exert a quieting effect.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CHEBI:35476</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -4246,7 +4341,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000641"/>
         <obo:IAO_0000115>Treatment with a drug used to prevent nausea or vomiting.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T18:01:53Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -5383,8 +5477,19 @@
     <!-- http://purl.obolibrary.org/obo/MAXO_0000213 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000213">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_38623"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000160"/>
-        <obo:IAO_0000115>Any substance that inhibits monoamine oxidase (MAO), an enzyme that catalyzes the oxidative deamination of monoamines and plays a role in the inactivation of neurotransmitters.</obo:IAO_0000115>
+        <obo:IAO_0000115>A drug that acts as an inhibitor that interferes with the action of monoamine oxidase (EC 1.4.3.4).</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T18:36:08Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>CHEBI:38623</oboInOwl:hasDbXref>
@@ -5396,14 +5501,9 @@
         <oboInOwl:hasExactSynonym>inhibitors of MAO therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>inhibitors of monoamine oxidase therapy</oboInOwl:hasExactSynonym>
         <rdfs:comment>A type of drug used to treat depression. It stops the breakdown of certain chemicals in the brain that help improve a person&apos;s mood. A monoamine oxidase inhibitor is a type of antidepressant.</rdfs:comment>
+        <rdfs:comment>Any substance that inhibits monoamine oxidase (MAO), an enzyme that catalyzes the oxidative deamination of monoamines and plays a role in the inactivation of neurotransmitters.</rdfs:comment>
         <rdfs:label xml:lang="en">monoamine oxidase inhibitor agent therapy</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000213"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Any substance that inhibits monoamine oxidase (MAO), an enzyme that catalyzes the oxidative deamination of monoamines and plays a role in the inactivation of neurotransmitters.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCIT:C667</oboInOwl:hasDbXref>
-    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000213"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
@@ -5420,6 +5520,12 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000213"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
         <owl:annotatedTarget>A type of drug used to treat depression. It stops the breakdown of certain chemicals in the brain that help improve a person&apos;s mood. A monoamine oxidase inhibitor is a type of antidepressant.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C667</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000213"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>Any substance that inhibits monoamine oxidase (MAO), an enzyme that catalyzes the oxidative deamination of monoamines and plays a role in the inactivation of neurotransmitters.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>NCIT:C667</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -5452,7 +5558,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000215">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000160"/>
-        <obo:IAO_0000115>Mood-stimulating agents which contain a tricyclic structure and are used primarily in the treatment of affective disorders and related conditions. This group of agents appear to act through brain catecholamine systems.</obo:IAO_0000115>
+        <obo:IAO_0000115>Treatment with mood-stimulating agents which contain a tricyclic structure and are used primarily in the treatment of affective disorders and related conditions. This group of agents appear to act through brain catecholamine systems.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T18:41:18Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C94727</oboInOwl:hasDbXref>
@@ -5460,12 +5566,6 @@
         <oboInOwl:hasExactSynonym>tricyclic antidepressant drug treatment</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">tricyclic antidepressant agent therapy</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000215"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Mood-stimulating agents which contain a tricyclic structure and are used primarily in the treatment of affective disorders and related conditions. This group of agents appear to act through brain catecholamine systems.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCIT:C94727</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -6169,8 +6269,19 @@
     <!-- http://purl.obolibrary.org/obo/MAXO_0000243 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000243">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_65191"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000166"/>
-        <obo:IAO_0000115>Antipsychotic drugs which can have different modes of action but which tend to be less likely than first generation antipsychotics to cause extrapyramidal motor control disabilities such as body rigidity or Parkinson&apos;s disease-type movements.</obo:IAO_0000115>
+        <obo:IAO_0000115>Treatment with a drug which can have different modes of action but which tend to be less likely than first generation antipsychotics to cause extrapyramidal motor control disabilities such as body rigidity or Parkinson&apos;s disease-type movements.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T19:00:47Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>CHEBI:65191</oboInOwl:hasDbXref>
@@ -6181,22 +6292,28 @@
         <oboInOwl:hasExactSynonym>second generation antipsychotic agent therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>second generation antipsychotic drug treatment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>second generation antipsychotic therapy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>treatment with atypical antipsychotic</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">atypical antipsychotic agent therapy</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000243"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Antipsychotic drugs which can have different modes of action but which tend to be less likely than first generation antipsychotics to cause extrapyramidal motor control disabilities such as body rigidity or Parkinson&apos;s disease-type movements.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CHEBI:65191</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
     <!-- http://purl.obolibrary.org/obo/MAXO_0000244 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000244">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_65190"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000166"/>
-        <obo:IAO_0000115>Antipsychotic drugs which can have different modes of action but which tend to be more likely than second generation antipsychotics to cause extrapyramidal motor control disabilities such as body rigidity or Parkinson&apos;s disease-type movements; such body movements can become permanent even after treatment has ceased.</obo:IAO_0000115>
+        <obo:IAO_0000115>Treatment with a drug which can have different modes of action but which tend to be more likely than second generation antipsychotics to cause extrapyramidal motor control disabilities such as body rigidity or Parkinson&apos;s disease-type movements; such body movements can become permanent even after treatment has ceased.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T19:01:06Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>CHEBI:65190</oboInOwl:hasDbXref>
@@ -6205,17 +6322,12 @@
         <oboInOwl:hasExactSynonym>first generation antipsychotic agent treatment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>first generation antipsychotic drug treatment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>first generation antipsychotic therapy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>treatment with conventional antipsychotic</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>typical antipsychotic agent therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>typical antipsychotic drug treatment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>typical antipsychotic therapy</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">conventional antipsychotic agent therapy</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000244"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Antipsychotic drugs which can have different modes of action but which tend to be more likely than second generation antipsychotics to cause extrapyramidal motor control disabilities such as body rigidity or Parkinson&apos;s disease-type movements; such body movements can become permanent even after treatment has ceased.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CHEBI:65190</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -6248,9 +6360,9 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000246">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000168"/>
+        <obo:IAO_0000115>Use of a drug for the treatment and prophylaxis of infection with hepatitis virus(es).</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T20:15:16Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasExactSynonym>A drug used for the treatment and prophylaxis of infection with hepatitis virus(es).</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>anti-hepatitis agent therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>anti-hepatitis drug therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>anti-hepatitis drug treatment</oboInOwl:hasExactSynonym>
@@ -6422,7 +6534,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000253">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000168"/>
-        <obo:IAO_0000115>A drug used for the treatment and prophylaxis of infection with influenza viruses.</obo:IAO_0000115>
+        <obo:IAO_0000115>Treatment with a drug used for the treatment and prophylaxis of infection with influenza viruses.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T20:21:48Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>anti-flu medication therapy</oboInOwl:hasExactSynonym>
@@ -6459,8 +6571,19 @@
     <!-- http://purl.obolibrary.org/obo/MAXO_0000256 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000256">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35477"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001023"/>
-        <obo:IAO_0000115>Antimanic drugs are agents used to treat bipolar disorders or mania associated with other affective disorders.</obo:IAO_0000115>
+        <obo:IAO_0000115>Treatment with an antimanic drugs are agents used to treat bipolar disorders or mania associated with other affective disorders.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T20:33:05Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>CHEBI:35477</oboInOwl:hasDbXref>
@@ -6472,14 +6595,11 @@
         <oboInOwl:hasExactSynonym>bipolar agent drug therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>bipolar agent drug treatment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>bipolar disorder agent therapy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>treatment with antimanic agent</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>treatment with antimanic drug</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>treatment with antimanic medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">antimanic agent therapy</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000256"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Antimanic drugs are agents used to treat bipolar disorders or mania associated with other affective disorders.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CHEBI:35477</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -7697,6 +7817,17 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000323 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000323">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35717"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001022"/>
         <obo:IAO_0000115>Treatment with a central nervous system depressant used to induce drowsiness or sleep or to reduce psychological excitement or anxiety.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T21:14:36Z</dc:date>
@@ -10958,6 +11089,17 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000439 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000439">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50949"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000160"/>
         <obo:IAO_0000115>Treatment with a medication that increases the extracellular level of the neurotransmitter serotonin (5-HT) by inhibiting its reuptake into the presynaptic cell.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-02T18:41:07Z</dc:date>
@@ -10968,6 +11110,11 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>SSRI drug treatment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>selective serotonin reuptake inhbitor drug treatment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>selective serotonin reuptake inhibitor drug therapy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>treatment with SSRI</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>treatment with SSRI agent</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>treatment with selective serotonin reuptake inhibitor agent</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>treatment with selective serotonin reuptake inhibitor drug</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>treatment with selective serotonin reuptake inhibitor medication</oboInOwl:hasExactSynonym>
         <rdfs:comment>Any agent that increases the extracellular level of the neurotransmitter serotonin (5-HT) by inhibiting its reuptake into the presynaptic cell. Increased level in the synaptic cleft prolongs the action of 5-HT on the postsynaptic receptor. This type of agent is typically used as an antidepressant and in the treatment of anxiety disorders and some personality disorders. They are also typically effective and used in treating some cases of insomnia.</rdfs:comment>
         <rdfs:label xml:lang="en">selective serotonin reuptake inhibitor agent therapy</rdfs:label>
     </owl:Class>
@@ -14620,7 +14767,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>A therapy used to treat or ameliorate peptic ulcer or irritation of the gastrointestinal tract.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-05-26T20:00:43Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasDbXref>CHEBI_49201</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CHEBI:49201</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>anti-ulcer drug therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>anti-ulcer medication treatment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with anti-ulcer agent</oboInOwl:hasExactSynonym>
@@ -14907,19 +15054,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/MAXO_0000641 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000641">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000058"/>
-        <obo:IAO_0000115>Treatment for inducing emesis or reducing nausea (and emesis).</obo:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-05-28T18:30:15Z</dc:date>
-        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasExactSynonym>emesis regulating treatment</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">emetic regulating agent therapy</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/MAXO_0000642 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000642">
@@ -14934,7 +15068,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000641"/>
         <obo:IAO_0000115>Treatment to induce vomiting and nausea usually administered in emergency situations after ingestion of a toxin.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-05-28T18:31:36Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -15022,7 +15155,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000210"/>
         <obo:IAO_0000115>Use of an inhibitor that interferes with the action of enzyme acetylcholinesterase, which helps breaking down of acetylcholine into choline and acetic acid</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-05-28T19:16:31Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -15988,11 +16120,22 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0001023 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001023">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35473"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001022"/>
+        <obo:IAO_0000115>Treatment with a traditional grouping of drugs said to have a soothing or calming effect on mood, thought or behaviour.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-24T19:39:15Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>CHEBI:35473</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>A traditional grouping of drugs said to have a soothing or calming effect on mood, thought or behaviour.</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>ataractic agents</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>tranquilisers</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>tranquilising agents</oboInOwl:hasExactSynonym>
@@ -16003,12 +16146,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>tranquilizing drugs</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">tranquilizing agent therapy</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001023"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>A traditional grouping of drugs said to have a soothing or calming effect on mood, thought or behaviour.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CHEBI:35473</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
