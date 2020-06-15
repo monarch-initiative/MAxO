@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2020-06-12/maxo-base.owl
+data-version: maxo/releases/2020-06-13/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Aaron Zhang" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
@@ -1268,13 +1268,20 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000158
 name: antiparasitic agent therapy
-def: "A substance used to treat or prevent parasitic infections." [CHEBI:35442]
+def: "Use of a substance used to treat or prevent parasitic infections." []
 synonym: "antiparasitic drug therapy" EXACT []
 synonym: "antiparasitics therapy" EXACT []
 synonym: "antiparisitics drug treatment" EXACT []
+synonym: "treatment with anti-parasitic agent" EXACT []
+synonym: "treatment with anti-parasitic medication" EXACT []
+synonym: "treatment with antiparasitic agent" EXACT []
+synonym: "treatment with antiparasitic drug" EXACT []
+synonym: "treatment with antiparasitic medication" EXACT []
 xref: CHEBI:35442
 xref: NCIT:C276
 is_a: MAXO:0000325 ! anti-infective agent therapy
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: RO:0000052 CHEBI:35442
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:53:06Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1298,7 +1305,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000160
 name: antidepressant agent therapy
-def: "Antidepressants are mood-stimulating drugs used primarily in the treatment of affective disorders and related conditions." [CHEBI:35469]
+def: "Treatment with a mood-stimulating drugs used primarily in the treatment of affective disorders and related conditions." []
 synonym: "antidepressant drug therapy" EXACT []
 synonym: "antidepressants treatment" EXACT []
 synonym: "thymoanaleptics treatment" EXACT []
@@ -1307,6 +1314,8 @@ synonym: "thymoleptic drug treatment therapy" EXACT []
 synonym: "thymoleptics drug therapy" EXACT []
 xref: CHEBI:35469
 is_a: MAXO:0001022 ! psychotropic agent therapy
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: RO:0000052 CHEBI:35469
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:53:33Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1336,7 +1345,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000163
 name: anxiolytic agent therapy
-def: "Anxiolytic drugs are agents that alleviate anxiety, tension, and anxiety disorders, promote sedation, and have a calming effect without affecting clarity of consciousness or neurologic conditions." [CHEBI:35474]
+def: "Treatment with a drug that alleviate anxiety, tension, and anxiety disorders, promote sedation, and have a calming effect without affecting clarity of consciousness or neurologic conditions." []
 synonym: "anti-anxiety agent therapy" EXACT []
 synonym: "anti-anxiety drug treatment" EXACT []
 synonym: "anxiolytic agent drug treatment" EXACT []
@@ -1345,8 +1354,11 @@ synonym: "minor tranquiliser therapy" EXACT []
 synonym: "minor tranquilizer treatment" EXACT []
 synonym: "minor tranquilizing agent treatment" EXACT []
 synonym: "minor tranquilizing drug therapy" EXACT []
+synonym: "treatment with anxiolytic" EXACT []
 xref: CHEBI:35474
 is_a: MAXO:0001023 ! tranquilizing agent therapy
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: RO:0000052 CHEBI:35474
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:54:43Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1401,14 +1413,19 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000166
 name: antipsychotic agent therapy
-def: "Antipsychotic drugs are agents that control agitated psychotic behaviour, alleviate acute psychotic states, reduce psychotic symptoms, and exert a quieting effect." [CHEBI:35476]
+def: "Treatment with an agent that control agitated psychotic behaviour, alleviate acute psychotic states, reduce psychotic symptoms, and exert a quieting effect." []
 synonym: "antipsychotic drug treatment" EXACT []
 synonym: "antipsychotic therapy" EXACT []
 synonym: "major tranquilizer drug treatment" EXACT []
 synonym: "neuroleptic agent treatment" EXACT []
 synonym: "neuroleptic therapies" EXACT []
+synonym: "treatment with antipsychotic agent" EXACT []
+synonym: "treatment with antipsychotic drug" EXACT []
+synonym: "treatment with antipsychotic medication" EXACT []
 xref: CHEBI:35476
 is_a: MAXO:0001023 ! tranquilizing agent therapy
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: RO:0000052 CHEBI:35476
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:57:29Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1525,7 +1542,6 @@ synonym: "Treatment with antiemetics medication" EXACT []
 synonym: "Treatment with antiemetics therapy" EXACT []
 xref: CHEBI:50919
 xref: NCIT:C267
-is_a: MAXO:0000641 ! emetic regulating agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
 intersection_of: RO:0000052 CHEBI:50919
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:01:53Z xsd:dateTime
@@ -2218,8 +2234,9 @@ replaced_by: MAXO:0000171
 [Term]
 id: MAXO:0000213
 name: monoamine oxidase inhibitor agent therapy
-def: "Any substance that inhibits monoamine oxidase (MAO), an enzyme that catalyzes the oxidative deamination of monoamines and plays a role in the inactivation of neurotransmitters." [NCIT:C667]
+def: "A drug that acts as an inhibitor that interferes with the action of monoamine oxidase (EC 1.4.3.4)." []
 comment: A type of drug used to treat depression. It stops the breakdown of certain chemicals in the brain that help improve a person's mood. A monoamine oxidase inhibitor is a type of antidepressant. {xref="NCIT:C667"}
+comment: Any substance that inhibits monoamine oxidase (MAO), an enzyme that catalyzes the oxidative deamination of monoamines and plays a role in the inactivation of neurotransmitters. {xref="NCIT:C667"}
 synonym: "inhibitors of MAO therapy" EXACT []
 synonym: "inhibitors of monoamine oxidase therapy" EXACT []
 synonym: "MAO drug therapy" EXACT []
@@ -2229,6 +2246,8 @@ synonym: "MAOI therapy" EXACT [] {RELATED="ABBREVIATION"}
 xref: CHEBI:38623
 xref: NCIT:C667
 is_a: MAXO:0000160 ! antidepressant agent therapy
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: RO:0000052 CHEBI:38623
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:36:08Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2254,7 +2273,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000215
 name: tricyclic antidepressant agent therapy
-def: "Mood-stimulating agents which contain a tricyclic structure and are used primarily in the treatment of affective disorders and related conditions. This group of agents appear to act through brain catecholamine systems." [NCIT:C94727]
+def: "Treatment with mood-stimulating agents which contain a tricyclic structure and are used primarily in the treatment of affective disorders and related conditions. This group of agents appear to act through brain catecholamine systems." []
 synonym: "tricyclic antidepressant drug therapy" EXACT []
 synonym: "tricyclic antidepressant drug treatment" EXACT []
 xref: NCIT:C94727
@@ -2697,7 +2716,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000243
 name: atypical antipsychotic agent therapy
-def: "Antipsychotic drugs which can have different modes of action but which tend to be less likely than first generation antipsychotics to cause extrapyramidal motor control disabilities such as body rigidity or Parkinson's disease-type movements." [CHEBI:65191]
+def: "Treatment with a drug which can have different modes of action but which tend to be less likely than first generation antipsychotics to cause extrapyramidal motor control disabilities such as body rigidity or Parkinson's disease-type movements." []
 synonym: "atypical antipsychotic agent treatment" EXACT []
 synonym: "atypical antipsychotic drug therapies" EXACT []
 synonym: "atypical antipsychotic drug treatment" EXACT []
@@ -2705,25 +2724,31 @@ synonym: "atypical antipsychotic therapies" EXACT []
 synonym: "second generation antipsychotic agent therapy" EXACT []
 synonym: "second generation antipsychotic drug treatment" EXACT []
 synonym: "second generation antipsychotic therapy" EXACT []
+synonym: "treatment with atypical antipsychotic" EXACT []
 xref: CHEBI:65191
 is_a: MAXO:0000166 ! antipsychotic agent therapy
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: RO:0000052 CHEBI:65191
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T19:00:47Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000244
 name: conventional antipsychotic agent therapy
-def: "Antipsychotic drugs which can have different modes of action but which tend to be more likely than second generation antipsychotics to cause extrapyramidal motor control disabilities such as body rigidity or Parkinson's disease-type movements; such body movements can become permanent even after treatment has ceased." [CHEBI:65190]
+def: "Treatment with a drug which can have different modes of action but which tend to be more likely than second generation antipsychotics to cause extrapyramidal motor control disabilities such as body rigidity or Parkinson's disease-type movements; such body movements can become permanent even after treatment has ceased." []
 synonym: "conventional antipsychotic drug treatment" EXACT []
 synonym: "conventional antipsychotic therapies" EXACT []
 synonym: "first generation antipsychotic agent treatment" EXACT []
 synonym: "first generation antipsychotic drug treatment" EXACT []
 synonym: "first generation antipsychotic therapy" EXACT []
+synonym: "treatment with conventional antipsychotic" EXACT []
 synonym: "typical antipsychotic agent therapy" EXACT []
 synonym: "typical antipsychotic drug treatment" EXACT []
 synonym: "typical antipsychotic therapy" EXACT []
 xref: CHEBI:65190
 is_a: MAXO:0000166 ! antipsychotic agent therapy
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: RO:0000052 CHEBI:65190
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T19:01:06Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2751,7 +2776,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000246
 name: antihepatitis agent therapy
-synonym: "A drug used for the treatment and prophylaxis of infection with hepatitis virus(es)." EXACT []
+def: "Use of a drug for the treatment and prophylaxis of infection with hepatitis virus(es)." []
 synonym: "anti-hepatitis agent therapy" EXACT []
 synonym: "anti-hepatitis drug therapy" EXACT []
 synonym: "anti-hepatitis drug treatment" EXACT []
@@ -2870,7 +2895,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000253
 name: anti-influenza agent therapy
-def: "A drug used for the treatment and prophylaxis of infection with influenza viruses." []
+def: "Treatment with a drug used for the treatment and prophylaxis of infection with influenza viruses." []
 synonym: "anti-flu medication therapy" EXACT []
 synonym: "anti-influenza drug therapy" EXACT []
 synonym: "anti-influenza drug treatment" EXACT []
@@ -2895,7 +2920,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000256
 name: antimanic agent therapy
-def: "Antimanic drugs are agents used to treat bipolar disorders or mania associated with other affective disorders." [CHEBI:35477]
+def: "Treatment with an antimanic drugs are agents used to treat bipolar disorders or mania associated with other affective disorders." []
 synonym: "antimanic agent drug treatment" EXACT []
 synonym: "antimanic agent treatment therapy" EXACT []
 synonym: "antimanic drug therapies" EXACT []
@@ -2904,8 +2929,13 @@ synonym: "antimanics" EXACT []
 synonym: "bipolar agent drug therapy" EXACT []
 synonym: "bipolar agent drug treatment" EXACT []
 synonym: "bipolar disorder agent therapy" EXACT []
+synonym: "treatment with antimanic agent" EXACT []
+synonym: "treatment with antimanic drug" EXACT []
+synonym: "treatment with antimanic medication" EXACT []
 xref: CHEBI:35477
 is_a: MAXO:0001023 ! tranquilizing agent therapy
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: RO:0000052 CHEBI:35477
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:33:05Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -3660,6 +3690,8 @@ synonym: "sedatives/hypnotic drug treatment" EXACT []
 xref: CHEBI:35717
 xref: NCIT:C29756
 is_a: MAXO:0001022 ! psychotropic agent therapy
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: RO:0000052 CHEBI:35717
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:14:36Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -4672,9 +4704,16 @@ synonym: "selective serotonin reuptake inhbitor drug treatment" EXACT []
 synonym: "selective serotonin reuptake inhibitor drug therapy" EXACT []
 synonym: "SSRI drug therapy" EXACT []
 synonym: "SSRI drug treatment" EXACT []
+synonym: "treatment with selective serotonin reuptake inhibitor agent" EXACT []
+synonym: "treatment with selective serotonin reuptake inhibitor drug" EXACT []
+synonym: "treatment with selective serotonin reuptake inhibitor medication" EXACT []
+synonym: "treatment with SSRI" EXACT []
+synonym: "treatment with SSRI agent" EXACT []
 xref: CHEBI:50949
 xref: NCIT:C94725
 is_a: MAXO:0000160 ! antidepressant agent therapy
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: RO:0000052 CHEBI:50949
 property_value: http://purl.org/dc/elements/1.1/date 2019-10-02T18:41:07Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -6681,7 +6720,7 @@ synonym: "anti-ulcer drug therapy" EXACT []
 synonym: "anti-ulcer medication treatment" EXACT []
 synonym: "treatment with anti-ulcer agent" EXACT []
 synonym: "treatment with anti-ulcer medication" EXACT []
-xref: CHEBI_49201
+xref: CHEBI:49201
 is_a: MAXO:0000267 ! gastrointestinal agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
 intersection_of: RO:0000052 CHEBI:49201
@@ -6853,15 +6892,6 @@ property_value: http://purl.org/dc/elements/1.1/date 2020-05-28T15:10:35Z xsd:da
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
-id: MAXO:0000641
-name: emetic regulating agent therapy
-def: "Treatment for inducing emesis or reducing nausea (and emesis)." []
-synonym: "emesis regulating treatment" EXACT []
-is_a: MAXO:0000058 ! pharmacotherapy
-property_value: http://purl.org/dc/elements/1.1/date 2020-05-28T18:30:15Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
-
-[Term]
 id: MAXO:0000642
 name: emetic agent therapy
 def: "Treatment to induce vomiting and nausea usually administered in emergency situations after ingestion of a toxin." []
@@ -6871,7 +6901,6 @@ synonym: "treatment with an emetic drug" EXACT []
 synonym: "treatment with an emetic medication" EXACT []
 synonym: "treatment with an emetic therapy" EXACT []
 xref: CHEBI:149552
-is_a: MAXO:0000641 ! emetic regulating agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
 intersection_of: RO:0000052 CHEBI:149552
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-28T18:31:36Z xsd:dateTime
@@ -6918,7 +6947,6 @@ synonym: "acetylcholinesterase inhibitor agent therapy" EXACT []
 synonym: "acetylcholinesterase inhibitor drug therapy" EXACT []
 synonym: "AChE inhibitor drug treatment" EXACT []
 synonym: "AChE inhibitor medication treatment" EXACT []
-is_a: MAXO:0000210 ! cholinesterase inhibitor therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
 intersection_of: RO:0000052 CHEBI:38462
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-28T19:16:31Z xsd:dateTime
@@ -7434,7 +7462,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001023
 name: tranquilizing agent therapy
-synonym: "A traditional grouping of drugs said to have a soothing or calming effect on mood, thought or behaviour." EXACT [CHEBI:35473]
+def: "Treatment with a traditional grouping of drugs said to have a soothing or calming effect on mood, thought or behaviour." []
 synonym: "ataractic agents" EXACT []
 synonym: "tranquilisers" EXACT []
 synonym: "tranquilising agents" EXACT []
@@ -7445,6 +7473,8 @@ synonym: "tranquilizing drug" EXACT []
 synonym: "tranquilizing drugs" EXACT []
 xref: CHEBI:35473
 is_a: MAXO:0001022 ! psychotropic agent therapy
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: RO:0000052 CHEBI:35473
 property_value: http://purl.org/dc/elements/1.1/date 2019-07-24T19:39:15Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
