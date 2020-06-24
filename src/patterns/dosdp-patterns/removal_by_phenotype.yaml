@@ -22,7 +22,7 @@ annotationProperties:
   xref: oio:hasDbXref
  
 vars:
-  phenotypic_abnormality: "'phenotype'"
+  phenotypic_abnormality: "'phenotypic_abnormality'"
   
 data_vars:
   date: "'date'"
@@ -34,13 +34,13 @@ data_list_vars:
 name:
   text: "surgical removal of %s"
   vars:
-   - phenotype
+   - phenotypic_abnormality
 
 annotations:
   - annotationProperty: exact_synonym
     text: "%s surgical removal"
     vars:
-     - phenotype
+     - phenotypic_abnormality
      
   - annotationProperty: date
     text: "%s"
@@ -68,10 +68,10 @@ exact_synonym:
 def:
   text: "The surgical removal (cutting out) of part or all of %s."
   vars:
-    - location
+    - phenotypic_abnormality
 
 equivalentTo:
   text: "'removal' and 'has_input' some ('part_of' some %s)"
   vars:
-    - phenotype
+    - phenotypic_abnormality
    
