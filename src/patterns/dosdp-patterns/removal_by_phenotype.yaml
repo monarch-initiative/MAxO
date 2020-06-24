@@ -1,14 +1,14 @@
-pattern_name: removal_by_location
-pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/removal_by_location.yaml
-description: "Surgical removal of a particular organ"
+pattern_name: removal_by_phenotype
+pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/removal_by_phenotype.yaml
+description: "Surgical removal of an ailment or abnormal physical manifestation"
 
 contributors:
   - https://orcid.org/0000-0001-7941-2961
   - https://orcid.org/0000-0002-7356-1779
 
 classes:
-  resection: MAXO:0000447
-  location: owl:Thing
+  removal: MAXO:0000447
+  phenotypic_abnormality: HP:0000118
 
 relations:
   has_input: RO:0002233
@@ -22,7 +22,7 @@ annotationProperties:
   xref: oio:hasDbXref
  
 vars:
-  location: "'location'"
+  phenotypic_abnormality: "'phenotype'"
   
 data_vars:
   date: "'date'"
@@ -34,13 +34,13 @@ data_list_vars:
 name:
   text: "surgical removal of %s"
   vars:
-   - location
+   - phenotype
 
 annotations:
   - annotationProperty: exact_synonym
     text: "%s surgical removal"
     vars:
-     - location
+     - phenotype
      
   - annotationProperty: date
     text: "%s"
@@ -73,5 +73,5 @@ def:
 equivalentTo:
   text: "'removal' and 'has_input' some ('part_of' some %s)"
   vars:
-    - location
+    - phenotype
    
