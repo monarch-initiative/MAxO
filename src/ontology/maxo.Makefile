@@ -17,3 +17,11 @@ $(TEMPLATESDIR)/%.owl: $(TEMPLATESDIR)/%.tsv $(SRC)
 
 templates: $(TEMPLATES)
 	echo $(TEMPLATES)
+	
+	
+imports/hp_import.owl: mirror/hp.owl imports/hp_terms_combined.txt
+	@if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -T imports/hp_terms_combined.txt --force true --method BOT \
+		query --update ../sparql/inject-subset-declaration.ru \
+		remove --axioms equivalent --preserve-structure false \
+		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+.PRECIOUS: imports/hp_import.owl
