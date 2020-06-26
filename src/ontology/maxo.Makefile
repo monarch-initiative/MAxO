@@ -17,11 +17,22 @@ $(TEMPLATESDIR)/%.owl: $(TEMPLATESDIR)/%.tsv $(SRC)
 
 templates: $(TEMPLATES)
 	echo $(TEMPLATES)
+
+tmp/remove.txt:
+	echo "HP:0025454" > $@
+	echo "HP:0012029" >> $@
+	echo "HP:0004360" >> $@
+	echo "HP:0032368" >> $@
+	echo "HP:0001941" >> $@
+	echo "HP:0032369" >> $@
+	echo "HP:0001948" >> $@
+	echo "HP:0040145" >> $@
+	echo "HP:0000843" >> $@
+	echo "HP:0000829" >> $@
 	
-	
-imports/hp_import.owl: mirror/hp.owl imports/hp_terms_combined.txt
+imports/hp_import.owl: mirror/hp.owl imports/hp_terms_combined.txt tmp/remove.txt
 	@if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -T imports/hp_terms_combined.txt --force true --method BOT \
 		query --update ../sparql/inject-subset-declaration.ru \
-		remove --axioms equivalent --preserve-structure false \
+		remove --term-file tmp/remove.txt --axioms equivalent --preserve-structure false \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: imports/hp_import.owl
