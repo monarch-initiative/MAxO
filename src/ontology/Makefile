@@ -347,9 +347,22 @@ mirror/hp.trigger: $(SRC)
 
 mirror/hp.owl: mirror/hp.trigger
 	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/hp.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+	
+## ONTOLOGY: obi
+## Copy of obi is re-downloaded whenever source changes
+mirror/obi.trigger: $(SRC)
 
+mirror/obi.owl: mirror/obi.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/obi.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: mirror/%.owl
 
+## ONTOLOGY: cmo
+## Copy of cmo is re-downloaded whenever source changes
+mirror/cmo.trigger: $(SRC)
+
+mirror/cmo.owl: mirror/cmo.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/cmo.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+.PRECIOUS: mirror/%.owl
 
 ## ONTOLOGY: chebi
 ## Copy of chebi is re-downloaded whenever source changes
