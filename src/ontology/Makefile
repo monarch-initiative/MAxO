@@ -76,7 +76,7 @@ all_main: $(MAIN_FILES)
 ## By default this is the cross-product of IMPORT_MODULES x FORMATS
 
 
-IMPORTS =  iao go ro uberon foodon nbo hp chebi obi cmo
+IMPORTS =  iao go ro uberon foodon nbo hp chebi cmo obi
 
 IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -347,22 +347,9 @@ mirror/hp.trigger: $(SRC)
 
 mirror/hp.owl: mirror/hp.trigger
 	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/hp.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
-	
-## ONTOLOGY: obi
-## Copy of obi is re-downloaded whenever source changes
-mirror/obi.trigger: $(SRC)
 
-mirror/obi.owl: mirror/obi.trigger
-	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/obi.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: mirror/%.owl
 
-## ONTOLOGY: cmo
-## Copy of cmo is re-downloaded whenever source changes
-mirror/cmo.trigger: $(SRC)
-
-mirror/cmo.owl: mirror/cmo.trigger
-	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/cmo.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
-.PRECIOUS: mirror/%.owl
 
 ## ONTOLOGY: chebi
 ## Copy of chebi is re-downloaded whenever source changes
@@ -370,6 +357,26 @@ mirror/chebi.trigger: $(SRC)
 
 mirror/chebi.owl: mirror/chebi.trigger
 	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/chebi.owl.gz -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+
+## ONTOLOGY: cmo
+## Copy of cmo is re-downloaded whenever source changes
+mirror/cmo.trigger: $(SRC)
+
+mirror/cmo.owl: mirror/cmo.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/cmo.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+
+## ONTOLOGY: obi
+## Copy of obi is re-downloaded whenever source changes
+mirror/obi.trigger: $(SRC)
+
+mirror/obi.owl: mirror/obi.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/obi.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
