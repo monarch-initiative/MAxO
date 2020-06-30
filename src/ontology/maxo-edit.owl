@@ -13,15 +13,15 @@ Ontology(<http://purl.obolibrary.org/obo/maxo.owl>
 Import(<http://purl.obolibrary.org/obo/maxo/components/obsolete.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/components/replaced.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/imports/chebi_import.owl>)
+Import(<http://purl.obolibrary.org/obo/maxo/imports/cmo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/imports/foodon_import.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/imports/go_import.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/imports/hp_import.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/imports/iao_import.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/imports/nbo_import.owl>)
+Import(<http://purl.obolibrary.org/obo/maxo/imports/obi_import.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/imports/ro_import.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/imports/uberon_import.owl>)
-Import(<http://purl.obolibrary.org/obo/maxo/imports/cmo_import.owl>)
-Import(<http://purl.obolibrary.org/obo/maxo/imports/obi_import.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/patterns/definitions.owl>)
 Annotation(dce:creator "Aaron Zhang")
 Annotation(dce:creator "Leigh Carmody")
@@ -31,6 +31,25 @@ Annotation(dce:title "Medical Action Ontology")
 Annotation(dcterms:license <https://creativecommons.org/licenses/by/4.0/>)
 
 Declaration(Class(<http://purl.obolibrary.org/obo/CMO_0000000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CMO_0000036>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CMO_0000109>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CMO_0000110>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CMO_0000367>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CMO_0000368>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CMO_0000369>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CMO_0000370>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CMO_0000372>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CMO_0000508>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CMO_0000584>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CMO_0000596>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CMO_0000597>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CMO_0000599>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CMO_0000600>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CMO_0000920>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CMO_0001086>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CMO_0001102>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CMO_0001356>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CMO_0002341>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000003>))
@@ -570,6 +589,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0030011>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0030012>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0030018>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0000661>))
+Declaration(Class(<http://purl.obolibrary.org/obo/http://purl.obolibrary.org/obo/CMO_0001085>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0000521>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0001015>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0001027>))
@@ -611,9 +631,85 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0001027> "av
 #   Classes
 ############################
 
-# Class: <http://purl.obolibrary.org/obo/CMO_0000000> (<http://purl.obolibrary.org/obo/CMO_0000000>)
+# Class: <http://purl.obolibrary.org/obo/CMO_0000000> (clinical measurement)
 
 SubClassOf(<http://purl.obolibrary.org/obo/CMO_0000000> <http://purl.obolibrary.org/obo/MAXO_0000006>)
+
+# Class: <http://purl.obolibrary.org/obo/CMO_0000036> (<http://purl.obolibrary.org/obo/CMO_0000036>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/CMO_0000036> <http://purl.obolibrary.org/obo/MAXO_0000006>)
+
+# Class: <http://purl.obolibrary.org/obo/CMO_0000109> (<http://purl.obolibrary.org/obo/CMO_0000109>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/CMO_0000109> <http://purl.obolibrary.org/obo/MAXO_0000006>)
+
+# Class: <http://purl.obolibrary.org/obo/CMO_0000110> (<http://purl.obolibrary.org/obo/CMO_0000110>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/CMO_0000110> <http://purl.obolibrary.org/obo/MAXO_0000006>)
+
+# Class: <http://purl.obolibrary.org/obo/CMO_0000367> (<http://purl.obolibrary.org/obo/CMO_0000367>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/CMO_0000367> <http://purl.obolibrary.org/obo/MAXO_0000006>)
+
+# Class: <http://purl.obolibrary.org/obo/CMO_0000368> (<http://purl.obolibrary.org/obo/CMO_0000368>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/CMO_0000368> <http://purl.obolibrary.org/obo/MAXO_0000006>)
+
+# Class: <http://purl.obolibrary.org/obo/CMO_0000369> (<http://purl.obolibrary.org/obo/CMO_0000369>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/CMO_0000369> <http://purl.obolibrary.org/obo/MAXO_0000006>)
+
+# Class: <http://purl.obolibrary.org/obo/CMO_0000370> (<http://purl.obolibrary.org/obo/CMO_0000370>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/CMO_0000370> <http://purl.obolibrary.org/obo/MAXO_0000006>)
+
+# Class: <http://purl.obolibrary.org/obo/CMO_0000372> (<http://purl.obolibrary.org/obo/CMO_0000372>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/CMO_0000372> <http://purl.obolibrary.org/obo/MAXO_0000006>)
+
+# Class: <http://purl.obolibrary.org/obo/CMO_0000508> (<http://purl.obolibrary.org/obo/CMO_0000508>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/CMO_0000508> <http://purl.obolibrary.org/obo/MAXO_0000006>)
+
+# Class: <http://purl.obolibrary.org/obo/CMO_0000584> (<http://purl.obolibrary.org/obo/CMO_0000584>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/CMO_0000584> <http://purl.obolibrary.org/obo/MAXO_0000147>)
+
+# Class: <http://purl.obolibrary.org/obo/CMO_0000596> (<http://purl.obolibrary.org/obo/CMO_0000596>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/CMO_0000596> <http://purl.obolibrary.org/obo/MAXO_0000006>)
+
+# Class: <http://purl.obolibrary.org/obo/CMO_0000597> (<http://purl.obolibrary.org/obo/CMO_0000597>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/CMO_0000597> <http://purl.obolibrary.org/obo/MAXO_0000006>)
+
+# Class: <http://purl.obolibrary.org/obo/CMO_0000599> (<http://purl.obolibrary.org/obo/CMO_0000599>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/CMO_0000599> <http://purl.obolibrary.org/obo/MAXO_0000006>)
+
+# Class: <http://purl.obolibrary.org/obo/CMO_0000600> (<http://purl.obolibrary.org/obo/CMO_0000600>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/CMO_0000600> <http://purl.obolibrary.org/obo/MAXO_0000006>)
+
+# Class: <http://purl.obolibrary.org/obo/CMO_0000920> (<http://purl.obolibrary.org/obo/CMO_0000920>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/CMO_0000920> <http://purl.obolibrary.org/obo/MAXO_0000006>)
+
+# Class: <http://purl.obolibrary.org/obo/CMO_0001086> (<http://purl.obolibrary.org/obo/CMO_0001086>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/CMO_0001086> <http://purl.obolibrary.org/obo/MAXO_0000006>)
+
+# Class: <http://purl.obolibrary.org/obo/CMO_0001102> (<http://purl.obolibrary.org/obo/CMO_0001102>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/CMO_0001102> <http://purl.obolibrary.org/obo/MAXO_0000006>)
+
+# Class: <http://purl.obolibrary.org/obo/CMO_0001356> (<http://purl.obolibrary.org/obo/CMO_0001356>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/CMO_0001356> <http://purl.obolibrary.org/obo/MAXO_0000006>)
+
+# Class: <http://purl.obolibrary.org/obo/CMO_0002341> (<http://purl.obolibrary.org/obo/CMO_0002341>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/CMO_0002341> <http://purl.obolibrary.org/obo/MAXO_0000006>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000001> (medical action)
 
@@ -1703,7 +1799,9 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000146> <http://purl.obolibrary
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NCIT:C49286") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000147> "A laboratory test to measure hematopoietic components and investigate hematologic disorders in a blood sample.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000147> "2019-01-21T21:22:45Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000147> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000147> "CMO:0000035")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000147> "NCIT:C49286")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000147> "blood measurement")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000147> "hematology test"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000147> <http://purl.obolibrary.org/obo/MAXO_0000006>)
 
@@ -6678,6 +6776,7 @@ AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#has
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0001010> "white blood cell count")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0001010> "leukocyte count"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001010> <http://purl.obolibrary.org/obo/MAXO_0001006>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001010> <http://purl.obolibrary.org/obo/MAXO_0001007>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0001014> (medical action avoidance)
 
@@ -6879,6 +6978,10 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0030018> "uncooked cornstarch therapy")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0030018> "uncooked cornstarch supplementation"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0030018> <http://purl.obolibrary.org/obo/MAXO_0000106>)
+
+# Class: <http://purl.obolibrary.org/obo/http://purl.obolibrary.org/obo/CMO_0001085> (<http://purl.obolibrary.org/obo/http://purl.obolibrary.org/obo/CMO_0001085>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/http://purl.obolibrary.org/obo/CMO_0001085> <http://purl.obolibrary.org/obo/MAXO_0000006>)
 
 
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0001028> "2019-07-12T14:23:27Z"^^xsd:dateTime)
