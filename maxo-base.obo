@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2020-06-24/maxo-base.owl
+data-version: maxo/releases/2020-07-13/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Aaron Zhang" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
@@ -299,7 +299,9 @@ replaced_by: MAXO:0002002
 
 [Term]
 id: MAXO:0000042
-name: therapeutic disease avoidance
+name: preventable disease avoidance recommendation
+def: "A clinical recommendation to avoid preventable diseases by vaccination or otherwise lowering risk for certain diseases." []
+synonym: "disease avoidance" EXACT []
 is_a: MAXO:0000151 ! therapeutic avoidance intervention
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T19:39:19Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -307,7 +309,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000043
 name: communicable disease avoidance
-is_a: MAXO:0000042 ! therapeutic disease avoidance
+def: "Avoidance of an illness or infection that can be spread from person to person, animal to person, animal to animal or person to animal by taking precautionary measures, such as good hygiene practices or vaccines." []
+synonym: "avoid communicable disease" EXACT []
+synonym: "communicable disease prevention" EXACT []
+is_a: MAXO:0000042 ! preventable disease avoidance recommendation
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T19:39:37Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -511,30 +516,23 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000069
-name: lung transplantation surgical procedure
-def: "The surgical transfer of one or both lungs from one individual to another." [NCIT:C15274]
-synonym: "lung grafting" EXACT []
-synonym: "lung transplantation" EXACT []
-synonym: "lung transplantation surgery" EXACT []
-synonym: "transplantation of lung" EXACT []
-synonym: "transplantation of the lung" EXACT []
-xref: NCIT:C15274
-is_a: MAXO:0000068 ! transplantation surgical procedure
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T19:15:13Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
+name: obsolete lung transplantation surgical procedure
+replaced_by: MAXO:0010038
 
 [Term]
 id: MAXO:0000070
+name: liver transplantation
 name: liver transplantation surgical procedure
-def: "The transfer of a healthy liver allograft from a donor to a patient." [NCIT:C15271]
+def: "The surgical transfer of a healthy liver to a patient." []
 synonym: "hepatic transplantation" EXACT []
 synonym: "liver grafting" EXACT []
 synonym: "liver transplantation" EXACT []
+synonym: "liver transplantation surgical procedure" EXACT []
 synonym: "surgical transplantation of the liver" EXACT []
 synonym: "transplantation of liver" EXACT []
 xref: NCIT:C15271
 is_a: MAXO:0000068 ! transplantation surgical procedure
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T19:15:21Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-24T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -3782,6 +3780,7 @@ id: MAXO:0000332
 name: biopsy of anus
 def: "Removal of tissue from the anus." []
 synonym: "anus biopsy" EXACT []
+xref: NCIT:C51586
 property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -4187,9 +4186,11 @@ created_by: http://orcid.org/0000-0001-7941-2971
 
 [Term]
 id: MAXO:0000383
-name: vulva biopsy
+name: biopsy of vulva
 def: "Removal of tissue from the mammalian vulva." []
 synonym: "mammalian vulva biopsy" EXACT []
+synonym: "vulva biopsy" EXACT []
+synonym: "vulval biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2972
 
@@ -4206,12 +4207,13 @@ id: MAXO:0000385
 name: biopsy of mouth
 def: "Removal of tissue from the mouth." []
 synonym: "mouth biopsy" EXACT []
+synonym: "muscle biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2974
 
 [Term]
 id: MAXO:0000386
-name: muscle biopsy
+name: biopsy of muscle
 def: "Removal of tissue from the muscle organ." []
 synonym: "muscle organ biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
@@ -4507,8 +4509,9 @@ created_by: http://orcid.org/0000-0001-7941-3011
 
 [Term]
 id: MAXO:0000423
-name: skin biopsy
+name: biopsy of skin
 def: "Removal of tissue from the zone of skin." []
+synonym: "skin biopsy" EXACT []
 synonym: "zone of skin biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-05-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-3012
@@ -5124,12 +5127,18 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000478
-name: orthopedic consultation
-def: "Any consultation with an orthopedics professional relating the correction of deformities of bones or muscles." []
+name: orthopedic surgeon evaluation
+def: "Evaluation with a surgeon who focuses on the preservation, investigation and restoration of the form and function of the extremities, spine and associated structures by medical, surgical and physical means. This specialist is involved with the care of patients whose musculoskeletal problems include congenital deformities, trauma, infections, tumors, metabolic disturbances of the musculoskeletal system, deformities, injuries and degenerative diseases of the spine, hands, feet, knee, hip, shoulder and elbow in children and adults. An orthopaedic surgeon is also concerned with primary and secondary muscular problems and the effects of central or peripheral nervous system lesions of the musculoskeletal system." [abms.org]
+synonym: "consultation with orthopedic surgeon" EXACT []
 synonym: "orthopaedic consult" EXACT []
 synonym: "orthopedic consult" EXACT []
+synonym: "orthopedic surgeon consultation" EXACT []
+synonym: "orthopedic surgeon referral" EXACT []
+synonym: "orthopedist consultation" EXACT []
+synonym: "referral to orthopedic surgeon" EXACT []
+synonym: "referral to orthopedist" EXACT []
 is_a: MAXO:0000477 ! orthopedic procedure
-is_a: MAXO:0000483 ! medical professional consultation
+is_a: MAXO:0000665 ! specialty medical professional evaulation
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T17:50:52Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -5169,8 +5178,11 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000483
-name: medical professional consultation
-def: "A procedure whereby, upon request by one healthcare provider, another healthcare provider reviews a patient's medical history, examines the patient, and makes recommendations as to care and treatment." []
+name: medical professional evaluation
+def: "A procedure where a healthcare provider reviews a patient's medical history, examines the patient, and makes recommendations as to care and treatment." []
+comment: An appraisal or evaluation of a patient's condition by a clinician that is based on a physical exam, medical history, and the patient's account of symptoms. {comment="NCIT:C25305", xref="PMID:19567008"}
+synonym: "medical professional consultation" EXACT []
+synonym: "medical professional examination" EXACT []
 is_a: MAXO:0000003 ! diagnostic procedure
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T18:30:15Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -5589,8 +5601,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000526
 name: medical examination
 def: "An appraisal or evaluation of a patient's condition by a clinician that is based on a physical exam, medical history, and the patient's account of symptoms." [NCIT:C25305, PMID:19567008]
+synonym: "clinical examination" EXACT []
 xref: NCIT:C25305
-is_a: MAXO:0000003 ! diagnostic procedure
+is_a: MAXO:0000483 ! medical professional evaluation
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-04T17:09:05Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -7223,6 +7236,804 @@ property_value: http://purl.org/dc/elements/1.1/date 2020-06-09T15:32:19Z xsd:da
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0000665
+name: specialty medical professional evaulation
+synonym: "specialty medical professional consultation" EXACT []
+is_a: MAXO:0000483 ! medical professional evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-01T18:18:19Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000666
+name: allergy and immunology specialist evaulation
+def: "An  evaluation by an allergist-immunologist who diagnoses and manages disorders involving immune system conditions such as asthma, anaphylaxis, rhinitis and eczema as well as adverse reactions to drugs, foods and insect stings. An allergist-immunologist also manages immune deficiency diseases and problems related to autoimmune disease, organ transplantation or malignancies of the immune system." [ABMS.org]
+synonym: "allergist consultation" NARROW []
+synonym: "allergist doctor consultation" NARROW []
+synonym: "allergist doctor evaluation" NARROW []
+synonym: "allergist evaluation" NARROW []
+synonym: "allergy and immunologist consultation" EXACT []
+synonym: "allergy and immunologist doctor consultation" EXACT []
+synonym: "allergy and immunologist doctor evaluation" EXACT []
+synonym: "allergy and immunologist evaulation" EXACT []
+synonym: "allergy and immunology specialist consultation" EXACT []
+synonym: "consultation with allergist" NARROW []
+synonym: "consultation with allergy and immunologist" EXACT []
+synonym: "referral to allergist and immunologist" EXACT []
+is_a: MAXO:0000665 ! specialty medical professional evaulation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-01T18:29:08Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000667
+name: anesthesiology specialist evaluation
+def: "An evaluation by a physician who provides anesthesia for patients undergoing surgical, obstetric, diagnostic or therapeutic procedures while monitoring the patient's condition and supporting vital organ functions. The anesthesiologist also diagnoses and treats acute, chronic and/or cancer pain as well as provides resuscitation and medical management for patients with critical illnesses and severe injuries." [abms.org]
+synonym: "anesthesiologist consultation" EXACT []
+synonym: "anesthesiologist evaluation" EXACT []
+synonym: "anesthesiology doctor consultation" EXACT []
+synonym: "anesthesiology doctor evaluation" EXACT []
+synonym: "anesthesiology specialist consultation" EXACT []
+synonym: "consultation with anesthesiologist" EXACT []
+synonym: "referral to anesthesiologist" EXACT []
+xref: NCIT:C93067
+is_a: MAXO:0000665 ! specialty medical professional evaulation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-01T18:42:19Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000669
+name: pediatric anesthesiology specialist evaluation
+def: "An evaluation by an anesthesiologist who specializes in Pediatric Anesthesiology. This specialist provides anesthesia for neonates, infants, children and adolescents undergoing surgical, diagnostic or therapeutic procedures as well as appropriate pre- and post-operative care, advanced life support, and acute pain management." []
+synonym: "consultation with pediatric anesthesiologist" EXACT []
+synonym: "pediatric anesthesiologist consultation" EXACT []
+synonym: "pediatric anesthesiologist evaluation" EXACT []
+synonym: "pediatric anesthesiology specialist consultation" EXACT []
+is_a: MAXO:0000667 ! anesthesiology specialist evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-01T18:48:51Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000670
+name: colon and rectal surgery specialist evaluation
+def: "An evaluation by a colon and rectal surgeon who diagnoses and treats various diseases of the small intestine, colon, rectum, anal canal and perianal area including the organs and tissues related with primary intestinal diseases (liver, urinary and female reproductive system). This specialist treats conditions such as hemorrhoids, fissures (painful tears in the anal lining), abscesses and fistulaes (infections located around the anus and rectum). A colon and rectal surgeon diagnoses and treats problems of the intestine and colon such as cancer, polyps (precancerous growths) and inflammatory conditions." [abms.org]
+synonym: "colon and rectal surgeon consultation" EXACT []
+synonym: "colon and rectal surgeon evaluation" EXACT []
+synonym: "colon and rectal surgery specialist consultation" EXACT []
+synonym: "colorectal surgeon consultation" EXACT []
+synonym: "colorectal surgeon evaluation" EXACT []
+synonym: "consultation with colon and rectal surgeon" EXACT []
+synonym: "consultation with colon and rectal surgery specialist" EXACT []
+synonym: "consultation with colorectal surgeon" EXACT []
+synonym: "referral to a colon and rectal surgeon" EXACT []
+synonym: "referral to colorectal surgeon" EXACT []
+is_a: MAXO:0000665 ! specialty medical professional evaulation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-01T19:08:36Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000671
+name: dermatology specialist evaluation
+def: "An evaluation by a physician with training and expertise in the diagnosis and medical/surgical management of diseases of the skin, hair and nails, and mucous membranes." [abms.org]
+synonym: "consultation with a dermatologist" EXACT []
+synonym: "dermatologist consultation" EXACT []
+synonym: "dermatologist evaluation" EXACT []
+synonym: "dermatology specialist consultation" EXACT []
+synonym: "referral to a dermatologist" EXACT []
+is_a: MAXO:0000665 ! specialty medical professional evaulation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-01T19:12:58Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000672
+name: emergency medicine specialist evaluation
+def: "An evaulation by a physician who specializes in immediate decision making and action necessary to prevent death or any further disability both in the pre-hospital setting by directing emergency medical technicians and in the emergency department. This specialist provides immediate recognition, evaluation, care, stabilization and disposition of a generally diversified population of adult and pediatric patients in response to acute illness and injury." [abms.org]
+synonym: "assessment by emergency medicine specialist" EXACT []
+synonym: "emergency medicine specialist assessment" EXACT []
+synonym: "emergency room doctor evaulation" EXACT []
+is_a: MAXO:0000665 ! specialty medical professional evaulation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-01T19:23:12Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000673
+name: family medicine specialist evaluation
+def: "An evaluation by a physician who provides front-line health care that is accessible, high quality, comprehensive and continuous over time for people of all ages, life stages, backgrounds and conditions. The specialists care for individuals and for entire families, from birth through the end of life, including a broad range of preventive care; healthy lifestyle counseling; mental health care; care of acute illnesses; management of chronic diseases, including patients with multi-morbidity. When needed, they also provide referral and coordination of care with other specialists." [abms.org]
+synonym: "consultation with family medicine specialist" EXACT []
+synonym: "family medicine specialist consultation" EXACT []
+is_a: MAXO:0000665 ! specialty medical professional evaulation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-01T19:39:31Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000675
+name: geriatric medicine specialist evaluation
+def: "An evaluation by a physician with special knowledge of the aging process and special skills in the diagnostic, therapeutic, preventive and rehabilitative aspects of illness in the elderly. This specialist cares for geriatric patients in the patient’s home, the office, long-term care settings such as nursing homes, and the hospital." [abms.org]
+synonym: "assessment by geriatric medicine specialist" EXACT []
+synonym: "consultation with geriatric medicine specialist" EXACT []
+synonym: "evaluation by geriatric medicine specialist" EXACT []
+synonym: "geriatric medicine specialist consultation" EXACT []
+synonym: "referral to geriatric medicine specialist" EXACT []
+is_a: MAXO:0000673 ! family medicine specialist evaluation
+is_a: MAXO:0000680 ! internal medicine specialist evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-01T19:52:16Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000676
+name: hospice and palliative medicine specialist evaulation
+def: "An evaluation by a physician who specializes in Hospice and Palliative Medicine who provides care to prevent and relieve the suffering experienced by patients with life-limiting illnesses. This specialist works with an interdisciplinary hospice or palliative care team to optimize quality of life while addressing the physical, psychological, social and spiritual needs of both patient and family." []
+synonym: "assessment by palliative care specialist" NARROW []
+synonym: "consultation with hospice and palliative medicine specialist" EXACT []
+synonym: "consultation with palliative care specialist" NARROW []
+synonym: "evaluation by palliative care specialist" NARROW []
+synonym: "hospice and palliative medicine specialist consultation" EXACT []
+synonym: "palliative care specialist consultation" NARROW []
+synonym: "palliative care specialist evaluation" NARROW []
+synonym: "palliative care specialist referral" NARROW []
+synonym: "referral to hospice and palliative medicine specialist" EXACT []
+synonym: "referral to palliative care specialist" NARROW []
+is_a: MAXO:0000667 ! anesthesiology specialist evaluation
+is_a: MAXO:0000673 ! family medicine specialist evaluation
+is_a: MAXO:0000680 ! internal medicine specialist evaluation
+is_a: MAXO:0000702 ! obstetrics and gynecology specialist evaluation
+is_a: MAXO:0000707 ! pediatrician evaluation
+is_a: MAXO:0000712 ! physiatrist evaluation
+is_a: MAXO:0000718 ! radiologist evaluation
+is_a: MAXO:0000723 ! psychiatry and neurology specialist evaluation
+is_a: MAXO:0000725 ! surgeon evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-01T19:53:31Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000677
+name: pain medicine specialist evaluation
+def: "An evaluation by a physician who diagnoses and treats patients experiencing problems with acute or chronic pain, or pain related to cancer, in both hospital and outpatient settings and coordinates care needs with other specialists." [abms.org]
+synonym: "asessment by pain medicine specialist" EXACT []
+synonym: "consultation with pain medicine specialist" EXACT []
+synonym: "evaluation by pain medicine specialist" EXACT []
+synonym: "pain medicine specialist consultation" EXACT []
+synonym: "referral to a pain medicine specialist" EXACT []
+is_a: MAXO:0000672 ! emergency medicine specialist evaluation
+is_a: MAXO:0000673 ! family medicine specialist evaluation
+is_a: MAXO:0000712 ! physiatrist evaluation
+is_a: MAXO:0000718 ! radiologist evaluation
+is_a: MAXO:0000723 ! psychiatry and neurology specialist evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-01T19:56:48Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000678
+name: sports medicine specialist evaluation
+def: "An evaluation a specialist focuses on preventing, diagnosing, and treating injuries related to participating in sports and/or exercise. In addition to the study of those fields that focus on prevention, diagnosis, treatment, and management of injuries, Sports Medicine specialists also deal with illnesses and diseases that might have effects on health and physical performance." [abms.org]
+synonym: "consultation with sports medicine specialist" EXACT []
+synonym: "referral to a sports medicine specialist" EXACT []
+synonym: "sports medicine specialist consultation" EXACT []
+is_a: MAXO:0000672 ! emergency medicine specialist evaluation
+is_a: MAXO:0000673 ! family medicine specialist evaluation
+is_a: MAXO:0000680 ! internal medicine specialist evaluation
+is_a: MAXO:0000707 ! pediatrician evaluation
+is_a: MAXO:0000712 ! physiatrist evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-01T19:59:07Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000679
+name: sleep medicine specialist evaluation
+def: "An evaluation with a specialist who has expertise in the diagnosis and management of clinical conditions that occur during sleep, that disturb sleep, or that are affected by disturbances in the wake-sleep cycle. This specialist is skilled in the analysis and interpretation of comprehensive polysomnography, and well versed in emerging research and management of a sleep laboratory." [abms.org]
+synonym: "assessment by sleep medicine specialist" EXACT []
+synonym: "assessment by sleep specialist" EXACT []
+synonym: "consultation with sleep medicine specialist" EXACT []
+synonym: "consultation with sleep specialist" EXACT []
+synonym: "evaluation by sleep medicine specialist" EXACT []
+synonym: "evaluation by sleep specialist" EXACT []
+synonym: "referral to sleep medicine specialist" EXACT []
+synonym: "referral to sleep specialist" EXACT []
+synonym: "sleep medicine specialist consultation" EXACT []
+synonym: "sleep specialist assessment" EXACT []
+synonym: "sleep specialist consultation" EXACT []
+synonym: "sleep specialist evaluation" EXACT []
+synonym: "sleep specialist referral" EXACT []
+synonym: "sleep study evaluation" RELATED []
+is_a: MAXO:0000667 ! anesthesiology specialist evaluation
+is_a: MAXO:0000673 ! family medicine specialist evaluation
+is_a: MAXO:0000680 ! internal medicine specialist evaluation
+is_a: MAXO:0000706 ! otolaryngologist evaluation
+is_a: MAXO:0000707 ! pediatrician evaluation
+is_a: MAXO:0000723 ! psychiatry and neurology specialist evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-01T20:01:47Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000680
+name: internal medicine specialist evaluation
+def: "An evalutation by a personal physician who provides long-term, comprehensive care in the office and in the hospital, managing both common and complex illnesses of adolescents, adults and the elderly. Internists are trained in the diagnosis and treatment of cancer, infections and diseases affecting the heart, blood, kidneys, joints and the digestive, respiratory and vascular systems. Internists are also trained in the essentials of primary care internal medicine, which incorporates an understanding of disease prevention, wellness, substance abuse, mental health and effective treatment of common problems of the eyes, ears, skin, nervous system and reproductive organs." [abms.org]
+synonym: "consultation with internal medicine specialist" EXACT []
+synonym: "consultation with internist" EXACT []
+synonym: "internal medicine specialist consultation" EXACT []
+synonym: "internist consultation" EXACT []
+synonym: "internist evaluation" EXACT []
+synonym: "referral to an internal medicine specialist" EXACT []
+synonym: "referral to an internist" EXACT []
+is_a: MAXO:0000665 ! specialty medical professional evaulation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-01T20:07:16Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000681
+name: adolescent medicine specialist evaluation
+def: "An evaluation with a multidisciplinary health care specialist trained in the unique physical, psychological and social characteristics of adolescents, their health care problems and needs." [abms.org]
+synonym: "adolescent medicine specialist consultation" EXACT []
+synonym: "adolescent medicine specialist evaluation" EXACT []
+synonym: "assessment by adolescent medicine specialist" EXACT []
+synonym: "consultation with adolescent medicine specialist" EXACT []
+synonym: "evaluation by adolescent medicine specialist" EXACT []
+synonym: "referral to adolescent medicine specialist" EXACT []
+is_a: MAXO:0000673 ! family medicine specialist evaluation
+is_a: MAXO:0000680 ! internal medicine specialist evaluation
+is_a: MAXO:0000707 ! pediatrician evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-01T20:13:15Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000682
+name: cardiovascular disease internist evaluation
+def: "An evaluation by a internist who specializes in diseases of the heart and blood vessels and manages complex cardiac conditions, such as heart attacks and life-threatening, abnormal heartbeat rhythms." [abms.org]
+synonym: "assessment by cardiologist" EXACT []
+synonym: "cardiologist consultation" EXACT []
+synonym: "cardiologist evaluation" EXACT []
+synonym: "cardiologist referral" EXACT []
+synonym: "cardiovascular disease internist consultation" EXACT []
+synonym: "cardiovascular disease internist evaluation" EXACT []
+synonym: "consultation with cardiologist" EXACT []
+synonym: "consultation with cardiovascular disease internist" EXACT []
+synonym: "consultation with internal medicine cardiovascular disease specialist" EXACT []
+synonym: "evaluation by cardiologist" EXACT []
+synonym: "internal medicine cardiovascular disease specialist consultation" EXACT []
+synonym: "referral to cardiologist" EXACT []
+synonym: "referral to cardiovascular disease internist" EXACT []
+is_a: MAXO:0000680 ! internal medicine specialist evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-01T20:16:52Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000683
+name: clinical cardicac electrophysiologist evaluation
+def: "An evaluation by a specialist with who specializes in intricate technical procedures to evaluate heart rhythms and determine appropriate treatment." [abms.org]
+synonym: "consultation with clinical cardicac electrophysiologist" EXACT []
+synonym: "consultation with clinical cardicac electrophysiology specialist" EXACT []
+synonym: "internal medicine clinical cardicac electrophysiologist consultation" EXACT []
+synonym: "internal medicne clinical cardicac electrophysiology specialist consultation" EXACT []
+synonym: "internal medicne clinical cardicac electrophysiology specialist evaluation" EXACT []
+synonym: "referral to a clinical electrophysiologist" EXACT []
+is_a: MAXO:0000680 ! internal medicine specialist evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-01T20:30:10Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000684
+name: critical care medicine internist evaluation
+synonym: "consultation with critical care medicine internist" EXACT []
+synonym: "consultation with internal medicine critical care medicine specialist" EXACT []
+synonym: "internal medicine critical care medicine consultation" EXACT []
+synonym: "internal medicine critical care medicine evaluation" EXACT []
+synonym: "referral to critical care internist" EXACT []
+is_a: MAXO:0000680 ! internal medicine specialist evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-01T20:35:47Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000685
+name: endocrinologist evaluation
+def: "An evaluation with an internist who specializes in the diagnosis and management of disorders of hormones and their actions, metabolic disorders, and neoplasia of the endocrine glands. This specialist cares for patients with diabetes mellitus, thyroid disorders, disorders of calcium and bone, hyperlipidemia, obesity and nutritional disorders, pituitary disorders, reproductive and gonadal disorders, adrenal diseases, and endocrine hypertension." [abms.org]
+synonym: "consultation with endocrinologist" EXACT []
+synonym: "consultation with endocrinology, diabetes and metabolism specialist" EXACT []
+synonym: "endocrinologist consultation" EXACT []
+synonym: "endocrinology, diabetes and metabolism specialist consultation" EXACT []
+synonym: "endocrinology, diabetes and metabolism specialist evaulation" EXACT []
+synonym: "referral to endocrinologist" EXACT []
+is_a: MAXO:0000680 ! internal medicine specialist evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-01T20:43:06Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000686
+name: gastroenterologist evaluation
+def: "An evaluation with an internist who specializes in diagnosis and treatment of diseases of the digestive organs including the stomach, bowels, liver and gallbladder. This specialist treats conditions such as abdominal pain, ulcers, diarrhea, cancer and jaundice and performs complex diagnostic and therapeutic procedures using endoscopes to visualize internal organs." [abms.org]
+synonym: "consultation with gastroenterologist" EXACT []
+synonym: "consultation with gastroenterology specialist" EXACT []
+synonym: "gastroenterologist consultation" EXACT []
+synonym: "gastroenterology specialist evaluation" EXACT []
+synonym: "referral to gastroenterologist" EXACT []
+is_a: MAXO:0000680 ! internal medicine specialist evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-01T20:46:33Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000688
+name: hematologist evaluation
+def: "An evaluation by an internist with additional training who specializes in diseases of the blood, spleen and lymph. This specialist treats conditions such as anemia, clotting disorders, sickle cell disease, hemophilia, leukemia and lymphoma." [abms.org]
+synonym: "consultation with hematologist" EXACT []
+synonym: "hematologist consultation" EXACT []
+synonym: "hematology specialist consultation" EXACT []
+synonym: "hematology specialist evaluation" EXACT []
+synonym: "referral to hematologist" EXACT []
+is_a: MAXO:0000680 ! internal medicine specialist evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-01T21:00:28Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000690
+name: infectious disease internist evaluation
+def: "An evaluation by an internist who deals with infectious diseases of all types and in all organ systems. Infectious disease specialists may also have expertise in preventive medicine and travel medicine." [abms.org]
+synonym: "consultation with infectious disease specialist" EXACT []
+synonym: "infectious disease specialist consultation" EXACT []
+synonym: "infectious disease specialist evaluation" EXACT []
+synonym: "referral to infectious disease internist" EXACT []
+is_a: MAXO:0000680 ! internal medicine specialist evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-02T17:10:50Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000691
+name: medical oncologist evaluation
+def: "An evaluation by an internist who specializes in the diagnosis and treatment of all types of cancer and other benign and malignant tumors. This specialist decides on and administers therapy for these malignancies, as well as consults with surgeons and radiotherapists on other treatments for cancer." [abms.org]
+synonym: "consultation with medical oncologist" EXACT []
+synonym: "consultation with medical oncology internist" EXACT []
+synonym: "medical oncologist consultation" EXACT []
+synonym: "medical oncology internist consultation" EXACT []
+synonym: "medical oncology internist evaluation" EXACT []
+synonym: "referral to oncologist" EXACT []
+is_a: MAXO:0000680 ! internal medicine specialist evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-02T17:50:50Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000692
+name: nephrologist evaulation
+def: "An evaluation by an internist who treats disorders of the kidney, high blood pressure, fluid and mineral balance, and dialysis of body wastes when the kidneys do not function. This specialist consults with surgeons about kidney transplantation." [abms.org]
+synonym: "consultation with nephrologist" EXACT []
+synonym: "consultation with nephrology internist" EXACT []
+synonym: "nephrologist consultation" EXACT []
+synonym: "nephrology internist consultation" EXACT []
+synonym: "nephrology internist evaluation" EXACT []
+synonym: "referral to nephrologist" EXACT []
+is_a: MAXO:0000680 ! internal medicine specialist evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-02T18:23:18Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000693
+name: pulmonologist evaluation
+def: "An evaluation by an internist who treats diseases of the lungs and airways. The specialist diagnoses and treats cancer, pneumonia, pleurisy, asthma, occupational and environmental diseases, bronchitis, sleep disorders, emphysema and other complex disorders of the lungs." [abms.org]
+synonym: "consultation with pulmonary disease internist" EXACT []
+synonym: "consultation with pulmonary disease specialist" EXACT []
+synonym: "consultation with pulmonologist" EXACT []
+synonym: "pulmonary disease internist consultation" EXACT []
+synonym: "pulmonary disease internist evaluation" EXACT []
+synonym: "pulmonologist consultation" EXACT []
+synonym: "referral to pulmonologist" EXACT []
+is_a: MAXO:0000680 ! internal medicine specialist evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-02T18:32:06Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000694
+name: rheumatologist evaluation
+def: "An evaulation by an internist who treats diseases of joints, muscle, bones and tendons. This specialist diagnoses and treats arthritis, back pain, muscle strains, common athletic injuries and collagen diseases." [abms.org]
+synonym: "consultation with rheumatologist" EXACT []
+synonym: "consultation with rheumatology internist" EXACT []
+synonym: "referral to rhematologist" EXACT []
+synonym: "rheumatologist consultation" EXACT []
+synonym: "rheumatology internist consultation" EXACT []
+synonym: "rheumatology internist evaluation" EXACT []
+synonym: "rheumatology specialist consultation" EXACT []
+synonym: "rheumatology specialist evaluation" EXACT []
+is_a: MAXO:0000680 ! internal medicine specialist evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-02T19:00:04Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000697
+name: clinical biochemical geneticist evaluation
+def: "An evaluation with a specialist who directs and interprets a wide range of specialized, laboratory biochemical genetic analyses relevant to the diagnosis and management of inherited metabolic disorders. The specialist acts as a consultant regarding laboratory diagnosis on a broad range of inborn errors of metabolism." [abms.org]
+synonym: "clinical biochemical geneticist consultation" EXACT []
+synonym: "consultation with clinical biochemical geneticist" EXACT []
+synonym: "referral to a clinical biochemical geneticist" EXACT []
+is_a: MAXO:0000665 ! specialty medical professional evaulation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-02T20:14:07Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000698
+name: clinical genetics and genomics specialist evaluation
+def: "An evaluation with a specialist who provides comprehensive diagnostic, management, therapeutic, and counseling services for individuals and families at risk for clinical disorders with a genetic basis. The specialist is trained to evaluate individuals of all ages for hereditary conditions." [abms.org]
+synonym: "clinical geneticist consultation" EXACT []
+synonym: "clinical geneticist evaluation" EXACT []
+synonym: "clinical genetics and genomics specialist consultation" EXACT []
+synonym: "consultation with clinical geneticist" EXACT []
+synonym: "consultation with clinical genetics and genomics specialist" EXACT []
+synonym: "referral to a clinical geneticist" EXACT []
+is_a: MAXO:0000665 ! specialty medical professional evaulation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-02T20:16:59Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000699
+name: clinical laboratory geneticist evaluation
+def: "An evaluation or consultation by a diplomate certified in Laboratory Genetics and Genomics who directs and interprets both clinical cytogenetic and molecular genetic analyses relevant to the diagnosis and management of human genetic disease. This specialist acts as a consultant in laboratory diagnoses for a broad range of molecular and chromosomal-based disorders, including both inherited and acquired conditions." [abms.org]
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-02T20:29:00Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000700
+name: neurological surgery specialist evaluation
+def: "Evaluation by this specialist provides care for adult and pediatric patients in the treatment of pain or pathological processes that may modify the function or activity of the central nervous system (e.g., brain, hypophysis, and spinal cord), the peripheral nervous system (e.g., cranial, spinal, and peripheral nerves), the autonomic nervous system, the supporting structures of these systems (e.g., meninges, skull & skull base, and vertebral column), and their vascular supply (e.g., intracranial, extracranial, and spinal vasculature)." [abms.org]
+synonym: "consultation with neurological surgeon" EXACT []
+synonym: "consultation with neurological surgery specialist" EXACT []
+synonym: "consultation with neurosurgeon" EXACT []
+synonym: "neurological surgeon consultation" EXACT []
+synonym: "neurological surgeon evaluation" EXACT []
+synonym: "neurological surgery specialist consultation" EXACT []
+synonym: "neurosurgeon consultation" EXACT []
+synonym: "neurosurgeon evaluation" EXACT []
+synonym: "referral to neurosurgeon" EXACT []
+xref: NCIT:C17722
+is_a: MAXO:0000665 ! specialty medical professional evaulation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-08T15:24:04Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000701
+name: nuclear medicine specialist evaluation
+def: "An evaluation by a specialist that uses molecular tracers (usually labeled with radioactive atoms) for diagnosis and therapy." [abms.org]
+comment: These labeled tracers are most often used  to produce images that provide information about organ function, as well as cellular function on a molecular level (molecular imaging). Molecular imaging can be combined with anatomical imaging by using specialized cameras. The most common diagnostic applications of Nuclear Medicine include the early detection of coronary artery disease, cancer diagnosis and staging and the evaluation of the effect of cancer treatment. The fusion of molecular and anatomical information increases diagnostic accuracy and changes medical management. Radioactive materials are also used to treat a variety of health problems, including thyroid disorders and cancer. {xref="abms.org"}
+synonym: "consultation with nuclear medicine specialist" EXACT []
+synonym: "nuclear medicine specialist consultation" EXACT []
+synonym: "referral to nuclear medicine specialist" EXACT []
+is_a: MAXO:0000665 ! specialty medical professional evaulation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-08T17:46:13Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000702
+name: obstetrics and gynecology specialist evaluation
+def: "An evaluation with a specialist who focuses on the health of women before, during and after childbearing years, diagnosing and treating conditions of the reproductive system and associated disorders." [abms.org]
+synonym: "consultation OB/GYN specialist" EXACT []
+synonym: "consultation obstetrician/gynecologist" EXACT []
+synonym: "consultation with obstetrics and gynecology specialist" EXACT []
+synonym: "OB/GYN specialist consultation" EXACT []
+synonym: "OB/GYN specialist evaluation" EXACT []
+synonym: "obstetrician/gynecologist consultation" EXACT []
+synonym: "obstetrician/gynecologist evaluation" EXACT []
+synonym: "obstetrics and gynecology specialist consultation" EXACT []
+synonym: "obstetrics/gynecology specialist consultation" EXACT []
+synonym: "obstetrics/gynecology specialist evaluation" EXACT []
+synonym: "referral to OB/GYN specialist" EXACT []
+is_a: MAXO:0000665 ! specialty medical professional evaulation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-08T17:53:55Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000703
+name: ophthamologist evaluation
+def: "An evaluation by a specialist focused on the medical and surgical care of the eyes. Ophthalmologists are the only physicians medically trained to manage the complete range of the eye and vision care. They can prescribe glasses and contact lenses, dispense medications, diagnose and treat eye conditions and diseases and perform surgeries." [abms.org]
+synonym: "consultation with ophthamologist" EXACT []
+synonym: "ophthamologist consultation" EXACT []
+synonym: "ophthamologist referral" EXACT []
+synonym: "ophthamology specialist consultation" EXACT []
+synonym: "ophthamology specialist evaluation" EXACT []
+synonym: "referral to ophthamologist" EXACT []
+synonym: "referral to ophthamology specialist" EXACT []
+synonym: "referral to optometrist" RELATED []
+is_a: MAXO:0000665 ! specialty medical professional evaulation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-08T20:14:31Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000704
+name: sports medicine orthopedist evaluation
+def: "An evaluation by a specialist who has expertise in the surgical and medical care for all structures of the musculoskeletal system directly affected by participation in sporting activity. This specialist is proficient in areas including conditioning, training and fitness, athletic performance and the impact of dietary supplements, pharmaceuticals, and nutrition on performance and health, coordination of care within the team setting utilizing other health care professionals, field evaluation and management, soft tissue biomechanics and injury healing and repair. Knowledge and understanding of the principles and techniques of rehabilitation, athletic equipment and orthotic devices enables the specialist to prevent and manage athletic injuries." [abms.org]
+synonym: "consultation with sports medicine orthopedic surgeon" EXACT []
+synonym: "referral to sports medicine orthopedic surgeon" EXACT []
+synonym: "referral to sports medicine orthopedist" EXACT []
+synonym: "sports medicine orthopedic surgeon consultation" EXACT []
+synonym: "sports medicine orthopedic surgeon evaluation" EXACT []
+synonym: "sports medicine orthopedist consultation" EXACT []
+synonym: "sports medicine orthopedist referral" EXACT []
+is_a: MAXO:0000478 ! orthopedic surgeon evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-08T20:31:50Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000705
+name: hand surgeon evaluation
+def: "An evaluation by a specialist with expertise in the surgical, medical and rehabilitative care of patients with diseases, injuries, and disorders affecting the hand, wrist and forearm." [abms.org]
+comment: Common conditions treated by a hand surgeon include carpal tunnel syndrome, trigger fingers, ganglia (lumps), sports injuries to the hand and wrist, and hand injuries involving cut tendons, nerves and arteries. Hand Surgeons may be General Surgeons, Orthopedic Surgeons or Plastic Surgeons who have received additional training in this area. {xref="abms.org"}
+synonym: "consultation with hand surgeon" EXACT []
+synonym: "consultation with orthopedic hand surgeon" EXACT []
+synonym: "hand surgeon consultation" EXACT []
+synonym: "referral to hand surgeon" EXACT []
+synonym: "referral to orthopedic hand surgeon" EXACT []
+is_a: MAXO:0000478 ! orthopedic surgeon evaluation
+is_a: MAXO:0000713 ! plastic surgeon evaluation
+is_a: MAXO:0000719 ! general surgeon evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-08T20:34:54Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000706
+name: otolaryngologist evaluation
+def: "An evaluation by a specialist who provides medical and/or surgical therapy or prevention of diseases, allergies, neoplasms, deformities, disorders and/or injuries of the ears, nose, sinuses, throat, respiratory and upper alimentary systems, face, jaws and the other head and neck systems." [abms.org]
+comment: Head and neck oncology, facial plastic and reconstructive surgery and the treatment of disorders of hearing and voice are fundamental areas of expertise. {xref="abms.org"}
+synonym: "consultation by otolaryngology specialist" EXACT []
+synonym: "consultation with head and neck surgeon" EXACT []
+synonym: "consultation with otolaryngologist" EXACT []
+synonym: "evaluation by otolaryngologist" EXACT []
+synonym: "head and neck surgeon consultation" EXACT []
+synonym: "head and neck surgeon evaluation" EXACT []
+synonym: "head and neck surgeon referral" EXACT []
+synonym: "otolaryngologist consultation" EXACT []
+synonym: "otolaryngologist referral" EXACT []
+synonym: "otolaryngology specialist consultation" EXACT []
+synonym: "otolaryngology specialist evaluation" EXACT []
+synonym: "otolaryngology specialist referral" EXACT []
+synonym: "referral to head and neck surgeon" EXACT []
+synonym: "referral to otolaryngologist" EXACT []
+is_a: MAXO:0000665 ! specialty medical professional evaulation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-09T16:10:20Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000707
+name: pediatrician evaluation
+def: "An evaluation by a specialist concerned with the physical, emotional, and social health of children from birth to young adulthood." [abms.org]
+comment: Pediatric care encompasses a broad spectrum of health services ranging from preventive health care to the diagnosis and treatment of acute and chronic diseases. Pediatricians understand the many factors that affect the growth and development of children. They understand that children are not simply small adults. Children change rapidly, and they must be approached with an appreciation for their stage of physical and mental development. {xref="abms.org"}
+synonym: "evaluation by pediatrician" EXACT []
+synonym: "pediatrician consultation" EXACT []
+is_a: MAXO:0000665 ! specialty medical professional evaulation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-09T17:48:27Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000709
+name: developmental-behavior pediatrician evaluation
+def: "An evaluation with a specialist who possesses special skills, training and experience to foster understanding and promotion of optimal development of children and families through research, education, clinical care and advocacy efforts. This physician assists in the prevention, diagnosis and management of developmental difficulties and problematic behaviors in children and in the family dysfunctions that compromise children’s development." [abms.org]
+synonym: "consultation with developmental-behavior pediatrician" EXACT []
+synonym: "developmental-behavior pediatrician consultation" EXACT []
+synonym: "developmental-behavior pediatrician referral" EXACT []
+synonym: "referral to developmental-behavior pediatrician" EXACT []
+is_a: MAXO:0000707 ! pediatrician evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-09T18:05:01Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000710
+name: pediatric endocrinologist evalutation
+def: "An evaluation by a specialist who provides expert care to infants, children and adolescents who have diseases that result from an abnormality in the endocrine glands (glands which secrete hormones). These diseases include diabetes mellitus, growth failure, unusual size for age, early or late pubertal development, birth defects, the genital region and disorders of the thyroid, the adrenal and pituitary glands." [abms.org]
+synonym: "assessment by pediatric endocrinologist" EXACT []
+synonym: "consultation with pediatric endocrinologist" EXACT []
+synonym: "evaluation by pediatric endocrinologist" EXACT []
+synonym: "pediatric endocrinologist consultation" EXACT []
+synonym: "pediatric endocrinologist referral" EXACT []
+synonym: "referral to pediatric endocrinologist" EXACT []
+is_a: MAXO:0000707 ! pediatrician evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-09T18:48:58Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000711
+name: pediatric cardiologist evaluation
+def: "Evaluation by a specialist who provides comprehensive care to patients with cardiovascular problems. This specialist is skilled in selecting, performing, and evaluating the structural and functional assessment of the heart and blood vessels, and the clinical evaluation of cardiovascular disease." [abms.org]
+synonym: "assessment by pediatric cardiologist" EXACT []
+synonym: "consultation with pediatric cardiologist" EXACT []
+synonym: "evaluation by pediatric cardiologist" EXACT []
+synonym: "pediatric cardiologist consultation" EXACT []
+synonym: "pediatric cardiologist referral" EXACT []
+synonym: "referral to pediatric cardiologist" EXACT []
+is_a: MAXO:0000707 ! pediatrician evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-09T18:54:16Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000712
+name: physiatrist evaluation
+def: "Evaluation by a specialist who treats patients with disorders or disabilities in the muscles, bones, and nervous system, including neck or back pain, sports and work injuries, stroke, brain injury, spinal cord injury, spasticity, and any other disability or disorder that affects function." [abms.org]
+comment: Treatment modalities by a physiatrist may include medications, injections, therapeutic exercise, electrodiagnosis, and any equipment required for daily activities. {xref="abms.org"}
+synonym: "assessment by physiatrist" EXACT []
+synonym: "assessment by physical medicine and rehabilitation specialist" EXACT []
+synonym: "consultation by physiatrist" EXACT []
+synonym: "consultation with physical medicine and rehabilitation specialist" EXACT []
+synonym: "evaluation by physical medicine and rehabilitation specialist" EXACT []
+synonym: "physiatrist assessment" EXACT []
+synonym: "physiatrist consultation" EXACT []
+synonym: "physiatrist referral" EXACT []
+synonym: "physical medicine and rehabilitation specialist assessment" EXACT []
+synonym: "physical medicine and rehabilitation specialist consultation" EXACT []
+synonym: "physical medicine and rehabilitation specialist evaluation" EXACT []
+synonym: "physical medicine and rehabilitation specialist referral" EXACT []
+synonym: "referral to physiatrist" EXACT []
+is_a: MAXO:0000665 ! specialty medical professional evaulation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-09T19:45:07Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000713
+name: plastic surgeon evaluation
+def: "An evaluation with a specialist who focuses on the repair, reconstruction or replacement of physical defects of form or function involving the skin, musculoskeletal system, craniomaxillofacial structures, hand, extremities, breast and trunk and external genitalia or cosmetic enhancement of these areas of the body." [abms.org]
+synonym: "consultation with plastic surgeon" EXACT []
+synonym: "evaluation by plastic surgeon" EXACT []
+synonym: "plastic surgeon assessment" EXACT []
+synonym: "plastic surgeon consultation" EXACT []
+synonym: "plastic surgeon referral" EXACT []
+is_a: MAXO:0000665 ! specialty medical professional evaulation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-09T19:54:01Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000714
+name: psychiatrist evaluation
+def: "Evaluation by a physician who specializes in the evaluation and treatment of mental, addictive and emotional disorders." [abms.org]
+synonym: "assessment by psychiatrist" EXACT []
+synonym: "consult with psychiatrist" EXACT []
+synonym: "evaluation by psychiatrist" EXACT []
+synonym: "psychiatrist assessment" EXACT []
+synonym: "psychiatrist consultation" EXACT []
+synonym: "psychiatrist referral" EXACT []
+synonym: "referral to psychiatrist" EXACT []
+is_a: MAXO:0000723 ! psychiatry and neurology specialist evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-09T20:37:35Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000715
+name: child and adolescent psychiatrist evaluation
+def: "Evaluation by a physician who specializes in the evaluation and treatment of mental, addictive and emotional disorders in children and adolescence." [abms.org]
+synonym: "assessment by child and adolescent psychiatrist" EXACT []
+synonym: "assessment by child psychiatrist" EXACT []
+synonym: "child and adolescent psychiatrist assessment" EXACT []
+synonym: "child and adolescent psychiatrist consultation" EXACT []
+synonym: "child and adolescent psychiatrist referral" EXACT []
+synonym: "child psychiatrist assessment" EXACT []
+synonym: "child psychiatrist evaluation" EXACT []
+synonym: "child psychiatrist referral" EXACT []
+synonym: "consultation with child and adolescent psychiatrist" EXACT []
+synonym: "consultation with child psychiatrist" EXACT []
+synonym: "evaluation by child and adolescent psychiatrist" EXACT []
+synonym: "referral to child and adolescent psychiatrist" EXACT []
+synonym: "referral to child psychiatrist" EXACT []
+is_a: MAXO:0000714 ! psychiatrist evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-09T20:41:16Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000716
+name: neurologist evaluation
+def: "An evaluation a specialist who treats all types of disease or impaired function of the brain, spinal cord, peripheral nerves, muscles and autonomic nervous system, as well as the blood vessels that relate to these structures." [abms.org]
+synonym: "consultation with neurologist" EXACT []
+synonym: "neurologist assessment" EXACT []
+synonym: "neurologist consultation" EXACT []
+synonym: "neurologist referral" EXACT []
+synonym: "referral to neurologist" EXACT []
+is_a: MAXO:0000723 ! psychiatry and neurology specialist evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-10T16:33:00Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000717
+name: child neurologist evaluation
+def: "Evaluation with a specialist who diagnose and treat all types of disease or impaired function of the brain, spinal cord, peripheral nerves, muscles and autonomic nervous system, as well as the blood vessels that relate to these structures in infants, children, and adolescents. They also have special competence in genetic and metabolic problems, malformation, retardation and other neurodevelopmental problems of childhood." [abms.org]
+synonym: "assessment by pediatric neurologist" EXACT []
+synonym: "child neurologist assessment" EXACT []
+synonym: "child neurologist consultation" EXACT []
+synonym: "consultation with child neurologist" EXACT []
+synonym: "consultation with pediatric neurologist" EXACT []
+synonym: "evaluation by child neurologist" EXACT []
+synonym: "pediatric neurologist assessment" EXACT []
+synonym: "pediatric neurologist consultation" EXACT []
+synonym: "pediatric neurologist evaluation" EXACT []
+synonym: "referral to child neurologist" EXACT []
+synonym: "referral to pediatric neurologist" EXACT []
+is_a: MAXO:0000716 ! neurologist evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-10T18:35:13Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000718
+name: radiologist evaluation
+def: "Evaluation by a specialist who uses imaging methodologies to diagnose and manage patients and provide therapeutic options." [abms.org]
+synonym: "assessment by radiologist" EXACT []
+synonym: "evaluation by radiologist" EXACT []
+synonym: "radiologist assessment" EXACT []
+is_a: MAXO:0000665 ! specialty medical professional evaulation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-10T19:06:21Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000719
+name: general surgeon evaluation
+def: "Evaluation by an expert in the diagnosis and care of patients with diseases and disorders affecting the abdomen, digestive tract, endocrine system, breast, skin and blood vessels. A general surgeon is also trained in the treatment of patients who are injured or critically ill, and in the care of pediatric and cancer patients. General surgeons are skilled in the use of minimally invasive techniques and endoscopies." [abms.org]
+synonym: "assessment by general surgeon" EXACT []
+synonym: "consultation with general surgeon" EXACT []
+synonym: "evaluation by general surgeon" EXACT []
+synonym: "general surgeon assessment" EXACT []
+synonym: "general surgeon consultation" EXACT []
+synonym: "general surgeon evaluation" EXACT []
+is_a: MAXO:0000725 ! surgeon evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-10T19:33:25Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000720
+name: vascular surgeon evaluation
+def: "An evaluation by a specialist who performs preoperative, operative, and postoperative management of patients with disorders of the arterial, venous and lymphatic systems, excluding vessels of the brain and the heart." []
+synonym: "assessment by vascular surgeon" EXACT []
+synonym: "evaluation by vascular surgeon" EXACT []
+synonym: "referral by vascular surgeon" EXACT []
+synonym: "vascular surgeon assessment" EXACT []
+synonym: "vascular surgeon consultation" EXACT []
+synonym: "vascular surgeon referral" EXACT []
+is_a: MAXO:0000725 ! surgeon evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-10T19:54:59Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000721
+name: thoracic and cardiac surgeon evaluation
+def: "Evaluation by a specialist who focuses on the operative, perioperative, and surgical critical care of patients with acquired and congenital pathologic conditions within the chest." [abms.org]
+synonym: "assessment by thoracic and cardiac surgeon" EXACT []
+synonym: "assessment by thoracic surgeon" EXACT []
+synonym: "consultation with thoracic and cardiac surgeon" EXACT []
+synonym: "consultation with thoracic surgeon" EXACT []
+synonym: "evaluation by thoracic and cardiac surgeon" EXACT []
+synonym: "evaluation by thoracic surgeon" EXACT []
+synonym: "referral to thoracic and cardiac surgeon" EXACT []
+synonym: "referral to thoracic surgeon" EXACT []
+synonym: "thoracic and cardiac surgeon assessment" EXACT []
+synonym: "thoracic and cardiac surgeon consultation" EXACT []
+synonym: "thoracic and cardiac surgeon referral" EXACT []
+synonym: "thoracic surgeon assessment" EXACT []
+synonym: "thoracic surgeon evaluation" EXACT []
+synonym: "thoracic surgeon referral" EXACT []
+is_a: MAXO:0000665 ! specialty medical professional evaulation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-10T20:40:44Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000722
+name: urologist evaluation
+def: "An evaluation by a specialist that focuses on diagnosing and treating disorders of the urinary tracts of males and females, and on the reproductive system of males. This specialist manages non-surgical problems such as urinary tract infections and benign prostatic hyperplasia, as well as surgical problems such as the surgical management of cancers, the correction of congenital abnormalities, and correcting stress incontinence." [abms.org]
+synonym: "assessment by genitourinary surgeon" EXACT []
+synonym: "assessment by urologist" EXACT []
+synonym: "consultation with genitourinary surgeon" EXACT []
+synonym: "consultation with urologist" EXACT []
+synonym: "evaluation by genitourinary surgeon" EXACT []
+synonym: "evaluation by urologist" EXACT []
+synonym: "genitourinary surgeon consultation" EXACT []
+synonym: "genitourinary surgeon evaluation" EXACT []
+synonym: "referral to genitourinary surgeon" EXACT []
+synonym: "referral to urologist" EXACT []
+synonym: "urologist assessment" EXACT []
+synonym: "urologist consultation" EXACT []
+synonym: "urologist referral" EXACT []
+is_a: MAXO:0000665 ! specialty medical professional evaulation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-10T20:44:20Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000723
+name: psychiatry and neurology specialist evaluation
+is_a: MAXO:0000665 ! specialty medical professional evaulation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-13T17:01:27Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000725
+name: surgeon evaluation
+def: "Assessment by a specialist who has expertise in the diagnosis and preoperative, operative, and postoperative management of patient care." [abms.org]
+is_a: MAXO:0000665 ! specialty medical professional evaulation
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-13T17:57:48Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0001000
 name: functional magnetic resonance imaging procedure
 def: "A type of MRI that takes a series of images of an organ in quick succession and statistically analyzes the differences between the images." [NCIT:C17958]
@@ -7521,27 +8332,6 @@ property_value: http://purl.org/dc/elements/1.1/date 2019-07-25T14:42:00Z xsd:da
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
-id: MAXO:0001027
-name: avoided food
-name: kidney biopsy
-def: "Removal of tissue from the kidney." []
-synonym: "kidney biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date 2019-07-12T14:23:27Z xsd:dateTime
-property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
-created_by: http://orcid.org/0000-0001-7941-2961
-created_by: http://orcid.org/0000-0001-7941-3012
-
-[Term]
-id: MAXO:0001028
-name: adenectomy
-name: avoided excessive intake of food
-def: "The surgical removal (cutting out) of part or all of gland." []
-synonym: "gland surgical removal" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date 2019-07-12T14:23:27Z xsd:dateTime
-property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
-created_by: http://orcid.org/0000-0001-7941-2961
-
-[Term]
 id: MAXO:0001029
 name: adenoidectomy
 def: "The surgical removal (cutting out) of part or all of pharyngeal tonsil." []
@@ -7738,7 +8528,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001049
-name: heatic diverticulectomy
+name: hepatic diverticulectomy
 def: "The surgical removal (cutting out) of part or all of hepatic diverticulum." []
 synonym: "hepatic diverticulum surgical removal" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
@@ -8068,6 +8858,229 @@ def: "The surgical removal (cutting out) of part or all of penis." []
 synonym: "penis surgical removal" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001088
+name: bullectomy
+def: "The surgical removal (cutting out) of part or all of Pulmonary bulla." []
+synonym: "Pulmonary bulla surgical removal" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001089
+name: bunionectomy
+def: "The surgical removal (cutting out) of part or all of Hallux valgus." []
+synonym: "bunion removal" EXACT []
+synonym: "Hallux valgus surgical removal" EXACT []
+synonym: "removal of bunion" EXACT []
+xref: NCIT:C96171
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001091
+name: Meckel's diverticulectomy
+def: "Surgical removal of an abnormal pouch of the lining of the small intestine (bowel)." []
+synonym: "Meckel diverticulum surgical removal" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001092
+name: cardiac diverticulectomy
+def: "The surgical removal (cutting out) of part or all of Cardiac diverticulum." []
+synonym: "Cardiac diverticulum surgical removal" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001093
+name: esophageal diverticulectomy
+def: "The surgical removal (cutting out) of part or all of Esophageal diverticulum." []
+synonym: "Esophageal diverticulum surgical removal" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001094
+name: gastric diverticulectomy
+def: "The surgical removal (cutting out) of part or all of Gastric diverticulum." []
+synonym: "Gastric diverticulum surgical removal" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001095
+name: renal diverticulectomy
+def: "The surgical removal (cutting out) of part or all of Renal diverticulum." []
+synonym: "Renal diverticulum surgical removal" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001096
+name: bladder diverticulectomy
+def: "The surgical removal (cutting out) of part or all of Bladder diverticulum." []
+synonym: "Bladder diverticulum surgical removal" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001097
+name: uethral diverticulectomy
+def: "The surgical removal (cutting out) of part or all of Urethral diverticulum." []
+synonym: "Urethral diverticulum surgical removal" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001098
+name: fibrous cardiac diverticulectomy
+def: "The surgical removal (cutting out) of part or all of Fibrous cardiac diverticulum." []
+synonym: "Fibrous cardiac diverticulum surgical removal" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001099
+name: muscular cardiac diverticulectomy
+def: "The surgical removal (cutting out) of part or all of Muscular cardiac diverticulum." []
+synonym: "Muscular cardiac diverticulum surgical removal" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001100
+name: spinal meningeal diverticulectomy
+def: "The surgical removal (cutting out) of part or all of Spinal meningeal diverticulum." []
+synonym: "Spinal meningeal diverticulum surgical removal" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001101
+name: coronary sinus diverticulectomy
+def: "The surgical removal (cutting out) of part or all of Coronary sinus diverticulum." []
+synonym: "Coronary sinus diverticulum surgical removal" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001102
+name: thromboembolectomy
+def: "The surgical removal (cutting out) of part or all of Thromboembolism." []
+synonym: "Thromboembolism surgical removal" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001103
+name: pulmonary embolectomy
+def: "The surgical removal (cutting out) of part or all of Pulmonary embolism." []
+synonym: "Pulmonary embolism surgical removal" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001104
+name: endarterectomy
+def: "The surgical removal (cutting out) of part or all of Arterial calcification." []
+synonym: "Arterial calcification surgical removal" EXACT []
+xref: NCIT:C52002
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001105
+name: lumpectomy
+def: "The surgical removal (cutting out) of part or all of Neoplasm of the breast." []
+comment: Surgery to remove abnormal tissue or cancer from the breast and a small amount of normal tissue around it. It is a type of breast-sparing surgery. NCIT:C15755
+synonym: "breast segmental resection" EXACT []
+synonym: "breast wide local" EXACT []
+synonym: "lumpectomy of breast excision" EXACT []
+synonym: "Neoplasm of the breast surgical removal" EXACT []
+synonym: "partial mastectomy" EXACT []
+synonym: "tylectomy" EXACT []
+xref: NCIT:C15755
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001106
+name: myomectomy
+def: "The surgical removal (cutting out) of part or all of Uterine leiomyoma." []
+synonym: "fiboroidectomy" EXACT []
+synonym: "removal of uterine fibroids" EXACT []
+synonym: "Uterine leiomyoma surgical removal" EXACT []
+xref: NCIT:C51645
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001107
+name: arterial thrombosis
+def: "The surgical removal (cutting out) of part or all of Arterial thrombosis." []
+synonym: "Arterial thrombosis surgical removal" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2962
+
+[Term]
+id: MAXO:0001108
+name: venous thrombosis
+def: "The surgical removal (cutting out) of part or all of Venous thrombosis." []
+synonym: "Venous thrombosis surgical removal" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2963
+
+[Term]
+id: MAXO:0001109
+name: thrombosis
+def: "The surgical removal (cutting out) of part or all of Abnormal thrombosis." []
+synonym: "Abnormal thrombosis surgical removal" EXACT []
+synonym: "removal of thrombosis" EXACT []
+synonym: "thrombosis removal" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2964
+
+[Term]
+id: MAXO:0001110
+name: tumorectomy
+def: "The surgical removal (cutting out) of part or all of Neoplasm." []
+synonym: "cancer removal" EXACT []
+synonym: "Neoplasm surgical removal" EXACT []
+synonym: "removal of tumor" EXACT []
+synonym: "tumor removal" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2965
+
+[Term]
+id: MAXO:0001111
+name: adenectomy
+def: "The surgical removal (cutting out) of part or all of gland." []
+synonym: "gland surgical removal" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001112
+name: biopsy of kidney
+name: kidney CT
+def: "Removal of tissue from the kidney." []
+def: "The use of computed tomography to produce images of structures of the kidney." []
+synonym: "CAT scan of kidney" EXACT []
+synonym: "CT of kidney" EXACT []
+synonym: "kidney biopsy" EXACT []
+synonym: "kidney CAT scan" EXACT []
+synonym: "kidney computed tomography" EXACT []
+synonym: "kidney computerized axial tomography" EXACT []
+synonym: "kidney CT examination" EXACT []
+synonym: "renal CAT scan" EXACT []
+synonym: "renal CT" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-9T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-3010
+created_by: http://orcid.org/0000-0001-7941-3012
 
 [Term]
 id: MAXO:0002000
@@ -8554,6 +9567,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0010038
 name: lung transplantation
 def: "The surgical transfer of a healthy lung to a patient." []
+synonym: "lung transplantation surgical procedure" EXACT []
 synonym: "transplantation of lung" EXACT []
 xref: NCIT:C15274
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T10:00:01Z xsd:string
@@ -10338,11 +11352,6 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Typedef]
 id: MAXO:0001027
 name: avoided food
-name: kidney biopsy
-def: "Removal of tissue from the kidney." []
-synonym: "kidney biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-07-12T14:23:27Z xsd:dateTime
-property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
-created_by: http://orcid.org/0000-0001-7941-3012
 
