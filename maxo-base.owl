@@ -11,7 +11,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/maxo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2020-07-13/maxo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2020-07-16/maxo-base.owl"/>
         <dc:creator>Aaron Zhang</dc:creator>
         <dc:creator>Leigh Carmody</dc:creator>
         <dc:creator>Peter Robinson</dc:creator>
@@ -2559,8 +2559,12 @@
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>ERO:0001325</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCIT:C17230</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>diagnostic ultrasound</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>medical sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>ultrasound procedure</oboInOwl:hasExactSynonym>
+        <rdfs:comment>2D ultrasounds produce a flat image of the organs. 3D images show three-dimensional external images of organs or fetus. 4D ultrasounds generates an image that is continuously updated, like amoving image.</rdfs:comment>
+        <rdfs:comment>A procedure that uses high-energy sound waves to look at tissues and organs inside the body. The sound waves make echoes that form pictures of the tissues and organs on a computer screen (sonogram). Ultrasound may be used to help diagnose diseases, such as cancer. It may also be used during pregnancy to check the fetus (unborn baby) and during medical procedures, such as biopsies. Also called ultrasonography.</rdfs:comment>
         <rdfs:label xml:lang="en">ultrasonography procedure</rdfs:label>
     </owl:Class>
     
@@ -2569,10 +2573,9 @@
     <!-- http://purl.obolibrary.org/obo/MAXO_0000073 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000073">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000072"/>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-15T19:32:45Z</dc:date>
-        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <rdfs:label xml:lang="en">liver ultrasound procedure</rdfs:label>
+        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/MAXO_0010204"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete liver ultrasound procedure</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:deprecated>
     </owl:Class>
     
 
@@ -17142,6 +17145,138 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000726 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000726">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0010201"/>
+        <obo:IAO_0000115>A procedure, also known as sonohysterography or saline infusion sonography, using a minimally invasive ultrasound technique to view the inside of the uterus. Sterile saline is injected into the endometrial cavity thereby distending the endometrial cavity, providing good visualization of the anatomic structures within.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-16T14:18:41Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C38066</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>diagnostic hysterosonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>medical hysterosonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>sonohysterography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>saline infusion sonography</oboInOwl:hasNarrowSynonym>
+        <rdfs:label xml:lang="en">hysterosonography</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000726"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A procedure, also known as sonohysterography or saline infusion sonography, using a minimally invasive ultrasound technique to view the inside of the uterus. Sterile saline is injected into the endometrial cavity thereby distending the endometrial cavity, providing good visualization of the anatomic structures within.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C38066</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000727 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000727">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000072"/>
+        <obo:IAO_0000115>An invasive procedure in which sound waves (called ultrasound) are bounced off of vascular tissues from within the vessel and the echoes produce a picture (sonogram).</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-16T14:31:24Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C99535</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>IVUS</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>diagnostic intravascular ultrasound</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>intravascular sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>intravascular ultrasound</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>medical intravascular ultrasonography</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">intravascular ultrasonography</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000727"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An invasive procedure in which sound waves (called ultrasound) are bounced off of vascular tissues from within the vessel and the echoes produce a picture (sonogram).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C99535</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000727"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>IVUS</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000728 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000728">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0010216"/>
+        <obo:IAO_0000115>A technique in which sound waves are sent out by an ultrasound probe that has been inserted in the vagina and a computer uses the ultrasound echoes to create an image of the female genital tract. The test can be performed to evaluate women with infertility problems, abnormal bleeding, sources of unexplained pain, congenital malformations of the uterus and ovaries, and possible tumors and infection.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-16T14:38:38Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C17644</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>TVS</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>TVU</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>diagnostic transvaginal ultrasound</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>medical transvaginal sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>transvaginal sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>transvaginal ultrasound</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>transvaginal ultrasound examination</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">transvaginal ultrasonography</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000728"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A technique in which sound waves are sent out by an ultrasound probe that has been inserted in the vagina and a computer uses the ultrasound echoes to create an image of the female genital tract. The test can be performed to evaluate women with infertility problems, abnormal bleeding, sources of unexplained pain, congenital malformations of the uterus and ovaries, and possible tumors and infection.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C17644</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000728"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>TVS</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000728"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>TVU</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000729 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000729">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0010210"/>
+        <obo:IAO_0000115>A procedure that uses sound waves to create a video image of the pelvic organs and tissues. A small, lubricated probe placed into the rectum releases sound waves, which create echoes as they enter a pelvic organ. The echoes that bounce back are sent to a computer that translates the pattern of echoes into a picture of the specific organ under examination. This procedure is most often used to evaluate the prostate gland.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-16T14:46:48Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C18315</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>ERUS</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>TRUS</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>diagnostic transrectal ultrasound</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>endorectal sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>endorectal ultrasound</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>endorectal ultrsonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>medical transrectal ultrasound</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>transrectal sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>transrectal ultrasound</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>transrectal ultrasound examination</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">transrectal ultrasonography</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000729"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A procedure that uses sound waves to create a video image of the pelvic organs and tissues. A small, lubricated probe placed into the rectum releases sound waves, which create echoes as they enter a pelvic organ. The echoes that bounce back are sent to a computer that translates the pattern of echoes into a picture of the specific organ under examination. This procedure is most often used to evaluate the prostate gland.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C18315</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000729"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>ERUS</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000729"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>TRUS</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/MAXO_0001000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001000">
@@ -23490,16 +23625,24 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The use of ultrasound to produce images of structures in the abdomen.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A method of ultrasound imaging in which the ultrasound probe is pressed against the skin of the abdomen in order to create an image of the abdominal organs.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-01-24T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT:C71375</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TUS</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abdomen diagnostic sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abdomen medical ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abdomen sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abdomen ultrasound examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abdomen ultrasound imaging procedure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abdomen ultrasound procedure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">diagnostic transabdominal ultrasound</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medical transabdominal ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sonography of abdomen</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transabdominal sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transabdominal ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ultrasonography of abdomen</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abdominal ultrasonography</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transabdominal ultrasonography</rdfs:label>
     </owl:Class>
     
 
@@ -23526,6 +23669,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The use of ultrasound to produce images of structures in the body of uterus.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-01-24T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">body of uterus diagnostic sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">body of uterus medical ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">body of uterus sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">body of uterus ultrasound examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">body of uterus ultrasound imaging procedure</oboInOwl:hasExactSynonym>
@@ -23559,6 +23704,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The use of ultrasound to produce images of structures in the breast.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-01-24T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">breast diagnostic sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">breast medical ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">breast sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">breast ultrasound examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">breast ultrasound imaging procedure</oboInOwl:hasExactSynonym>
@@ -23592,6 +23739,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The use of ultrasound to produce images of structures in the heart.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-01-24T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heart diagnostic sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heart medical ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heart sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heart ultrasound examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heart ultrasound imaging procedure</oboInOwl:hasExactSynonym>
@@ -23625,6 +23774,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The use of ultrasound to produce images of structures in the liver.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-01-24T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2965</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">liver diagnostic sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">liver medical ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">liver sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">liver ultrasound examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">liver ultrasound imaging procedure</oboInOwl:hasExactSynonym>
@@ -23658,6 +23809,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The use of ultrasound to produce images of structures in the lung.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-01-24T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2969</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lung diagnostic sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lung medical ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lung sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lung ultrasound examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lung ultrasound imaging procedure</oboInOwl:hasExactSynonym>
@@ -23691,6 +23844,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The use of ultrasound to produce images of structures in the lymph node.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-01-24T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2970</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lymph node diagnostic sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lymph node medical ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lymph node sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lymph node ultrasound examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lymph node ultrasound imaging procedure</oboInOwl:hasExactSynonym>
@@ -23724,6 +23879,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The use of ultrasound to produce images of structures in the musculoskeletal system.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-01-24T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2975</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">musculoskeletal system diagnostic sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">musculoskeletal system medical ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">musculoskeletal system sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">musculoskeletal system ultrasound examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">musculoskeletal system ultrasound imaging procedure</oboInOwl:hasExactSynonym>
@@ -23757,6 +23914,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The use of ultrasound to produce images of structures in the neck.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-01-24T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2979</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neck diagnostic sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neck medical ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neck sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neck ultrasound examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neck ultrasound imaging procedure</oboInOwl:hasExactSynonym>
@@ -23790,6 +23949,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The use of ultrasound to produce images of structures in the pancreas.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-01-24T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2981</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pancreas diagnostic sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pancreas medical ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pancreas sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pancreas ultrasound examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pancreas ultrasound imaging procedure</oboInOwl:hasExactSynonym>
@@ -23823,6 +23984,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The use of ultrasound to produce images of structures in the rectum.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-01-24T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2987</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rectum diagnostic sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rectum medical ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rectum sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rectum ultrasound examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rectum ultrasound imaging procedure</oboInOwl:hasExactSynonym>
@@ -23856,6 +24019,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The use of ultrasound to produce images of structures in the scrotum.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-01-24T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2990</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scrotum diagnostic sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scrotum medical ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scrotum sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scrotum ultrasound examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scrotum ultrasound imaging procedure</oboInOwl:hasExactSynonym>
@@ -23890,6 +24055,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-01-24T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2994</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sonography of spleen</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spleen diagnostic sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spleen medical ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spleen sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spleen ultrasound examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spleen ultrasound imaging procedure</oboInOwl:hasExactSynonym>
@@ -23923,6 +24090,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-01-24T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2995</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sonography of stomach</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stomach diagnostic sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stomach medical ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stomach sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stomach ultrasound examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stomach ultrasound imaging procedure</oboInOwl:hasExactSynonym>
@@ -23956,6 +24125,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-01-24T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-3000</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sonography of thyroid gland</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thyroid gland diagnostic sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thyroid gland medical ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thyroid gland sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thyroid gland ultrasound examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thyroid gland ultrasound imaging procedure</oboInOwl:hasExactSynonym>
@@ -23990,6 +24161,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-3008</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sonography of urinary bladder</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ultrasonography of urinary bladder</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urinary bladder diagnostic sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urinary bladder medical ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urinary bladder sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urinary bladder ultrasound examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urinary bladder ultrasound imaging procedure</oboInOwl:hasExactSynonym>
@@ -24023,6 +24196,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-3010</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sonography of vagina</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ultrasonography of vagina</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vagina diagnostic sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vagina medical ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vagina sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vagina ultrasound examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vagina ultrasound imaging procedure</oboInOwl:hasExactSynonym>
@@ -24054,6 +24229,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The use of ultrasound to produce images of structures in the kidney.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-01-24T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-3010</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kidney diagnostic sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kidney medical ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kidney sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kidney ultrasound examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kidney ultrasound imaging procedure</oboInOwl:hasExactSynonym>
@@ -24087,6 +24264,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The use of ultrasound to produce images of structures in the carotid artery segment.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-01-24T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-3010</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carotid artery segment diagnostic sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carotid artery segment medical ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carotid artery segment sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carotid artery segment ultrasound examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carotid artery segment ultrasound imaging procedure</oboInOwl:hasExactSynonym>
@@ -24121,6 +24300,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The use of ultrasound to produce images of structures in the pelvic region of trunk.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-01-24T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-3010</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pelvic region of trunk diagnostic sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pelvic region of trunk medical ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pelvic region of trunk sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pelvic region of trunk ultrasound examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pelvic region of trunk ultrasound imaging procedure</oboInOwl:hasExactSynonym>
@@ -24156,6 +24337,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The use of ultrasound to produce images of structures in the prostate gland.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-01-24T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-3010</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prostate gland diagnostic sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prostate gland medical ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prostate gland sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prostate gland ultrasound examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prostate gland ultrasound imaging procedure</oboInOwl:hasExactSynonym>
@@ -24208,12 +24391,16 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-3010</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sonography of testis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sonography of venous blood vessel</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testis diagnostic sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testis medical ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testis sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testis ultrasound examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testis ultrasound imaging procedure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testis ultrasound procedure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ultrasonography of testis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ultrasonography of venous blood vessel</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">venous blood vessel diagnostic sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">venous blood vessel medical ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">venous blood vessel sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">venous blood vessel ultrasound examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">venous blood vessel ultrasound imaging procedure</oboInOwl:hasExactSynonym>
@@ -24247,6 +24434,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The use of ultrasound to produce images of structures in the brain.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-01-24T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-3010</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">brain diagnostic sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">brain medical ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">brain sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">brain ultrasound examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">brain ultrasound imaging procedure</oboInOwl:hasExactSynonym>
