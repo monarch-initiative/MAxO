@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2020-07-13/maxo-base.owl
+data-version: maxo/releases/2020-07-16/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Aaron Zhang" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
@@ -450,17 +450,16 @@ id: MAXO:0000062
 name: antineoplastic agent therapy
 def: "Use of a substance that inhibits or prevents the proliferation of neoplasms." []
 synonym: "anticancer agent therapy" BROAD []
-synonym: "antineoplastic drug therapy" BROAD []
 synonym: "antineoplastic drug therapy" EXACT []
 synonym: "cytostatic agent therapy" EXACT []
 synonym: "cytostatic drug therapy" EXACT []
-synonym: "Treatment with anti-cancer drug" EXACT []
-synonym: "Treatment with anti-cancer medication" EXACT []
-synonym: "Treatment with anti-neoplastic drug" EXACT []
-synonym: "Treatment with anti-neoplastic medication" EXACT []
-synonym: "Treatment with antineoplastic agent" EXACT []
-synonym: "Treatment with antineoplastic drug" EXACT []
-synonym: "Treatment with antineoplastic medication" EXACT []
+synonym: "treatment with anti-cancer drug" EXACT []
+synonym: "treatment with anti-cancer medication" EXACT []
+synonym: "treatment with anti-neoplastic drug" EXACT []
+synonym: "treatment with anti-neoplastic medication" EXACT []
+synonym: "treatment with antineoplastic agent" EXACT []
+synonym: "treatment with antineoplastic drug" EXACT []
+synonym: "treatment with antineoplastic medication" EXACT []
 xref: CHEBI:35610
 xref: NCIT:C274
 is_a: MAXO:0000058 ! pharmacotherapy
@@ -546,6 +545,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000072
 name: ultrasonography procedure
 def: "The use of ultrasound to produce images of structures in the human body." []
+comment: 2D ultrasounds produce a flat image of the organs. 3D images show three-dimensional external images of organs or fetus. 4D ultrasounds generates an image that is continuously updated, like amoving image.
+comment: A procedure that uses high-energy sound waves to look at tissues and organs inside the body. The sound waves make echoes that form pictures of the tissues and organs on a computer screen (sonogram). Ultrasound may be used to help diagnose diseases, such as cancer. It may also be used during pregnancy to check the fetus (unborn baby) and during medical procedures, such as biopsies. Also called ultrasonography.
+synonym: "diagnostic ultrasound" EXACT []
+synonym: "medical sonography" EXACT []
 synonym: "sonography" EXACT []
 synonym: "ultrasound procedure" EXACT []
 xref: ERO:0001325
@@ -556,10 +559,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000073
-name: liver ultrasound procedure
-is_a: MAXO:0000072 ! ultrasonography procedure
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T19:32:45Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
+name: obsolete liver ultrasound procedure
+replaced_by: MAXO:0010204
 
 [Term]
 id: MAXO:0000074
@@ -623,7 +624,11 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000080
 name: stress management therapy
+def: "A wide range of techniques and psychotherapies aimed at controlling a person's level of stress." []
 synonym: "stress management" NARROW []
+synonym: "stress therapy" NARROW []
+synonym: "therapy for stress" EXACT []
+synonym: "therapy to relieve stress" EXACT []
 xref: NCIT:C67032
 is_a: MAXO:0000077 ! behavioral counseling
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T19:49:24Z xsd:dateTime
@@ -1292,7 +1297,7 @@ synonym: "analgesic medication therapy" EXACT []
 synonym: "analgesic therapy" EXACT []
 synonym: "Analgesics therapy" EXACT []
 xref: CHEBI:35480
-xref: NCIT_C241
+xref: NCIT:C241
 is_a: MAXO:0000058 ! pharmacotherapy
 is_a: MAXO:0000457 ! pain management
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -3167,7 +3172,7 @@ replaced_by: MAXO:0000274
 
 [Term]
 id: MAXO:0000279
-name: Glucocorticoids/ Mineralocorticoids
+name: Glucocorticoids/ Mineralocorticoids therapy
 is_a: MAXO:0000162 ! adrenal-modifying, hormonal agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:42:45Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -8034,6 +8039,68 @@ property_value: http://purl.org/dc/elements/1.1/date 2020-07-13T17:57:48Z xsd:da
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0000726
+name: hysterosonography
+def: "A procedure, also known as sonohysterography or saline infusion sonography, using a minimally invasive ultrasound technique to view the inside of the uterus. Sterile saline is injected into the endometrial cavity thereby distending the endometrial cavity, providing good visualization of the anatomic structures within." [NCIT:C38066]
+synonym: "diagnostic hysterosonography" EXACT []
+synonym: "medical hysterosonography" EXACT []
+synonym: "saline infusion sonography" NARROW []
+synonym: "sonohysterography" EXACT []
+xref: NCIT:C38066
+is_a: MAXO:0010201 ! uterine ultrasonography
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-16T14:18:41Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000727
+name: intravascular ultrasonography
+def: "An invasive procedure in which sound waves (called ultrasound) are bounced off of vascular tissues from within the vessel and the echoes produce a picture (sonogram)." [NCIT:C99535]
+synonym: "diagnostic intravascular ultrasound" EXACT []
+synonym: "intravascular sonography" EXACT []
+synonym: "intravascular ultrasound" EXACT []
+synonym: "IVUS" EXACT ABBREVIATION []
+synonym: "medical intravascular ultrasonography" EXACT []
+xref: NCIT:C99535
+is_a: MAXO:0000072 ! ultrasonography procedure
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-16T14:31:24Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000728
+name: transvaginal ultrasonography
+def: "A technique in which sound waves are sent out by an ultrasound probe that has been inserted in the vagina and a computer uses the ultrasound echoes to create an image of the female genital tract. The test can be performed to evaluate women with infertility problems, abnormal bleeding, sources of unexplained pain, congenital malformations of the uterus and ovaries, and possible tumors and infection." [NCIT:C17644]
+synonym: "diagnostic transvaginal ultrasound" EXACT []
+synonym: "medical transvaginal sonography" EXACT []
+synonym: "transvaginal sonography" EXACT []
+synonym: "transvaginal ultrasound" EXACT []
+synonym: "transvaginal ultrasound examination" EXACT []
+synonym: "TVS" EXACT ABBREVIATION []
+synonym: "TVU" EXACT ABBREVIATION []
+xref: NCIT:C17644
+is_a: MAXO:0010216 ! vaginal ultrasonography
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-16T14:38:38Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000729
+name: transrectal ultrasonography
+def: "A procedure that uses sound waves to create a video image of the pelvic organs and tissues. A small, lubricated probe placed into the rectum releases sound waves, which create echoes as they enter a pelvic organ. The echoes that bounce back are sent to a computer that translates the pattern of echoes into a picture of the specific organ under examination. This procedure is most often used to evaluate the prostate gland." [NCIT:C18315]
+synonym: "diagnostic transrectal ultrasound" EXACT []
+synonym: "endorectal sonography" EXACT []
+synonym: "endorectal ultrasound" EXACT []
+synonym: "endorectal ultrsonography" EXACT []
+synonym: "ERUS" EXACT ABBREVIATION []
+synonym: "medical transrectal ultrasound" EXACT []
+synonym: "transrectal sonography" EXACT []
+synonym: "transrectal ultrasound" EXACT []
+synonym: "transrectal ultrasound examination" EXACT []
+synonym: "TRUS" EXACT ABBREVIATION []
+xref: NCIT:C18315
+is_a: MAXO:0010210 ! rectal ultrasonography
+property_value: http://purl.org/dc/elements/1.1/date 2020-07-16T14:46:48Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0001000
 name: functional magnetic resonance imaging procedure
 def: "A type of MRI that takes a series of images of an organ in quick succession and statistically analyzes the differences between the images." [NCIT:C17958]
@@ -8513,9 +8580,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001047
 name: digestive tract diverticulectomy
-def: "2020-06-23T20:39:14Z" []
+def: "The surgical removal (cutting out) of part or all of digestive tract diverticulum." []
 synonym: "digestive tract diverticulum surgical removal" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date http://orcid.org/0000-0001-7941-2962 xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -10541,14 +10608,22 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010200
-name: abdominal ultrasonography
-def: "The use of ultrasound to produce images of structures in the abdomen." []
+name: transabdominal ultrasonography
+def: "A method of ultrasound imaging in which the ultrasound probe is pressed against the skin of the abdomen in order to create an image of the abdominal organs." []
+synonym: "abdomen diagnostic sonography" EXACT []
+synonym: "abdomen medical ultrasound" EXACT []
 synonym: "abdomen sonography" EXACT []
 synonym: "abdomen ultrasound examination" EXACT []
 synonym: "abdomen ultrasound imaging procedure" EXACT []
 synonym: "abdomen ultrasound procedure" EXACT []
+synonym: "diagnostic transabdominal ultrasound" EXACT []
+synonym: "medical transabdominal ultrasound" EXACT []
 synonym: "sonography of abdomen" EXACT []
+synonym: "transabdominal sonography" EXACT []
+synonym: "transabdominal ultrasound" EXACT []
+synonym: "TUS" EXACT []
 synonym: "ultrasonography of abdomen" EXACT []
+xref: NCIT:C71375
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -10556,6 +10631,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0010201
 name: uterine ultrasonography
 def: "The use of ultrasound to produce images of structures in the body of uterus." []
+synonym: "body of uterus diagnostic sonography" EXACT []
+synonym: "body of uterus medical ultrasound" EXACT []
 synonym: "body of uterus sonography" EXACT []
 synonym: "body of uterus ultrasound examination" EXACT []
 synonym: "body of uterus ultrasound imaging procedure" EXACT []
@@ -10569,6 +10646,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0010202
 name: breast ultrasonography
 def: "The use of ultrasound to produce images of structures in the breast." []
+synonym: "breast diagnostic sonography" EXACT []
+synonym: "breast medical ultrasound" EXACT []
 synonym: "breast sonography" EXACT []
 synonym: "breast ultrasound examination" EXACT []
 synonym: "breast ultrasound imaging procedure" EXACT []
@@ -10582,6 +10661,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0010203
 name: echocardiography
 def: "The use of ultrasound to produce images of structures in the heart." []
+synonym: "heart diagnostic sonography" EXACT []
+synonym: "heart medical ultrasound" EXACT []
 synonym: "heart sonography" EXACT []
 synonym: "heart ultrasound examination" EXACT []
 synonym: "heart ultrasound imaging procedure" EXACT []
@@ -10595,6 +10676,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0010204
 name: liver ultrasonography
 def: "The use of ultrasound to produce images of structures in the liver." []
+synonym: "liver diagnostic sonography" EXACT []
+synonym: "liver medical ultrasound" EXACT []
 synonym: "liver sonography" EXACT []
 synonym: "liver ultrasound examination" EXACT []
 synonym: "liver ultrasound imaging procedure" EXACT []
@@ -10608,6 +10691,8 @@ created_by: http://orcid.org/0000-0001-7941-2965
 id: MAXO:0010205
 name: lung ultrasonography
 def: "The use of ultrasound to produce images of structures in the lung." []
+synonym: "lung diagnostic sonography" EXACT []
+synonym: "lung medical ultrasound" EXACT []
 synonym: "lung sonography" EXACT []
 synonym: "lung ultrasound examination" EXACT []
 synonym: "lung ultrasound imaging procedure" EXACT []
@@ -10621,6 +10706,8 @@ created_by: http://orcid.org/0000-0001-7941-2969
 id: MAXO:0010206
 name: lymph node ultrasonography
 def: "The use of ultrasound to produce images of structures in the lymph node." []
+synonym: "lymph node diagnostic sonography" EXACT []
+synonym: "lymph node medical ultrasound" EXACT []
 synonym: "lymph node sonography" EXACT []
 synonym: "lymph node ultrasound examination" EXACT []
 synonym: "lymph node ultrasound imaging procedure" EXACT []
@@ -10634,6 +10721,8 @@ created_by: http://orcid.org/0000-0001-7941-2970
 id: MAXO:0010207
 name: musculoskeletal ultrasonography
 def: "The use of ultrasound to produce images of structures in the musculoskeletal system." []
+synonym: "musculoskeletal system diagnostic sonography" EXACT []
+synonym: "musculoskeletal system medical ultrasound" EXACT []
 synonym: "musculoskeletal system sonography" EXACT []
 synonym: "musculoskeletal system ultrasound examination" EXACT []
 synonym: "musculoskeletal system ultrasound imaging procedure" EXACT []
@@ -10647,6 +10736,8 @@ created_by: http://orcid.org/0000-0001-7941-2975
 id: MAXO:0010208
 name: neck ultrasonography
 def: "The use of ultrasound to produce images of structures in the neck." []
+synonym: "neck diagnostic sonography" EXACT []
+synonym: "neck medical ultrasound" EXACT []
 synonym: "neck sonography" EXACT []
 synonym: "neck ultrasound examination" EXACT []
 synonym: "neck ultrasound imaging procedure" EXACT []
@@ -10660,6 +10751,8 @@ created_by: http://orcid.org/0000-0001-7941-2979
 id: MAXO:0010209
 name: pancreatic ultrasonography
 def: "The use of ultrasound to produce images of structures in the pancreas." []
+synonym: "pancreas diagnostic sonography" EXACT []
+synonym: "pancreas medical ultrasound" EXACT []
 synonym: "pancreas sonography" EXACT []
 synonym: "pancreas ultrasound examination" EXACT []
 synonym: "pancreas ultrasound imaging procedure" EXACT []
@@ -10673,6 +10766,8 @@ created_by: http://orcid.org/0000-0001-7941-2981
 id: MAXO:0010210
 name: rectal ultrasonography
 def: "The use of ultrasound to produce images of structures in the rectum." []
+synonym: "rectum diagnostic sonography" EXACT []
+synonym: "rectum medical ultrasound" EXACT []
 synonym: "rectum sonography" EXACT []
 synonym: "rectum ultrasound examination" EXACT []
 synonym: "rectum ultrasound imaging procedure" EXACT []
@@ -10686,6 +10781,8 @@ created_by: http://orcid.org/0000-0001-7941-2987
 id: MAXO:0010211
 name: scrotal ultrasonography
 def: "The use of ultrasound to produce images of structures in the scrotum." []
+synonym: "scrotum diagnostic sonography" EXACT []
+synonym: "scrotum medical ultrasound" EXACT []
 synonym: "scrotum sonography" EXACT []
 synonym: "scrotum ultrasound examination" EXACT []
 synonym: "scrotum ultrasound imaging procedure" EXACT []
@@ -10700,6 +10797,8 @@ id: MAXO:0010212
 name: spleen ultrasonography
 def: "The use of ultrasound to produce images of structures in the spleen." []
 synonym: "sonography of spleen" EXACT []
+synonym: "spleen diagnostic sonography" EXACT []
+synonym: "spleen medical ultrasound" EXACT []
 synonym: "spleen sonography" EXACT []
 synonym: "spleen ultrasound examination" EXACT []
 synonym: "spleen ultrasound imaging procedure" EXACT []
@@ -10713,6 +10812,8 @@ id: MAXO:0010213
 name: stomach ultrasonography
 def: "The use of ultrasound to produce images of structures in the stomach." []
 synonym: "sonography of stomach" EXACT []
+synonym: "stomach diagnostic sonography" EXACT []
+synonym: "stomach medical ultrasound" EXACT []
 synonym: "stomach sonography" EXACT []
 synonym: "stomach ultrasound examination" EXACT []
 synonym: "stomach ultrasound imaging procedure" EXACT []
@@ -10726,6 +10827,8 @@ id: MAXO:0010214
 name: thyroid ultrasonography
 def: "The use of ultrasound to produce images of structures in the thyroid gland." []
 synonym: "sonography of thyroid gland" EXACT []
+synonym: "thyroid gland diagnostic sonography" EXACT []
+synonym: "thyroid gland medical ultrasound" EXACT []
 synonym: "thyroid gland sonography" EXACT []
 synonym: "thyroid gland ultrasound examination" EXACT []
 synonym: "thyroid gland ultrasound imaging procedure" EXACT []
@@ -10740,6 +10843,8 @@ name: bladder ultrasonography
 def: "The use of ultrasound to produce images of structures in the urinary bladder." []
 synonym: "sonography of urinary bladder" EXACT []
 synonym: "ultrasonography of urinary bladder" EXACT []
+synonym: "urinary bladder diagnostic sonography" EXACT []
+synonym: "urinary bladder medical ultrasound" EXACT []
 synonym: "urinary bladder sonography" EXACT []
 synonym: "urinary bladder ultrasound examination" EXACT []
 synonym: "urinary bladder ultrasound imaging procedure" EXACT []
@@ -10753,6 +10858,8 @@ name: vaginal ultrasonography
 def: "The use of ultrasound to produce images of structures in the vagina." []
 synonym: "sonography of vagina" EXACT []
 synonym: "ultrasonography of vagina" EXACT []
+synonym: "vagina diagnostic sonography" EXACT []
+synonym: "vagina medical ultrasound" EXACT []
 synonym: "vagina sonography" EXACT []
 synonym: "vagina ultrasound examination" EXACT []
 synonym: "vagina ultrasound imaging procedure" EXACT []
@@ -10764,6 +10871,8 @@ created_by: http://orcid.org/0000-0001-7941-3010
 id: MAXO:0010217
 name: renal ultrasonography
 def: "The use of ultrasound to produce images of structures in the kidney." []
+synonym: "kidney diagnostic sonography" EXACT []
+synonym: "kidney medical ultrasound" EXACT []
 synonym: "kidney sonography" EXACT []
 synonym: "kidney ultrasound examination" EXACT []
 synonym: "kidney ultrasound imaging procedure" EXACT []
@@ -10777,6 +10886,8 @@ created_by: http://orcid.org/0000-0001-7941-3010
 id: MAXO:0010218
 name: carotid ultrasonography
 def: "The use of ultrasound to produce images of structures in the carotid artery segment." []
+synonym: "carotid artery segment diagnostic sonography" EXACT []
+synonym: "carotid artery segment medical ultrasound" EXACT []
 synonym: "carotid artery segment sonography" EXACT []
 synonym: "carotid artery segment ultrasound examination" EXACT []
 synonym: "carotid artery segment ultrasound imaging procedure" EXACT []
@@ -10791,6 +10902,8 @@ created_by: http://orcid.org/0000-0001-7941-3010
 id: MAXO:0010219
 name: pelvis ultrasonography
 def: "The use of ultrasound to produce images of structures in the pelvic region of trunk." []
+synonym: "pelvic region of trunk diagnostic sonography" EXACT []
+synonym: "pelvic region of trunk medical ultrasound" EXACT []
 synonym: "pelvic region of trunk sonography" EXACT []
 synonym: "pelvic region of trunk ultrasound examination" EXACT []
 synonym: "pelvic region of trunk ultrasound imaging procedure" EXACT []
@@ -10806,6 +10919,8 @@ created_by: http://orcid.org/0000-0001-7941-3010
 id: MAXO:0010220
 name: prostate ultrasonography
 def: "The use of ultrasound to produce images of structures in the prostate gland." []
+synonym: "prostate gland diagnostic sonography" EXACT []
+synonym: "prostate gland medical ultrasound" EXACT []
 synonym: "prostate gland sonography" EXACT []
 synonym: "prostate gland ultrasound examination" EXACT []
 synonym: "prostate gland ultrasound imaging procedure" EXACT []
@@ -10823,12 +10938,16 @@ def: "The use of ultrasound to produce images of structures in the testis." []
 def: "The use of ultrasound to produce images of structures in the venous blood vessel." []
 synonym: "sonography of testis" EXACT []
 synonym: "sonography of venous blood vessel" EXACT []
+synonym: "testis diagnostic sonography" EXACT []
+synonym: "testis medical ultrasound" EXACT []
 synonym: "testis sonography" EXACT []
 synonym: "testis ultrasound examination" EXACT []
 synonym: "testis ultrasound imaging procedure" EXACT []
 synonym: "testis ultrasound procedure" EXACT []
 synonym: "ultrasonography of testis" EXACT []
 synonym: "ultrasonography of venous blood vessel" EXACT []
+synonym: "venous blood vessel diagnostic sonography" EXACT []
+synonym: "venous blood vessel medical ultrasound" EXACT []
 synonym: "venous blood vessel sonography" EXACT []
 synonym: "venous blood vessel ultrasound examination" EXACT []
 synonym: "venous blood vessel ultrasound imaging procedure" EXACT []
@@ -10841,6 +10960,8 @@ created_by: http://orcid.org/0000-0001-7941-3010
 id: MAXO:0010222
 name: neurosonology
 def: "The use of ultrasound to produce images of structures in the brain." []
+synonym: "brain diagnostic sonography" EXACT []
+synonym: "brain medical ultrasound" EXACT []
 synonym: "brain sonography" EXACT []
 synonym: "brain ultrasound examination" EXACT []
 synonym: "brain ultrasound imaging procedure" EXACT []
@@ -11160,7 +11281,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0010357
 name: lower limb radiographic procedure
-def: "The X-ray examination of the blood vessels or chambers of the heart." []
+def: "The X-ray examination of the lower limbs of the body." []
 synonym: "lower limb radiography" EXACT []
 synonym: "lower limb segment radiogram procedure" EXACT []
 synonym: "lower limb segment X-ray procedure" EXACT []
