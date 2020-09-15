@@ -1,0 +1,76 @@
+pattern_name: avoidance_of_phenotype
+pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_phenotype.yaml
+description: "Medical recommendation to avoid phenotype."
+
+contributors:
+  - https://orcid.org/0000-0001-7941-2961
+  - https://orcid.org/0000-0002-7356-1779
+
+classes:
+  avoidance: MAXO:0001014
+  phenotypic abnormality: HP:0000118
+  medical action avoidance: MAXO:0001014
+  
+relations:
+  avoided_behavior: MAXO:0000521
+  
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym 
+  created_by: oio:created_by
+  date: dc:date
+  comment: rdfs:comment
+  xref: oio:hasDbXref
+ 
+vars:
+  phenotypic_ab: "'phenotypic abnormality'"
+  
+data_vars:
+  date: "'date'"
+  created_by: "'created_by'"
+  comment: "'comment'"
+  xref: "'database_cross_reference'"
+data_list_vars:
+  syns: xsd:string
+
+name:
+  text: "%s avoidance"
+  vars:
+   - phenotypic_ab
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "avoid %s"
+    vars:
+     - phenotypic_ab
+     
+  - annotationProperty: date
+    text: "%s"
+    vars:
+     - date
+
+  - annotationProperty: created_by
+    text: "%s"
+    vars:
+     - created_by
+     
+  - annotationProperty: comment
+    text: "%s"
+    vars:
+     - comment
+    
+  - annotationProperty: xref
+    text: "%s"
+    vars:
+     - xref
+exact_synonym:
+  value: syns
+def:
+  text: "A medical requirement or recommendation of avoiding %s."
+  vars:
+    - phenotypic_ab
+
+equivalentTo:
+  text: "'medical action avoidance' and 'avoided_behavior' some %s"
+  vars:
+    - phenotypic_ab
+   
