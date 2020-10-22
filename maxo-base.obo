@@ -1,13 +1,14 @@
 format-version: 1.2
-data-version: maxo/releases/2020-09-15/maxo-base.owl
+data-version: maxo/releases/2020-10-22/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Aaron Zhang" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "An ontology to represent medically relevant actions, procedures, therapies, interventions, and recommendations." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
-property_value: http://purl.org/dc/elements/1.1/type http://purl.obolibrary.org/obo/IAO_8000001 xsd:string
+property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
+property_value: owl:versionInfo "2020-10-22" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -325,44 +326,39 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000045
-name: dehydration avoidance
-def: "A medical requirement or recommendation of avoiding dehydration." []
-synonym: "avoid dehydration" EXACT []
+name: Dehydration avoidance
+def: "A medical requirement or recommendation of avoiding Dehydration." []
+synonym: "avoid Dehydration" EXACT []
 is_a: MAXO:0000044 ! physiologic state avoidance
 intersection_of: MAXO:0001014 ! medical action avoidance
 intersection_of: MAXO:0000521 HP:0001944 ! avoided behavior
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T19:59:44Z xsd:dateTime
-property_value: http://purl.org/dc/elements/1.1/date 2020-09-15T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000046
-name: hypertension avoidance
-def: "A medical requirement or recommendation of avoiding hypertension." []
-synonym: "avoid hypertension" EXACT []
+name: Hypertension avoidance
+def: "A medical requirement or recommendation of avoiding Hypertension." []
+synonym: "avoid Hypertension" EXACT []
 is_a: MAXO:0000044 ! physiologic state avoidance
 intersection_of: MAXO:0001014 ! medical action avoidance
 intersection_of: MAXO:0000521 HP:0000822 ! avoided behavior
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T19:59:54Z xsd:dateTime
-property_value: http://purl.org/dc/elements/1.1/date 2020-09-15T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000047
-name: obesity avoidance
-def: "A medical requirement or recommendation of avoiding obesity." []
-synonym: "avoid obesity" EXACT []
+name: Obesity avoidance
+def: "A medical requirement or recommendation of avoiding Obesity." []
+synonym: "avoid Obesity" EXACT []
 is_a: MAXO:0000044 ! physiologic state avoidance
 intersection_of: MAXO:0001014 ! medical action avoidance
 intersection_of: MAXO:0000521 HP:0001513 ! avoided behavior
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:01:31Z xsd:dateTime
-property_value: http://purl.org/dc/elements/1.1/date 2020-09-15T11:00:00Z xsd:string
-created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000048
 name: Inflammatory abnormality of the skin avoidance
-name: skin abrasion avoidance
 def: "A medical requirement or recommendation of avoiding Inflammatory abnormality of the skin." []
 synonym: "avoid Inflammatory abnormality of the skin" EXACT []
 synonym: "avoid skin abrasion" EXACT []
@@ -371,8 +367,6 @@ is_a: MAXO:0000044 ! physiologic state avoidance
 intersection_of: MAXO:0001014 ! medical action avoidance
 intersection_of: MAXO:0000521 HP:0011123 ! avoided behavior
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:03:43Z xsd:dateTime
-property_value: http://purl.org/dc/elements/1.1/date 2020-09-15T11:00:00Z xsd:string
-created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000049
@@ -5846,12 +5840,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000548
-name: swab-based biospecimen collection
-def: "A method used to collect biological material from the body." []
-synonym: "swab specimen collection" EXACT []
-is_a: MAXO:0000547 ! clinical biospecimen collection
-property_value: http://purl.org/dc/elements/1.1/date 2020-03-27T16:32:50Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
+name: obsolete swab-based biospecimen collection
+replaced_by: OBI:0002600
 
 [Term]
 id: MAXO:0000549
@@ -7688,6 +7678,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000699
 name: clinical laboratory geneticist evaluation
 def: "An evaluation or consultation by a diplomate certified in Laboratory Genetics and Genomics who directs and interprets both clinical cytogenetic and molecular genetic analyses relevant to the diagnosis and management of human genetic disease. This specialist acts as a consultant in laboratory diagnoses for a broad range of molecular and chromosomal-based disorders, including both inherited and acquired conditions." [abms.org]
+is_a: MAXO:0000665 ! specialty medical professional evaulation
 property_value: http://purl.org/dc/elements/1.1/date 2020-07-02T20:29:00Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9184,9 +9175,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001114
-name: ketosis avoidance
-def: "A medical requirement or recommendation of avoiding ketosis." []
-synonym: "avoid ketosis" EXACT []
+name: Ketosis avoidance
+def: "A medical requirement or recommendation of avoiding Ketosis." []
+synonym: "avoid Ketosis" EXACT []
 intersection_of: MAXO:0001014 ! medical action avoidance
 intersection_of: MAXO:0000521 HP:0001946 ! avoided behavior
 property_value: http://purl.org/dc/elements/1.1/date 2020-09-15T11:00:00Z xsd:string
@@ -9194,10 +9185,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001115
-name: diabetes mellitus avoidance
-def: "A medical requirement or recommendation of avoiding diabetes mellitus." []
+name: Diabetes mellitus avoidance
+def: "A medical requirement or recommendation of avoiding Diabetes mellitus." []
 synonym: "avoid diabetes" EXACT []
-synonym: "avoid diabetes mellitus" EXACT []
+synonym: "avoid Diabetes mellitus" EXACT []
 intersection_of: MAXO:0001014 ! medical action avoidance
 intersection_of: MAXO:0000521 HP:0000819 ! avoided behavior
 property_value: http://purl.org/dc/elements/1.1/date 2020-09-15T11:00:00Z xsd:string
@@ -9205,10 +9196,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001116
-name: fever avoidance
-def: "A medical requirement or recommendation of avoiding fever." []
+name: Fever avoidance
+def: "A medical requirement or recommendation of avoiding Fever." []
 synonym: "avoid febrile state" EXACT []
-synonym: "avoid fever" EXACT []
+synonym: "avoid Fever" EXACT []
 intersection_of: MAXO:0001014 ! medical action avoidance
 intersection_of: MAXO:0000521 HP:0001945 ! avoided behavior
 property_value: http://purl.org/dc/elements/1.1/date 2020-09-15T11:00:00Z xsd:string
@@ -9216,10 +9207,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001117
-name: seizures avoidance
-def: "A medical requirement or recommendation of avoiding seizures." []
+name: Seizure avoidance
+def: "A medical requirement or recommendation of avoiding Seizure." []
 comment: Recommendation to avoid triggers known to cause seizures or take medicine to avoid seizures.
-synonym: "avoid seizures" EXACT []
+synonym: "avoid Seizure" EXACT []
 intersection_of: MAXO:0001014 ! medical action avoidance
 intersection_of: MAXO:0000521 HP:0001250 ! avoided behavior
 property_value: http://purl.org/dc/elements/1.1/date 2020-09-15T11:00:00Z xsd:string
@@ -9227,9 +9218,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001118
-name: hypotension avoidance
-def: "A medical requirement or recommendation of avoiding hypotension." []
-synonym: "avoid hypotension" EXACT []
+name: Hypotension avoidance
+def: "A medical requirement or recommendation of avoiding Hypotension." []
+synonym: "avoid Hypotension" EXACT []
 intersection_of: MAXO:0001014 ! medical action avoidance
 intersection_of: MAXO:0000521 HP:0002615 ! avoided behavior
 property_value: http://purl.org/dc/elements/1.1/date 2020-09-15T11:00:00Z xsd:string
@@ -9237,9 +9228,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001119
-name: hyperglycemia avoidance
-def: "A medical requirement or recommendation of avoiding hyperglycemia." []
-synonym: "avoid hyperglycemia" EXACT []
+name: Hyperglycemia avoidance
+def: "A medical requirement or recommendation of avoiding Hyperglycemia." []
+synonym: "avoid Hyperglycemia" EXACT []
 intersection_of: MAXO:0001014 ! medical action avoidance
 intersection_of: MAXO:0000521 HP:0003074 ! avoided behavior
 property_value: http://purl.org/dc/elements/1.1/date 2020-09-15T11:00:00Z xsd:string
@@ -9247,9 +9238,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001120
-name: weight loss avoidance
-def: "A medical requirement or recommendation of avoiding weight loss." []
-synonym: "avoid weight loss" EXACT []
+name: Weight loss avoidance
+def: "A medical requirement or recommendation of avoiding Weight loss." []
+synonym: "avoid Weight loss" EXACT []
 intersection_of: MAXO:0001014 ! medical action avoidance
 intersection_of: MAXO:0000521 HP:0001824 ! avoided behavior
 property_value: http://purl.org/dc/elements/1.1/date 2020-09-15T11:00:00Z xsd:string
@@ -10467,6 +10458,8 @@ synonym: "branched chain amino acid restriction" EXACT []
 synonym: "branched-chain amino acid consumption avoidance" EXACT []
 synonym: "branched-chain amino acid restricted diet intake" EXACT []
 synonym: "branched-chain amino acid restriction" EXACT []
+synonym: "low BCAA diet intake" EXACT []
+synonym: "low BCAA diet recommendation" EXACT []
 intersection_of: MAXO:0000056 ! nutrition intake avoidance
 intersection_of: MAXO:0001027 CHEBI:22918 ! avoided food
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
@@ -11080,7 +11073,7 @@ created_by: http://orcid.org/0000-0001-7941-3010
 [Term]
 id: MAXO:0010301
 name: rectal swab collection
-def: "Collection biological material from within the rectum. A cotton swab is inserted into the opening and rotated and then withdrawn." []
+def: "Collection biological material from within the rectum with a cotton swab." []
 synonym: "anal swab" EXACT []
 synonym: "swab collection of rectum" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-27T20:39:14Z xsd:string
@@ -11089,7 +11082,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0010302
 name: vaginal swab collection
-def: "Collection biological material from within the vagina. A cotton swab is inserted into the opening and rotated and then withdrawn." []
+def: "Collection biological material from within the vagina with a cotton swab." []
 synonym: "swab collection of vagina" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-27T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -11097,7 +11090,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0010303
 name: buccal swab collection
-def: "Collection biological material from within the buccal mucosa. A cotton swab is inserted into the opening and rotated and then withdrawn." []
+def: "Collection biological material from within the buccal mucosa with a cotton swab." []
 synonym: "oral swab" EXACT []
 synonym: "swab collection of buccal mucosa" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-27T20:39:14Z xsd:string
@@ -11106,7 +11099,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0010304
 name: nasal turbinal swab collection
-def: "Collection biological material from within the nasal turbinal. A cotton swab is inserted into the opening and rotated and then withdrawn." []
+def: "Collection biological material from within the nasal turbinal with a cotton swab." []
 synonym: "swab collection of nasal turbinal" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-27T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2974
@@ -11114,7 +11107,7 @@ created_by: http://orcid.org/0000-0001-7941-2974
 [Term]
 id: MAXO:0010305
 name: nasopharyngeal swab collection
-def: "Collection biological material from within the nasopharynx. A cotton swab is inserted into the opening and rotated and then withdrawn." []
+def: "Collection biological material from within the nasopharynx with a cotton swab." []
 synonym: "swab collection of nasopharynx" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-27T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2978
@@ -11122,7 +11115,7 @@ created_by: http://orcid.org/0000-0001-7941-2978
 [Term]
 id: MAXO:0010306
 name: nasal vestibule swab collection
-def: "Collection biological material from within the nasal vestibule. A cotton swab is inserted into the opening and rotated and then withdrawn." []
+def: "Collection biological material from within the nasal vestibule with a cotton swab." []
 synonym: "swab collection of nasal vestibule" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-27T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2978
@@ -11130,7 +11123,7 @@ created_by: http://orcid.org/0000-0001-7941-2978
 [Term]
 id: MAXO:0010307
 name: skin swab collection
-def: "Collection biological material from within the zone of skin. A cotton swab is inserted into the opening and rotated and then withdrawn." []
+def: "Collection biological material from within the zone of skin with a cotton swab." []
 synonym: "swab collection of zone of skin" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-27T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2978
@@ -11138,7 +11131,7 @@ created_by: http://orcid.org/0000-0001-7941-2978
 [Term]
 id: MAXO:0010308
 name: oropharyngeal swab collection
-def: "Collection biological material from within the oropharynx. A cotton swab is inserted into the opening and rotated and then withdrawn." []
+def: "Collection biological material from within the oropharynx with a cotton swab." []
 synonym: "swab collection of oropharynx" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-27T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2978
@@ -11146,7 +11139,7 @@ created_by: http://orcid.org/0000-0001-7941-2978
 [Term]
 id: MAXO:0010309
 name: anterior nares swab collection
-def: "Collection biological material from within the external naris. A cotton swab is inserted into the opening and rotated and then withdrawn." []
+def: "Collection biological material from within the external naris with a cotton swab." []
 synonym: "anterior naris swab" EXACT []
 synonym: "swab collection of external naris" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-27T20:39:14Z xsd:string
@@ -11155,7 +11148,7 @@ created_by: http://orcid.org/0000-0001-7941-2978
 [Term]
 id: MAXO:0010310
 name: throat swab collection
-def: "Collection biological material from within the throat. A cotton swab is inserted into the opening and rotated and then withdrawn." []
+def: "Collection biological material from within the throat with a cotton swab." []
 synonym: "swab collection of throat" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-27T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2978
@@ -11563,6 +11556,10 @@ synonym: "uncooked cornstarch therapy" EXACT []
 is_a: MAXO:0000106 ! nutritional supplementation
 property_value: http://purl.org/dc/elements/1.1/date 2019-09-05T20:57:49Z xsd:dateTime
 created_by: http://orcid.org/0000-0002-7463-6306
+
+[Term]
+id: OBI:0002600
+is_a: MAXO:0000547 ! clinical biospecimen collection
 
 [Typedef]
 id: MAXO:0000521

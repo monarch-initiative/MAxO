@@ -36,3 +36,6 @@ imports/hp_import.owl: mirror/hp.owl imports/hp_terms_combined.txt tmp/remove.tx
 		remove --term-file tmp/remove.txt --axioms equivalent --preserve-structure false \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: imports/hp_import.owl
+
+reports/maxo-edit.owl-obo-report.tsv: maxo-edit.owl
+	$(ROBOT) report -i $< --fail-on none --print 5 -o $@
