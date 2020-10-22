@@ -18,6 +18,7 @@ Import(<http://purl.obolibrary.org/obo/maxo/imports/go_import.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/imports/hp_import.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/imports/iao_import.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/imports/nbo_import.owl>)
+Import(<http://purl.obolibrary.org/obo/maxo/imports/obi_import.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/imports/ro_import.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/imports/uberon_import.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/patterns/definitions.owl>)
@@ -628,6 +629,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0030011>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0030012>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0030018>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0000661>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0002600>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0000521>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0001015>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0001027>))
@@ -5274,15 +5276,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000547> "clinical biospecimen collection"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000547> <http://purl.obolibrary.org/obo/MAXO_0000006>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000548> (swab-based biospecimen collection)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000548> "A method used to collect biological material from the body.")
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000548> "2020-03-27T16:32:50Z"^^xsd:dateTime)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000548> <http://orcid.org/0000-0001-7941-2961>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000548> "swab specimen collection")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000548> "swab-based biospecimen collection"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000548> <http://purl.obolibrary.org/obo/MAXO_0000547>)
-
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000549> (self body temperature measurement)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000549> "Measuring a person's own body temperature usually at home using any of a number of types of thermometers.")
@@ -7881,6 +7874,10 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0030018> "uncooked cornstarch therapy")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0030018> "uncooked cornstarch supplementation"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0030018> <http://purl.obolibrary.org/obo/MAXO_0000106>)
+
+# Class: <http://purl.obolibrary.org/obo/OBI_0002600> (collecting specimen with swab)
+
+SubClassOf(<http://purl.obolibrary.org/obo/OBI_0002600> <http://purl.obolibrary.org/obo/MAXO_0000547>)
 
 
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0001028> "2019-07-12T14:23:27Z"^^xsd:dateTime)
