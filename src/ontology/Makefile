@@ -1,7 +1,7 @@
 # ----------------------------------------
 # Makefile for maxo
 # Generated using ontology-starter-kit
-# ODK Version: v1.2.22
+# ODK Version: v1.2.23
 # ----------------------------------------
 # <do not edit above this line>
 
@@ -25,7 +25,7 @@ REPORT_FAIL_ON =            ERROR
 OBO_FORMAT_OPTIONS =        
 SPARQL_VALIDATION_CHECKS =  equivalent-classes trailing-whitespace owldef-self-reference xref-syntax nolabels
 SPARQL_EXPORTS =            basic-report class-count-by-prefix edges xrefs obsoletes synonyms
-ODK_VERSION_MAKEFILE =      v1.2.22
+ODK_VERSION_MAKEFILE =      v1.2.23
 
 TODAY ?= $(shell date +%Y-%m-%d)
 OBODATE ?= $(shell date +'%d:%m:%Y %H:%M')
