@@ -11,7 +11,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/maxo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2020-10-26/maxo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2020-11-13/maxo-base.owl"/>
         <dc:creator>Aaron Zhang</dc:creator>
         <dc:creator>Leigh Carmody</dc:creator>
         <dc:creator>Peter Robinson</dc:creator>
@@ -19,7 +19,7 @@
         <dc:title>Medical Action Ontology</dc:title>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-10-26</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-11-13</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1726,8 +1726,8 @@
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C18020</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>OGMS:0000104</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>diagnostic technique</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>diagnostic test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>diagnostic technique procedure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>diagnostic testing</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">diagnostic procedure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1801,10 +1801,10 @@
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-16T20:11:26Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C25294</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>clinical lab tests</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>clinical laboratory tests</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>clinical test</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>lab test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>clinical lab testing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>clinical laboratory testing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>clinical testing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>lab testing</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">clinical laboratory procedure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -2708,10 +2708,12 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000074">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000075"/>
+        <obo:IAO_0000115>A procedure to measure pancreatic secretion to discriminate between pancreatic and nonpancreatic causes of malabsorption.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-15T19:35:19Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C97101</oboInOwl:hasDbXref>
-        <rdfs:label xml:lang="en">pancreatic function test</rdfs:label>
+        <oboInOwl:hasExactSynonym>pancreatic function assessment</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">pancreatic function testing</rdfs:label>
     </owl:Class>
     
 
@@ -2722,7 +2724,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000003"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-15T19:35:36Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <rdfs:label xml:lang="en">digestive system test</rdfs:label>
+        <rdfs:label xml:lang="en">digestive system testing</rdfs:label>
     </owl:Class>
     
 
@@ -2736,7 +2738,8 @@
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C74954</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>LFT</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">liver function test</rdfs:label>
+        <oboInOwl:hasExactSynonym>liver function assessment</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">liver function testing</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000076"/>
@@ -3607,7 +3610,6 @@
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-20T00:51:25Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>pregnancy related screening</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>pregnancy related screening test</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">prenatal screening</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3828,19 +3830,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000140">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000006"/>
-        <obo:IAO_0000115>A diagnostic test utilized to examine and define cellular anatomy or function. The test results are often used by a clinician to diagnose disease or disordered function.</obo:IAO_0000115>
+        <obo:IAO_0000115>A  procedure to examine and define cellular anatomy or function. The test results are often used by a clinician to diagnose disease or disordered function.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-21T20:36:01Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C49132</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>clinical cytological procedure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>diagnostic cytological procedure</oboInOwl:hasNarrowSynonym>
-        <rdfs:label xml:lang="en">clinical cytological test</rdfs:label>
+        <rdfs:label xml:lang="en">clinical cytological testing</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000140"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A diagnostic test utilized to examine and define cellular anatomy or function. The test results are often used by a clinician to diagnose disease or disordered function.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCIT:C49132</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -3853,8 +3850,8 @@
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>Papanicolaou smear procedure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>cervical smear procedure</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>pap test</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">pap smear</rdfs:label>
+        <oboInOwl:hasExactSynonym>pap testing</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">pap smear examination</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000141"/>
@@ -3877,7 +3874,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000141"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>pap test</owl:annotatedTarget>
+        <owl:annotatedTarget>pap testing</owl:annotatedTarget>
         <oboInOwl:hasDbXref>NCIT:C17348</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -3891,7 +3888,10 @@
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-21T20:45:16Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C16192</oboInOwl:hasDbXref>
-        <rdfs:label xml:lang="en">sputum cytology</rdfs:label>
+        <oboInOwl:hasExactSynonym>sputum cytology testing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>sputum smear examination</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>sputum smear testing</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">sputum cytology examination</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000142"/>
@@ -3909,7 +3909,8 @@
         <obo:IAO_0000115>Examination of the cells in urine.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-21T20:47:27Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <rdfs:label xml:lang="en">urine cytology</rdfs:label>
+        <oboInOwl:hasExactSynonym>urine cytology testing</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">urine cytology examination</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000143"/>
@@ -3928,7 +3929,7 @@
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-21T21:04:01Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C16680</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>histological test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>histological testing</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">histological procedure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3976,18 +3977,13 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000147">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000006"/>
-        <obo:IAO_0000115>A laboratory test to measure hematopoietic components and investigate hematologic disorders in a blood sample.</obo:IAO_0000115>
+        <obo:IAO_0000115>A lprocedure to measure hematopoietic components and investigate hematologic disorders in a blood sample.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-21T21:22:45Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C49286</oboInOwl:hasDbXref>
-        <rdfs:label xml:lang="en">hematology test</rdfs:label>
+        <oboInOwl:hasExactSynonym>hematology procedure</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">hematology testing</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000147"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A laboratory test to measure hematopoietic components and investigate hematologic disorders in a blood sample.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCIT:C49286</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -3999,10 +3995,10 @@
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-21T21:29:03Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C96614</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>OXYCAP</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>OXYCAP testing</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>oxygen capacity measurement</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>oxygen capacity test</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">oxygen capacity measurement test</rdfs:label>
+        <oboInOwl:hasExactSynonym>oxygen capacity testing</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">oxygen capacity assessment</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000148"/>
@@ -4013,7 +4009,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000148"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>OXYCAP</owl:annotatedTarget>
+        <owl:annotatedTarget>OXYCAP testing</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION"/>
     </owl:Axiom>
     
@@ -4027,12 +4023,14 @@
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-21T21:32:32Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C64796</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>EVF</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>EVF testing</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>HCT</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>PCV</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>erythrocyte volume fraction</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>packed cell volume</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">hematocrit measurement test</rdfs:label>
+        <oboInOwl:hasExactSynonym>PCV measurement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>erythrocyte volume fraction testing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>hematocrit measurement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>hematocrit testing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>packed cell volume measurement</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">hematocrit assessment</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000149"/>
@@ -4043,7 +4041,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000149"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>EVF</owl:annotatedTarget>
+        <owl:annotatedTarget>EVF testing</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -4055,19 +4053,13 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000149"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>PCV</owl:annotatedTarget>
+        <owl:annotatedTarget>PCV measurement</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION"/>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000149"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>erythrocyte volume fraction</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCIT:C64796</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000149"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>packed cell volume</owl:annotatedTarget>
+        <owl:annotatedTarget>packed cell volume measurement</owl:annotatedTarget>
         <oboInOwl:hasDbXref>NCIT:C64796</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -9521,7 +9513,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the larynx.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2962</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">larynx biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of larynx</rdfs:label>
     </owl:Class>
@@ -9549,7 +9541,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the limb.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2963</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">limb biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of limb</rdfs:label>
     </owl:Class>
@@ -9577,7 +9569,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the lip.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2964</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lip biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of lip</rdfs:label>
     </owl:Class>
@@ -9605,7 +9597,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the liver.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2965</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">liver biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of liver</rdfs:label>
     </owl:Class>
@@ -9633,7 +9625,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the lower respiratory tract.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2966</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lower respiratory tract biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of lower respiratory tract</rdfs:label>
     </owl:Class>
@@ -9661,7 +9653,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the lower urinary tract.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2967</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lower urinary tract biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of lower urinary tract</rdfs:label>
     </owl:Class>
@@ -9689,7 +9681,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the lumbar region of vertebral column.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2968</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lumbar region of vertebral column biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of lumbar region of vertebral column</rdfs:label>
     </owl:Class>
@@ -9717,7 +9709,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the lung.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2969</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lung biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of lung</rdfs:label>
     </owl:Class>
@@ -9745,7 +9737,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the lymph node.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2970</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lymph node biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of lymph node</rdfs:label>
     </owl:Class>
@@ -9773,7 +9765,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the lymphatic part of lymphoid system.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2971</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lymphatic part of lymphoid system biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of lymphatic part of lymphoid system</rdfs:label>
     </owl:Class>
@@ -9801,7 +9793,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the mammalian vulva.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2972</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mammalian vulva biopsy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vulva biopsy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vulval biopsy</oboInOwl:hasExactSynonym>
@@ -9831,7 +9823,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the medulla oblongata.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2973</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medulla oblongata biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of medulla oblongata</rdfs:label>
     </owl:Class>
@@ -9859,7 +9851,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the mouth.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2974</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mouth biopsy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">muscle biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of mouth</rdfs:label>
@@ -9888,7 +9880,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the muscle organ.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2975</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">muscle organ biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of muscle</rdfs:label>
     </owl:Class>
@@ -9916,7 +9908,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the muscle tissue.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2976</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">muscle tissue biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of muscle tissue</rdfs:label>
     </owl:Class>
@@ -9944,7 +9936,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the nasolacrimal duct.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2977</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nasolacrimal duct biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of nasolacrimal duct</rdfs:label>
     </owl:Class>
@@ -9972,7 +9964,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the nasopharynx.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2978</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nasopharynx biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of nasopharynx</rdfs:label>
     </owl:Class>
@@ -10000,7 +9992,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the neck.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2979</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neck biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of neck</rdfs:label>
     </owl:Class>
@@ -10028,7 +10020,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the ovary.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2980</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ovary biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of ovary</rdfs:label>
     </owl:Class>
@@ -10056,7 +10048,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the pancreas.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2981</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pancreas biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of pancreas</rdfs:label>
     </owl:Class>
@@ -10084,7 +10076,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the penis.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2982</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">penis biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of penis</rdfs:label>
     </owl:Class>
@@ -10112,7 +10104,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the perianal skin.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2983</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">perianal skin biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of perianal skin</rdfs:label>
     </owl:Class>
@@ -10140,7 +10132,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the peritoneum.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2984</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peritoneum biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of peritoneum</rdfs:label>
     </owl:Class>
@@ -10168,7 +10160,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the pituitary gland.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2985</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pituitary gland biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of pituitary gland</rdfs:label>
     </owl:Class>
@@ -10196,7 +10188,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the pleura.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2986</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pleura biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of pleura</rdfs:label>
     </owl:Class>
@@ -10224,7 +10216,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the rectum.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2987</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rectum biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of rectum</rdfs:label>
     </owl:Class>
@@ -10252,7 +10244,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the retina.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2988</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">retina biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of retina</rdfs:label>
     </owl:Class>
@@ -10280,7 +10272,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the saliva-secreting gland.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2989</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">saliva-secreting gland biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of saliva-secreting gland</rdfs:label>
     </owl:Class>
@@ -10308,7 +10300,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the scrotum.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2990</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scrotum biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of scrotum</rdfs:label>
     </owl:Class>
@@ -10336,7 +10328,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the sebaceous gland.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2991</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sebaceous gland biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of sebaceous gland</rdfs:label>
     </owl:Class>
@@ -10364,7 +10356,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the small intestine.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2992</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">small intestine biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of small intestine</rdfs:label>
     </owl:Class>
@@ -10392,7 +10384,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the spinal cord.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2993</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spinal cord biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of spinal cord</rdfs:label>
     </owl:Class>
@@ -10420,7 +10412,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the spleen.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2994</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spleen biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of spleen</rdfs:label>
     </owl:Class>
@@ -10448,7 +10440,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the stomach.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2995</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stomach biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of stomach</rdfs:label>
     </owl:Class>
@@ -10476,7 +10468,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the subglottis.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2996</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subglottis biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of subglottis</rdfs:label>
     </owl:Class>
@@ -10504,7 +10496,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the submandibular gland.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2997</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">submandibular gland biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of submandibular gland</rdfs:label>
     </owl:Class>
@@ -10532,7 +10524,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the testis.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2998</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testis biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of testis</rdfs:label>
     </owl:Class>
@@ -10560,7 +10552,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the thymus.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2999</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thymus biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of thymus</rdfs:label>
     </owl:Class>
@@ -10588,7 +10580,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the thyroid gland.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-3000</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thyroid gland biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of thyroid gland</rdfs:label>
     </owl:Class>
@@ -10616,7 +10608,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the tongue.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-3001</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tongue biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of tongue</rdfs:label>
     </owl:Class>
@@ -10644,7 +10636,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the tonsil.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-3002</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tonsil biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of tonsil</rdfs:label>
     </owl:Class>
@@ -10672,7 +10664,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the trachea.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-3003</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">trachea biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of trachea</rdfs:label>
     </owl:Class>
@@ -10700,7 +10692,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the upper digestive tract.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-3004</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">upper digestive tract biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of upper digestive tract</rdfs:label>
     </owl:Class>
@@ -10728,7 +10720,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the upper respiratory tract.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-3005</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">upper respiratory tract biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of upper respiratory tract</rdfs:label>
     </owl:Class>
@@ -10756,7 +10748,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the ureter.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-3006</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ureter biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of ureter</rdfs:label>
     </owl:Class>
@@ -10784,7 +10776,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the urethra.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-3007</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urethra biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of urethra</rdfs:label>
     </owl:Class>
@@ -10812,7 +10804,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the urinary bladder.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-3008</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urinary bladder biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of urinary bladder</rdfs:label>
     </owl:Class>
@@ -10840,7 +10832,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the uterine cervix.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-3009</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uterine cervix biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of uterine cervix</rdfs:label>
     </owl:Class>
@@ -10868,7 +10860,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the vagina.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-3010</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vagina biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of vagina</rdfs:label>
     </owl:Class>
@@ -10896,7 +10888,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the vermiform appendix.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-3011</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vermiform appendix biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of vermiform appendix</rdfs:label>
     </owl:Class>
@@ -10924,7 +10916,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the zone of skin.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-3012</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skin biopsy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zone of skin biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of skin</rdfs:label>
@@ -10992,7 +10984,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magnetic resonance imaging of the head.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical examination performed using of magnetic resonance imaging to image the head.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nuclear magnetic resonance imaging of the head</oboInOwl:hasExactSynonym>
@@ -11022,7 +11014,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magnetic resonance imaging of the abdomen.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical examination performed using of magnetic resonance imaging to image the abdomen.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nuclear magnetic resonance imaging of the abdomen</oboInOwl:hasExactSynonym>
@@ -11052,7 +11044,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magnetic resonance imaging of the brain.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical examination performed using of magnetic resonance imaging to image the brain.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nuclear magnetic resonance imaging of the brain</oboInOwl:hasExactSynonym>
@@ -11082,7 +11074,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magnetic resonance imaging of the chest.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical examination performed using of magnetic resonance imaging to image the chest.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nuclear magnetic resonance imaging of the chest</oboInOwl:hasExactSynonym>
@@ -11172,7 +11164,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magnetic resonance imaging of the breast.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical examination performed using of magnetic resonance imaging to image the breast.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-05-19T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nuclear magnetic resonance imaging of the breast</oboInOwl:hasExactSynonym>
@@ -12378,6 +12370,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C49672</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>VSTEST</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>vital signs assessment</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">vital signs measurement</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -12405,6 +12398,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>CMO:0000002</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCIT:C49677</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>HR measurement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>heart rate assessment</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">heart rate measurement</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -13200,25 +13194,43 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000536 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000536">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0007106"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000529"/>
-        <obo:IAO_0000115>The biopsy of placental tissue containing the chorionic villi from the maternal uterus in early pregnancy to diagnose fetal genetic defects.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A prenatal test in which a sample of chorionic villi is removed from the placenta for testing. The sample can be taken through the cervix (transcervical) or the abdominal wall (transabdominal). Mayo Clinic</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-19T19:51:26Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C92755</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>CVS</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">chorionic villus sampling</rdfs:label>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chorionic villus biopsy</oboInOwl:hasExactSynonym>
+        <rdfs:comment>The biopsy of placental tissue containing the chorionic villi from the maternal uterus in early pregnancy to diagnose fetal genetic defects.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chorionic villus sampling</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000536"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The biopsy of placental tissue containing the chorionic villi from the maternal uterus in early pregnancy to diagnose fetal genetic defects.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCIT:C92755</oboInOwl:hasDbXref>
-    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000536"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>CVS</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000536"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>The biopsy of placental tissue containing the chorionic villi from the maternal uterus in early pregnancy to diagnose fetal genetic defects.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C92755</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13227,23 +13239,17 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000537">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000128"/>
-        <obo:IAO_0000115>A test done during pregnancy for the presence of Gardnerella vaginalis, Ureaplasma urealyticum, Mycoplasma hominis, Mobiluncus, Prevotella and anaerobic bacteria.</obo:IAO_0000115>
+        <obo:IAO_0000115>A procedure conducted during pregnancy for the presence of Gardnerella vaginalis, Ureaplasma urealyticum, Mycoplasma hominis, Mobiluncus, Prevotella and anaerobic bacteria.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-19T20:17:55Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C92740</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>BV test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>BV testing</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">bacterial vaginosis screening</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000537"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A test done during pregnancy for the presence of Gardnerella vaginalis, Ureaplasma urealyticum, Mycoplasma hominis, Mobiluncus, Prevotella and anaerobic bacteria.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCIT:C92740</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000537"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>BV test</owl:annotatedTarget>
+        <owl:annotatedTarget>BV testing</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION"/>
     </owl:Axiom>
     
@@ -13258,8 +13264,9 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C92786</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>FBNCTFT</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>fFN test</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">fetal fibronectin test</rdfs:label>
+        <oboInOwl:hasExactSynonym>fFN testing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>fetal fibronectin assessment</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">fetal fibronectin testing</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000538"/>
@@ -13276,7 +13283,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000538"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>fFN test</owl:annotatedTarget>
+        <owl:annotatedTarget>fFN testing</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION"/>
     </owl:Axiom>
     
@@ -13320,9 +13327,9 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-19T21:03:16Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C92837</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>NT test</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>nuchal translucency ultrasound screen</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">nuchal translucency screen</rdfs:label>
+        <oboInOwl:hasExactSynonym>NT testing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>nuchal translucency ultrasound screening</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">nuchal translucency screening</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000540"/>
@@ -13333,7 +13340,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000540"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>NT test</owl:annotatedTarget>
+        <owl:annotatedTarget>NT testing</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION"/>
     </owl:Axiom>
     
@@ -13347,8 +13354,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-19T21:11:02Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C92865</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>quadruple marker test</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">quad test</rdfs:label>
+        <oboInOwl:hasExactSynonym>quadruple marker testing</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">quad test assessment</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000541"/>
@@ -13491,8 +13498,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>A characteristic that can be objectively measured and serves as an indicator for the inflammatory response.  It could be used to indicate the normal inflammatory processes, pathogenic processes, state of health or disease, the risk for disease development and/or prognosis, or responsiveness to a particular therapeutic intervention.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-29T18:32:41Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasExactSynonym>inflammatory marker assessment</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">inflammatory biomarker measurement</rdfs:label>
+        <oboInOwl:hasExactSynonym>inflammatory biomarker measurement</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">inflammatory biomarker assessment</rdfs:label>
     </owl:Class>
     
 
@@ -13569,9 +13576,10 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>A chemokine that can be objectively measured and serves as an indicator for the inflammatory response.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-30T15:51:58Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>cytokine biomarker measurement</oboInOwl:hasExactSynonym>
         <rdfs:comment>Cytokines are small, nonstructural proteins, including interleukins, chemokines, interferons, and tumor necrosis factors, which have a multitude of pleiotropic effects in various organs [1]. They are released in a number of paracrine, autocrine, or endocrine pathways and have been implicated in a variety of infections and immune system-affecting disorders by both proinflammatory and anti-inflammatory mechanisms.</rdfs:comment>
         <rdfs:comment>Macrophages and T lymphocytes (T-cells) are the primary producers of cytokines which may have predominantly pro-inflammatory (inflammation-promoting)(IL-1alpha, IL-1beta, IL-2, IL-6, Il-8, IL-12, TNF-alpha, IFN-gamma) or anti-inflammatory (inflammation-suppressive)(IL-4, IL-5, IL-10, TGF-beta) abilities.</rdfs:comment>
-        <rdfs:label xml:lang="en">cytokine biomarker measurement</rdfs:label>
+        <rdfs:label xml:lang="en">cytokine biomarker assessment</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000553"/>
@@ -13609,7 +13617,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-30T16:05:46Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>IL-1 alpha assessment</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>IL-1 alpha test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>IL-1 alpha testing</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">interleukin-1 alpha biomarker measurement</rdfs:label>
     </owl:Class>
     
@@ -13623,7 +13631,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-30T16:08:32Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>IL-2 level assessment</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>IL-2 test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>IL-2 testing</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">interleukin-2 biomarker measurement</rdfs:label>
     </owl:Class>
     
@@ -13637,7 +13645,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-30T16:09:36Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>IL-8 level assessment</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>IL-8 test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>IL-8 testing</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">interleukin-8 biomarker measurement</rdfs:label>
     </owl:Class>
     
@@ -13651,7 +13659,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-30T16:24:01Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>IL-12 assessment</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>IL-12 level test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>IL-12 level testing</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">interleukin-12 biomarker measurement</rdfs:label>
     </owl:Class>
     
@@ -13665,7 +13673,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>Detection of TNF-alpha levels, a cytokine involved in systemic inflamation.</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>TNF-alpha assessment</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>TNF-alpha level test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>TNF-alpha level testing</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">tumor necrosis factor-alpha biomarker measurement</rdfs:label>
     </owl:Class>
     
@@ -13679,7 +13687,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-30T16:31:18Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>INF-gamma assessment</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>INF-gamma levels test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>INF-gamma levels testing</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">interferon-gamma biomarker measurement</rdfs:label>
     </owl:Class>
     
@@ -13693,7 +13701,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-30T18:59:24Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>IL-4 measurement</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>IL-4 test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>IL-4 testing</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>IL4 assessment</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">interleukin-4 biomarker measurement</rdfs:label>
     </owl:Class>
@@ -13708,7 +13716,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-30T19:04:15Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>IL-5 measurement</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>IL-5 test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>IL-5 testing</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>IL5 assessment</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">interleukin-5 biomarker measurement</rdfs:label>
     </owl:Class>
@@ -13723,7 +13731,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-30T19:05:58Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>IL-10 measurement</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>IL-10 test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>IL-10 testing</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>IL10 assessment</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">Interleukin-10 biomarker measurement</rdfs:label>
     </owl:Class>
@@ -13738,7 +13746,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-30T19:07:19Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>TNF-beta measurement</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>TNF-beta test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>TNF-beta testing</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>TNFbeta assessment</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">tumor necrosis factor-beta biomarker measurement</rdfs:label>
     </owl:Class>
@@ -13753,7 +13761,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-30T19:37:28Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>SAA biomarker measurement</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">serum amyloid A biomarker measurement</rdfs:label>
+        <oboInOwl:hasExactSynonym>cytokine biomarker measurement</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">serum amyloid A biomarker assessment</rdfs:label>
     </owl:Class>
     
 
@@ -13762,12 +13771,14 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000566">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000006"/>
-        <obo:IAO_0000115>A clinical laboratory test designed for the quantification of an organic or inorganic chemical within a biological specimen required for diagnostics or monitoring of treatments.</obo:IAO_0000115>
+        <obo:IAO_0000115>A clinical laboratory procedure designed for the quantification of an organic or inorganic chemical within a biological specimen required for diagnostics or monitoring of treatments.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-30T19:49:21Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C49237</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>clincal chemistry test</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">clinical chemistry measurements</rdfs:label>
+        <oboInOwl:hasExactSynonym>clinical chemistry measurement testing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>clinical chemistry testing</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">clinical chemistry assessment</rdfs:label>
     </owl:Class>
     
 
@@ -13780,10 +13791,10 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-30T19:58:59Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C92744</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>blood glucose assessment</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>blood glucose test</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>blood surgar test</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">blood glucose measurement</rdfs:label>
+        <oboInOwl:hasExactSynonym>blood glucose measurement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>blood glucose testing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>blood surgar testing</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">blood glucose assessment</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000567"/>
@@ -13802,8 +13813,9 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-30T20:02:19Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C41376</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>plasma glucose measurement</oboInOwl:hasExactSynonym>
         <rdfs:comment>Glucose Plasma Concentration (GPC) measurement is an essential diagnostic modality for different types of carbohydrate metabolism derangements including diabetes mellitus. The disordered carbohydrate metabolism that underlies diabetes manifests as hyperglycemia. Plasma glucose concentrations in healthy individuals vary with age. Normal fasting plasma glucose intervals (in the morning after an overnight fast) in children are 3.3 - 5.6 mmol/L (60-100 mg/dL); adult range - 4.1- 5.9 mmol/L (74-106 mg/dL). GPCs are approximately 11% higher than whole blood if the hematocrit is normal. Glucose concentrations in heparinized plasma are reported to be 5% lower than in serum.</rdfs:comment>
-        <rdfs:label xml:lang="en">plasma glucose measurement</rdfs:label>
+        <rdfs:label xml:lang="en">plasma glucose assessment</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000568"/>
@@ -13823,9 +13835,9 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C80400</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>FBS measurement</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>fasting blood sugar measurement test</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>gasting blood glucose assessment</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">fasting blood glucose measurement</rdfs:label>
+        <oboInOwl:hasExactSynonym>fasting blood glucose measurement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>fasting blood sugar measurement testing</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">fasting blood glucose assessment</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000569"/>
@@ -14009,10 +14021,11 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-31T19:11:20Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C71252</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>blood gas measurement testing</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>blood gas test</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>arterial blood gas measurement</oboInOwl:hasNarrowSynonym>
         <rdfs:comment>pH and blood gas measurements are used to detect and monitor ventilation, oxygenation, and acid-base disturbances.</rdfs:comment>
-        <rdfs:label xml:lang="en">blood gas measurement</rdfs:label>
+        <rdfs:label xml:lang="en">blood gas assessment</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000579"/>
@@ -14031,7 +14044,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-31T19:16:41Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C74685</oboInOwl:hasDbXref>
-        <rdfs:label xml:lang="en">anion gap measurement</rdfs:label>
+        <oboInOwl:hasExactSynonym>anion gap measurement testing</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">anion gap assessment</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000580"/>
@@ -14050,7 +14064,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-31T19:19:43Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C64488</oboInOwl:hasDbXref>
-        <rdfs:label xml:lang="en">calcium measurement</rdfs:label>
+        <oboInOwl:hasExactSynonym>calcium measurement</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">calcium assessment</rdfs:label>
     </owl:Class>
     
 
@@ -14063,7 +14078,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-31T19:32:42Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C74946</oboInOwl:hasDbXref>
-        <rdfs:label xml:lang="en">electrolyte measurement</rdfs:label>
+        <oboInOwl:hasExactSynonym>electrolyte measurement</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">electrolyte assessment</rdfs:label>
     </owl:Class>
     
 
@@ -14075,8 +14091,9 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>A quantitative measurement of the amount of an electrolyte present in serum.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-31T19:33:45Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasExactSynonym>electrolytes- serum test</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">serum electrolyte measurement</rdfs:label>
+        <oboInOwl:hasExactSynonym>electrolytes- serum testing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>serum electrolyte measurement</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">serum electrolyte assessment</rdfs:label>
     </owl:Class>
     
 
@@ -14088,8 +14105,9 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>A quantitative measurement of the amount of an electrolyte present in urine.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-31T19:34:22Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasExactSynonym>electrolytes- urine test</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">urine eletrolyte measurement</rdfs:label>
+        <oboInOwl:hasExactSynonym>electrolytes- urine testing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>urine eletrolyte measurement</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">urine eletrolyte assessment</rdfs:label>
     </owl:Class>
     
 
@@ -14158,8 +14176,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-02T20:59:07Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>NAT</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>nucleic acid test</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">clinical nucleic acid test</rdfs:label>
+        <oboInOwl:hasExactSynonym>nucleic acid testing</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">clinical nucleic acid testing</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000588"/>
@@ -14174,13 +14192,14 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000589">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000588"/>
-        <obo:IAO_0000115>A nucleic acid test that uses an amplification method to detect the pathogen.  Some amplification methods include polymerase chain reaction (PCR), strand displacement assay (SDA), or transcription mediated assay (TMA).</obo:IAO_0000115>
+        <obo:IAO_0000115>A  tecnique that uses an amplification of nucleic acids  to detect a pathogen.  Some amplification methods include polymerase chain reaction (PCR), strand displacement assay (SDA), or transcription mediated assay (TMA) to detect a virus, bacteria or other pathogen.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-02T21:17:28Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C20055</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>NAAT</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>nucleic acid amplification procedure</oboInOwl:hasExactSynonym>
         <rdfs:comment>Any of various amplification and detection strategies applied to detection of virus contamination in donor blood. Specifically designed to detect recently infected individuals during the latency period before seroconversion.</rdfs:comment>
-        <rdfs:label xml:lang="en">nucleic acid amplification test</rdfs:label>
+        <rdfs:label xml:lang="en">nucleic acid amplification testing</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000589"/>
@@ -14205,7 +14224,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-02T21:43:07Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C102661</oboInOwl:hasDbXref>
-        <rdfs:label xml:lang="en">loop-mediated isothermal amplification test</rdfs:label>
+        <oboInOwl:hasExactSynonym>loop-mediated isothermal amplification procedure</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">loop-mediated isothermal amplification testing</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000590"/>
@@ -14223,9 +14243,11 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>A technique that detects a particular DNA sequence in order to identify a pathogen (organism or virus) in blood, tissue, urine, or other bodily fluids.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-03T00:29:00Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasExactSynonym>DNA detection test</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>DNA detection kit</oboInOwl:hasNarrowSynonym>
-        <rdfs:label xml:lang="en">clinical DNA detection test</rdfs:label>
+        <oboInOwl:hasExactSynonym>DNA detection examination</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>DNA detection procedure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>DNA detection testing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>DNA detection kit testing</oboInOwl:hasNarrowSynonym>
+        <rdfs:label xml:lang="en">clinical DNA detection testing</rdfs:label>
     </owl:Class>
     
 
@@ -14237,9 +14259,11 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>A technique that detects a particular RNA sequence in order to identify a pathogen (organism or virus) in blood, tissue, urine, or other bodily fluids.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-03T00:30:09Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasExactSynonym>RNA detection test</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>RNA detection kit</oboInOwl:hasNarrowSynonym>
-        <rdfs:label xml:lang="en">clinical RNA detection test</rdfs:label>
+        <oboInOwl:hasExactSynonym>RNA detection examination</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>RNA detection procedure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>RNA detection testing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>RNA detection kit testing</oboInOwl:hasNarrowSynonym>
+        <rdfs:label xml:lang="en">clinical RNA detection testing</rdfs:label>
     </owl:Class>
     
 
@@ -14253,10 +14277,10 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C51962</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>OBI:0000893</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>clinical qPCR test</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>clinical real-time RT-PCR</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>real-time PCR for clinical use</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">clinical real-time PCR test</rdfs:label>
+        <oboInOwl:hasExactSynonym>clinical qPCR testing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>clinical real-time RT-PCR procedure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>real-time PCR procedure for clinical use</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">clinical real-time PCR testing</rdfs:label>
     </owl:Class>
     
 
@@ -14270,8 +14294,10 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C28408</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>OBI:0000911</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>clinical quantitative RT-PCR test</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">clinical quantitative reverse transcription PCR test</rdfs:label>
+        <oboInOwl:hasExactSynonym>clinical quantitative RT-PCR procedure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>clinical quantitative RT-PCR testing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>clinical quantitative reverse transcription PCR procedure</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">clinical quantitative reverse transcription PCR testing</rdfs:label>
     </owl:Class>
     
 
@@ -14450,7 +14476,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-07T20:40:24Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C74971</oboInOwl:hasDbXref>
-        <rdfs:label xml:lang="en">endocrine test</rdfs:label>
+        <rdfs:label xml:lang="en">endocrine testing</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000604"/>
@@ -14469,8 +14495,9 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-07T20:51:38Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C64430</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>protein measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>enzyme measurement</oboInOwl:hasNarrowSynonym>
-        <rdfs:label xml:lang="en">protein measurement</rdfs:label>
+        <rdfs:label xml:lang="en">protein assessment</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
@@ -14490,10 +14517,10 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C103430</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>procalcitonin level measurement</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>procalcitonin level test</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>procalcitonin test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>procalcitonin level testing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>procalcitonin testing</oboInOwl:hasExactSynonym>
         <rdfs:comment>A substance produced in response to bacterial infections and tissue injury.</rdfs:comment>
-        <rdfs:label xml:lang="en">procalcitonin measurement</rdfs:label>
+        <rdfs:label xml:lang="en">procalcitonin assessment</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000606"/>
@@ -14512,10 +14539,11 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-07T21:37:45Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C82621</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>D dimer level test</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>fibrin degradation fragment test</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>fragment D-dimer test</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">D-dimer measurement</rdfs:label>
+        <oboInOwl:hasExactSynonym>D dimer level testing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>D-dimer measurement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>fibrin degradation fragment testing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>fragment D-dimer testing</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">D-dimer assessment</rdfs:label>
     </owl:Class>
     
 
@@ -14528,8 +14556,9 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-07T21:53:04Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C61028</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>serum phosphate measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>serum phosphorus measurement</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">serum phosphate measurement</rdfs:label>
+        <rdfs:label xml:lang="en">serum phosphate assessment</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000608"/>
@@ -14548,8 +14577,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>Testing blood serum for the presence of specifc antibody or antibodies to a specific antigen.  Often used when an infection is suspected.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-08T14:34:24Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasExactSynonym>serology assay</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">serology test</rdfs:label>
+        <oboInOwl:hasRelatedSynonym>serology assay</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">serology testing</rdfs:label>
     </owl:Class>
     
 
@@ -14563,9 +14592,9 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C16553</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>OBI:0000661</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>enzyme linked immunosorbent assay</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>enzyme linked immunosorbent assay testing</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>enzyme-linked immunosorbent assay</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">ELISA</rdfs:label>
+        <rdfs:label xml:lang="en">clinical ELISA testing</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000610"/>
@@ -14583,8 +14612,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>A type of lateral flow assay that qualitatively detecst IgG and IgM antibodies of an infectious disease within human serum, plasma or whole blood in vitro.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-08T15:03:41Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasExactSynonym>rapid IgM-IgG test</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">rapid IgM-IgG combined antibody test</rdfs:label>
+        <oboInOwl:hasExactSynonym>rapid IgM-IgG testing</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">rapid IgM-IgG combined antibody testing</rdfs:label>
     </owl:Class>
     
 
@@ -14593,24 +14622,24 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000612">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000613"/>
-        <obo:IAO_0000115>The lateral flow assay (LFA) is a paper-based platform for the detection and quantification of analytes in complex mixtures, where the sample is placed on a test device.</obo:IAO_0000115>
+        <obo:IAO_0000115>A procedure using a paper-based platform for the detection and quantification of analytes in complex mixtures, where the sample is placed on a test device for clinical use.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-08T15:06:47Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasExactSynonym>LFA</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>LFA testing</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>lateral flow immuno assay</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>lateral flow immunoassay</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">lateral flow assays</rdfs:label>
+        <rdfs:label xml:lang="en">clinical lateral flow assay testing</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000612"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The lateral flow assay (LFA) is a paper-based platform for the detection and quantification of analytes in complex mixtures, where the sample is placed on a test device.</owl:annotatedTarget>
+        <owl:annotatedTarget>A procedure using a paper-based platform for the detection and quantification of analytes in complex mixtures, where the sample is placed on a test device for clinical use.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PMID:27365041</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000612"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>LFA</owl:annotatedTarget>
+        <owl:annotatedTarget>LFA testing</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION"/>
     </owl:Axiom>
     
@@ -14635,7 +14664,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000613"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-08T15:46:23Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <rdfs:label xml:lang="en">immunofluorescence assays</rdfs:label>
+        <rdfs:label xml:lang="en">clinical immunofluorescence assay testing</rdfs:label>
     </owl:Class>
     
 
@@ -14649,8 +14678,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C17638</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>OBI:0001978</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Western blot assay</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">immunoblot assay</rdfs:label>
+        <oboInOwl:hasExactSynonym>clinical Western blot assay</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">clinical immunoblot assay testing</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000615"/>
@@ -15952,10 +15981,12 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000665">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000483"/>
+        <obo:IAO_0000115>An evaluation by healthcare provider who is a specialist in a particular medical area.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-01T18:18:19Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>specialty medical professional consultation</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">specialty medical professional evaulation</rdfs:label>
+        <oboInOwl:hasExactSynonym>specialty medical professional evaulation</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">medical specialist evaluation</rdfs:label>
     </owl:Class>
     
 
@@ -16356,13 +16387,13 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>An evaluation by a specialist with who specializes in intricate technical procedures to evaluate heart rhythms and determine appropriate treatment.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-01T20:30:10Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasExactSynonym>consultation with clinical cardicac electrophysiologist</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>consultation with clinical cardicac electrophysiology specialist</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>internal medicine clinical cardicac electrophysiologist consultation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>internal medicne clinical cardicac electrophysiology specialist consultation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>internal medicne clinical cardicac electrophysiology specialist evaluation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>consultation with clinical cardiac electrophysiologist</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>consultation with clinical cardiac electrophysiology specialist</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>internal medicine clinical cardiac electrophysiologist consultation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>internal medicne clinical cardiac electrophysiology specialist consultation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>internal medicne clinical cardiac electrophysiology specialist evaluation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>referral to a clinical electrophysiologist</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">clinical cardicac electrophysiologist evaluation</rdfs:label>
+        <rdfs:label xml:lang="en">clinical cardiac electrophysiologist evaluation</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000683"/>
@@ -16735,15 +16766,15 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>An evaluation by a specialist focused on the medical and surgical care of the eyes. Ophthalmologists are the only physicians medically trained to manage the complete range of the eye and vision care. They can prescribe glasses and contact lenses, dispense medications, diagnose and treat eye conditions and diseases and perform surgeries.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-08T20:14:31Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasExactSynonym>consultation with ophthamologist</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>ophthamologist consultation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>ophthamologist referral</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>ophthamology specialist consultation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>ophthamology specialist evaluation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>referral to ophthamologist</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>referral to ophthamology specialist</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>consultation with ophthalmologist</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>ophthalmologist consultation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>ophthalmologist referral</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>ophthalmology specialist consultation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>ophthalmology specialist evaluation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>referral to ophthalmologist</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>referral to ophthalmology specialist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>referral to optometrist</oboInOwl:hasRelatedSynonym>
-        <rdfs:label xml:lang="en">ophthamologist evaluation</rdfs:label>
+        <rdfs:label xml:lang="en">ophthalmologist evaluation</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000703"/>
@@ -17400,6 +17431,140 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:annotatedTarget>TRUS</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION"/>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000731 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000731">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000483"/>
+        <obo:IAO_0000115>An evaluation or treatment by a professional who provides a range of diagnostic, technical, therapeutic, and support services in connection with health care. This is care provided by health care practitioners who are distinct providers from dentistry, nursing, medicine, and pharmacy health care professionals.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-10-06T17:59:44Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>allied health clnicians support</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>allied health practitioner consultation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>allied health practitioner evaluation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>allied health professional consultation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>assessment by allied health professional</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>consulationat with allied health professional</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>consultation with allied health practitioner</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>evaluation by allied health professional</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>evaluation managed by allied health professional</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>support by allied health clinicians</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">allied health professional evaluation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000732 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000732">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000731"/>
+        <obo:IAO_0000115>An evaluation or assessment by a health professional trained to help people who are ill or disabled learn to manage their daily activities.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-10-06T19:51:46Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>OT assessment</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>OT consult</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>OT eval</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>OT evaluation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>OT treatment</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>assessment by occupational therapist</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>evaluation by occupational therapist</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>managed by occupational therapist</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>occupational therapist assessment</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>occupational therapist consultation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>occupational therapist management</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>occupational therapist treatment</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>treatment by OT</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>treatment by occupational therapist</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">occupational therapist evaluation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000732"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>OT assessment</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000732"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>OT consult</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000732"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>OT eval</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000732"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>OT evaluation</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000732"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>OT treatment</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000732"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>treatment by OT</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000733 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000733">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000731"/>
+        <obo:IAO_0000115>An assessment by a professional who works to prevent, assess, diagnose, and treat speech, language, social communication, congnitive-communication, and swallowing disorders.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-10-08T15:24:36Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>assessment with speech therapist</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>consult with speech therapist</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>evaluation by speech and language therapist</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>speech and language pathologist evaluation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>speech and language therapist evaluation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>speech therapist assessment</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>speech therapist consultation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>speech therapist evaluation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>speech-language pathologist assessment</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>speech-language pathologist examination</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>speech/language pathologist evaluation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>speech/language therapist evaluation</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">speech-language pathologist evaluation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000733"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An assessment by a professional who works to prevent, assess, diagnose, and treat speech, language, social communication, congnitive-communication, and swallowing disorders.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>asha.org</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000734 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000734">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000731"/>
+        <obo:IAO_0000115>An assessment by a trained non-medical health professional who specializes in the identification, testing, habilitation and rehabilitation of hearing loss and other auditory and balance disorders. Particularly, an audiologist may be involved in diagnostic and screening procedures to determine hearing deficits, as well as in assessment of amplification devices and instruction in their care, training in speechreading, and may serve as consultant to government and industry on issues concerning environmental, noise-induced hearing loss.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-10-08T20:20:40Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C51804</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>assessment by audiologist</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>audilogic assessment</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>audiologic evaluation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>audiology evaluation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>audiology examination</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>evaluation by audiologist</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>treatment by audiologist</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">audiologist evaluation</rdfs:label>
+    </owl:Class>
     
 
 
@@ -20343,55 +20508,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0001112 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001112">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
-                        <owl:someValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002113"/>
-                            </owl:Restriction>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000571"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
-                        <owl:someValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002113"/>
-                            </owl:Restriction>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the kidney.</obo:IAO_0000115>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The use of computed tomography to produce images of structures of the kidney.</obo:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-06-23T20:39:14Z</dc:date>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-06-9T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-3010</oboInOwl:created_by>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-3012</oboInOwl:created_by>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAT scan of kidney</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CT of kidney</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kidney CAT scan</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kidney CT examination</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kidney biopsy</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kidney computed tomography</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kidney computerized axial tomography</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">renal CAT scan</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">renal CT</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of kidney</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kidney CT</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete kidney ct</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:deprecated>
     </owl:Class>
     
 
@@ -20579,6 +20697,69 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid Weight loss</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weight loss avoidance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001121 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001121">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002113"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removal of tissue from the kidney.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-06-23T20:39:14Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kidney biopsy</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biopsy of kidney</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001122 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001122">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000571"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002113"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The use of computed tomography to produce images of structures of the kidney.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-06-9T20:39:14Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-3010</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAT scan of kidney</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CT of kidney</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kidney CAT scan</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kidney CT examination</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kidney computed tomography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kidney computerized axial tomography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">renal CAT scan</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">renal CT</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kidney CT</rdfs:label>
     </owl:Class>
     
 
@@ -25444,7 +25625,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An imaging test that uses small amounts of radiation to produce pictures of abdomen.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use of an imaging test that uses small amounts of radiation to produce pictures of abdomen.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-04-07T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT:C38102</oboInOwl:hasDbXref>
@@ -25478,7 +25659,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An imaging test that uses small amounts of radiation to produce pictures of head.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use of an imaging test that uses small amounts of radiation to produce pictures of head.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-04-07T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">head X-ray procedure</oboInOwl:hasExactSynonym>
@@ -25509,7 +25690,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An imaging test that uses small amounts of radiation to produce pictures of liver.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use of an imaging test that uses small amounts of radiation to produce pictures of liver.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-04-07T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">liver X-ray procedure</oboInOwl:hasExactSynonym>
@@ -25540,7 +25721,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An imaging test that uses small amounts of radiation to produce pictures of lung.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use of an imaging test that uses small amounts of radiation to produce pictures of lung.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-04-07T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lung X-ray procedure</oboInOwl:hasExactSynonym>
@@ -25571,7 +25752,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An imaging test that uses small amounts of radiation to produce pictures of neck.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use of an imaging test that uses small amounts of radiation to produce pictures of neck.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-04-07T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neck X-ray procedure</oboInOwl:hasExactSynonym>
@@ -25602,7 +25783,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An imaging test that uses small amounts of radiation to produce pictures of chest.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use of an imaging test that uses small amounts of radiation to produce pictures of chest.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-04-07T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT:C38103</oboInOwl:hasDbXref>
@@ -26922,6 +27103,12 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/UBERON_0006956 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0006956"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0007106 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0007106"/>
     
 
 
