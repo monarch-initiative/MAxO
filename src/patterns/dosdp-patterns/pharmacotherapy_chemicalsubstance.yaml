@@ -13,9 +13,64 @@ classes:
 relations:
   inheres_in: RO:0000052
   
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym 
+  created_by: oio:created_by
+  date: dc:date
+  comment: rdfs:comment
+  xref: oio:hasDbXref
+  
 vars:
   chemical_entity: "'chemical entity'"
 
+data_vars:
+  date: "'date'"
+  created_by: "'created_by'"
+  comment: "'comment'"
+  xref: "'xref'"
+   
+data_list_vars:
+  syns: xsd:string
+
+name:
+  text: "%s agent therapy"
+  vars:
+   - chemical_entity
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "%s therapy"
+    vars:
+     - chemical_entity
+     
+  - annotationProperty: exact_synonym
+    text: "treatment with %s" 
+    vars:
+     - chemical_entity
+     
+  - annotationProperty: date
+    text: "%s"
+    vars:
+     - date
+     
+  - annotationProperty: created_by
+    text: "%s"
+    vars:
+     - created_by
+     
+  - annotationProperty: comment
+    text: "%s"
+    vars:
+     - comment
+     
+  - annotationProperty: xref
+    text: "%s"
+    vars:
+     - xref
+   
+exact_synonym:
+  value: syns
+  
 equivalentTo:
   text: "'pharmacotherapy' and ('inheres_in' some %s)"
   vars:
