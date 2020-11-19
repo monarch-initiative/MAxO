@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2020-11-16/maxo-base.owl
+data-version: maxo/releases/2020-11-18/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Aaron Zhang" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
@@ -8,7 +8,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2020-11-16" xsd:string
+property_value: owl:versionInfo "2020-11-18" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -433,6 +433,7 @@ synonym: "medication therapy" EXACT []
 synonym: "pharmaceutical drug" EXACT []
 synonym: "pharmaceutical treatment" EXACT []
 synonym: "pharmacological treatment" EXACT []
+synonym: "treatment with drug" EXACT []
 xref: CHEBI:52217
 is_a: MAXO:0000002 ! therapeutic procedure
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -454,6 +455,7 @@ synonym: "treatment with an antibacterial agent" EXACT []
 synonym: "treatment with an antibacterial drug" EXACT []
 synonym: "treatment with an antibacterial medication" EXACT []
 synonym: "treatment with an antibacterial therapy" EXACT []
+synonym: "treatment with antibacterial drug" EXACT []
 xref: CHEBI:36047
 is_a: MAXO:0001021 ! antimicrobial agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -466,6 +468,7 @@ id: MAXO:0000062
 name: antineoplastic agent therapy
 def: "Use of a substance that inhibits or prevents the proliferation of neoplasms." []
 synonym: "anticancer agent therapy" BROAD []
+synonym: "antineoplastic agent therapy" EXACT []
 synonym: "antineoplastic drug therapy" EXACT []
 synonym: "cytostatic agent therapy" EXACT []
 synonym: "cytostatic drug therapy" EXACT []
@@ -1286,6 +1289,7 @@ synonym: "antiparkinson drug treatment" EXACT []
 synonym: "antiparkinsonian agent therapy" EXACT []
 synonym: "antiparkisonian agent treatment" EXACT []
 synonym: "antiparkisonian drug treatment" EXACT []
+synonym: "treatment with antiparkinson drug" EXACT []
 xref: CHEBI:48407
 xref: NCIT:C38149
 is_a: MAXO:0000260 ! central nervous system agent therapy
@@ -1297,7 +1301,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000158
 name: antiparasitic agent therapy
+name: antiparasititic agent therapy
 def: "Use of a substance used to treat or prevent parasitic infections." []
+synonym: "antiparasitic agent therapy" EXACT []
 synonym: "antiparasitic drug therapy" EXACT []
 synonym: "antiparasitics therapy" EXACT []
 synonym: "antiparisitics drug treatment" EXACT []
@@ -1317,11 +1323,13 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000159
 name: analgesic pharmacotherapeutic agent therapy
+name: analgesic therapy
 def: "A therapy capable of relieving pain without the loss of consciousness or without producing anaesthesia. In addition, analgesic is a role played by a compound which is exhibited by a capability to cause a reduction of pain symptoms." []
 synonym: "analgesic drug therapy" EXACT []
 synonym: "analgesic medication therapy" EXACT []
 synonym: "analgesic therapy" EXACT []
 synonym: "Analgesics therapy" EXACT []
+synonym: "treatment with analgesic" EXACT []
 xref: CHEBI:35480
 xref: NCIT:C241
 is_a: MAXO:0000058 ! pharmacotherapy
@@ -1336,11 +1344,13 @@ id: MAXO:0000160
 name: antidepressant agent therapy
 def: "Treatment with a mood-stimulating drugs used primarily in the treatment of affective disorders and related conditions." []
 synonym: "antidepressant drug therapy" EXACT []
+synonym: "antidepressant therapy" EXACT []
 synonym: "antidepressants treatment" EXACT []
 synonym: "thymoanaleptics treatment" EXACT []
 synonym: "thymoleptic agent therapy" EXACT []
 synonym: "thymoleptic drug treatment therapy" EXACT []
 synonym: "thymoleptics drug therapy" EXACT []
+synonym: "treatment with antidepressant" EXACT []
 xref: CHEBI:35469
 is_a: MAXO:0001022 ! psychotropic agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -1352,6 +1362,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000161
 name: receptor antagonist therapy
 def: "Use of a substance that attaches to and blocks cell receptors." []
+synonym: "antagonist therapy" EXACT []
+synonym: "treatment with antagonist" EXACT []
 xref: CHEBI:48706
 xref: NCIT:C69308
 is_a: MAXO:0000644 ! molecular pathway modifying agent therapy
@@ -1378,12 +1390,14 @@ def: "Treatment with a drug that alleviate anxiety, tension, and anxiety disorde
 synonym: "anti-anxiety agent therapy" EXACT []
 synonym: "anti-anxiety drug treatment" EXACT []
 synonym: "anxiolytic agent drug treatment" EXACT []
+synonym: "anxiolytic drug therapy" EXACT []
 synonym: "anxiolytics drug therapies" EXACT []
 synonym: "minor tranquiliser therapy" EXACT []
 synonym: "minor tranquilizer treatment" EXACT []
 synonym: "minor tranquilizing agent treatment" EXACT []
 synonym: "minor tranquilizing drug therapy" EXACT []
 synonym: "treatment with anxiolytic" EXACT []
+synonym: "treatment with anxiolytic drug" EXACT []
 xref: CHEBI:35474
 is_a: MAXO:0001023 ! tranquilizing agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -1393,7 +1407,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000164
-name: antigout agent therapy
+name: antigout therapy
+name: uricosuric agent therapy
 def: "Substance that may reduce inflammation, stimulate elimination of uric acid, or increase production of uric acid." [NCIT:C29733]
 synonym: "anti-gout agent therapy" EXACT []
 synonym: "anti-gout combination medicine therapy" EXACT []
@@ -1404,18 +1419,26 @@ synonym: "antigout combination medicine therapy" EXACT []
 synonym: "antigout drug therapy" EXACT []
 synonym: "antigout medication therapy" EXACT []
 synonym: "antigout preparation therapy" EXACT []
+synonym: "antigout therapy" EXACT []
 synonym: "gout suppressant agent treatment" EXACT []
+synonym: "gout suppressant therapy" EXACT []
 synonym: "treatment with anti-gout medication" EXACT []
 synonym: "treatment with antigout agent" EXACT []
 synonym: "treatment with antigout drug" EXACT []
 synonym: "treatment with antigout medication" EXACT []
+synonym: "treatment with gout suppressant" EXACT []
 synonym: "treatment with gout suppressant agent" EXACT []
 synonym: "treatment with gout suppressant drug" EXACT []
 synonym: "treatment with gout suppressant medication" EXACT []
+synonym: "treatment with uricosuric drug" EXACT []
+synonym: "uricosuric drug therapy" EXACT []
+xref: CHEBI:35841
 xref: CHEBI:35845
 xref: NCIT:C29733
 is_a: MAXO:0000643 ! antirheumatic agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: RO:0000052 CHEBI:35841
 intersection_of: RO:0000052 CHEBI:35845
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:55:18Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -1427,7 +1450,9 @@ def: "Therapy using an agent that promotes the excretion of urine through its ef
 synonym: "diuretic agent drug treatment therapy" EXACT []
 synonym: "diuretic drug therapy" EXACT []
 synonym: "diuretic drugs therapy" EXACT []
+synonym: "diuretic therapy" EXACT []
 synonym: "diuretics therapy" EXACT []
+synonym: "treatment with diuretic" EXACT []
 synonym: "treatment with diuretic agent" EXACT []
 synonym: "treatment with diuretic drug" EXACT []
 synonym: "treatment with diuretic medication" EXACT []
@@ -1443,6 +1468,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000166
 name: antipsychotic agent therapy
 def: "Treatment with an agent that control agitated psychotic behaviour, alleviate acute psychotic states, reduce psychotic symptoms, and exert a quieting effect." []
+synonym: "antipsychotic agent therapy" EXACT []
 synonym: "antipsychotic drug treatment" EXACT []
 synonym: "antipsychotic therapy" EXACT []
 synonym: "major tranquilizer drug treatment" EXACT []
@@ -1491,6 +1517,7 @@ synonym: "treatment with an anti-virus medication" EXACT []
 synonym: "treatment with an antiviral agent" EXACT []
 synonym: "treatment with an antiviral drug" EXACT []
 synonym: "treatment with an antiviral medication" EXACT []
+synonym: "treatment with antiviral drug" EXACT []
 xref: CHEBI:36044
 is_a: MAXO:0001021 ! antimicrobial agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -1509,6 +1536,7 @@ synonym: "antiinflammatory agent therapy" EXACT []
 synonym: "antiinflammatory drug therapy" EXACT []
 synonym: "treatment with an anti-inflammatory drug" EXACT []
 synonym: "treatment with an anti-inflammatory medication" EXACT []
+synonym: "treatment with anti-inflammatory drug" EXACT []
 xref: CHEBI:67079
 is_a: MAXO:0000058 ! pharmacotherapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -1527,6 +1555,7 @@ synonym: "anaesthetics therapy" EXACT []
 synonym: "anesthesia therapy" EXACT []
 synonym: "anesthetic drug therapy" EXACT []
 synonym: "anesthetic medication therapy" EXACT []
+synonym: "treatment with anaesthetic" EXACT []
 xref: CHEBI:38867
 xref: NCIT:C245
 is_a: MAXO:0000058 ! pharmacotherapy
@@ -1554,6 +1583,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000173
+name: antiemetic therapy
 name: antiemetics agent therapy
 def: "Treatment with a drug used to prevent nausea or vomiting." []
 comment: An antiemetic may act by a wide range of mechanisms: it might affect the medullary control centres (the vomiting centre and the chemoreceptive trigger zone) or affect the peripheral receptors. {xref="CHEBI:50919"}
@@ -1565,6 +1595,7 @@ synonym: "antiemetic therapy" EXACT []
 synonym: "antiemetics medication treatment" EXACT []
 synonym: "medication for nausea treatment" EXACT []
 synonym: "medication for treatment of nausea" EXACT []
+synonym: "treatment with antiemetic" EXACT []
 synonym: "Treatment with antiemetics agent" EXACT []
 synonym: "Treatment with antiemetics drug" EXACT []
 synonym: "Treatment with antiemetics medication" EXACT []
@@ -1578,6 +1609,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000174
+name: anti-fungal agent therapy
 name: antifungal agent therapy
 def: "Use of a drug to prevent or treat fungal infections in humans or animals." []
 synonym: "anti-fungal drug therapy" EXACT []
@@ -1591,6 +1623,7 @@ synonym: "treatment with an anti-fungal medication" EXACT []
 synonym: "treatment with an antifungal drug" EXACT []
 synonym: "treatment with an antifungal medication" EXACT []
 synonym: "treatment with an antifungal therapy" EXACT []
+synonym: "treatment with antifungal drug" EXACT []
 xref: CHEBI:86327
 is_a: MAXO:0000325 ! anti-infective agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -1612,6 +1645,7 @@ name: hematologic agent therapy
 def: "Use of a drug that acts on blood and blood-forming organs and those that affect the hemostatic system." []
 synonym: "blood modifier treatment therapy" EXACT []
 synonym: "blood modifying agent treatment" EXACT []
+synonym: "hematologic agent therapy" EXACT []
 synonym: "hematologic agent treatment therapy" EXACT []
 synonym: "treatment with hematologic agent" EXACT []
 synonym: "treatment with hematologic drug" EXACT []
@@ -1642,6 +1676,7 @@ def: "Use of an agent that prevents blood clotting." []
 synonym: "anticoagulant agent treatment" EXACT []
 synonym: "anticoagulant drug treatment" EXACT []
 synonym: "anticoagulant therapy" EXACT []
+synonym: "treatment with anticoagulant" EXACT []
 xref: CHEBI:50249
 is_a: MAXO:0000176 ! hematologic agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -1659,6 +1694,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000180
 name: platelet aggregation inhibitor agent therapy
+name: platelet aggregation inhibitor therapy
 def: "Use of a drug which antagonizes or impairs any mechanism leading to blood platelet aggregation, whether during the phases of activation and shape change or following the dense-granule release reaction and stimulation of the prostaglandin-thromboxane system." []
 synonym: "platelet aggregation inhibitor agent treatment" EXACT []
 synonym: "platelet aggregation inhibitor therapy" EXACT []
@@ -1699,6 +1735,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000182
+name: alpha adrenergic agent therapy
 name: alpha-adrenergic agent therapy
 def: "Treatment with a drug that acts on an alpha-adrenergic receptor." []
 synonym: "a-adrenergic agent therapy" EXACT []
@@ -1735,6 +1772,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000183
+name: alpha adrenergic agonist therapy
 name: alpha-adrenergic agonist agent therapy
 def: "Treatment with an agent that selectively binds to and activates alpha-adrenergic receptors." []
 synonym: "a-adrenergic agonist drug treatment" EXACT []
@@ -1746,11 +1784,13 @@ synonym: "alpha adrenergic agonist treatment" EXACT []
 synonym: "alpha adrenergic receptor agonist therapy" EXACT []
 synonym: "alpha adrentergic receptor agonist agent therapy" EXACT []
 synonym: "alpha-adrenergic agonist therapy" EXACT []
+synonym: "alpha-adrenergic drug therapy" EXACT []
 synonym: "alpha-adrenergic receptor agonist drug therapy" EXACT []
 synonym: "alpha-adrenergic receptor agonist treatment" EXACT []
 synonym: "alpha-adrenoceptor agonist agent therapy" EXACT []
 synonym: "alpha-adrenoceptor agonist drug therapy" EXACT []
 synonym: "alpha-adrenoceptor agonist therapy" EXACT []
+synonym: "treatment with alpha-adrenergic drug" EXACT []
 xref: CHEBI:48539
 is_a: MAXO:0000182 ! alpha-adrenergic agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -1760,6 +1800,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000184
+name: alpha adrenergic antagonist therapy
 name: alpha-adrenergic antagonist agent therapy
 def: "Treatment with an agent that binds to but does not activate alpha-adrenergic receptors thereby blocking the actions of endogenous or exogenous alpha-adrenergic agonists." []
 synonym: "a-adrenergic antagonist agent therapy" EXACT []
@@ -1771,6 +1812,7 @@ synonym: "alpha-adrenergic antagonist agent treatment" EXACT []
 synonym: "alpha-adrenergic antagonist drug therapy" EXACT []
 synonym: "alpha-adrenergic antagonist drug treatment" EXACT []
 synonym: "alpha-adrenergic antagonist medication therapy" EXACT []
+synonym: "alpha-adrenergic antagonist therapy" EXACT []
 synonym: "alpha-adrenergic blockader therapy" EXACT []
 synonym: "alpha-adrenergic blocker therapy" EXACT []
 synonym: "alpha-adrenergic blocking agent therapy" EXACT []
@@ -1779,6 +1821,7 @@ synonym: "alpha-adrenergic receptor antagonist drug therapy" EXACT []
 synonym: "alpha-adrenergic receptor blockader therapy" EXACT []
 synonym: "alpha-adrenergic receptor blocker therapy" EXACT []
 synonym: "alpha-adrenoceptor antagonist therapy" EXACT []
+synonym: "treatment with alpha-adrenergic antagonist" EXACT []
 synonym: "treatment with alpha-adrenergic antagonist drug" EXACT []
 synonym: "treatment with alpha-adrenergic antagonist medication" EXACT []
 xref: CHEBI:37890
@@ -1792,6 +1835,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000185
 name: antiarrythmic agent therapy
 def: "Treatment with a drug for prevention of cardiac arrhythmias. Anti-arrhythmia drugs may affect the polarisation-repolarisation phase of the action potential, its excitability or refractoriness, or impulse conduction or membrane responsiveness within cardiac fibres." []
+synonym: "anti-arrhythmia drug therapy" EXACT []
 synonym: "anti-arrhythmic agent therapy" EXACT []
 synonym: "anti-arrhythmic drug treatment therapy" EXACT []
 synonym: "anti-arrythmia agent therapy" EXACT []
@@ -1799,6 +1843,7 @@ synonym: "anti-arrythmia drug therapy" EXACT []
 synonym: "antiarrhythmic agent therapy" EXACT []
 synonym: "antiarrhythmic drug therapy" EXACT []
 synonym: "antiarrhythmic drug treatment" EXACT []
+synonym: "treatment with anti-arrhythmia drug" EXACT []
 synonym: "treatment with anti-arrythmia agent" EXACT []
 synonym: "treatment with anti-arrythmia drug" EXACT []
 synonym: "treatment with anti-arrythmia medication" EXACT []
@@ -1818,6 +1863,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000186
+name: beta adrenergic agent therapy
 name: beta-adrenergic agent therapy
 def: "Treatment with a drug that acts on beta-adrenergic receptors." []
 synonym: "b-adrenergic drug treatment" EXACT []
@@ -1843,6 +1889,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000187
 name: beta-adrenergic antagonist agent therapy
+name: beta-adrenergic antagonist therapy
 def: "An agent that binds to but does not activate beta-adrenergic receptors thereby blocking the actions of endogenous or exogenous beta-adrenergic agonists." [CHEBI:35530]
 synonym: "b-adrenergic antagonist therapy" EXACT []
 synonym: "b-adrenergic receptor antagonist therapy" EXACT []
@@ -1851,6 +1898,7 @@ synonym: "beta adrenergic antagonist drug treatment" EXACT []
 synonym: "beta adrenergic receptor antagonist therapy" EXACT []
 synonym: "Beta blocker therapy" EXACT []
 synonym: "beta-adrenergic antagonist agent treatment" EXACT []
+synonym: "beta-adrenergic antagonist therapy" EXACT []
 synonym: "Beta-adrenergic blocking agent therapy" EXACT []
 synonym: "beta-adrenergic receptor antagonist agents" EXACT []
 synonym: "beta-adrenergic receptor antagonist drug treatment" EXACT []
@@ -1860,6 +1908,7 @@ synonym: "beta-adrenoceptor antagonist therapy" EXACT []
 synonym: "treatment with beta blocker agent" EXACT []
 synonym: "treatment with beta blocker drug" EXACT []
 synonym: "treatment with beta blocker medication" EXACT []
+synonym: "treatment with beta-adrenergic antagonist" EXACT []
 synonym: "treatment with beta-adrenergic antagonist agent" EXACT []
 synonym: "treatment with beta-adrenergic antagonist drug" EXACT []
 synonym: "treatment with beta-adrenergic antagonist medication" EXACT []
@@ -1879,7 +1928,14 @@ replaced_by: MAXO:0000434
 id: MAXO:0000189
 name: dyslipidemic agent therapy
 def: "Therapy using an agent that reduces plasma lipids, such as cholesterol or low density lipoproteins (LDL), acting systemically or locally (intestines) to decrease fat digestion, absorption, production, and accumulation in the plasma and reducing pathogenic atherosclerosis and thrombosis." []
+synonym: "anti-lipemic therapy" EXACT []
 synonym: "anti-lipidemic agent therapy" EXACT []
+synonym: "antihyperlipemic agent therapy" EXACT []
+synonym: "antihyperlipidaemic agent therapy" EXACT []
+synonym: "antihyperlipidemic agent therapy" EXACT []
+synonym: "antihyperlipidemic drug therapy" EXACT []
+synonym: "antilipemic drug therapy" EXACT []
+synonym: "antilipemic therapy" EXACT []
 synonym: "antilipidemic agent therapy" EXACT []
 synonym: "antilipidemic drug treatment therapy" EXACT []
 synonym: "dyslipidemia agent therapy" EXACT []
@@ -1887,9 +1943,12 @@ synonym: "dyslipidemia drug treatment therapy" EXACT []
 synonym: "dyslipidemic agent drug treatment" EXACT []
 synonym: "dyslipidemic drug therapy" EXACT []
 synonym: "dyslipidemic drugs therapy" EXACT []
+synonym: "hypolipidemic agent therapy" EXACT []
+synonym: "lipid-lowering agent therapy" EXACT []
 synonym: "treatment with anti-lipidemic agent" EXACT []
 synonym: "treatment with anti-lipidemic drug" EXACT []
 synonym: "treatment with anti-lipidemic medication" EXACT []
+synonym: "treatment with antilipemic drug" EXACT []
 synonym: "treatment with antilipidemic agent" EXACT []
 synonym: "treatment with antilipidemic drug" EXACT []
 synonym: "treatment with antilipidemic medication" EXACT []
@@ -1898,6 +1957,8 @@ synonym: "treatment with dyslipidemic drug" EXACT []
 synonym: "treatment with dyslipidemic medication" EXACT []
 xref: NCIT:C29703
 is_a: MAXO:0000181 ! cardiovascular agent therapy
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: RO:0000052 CHEBI:35679
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:19:20Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1936,6 +1997,7 @@ replaced_by: MAXO:0000181
 
 [Term]
 id: MAXO:0000193
+name: non-opioid analagesics therapy
 name: non-opioid analgesics agent therapy
 def: "Use of a drug that has principally analgesic, antipyretic and anti-inflammatory actions. Non-narcotic analgesics do not bind to opioid receptors." []
 synonym: "non-narcotic analgesic agent therapy" EXACT []
@@ -1947,8 +2009,9 @@ synonym: "non-opioid analgesics drug therapy" EXACT []
 synonym: "non-opioid analgesics medication therapy" EXACT []
 synonym: "non-opioid analgesics medication treatment" EXACT []
 synonym: "non-opioid analgesics therapy" EXACT []
+synonym: "treatment with non-narcotic analgesic" EXACT []
 xref: CHEBI:35481
-is_a: MAXO:0000159 ! analgesic pharmacotherapeutic agent therapy
+is_a: MAXO:0000159 ! analgesic therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
 intersection_of: RO:0000052 CHEBI:35481
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:22:25Z xsd:dateTime
@@ -1956,6 +2019,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000194
+name: opioid analgesic therapy
 name: opioid analgesics agent therapy
 def: "Use of a narcotic or opioid substance, synthetic or semisynthetic agent producing profound analgesia, drowsiness, and changes in mood." []
 synonym: "narcotic analgesic medication therapy" EXACT []
@@ -1965,10 +2029,12 @@ synonym: "narcotic therapy" BROAD []
 synonym: "opioid analgesic drug therapy" EXACT []
 synonym: "opioid analgesic medication therapy" EXACT []
 synonym: "opioid analgesic medication treatment" EXACT []
+synonym: "opioid analgesic therapy" EXACT []
 synonym: "opioid analgesics" EXACT []
 synonym: "opioid therapy" EXACT []
+synonym: "treatment with opioid analgesic" EXACT []
 xref: CHEBI:35482
-is_a: MAXO:0000159 ! analgesic pharmacotherapeutic agent therapy
+is_a: MAXO:0000159 ! analgesic therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
 intersection_of: RO:0000052 CHEBI:35482
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:22:42Z xsd:dateTime
@@ -1976,11 +2042,13 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000195
+name: local anesthetic
 name: local anesthetic agent therapy
 def: "Treatment with any member of a group of drugs that reversibly inhibit the propagation of signals along nerves. Wide variations in potency, stability, toxicity, water-solubility and duration of action determine the route used for administration, e.g. topical, intravenous, epidural or spinal block." []
 synonym: "epidural therapy" NARROW []
 synonym: "local anaesthesia therapy" EXACT []
 synonym: "local anaesthetic medication therapy" EXACT []
+synonym: "local anaesthetic therapy" EXACT []
 synonym: "local anaesthetics therapy" EXACT []
 synonym: "local anesthesia therapy" EXACT []
 synonym: "local anesthesia treatment" EXACT []
@@ -1989,6 +2057,7 @@ synonym: "local anesthetics therapy" EXACT []
 synonym: "spinal block therapy" NARROW []
 synonym: "topical anesthesia therapy" NARROW []
 synonym: "topical anesthetic therapy" NARROW []
+synonym: "treatment with local anaesthetic" EXACT []
 xref: CHEBI:36333
 is_a: MAXO:0000170 ! anesthetic agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -2020,8 +2089,10 @@ synonym: "cephalosporin beta-lactam therapy" EXACT []
 synonym: "cephalosporin drug therapy" EXACT []
 synonym: "cephalosporin drug treatment" EXACT []
 synonym: "cephalosporin therapies" EXACT []
+synonym: "cephalosporin therapy" EXACT []
 synonym: "cephalosporin treatment" EXACT []
 synonym: "cephalosporins therapy" EXACT []
+synonym: "treatment with cephalosporin" EXACT []
 synonym: "treatment with cephalosporin agent" EXACT []
 synonym: "treatment with cephalosporin antibacterial drug" EXACT []
 synonym: "treatment with cephalosporin antibacterial medication" EXACT []
@@ -2043,12 +2114,14 @@ synonym: "penicillin antibacterial treatment" EXACT []
 synonym: "penicillin beta-lactam therapy" EXACT []
 synonym: "penicillin drug therapy" EXACT []
 synonym: "penicillin drug treatment" EXACT []
+synonym: "penicillin therapy" EXACT []
 synonym: "penicillin treatment" EXACT []
 synonym: "penicillins" EXACT []
 synonym: "treatment with a penicillin agent" EXACT []
 synonym: "treatment with a penicillin drug" EXACT []
 synonym: "treatment with a penicillin medication" EXACT []
 synonym: "treatment with a penicillin therapy" EXACT []
+synonym: "treatment with penicillin" EXACT []
 synonym: "treatment with penicillin antibacterial drug" EXACT []
 synonym: "treatment with penicillin antibacterial medication" EXACT []
 synonym: "treatment with penicillin antibiotic agent" EXACT []
@@ -2073,6 +2146,7 @@ name: macrolide antibacterial agent therapy
 def: "Use of a drug with a macrocyclic lactone with a ring of twelve or more members which exhibits antibiotic activity." []
 synonym: "macrolide antibacterial drug therapy" EXACT []
 synonym: "macrolide antibacterial therapy" EXACT []
+synonym: "macrolide antibiotic therapy" EXACT []
 synonym: "macrolide drug therapy" EXACT []
 synonym: "macrolide drug treatment" EXACT []
 synonym: "macrolides" BROAD []
@@ -2082,6 +2156,7 @@ synonym: "Treatment with a macrolide antibacterial medication" EXACT []
 synonym: "Treatment with a macrolide antibiotic agent" EXACT []
 synonym: "Treatment with a macrolide antibiotic drug" EXACT []
 synonym: "Treatment with a macrolide antibiotic medication" EXACT []
+synonym: "treatment with macrolide antibiotic" EXACT []
 xref: CHEBI:25105
 is_a: MAXO:0000061 ! antibacterial agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -2095,10 +2170,12 @@ name: quinolone antibacterial agent therapy
 def: "Use of an organonitrogen heterocyclic antibiotic whose structure contains a quinolone or quinolone-related skeleton." []
 synonym: "quinolone antibacterial therapy" EXACT []
 synonym: "quinolone antibiotic agent treatment" EXACT []
+synonym: "quinolone antibiotic therapy" EXACT []
 synonym: "quinolones" BROAD []
 synonym: "treatment with quinolone antibacterial agent" EXACT []
 synonym: "treatment with quinolone antibacterial drug" EXACT []
 synonym: "treatment with quinolone antibacterial medication" EXACT []
+synonym: "treatment with quinolone antibiotic" EXACT []
 synonym: "treatment with quinolone antibiotic agent" EXACT []
 synonym: "treatment with quinolone antibiotic drug" EXACT []
 synonym: "treatment with quinolone antibiotic medication" EXACT []
@@ -2125,6 +2202,7 @@ synonym: "treatment with a sulfonamide antibiotic agent" EXACT []
 synonym: "treatment with a sulfonamide antibiotic drug" EXACT []
 synonym: "treatment with a sulfonamide antibiotic medication" EXACT []
 synonym: "treatment with a sulfonamide antibiotic therapy" EXACT []
+synonym: "treatment with sulfonamide antibiotic" EXACT []
 xref: CHEBI:87228
 is_a: MAXO:0000061 ! antibacterial agent therapy
 is_a: MAXO:0000300 ! inflammatory bowel disease agent therapy
@@ -2140,6 +2218,7 @@ def: "Treatment with a broad-spectrum polyketide antibiotic produced by the Stre
 synonym: "tetracycline antibiotic therapy" EXACT []
 synonym: "tetracycline drug therapy" EXACT []
 synonym: "tetracycline drug treatment" EXACT []
+synonym: "tetracycline therapy" EXACT []
 synonym: "treatment with a tetracycline antibacterial agent" EXACT []
 synonym: "treatment with a tetracycline antibacterial drug" EXACT []
 synonym: "treatment with a tetracycline antibacterial medication" EXACT []
@@ -2148,6 +2227,7 @@ synonym: "treatment with a tetracycline antibiotic agent" EXACT []
 synonym: "treatment with a tetracycline antibiotic drug" EXACT []
 synonym: "treatment with a tetracycline antibiotic medication" EXACT []
 synonym: "treatment with a tetracycline antibiotic therapy" EXACT []
+synonym: "treatment with tetracycline" EXACT []
 xref: CHEBI:27902
 is_a: MAXO:0000061 ! antibacterial agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -2165,8 +2245,10 @@ id: MAXO:0000205
 name: calcium channel modifying agent therapy
 def: "Treatment with a drug that is able to regulate intracellular calcium levels." []
 synonym: "calcium channel modifier drug therapy" EXACT []
+synonym: "calcium channel modulator therapy" EXACT []
 synonym: "treatment with calcium channel modifying agent" EXACT []
 synonym: "treatment with calcium channel modifying medication" EXACT []
+synonym: "treatment with calcium channel modulator" EXACT []
 xref: CHEBI:38808
 is_a: MAXO:0000167 ! anticonvulsant agent therapy
 is_a: MAXO:0000181 ! cardiovascular agent therapy
@@ -2177,8 +2259,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000206
+name: GABA augmenting agent therapy
 name: gamma-aminobutyric acid augmenting agent therapy
 def: "Treatment with a substance, such as agonists, antagonists, degradation or uptake inhibitors, depleters, precursors, and modulators of receptor function, used for its pharmacological actions on GABAergic systems." []
+synonym: "GABA agent therapy" EXACT []
 synonym: "GABA augmenting agent therapy" EXACT []
 synonym: "GABA augmenting therapy" EXACT []
 synonym: "gamma-aminobutyric acid drug therapy" EXACT []
@@ -2214,6 +2298,7 @@ synonym: "sodium channel blocker therapy" EXACT []
 synonym: "sodium channel inhibitor drug therapy" EXACT []
 synonym: "treatment with Na+ channel inhibitor" EXACT []
 synonym: "treatment with sodium channel antagonist" EXACT []
+synonym: "treatment with sodium channel blocker" EXACT []
 synonym: "treatment with sodium channel inhibitor" EXACT []
 xref: CHEBI:38633
 is_a: MAXO:0000167 ! anticonvulsant agent therapy
@@ -2231,10 +2316,13 @@ replaced_by: MAXO:0000167
 [Term]
 id: MAXO:0000210
 name: cholinesterase inhibitor therapy
+name: cholinesteriase inhibitor
 def: "They are a group of drugs that block the normal breakdown of acetylcholine (ACh) into acetate and choline and thereby increase both the levels and duration of actions of acetylcholine found in the central and peripheral nervous system." [PMID:31335056]
 comment: Neurogenerative diseases such as Alzheimer disease, Parkinson disease, and Lewy body dementia are indications for cholinesterase inhibitor therapy. {xref="PMID:31335056"}
 synonym: "cholinesterase inhibitor drug treatment" EXACT []
 synonym: "cholinesterase inhibitor medication therapy" EXACT []
+synonym: "EC 3.1.1.8 (cholinesterase) inhibitor therapy" EXACT []
+synonym: "treatment with EC 3.1.1.8 (cholinesterase) inhibitor" EXACT []
 xref: CHEBI:37733
 is_a: MAXO:0000171 ! antidementia agent therapy
 is_a: MAXO:0000648 ! enzyme inhibitor agent therapy
@@ -2263,15 +2351,18 @@ replaced_by: MAXO:0000171
 [Term]
 id: MAXO:0000213
 name: monoamine oxidase inhibitor agent therapy
+name: monoamine oxidase inhibitor therapy
 def: "A drug that acts as an inhibitor that interferes with the action of monoamine oxidase (EC 1.4.3.4)." []
 comment: A type of drug used to treat depression. It stops the breakdown of certain chemicals in the brain that help improve a person's mood. A monoamine oxidase inhibitor is a type of antidepressant. {xref="NCIT:C667"}
 comment: Any substance that inhibits monoamine oxidase (MAO), an enzyme that catalyzes the oxidative deamination of monoamines and plays a role in the inactivation of neurotransmitters. {xref="NCIT:C667"}
+synonym: "EC 1.4.3.4 (monoamine oxidase) inhibitor therapy" EXACT []
 synonym: "inhibitors of MAO therapy" EXACT []
 synonym: "inhibitors of monoamine oxidase therapy" EXACT []
 synonym: "MAO drug therapy" EXACT []
 synonym: "MAO drug treatment" EXACT []
 synonym: "MAO inhibitor therapy" EXACT ABBREVIATION []
 synonym: "MAOI therapy" EXACT [] {RELATED="ABBREVIATION"}
+synonym: "treatment with EC 1.4.3.4 (monoamine oxidase) inhibitor" EXACT []
 xref: CHEBI:38623
 xref: NCIT:C667
 is_a: MAXO:0000160 ! antidepressant agent therapy
@@ -2344,15 +2435,18 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000220
+name: glucocorticicoid agent therapy
 name: glucocorticoid agent therapy
 def: "Treatment with a class of steroid hormones that regulate a variety of physiological processes, in particular control of the concentration of glucose in blood." [CHEBI:24261]
+synonym: "glucocorticoid therapy" EXACT []
 synonym: "treatment with a glucocorticoid drug" EXACT []
 synonym: "treatment with a glucocorticoid medication" EXACT []
 synonym: "treatment with a glucocorticoid therapy" EXACT []
+synonym: "treatment with glucocorticoid" EXACT []
 xref: CHEBI:24261
 is_a: MAXO:0000300 ! inflammatory bowel disease agent therapy
 is_a: MAXO:0000634 ! anti-asthmatic agent therapy
-is_a: MAXO:0000640 ! corticosteroid agent therapy
+is_a: MAXO:0000640 ! corticosteroid therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
 intersection_of: RO:0000052 CHEBI:24261
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:44:08Z xsd:dateTime
@@ -2361,11 +2455,14 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000221
 name: nonsteroidal anti-inflammatory agent therapy
+name: nsaid therapy
 def: "Treatment with an anti-inflammatory drug that is not a steroid. In addition to anti-inflammatory actions, non-steroidal anti-inflammatory drugs have analgesic, antipyretic, and platelet-inhibitory actions. They act by blocking the synthesis of prostaglandins by inhibiting cyclooxygenase, which converts arachidonic acid to cyclic endoperoxides, precursors of prostaglandins." []
+synonym: "anti-inflammatory drug therapy" EXACT []
 synonym: "non-steroidal anti-inflammatory drug therapy" EXACT []
 synonym: "non-steroidal anti-inflammatory medication treatment" EXACT []
 synonym: "NSAID therapy" EXACT ABBREVIATION []
 synonym: "NSAIDs therapy" EXACT ABBREVIATION []
+synonym: "treatment with anti-inflammatory drug" EXACT []
 synonym: "treatment with non-steroidal anti-inflammatory drug" EXACT []
 synonym: "treatment with non-steroidal anti-inflammatory medication" EXACT []
 synonym: "treatment with NSAID drug" EXACT []
@@ -2476,6 +2573,7 @@ synonym: "treatment with an anti-mycobacterial therapy" EXACT []
 synonym: "treatment with an antimycobacterial agent" EXACT []
 synonym: "treatment with an antimycobacterial drug" EXACT []
 synonym: "treatment with an antimycobacterial medication" EXACT []
+synonym: "treatment with antimycobacterial drug" EXACT []
 xref: CHEBI:64912
 is_a: MAXO:0000061 ! antibacterial agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -2487,6 +2585,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000228
 name: antitubercular agent therapy
 def: "Use of a substance that kills or slows the growth of Mycobacterium tuberculosis and is used in the treatment of tuberculosis." []
+synonym: "antitubercular agent therapy" EXACT []
 synonym: "antitubercular drug therapy" EXACT []
 synonym: "antitubercular drug treatment" EXACT []
 synonym: "antituberculosis agent therapy" EXACT []
@@ -2497,6 +2596,7 @@ synonym: "treatment with an anti-tubercular therapy" EXACT []
 synonym: "treatment with an antitubercular agent" EXACT []
 synonym: "treatment with an antitubercular drug" EXACT []
 synonym: "treatment with an antitubercular medication" EXACT []
+synonym: "treatment with antitubercular agent" EXACT []
 synonym: "tuberculostatic agent therapy" NARROW []
 xref: CHEBI:33231
 is_a: MAXO:0000227 ! antimycobacterial agent therapy
@@ -2515,6 +2615,7 @@ synonym: "treatment with a leprostatic agent" EXACT []
 synonym: "treatment with a leprostatic drug" EXACT []
 synonym: "treatment with a leprostatic medication" EXACT []
 synonym: "treatment with a leprostatic therapy" EXACT []
+synonym: "treatment with leprostatic drug" EXACT []
 xref: CHEBI:35816
 is_a: MAXO:0000227 ! antimycobacterial agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -2524,9 +2625,11 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000230
+name: akylating agent therapy
 name: alkylating agent therapy
 def: "An antineoplastic agent that replaces hydrogen atom(s) in nucleophilic moieties with alky radical(s), hindering proper function. Alkylating agents exhibit cytotoxic effects through the alkylation of DNA, resulting in strand cross-linking, ultimately inhibiting DNA replication and cancer cell growth." [NCIT:C1590]
 comment: Highly reactive chemical that introduces alkyl radicals into biologically active molecules and thereby prevents their proper functioning. It could be used as an antineoplastic agent, but it might be very toxic, with carcinogenic, mutagenic, teratogenic, and immunosuppressant actions. It could also be used as a component of poison gases. {xref="CHEBI:22333"}
+synonym: "alkylating agent therapy" EXACT []
 synonym: "alkylating drug therapy" EXACT []
 synonym: "anti-neoplastic alkylating agent therapy" EXACT []
 synonym: "antineoplastic alkylating agent therapy" EXACT []
@@ -2559,6 +2662,7 @@ synonym: "treatment with angiogenesis antagonist medication" EXACT []
 synonym: "treatment with angiogenesis blocker agent" EXACT []
 synonym: "treatment with angiogenesis blocker drug" EXACT []
 synonym: "treatment with angiogenesis blocker medication" EXACT []
+synonym: "treatment with angiogenesis inhibitor" EXACT []
 synonym: "treatment with angiogenesis inhibitor agent" EXACT []
 synonym: "treatment with angiogenesis inhibitor drug" EXACT []
 synonym: "treatment with angiogenesis inhibitor medication" EXACT []
@@ -2609,9 +2713,11 @@ name: aromatase inhibitor agent therapy
 def: "Treatment with an EC 1.14.14.* (oxidoreductase acting on paired donors, incorporating of 1 atom of oxygen, with reduced flavin or flavoprotein as one donor) inhibitor which interferes with the action of aromatase (EC 1.14.14.14) and so reduces production of estrogenic steroid hormones." []
 synonym: "aromatase inhibitor drug therapy" EXACT []
 synonym: "aromatase inhibitor drug treatment" EXACT []
+synonym: "EC 1.14.14.14 (aromatase) inhibitor therapy" EXACT []
 synonym: "treatment with aromatase inhibitor agent" EXACT []
 synonym: "treatment with aromatase inhibitor drug" EXACT []
 synonym: "treatment with aromatase inhibitor medication" EXACT []
+synonym: "treatment with EC 1.14.14.14 (aromatase) inhibitor" EXACT []
 synonym: "treatment with estrogen synthetase inhibitor agent" EXACT []
 synonym: "treatment with estrogen synthetase inhibitor drug" EXACT []
 synonym: "treatment with estrogen synthetase inhibitor medication" EXACT []
@@ -2689,7 +2795,7 @@ synonym: "antihelminthics" EXACT []
 synonym: "vermicide therapy" NARROW []
 synonym: "vermifuge therapy" EXACT []
 xref: CHEBI:35443
-is_a: MAXO:0000158 ! antiparasitic agent therapy
+is_a: MAXO:0000158 ! antiparasititic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:57:26Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2704,8 +2810,9 @@ synonym: "protozoan drug treatment" RELATED []
 synonym: "treatment with an antiprotozoal agent" EXACT []
 synonym: "treatment with an antiprotozoal drug" EXACT []
 synonym: "treatment with an antiprotozoal medication" EXACT []
+synonym: "treatment with antiprotozoal drug" EXACT []
 xref: CHEBI:35820
-is_a: MAXO:0000158 ! antiparasitic agent therapy
+is_a: MAXO:0000158 ! antiparasititic agent therapy
 is_a: MAXO:0001021 ! antimicrobial agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
 intersection_of: RO:0000052 CHEBI:35820
@@ -2721,7 +2828,7 @@ synonym: "ectoparasiticidic drug therapy" EXACT []
 synonym: "ectoparasiticidic drug treatment" EXACT []
 synonym: "ectoparasiticidic drugs treatment" EXACT []
 xref: CHEBI:38956
-is_a: MAXO:0000158 ! antiparasitic agent therapy
+is_a: MAXO:0000158 ! antiparasititic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:58:53Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2754,6 +2861,7 @@ synonym: "second generation antipsychotic agent therapy" EXACT []
 synonym: "second generation antipsychotic drug treatment" EXACT []
 synonym: "second generation antipsychotic therapy" EXACT []
 synonym: "treatment with atypical antipsychotic" EXACT []
+synonym: "treatment with second generation antipsychotic" EXACT []
 xref: CHEBI:65191
 is_a: MAXO:0000166 ! antipsychotic agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -2771,6 +2879,7 @@ synonym: "first generation antipsychotic agent treatment" EXACT []
 synonym: "first generation antipsychotic drug treatment" EXACT []
 synonym: "first generation antipsychotic therapy" EXACT []
 synonym: "treatment with conventional antipsychotic" EXACT []
+synonym: "treatment with first generation antipsychotic" EXACT []
 synonym: "typical antipsychotic agent therapy" EXACT []
 synonym: "typical antipsychotic drug treatment" EXACT []
 synonym: "typical antipsychotic therapy" EXACT []
@@ -2838,15 +2947,18 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000248
+name: anti-hiv agent therapy
 name: anti-human immunodeficiency virus agent therapy
 def: "Treatment with an antiviral agent that destroys or inhibits the replication of the human immunodeficiency virus." []
 synonym: "anti-HIV agent therapy" EXACT []
 synonym: "anti-HIV drug treatment" EXACT []
+synonym: "antiviral agent therapy" EXACT []
 synonym: "treatment with anti-HIV agent" EXACT []
 synonym: "treatment with anti-HIV drug" EXACT []
 synonym: "treatment with anti-human immunodeficiency virus agent" EXACT []
 synonym: "treatment with anti-human immunodeficiency virus drug" EXACT []
 synonym: "treatment with anti-human immunodeficiency virus medication" EXACT []
+synonym: "treatment with antiviral agent" EXACT []
 xref: CHEBI:64946
 xref: NCIT:C1660
 is_a: MAXO:0000168 ! antiviral agent therapy
@@ -2857,16 +2969,19 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000249
+name: anti-HIV therapy, fusion inhibitor
 name: HIV fusion inhibitor therapy
 def: "Treatment with a drug which interferes with the binding, fusion and entry of an HIV virion to a human cell. By blocking this step in HIV's replication cycle, such agents slow the progression from HIV infection to AIDS." []
 synonym: "anti-HIV theraoym fusion inhibitor drug treatment" EXACT []
 synonym: "anti-HIV therapy, fusion inhibitor drug" EXACT []
+synonym: "HIV fusion inhibitor therapy" EXACT []
+synonym: "treatment with HIV fusion inhibitor" EXACT []
 synonym: "treatment with HIV fusion inhibitor agent" EXACT []
 synonym: "treatment with HIV fusion inhibitor drug" EXACT []
 synonym: "treatment with HIV fusion inhibitor medication" EXACT []
 synonym: "treatment with HIV fusion inhibitor therapy" EXACT []
 xref: CHEBI:59886
-is_a: MAXO:0000248 ! anti-human immunodeficiency virus agent therapy
+is_a: MAXO:0000248 ! anti-hiv agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
 intersection_of: RO:0000052 CHEBI:59886
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:18:25Z xsd:dateTime
@@ -2882,7 +2997,7 @@ synonym: "treatment with anti-HIV therapy, non-nucleoside reverse transcriptase 
 synonym: "treatment with anti-HIV therapy, non-nucleoside reverse transcriptase inhibitor drug" EXACT []
 synonym: "treatment with anti-HIV therapy, non-nucleoside reverse transcriptase inhibitor medication" EXACT []
 xref: NCIT:C97453
-is_a: MAXO:0000248 ! anti-human immunodeficiency virus agent therapy
+is_a: MAXO:0000248 ! anti-hiv agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:18:58Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2900,7 +3015,7 @@ synonym: "treatment with nucleoside-nucleotide reverse transcriptase inhibitor d
 synonym: "treatment with nucleoside-nucleotide reverse transcriptase inhibitor medication" EXACT []
 synonym: "treatment with nucleoside/nucleotide reverse transcriptase inhibitor drug" EXACT []
 synonym: "treatment with nucleoside/nucleotide reverse transcriptase inhibitor medication" EXACT []
-is_a: MAXO:0000248 ! anti-human immunodeficiency virus agent therapy
+is_a: MAXO:0000248 ! anti-hiv agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:20:58Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2910,12 +3025,14 @@ name: HIV protease inhibitor therapy
 def: "Use of an inhibitor of HIV protease, an enzyme required for production of proteins needed for viral assembly." []
 synonym: "HIV protease inhibitor drug therapy" EXACT []
 synonym: "HIV protease inhibitor drug treatment" EXACT []
+synonym: "HIV protease inhibitor therapy" EXACT []
+synonym: "treatment with HIV protease inhibitor" EXACT []
 synonym: "treatment with HIV protease inhibitor agent" EXACT []
 synonym: "treatment with HIV protease inhibitor drug" EXACT []
 synonym: "treatment with HIV protease inhibitor medication" EXACT []
 xref: CHEBI:35660
 xref: NCIT:C97366
-is_a: MAXO:0000248 ! anti-human immunodeficiency virus agent therapy
+is_a: MAXO:0000248 ! anti-hiv agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
 intersection_of: RO:0000052 CHEBI:35660
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:21:25Z xsd:dateTime
@@ -3008,6 +3125,7 @@ def: "Treatment with drugs producing both physiological and psychological effect
 synonym: "central nervous system drug therapy" EXACT []
 synonym: "CNS agent therapy" EXACT ABBREVIATION []
 synonym: "CNS drug therapy" EXACT ABBREVIATION []
+synonym: "treatment with central nervous system drug" EXACT []
 xref: CHEBI:35470
 is_a: MAXO:0000058 ! pharmacotherapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -3069,6 +3187,7 @@ synonym: "treatment with dermatolic drug" EXACT []
 synonym: "treatment with dermatolic medication" EXACT []
 synonym: "treatment with dermatolical drug" EXACT []
 synonym: "treatment with dermatolical medication" EXACT []
+synonym: "treatment with dermatologic drug" EXACT []
 xref: CHEBI:50177
 is_a: MAXO:0000058 ! pharmacotherapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -3086,8 +3205,10 @@ id: MAXO:0000267
 name: gastrointestinal agent therapy
 def: "Use of a drug for its effects on the gastrointestinal system, e.g. controlling gastric acidity, regulating gastrointestinal motility and water flow, and improving digestion." []
 synonym: "gastrointestinal agent treatment" EXACT []
+synonym: "gastrointestinal drug therapy" EXACT []
 synonym: "gastrointestinal drug treatment" EXACT []
 synonym: "gastrointestinal drug treatment therapy" EXACT []
+synonym: "treatment with gastrointestinal drug" EXACT []
 synonym: "treatment with gastrointestinal medication" EXACT []
 xref: CHEBI:55324
 is_a: MAXO:0000058 ! pharmacotherapy
@@ -3292,6 +3413,7 @@ name: estrogen modifying agent therapy
 def: "A drug which acts to modulates estrogenic activity in the body, either by modulating the amount of estrogen or by modulating the activity of whatever estrogen is present." []
 synonym: "estrogen modifying drug therapy" EXACT []
 synonym: "estrogen modifying medication therapy" EXACT []
+synonym: "estrogen receptor modulator therapy" EXACT []
 synonym: "oestrogen modifying agent therapy" EXACT []
 synonym: "oestrogen modifying drug therapy" EXACT []
 synonym: "treatment with estrogen receptor modulator" EXACT []
@@ -3326,6 +3448,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000290
 name: parathyroid-suppressant hormonal agent therapy
+name: parathyroid-suppressant hormone therapy
 def: "Use of a drug to treat hyperparathyroidism by reducing the excessive production of parathyroid hormones." []
 synonym: "antiparathyroid agent therapy" EXACT []
 synonym: "antiparathyroid drug therapy" EXACT []
@@ -3353,7 +3476,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000292
 name: androgen suppressant agent therapy
+name: androgen suppressant hormone agent therapy
 def: "Use of a compound which inhibits or antagonises the biosynthesis or actions of androgens." []
+synonym: "androgen antagonist therapy" EXACT []
 synonym: "treatment with androgen antagonist" EXACT []
 synonym: "treatment with androgen blocker" EXACT []
 synonym: "treatment with androgen suppressant agent" EXACT []
@@ -3399,6 +3524,7 @@ synonym: "immune modulator therapy" EXACT []
 synonym: "immune regulator therapy" EXACT []
 synonym: "immunological agent treatment therapy" EXACT []
 synonym: "immunomodulating agent treatment therapy" EXACT []
+synonym: "immunomodulator therapy" EXACT []
 synonym: "immunomodulator treatment therapy" EXACT []
 synonym: "immunomodulatory agent treatment therapy" EXACT []
 synonym: "immunotherapeutic agent treatment therapy" EXACT []
@@ -3429,12 +3555,14 @@ synonym: "immune stimulant agent therapy" EXACT []
 synonym: "immunoactivator treatment therapy" EXACT []
 synonym: "immunoadjuvant treatment therapy" EXACT []
 synonym: "immunologic adjuvant treatment therapy" EXACT []
+synonym: "immunological adjuvant therapy" EXACT []
 synonym: "immunological adjuvant treatment therapy" EXACT []
 synonym: "immunopotentiator treatment therapy" EXACT []
 synonym: "immunostimulant treatment therapy" EXACT []
 synonym: "treatment with immune stimulant" EXACT []
 synonym: "treatment with immunoactivator" EXACT []
 synonym: "treatment with immunoadjuvant" EXACT []
+synonym: "treatment with immunological adjuvant" EXACT []
 xref: CHEBI:50847
 is_a: MAXO:0000295 ! immunological agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -3445,16 +3573,19 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000297
 name: immune suppressant agent therapy
+name: immune suprressant agent therapy
 def: "Use of an agent that suppresses immune function by one of several mechanisms of action." []
 comment: Classical cytotoxic immunosuppressants act by inhibiting DNA synthesis. Others may act through activation of T-cells or by inhibiting the activation of helper cells. In addition, an immunosuppressive agent is a role played by a compound which is exhibited by a capability to diminish the extent and/or voracity of an immune response. {xref="CHEBI:35705"}
 synonym: "immune suppressant agent treatment" EXACT []
 synonym: "immunosuppressant agent therapy" EXACT []
 synonym: "immunosuppressant treatment therapy" EXACT []
+synonym: "immunosuppressive agent therapy" EXACT []
 synonym: "immunosuppressive agent treatment therapy" EXACT []
 synonym: "immunosuppressor agent therapy" EXACT []
 synonym: "treatment immunosuppressant" EXACT []
 synonym: "treatment with immune suppressant" EXACT []
 synonym: "treatment with immunosuppressive" EXACT []
+synonym: "treatment with immunosuppressive agent" EXACT []
 xref: CHEBI:35705
 xref: NCIT:C574
 is_a: MAXO:0000295 ! immunological agent therapy
@@ -3515,6 +3646,7 @@ synonym: "ophthalmology drug therapy" EXACT []
 synonym: "treatment with ophthalmic agent" EXACT []
 synonym: "treatment with ophthalmic drug" EXACT []
 synonym: "treatment with ophthalmic medication" EXACT []
+synonym: "treatment with ophthalmology drug" EXACT []
 xref: CHEBI:66981
 is_a: MAXO:0000058 ! pharmacotherapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -3534,6 +3666,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000307
 name: antiglaucoma agent therapy
 def: "Use of a drug which can be used to prevent or alleviate glaucoma, a disease in which the optic nerve is damaged, resulting in progressive, irreversible loss of vision." []
+synonym: "antiglaucoma drug therapy" EXACT []
 synonym: "ophthalmic antiglaucoma agent therapy" EXACT []
 synonym: "treatment with anti-glaucoma agent" EXACT []
 synonym: "treatment with anti-glaucoma medication" EXACT []
@@ -3625,6 +3758,7 @@ id: MAXO:0000315
 name: antileukotriene agent therapy
 def: "Use of a drug designed to prevent leukotriene synthesis or activity by blocking binding at the receptor level." []
 synonym: "antileukotriene drug treatment" EXACT []
+synonym: "leukotriene antagonist therapy" EXACT []
 synonym: "treatment with antileukotriene agent" EXACT []
 synonym: "treatment with antileukotriene medication" EXACT []
 synonym: "treatment with leukotriene antagonist" EXACT []
@@ -3638,12 +3772,15 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000316
+name: bronchodilator
 name: bronchodilator agent therapy
 def: "Use of an agent that causes an increase in the expansion of a bronchus or bronchial tubes." []
+synonym: "bronchodilator agent therapy" EXACT []
 synonym: "bronchodilator agent treatment" EXACT []
 synonym: "bronchodilator drug treatment" EXACT []
 synonym: "broncholytic agent therapy" EXACT []
 synonym: "treatment with bronchodilator" EXACT []
+synonym: "treatment with bronchodilator agent" EXACT []
 xref: CHEBI:35523
 xref: NCIT:C319
 is_a: MAXO:0000312 ! respiratory tract agent therapy
@@ -3712,10 +3849,12 @@ synonym: "sedative agent drug treatment" EXACT []
 synonym: "sedative and hypnotic drug treatment" EXACT []
 synonym: "sedative drug therapy" EXACT []
 synonym: "sedative drug treatment" EXACT []
+synonym: "sedative therapy" EXACT []
 synonym: "sedative treatment therapy" EXACT []
 synonym: "sedative-hypnotic drug treatment" EXACT []
 synonym: "sedatives and hypnotic drug therapy" EXACT []
 synonym: "sedatives/hypnotic drug treatment" EXACT []
+synonym: "treatment with sedative" EXACT []
 xref: CHEBI:35717
 xref: NCIT:C29756
 is_a: MAXO:0001022 ! psychotropic agent therapy
@@ -3729,7 +3868,9 @@ id: MAXO:0000324
 name: skeletal muscle relaxant agent therapy
 def: "Use of a drug used to produce muscle relaxation (excepting neuromuscular blocking agents). Its primary clinical and therapeutic use is the treatment of muscle spasm and immobility associated with strains, sprains, and injuries of the back and, to a lesser degree, injuries to the neck. Also used for the treatment of a variety of clinical conditions that have in common only the presence of skeletal muscle hyperactivity, for example, the muscle spasms that can occur in multiple sclerosis." []
 synonym: "muscle relaxant agent therapy" EXACT []
+synonym: "muscle relaxant therapy" EXACT []
 synonym: "skeletal muscle relaxant drug treatment" EXACT []
+synonym: "treatment with muscle relaxant" EXACT []
 xref: CHEBI:51371
 xref: NCIT:C29696
 is_a: MAXO:0000058 ! pharmacotherapy
@@ -3744,11 +3885,13 @@ name: anti-infective agent therapy
 def: "Use of a substance for the prophylaxis or therapy of infectious diseases." []
 synonym: "anti-infective drug therapy" EXACT []
 synonym: "anti-infectives" EXACT []
+synonym: "antiinfective agent therapy" EXACT []
 synonym: "antiinfective agents" EXACT []
 synonym: "antiinfective drug" EXACT []
 synonym: "treatment with anti-infective agent" EXACT []
 synonym: "treatment with anti-infective drug" EXACT []
 synonym: "treatment with anti-infective medication" EXACT []
+synonym: "treatment with antiinfective agent" EXACT []
 synonym: "treatment with antiinfective drug" EXACT []
 synonym: "treatment with antiinfective medication" EXACT []
 xref: CHEBI:35441
@@ -4645,6 +4788,7 @@ def: "Use of an organonitrogen heterocyclic antibiotic that contains a beta-lact
 synonym: "beta-lactam antibacterial drug therapy" EXACT []
 synonym: "beta-lactam antibacterial drug treatment" EXACT []
 synonym: "beta-lactam antibiotic agent therapy" EXACT []
+synonym: "beta-lactam antibiotic therapy" EXACT []
 synonym: "beta-lactams therapy" BROAD []
 synonym: "treatment with a beta-lactam antibacterial drug" EXACT []
 synonym: "treatment with a beta-lactam antibacterial medication" EXACT []
@@ -4653,6 +4797,7 @@ synonym: "treatment with a beta-lactam antibiotic agent" EXACT []
 synonym: "treatment with a beta-lactam antibiotic drug" EXACT []
 synonym: "treatment with a beta-lactam antibiotic medication" EXACT []
 synonym: "treatment with a beta-lactam antibiotic therapy" EXACT []
+synonym: "treatment with beta-lactam antibiotic" EXACT []
 xref: CHEBI:27933
 is_a: MAXO:0000061 ! antibacterial agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -4662,6 +4807,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000434
+name: calcium channel blocking agent
 name: calcium channel blocking agent therapy
 def: "Treatment with a pharmaceutical agent that inhibits the movement of calcium across through calcium channels in the cell membrane, preventing or decreasing the amount of calcium able to enter the cell. These drugs are used for their chronotropic, antihypertensive and vasodilatory effects." []
 comment: One of a class of drugs that acts by selective inhibition of calcium influx through cell membranes or on the release and binding of calcium in intracellular pools. {xref="CHEBI:38215"}
@@ -4670,6 +4816,8 @@ synonym: "Ca2+ channel blocker therapy" EXACT ABBREVIATION []
 synonym: "calcium channel antagonist drug therapy" EXACT []
 synonym: "calcium channel antagonist therapy" EXACT []
 synonym: "calcium channel blocker drug therapy" EXACT []
+synonym: "calcium channel blocker therapy" EXACT []
+synonym: "treatment with calcium channel blocker" EXACT []
 synonym: "treatment with calcium channel blocker drug" EXACT []
 synonym: "treatment with calcium channel blocker medication" EXACT []
 synonym: "treatment with calcium channel blocking drug" EXACT []
@@ -4689,6 +4837,7 @@ def: "Treatment with  a drug that inhibits the action of N-methyl-D-aspartate (N
 comment: They tend to induce a state known as dissociative anesthesia, marked by catalepsy, amnesia, and analgesia, while side effects can include hallucinations, nightmares, and confusion. Due to their psychotomimetic effects, many NMDA receptor antagonists are used as recreational drugs. {xref="CHEBI:60643"}
 synonym: "N-methyl-D-aspartate receptor antagonist therapy" EXACT []
 synonym: "NMDA receptor antagonist drug treatment" EXACT []
+synonym: "NMDA receptor antagonist therapy" EXACT []
 synonym: "NMDA receptor antagonist treatment" EXACT []
 synonym: "NMDA receptor blocker therapy" EXACT []
 synonym: "treatment with NMDA blockade drug" EXACT []
@@ -4732,15 +4881,18 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000439
 name: selective serotonin reuptake inhibitor agent therapy
+name: selective serotonin reuptake inhibitor therapy
 def: "Treatment with a medication that increases the extracellular level of the neurotransmitter serotonin (5-HT) by inhibiting its reuptake into the presynaptic cell." [NCIT:C94725]
 comment: Any agent that increases the extracellular level of the neurotransmitter serotonin (5-HT) by inhibiting its reuptake into the presynaptic cell. Increased level in the synaptic cleft prolongs the action of 5-HT on the postsynaptic receptor. This type of agent is typically used as an antidepressant and in the treatment of anxiety disorders and some personality disorders. They are also typically effective and used in treating some cases of insomnia. {xref="NCIT:C94725"}
 synonym: "selective serotonin reuptake inhbitor drug treatment" EXACT []
 synonym: "selective serotonin reuptake inhibitor drug therapy" EXACT []
+synonym: "serotonin uptake inhibitor therapy" EXACT []
 synonym: "SSRI drug therapy" EXACT []
 synonym: "SSRI drug treatment" EXACT []
 synonym: "treatment with selective serotonin reuptake inhibitor agent" EXACT []
 synonym: "treatment with selective serotonin reuptake inhibitor drug" EXACT []
 synonym: "treatment with selective serotonin reuptake inhibitor medication" EXACT []
+synonym: "treatment with serotonin uptake inhibitor" EXACT []
 synonym: "treatment with SSRI" EXACT []
 synonym: "treatment with SSRI agent" EXACT []
 xref: CHEBI:50949
@@ -4810,10 +4962,13 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000444
 name: erythropoietin inhibitor agent therapy
+name: erythropoietin inhibitor therapy
 def: "Use of a drug that inhibits erythropoietin, a glycoprotein hormone that controls erythropoiesis (red blood cell production)." []
 synonym: "EPO inhibitor agent therapy" EXACT ABBREVIATION []
 synonym: "EPO inhibitor drug treatment" EXACT ABBREVIATION []
 synonym: "erythropoietin inhibitor drug treatment" EXACT []
+synonym: "erythropoietin inhibitor therapy" EXACT []
+synonym: "treatment with erythropoietin inhibitor" EXACT []
 xref: CHEBI:91025
 is_a: MAXO:0000442 ! erythropoietin regulating agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -6105,6 +6260,7 @@ id: MAXO:0000572
 name: hypoglycemic agent therapy
 def: "Use of a drug that lower the level of glucose in the blood." []
 synonym: "hypoglycaemic drug therapy" EXACT []
+synonym: "hypoglycemic agent therapy" EXACT []
 synonym: "hypoglycemic drug therapy" EXACT []
 synonym: "treatment with hypoglycemic agent" EXACT []
 synonym: "treatment with hypoglycemic drug" EXACT []
@@ -6673,6 +6829,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000625
 name: inhalation anesthetic therapy
+name: inhalation anesthtetic therapy
 def: "A therapy utilizing an inhaled substance that produces loss of consciousness." []
 synonym: "anesthetic gas therapy" EXACT []
 synonym: "gas anesthetic drug therapy" EXACT []
@@ -6684,6 +6841,7 @@ synonym: "inhalation anesthetic drug therapy" EXACT []
 synonym: "inhalation anesthetic medication therapy" EXACT []
 synonym: "inhalation anesthetic treatment" EXACT []
 synonym: "inhalation anesthetic utilization" EXACT []
+synonym: "treatment with inhalation anaesthetic" EXACT []
 is_a: MAXO:0001020 ! general anesthetic agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
 intersection_of: RO:0000052 CHEBI:38870
@@ -6693,17 +6851,20 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000626
 name: intravenous anesthetic agent therapy
+name: intravenous anesthetic therapy
 def: "A therapy utilizing an intravenous substance that produces loss of consciousness." []
 synonym: "i.v. anesthetic agent therapy" EXACT []
 synonym: "i.v. anesthetic drug therapy" EXACT []
 synonym: "i.v. anesthetic drug treatment" EXACT []
 synonym: "i.v. anesthetic medication therapy" EXACT []
 synonym: "intravenous anaesthetic agent therapy" EXACT []
+synonym: "intravenous anaesthetic therapy" EXACT []
 synonym: "intravenous anesthesia treatment" EXACT []
 synonym: "intravenous anesthetic drug therapy" EXACT []
 synonym: "intravenous anesthetic medication therapy" EXACT []
 synonym: "IV anaesthetic agent therapy" EXACT []
 synonym: "IV anesthetic agent therapy" EXACT []
+synonym: "treatment with intravenous anaesthetic" EXACT []
 is_a: MAXO:0001020 ! general anesthetic agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
 intersection_of: RO:0000052 CHEBI:38877
@@ -6713,13 +6874,16 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000627
 name: topical anesthetic agent therapy
+name: topical anesthetic therapy
 def: "A superficial loss of sensation in conjunctiva, mucous membranes, or skin, produced by direct application of local anesthetic solutions, ointments, gels or sprays." [PMID:26702198]
 synonym: "topical anaesthetic agent therapy" EXACT []
 synonym: "topical anaesthetic drug treatment" EXACT []
+synonym: "topical anaesthetic therapy" EXACT []
 synonym: "topical anesthesia treatment" EXACT []
 synonym: "topical anesthetic drug therapy" EXACT []
 synonym: "topical anesthetic medication treatment" EXACT []
-is_a: MAXO:0000195 ! local anesthetic agent therapy
+synonym: "treatment with topical anaesthetic" EXACT []
+is_a: MAXO:0000195 ! local anesthetic
 intersection_of: MAXO:0000058 ! pharmacotherapy
 intersection_of: RO:0000052 CHEBI:48425
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-26T18:25:03Z xsd:dateTime
@@ -6729,8 +6893,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000628
 name: angiogenesis modulating agent therapy
 def: "Use of an agent that modulates the physiologic angiogenesis process." []
+synonym: "angiogenesis modulating agent therapy" EXACT []
 synonym: "angiogenesis modulating drug treatment" EXACT []
 synonym: "angiogenesis modulating medication therapy" EXACT []
+synonym: "treatment with angiogenesis modulating agent" EXACT []
 xref: CHEBI:50926
 is_a: MAXO:0000058 ! pharmacotherapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -6741,9 +6907,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000629
 name: angiogenesis inducing agent therapy
+name: angiogensis inducing agent therapy
 def: "Use of an agent that induces or stimulates the physiologic angiogenesis process." []
+synonym: "angiogenesis inducing agent therapy" EXACT []
 synonym: "angiogenesis inducing drug treatment" EXACT []
 synonym: "angiogenesis inducing medication therapy" EXACT []
+synonym: "treatment with angiogenesis inducing agent" EXACT []
 xref: CHEBI:50927
 is_a: MAXO:0000628 ! angiogenesis modulating agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -6755,10 +6924,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000630
 name: pro-angiogenic agent therapy
 def: "Use of a compound that promotes the growth of new blood vessels from pre-existing vessels." []
+synonym: "pro-angiogenic agent therapy" EXACT []
 synonym: "pro-angiogenic drug treatment" EXACT []
 synonym: "pro-angiogenic medication therapy" EXACT []
 synonym: "pro-angiogenic medication treatment" EXACT []
 synonym: "proangiogenic agent therapy" EXACT []
+synonym: "treatment with pro-angiogenic agent" EXACT []
 xref: CHEBI:72571
 is_a: MAXO:0000628 ! angiogenesis modulating agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -6772,6 +6943,8 @@ name: antacid agent therapy
 def: "A therapy used to neutralise stomach acidity." []
 synonym: "antacid drug therapy" EXACT []
 synonym: "antacid medication therapy" EXACT []
+synonym: "antacid therapy" EXACT []
+synonym: "treatment with antacid" EXACT []
 xref: CHEBI:65265
 is_a: MAXO:0000267 ! gastrointestinal agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -6786,6 +6959,7 @@ def: "A therapy used to treat or ameliorate peptic ulcer or irritation of the ga
 synonym: "anti-ulcer drug therapy" EXACT []
 synonym: "anti-ulcer medication treatment" EXACT []
 synonym: "treatment with anti-ulcer agent" EXACT []
+synonym: "treatment with anti-ulcer drug" EXACT []
 synonym: "treatment with anti-ulcer medication" EXACT []
 xref: CHEBI:49201
 is_a: MAXO:0000267 ! gastrointestinal agent therapy
@@ -6808,6 +6982,7 @@ synonym: "anti-allergic medication therapy" EXACT []
 synonym: "anti-allergic medication treatment" EXACT []
 synonym: "treatment with allergy medication" EXACT []
 synonym: "treatment with an allergy drug" EXACT []
+synonym: "treatment with anti-allergic agent" EXACT []
 xref: CHEBI:50857
 is_a: MAXO:0000058 ! pharmacotherapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -6821,8 +6996,10 @@ name: anti-asthmatic agent therapy
 def: "Usage of a drug to treat asthma." []
 synonym: "anti-asthma drug therapy" EXACT []
 synonym: "anti-asthma drug treatment" EXACT []
+synonym: "anti-asthmatic drug therapy" EXACT []
 synonym: "asthma medication therapy" EXACT []
 synonym: "drug treatment of asthma" EXACT []
+synonym: "treatment with anti-asthmatic drug" EXACT []
 xref: CHEBI:49167
 is_a: MAXO:0000312 ! respiratory tract agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -6838,12 +7015,16 @@ synonym: "anti estrogen agent therapy" EXACT []
 synonym: "anti-estrogen drug therapy" EXACT []
 synonym: "anti-estrogen medication treatment" EXACT []
 synonym: "anti-oestrogen agent therapy" EXACT []
+synonym: "estrogen antagonist therapy" EXACT []
+synonym: "estrogen receptor modulator therapy" EXACT []
 synonym: "treatment with anti-estrogen agent" EXACT []
 synonym: "treatment with anti-estrogen drug" EXACT []
 synonym: "treatment with anti-estrogen medication" EXACT []
 synonym: "treatment with anti-oestrogen medication" EXACT []
 synonym: "treatment with antiestrogen medication" EXACT []
 synonym: "treatment with antioestrogen medication" EXACT []
+synonym: "treatment with estrogen antagonist" EXACT []
+synonym: "treatment with estrogen receptor modulator" EXACT []
 xref: CHEBI:50739
 xref: CHEBI:50751
 is_a: MAXO:0000062 ! antineoplastic agent therapy
@@ -6858,6 +7039,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000636
 name: anti-dyskinesia agent therapy
+name: antidyskinesia agent therapy
 def: "Use of a compound which can be used to treat or alleviate the symptoms of dyskinesia." []
 synonym: "anti-dyskinesia drug therapy" EXACT []
 synonym: "anti-dyskinesia medication therapy" EXACT []
@@ -6875,6 +7057,7 @@ synonym: "treatment with a antidyskinesia drug" EXACT []
 synonym: "treatment with a antidyskinesia medication" EXACT []
 synonym: "treatment with a antidyskinetic drug" EXACT []
 synonym: "treatment with a antidyskinetic medication" EXACT []
+synonym: "treatment with antidyskinesia agent" EXACT []
 xref: CHEBI:66956
 is_a: MAXO:0000260 ! central nervous system agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -6890,6 +7073,7 @@ synonym: "anti-herpes simplex virus agent therapy" EXACT []
 synonym: "anti-herpes simplex virus drug therapy" EXACT []
 synonym: "anti-herpes simplex virus drug treatment" EXACT []
 synonym: "anti-herpes simplex virus medication therapy" EXACT []
+synonym: "anti-HSV agent therapy" EXACT []
 synonym: "anti-HSV drug therapy" EXACT []
 synonym: "anti-HSV drug treatment" EXACT []
 synonym: "anti-HSV medication therapy" EXACT []
@@ -6900,6 +7084,7 @@ synonym: "Treatment  with anti-herpes simplex virus drug" EXACT []
 synonym: "Treatment  with anti-herpes simplex virus medication" EXACT []
 synonym: "Treatment  with anti-HSV drug" EXACT []
 synonym: "Treatment  with anti-HSV medication" EXACT []
+synonym: "treatment with anti-HSV agent" EXACT []
 xref: CHEBI:64952
 is_a: MAXO:0000247 ! antiherpetic agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -6913,7 +7098,9 @@ name: anti-HSV-1 agent therapy
 def: "Treatment with an antiviral agent that destroys or inhibits the replication of the herpes simplex virus-1." []
 synonym: "anti-herpes simplex virus 1 drug therapy" EXACT []
 synonym: "anti-herpes simplex virus 1 medication treatment" EXACT []
+synonym: "anti-HSV-1 agent therapy" EXACT []
 synonym: "treatment for HSV-1  with medication" EXACT []
+synonym: "treatment with anti-HSV-1 agent" EXACT []
 synonym: "treatment with anti-HSV-1 drug" EXACT []
 synonym: "treatment with anti-HSV-1 medication" EXACT []
 xref: CHEBI:64953
@@ -6929,7 +7116,9 @@ name: anti-HSV-2 agent therapy
 def: "Treatment with an antiviral agent that destroys or inhibits the replication of the herpes simplex virus-2." []
 synonym: "anti-herpes simplex virus 2 drug therapy" EXACT []
 synonym: "anti-herpes simplex virus 2 medication treatment" EXACT []
+synonym: "anti-HSV-2 agent therapy" EXACT []
 synonym: "treatment for HSV-2  with medication" EXACT []
+synonym: "treatment with anti-HSV-2 agent" EXACT []
 synonym: "treatment with anti-HSV-2 drug" EXACT []
 synonym: "treatment with anti-HSV-2 medication" EXACT []
 xref: CHEBI:64954
@@ -6943,10 +7132,13 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000640
 name: corticosteroid agent therapy
+name: corticosteroid therapy
 def: "Use of a natural or synthetic analogue of the hormones secreted by the adrenal gland as a type of anti-inflammatory treatment." []
 synonym: "corticosteroid injection treatment" NARROW []
+synonym: "corticosteroid therapy" EXACT []
 synonym: "corticosteroid treatment" EXACT []
 synonym: "oral corticosteroid drug treatment" NARROW []
+synonym: "treatment with corticosteroid" EXACT []
 synonym: "treatment with corticosteroid agent" EXACT []
 synonym: "treatment with corticosteroid drug" EXACT []
 synonym: "treatment with corticosteroid medication" EXACT []
@@ -6961,12 +7153,15 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000642
 name: emetic agent therapy
+name: emetic therapy
 def: "Treatment to induce vomiting and nausea usually administered in emergency situations after ingestion of a toxin." []
 synonym: "emetic drug therapy" EXACT []
 synonym: "emetic medication therapy" EXACT []
+synonym: "emetic therapy" EXACT []
 synonym: "treatment with an emetic drug" EXACT []
 synonym: "treatment with an emetic medication" EXACT []
 synonym: "treatment with an emetic therapy" EXACT []
+synonym: "treatment with emetic" EXACT []
 xref: CHEBI:149552
 intersection_of: MAXO:0000058 ! pharmacotherapy
 intersection_of: RO:0000052 CHEBI:149552
@@ -6999,7 +7194,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000644
 name: molecular pathway modifying agent therapy
+synonym: "biochemical role therapy" EXACT []
 synonym: "CHEBI:52206" EXACT []
+synonym: "treatment with biochemical role" EXACT []
 is_a: MAXO:0000058 ! pharmacotherapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
 intersection_of: RO:0000052 CHEBI:52206
@@ -7008,12 +7205,15 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000645
+name: acetylcholinesterase inhibitor
 name: acetylcholinesterase inhibitor therapy
 def: "Use of an inhibitor that interferes with the action of enzyme acetylcholinesterase, which helps breaking down of acetylcholine into choline and acetic acid" []
 synonym: "acetylcholinesterase inhibitor agent therapy" EXACT []
 synonym: "acetylcholinesterase inhibitor drug therapy" EXACT []
 synonym: "AChE inhibitor drug treatment" EXACT []
 synonym: "AChE inhibitor medication treatment" EXACT []
+synonym: "EC 3.1.1.7 (acetylcholinesterase) inhibitor therapy" EXACT []
+synonym: "treatment with EC 3.1.1.7 (acetylcholinesterase) inhibitor" EXACT []
 intersection_of: MAXO:0000058 ! pharmacotherapy
 intersection_of: RO:0000052 CHEBI:38462
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-28T19:16:31Z xsd:dateTime
@@ -7061,6 +7261,8 @@ name: enzyme inhibitor agent therapy
 def: "A therapy using a compound or agent that combines with an enzyme in such a manner as to prevent the normal substrate-enzyme combination and the catalytic reaction." []
 synonym: "enzyme inhibitor drug treatment" EXACT []
 synonym: "enzyme inhibitor medication treatment" EXACT []
+synonym: "enzyme inhibitor therapy" EXACT []
+synonym: "treatment with enzyme inhibitor" EXACT []
 synonym: "treatment with enzyme inhibitor agent" EXACT []
 synonym: "treatment with enzyme inhibitor drug" EXACT []
 synonym: "treatment with enzyme inhibitor medication" EXACT []
@@ -7076,6 +7278,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000649
 name: hyperglycemic agent therapy
 def: "Use of a drug which increases blood glucose level." []
+synonym: "hyperglycemic agent therapy" EXACT []
 synonym: "treatment with hyperglycemic agent" EXACT []
 synonym: "treatment with hyperglycemic drug" EXACT []
 synonym: "treatment with hyperglycemic medication" EXACT []
@@ -7090,6 +7293,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000650
 name: antiatherogenic agent therapy
 def: "Treatment with a cardiovascular drug that prevents atherogenesis, the accumulation of lipid-containing plaques on the innermost layers of the arteries." []
+synonym: "antiatherogenic agent therapy" EXACT []
 synonym: "antiatherogenic drug therapy" EXACT []
 synonym: "treatment with anti-atherogenic agent" EXACT []
 synonym: "treatment with anti-atherogenic drug" EXACT []
@@ -7109,6 +7313,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000651
 name: antiatherosclerotic agent therapy
 def: "Treatment with a cardiovascular drug that prevents atherosclerosis,a disease in which the inside of an artery narrows due to the build up of plaque." []
+synonym: "antiatherosclerotic agent therapy" EXACT []
 synonym: "antiatherosclerotic drug therapy" EXACT []
 synonym: "treatment with anti-atherosclerosis drug" EXACT []
 synonym: "treatment with anti-atherosclerosis medication" EXACT []
@@ -7142,13 +7347,16 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000653
+name: angiotensin receptor blocker therapy
 name: angiotensin-receptor blocker therapy
 def: "Treatment with a class of agents that act by selectively inhibiting angiotensin II receptor activation in the renin-angiotensin-aldosterone system." []
 comment: A pharmaceutical agent that selectively inhibits angiotensin II receptor activation in the renin-angiotensin-aldosterone system reducing production and secretion of aldosterone, amongst other actions. The combined effects result in reduction of blood pressure. It is primarily used for the reduction of proteinuria and the treatment of hypertension in cases where the patient is intolerant of ACE inhibitor therapy. {xref="NCIT:C66930"}
 comment: Angiotensin II receptor antagonists bind to and block the activation of angiotensin II type 1 (AT1) receptors, thereby reducing production and secretion of aldosterone, amongst other actions. The combined effects result in reduction of blood pressure. Although this class of agents is also used in diabetic nephropathy (kidney damage due to diabetes) and congestive heart failure, it is primarily used for the treatment of hypertension in cases where the patient is intolerant of ACE inhibitor therapy. {xref="NCIT:C66930"}
+synonym: "angiotensin receptor antagonist therapy" EXACT []
 synonym: "ARB therapy" EXACT []
 synonym: "treatment with angiotensin II receptor antagonist" EXACT []
 synonym: "treatment with angiotensin II receptor blocker" EXACT []
+synonym: "treatment with angiotensin receptor antagonist" EXACT []
 synonym: "treatment with ARB" EXACT []
 xref: CHEBI:61016
 xref: NCIT:C66930
@@ -7169,12 +7377,15 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000655
 name: ACE 1 inhibitor therapy
+name: ACE1 inhibitor therapy
 def: "Use of a drug that inhibits angiotensin-converting enzyme (ACE) 1, an enzyme that catalyzes the conversion of angiotensin I to angiotensin II." []
 synonym: "angiotensin-converting enzyme-1 inhibitor therapy" EXACT []
+synonym: "EC 3.4.15.1 (peptidyl-dipeptidase A) inhibitor therapy" EXACT []
 synonym: "peptidyl-dipeptidase A inhibitor therapy" EXACT []
 synonym: "Treatment with ACE-1 inhibitor" EXACT []
 synonym: "Treatment with ACE1 inhibitor" EXACT []
 synonym: "treatment with angiotensin I-converting enzyme inhibitor" EXACT []
+synonym: "treatment with EC 3.4.15.1 (peptidyl-dipeptidase A) inhibitor" EXACT []
 xref: CHEBI:35457
 is_a: MAXO:0000652 ! ACE inhibitor therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -7185,9 +7396,11 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000656
 name: ACE 2 inhibitor therapy
+name: ACE2 inhibitor therapy
 def: "Use of a drug that inhibits angiotensin-converting enzyme (ACE) 2, an enzyme that catalyzes the conversion of angiotensin I to angiotensin II." []
 synonym: "angiotensin-converting enzyme-2 inhibitor therapy" EXACT []
 synonym: "angiotensin-converting enzyme2 inhibitor therapy" EXACT []
+synonym: "EC 3.4.17.23 (angiotensin-converting enzyme 2) inhibitor therapy" EXACT []
 synonym: "Treatment with ACE-2 inhibitor" EXACT []
 synonym: "treatment with EC 3.4.17.23 (angiotensin-converting enzyme 2) inhibitor" EXACT []
 synonym: "treatment with hACE2 inhibitor" EXACT []
@@ -7201,6 +7414,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000657
 name: metabotropic glutamate receptor antagonist therapy
 def: "Use of a drug that selectively binds to and inhibits metabotropic glutamate receptors." []
+synonym: "metabotropic glutamate receptor antagonist therapy" EXACT []
 synonym: "treatment with metabotropic glutamate receptor antagonist" EXACT []
 synonym: "treatment with metabotropic glutamate receptor blockade" EXACT []
 synonym: "treatment with metabotropic glutamate receptor blocker" EXACT []
@@ -7242,6 +7456,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000661
 name: NMDA receptor agonist therapy
 def: "Use of a drug that activates the action of N-methyl-D-aspartate (NMDA) receptors." []
+synonym: "NMDA receptor agonist therapy" EXACT []
 synonym: "treatment with NMDA receptor agonist" EXACT []
 xref: CHEBI:64571
 is_a: MAXO:0000658 ! NMDA receptor modulator agent therapy
@@ -7253,8 +7468,11 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000662
 name: AMPA receptor agonist therapy
+name: AMPA recpeptor agonist therapy
 def: "Use of a drug that selectively binds to and activates AMPA receptors." []
+synonym: "AMPA receptor agonist therapy" EXACT []
 synonym: "Treatment with AMPA receptor agonist" EXACT []
+synonym: "treatment with AMPA receptor agonist" EXACT []
 xref: CHEBI:64102
 is_a: MAXO:0000659 ! AMPA-targeting agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -7266,7 +7484,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000663
 name: AMPA receptor antagonist therapy
 def: "Use of a drug that selectively binds to and inhibits AMPA receptors." []
+synonym: "AMPA receptor antagonist therapy" EXACT []
 synonym: "Treatment with AMPA receptor antagonist" EXACT []
+synonym: "treatment with AMPA receptor antagonist" EXACT []
 synonym: "Treatment with AMPA receptor blockade" EXACT []
 synonym: "Treatment with AMPA receptor blocker" EXACT []
 xref: CHEBI:71014
@@ -7280,8 +7500,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000664
 name: antidiarrheal agent therapy
 synonym: "antidiarrhoeal agent therapy" EXACT []
+synonym: "antidiarrhoeal drug therapy" EXACT []
 synonym: "treatment with antidiarrheal agent" EXACT []
 synonym: "treatment with antidiarrheal medication" EXACT []
+synonym: "treatment with antidiarrhoeal drug" EXACT []
 xref: CHEBI:55323
 is_a: MAXO:0000267 ! gastrointestinal agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -8229,6 +8451,88 @@ property_value: http://purl.org/dc/elements/1.1/date 2020-10-08T20:20:40Z xsd:da
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0000737
+name: fibrate antilipidemic agent therapy
+def: "A therapy derived from fibric acid that lowers serum LDL cholesterol levels by activating peroxisome proliferator activated receptor alpha (PPARa)." []
+synonym: "fibrate dyslipidemic agent therapy" EXACT []
+xref: NCIT:C98150
+is_a: MAXO:0000189 ! dyslipidemic agent therapy
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-17T21:12:47Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000738
+name: bile acid sequestrant therapy
+def: "Therapy using a highly charged polymeric agent to bind bile acids in the gastrointestinal tract and prevent their reabsorption from the gut. The bound bile acids are excreted with the feces and plasma cholesterol is converted to bile acid to reestablish normal bile acid levels, resulting in a lowering of plasma cholesterol concentrations." []
+is_a: MAXO:0000189 ! dyslipidemic agent therapy
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-17T21:21:54Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000739
+name: HMG-CoA reductase inhibitor therapy
+def: "Therapy that inhibits HMG-CoA reductase inhibitor." []
+synonym: "EC 1.1.1.34/EC 1.1.1.88 (hydroxymethylglutaryl-CoA reductase) inhibitor therapy" EXACT []
+synonym: "hydroxymethylglutaryl-CoA reductase inhibitor therapy" EXACT []
+synonym: "statin agent therapy" EXACT []
+synonym: "treatment with EC 1.1.1.34/EC 1.1.1.88 (hydroxymethylglutaryl-CoA reductase) inhibitor" EXACT []
+synonym: "treatment with statins" EXACT []
+is_a: MAXO:0000189 ! dyslipidemic agent therapy
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: RO:0000052 CHEBI:35664
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-17T21:37:04Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000740
+name: nicotinic acid agent therapy
+def: "Treatment with an agent that works through, or mimics, the action of niacin." []
+comment: An antilipidemic agent that works through, or mimics, the action of niacin to increase HDL-C levels by blocking hepatic uptake of apolipoprotein A-1 and decreasing HDL clearance. The use of free niacin is limited by its side effects of skin flushing (i.e., redness, itching, burning, and paresthesias) {xref="NCIT:C98151"}
+synonym: "niacin agent therapy" RELATED []
+synonym: "niacin-based antilipidemic agent" NARROW []
+synonym: "treatment with niacin" RELATED []
+xref: CHEBI:15940
+xref: NCIT:C98151
+is_a: MAXO:0000189 ! dyslipidemic agent therapy
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-17T21:45:22Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000741
+name: potassium-sparing diuretic agent therapy
+def: "Treatment with a diuretic agent that produces diuresis without increasing potassium excretion." []
+comment: Potassium sparing diuretics are generally either aldosterone antagonists and thus prevent the aldosterone-mediated promotion of sodium and water retention, or are epithelial sodium channel blockers and prevent the exchange of potassium for sodium in the distal convoluted tubule. These agents cause diuresis without increasing potassium secretion and thus do not cause hypokalemia. {xref="NCIT:C49186"}
+synonym: "treatment with potassium-sparing diuretic" EXACT []
+xref: NCIT:C49186
+is_a: MAXO:0000165 ! diuretic agent therapy
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-18T16:10:36Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000742
+name: thiazide diuretic agent therapy
+def: "Treatment with a benzothiadiazide derivative or other thiazide-like agent with diuretic and anti-hypertensive activity." []
+comment: Thiazide diuretics inhibit the sodium-chloride transporter in the distal tubule in the kidneys, thereby suppressing sodium and chloride reabsorption from the distal convoluted tubules (DCT) and increasing the excretion of sodium, chloride, potassium and water. In addition, thiazide diuretics decrease excretion of calcium and uric acid. These agents cause vasodilation possibly by activating calcium-activated potassium channels in vascular smooth muscle and inhibiting various carbonic anhydrases in vascular tissue. {xref="NCIT:C49185"}
+synonym: "treatment with thiazide diuretic agent" EXACT []
+xref: NCIT:C49185
+is_a: MAXO:0000165 ! diuretic agent therapy
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-18T16:16:04Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000743
+name: sulfonylurea agent therapy
+def: "Treatment with sulfonamide urea derivatives with antihyperglycemic activity." []
+comment: Sulphonylurea antidiabetic agents bind to sulfonylurea receptor type 1 (SUR1), the subunit of ATP-sensitive inwardly-rectifier potassium (IKATP) channels on the membranes of pancreatic beta cells, thereby blocking the inward current flow (influx) of positively charged K+ ions into the cell. This results in tonic membrane depolarization, and induces a calcium ion influx through voltage-sensitive calcium channels; increased intracellular calcium ion levels trigger exocytosis of insulin-containing granules. This eventually induces secretion of insulin. The IKATP channels found in pancreatic islets are complexes of four IKATP 6.2 and four SUR1 subunits. In addition, some sulfonylureas of larger molecular size may increase the sensitivity of peripheral tissues to insulin mediated through peroxisome proliferator-activated receptor gamma (PPARgamma). {xref="NCIT:C97936"}
+synonym: "sulfonylurea antidiabetic agent therapy" EXACT []
+synonym: "treatment with sulfonylurea" EXACT []
+synonym: "treatment with sulfonylurea agent" EXACT []
+xref: NCIT:C97936
+is_a: MAXO:0000572 ! hypoglycemic agent therapy
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-18T16:22:03Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0001000
 name: functional magnetic resonance imaging procedure
 def: "A type of MRI that takes a series of images of an organ in quick succession and statistically analyzes the differences between the images." [NCIT:C17958]
@@ -8416,11 +8720,13 @@ name: general anesthetic agent therapy
 def: "A therapy utilizing a substance that produces loss of consciousness." []
 synonym: "general anaesthetic agents therapy" EXACT []
 synonym: "general anaesthetic medication therapy" EXACT []
+synonym: "general anaesthetic therapy" EXACT []
 synonym: "general anaesthetics therapy" EXACT []
 synonym: "general anesthesia therapy" EXACT []
 synonym: "general anesthesia treatment" EXACT []
 synonym: "general anesthetic medication therapy" EXACT []
 synonym: "general anesthetics therapy" EXACT []
+synonym: "treatment with general anaesthetic" EXACT []
 xref: CHEBI:38869
 is_a: MAXO:0000170 ! anesthetic agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -8441,6 +8747,7 @@ synonym: "treatment with an anti-microbial medication" EXACT []
 synonym: "treatment with an antimicrobial agent" EXACT []
 synonym: "treatment with an antimicrobial drug" EXACT []
 synonym: "treatment with an antimicrobial medication" EXACT []
+synonym: "treatment with antimicrobial drug" EXACT []
 xref: CHEBI:36043
 is_a: MAXO:0000325 ! anti-infective agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -8456,6 +8763,7 @@ synonym: "psychoactive agent therapy" EXACT []
 synonym: "psychoactive drug treatment" EXACT []
 synonym: "psychopharmaceutical therapy" EXACT []
 synonym: "psychotropic agent drug therapy" EXACT []
+synonym: "psychotropic drug therapy" EXACT []
 synonym: "psychotropic drug treatment" EXACT []
 synonym: "treatment with psychotropic drug" EXACT []
 xref: CHEBI:35471
@@ -8476,7 +8784,9 @@ synonym: "tranquilising drug" EXACT []
 synonym: "tranquilizers" EXACT []
 synonym: "tranquilizing agent" EXACT []
 synonym: "tranquilizing drug" EXACT []
+synonym: "tranquilizing drug therapy" EXACT []
 synonym: "tranquilizing drugs" EXACT []
+synonym: "treatment with tranquilizing drug" EXACT []
 xref: CHEBI:35473
 is_a: MAXO:0001022 ! psychotropic agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
@@ -8489,6 +8799,7 @@ id: MAXO:0001025
 name: adrenergic agent therapy
 def: "Therapy using any agent that acts on an adrenergic receptor or affects adrenergic signal transduction." []
 synonym: "adrenergic agent drug treatment" EXACT []
+synonym: "adrenergic agent therapy" EXACT []
 synonym: "adrenergic drug therapy" EXACT []
 synonym: "treatment with adrenergic agent" EXACT []
 synonym: "treatment with adrenergic drug" EXACT []
@@ -8504,6 +8815,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001026
 name: beta-adrenergic agonist agent therapy
+name: beta-adrenergic agonist therapy
 def: "An agent that selectively binds to and activates beta-adrenergic receptors." [CHEBI:35522]
 synonym: "b-adrenergic agonist" EXACT []
 synonym: "b-adrenergic receptor agonist" EXACT []
@@ -8511,6 +8823,7 @@ synonym: "beta adrenergic receptor agonist" EXACT []
 synonym: "beta-adrenergic agonist" EXACT []
 synonym: "beta-adrenergic agonist agent" EXACT []
 synonym: "beta-adrenergic agonist drugs" EXACT []
+synonym: "beta-adrenergic agonist therapy" EXACT []
 synonym: "beta-adrenergic agonists" EXACT []
 synonym: "beta-adrenergic receptor  agonist drugs" EXACT []
 synonym: "beta-adrenergic receptor agonist" EXACT []
@@ -9365,6 +9678,42 @@ synonym: "renal CAT scan" EXACT []
 synonym: "renal CT" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-06-9T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-3010
+
+[Term]
+id: MAXO:0001123
+name: potassium supplementation
+def: "Addition of potassium atom to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of potassium" EXACT []
+synonym: "dietary supplementation of potassium atom" EXACT []
+synonym: "potassium atom supplemental intake" EXACT []
+synonym: "supplementation of potassium" EXACT []
+synonym: "supplementation of potassium atom" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-17T02:36:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001124
+name: anticholesteric agent therapy
+synonym: "anticholesteremic drug therapy" EXACT []
+synonym: "antihypercholesterolemic agent therapy" EXACT []
+synonym: "cholesterol inhibitor therapy" EXACT []
+synonym: "hypocholesteremic agent therapy" EXACT []
+synonym: "treatment with anticholesteremic drug" EXACT []
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: RO:0000052 CHEBI:35821
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-17T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001125
+name: loop diuretic agent therapy
+def: "Therapy with an agent that inhibits the function of the sodium-potassium-chloride (Na+, K+, Cl-) cotransporter system in the thick ascending limb of the loop of Henle, thereby inhibiting the reabsorption of sodium, potassium, and chloride ions. This leads to an increase in the excretion of sodium, potassium, chloride, calcium, magnesium, ammonium and water." []
+synonym: "loop diuretic therapy" EXACT []
+synonym: "treatment with loop diuretic" EXACT []
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: RO:0000052 CHEBI:77608
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-17T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0002000
