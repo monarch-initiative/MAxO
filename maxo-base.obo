@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2020-11-19/maxo-base.owl
+data-version: maxo/releases/2020-11-20/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Aaron Zhang" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
@@ -8,7 +8,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2020-11-19" xsd:string
+property_value: owl:versionInfo "2020-11-20" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -2984,7 +2984,7 @@ synonym: "treatment with HIV fusion inhibitor drug" EXACT []
 synonym: "treatment with HIV fusion inhibitor medication" EXACT []
 synonym: "treatment with HIV fusion inhibitor therapy" EXACT []
 xref: CHEBI:59886
-is_a: MAXO:0000248 ! anti-human immunodeficiency virus agent therapy
+is_a: MAXO:0000248 ! anti-hiv agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
 intersection_of: RO:0000052 CHEBI:59886
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:18:25Z xsd:dateTime
@@ -3000,7 +3000,7 @@ synonym: "treatment with anti-HIV therapy, non-nucleoside reverse transcriptase 
 synonym: "treatment with anti-HIV therapy, non-nucleoside reverse transcriptase inhibitor drug" EXACT []
 synonym: "treatment with anti-HIV therapy, non-nucleoside reverse transcriptase inhibitor medication" EXACT []
 xref: NCIT:C97453
-is_a: MAXO:0000248 ! anti-human immunodeficiency virus agent therapy
+is_a: MAXO:0000248 ! anti-hiv agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:18:58Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -3018,7 +3018,7 @@ synonym: "treatment with nucleoside-nucleotide reverse transcriptase inhibitor d
 synonym: "treatment with nucleoside-nucleotide reverse transcriptase inhibitor medication" EXACT []
 synonym: "treatment with nucleoside/nucleotide reverse transcriptase inhibitor drug" EXACT []
 synonym: "treatment with nucleoside/nucleotide reverse transcriptase inhibitor medication" EXACT []
-is_a: MAXO:0000248 ! anti-human immunodeficiency virus agent therapy
+is_a: MAXO:0000248 ! anti-hiv agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:20:58Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -3035,7 +3035,7 @@ synonym: "treatment with HIV protease inhibitor drug" EXACT []
 synonym: "treatment with HIV protease inhibitor medication" EXACT []
 xref: CHEBI:35660
 xref: NCIT:C97366
-is_a: MAXO:0000248 ! anti-human immunodeficiency virus agent therapy
+is_a: MAXO:0000248 ! anti-hiv agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
 intersection_of: RO:0000052 CHEBI:35660
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:21:25Z xsd:dateTime
@@ -6187,7 +6187,6 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000565
 name: serum amyloid A biomarker assessment
 def: "Detection of serum levels of amyloid A (SAA) in response to inflamation." []
-synonym: "cytokine biomarker measurement" EXACT []
 synonym: "SAA biomarker measurement" EXACT []
 is_a: MAXO:0000550 ! inflammatory biomarker assessment
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-30T19:37:28Z xsd:dateTime
@@ -8611,7 +8610,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000750
 name: transplant conditioning
 def: "Administration of high doses of chemotherapy or radiation therapy, as well as immunosuppressive therapy, to a transplant recipient prior to a bone marrow or hematopoietic stem cell transplant. Conditioning destroys the patient's abnormal blood cells or cancer, as well as slows the patient's immune response against the donor bone marrow (graft rejection)." [NCIT:C64468]
-xref: conditioning regimen
+synonym: "conditioning regimen" EXACT []
 xref: NCIT:C64468
 is_a: MAXO:0000647 ! chemotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-19T20:12:40Z xsd:dateTime
@@ -8661,7 +8660,6 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000755
 name: liquid biopsy
 def: "The sampling and analysis of non-solid biological tissue often through rapid and non-invasive methods, which allows the assessment in real-time of the evolving landscape of cancer." [PMID:32580740]
-synonym: "solid tumor monitoring" EXACT []
 synonym: "solid tumor monitoring" RELATED []
 is_a: MAXO:0000126 ! cancer screening
 is_a: MAXO:0000129 ! biopsy procedure
