@@ -11,7 +11,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/maxo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2020-11-18/maxo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2020-11-20/maxo-base.owl"/>
         <dc:creator>Aaron Zhang</dc:creator>
         <dc:creator>Leigh Carmody</dc:creator>
         <dc:creator>Peter Robinson</dc:creator>
@@ -19,7 +19,7 @@
         <dc:title>Medical Action Ontology</dc:title>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-11-18</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-11-20</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -2481,7 +2481,6 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with drug</oboInOwl:hasExactSynonym>
         <rdfs:comment>Medical treatment by means of drugs.</rdfs:comment>
         <rdfs:label xml:lang="en">pharmacotherapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pharmacotherapy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000058"/>
@@ -2529,7 +2528,6 @@
         <oboInOwl:hasExactSynonym>treatment with an antibacterial therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with antibacterial drug</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">antibacterial agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antibacterial agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -2555,6 +2553,7 @@
         <oboInOwl:hasBroadSynonym>anticancer agent therapy</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>CHEBI:35610</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCIT:C274</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anti-neoplastic agent therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antineoplastic agent therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>antineoplastic drug therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>cytostatic agent therapy</oboInOwl:hasExactSynonym>
@@ -2567,7 +2566,6 @@
         <oboInOwl:hasExactSynonym>treatment with antineoplastic drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with antineoplastic medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">antineoplastic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antineoplastic agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -2637,17 +2635,20 @@
     <!-- http://purl.obolibrary.org/obo/MAXO_0000068 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000068">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000002"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000004"/>
         <obo:IAO_0000115>Transference of a tissue or organ within an individual, between individuals of the same species, or between individuals of different species.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-15T19:15:04Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C15342</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCIT:C15431</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>OBI:0000105</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>transplant procedure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>transplantation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>transplantation surgery</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>transplantation surgical procedure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>grafting procedure</oboInOwl:hasNarrowSynonym>
-        <rdfs:label xml:lang="en">transplantation surgical procedure</rdfs:label>
+        <rdfs:label xml:lang="en">transplantation procedure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000068"/>
@@ -2687,7 +2688,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000068"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The surgical transfer of a healthy liver to a patient.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-06-24T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
@@ -3566,6 +3566,7 @@
     <!-- http://purl.obolibrary.org/obo/MAXO_0000124 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000124">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000002"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000003"/>
         <obo:IAO_0000115>The use of any device, marker, or other means for the purpose of detecting the presence of disease, usually in asymptomatic individuals.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-20T00:39:19Z</dc:date>
@@ -4177,15 +4178,16 @@
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>CHEBI:48407</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCIT:C38149</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anti-Parkinson agent therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>antiparkinson agent treatment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>antiparkinson drug therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>antiparkinson drug treatment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>antiparkinsonian agent therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>antiparkisonian agent treatment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>antiparkisonian drug treatment</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with anti-Parkinson drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with antiparkinson drug</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">antiparkinson agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antiparkinson agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -4220,7 +4222,6 @@
         <oboInOwl:hasExactSynonym>treatment with antiparasitic drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with antiparasitic medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">antiparasitic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antiparasititic agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -4252,7 +4253,6 @@
         <oboInOwl:hasExactSynonym>analgesic therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with analgesic</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">analgesic pharmacotherapeutic agent therapy</rdfs:label>
-        <rdfs:label>analgesic therapy</rdfs:label>
     </owl:Class>
     
 
@@ -4285,7 +4285,6 @@
         <oboInOwl:hasExactSynonym>thymoleptics drug therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with antidepressant</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">antidepressant agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antidepressant agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -4313,7 +4312,6 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antagonist therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with antagonist</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">receptor antagonist therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">receptor antagonist therapy</rdfs:label>
     </owl:Class>
     
 
@@ -4364,7 +4362,6 @@
         <oboInOwl:hasExactSynonym>treatment with anxiolytic</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with anxiolytic drug</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">anxiolytic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anxiolytic agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -4413,6 +4410,7 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antigout therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>gout suppressant agent treatment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gout suppressant therapy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with anti-gout drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with anti-gout medication</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with antigout agent</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with antigout drug</oboInOwl:hasExactSynonym>
@@ -4423,8 +4421,6 @@
         <oboInOwl:hasExactSynonym>treatment with gout suppressant medication</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with uricosuric drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uricosuric drug therapy</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antigout therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uricosuric agent therapy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000164"/>
@@ -4465,7 +4461,6 @@
         <oboInOwl:hasExactSynonym>treatment with diuretic drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with diuretic medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">diuretic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">diuretic agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -4499,7 +4494,6 @@
         <oboInOwl:hasExactSynonym>treatment with antipsychotic drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with antipsychotic medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">antipsychotic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antipsychotic agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -4533,7 +4527,6 @@
         <oboInOwl:hasExactSynonym>treatment with anticonvulsant</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with anticonvulsant medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">anticonvulsant agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anticonvulsant agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -4568,7 +4561,6 @@
         <oboInOwl:hasExactSynonym>treatment with an antiviral medication</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with antiviral drug</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">antiviral agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antiviral agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -4601,7 +4593,6 @@
         <oboInOwl:hasExactSynonym>treatment with an anti-inflammatory medication</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with anti-inflammatory drug</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">anti-inflammatory agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anti-inflammatory agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -4635,7 +4626,6 @@
         <oboInOwl:hasExactSynonym>anesthetic medication therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with anaesthetic</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">anesthetic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anesthetic agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -4704,7 +4694,6 @@
         <oboInOwl:hasExactSynonym>medication for treatment of nausea</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with antiemetic</oboInOwl:hasExactSynonym>
         <rdfs:comment>An antiemetic may act by a wide range of mechanisms: it might affect the medullary control centres (the vomiting centre and the chemoreceptive trigger zone) or affect the peripheral receptors.</rdfs:comment>
-        <rdfs:label>antiemetic therapy</rdfs:label>
         <rdfs:label xml:lang="en">antiemetics agent therapy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -4747,7 +4736,6 @@
         <oboInOwl:hasExactSynonym>treatment with an antifungal therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with antifungal drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>pharmaceutical fungicide therapy</oboInOwl:hasNarrowSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anti-fungal agent therapy</rdfs:label>
         <rdfs:label xml:lang="en">antifungal agent therapy</rdfs:label>
     </owl:Class>
     
@@ -4793,7 +4781,6 @@
         <oboInOwl:hasExactSynonym>treatment with hematologic drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with hematologic medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">hematologic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hematologic agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -4837,7 +4824,6 @@
         <oboInOwl:hasExactSynonym>anticoagulant therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with anticoagulant</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">anticoagulant agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anticoagulant agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -4878,7 +4864,6 @@
         <oboInOwl:hasExactSynonym>treatment with platelet aggregation blocker</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with platelet aggregation inhibitor</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">platelet aggregation inhibitor agent therapy</rdfs:label>
-        <rdfs:label>platelet aggregation inhibitor therapy</rdfs:label>
     </owl:Class>
     
 
@@ -4917,7 +4902,6 @@
         <oboInOwl:hasNarrowSynonym>treatment with heart drug</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>treatment with heart medication</oboInOwl:hasNarrowSynonym>
         <rdfs:label xml:lang="en">cardiovascular agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cardiovascular agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -4966,7 +4950,6 @@
         <oboInOwl:hasExactSynonym>treatment with alpha-adrenergic receptor agent</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with alpha-adrenergic receptor drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with alpha-adrenergic receptor medication</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alpha adrenergic agent therapy</rdfs:label>
         <rdfs:label xml:lang="en">alpha-adrenergic agent therapy</rdfs:label>
     </owl:Class>
     
@@ -5007,7 +4990,6 @@
         <oboInOwl:hasExactSynonym>alpha-adrenoceptor agonist drug therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>alpha-adrenoceptor agonist therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with alpha-adrenergic drug</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alpha adrenergic agonist therapy</rdfs:label>
         <rdfs:label xml:lang="en">alpha-adrenergic agonist agent therapy</rdfs:label>
     </owl:Class>
     
@@ -5053,7 +5035,6 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with alpha-adrenergic antagonist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with alpha-adrenergic antagonist drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with alpha-adrenergic antagonist medication</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alpha adrenergic antagonist therapy</rdfs:label>
         <rdfs:label xml:lang="en">alpha-adrenergic antagonist agent therapy</rdfs:label>
     </owl:Class>
     
@@ -5084,6 +5065,7 @@
         <oboInOwl:hasExactSynonym>anti-arrhythmic drug treatment therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>anti-arrythmia agent therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>anti-arrythmia drug therapy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anti-arrythmic agent therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>antiarrhythmic agent therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>antiarrhythmic drug therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>antiarrhythmic drug treatment</oboInOwl:hasExactSynonym>
@@ -5098,7 +5080,6 @@
         <oboInOwl:hasExactSynonym>treatment with antiarrythmic drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with antiarrythmic medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">antiarrythmic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antiarrythmic agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -5135,7 +5116,6 @@
         <oboInOwl:hasExactSynonym>treatment with beta-adrenergic agent</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with beta-adrenergic drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with beta-adrenergic medication</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">beta adrenergic agent therapy</rdfs:label>
         <rdfs:label xml:lang="en">beta-adrenergic agent therapy</rdfs:label>
     </owl:Class>
     
@@ -5182,7 +5162,6 @@
         <oboInOwl:hasExactSynonym>treatment with beta-adrenergic antagonist drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with beta-adrenergic antagonist medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">beta-adrenergic antagonist agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">beta-adrenergic antagonist therapy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000187"/>
@@ -5249,7 +5228,6 @@
         <oboInOwl:hasExactSynonym>treatment with dyslipidemic agent</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with dyslipidemic drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with dyslipidemic medication</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dyslipidemic agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -5335,7 +5313,6 @@
         <oboInOwl:hasExactSynonym>non-opioid analgesics medication treatment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>non-opioid analgesics therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with non-narcotic analgesic</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">non-opioid analagesics therapy</rdfs:label>
         <rdfs:label xml:lang="en">non-opioid analgesics agent therapy</rdfs:label>
     </owl:Class>
     
@@ -5371,7 +5348,6 @@
         <oboInOwl:hasExactSynonym>opioid analgesics</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>opioid therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with opioid analgesic</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">opioid analgesic therapy</rdfs:label>
         <rdfs:label xml:lang="en">opioid analgesics agent therapy</rdfs:label>
     </owl:Class>
     
@@ -5409,7 +5385,6 @@
         <oboInOwl:hasNarrowSynonym>spinal block therapy</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>topical anesthesia therapy</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>topical anesthetic therapy</oboInOwl:hasNarrowSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">local anesthetic</rdfs:label>
         <rdfs:label xml:lang="en">local anesthetic agent therapy</rdfs:label>
     </owl:Class>
     
@@ -5474,7 +5449,6 @@
         <rdfs:comment>treatment with cephalosporin drug</rdfs:comment>
         <rdfs:comment>treatment with cephalosporin medication</rdfs:comment>
         <rdfs:label xml:lang="en">cephalosporin agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cephalosporin agent therapy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000197"/>
@@ -5524,7 +5498,6 @@
         <oboInOwl:hasExactSynonym>treatment with penicillin antibiotic medication</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with penicillin antibiotic therapy</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">penicillin agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">penicillin agent therapy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000198"/>
@@ -5578,7 +5551,6 @@
         <oboInOwl:hasExactSynonym>macrolide drug treatment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with macrolide antibiotic</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">macrolide antibacterial agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">macrolide antibacterial agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -5614,7 +5586,6 @@
         <oboInOwl:hasExactSynonym>treatment with quinolone antibiotic drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with quinolone antibiotic medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">quinolone antibacterial agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quinolone antibacterial agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -5653,7 +5624,6 @@
         <oboInOwl:hasExactSynonym>treatment with a sulfonamide antibiotic therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with sulfonamide antibiotic</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">sulfonamide antibacterial agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sulfonamide antibacterial agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -5691,7 +5661,6 @@
         <oboInOwl:hasExactSynonym>treatment with a tetracycline antibiotic therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with tetracycline</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">tetracycline therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tetracycline therapy</rdfs:label>
     </owl:Class>
     
 
@@ -5732,7 +5701,6 @@
         <oboInOwl:hasExactSynonym>treatment with calcium channel modifying medication</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with calcium channel modulator</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">calcium channel modifying agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">calcium channel modifying agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -5767,7 +5735,6 @@
         <oboInOwl:hasExactSynonym>treatment with gamma-aminobutyric acid augmenting agent</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with gamma-aminobutyric acid augmenting drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with gamma-aminobutyric acid augmenting medication</oboInOwl:hasExactSynonym>
-        <rdfs:label>GABA augmenting agent therapy</rdfs:label>
         <rdfs:label xml:lang="en">gamma-aminobutyric acid augmenting agent therapy</rdfs:label>
     </owl:Class>
     
@@ -5814,7 +5781,6 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with sodium channel blocker</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with sodium channel inhibitor</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">sodium channel inhibitor therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sodium channel inhibitor therapy</rdfs:label>
     </owl:Class>
     
 
@@ -5855,7 +5821,6 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with EC 3.1.1.8 (cholinesterase) inhibitor</oboInOwl:hasExactSynonym>
         <rdfs:comment>Neurogenerative diseases such as Alzheimer disease, Parkinson disease, and Lewy body dementia are indications for cholinesterase inhibitor therapy.</rdfs:comment>
         <rdfs:label xml:lang="en">cholinesterase inhibitor therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cholinesteriase inhibitor</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000210"/>
@@ -5929,7 +5894,6 @@
         <rdfs:comment>A type of drug used to treat depression. It stops the breakdown of certain chemicals in the brain that help improve a person&apos;s mood. A monoamine oxidase inhibitor is a type of antidepressant.</rdfs:comment>
         <rdfs:comment>Any substance that inhibits monoamine oxidase (MAO), an enzyme that catalyzes the oxidative deamination of monoamines and plays a role in the inactivation of neurotransmitters.</rdfs:comment>
         <rdfs:label xml:lang="en">monoamine oxidase inhibitor agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">monoamine oxidase inhibitor therapy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000213"/>
@@ -6077,7 +6041,6 @@
         <oboInOwl:hasExactSynonym>treatment with a glucocorticoid medication</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with a glucocorticoid therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with glucocorticoid</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glucocorticicoid agent therapy</rdfs:label>
         <rdfs:label xml:lang="en">glucocorticoid agent therapy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -6120,7 +6083,6 @@
         <oboInOwl:hasExactSynonym>treatment with non-steroidal anti-inflammatory drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with non-steroidal anti-inflammatory medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">nonsteroidal anti-inflammatory agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nsaid therapy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000221"/>
@@ -6290,7 +6252,6 @@
         <oboInOwl:hasExactSynonym>treatment with an antimycobacterial medication</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with antimycobacterial drug</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">antimycobacterial agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antimycobacterial agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -6328,7 +6289,6 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with antitubercular agent</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>tuberculostatic agent therapy</oboInOwl:hasNarrowSynonym>
         <rdfs:label xml:lang="en">antitubercular agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antitubercular agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -6360,7 +6320,6 @@
         <oboInOwl:hasExactSynonym>treatment with a leprostatic therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with leprostatic drug</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">leprostatic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leprostatic agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -6394,7 +6353,6 @@
         <oboInOwl:hasExactSynonym>treatment with alkylating drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with alkylating medication</oboInOwl:hasExactSynonym>
         <rdfs:comment>Highly reactive chemical that introduces alkyl radicals into biologically active molecules and thereby prevents their proper functioning. It could be used as an antineoplastic agent, but it might be very toxic, with carcinogenic, mutagenic, teratogenic, and immunosuppressant actions. It could also be used as a component of poison gases.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">akylating agent therapy</rdfs:label>
         <rdfs:label xml:lang="en">alkylating agent therapy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -6457,7 +6415,6 @@
         <oboInOwl:hasExactSynonym>treatment with antiangiogenic medication</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>angiostatic agent therapy</oboInOwl:hasNarrowSynonym>
         <rdfs:label xml:lang="en">antiangiogenic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antiangiogenic agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -6538,7 +6495,6 @@
         <oboInOwl:hasExactSynonym>treatment with oestrogen synthetase inhibitor drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with oestrogen synthetase inhibitor medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">aromatase inhibitor agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aromatase inhibitor agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -6660,7 +6616,6 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with antiprotozoal drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>protozoan drug treatment</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">antiprotozoal agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antiprotozoal agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -6744,7 +6699,6 @@
         <oboInOwl:hasExactSynonym>treatment with atypical antipsychotic</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with second generation antipsychotic</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">atypical antipsychotic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">atypical antipsychotic agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -6779,7 +6733,6 @@
         <oboInOwl:hasExactSynonym>typical antipsychotic drug treatment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>typical antipsychotic therapy</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">conventional antipsychotic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">conventional antipsychotic agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -6880,7 +6833,6 @@
         <oboInOwl:hasExactSynonym>treatment with anti-human immunodeficiency virus drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with anti-human immunodeficiency virus medication</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with antiviral agent</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anti-hiv agent therapy</rdfs:label>
         <rdfs:label xml:lang="en">anti-human immunodeficiency virus agent therapy</rdfs:label>
     </owl:Class>
     
@@ -6914,7 +6866,6 @@
         <oboInOwl:hasExactSynonym>treatment with HIV fusion inhibitor medication</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with HIV fusion inhibitor therapy</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">HIV fusion inhibitor therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anti-HIV therapy, fusion inhibitor</rdfs:label>
     </owl:Class>
     
 
@@ -6987,7 +6938,6 @@
         <oboInOwl:hasExactSynonym>treatment with HIV protease inhibitor drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with HIV protease inhibitor medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">HIV protease inhibitor therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HIV protease inhibitor therapy</rdfs:label>
     </owl:Class>
     
 
@@ -7061,7 +7011,6 @@
         <oboInOwl:hasExactSynonym>treatment with antimanic drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with antimanic medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">antimanic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antimanic agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -7141,7 +7090,6 @@
         <oboInOwl:hasExactSynonym>central nervous system drug therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with central nervous system drug</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">central nervous system agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">central nervous system agent therapy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000260"/>
@@ -7186,7 +7134,6 @@
         <oboInOwl:hasExactSynonym>treatment with amphetamine medication</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with amphetamines</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">amphetamine agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">amphetamine agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -7262,7 +7209,6 @@
         <oboInOwl:hasExactSynonym>treatment with dermatolical medication</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with dermatologic drug</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">dermatological agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dermatological agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -7303,7 +7249,6 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with gastrointestinal drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with gastrointestinal medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">gastrointestinal agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gastrointestinal agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -7621,6 +7566,7 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000282"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000744"/>
         <obo:IAO_0000115>A drug which acts to modulates estrogenic activity in the body, either by modulating the amount of estrogen or by modulating the activity of whatever estrogen is present.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T20:52:07Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -7634,7 +7580,6 @@
         <oboInOwl:hasExactSynonym>treatment with estrogent modifying medication</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with oestrogen modifying medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">estrogen modifying agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">estrogen modifying agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -7643,6 +7588,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000288">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000282"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000744"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T20:52:15Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>progestin modifying drug treatment</oboInOwl:hasExactSynonym>
@@ -7693,7 +7639,6 @@
         <oboInOwl:hasExactSynonym>treatment with parathyroid-suppressant drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with parathyroid-suppressant medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">parathyroid-suppressant hormonal agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parathyroid-suppressant hormone therapy</rdfs:label>
     </owl:Class>
     
 
@@ -7735,7 +7680,6 @@
         <oboInOwl:hasExactSynonym>treatment with androgen blocker</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with androgen suppressant agent</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">androgen suppressant agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">androgen suppressant hormone agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -7814,7 +7758,6 @@
         <oboInOwl:hasExactSynonym>treatment with immunomodifying medication</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with immunomodulator</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">immunological agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">immunological agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -7852,7 +7795,6 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with immunological adjuvant</oboInOwl:hasExactSynonym>
         <rdfs:comment>A classical agent (Freund&apos;s adjuvant, BCG, Corynebacterium parvum, et al.) contains bacterial antigens. It could also be endogenous (e.g., histamine, interferon, transfer factor, tuftsin, interleukin-1). Its mode of action is either non-specific, resulting in increased immune responsiveness to a wide variety of antigens, or antigen-specific, i.e., affecting a restricted type of immune response to a narrow group of antigens. The therapeutic efficacy is related to its antigen-specific immunoadjuvanticity.</rdfs:comment>
         <rdfs:label xml:lang="en">immune stimulant agent therapy</rdfs:label>
-        <rdfs:label>immune stimulant agent therapy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000296"/>
@@ -7895,7 +7837,6 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with immunosuppressive agent</oboInOwl:hasExactSynonym>
         <rdfs:comment>Classical cytotoxic immunosuppressants act by inhibiting DNA synthesis. Others may act through activation of T-cells or by inhibiting the activation of helper cells. In addition, an immunosuppressive agent is a role played by a compound which is exhibited by a capability to diminish the extent and/or voracity of an immune response.</rdfs:comment>
         <rdfs:label xml:lang="en">immune suppressant agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">immune suprressant agent therapy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000297"/>
@@ -8005,7 +7946,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>treatment with ophthalmic medication</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with ophthalmology drug</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">ophthalmic agent therapy</rdfs:label>
-        <rdfs:label>ophthalmic agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -8049,7 +7989,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>treatment with antiglaucoma drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with antiglaucoma medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">antiglaucoma agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antiglaucoma agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -8155,7 +8094,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>treatment with histamine antagonist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with histamine blocker</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">antihistamine agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antihistamine agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -8198,7 +8136,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>treatment with leukotriene antagonist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with leukotriene blocker</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">antileukotriene agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antileukotriene agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -8229,7 +8166,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>broncholytic agent therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with bronchodilator</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with bronchodilator agent</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bronchodilator</rdfs:label>
         <rdfs:label xml:lang="en">bronchodilator agent therapy</rdfs:label>
     </owl:Class>
     
@@ -8343,7 +8279,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>sedatives/hypnotic drug treatment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with sedative</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">sedatives and hypnotic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sedatives and hypnotic agent therapy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000323"/>
@@ -8379,7 +8314,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>skeletal muscle relaxant drug treatment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with muscle relaxant</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">skeletal muscle relaxant agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skeletal muscle relaxant agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -8415,7 +8349,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>treatment with antiinfective drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with antiinfective medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">anti-infective agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anti-infective agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -11453,7 +11386,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>treatment with a beta-lactam antibiotic therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with beta-lactam antibiotic</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">beta-lactam antibacterial agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">beta-lactam antibacterial agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -11490,7 +11422,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>treatment with calcium channel blocking drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with calcium channel blocking medication</oboInOwl:hasExactSynonym>
         <rdfs:comment>One of a class of drugs that acts by selective inhibition of calcium influx through cell membranes or on the release and binding of calcium in intracellular pools.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">calcium channel blocking agent</rdfs:label>
         <rdfs:label xml:lang="en">calcium channel blocking agent therapy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -11545,7 +11476,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>treatment with NMDA receptor antagonist</oboInOwl:hasExactSynonym>
         <rdfs:comment>They tend to induce a state known as dissociative anesthesia, marked by catalepsy, amnesia, and analgesia, while side effects can include hallucinations, nightmares, and confusion. Due to their psychotomimetic effects, many NMDA receptor antagonists are used as recreational drugs.</rdfs:comment>
         <rdfs:label xml:lang="en">NMDA receptor antagonist therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NMDA receptor antagonist therapy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000436"/>
@@ -11635,7 +11565,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with serotonin uptake inhibitor</oboInOwl:hasExactSynonym>
         <rdfs:comment>Any agent that increases the extracellular level of the neurotransmitter serotonin (5-HT) by inhibiting its reuptake into the presynaptic cell. Increased level in the synaptic cleft prolongs the action of 5-HT on the postsynaptic receptor. This type of agent is typically used as an antidepressant and in the treatment of anxiety disorders and some personality disorders. They are also typically effective and used in treating some cases of insomnia.</rdfs:comment>
         <rdfs:label xml:lang="en">selective serotonin reuptake inhibitor agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">selective serotonin reuptake inhibitor therapy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000439"/>
@@ -11785,7 +11714,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">erythropoietin inhibitor therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with erythropoietin inhibitor</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">erythropoietin inhibitor agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">erythropoietin inhibitor therapy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000444"/>
@@ -12505,6 +12433,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000483 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000483">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000002"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000003"/>
         <obo:IAO_0000115>A procedure where a healthcare provider reviews a patient&apos;s medical history, examines the patient, and makes recommendations as to care and treatment.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-20T18:30:15Z</dc:date>
@@ -14020,7 +13949,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-30T19:37:28Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>SAA biomarker measurement</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>cytokine biomarker measurement</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">serum amyloid A biomarker assessment</rdfs:label>
     </owl:Class>
     
@@ -14175,7 +14103,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>treatment with hypoglycemic drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with hypoglycemic medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">hypoglycemic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hypoglycemic agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -14650,7 +14577,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>treatment with vasopressor medication</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>vasopressor support therapy</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">vasopressor agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vasopressor agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -15155,7 +15081,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>inhalation anesthetic utilization</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with inhalation anaesthetic</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">inhalation anesthetic therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inhalation anesthtetic therapy</rdfs:label>
     </owl:Class>
     
 
@@ -15191,7 +15116,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>intravenous anesthetic medication therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with intravenous anaesthetic</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">intravenous anesthetic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intravenous anesthetic therapy</rdfs:label>
     </owl:Class>
     
 
@@ -15222,7 +15146,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>topical anesthetic medication treatment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with topical anaesthetic</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">topical anesthetic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">topical anesthetic therapy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000627"/>
@@ -15257,7 +15180,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>angiogenesis modulating medication therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with angiogenesis modulating agent</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">angiogenesis modulating agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">angiogenesis modulating agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -15286,7 +15208,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>angiogenesis inducing medication therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with angiogenesis inducing agent</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">angiogenesis inducing agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">angiogensis inducing agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -15317,7 +15238,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>proangiogenic agent therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with pro-angiogenic agent</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">pro-angiogenic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pro-angiogenic agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -15346,7 +15266,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antacid therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with antacid</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">antacid agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antacid agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -15376,7 +15295,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with anti-ulcer drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with anti-ulcer medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">anti-ulcer agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anti-ulcer agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -15412,7 +15330,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>treatment with an allergy drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with anti-allergic agent</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">allergy agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">allergy agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -15443,7 +15360,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>drug treatment of asthma</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with anti-asthmatic drug</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">anti-asthmatic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anti-asthmatic agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -15495,7 +15411,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with estrogen antagonist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with estrogen receptor modulator</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">anti-estrogen agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anti-estrogen agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -15519,6 +15434,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-05-27T14:13:29Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>CHEBI:66956</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anti-dyskinesia agent therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>anti-dyskinesia drug therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>anti-dyskinesia medication therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>anti-dyskinetic drug therapy</oboInOwl:hasExactSynonym>
@@ -15536,8 +15452,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>treatment with a antidyskinetic drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with a antidyskinetic medication</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with antidyskinesia agent</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with antidyskinesia drug</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">anti-dyskinesia agent therapy</rdfs:label>
-        <rdfs:label>antidyskinesia agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -15578,7 +15494,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>anti-herpes simplex virus medication therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with anti-HSV agent</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">anti-HSV agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anti-HSV agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -15610,7 +15525,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>treatment with anti-HSV-1 drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with anti-HSV-1 medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">anti-HSV-1 agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anti-HSV-1 agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -15643,7 +15557,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>treatment with anti-HSV-2 drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with anti-HSV-2 medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">anti-HSV-2 agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anti-HSV-2 agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -15677,7 +15590,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasNarrowSynonym>corticosteroid injection treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>oral corticosteroid drug treatment</oboInOwl:hasNarrowSynonym>
         <rdfs:label xml:lang="en">corticosteroid agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corticosteroid therapy</rdfs:label>
     </owl:Class>
     
 
@@ -15708,7 +15620,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>treatment with an emetic therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with emetic</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">emetic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">emetic therapy</rdfs:label>
     </owl:Class>
     
 
@@ -15745,7 +15656,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>treatment with antirheumatic drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with antirheumatic medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">antirheumatic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antirheumatic agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -15771,7 +15681,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biochemical role therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with biochemical role</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">molecular pathway modifying agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molecular pathway modifying agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -15799,7 +15708,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>acetylcholinesterase inhibitor agent therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>acetylcholinesterase inhibitor drug therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with EC 3.1.1.7 (acetylcholinesterase) inhibitor</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acetylcholinesterase inhibitor</rdfs:label>
         <rdfs:label xml:lang="en">acetylcholinesterase inhibitor therapy</rdfs:label>
     </owl:Class>
     
@@ -15901,7 +15809,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>treatment with enzyme inhibitor medication</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with enzyme inhibitor therapy</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">enzyme inhibitor agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">enzyme inhibitor agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -15930,7 +15837,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>treatment with hyperglycemic drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with hyperglycemic medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">hyperglycemic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyperglycemic agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -15954,6 +15860,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-06-03T14:37:54Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>CHEBI:50855</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anti-atherogenic agent therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antiatherogenic agent therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>antiatherogenic drug therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with anti-atherogenic agent</oboInOwl:hasExactSynonym>
@@ -15964,7 +15871,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>treatment with antiatherogenic drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with antiatherogenic medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">antiatherogenic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antiatherogenic agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -15988,6 +15894,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-06-03T14:51:06Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>CHEBI:145947</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anti-atherosclerotic agent therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antiatherosclerotic agent therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>antiatherosclerotic drug therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with anti-atherosclerosis drug</oboInOwl:hasExactSynonym>
@@ -16000,7 +15907,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>treatment with antiatherosclerotic drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with antiatherosclerotic medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">antiatherosclerotic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antiatherosclerotic agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -16051,7 +15957,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with angiotensin receptor antagonist</oboInOwl:hasExactSynonym>
         <rdfs:comment>A pharmaceutical agent that selectively inhibits angiotensin II receptor activation in the renin-angiotensin-aldosterone system reducing production and secretion of aldosterone, amongst other actions. The combined effects result in reduction of blood pressure. It is primarily used for the reduction of proteinuria and the treatment of hypertension in cases where the patient is intolerant of ACE inhibitor therapy.</rdfs:comment>
         <rdfs:comment>Angiotensin II receptor antagonists bind to and block the activation of angiotensin II type 1 (AT1) receptors, thereby reducing production and secretion of aldosterone, amongst other actions. The combined effects result in reduction of blood pressure. Although this class of agents is also used in diabetic nephropathy (kidney damage due to diabetes) and congestive heart failure, it is primarily used for the treatment of hypertension in cases where the patient is intolerant of ACE inhibitor therapy.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">angiotensin receptor blocker therapy</rdfs:label>
         <rdfs:label xml:lang="en">angiotensin-receptor blocker therapy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -16108,7 +16013,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with EC 3.4.15.1 (peptidyl-dipeptidase A) inhibitor</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with angiotensin I-converting enzyme inhibitor</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">ACE 1 inhibitor therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACE1 inhibitor therapy</rdfs:label>
     </owl:Class>
     
 
@@ -16138,7 +16042,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>treatment with EC 3.4.17.23 (angiotensin-converting enzyme 2) inhibitor</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with hACE2 inhibitor</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">ACE 2 inhibitor therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACE2 inhibitor therapy</rdfs:label>
     </owl:Class>
     
 
@@ -16168,7 +16071,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>treatment with metabotropic glutamate receptor blockade</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with metabotropic glutamate receptor blocker</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">metabotropic glutamate receptor antagonist therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">metabotropic glutamate receptor antagonist therapy</rdfs:label>
     </owl:Class>
     
 
@@ -16233,7 +16135,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NMDA receptor agonist therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with NMDA receptor agonist</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">NMDA receptor agonist therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NMDA receptor agonist therapy</rdfs:label>
     </owl:Class>
     
 
@@ -16261,7 +16162,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>Treatment with AMPA receptor agonist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with AMPA receptor agonist</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">AMPA receptor agonist therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMPA recpeptor agonist therapy</rdfs:label>
     </owl:Class>
     
 
@@ -16291,7 +16191,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>Treatment with AMPA receptor blocker</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with AMPA receptor antagonist</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">AMPA receptor antagonist therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMPA receptor antagonist therapy</rdfs:label>
     </owl:Class>
     
 
@@ -16314,13 +16213,14 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-06-09T15:32:19Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>CHEBI:55323</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anti-diarrheal agent therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>antidiarrhoeal agent therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antidiarrhoeal drug therapy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with anti-diarrheal drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with antidiarrheal agent</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with antidiarrheal medication</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with antidiarrhoeal drug</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">antidiarrheal agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antidiarrheal agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -17937,6 +17837,9 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>Therapy using a highly charged polymeric agent to bind bile acids in the gastrointestinal tract and prevent their reabsorption from the gut. The bound bile acids are excreted with the feces and plasma cholesterol is converted to bile acid to reestablish normal bile acid levels, resulting in a lowering of plasma cholesterol concentrations.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-17T21:21:54Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>bile-acid sequestrant agent therapy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>bile-acid sequestrant therapy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>treatment with bile-acid sequestrant</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">bile acid sequestrant therapy</rdfs:label>
     </owl:Class>
     
@@ -17965,7 +17868,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">statin agent therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with EC 1.1.1.34/EC 1.1.1.88 (hydroxymethylglutaryl-CoA reductase) inhibitor</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with statins</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HMG-CoA reductase inhibitor therapy</rdfs:label>
     </owl:Class>
     
 
@@ -18056,6 +17958,322 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:annotatedTarget>Sulphonylurea antidiabetic agents bind to sulfonylurea receptor type 1 (SUR1), the subunit of ATP-sensitive inwardly-rectifier potassium (IKATP) channels on the membranes of pancreatic beta cells, thereby blocking the inward current flow (influx) of positively charged K+ ions into the cell. This results in tonic membrane depolarization, and induces a calcium ion influx through voltage-sensitive calcium channels; increased intracellular calcium ion levels trigger exocytosis of insulin-containing granules. This eventually induces secretion of insulin. The IKATP channels found in pancreatic islets are complexes of four IKATP 6.2 and four SUR1 subunits. In addition, some sulfonylureas of larger molecular size may increase the sensitivity of peripheral tissues to insulin mediated through peroxisome proliferator-activated receptor gamma (PPARgamma).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>NCIT:C97936</oboInOwl:hasDbXref>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000744 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000744">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000282"/>
+        <obo:IAO_0000115>Treatment with estrogens or estrogen/progesterone after menopause or ovariectomy to prevent pathological effects of decreased estrogen production.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T16:03:14Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>MHT</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>menopausal hormone replacement therapy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>postmenopausal hormone therapy</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">menopausal hormone therapy</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000744"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Treatment with estrogens or estrogen/progesterone after menopause or ovariectomy to prevent pathological effects of decreased estrogen production.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C15599</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000745 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000745">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000533"/>
+        <obo:IAO_0000115>Techniques for analysis of chromosomal and subchromosomal properties and structures, such as those to diagnose, classify, screen for, or manage genetic diseases and abnormalities.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T19:13:57Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C18280</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>cytogenetic study</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>cytogenetic testing</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">cytogenetic analysis</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000745"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Techniques for analysis of chromosomal and subchromosomal properties and structures, such as those to diagnose, classify, screen for, or manage genetic diseases and abnormalities.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C18280</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000746 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000746">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000745"/>
+        <obo:IAO_0000115>A test to detect chromosomal breakage or aberrations (breaks, gaps, rearrangements, radials, exchanges, endoreduplications) in peripheral blood cells after culture with a T-cell mitogen and a DNA clastogenic (cross-linking) agent, such as diepoxybutane (DEB) or mitomycin C (MMC).</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T19:24:16Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>Chromosome Breakage Analysis (DEB/MMC)</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>DEB/MMC testing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>chromosomal breakage testing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>induced chormosomal breakage testing</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">chromosomal breakage analysis</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000746"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A test to detect chromosomal breakage or aberrations (breaks, gaps, rearrangements, radials, exchanges, endoreduplications) in peripheral blood cells after culture with a T-cell mitogen and a DNA clastogenic (cross-linking) agent, such as diepoxybutane (DEB) or mitomycin C (MMC).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:25006279</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000747 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000747">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000068"/>
+        <obo:IAO_0000115>Transfer of multipotent hematopoietic stem cells, usually derived from bone marrow, peripheral blood, or umbilical cord blood into the body.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T19:56:02Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>HPSCT</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>HSCT</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION"/>
+        <rdfs:label xml:lang="en">haematopoietic stem cell transplantation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000747"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>HPSCT</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000747"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>HSCT</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000748 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000748">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000068"/>
+        <obo:IAO_0000115>The transplantation of fecal bacteria, via enema, colonoscopy, or other method, from a healthy individual to a recipient.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T20:03:04Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>FMT</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>fecal material transplantation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>fecal transplantation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>stool transplantation</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">fecal microbiota transplantation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000748"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The transplantation of fecal bacteria, via enema, colonoscopy, or other method, from a healthy individual to a recipient.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C118643</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000748"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>FMT</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000749 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000749">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000747"/>
+        <obo:IAO_0000115>The removal of T-cells from the donor&apos;s hematopoietic stem cell specimen prior to its transfusion into the recipient.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T20:07:15Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C116468</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">T cell-depleted hematopoietic stem cell transplantation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000749"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The removal of T-cells from the donor&apos;s hematopoietic stem cell specimen prior to its transfusion into the recipient.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C116468</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000750 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000750">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000647"/>
+        <obo:IAO_0000115>Administration of high doses of chemotherapy or radiation therapy, as well as immunosuppressive therapy, to a transplant recipient prior to a bone marrow or hematopoietic stem cell transplant. Conditioning destroys the patient&apos;s abnormal blood cells or cancer, as well as slows the patient&apos;s immune response against the donor bone marrow (graft rejection).</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T20:12:40Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C64468</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>conditioning regimen</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">transplant conditioning</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000750"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Administration of high doses of chemotherapy or radiation therapy, as well as immunosuppressive therapy, to a transplant recipient prior to a bone marrow or hematopoietic stem cell transplant. Conditioning destroys the patient&apos;s abnormal blood cells or cancer, as well as slows the patient&apos;s immune response against the donor bone marrow (graft rejection).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C64468</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000751 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000751">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000124"/>
+        <obo:IAO_0000115>The systematic collection, analysis, and interpretation of health data on an ongoing basis.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T20:25:20Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C15719</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">surveillance</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000751"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The systematic collection, analysis, and interpretation of health data on an ongoing basis.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C15719</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000752 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000752">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000336"/>
+        <obo:IAO_0000115>Removal of a small amount of liquid bone marrow through a needle.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T20:31:02Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>bone marrow aspiration procedure</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">bone marrow aspiration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000753 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000753">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000140"/>
+        <obo:IAO_0000115>The pathologic analysis of samples of bone marrow obtained by bone marrow biopsy and bone marrow aspiration.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T20:33:41Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>bone marrow testing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>bone marrow monitoring</oboInOwl:hasNarrowSynonym>
+        <rdfs:label xml:lang="en">bone marrow examination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000754 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000754">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000140"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000146"/>
+        <obo:IAO_0000115>The determination of the amount of degree, quality or condition of cells present in a sample.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T20:39:47Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C111153</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>cellularity grade measurement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>cellularity indexing</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">cellularity measurement</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000754"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The determination of the amount of degree, quality or condition of cells present in a sample.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C111153</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000755 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000755">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000126"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+        <obo:IAO_0000115>The sampling and analysis of non-solid biological tissue often through rapid and non-invasive methods, which allows the assessment in real-time of the evolving landscape of cancer.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T20:45:40Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasRelatedSynonym>solid tumor monitoring</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">liquid biopsy</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000755"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The sampling and analysis of non-solid biological tissue often through rapid and non-invasive methods, which allows the assessment in real-time of the evolving landscape of cancer.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:32580740</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000756 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000756">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000068"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000757"/>
+        <obo:IAO_0000115>The injection of whole blood or a blood component directly into the bloodstream.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T20:58:55Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasBroadSynonym>transfusion</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>NCIT:C15192</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OGMS:0000145</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>transfusion of blood products</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>blood component transfusion</oboInOwl:hasNarrowSynonym>
+        <rdfs:label xml:lang="en">blood transfusion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000756"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The injection of whole blood or a blood component directly into the bloodstream.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C15192</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000757 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000757">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000002"/>
+        <obo:IAO_0000115>Any form of treatment that is introduced into the body via a blood vessel, a muscle, or the spinal cord.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T21:01:00Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C15388</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>infusion</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">infusion procedure</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000757"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any form of treatment that is introduced into the body via a blood vessel, a muscle, or the spinal cord.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C15388</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000758 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000758">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001014"/>
+        <obo:IAO_0000115>Avoid sexual intercourse without the use of precautions to prevent conception or the transmission of sexually transmitted diseases.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T21:20:20Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <rdfs:label xml:lang="en">avoid unprotected sexual intercourse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000759 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000759">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001017"/>
+        <obo:IAO_0000115>Vaccination against human papillomavirus infection.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T21:22:47Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>VO:0000667</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>HPV vaccination</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">human papillomavirus vaccination</rdfs:label>
+    </owl:Class>
     
 
 
@@ -18448,7 +18666,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>general anesthetics therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with general anaesthetic</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">general anesthetic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general anesthetic agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -18483,7 +18700,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>treatment with an antimicrobial medication</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with antimicrobial drug</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">antimicrobial agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antimicrobial agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -18515,7 +18731,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>psychotropic drug treatment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with psychotropic drug</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">psychotropic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">psychotropic agent therapy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001022"/>
@@ -18556,7 +18771,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>tranquilizing drugs</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with tranquilizing drug</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">tranquilizing agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tranquilizing agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -18588,7 +18802,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>treatment with adrenergic drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with adrenergic medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">adrenergic agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adrenergic agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -18628,7 +18841,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>treatment with beta-adrenergic agonist drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with beta-adrenergic agonist medication</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">beta-adrenergic agonist agent therapy</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">beta-adrenergic agonist therapy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001026"/>
@@ -21321,7 +21533,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cholesterol inhibitor therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hypocholesteremic agent therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with anticholesteremic drug</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anticholesteric agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -21345,7 +21556,54 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">loop diuretic therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with loop diuretic</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">loop diuretic agent therapy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001126 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001126">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0001014"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001015"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000756"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avoid the administration or use of blood transfusion.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-11-19T20:39:14Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid blood transfusion</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoiding blood transfusion</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blood transfusion avoidance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001127 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001127">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0001014"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001015"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000595"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avoid the administration or use of radiograph imaging procedure.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-11-19T20:39:14Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid radiograph imaging procedure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoiding radiograph imaging procedure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiograph imaging procedure avoidance</rdfs:label>
     </owl:Class>
     
 
