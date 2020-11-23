@@ -1,0 +1,89 @@
+pattern_name: nutrition_supplementation_foodon
+pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns-dev/nutrition_supplementation_foodon.yaml
+description: "Medical recommendation to supplement the diet with a particular food, vitamin, or nutrition item."
+
+contributors:
+  - https://orcid.org/0000-0001-7941-2961
+  - https://orcid.org/0000-0002-7356-1779
+  - https://orcid.org/0000-0002-7463-6306
+
+classes:
+  nutritional supplementation: MAXO:0000106
+  food material: FOODON:00002403
+relations:
+  has_input: RO:0002233
+  part_of: BFO:0000050
+  
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym 
+  created_by: oio:created_by
+  date: dc:date
+  comment: rdfs:comment
+  xref: oio:hasDbXref
+  
+vars:
+  food: "'food material'"
+
+data_vars:
+  date: "'date'"
+  created_by: "'created_by'"
+  comment: "'comment'"
+  xref: "'xref'"
+
+data_list_vars:
+  syns: xsd:string
+  
+name:
+  text: "%s supplementation"
+  vars:
+   - food
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "%s supplemental intake"
+    vars:
+     - food
+     
+  - annotationProperty: exact_synonym
+    text: "supplementation of %s" 
+    vars:
+     - food
+
+  - annotationProperty: exact_synonym
+    text: "dietary supplementation of %s"
+    vars:
+     - food
+     
+  - annotationProperty: date
+    text: "%s"
+    vars:
+     - date
+     
+  - annotationProperty: created_by
+    text: "%s"
+    vars:
+     - created_by
+     
+  - annotationProperty: comment
+    text: "%s"
+    vars:
+     - food
+     
+  - annotationProperty: xref
+    text: "%s"
+    vars:
+     - xref
+
+exact_synonym:
+  value: syns
+
+def:
+  text: "Addition of %s to a the diet for complete nutrition support."
+  vars:
+    - food
+
+equivalentTo:
+  text: "'nutritional supplementation' and 'has_input' some ('part_of' some %s)"
+  vars:
+    - food
+   
