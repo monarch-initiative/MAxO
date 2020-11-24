@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2020-11-20/maxo-base.owl
+data-version: maxo/releases/2020-11-24/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Aaron Zhang" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
@@ -8,7 +8,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2020-11-20" xsd:string
+property_value: owl:versionInfo "2020-11-24" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -863,33 +863,49 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000107
 name: multivitamin supplementation
-def: "A dietary supplement containing all or most of the vitamins that may not be readily available in the diet. Vitamins may be classified according to their solubility either in lipids (vitamins A, D, E, K, F) or in water (vitamins C, B-complex). Present in minute amounts in various foods, vitamins are essential to maintaining normal metabolism and biochemical functions." [NCIT:C1654]
+def: "Addition of multivitamin preparation to a the diet for complete nutrition support." []
+comment: A dietary supplement containing all or most of the vitamins that may not be readily available in the diet. Vitamins may be classified according to their solubility either in lipids (vitamins A, D, E, K, F) or in water (vitamins C, B-complex). Present in minute amounts in various foods, vitamins are essential to maintaining normal metabolism and biochemical functions. {xref="NCIT:C1654"}
+comment: multivitamin preparation
+synonym: "dietary supplementation of multivitamin preparation" EXACT []
+synonym: "multivitamin preparation supplemental intake" EXACT []
+synonym: "supplementation of multivitamin preparation" EXACT []
+synonym: "supplementation with multivitamin" EXACT []
 xref: NCIT:C1654
-is_a: MAXO:0000106 ! nutritional supplementation
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:08:59Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000108
 name: iron supplementation
-def: "Oral iron supplementation is an effective and well‐studied option to replenish iron stores." [PMID:28328083]
+def: "Addition of iron atom to a the diet for complete nutrition support." []
+comment: Oral iron supplementation is an effective and well‐studied option to replenish iron stores. {xref="PMID:28328083"}
+synonym: "dietary supplementation of iron atom" EXACT []
+synonym: "iron atom supplemental intake" EXACT []
 synonym: "iron replacement therapy" NARROW []
 synonym: "oral iron supplementation" EXACT []
-is_a: MAXO:0000106 ! nutritional supplementation
+synonym: "supplementation of iron atom" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:09:25Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000109
 name: vitamin C supplementation
-is_a: MAXO:0000106 ! nutritional supplementation
+def: "Addition of vitamin C to a the diet for complete nutrition support." []
+comment: vitamin C
+synonym: "dietary supplementation of vitamin C" EXACT []
+synonym: "supplementation of vitamin C" EXACT []
+synonym: "vitamin C supplemental intake" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:09:48Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000110
 name: vitamin D supplementation
-is_a: MAXO:0000106 ! nutritional supplementation
+def: "Addition of vitamin D to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of vitamin D" EXACT []
+synonym: "supplementation of vitamin D" EXACT []
+synonym: "vitamin D supplemental intake" EXACT []
+is_a: MAXO:0001129 ! vitamin supplementation
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:09:59Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -900,10 +916,14 @@ replaced_by: MAXO:0010020
 
 [Term]
 id: MAXO:0000112
-name: antioxidant therapy
-def: "Treatment with antioxidants in order to protect cells against damage caused by oxygen-free radicals." [NCIT:C67025]
+name: food antioxidant supplementation
+def: "Addition of food antioxidant to a the diet for complete nutrition support." []
+comment: Treatment with antioxidants in order to protect cells against damage caused by oxygen-free radicals. {xref="NCIT:C67025"}
+synonym: "antioxidant therapy" EXACT []
+synonym: "dietary supplementation of food antioxidant" EXACT []
+synonym: "food antioxidant supplemental intake" EXACT []
+synonym: "supplementation of food antioxidant" EXACT []
 xref: NCIT:C67025
-is_a: MAXO:0000106 ! nutritional supplementation
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:12:19Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1411,6 +1431,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000164
+name: uricosuric agent therapy
 def: "Substance that may reduce inflammation, stimulate elimination of uric acid, or increase production of uric acid." [NCIT:C29733]
 synonym: "anti-gout agent therapy" EXACT []
 synonym: "anti-gout combination medicine therapy" EXACT []
@@ -1423,13 +1444,11 @@ synonym: "antigout medication therapy" EXACT []
 synonym: "antigout preparation therapy" EXACT []
 synonym: "antigout therapy" EXACT []
 synonym: "gout suppressant agent treatment" EXACT []
-synonym: "gout suppressant therapy" EXACT []
 synonym: "treatment with anti-gout drug" EXACT []
 synonym: "treatment with anti-gout medication" EXACT []
 synonym: "treatment with antigout agent" EXACT []
 synonym: "treatment with antigout drug" EXACT []
 synonym: "treatment with antigout medication" EXACT []
-synonym: "treatment with gout suppressant" EXACT []
 synonym: "treatment with gout suppressant agent" EXACT []
 synonym: "treatment with gout suppressant drug" EXACT []
 synonym: "treatment with gout suppressant medication" EXACT []
@@ -1440,9 +1459,7 @@ xref: CHEBI:35845
 xref: NCIT:C29733
 is_a: MAXO:0000643 ! antirheumatic agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
-intersection_of: MAXO:0000058 ! pharmacotherapy
 intersection_of: RO:0000052 CHEBI:35841
-intersection_of: RO:0000052 CHEBI:35845
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T17:55:18Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1922,6 +1939,7 @@ replaced_by: MAXO:0000434
 
 [Term]
 id: MAXO:0000189
+name: dyslipidemic agent therapy
 def: "Therapy using an agent that reduces plasma lipids, such as cholesterol or low density lipoproteins (LDL), acting systemically or locally (intestines) to decrease fat digestion, absorption, production, and accumulation in the plasma and reducing pathogenic atherosclerosis and thrombosis." []
 synonym: "anti-lipemic therapy" EXACT []
 synonym: "anti-lipidemic agent therapy" EXACT []
@@ -8429,7 +8447,7 @@ name: fibrate antilipidemic agent therapy
 def: "A therapy derived from fibric acid that lowers serum LDL cholesterol levels by activating peroxisome proliferator activated receptor alpha (PPARa)." []
 synonym: "fibrate dyslipidemic agent therapy" EXACT []
 xref: NCIT:C98150
-is_a: MAXO:0000189
+is_a: MAXO:0000189 ! dyslipidemic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-17T21:12:47Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -8440,19 +8458,20 @@ def: "Therapy using a highly charged polymeric agent to bind bile acids in the g
 synonym: "bile-acid sequestrant agent therapy" EXACT []
 synonym: "bile-acid sequestrant therapy" EXACT []
 synonym: "treatment with bile-acid sequestrant" EXACT []
-is_a: MAXO:0000189
+is_a: MAXO:0000189 ! dyslipidemic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-17T21:21:54Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000739
+name: HMG-CoA reductase inhibitor therapy
 def: "Therapy that inhibits HMG-CoA reductase inhibitor." []
 synonym: "EC 1.1.1.34/EC 1.1.1.88 (hydroxymethylglutaryl-CoA reductase) inhibitor therapy" EXACT []
 synonym: "hydroxymethylglutaryl-CoA reductase inhibitor therapy" EXACT []
 synonym: "statin agent therapy" EXACT []
 synonym: "treatment with EC 1.1.1.34/EC 1.1.1.88 (hydroxymethylglutaryl-CoA reductase) inhibitor" EXACT []
 synonym: "treatment with statins" EXACT []
-is_a: MAXO:0000189
+is_a: MAXO:0000189 ! dyslipidemic agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
 intersection_of: RO:0000052 CHEBI:35664
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-17T21:37:04Z xsd:dateTime
@@ -8468,7 +8487,7 @@ synonym: "niacin-based antilipidemic agent" NARROW []
 synonym: "treatment with niacin" RELATED []
 xref: CHEBI:15940
 xref: NCIT:C98151
-is_a: MAXO:0000189
+is_a: MAXO:0000189 ! dyslipidemic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-17T21:45:22Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -8676,6 +8695,28 @@ property_value: http://purl.org/dc/elements/1.1/date 2020-11-19T21:22:47Z xsd:da
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0000760
+name: vitamin b12 supplementation
+def: "Addition of vitamin b12 to a the diet for complete nutrition support." []
+comment: vitamin b12
+synonym: "dietary supplementation of vitamin b12" EXACT []
+synonym: "supplementation of vitamin b12" EXACT []
+synonym: "vitamin b12 supplemental intake" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000761
+name: vitamin B supplementation
+def: "Addition of vitamin B to a the diet for complete nutrition support." []
+comment: vitamin B
+synonym: "dietary supplementation of vitamin B" EXACT []
+synonym: "supplementation of vitamin B" EXACT []
+synonym: "vitamin B supplemental intake" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0001000
 name: functional magnetic resonance imaging procedure
 def: "A type of MRI that takes a series of images of an organ in quick succession and statistically analyzes the differences between the images." [NCIT:C17958]
@@ -8845,13 +8886,18 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001019
-name: prenatal vitamin
-def: "A vitamin enriched supplement containing higher doses for specific nutrients such as folic acid, intended for women before, during and after pregnancy and also during their lactating phase." [NCIT:C92860]
-synonym: "antenatal supplements" EXACT []
-synonym: "antenatal vitamin supplements" EXACT []
-synonym: "antenatal vitamins" EXACT []
-synonym: "prenatal supplements" EXACT []
-synonym: "prenatal vitamin supplements" EXACT []
+name: prenatal vitamin supplementation
+def: "Addition of vitamin supplement, prenatal to a the diet for complete nutrition support." []
+comment: A vitamin enriched supplement containing higher doses for specific nutrients such as folic acid, intended for women before, during and after pregnancy and also during their lactating phase. {xref="NCIT:C92860"}
+comment: vitamin supplement, prenatal
+synonym: "antenatal supplementation" EXACT []
+synonym: "antenatal vitamin supplement treatment" EXACT []
+synonym: "antenatal vitamin treatment" EXACT []
+synonym: "dietary supplementation of vitamin supplement, prenatal" EXACT []
+synonym: "prenatal vitamin supplement treatment" EXACT []
+synonym: "supplementation of vitamin supplement, prenatal" EXACT []
+synonym: "treatment with prenatal supplements" EXACT []
+synonym: "vitamin supplement, prenatal supplemental intake" EXACT []
 xref: NCIT:C92860
 is_a: MAXO:0000107 ! multivitamin supplementation
 property_value: http://purl.org/dc/elements/1.1/date 2019-07-23T19:56:32Z xsd:dateTime
@@ -9835,6 +9881,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001124
+name: anticholesteric agent therapy
 synonym: "anticholesteremic drug therapy" EXACT []
 synonym: "antihypercholesterolemic agent therapy" EXACT []
 synonym: "cholesterol inhibitor therapy" EXACT []
@@ -9847,6 +9894,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001125
+name: loop diuretic agent therapy
 def: "Therapy with an agent that inhibits the function of the sodium-potassium-chloride (Na+, K+, Cl-) cotransporter system in the thick ascending limb of the loop of Henle, thereby inhibiting the reabsorption of sodium, potassium, and chloride ions. This leads to an increase in the excretion of sodium, potassium, chloride, calcium, magnesium, ammonium and water." []
 synonym: "loop diuretic therapy" EXACT []
 synonym: "treatment with loop diuretic" EXACT []
@@ -9875,6 +9923,219 @@ synonym: "avoiding radiograph imaging procedure" EXACT []
 intersection_of: MAXO:0001014 ! medical action avoidance
 intersection_of: MAXO:0001015 MAXO:0000595 ! avoided medical action radiograph imaging procedure
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-19T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001128
+name: folic acid supplementation
+def: "Addition of folic acid to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of folic acid" EXACT []
+synonym: "folic acid supplemental intake" EXACT []
+synonym: "supplementation of folic acid" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001129
+name: vitamin supplementation
+def: "Addition of Vitamin to a the diet for complete nutrition support." []
+comment: Vitamin
+synonym: "dietary supplementation of Vitamin" EXACT []
+synonym: "supplementation of Vitamin" EXACT []
+synonym: "supplementation with vitamin" EXACT []
+synonym: "Vitamin supplemental intake" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001130
+name: nicotinic acid supplementation
+def: "Addition of nicotinic acid to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of nicotinic acid" EXACT []
+synonym: "niacin supplementation" EXACT []
+synonym: "nicotinic acid supplemental intake" EXACT []
+synonym: "supplementation of nicotinic acid" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001131
+name: pyridoxine supplementation
+def: "Addition of pyridoxine to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of pyridoxine" EXACT []
+synonym: "pyridoxine supplemental intake" EXACT []
+synonym: "supplementation of pyridoxine" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001133
+name: ascorbic acid supplementation
+def: "Addition of ascorbic acid to a the diet for complete nutrition support." []
+synonym: "ascorbic acid supplemental intake" EXACT []
+synonym: "dietary supplementation of ascorbic acid" EXACT []
+synonym: "supplementation of ascorbic acid" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001134
+name: sodium pyruvate supplementation
+def: "Addition of sodium pyruvate to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of sodium pyruvate" EXACT []
+synonym: "sodium pyruvate supplemental intake" EXACT []
+synonym: "supplementation of sodium pyruvate" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001135
+name: fat-soluble vitamin supplementation
+def: "Addition of fat-soluble vitamin to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of fat-soluble vitamin" EXACT []
+synonym: "essential fat soluble vitamin supplementation" EXACT []
+synonym: "fat-soluble vitamin supplemental intake" EXACT []
+synonym: "supplementation of essential fat soluble vitamin" EXACT []
+synonym: "supplementation of fat-soluble vitamin" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001136
+name: S-adenosyl methionine supplementation
+def: "Addition of S-adenosyl-L-methionine to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of S-adenosyl-L-methionine" EXACT []
+synonym: "S-adenosyl-L-methionine supplemental intake" EXACT []
+synonym: "SAM-e supplementation" EXACT []
+synonym: "supplementation of S-adenosyl-L-methionine" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001137
+name: isoleucine supplementation
+def: "Addition of isoleucine to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of isoleucine" EXACT []
+synonym: "isoleucine supplemental intake" EXACT []
+synonym: "supplementation of isoleucine" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001138
+name: valine supplementation
+def: "Addition of valine to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of valine" EXACT []
+synonym: "supplementation of valine" EXACT []
+synonym: "valine supplemental intake" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001139
+name: calcium supplementation
+def: "Addition of calcium atom to a the diet for complete nutrition support." []
+synonym: "calcium atom supplemental intake" EXACT []
+synonym: "dietary supplementation of calcium atom" EXACT []
+synonym: "supplementation of calcium atom" EXACT []
+synonym: "supplementation with calcium" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001140
+name: calcium carbonate supplementation
+def: "Addition of calcium carbonate to a the diet for complete nutrition support." []
+synonym: "calcium carbonate supplemental intake" EXACT []
+synonym: "dietary supplementation of calcium carbonate" EXACT []
+synonym: "supplementation of calcium carbonate" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001141
+name: glucose supplementation
+def: "Addition of glucose to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of glucose" EXACT []
+synonym: "glucose supplemental intake" EXACT []
+synonym: "supplementation of glucose" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001142
+name: docosahexaenoic acid supplementation
+def: "Addition of docosahexaenoic acid to a the diet for complete nutrition support." []
+synonym: "DHA supplementtion" EXACT []
+synonym: "dietary supplementation of docosahexaenoic acid" EXACT []
+synonym: "docosahexaenoic acid supplemental intake" EXACT []
+synonym: "supplementation of docosahexaenoic acid" EXACT []
+synonym: "supplementation with DHA" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001143
+name: omega-3 fatty acid supplementation
+def: "Addition of omega-3 fatty acid to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of omega-3 fatty acid" EXACT []
+synonym: "eicosapentaenoic acid supplementation" EXACT []
+synonym: "omega-3 fatty acid supplemental intake" EXACT []
+synonym: "supplementation of omega-3 fatty acid" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001144
+name: lutein supplementation
+def: "Addition of lutein to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of lutein" EXACT []
+synonym: "lutein supplemental intake" EXACT []
+synonym: "supplementation of lutein" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001145
+name: ribose supplementation
+def: "Addition of ribose to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of ribose" EXACT []
+synonym: "ribose supplemental intake" EXACT []
+synonym: "supplementation of ribose" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001146
+name: fluoride supplementation
+def: "Addition of fluoride to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of fluoride" EXACT []
+synonym: "fluoride supplemental intake" EXACT []
+synonym: "supplementation of fluoride" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001147
+name: soluble fiber supplementation
+def: "Addition of dietary supplement, fibre to a the diet for complete nutrition support." []
+comment: dietary supplement, fibre
+synonym: "dietary supplement, fibre supplemental intake" EXACT []
+synonym: "dietary supplementation of dietary supplement, fibre" EXACT []
+synonym: "supplementation of dietary supplement, fibre" EXACT []
+synonym: "supplementation with soluble fiber" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001148
+name: fish oil supplementation
+def: "Addition of fish oil to a the diet for complete nutrition support." []
+comment: fish oil
+synonym: "dietary supplementation of fish oil" EXACT []
+synonym: "fish oil supplemental intake" EXACT []
+synonym: "supplementation of fish oil" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -10025,21 +10286,23 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010004
-name: amino-acid betaine supplementation
+name: betaine supplementation
 def: "Addition of amino-acid betaine to a the diet for complete nutrition support." []
 synonym: "amino-acid betaine supplemental intake" EXACT []
 synonym: "dietary supplementation of amino-acid betaine" EXACT []
 synonym: "supplementation of amino-acid betaine" EXACT []
+synonym: "supplementation with betaine" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-07-11T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010005
-name: folates supplementation
+name: folate supplementation
 def: "Addition of folates to a the diet for complete nutrition support." []
 synonym: "dietary supplementation of folates" EXACT []
 synonym: "folates supplemental intake" EXACT []
 synonym: "supplementation of folates" EXACT []
+synonym: "supplementation with folate" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-07-11T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -10085,7 +10348,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010010
-name: biotins supplementation
+name: biotin supplementation
 def: "Addition of biotins to a the diet for complete nutrition support." []
 synonym: "biotins supplemental intake" EXACT []
 synonym: "dietary supplementation of biotins" EXACT []
@@ -10197,7 +10460,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010021
-name: L-serine supplementation
+name: serine supplementation
 def: "Addition of L-serine to a the diet for complete nutrition support." []
 synonym: "dietary supplementation of L-serine" EXACT []
 synonym: "L-serine supplemental intake" EXACT []
@@ -10267,7 +10530,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010028
-name: cyanocob(III)alamin supplementation
+name: cyanocobalamin supplementation
 def: "Addition of cyanocob(III)alamin to a the diet for complete nutrition support." []
 synonym: "cyanocob(III)alamin supplemental intake" EXACT []
 synonym: "dietary supplementation of cyanocob(III)alamin" EXACT []
@@ -10282,6 +10545,7 @@ def: "Addition of methylcobalamin to a the diet for complete nutrition support."
 synonym: "dietary supplementation of methylcobalamin" EXACT []
 synonym: "methylcobalamin supplemental intake" EXACT []
 synonym: "supplementation of methylcobalamin" EXACT []
+is_a: MAXO:0000760 ! vitamin b12 supplementation
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -11084,6 +11348,7 @@ def: "A medical requirement or recommendation of avoiding the consumption of bra
 synonym: "avoid branched chain amino acids ingestion" EXACT []
 synonym: "avoid branched-chain amino acid intake" EXACT []
 synonym: "avoiding dietary branched-chain amino acid intake" EXACT []
+synonym: "BCAA-free diet recommendation" EXACT []
 synonym: "branched chain amino acid intake avoidance" EXACT []
 synonym: "branched chain amino acid restriction" EXACT []
 synonym: "branched-chain amino acid consumption avoidance" EXACT []
@@ -11266,7 +11531,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010115
-name: dietary calcium atom intake avoidance
+name: dietary calcium avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of calcium atom." []
 synonym: "avoid calcium atom intake" EXACT []
 synonym: "avoiding dietary calcium atom intake" EXACT []
@@ -12168,15 +12433,8 @@ created_by: http://orcid.org/0000-0002-7463-6306
 
 [Term]
 id: MAXO:0030012
-name: phenylalanine restricted diet intake
-def: "Dietary approaches avoid excessive phenylalanine consumption, including stringent dietary restriction of natural protein intake, and supplementation of amino acids other than phenylalanine by a chemically manufactured protein substitute." [PMID:20720592, PMID:20971365]
-synonym: "low phenylalanine diet intake" EXACT []
-synonym: "phenylalanine free food intake" EXACT []
-synonym: "phenylalanine-free diet intake" EXACT []
-synonym: "phenylalanine-restricted diet intake" EXACT []
-is_a: MAXO:0000088 ! dietary intervention
-property_value: http://purl.org/dc/elements/1.1/date 2019-09-06T19:08:21Z xsd:dateTime
-created_by: http://orcid.org/0000-0002-7463-6306
+name: obsolete phenylalanine restricted diet intake
+replaced_by: MAXO:0010094
 
 [Term]
 id: MAXO:0030018
