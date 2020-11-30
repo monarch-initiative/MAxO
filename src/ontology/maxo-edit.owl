@@ -625,6 +625,10 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000756>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000757>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000758>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000759>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000762>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000763>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000764>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000765>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001002>))
@@ -1473,10 +1477,12 @@ AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#has
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000114> "2019-01-19T21:16:22Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000114> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000114> "NCIT:C29484")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000114> "TNA intake")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/uberon/core#ABBREVIATION>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000114> "TPN intake")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000114> "total nutrient admixture intake")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/MAXO_0000114> "hyperalimentation")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000114> "total parenteral nutrition intake"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000114> <http://purl.obolibrary.org/obo/MAXO_0000009>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000114> <http://purl.obolibrary.org/obo/MAXO_0000762>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000115> (memory intervention)
 
@@ -7836,6 +7842,40 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000759> "HPV vaccination")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000759> "human papillomavirus vaccination"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000759> <http://purl.obolibrary.org/obo/MAXO_0001017>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000762> (parenteral nutrition intake)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000762> "Intake of nutrients intravenously.")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000762> "2020-11-30T16:40:53Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000762> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000762> "parenteral nutrition intake"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000762> <http://purl.obolibrary.org/obo/MAXO_0001018>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000763> (partial parenteral nutrition intake)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000763> "Intake of nutrients intravenously as well as enterically.")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000763> "2020-11-30T16:43:26Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000763> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000763> "partial parenteral nutrition intake"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000763> <http://purl.obolibrary.org/obo/MAXO_0000762>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000764> (peripheral parenteral nutrition intake)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000764> "Intravenous nutrition intake administered via vein access in a limb.")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000764> "2020-11-30T16:45:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000764> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000764> "PPN intake")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000764> "peripheral parenteral nutrition intake"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000764> <http://purl.obolibrary.org/obo/MAXO_0000762>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000765> (central venous nutrition intake)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000765> "Intravenous nutrition administration via the central vein.")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000765> "2020-11-30T16:46:01Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000765> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000765> "CVN intake")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000765> "central venous nutrition intake"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000765> <http://purl.obolibrary.org/obo/MAXO_0000762>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0001000> (functional magnetic resonance imaging procedure)
 
