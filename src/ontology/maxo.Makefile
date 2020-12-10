@@ -39,3 +39,7 @@ imports/hp_import.owl: mirror/hp.owl imports/hp_terms_combined.txt tmp/remove.tx
 
 reports/maxo-edit.owl-obo-report.tsv: maxo-edit.owl
 	$(ROBOT) report -i $< --fail-on none --print 5 -o $@
+	
+
+sssom.csv:
+	robot query -f csv -i $(SRC) --query ../sparql/sssom.sparql $@
