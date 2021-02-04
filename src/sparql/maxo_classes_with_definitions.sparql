@@ -1,0 +1,14 @@
+prefix oio: <http://www.geneontology.org/formats/oboInOwl#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix def: <http://purl.obolibrary.org/obo/IAO_0000115>
+
+SELECT ?cls ?xref ?def WHERE 
+{
+  ?cls a owl:Class ;
+  def: ?def .
+       ?ano a owl:Axiom ;
+         owl:annotatedSource ?cls ;
+         owl:annotatedProperty  def: ;
+         owl:annotatedTarget ?def ;
+         oio:hasDbXref ?xref . 
+}
