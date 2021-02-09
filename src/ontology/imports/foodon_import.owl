@@ -13,8 +13,9 @@
      xmlns:schema="http://schema.org/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/imports/foodon_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2020-12-10/imports/foodon_import.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-12-10</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2021-02-09/imports/foodon_import.owl"/>
+        <dc:source rdf:resource="http://purl.obolibrary.org/obo/foodon/releases/2021-02-03/foodon.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-09</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -376,7 +377,6 @@
     <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <obo:IAO_0000111 xml:lang="en">is part of</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">a core relation that holds between a part and its whole</obo:IAO_0000115>
@@ -392,7 +392,6 @@
     <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <obo:IAO_0000111 xml:lang="en">has part</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">a core relation that holds between a whole and its part</obo:IAO_0000115>
@@ -446,44 +445,9 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0000053 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000053">
-        <obo:IAO_0000111 xml:lang="en">bearer of</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a specifically dependent continuant (the dependent), in which the dependent specifically depends on the bearer for its existence</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
-        <rdfs:label xml:lang="en">bearer of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0000056 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000056">
-        <obo:IAO_0000111 xml:lang="en">participates in</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">a relation between a continuant and a process, in which the continuant is somehow involved in the process</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
-        <rdfs:label xml:lang="en">participates in</rdfs:label>
-        <rdfs:label>participates_in</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0000057 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000057">
-        <obo:IAO_0000111 xml:lang="en">has participant</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">a relation between a process and a continuant, in which the continuant is somehow involved in the process</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
-        <rdfs:label xml:lang="en">has participant</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/RO_0000086 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000086">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
         <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
         <rdfs:label xml:lang="en">has quality</rdfs:label>
@@ -494,7 +458,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     <!-- http://purl.obolibrary.org/obo/RO_0000087 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000087">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
         <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
         <rdfs:label xml:lang="en">has role</rdfs:label>
@@ -513,22 +476,9 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0002131 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002131">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002323"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <obo:IAO_0000115>x overlaps y if and only if there exists some z such that x has part z and z part of y</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
-        <rdfs:label xml:lang="en">overlaps</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/RO_0002162 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002162">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002320"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115>x is in taxon y if an only if y is an organism, and the relationship between x and y is one of: part of (reflexive), developmentally preceded by, derives from, secreted by, expressed.</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/17921072"/>
@@ -553,7 +503,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     <!-- http://purl.obolibrary.org/obo/RO_0002233 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002233">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115>p has input c iff: p is a process, c is a material entity, c is a participant in p, c is present at the start of p, and the state of c is modified during p.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
@@ -565,7 +514,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     <!-- http://purl.obolibrary.org/obo/RO_0002234 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002234">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115>p has output c iff c is a participant in p, c is present at the end of p, and c is not present at the beginning of p.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
@@ -577,41 +525,10 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     <!-- http://purl.obolibrary.org/obo/RO_0002314 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002314">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002502"/>
         <obo:IAO_0000115>q inheres in part of w if and only if there exists some p such that q inheres in p and p part of w.</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/20064205"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
         <rdfs:label xml:lang="en">inheres in part of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002320 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002320">
-        <obo:IAO_0000115>A relationship that holds via some environmental process</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
-        <rdfs:label xml:lang="en">evolutionarily related to</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002323 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002323">
-        <obo:IAO_0000115>A mereological relationship or a topological relationship</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
-        <rdfs:label xml:lang="en">mereotopologically related to</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002328 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002328">
-        <obo:IAO_0000115>A grouping relationship for any relationship directly involving a function, or that holds because of a function of one of the related entities.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
-        <rdfs:label xml:lang="en">functionally related to</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -649,20 +566,9 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     <!-- http://purl.obolibrary.org/obo/RO_0002353 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002353">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
         <obo:IAO_0000115>inverse of has output</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
         <rdfs:label xml:lang="en">output of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002502 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002502">
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
-        <rdfs:label>depends on</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -702,44 +608,9 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000001 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000001">
-        <obo:BFO_0000179>entity</obo:BFO_0000179>
-        <obo:BFO_0000180>Entity</obo:BFO_0000180>
-        <obo:IAO_0000112 xml:lang="en">Julius Caesar</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">Verdi’s Requiem</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">the Second World War</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">your body mass index</obo:IAO_0000112>
-        <obo:IAO_0000116 xml:lang="en">BFO 2 Reference: In all areas of empirical inquiry we encounter general terms of two sorts. First are general terms which refer to universals or types:animaltuberculosissurgical procedurediseaseSecond, are general terms used to refer to groups of entities which instantiate a given universal but do not correspond to the extension of any subuniversal of that universal because there is nothing intrinsic to the entities in question by virtue of which they – and only they – are counted as belonging to the given group. Examples are: animal purchased by the Emperortuberculosis diagnosed on a Wednesdaysurgical procedure performed on a patient from Stockholmperson identified as candidate for clinical trial #2056-555person who is signatory of Form 656-PPVpainting by Leonardo da VinciSuch terms, which represent what are called ‘specializations’ in [81</obo:IAO_0000116>
-        <obo:IAO_0000116 xml:lang="en">Entity doesn&apos;t have a closure axiom because the subclasses don&apos;t necessarily exhaust all possibilites. For example Werner Ceusters &apos;portions of reality&apos; include 4 sorts, entities (as BFO construes them), universals, configurations, and relations. It is an open question as to whether entities as construed in BFO will at some point also include these other portions of reality. See, for example, &apos;How to track absolutely everything&apos; at http://www.referent-tracking.com/_RTU/papers/CeustersICbookRevised.pdf</obo:IAO_0000116>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/envo.owl"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
-        <obo:IAO_0000600 xml:lang="en">An entity is anything that exists or has existed or will exist. (axiom label in BFO2 Reference: [001-001])</obo:IAO_0000600>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
-        <rdfs:label xml:lang="en">entity</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000116"/>
-        <owl:annotatedTarget xml:lang="en">Entity doesn&apos;t have a closure axiom because the subclasses don&apos;t necessarily exhaust all possibilites. For example Werner Ceusters &apos;portions of reality&apos; include 4 sorts, entities (as BFO construes them), universals, configurations, and relations. It is an open question as to whether entities as construed in BFO will at some point also include these other portions of reality. See, for example, &apos;How to track absolutely everything&apos; at http://www.referent-tracking.com/_RTU/papers/CeustersICbookRevised.pdf</owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/0000004"/>
-        <rdfs:comment>per discussion with Barry Smith</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://www.referent-tracking.com/_RTU/papers/CeustersICbookRevised.pdf"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000600"/>
-        <owl:annotatedTarget xml:lang="en">An entity is anything that exists or has existed or will exist. (axiom label in BFO2 Reference: [001-001])</owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/001-001"/>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/BFO_0000002 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000002">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
@@ -768,18 +639,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
         <rdfs:label xml:lang="en">continuant</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
-        <owl:annotatedTarget>(forall (x y) (if (and (Continuant x) (exists (t) (hasContinuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [126-001] </owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/126-001"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
-        <owl:annotatedTarget>(forall (x) (if (Continuant x) (Entity x))) // axiom label in BFO2 CLIF: [008-002] </owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/008-002"/>
-    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
@@ -822,13 +681,24 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <owl:annotatedTarget>(forall (x y) (if (and (Continuant x) (exists (t) (continuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [009-002] </owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/009-002"/>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x y) (if (and (Continuant x) (exists (t) (hasContinuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [126-001] </owl:annotatedTarget>
+        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/126-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (Continuant x) (Entity x))) // axiom label in BFO2 CLIF: [008-002] </owl:annotatedTarget>
+        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/008-002"/>
+    </owl:Axiom>
     
 
 
     <!-- http://purl.obolibrary.org/obo/BFO_0000003 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000003">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
@@ -910,7 +780,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
-        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
         <obo:BFO_0000179>ic</obo:BFO_0000179>
         <obo:BFO_0000180>IndependentContinuant</obo:BFO_0000180>
         <obo:IAO_0000112 xml:lang="en">a chair</obo:IAO_0000112>
@@ -1171,37 +1040,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
         <owl:annotatedTarget>(forall (x) (if (FiatObjectPart x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y) (and (Object y) (properContinuantPartOfAt x y t)))))))) // axiom label in BFO2 CLIF: [027-004] </owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/027-004"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000031 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000031">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-        <obo:BFO_0000179>gdc</obo:BFO_0000179>
-        <obo:BFO_0000180>GenericallyDependentContinuant</obo:BFO_0000180>
-        <obo:IAO_0000112 xml:lang="en">The entries in your database are patterns instantiated as quality instances in your hard drive. The database itself is an aggregate of such patterns. When you create the database you create a particular instance of the generically dependent continuant type database. Each entry in the database is an instance of the generically dependent continuant type IAO: information content entity.</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">the pdf file on your laptop, the pdf file that is a copy thereof on my laptop</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">the sequence of this protein molecule; the sequence that is a copy thereof in that protein molecule.</obo:IAO_0000112>
-        <obo:IAO_0000115 xml:lang="en">A continuant that is dependent on one or other independent continuant bearers. For every instance of A requires some instance of (an independent continuant type) B but which instance of B serves can change from time to time.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="en">b is a generically dependent continuant = Def. b is a continuant that g-depends_on one or more other entities. (axiom label in BFO2 Reference: [074-001])</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
-        <obo:IAO_0000602>(iff (GenericallyDependentContinuant a) (and (Continuant a) (exists (b t) (genericallyDependsOnAt a b t)))) // axiom label in BFO2 CLIF: [074-001] </obo:IAO_0000602>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
-        <rdfs:label xml:lang="en">generically dependent continuant</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">b is a generically dependent continuant = Def. b is a continuant that g-depends_on one or more other entities. (axiom label in BFO2 Reference: [074-001])</owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/074-001"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
-        <owl:annotatedTarget>(iff (GenericallyDependentContinuant a) (and (Continuant a) (exists (b t) (genericallyDependsOnAt a b t)))) // axiom label in BFO2 CLIF: [074-001] </owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/074-001"/>
     </owl:Axiom>
     
 
@@ -4062,6 +3900,17 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000815"/>
+        <obo:IAO_0000115>An environmental material primarily composed of dihydrogen oxide in its liquid form.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/envo.owl"/>
+        <rdfs:label>liquid water</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_00010483 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00010483">
@@ -4070,6 +3919,28 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/envo.owl"/>
         <oboInOwl:hasBroadSynonym xml:lang="en">environmental</oboInOwl:hasBroadSynonym>
         <rdfs:label>environmental material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000815 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000815">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02000140"/>
+        <obo:IAO_0000115>An environmental material which is in a liquid state.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/envo.owl"/>
+        <rdfs:label xml:lang="en">liquid environmental material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_02000140 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02000140">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+        <obo:IAO_0000115>A liquid or a gas.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/envo.owl"/>
+        <rdfs:label xml:lang="en">fluid environmental material</rdfs:label>
     </owl:Class>
     
 
@@ -4139,6 +4010,30 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001016">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00001171"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411406"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001171"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00003341"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000115>Cabbage or headed cabbage (comprising several cultivars of Brassica oleracea) is a leafy green or purple biennial plant, grown as an annual vegetable crop for its dense-leaved heads.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Cabbage</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">cabbage food product</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_00001040 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001040">
@@ -4161,33 +4056,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001131"/>
         <rdfs:label xml:lang="en">chicken meat food product</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FOODON_00001041 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001041">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00001134"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411161"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001134"/>
-        <obo:IAO_0000115>Meat from bovines, especially domestic cattle (cows).</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">beef food product</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001041"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Meat from bovines, especially domestic cattle (cows).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>http://en.wikipedia.org/wiki/Beef</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -4418,6 +4286,15 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001102 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001102">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001254"/>
+        <rdfs:label xml:lang="en">fermented grain beverage</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_00001105 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001105">
@@ -4587,11 +4464,75 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001143 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001143">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00002381"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411261"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002381"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">A food product consisting of an edible fungi or mushroom or yeast.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Damion Dooley</obo:IAO_0000117>
+        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Fungus#In_food"/>
+        <rdfs:label xml:lang="en">fungus food product</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.asmscience.org/content/journal/microbiolspec/10.1128/microbiolspec.FUNK-0030-2016</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001144 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001144">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00001143"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411345"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001143"/>
+        <rdfs:label xml:lang="en">yeast food product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001166 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001166">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001015"/>
+        <rdfs:label xml:lang="en">plant inflorescence food product</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_00001169 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001169">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001015"/>
         <rdfs:label xml:lang="en">cruciferous food product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001171 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001171">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001166"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001169"/>
+        <rdfs:label xml:lang="en">cruciferous inflorescence food product</rdfs:label>
     </owl:Class>
     
 
@@ -4911,6 +4852,35 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001260 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001260">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001102"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002420"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002420"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_27292"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002353"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03460232"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">Beer is a fermented cereal beverage resulting from the fermentation most commonly of malted barley (though wheat, corn, or rice may included), by a yeast, most commonly Saccharomyces cerevisiae, and flavored by dried flowers of hops, Humulus lupulus.</obo:IAO_0000115>
+        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Beer</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">beer beverage</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_00001261 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001261">
@@ -4950,10 +4920,10 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001262"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Mature ovary of a plant, with a fleshy part of the carpel that develops with the seed to attract animals for aid in dispersal. Botanically, nuts are considered fruits.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>http://eurovoc.europa.eu/drupal/?q=request&amp;amp;uri=http://eurovoc.europa.eu/1115</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://eurovoc.europa.eu/drupal/?q=request&amp;amp;uri=http://eurovoc.europa.eu/1115</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>http://oek1.fao.org/skosmos/agrovoc/en/page/c_3119</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>http://www.fao.org/pollination/resources/glossary/en/</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Fruit</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Fruit</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -5065,9 +5035,14 @@ https://www.politico.com/agenda/story/2016/03/crazy-us-chicken-egg-regulation-gr
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001304">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03460119"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03470107"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002234"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001258"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A fermentation process in which either carbohydrates, proteins or fats are modified through microbial, enzymatic and/or other biological process.</obo:IAO_0000115>
         <obo:IAO_0000117>Damion Dooley</obo:IAO_0000117>
-        <rdfs:comment xml:lang="en">A fermentation process in which either carbohydrates, proteins or fats are modified through microbial, enzymatic and/or other biological process.</rdfs:comment>
         <rdfs:label xml:lang="en">food fermentation</rdfs:label>
     </owl:Class>
     
@@ -5123,7 +5098,7 @@ https://www.politico.com/agenda/story/2016/03/crazy-us-chicken-egg-regulation-gr
     <!-- http://purl.obolibrary.org/obo/FOODON_00001579 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001579">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001254"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001094"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
         <obo:IAO_0000115 xml:lang="en">An alcoholic drink (or alcoholic beverage) is a drink that contains ethanol, a type of alcohol produced by fermentation of grains, fruits, or other sources of sugar.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Damion Dooley</obo:IAO_0000117>
@@ -5220,7 +5195,7 @@ https://www.politico.com/agenda/story/2016/03/crazy-us-chicken-egg-regulation-gr
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002142"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00003341"/>
-        <rdfs:label xml:lang="en">broccoli vegetable food product</rdfs:label>
+        <rdfs:label xml:lang="en">broccoli food product</rdfs:label>
     </owl:Class>
     
 
@@ -5241,7 +5216,24 @@ https://www.politico.com/agenda/story/2016/03/crazy-us-chicken-egg-regulation-gr
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002142"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00003341"/>
-        <rdfs:label xml:lang="en">brussels sprout vegetable food product</rdfs:label>
+        <rdfs:label xml:lang="en">brussels sprout food product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001675 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001675">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00001016"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_03301444"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03301444"/>
+        <rdfs:label xml:lang="en">cabbage juice food product</rdfs:label>
     </owl:Class>
     
 
@@ -5249,25 +5241,14 @@ https://www.politico.com/agenda/story/2016/03/crazy-us-chicken-egg-regulation-gr
     <!-- http://purl.obolibrary.org/obo/FOODON_00001677 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001677">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00002142"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411406"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001016"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002142"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00003341"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
         <obo:IAO_0000115 xml:lang="en">A cabbage vegetable food product is a food product derived from the head or leaf portion of a cabbage plant.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Damion Dooley</obo:IAO_0000117>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2019-06-27T13:30:10Z</dc:date>
         <schema:image rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Cabbage_and_cross_section_on_white.jpg/640px-Cabbage_and_cross_section_on_white.jpg</schema:image>
-        <rdfs:label xml:lang="en">cabbage vegetable food product</rdfs:label>
+        <rdfs:label xml:lang="en">cabbage head food product</rdfs:label>
     </owl:Class>
     
 
@@ -5289,7 +5270,7 @@ https://www.politico.com/agenda/story/2016/03/crazy-us-chicken-egg-regulation-gr
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002140"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00003341"/>
         <obo:IAO_0000115 xml:lang="en">A food product that derives from a cauliflower plant.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">cauliflower vegetable food product</rdfs:label>
+        <rdfs:label xml:lang="en">cauliflower food product</rdfs:label>
     </owl:Class>
     
 
@@ -6127,9 +6108,9 @@ https://www.politico.com/agenda/story/2016/03/crazy-us-chicken-egg-regulation-gr
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002403"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000114>requires discussion</obo:IAO_0000114>
         <obo:IAO_0000115 xml:lang="en">A process involving the physical transformation of a food source or food product into some derived organic material or food product</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Damion Dooley</obo:IAO_0000117>
+        <obo:IAO_0000117>Damion Dooley</obo:IAO_0000117>
         <rdfs:label xml:lang="en">food transformation process</rdfs:label>
     </owl:Class>
     
@@ -6218,7 +6199,7 @@ Namely, how to characterize the threshold of ingredients that make for multi-com
     <!-- http://purl.obolibrary.org/obo/FOODON_00002507 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002507">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411161"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9913"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
         <obo:IAO_0000115 xml:lang="en">Taurine cattle (Bos taurus taurus), also called European cattle, are a subspecies of domesticated cattle originating in the Near East. Both taurine cattle and indicine cattle (zebus) are descended from the aurochs. Taurine cattle were originally considered a distinct species, but are now typically grouped with zebus and aurochs into one species, Bos taurus. Most modern breeds of cattle are taurine cattle.</obo:IAO_0000115>
         <obo:IAO_0000117>Damion Dooley</obo:IAO_0000117>
@@ -6656,7 +6637,7 @@ Namely, how to characterize the threshold of ingredients that make for multi-com
         <oboInOwl:hasNarrowSynonym xml:lang="en">tatsoi vegetable food product</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym xml:lang="en">cole crop vegetable food product</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym xml:lang="en">cruciferous vegetable food product</oboInOwl:hasRelatedSynonym>
-        <rdfs:label xml:lang="en">brassica vegetable food product</rdfs:label>
+        <rdfs:label xml:lang="en">brassica food product</rdfs:label>
     </owl:Class>
     
 
@@ -6688,6 +6669,17 @@ Namely, how to characterize the threshold of ingredients that make for multi-com
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0002-8844-9165"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-09-09T19:28:43Z</dc:date>
         <rdfs:label xml:lang="en">Maize plant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00003581 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00003581">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002294"/>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0002-8844-9165"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-16T22:18:57Z</dc:date>
+        <rdfs:label xml:lang="en">sunflower seed (whole kernel)</rdfs:label>
     </owl:Class>
     
 
@@ -6931,6 +6923,7 @@ Namely, how to characterize the threshold of ingredients that make for multi-com
     <!-- http://purl.obolibrary.org/obo/FOODON_03301619 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03301619">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001260"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002017"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -6950,7 +6943,7 @@ Namely, how to characterize the threshold of ingredients that make for multi-com
 * formed as a result of &apos;carbonated by fermentation&apos; (http://purl.obolibrary.org/obo/FOODON_03460246)
 * formed as a result of &apos;preservation by filtration&apos; (http://purl.obolibrary.org/obo/FOODON_03470121)
         </rdfs:comment>
-        <rdfs:label xml:lang="en">beer</rdfs:label>
+        <rdfs:label xml:lang="en">barley malt beer beverage</rdfs:label>
     </owl:Class>
     
 
@@ -7267,7 +7260,7 @@ Namely, how to characterize the threshold of ingredients that make for multi-com
     <!-- http://purl.obolibrary.org/obo/FOODON_03304869 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03304869">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002294"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00003581"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03304497"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -7460,7 +7453,7 @@ Namely, how to characterize the threshold of ingredients that make for multi-com
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UBERON_0001913"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0003001"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411201"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -8949,37 +8942,6 @@ However, this disjunction appears to be a burden on reasoners, and so this is cu
     
 
 
-    <!-- http://purl.obolibrary.org/obo/FOODON_03411161 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411161">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03414374"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002162"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9913"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
-        <obo:IAO_0000115 xml:lang="en">Cattle (colloquially cows) are the most common type of large domesticated ungulates. They are a prominent modern member of the subfamily *Bovinae*, are the most widespread species of the genus *Bos*, and are most commonly classified collectively as *Bos taurus*... with three subspecies: *Bos taurus primigenius, Bos taurus indicus, Bos taurus taurus*.</obo:IAO_0000115>
-        <obo:IAO_0000119>WIKIPEDIA:Cattle</obo:IAO_0000119>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9913"/>
-        <oboInOwl:hasDbXref>ITIS:183838</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MSW3:14200687</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://eol.org/pages/328699</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1161</oboInOwl:hasDbXref>
-        <oboInOwl:hasNarrowSynonym>Bos taurus Linnaeus, 1758</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym xml:lang="en">cow</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">auroch</oboInOwl:hasSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">bos spp.</oboInOwl:hasSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">bos taurus</oboInOwl:hasSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">domesticated cattle</oboInOwl:hasSynonym>
-        <rdfs:label xml:lang="en">cattle</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/List_of_cattle_breeds</rdfs:seeAlso>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/FOODON_03411174 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411174">
@@ -9271,6 +9233,30 @@ However, this disjunction appears to be a burden on reasoners, and so this is cu
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_03411261 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411261">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411564"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">A member of the group of eukaryotic organisms in the kingdom Fungi that includes unicellular microorganisms such as yeasts and molds, as well as multicellular fungi that produce familiar fruiting forms known as mushrooms.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0002-8844-9165"/>
+        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Fungus"/>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <schema:image rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Fungi_collage.jpg/551px-Fungi_collage.jpg"/>
+        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1261</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="en">fungi</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">fungus</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411261"/>
+        <owl:annotatedProperty rdf:resource="http://schema.org/image"/>
+        <owl:annotatedTarget rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Fungi_collage.jpg/551px-Fungi_collage.jpg"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/2.5/deed.en"/>
+        <terms:rightsHolder>BorgQueen</terms:rightsHolder>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_03411281 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411281">
@@ -9351,6 +9337,20 @@ However, this disjunction appears to be a burden on reasoners, and so this is cu
         <oboInOwl:hasSynonym xml:lang="en">pisum l.</oboInOwl:hasSynonym>
         <rdfs:label xml:lang="en">pea plant</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://hort.purdue.edu/newcrop/CropFactSheets/pea.html"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03411345 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411345">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03412034"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000115 xml:lang="en">Yeasts are eukaryotic micro-organisms classified in the kingdom *Fungi*, with 1,500 species currently described estimated to be only 1% of all fungal species.</obo:IAO_0000115>
+        <obo:IAO_0000119>WIKIPEDIA:Yeast</obo:IAO_0000119>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1345</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">yeast</rdfs:label>
     </owl:Class>
     
 
@@ -9532,16 +9532,8 @@ Broccoli is classified in the *Italica* cultivar group of the species *Brassica 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411457">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001040"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411563"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002162"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9031"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9031"/>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9031"/>
         <oboInOwl:hasDbXref>ITIS:176086</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>http://eol.org/pages/1049263</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1457</oboInOwl:hasDbXref>
@@ -9549,7 +9541,7 @@ Broccoli is classified in the *Italica* cultivar group of the species *Brassica 
         <oboInOwl:hasExactSynonym xml:lang="en">gallus gallus domesticus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>Gallus gallus (Linnaeus, 1758)</oboInOwl:hasNarrowSynonym>
         <rdfs:label xml:lang="en">chicken</rdfs:label>
-        <rdfs:seeAlso xml:lang="en">https://www.usda.gov/media/blog/2011/11/17/poultry-classifications-get-21st-century-upgrade</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:resource="https://www.usda.gov/media/blog/2011/11/17/poultry-classifications-get-21st-century-upgrade"/>
     </owl:Class>
     
 
@@ -9689,6 +9681,30 @@ obolibrary:FOODON_03412345 # lichen</obo:GENEPIO_0001763>
         <oboInOwl:hasExactSynonym xml:lang="en">stewing chicken</oboInOwl:hasExactSynonym>
         <oboInOwl:hasSynonym xml:lang="en">stewing hen</oboInOwl:hasSynonym>
         <rdfs:label xml:lang="en">chicken hen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03412034 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03412034">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411261"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000115 xml:lang="en">*Ascomycota* is a Division/Phylum of the kingdom *Fungi* that, together with the *Basidiomycota*, form the subkingdom *Dikarya*. Its members are commonly known as the sac fungi. They are the largest phylum of *Fungi*, with over 64,000 species.
+The *ascomycetes* are a monophyletic group, i.e., all of its members trace back to one common ancestor. This group is of particular relevance to humans as sources for medicinally important compounds, such as antibiotics and for making bread, alcoholic beverages, and cheese, but also as pathogens of humans and plants. Familiar examples of sac fungi include morels, truffles, brewer&apos;s yeast and baker&apos;s yeast, dead man&apos;s fingers, and cup fungi.</obo:IAO_0000115>
+        <obo:IAO_0000119>WIKIPEDIA:Ascomycota</obo:IAO_0000119>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>http://eol.org/pages/5577</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B2034</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonym xml:lang="en">ascomycete</oboInOwl:hasSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">ascomycota</oboInOwl:hasSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">ascomycotina</oboInOwl:hasSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">ascos</oboInOwl:hasSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">dematiaceae</oboInOwl:hasSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">plectascales</oboInOwl:hasSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">protascales</oboInOwl:hasSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">sac fungi</oboInOwl:hasSynonym>
+        <rdfs:label xml:lang="en">ascomycetes</rdfs:label>
     </owl:Class>
     
 
@@ -10589,9 +10605,7 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03460111">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002451"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">Used to specifically characterize a food product based on the treatment or processes applied to the product or any indexed ingredient. The processes include adding, substituting or removing components or modifying the food or component, e.g., through fermentation. Multiple values can be assigned.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <obo:IAO_0000115 xml:lang="en">Used to specifically characterize a food product based on the treatment or processes applied to the product or any indexed ingredient. The processes include adding, substituting or removing components or modifying the food or component, e.g., through fermentation.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=H0111</oboInOwl:hasDbXref>
         <rdfs:comment xml:lang="en">LanguaL curation note: This term is for CLASSIFICATION ONLY; DO NOT USE term in indexing. Use a more precise narrower term.</rdfs:comment>
         <rdfs:label xml:lang="en">food treatment process</rdfs:label>
@@ -10603,11 +10617,10 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03460119">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03460141"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">Modified by microbial or enzymatic action resulting in molecular changes in any food component. If salt, sugar or other food additive is used to aid in the modification process, index it by the appropriate term under *INGREDIENT ADDED*.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <obo:IAO_0000115 xml:lang="en">A food modification process by microbial or enzymatic action which results in molecular changes in any food component.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=H0119</oboInOwl:hasDbXref>
         <oboInOwl:hasSynonym xml:lang="en">fermented, unspecified</oboInOwl:hasSynonym>
+        <rdfs:comment xml:lang="en">LanguaL curation note: If salt, sugar or other food additive is used to aid in the modification process, index it by the appropriate term under *INGREDIENT ADDED*.</rdfs:comment>
         <rdfs:label xml:lang="en">microbial/enzymatic modification process</rdfs:label>
     </owl:Class>
     
@@ -10617,8 +10630,6 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03460141">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03460111"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=H0141</oboInOwl:hasDbXref>
         <rdfs:comment xml:lang="en">LanguaL curation note: Used when the food product underwent mechanical, chemical or enzymatic modification that has affected the texture, flavor or other characteristic of the product.</rdfs:comment>
         <rdfs:label xml:lang="en">food modification process</rdfs:label>
@@ -10658,6 +10669,44 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=H0216</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="en">vitamin B</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03460230 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03460230">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001304"/>
+        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=H0230</oboInOwl:hasDbXref>
+        <rdfs:comment xml:lang="en">LanguaL curation note: Used for products in which either carbohydrates, proteins or fats were modified through microbial processes. Enzymatic or other biological processes may also be involved. If two or more of these components are modified in significant amounts, index under *FERMENTED/MODIFIED, MULTIPLE COMPONENT*.</rdfs:comment>
+        <rdfs:label xml:lang="en">single component food fermentation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03460232 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03460232">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03460256"/>
+        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=H0232</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">alcohol fermentation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03460256 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03460256">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03460230"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411345"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=H0256</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonym xml:lang="en">yeast leavened</oboInOwl:hasSynonym>
+        <rdfs:label xml:lang="en">carbohydrate fermentation</rdfs:label>
     </owl:Class>
     
 
@@ -10712,9 +10761,7 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03470107">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002451"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <obo:IAO_0000115 xml:lang="en">The methods contributing to the prevention or retardation of microbial, enzymatic or oxidative spoilage and thus to the extension of shelf life. Index all methods for which information is available, even if a corresponding descriptor has already been used in *H. TREATMENT APPLIED*. Preservation descriptors refer to the finished food as a whole with these exceptions: (1) if the components of a multi-component food, such as cream pie, are preservation by different methods, index all methods; (2)  if chemical preservatives are declared on the label, always index them even if it is known that the preservative was introduced through or is only present in a component or ingredient of the food; and (3) if the preservation method for an ingredient is declared on the label (such as brie cheese made from pasteurized milk) index it. Also use *INGREDIENT preservation by THERMAL PROCESSING* or *INGREDIENT preservation by IRRADIATION* when ingredients have been pasteurized, ultrapasteurized, sterilized or irradiated.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=J0107</oboInOwl:hasDbXref>
         <rdfs:comment xml:lang="en">LanguaL curation note: This term is for CLASSIFICATION ONLY; DO NOT USE term in indexing. Use a more precise narrower term.</rdfs:comment>
         <rdfs:label xml:lang="en">food preservation process</rdfs:label>
@@ -10757,60 +10804,6 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
         <obo:IAO_0000115>A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/envo.owl"/>
         <rdfs:label>biological_process</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000027 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000027">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000111 xml:lang="en">data item</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <obo:IAO_0000115 xml:lang="en">a data item is an information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
-        <rdfs:label xml:lang="en">data item</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000030">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
-        <obo:IAO_0000111 xml:lang="en">information content entity</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
-        <obo:IAO_0000115 xml:lang="en">A generically dependent continuant that is about some thing.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Chris Stoeckert</obo:IAO_0000117>
-        <obo:IAO_0000119 xml:lang="en">OBI_0000142</obo:IAO_0000119>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
-        <rdfs:label xml:lang="en">information content entity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000078 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000078">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000102"/>
-        <obo:IAO_0000111 xml:lang="en">curation status specification</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <obo:IAO_0000115 xml:lang="en">The curation status of the term. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value.</obo:IAO_0000115>
-        <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
-        <obo:IAO_0000119 xml:lang="en">OBI_0000266</obo:IAO_0000119>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
-        <rdfs:label xml:lang="en">curation status specification</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000102 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000102">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
-        <obo:IAO_0000115 xml:lang="en">data about an ontology part is a data item about a part of an ontology, for example a term</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
-        <rdfs:label xml:lang="en">data about an ontology part</rdfs:label>
     </owl:Class>
     
 
@@ -11073,6 +11066,33 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
         <oboInOwl:hasExactSynonym>iris family</oboInOwl:hasExactSynonym>
         <rdfs:label>Iridaceae</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_27292 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_27292">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411345"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4930"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000115 xml:lang="en">Brewing yeasts may be classed as &quot;top-cropping&quot; (or &quot;top-fermenting&quot;) and &quot;bottom-cropping&quot; (or &quot;bottom-fermenting&quot;). Top-cropping yeasts are so called because they form a foam at the top of the wort during fermentation. An example of a top-cropping yeast is Saccharomyces cerevisiae, sometimes called an &quot;ale yeast&quot;. Bottom-cropping yeasts are typically used to produce lager-type beers, though they can also produce ale-type beers. These yeasts ferment well at low temperatures. An example of bottom-cropping yeast is *Saccharomyces pastorianus*, formerly known as *Saccharomyces carlsbergensis*.
+\n\n*Saccharomyces pastorianus* is a yeast used industrially for the production of lager beer, and is named after Louis Pasteur. It is a synonym of the yeast species *Saccharomyces carlsbergensis*,[ which was originally described in 1883 by Emil Christian Hansen, who was working for the Danish brewery Carlsberg.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">brewers yeast</obo:IAO_0000118>
+        <obo:IAO_0000119>WIKIPEDIA:Yeast#Beer</obo:IAO_0000119>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>INDEX FUNGORUM:538548</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ITIS:194156</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://eol.org/pages/2861334</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B3798</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>lager yeast</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>Saccharomyces carlsbergensis Hansen, 1908</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Saccharomyces pastorianus Reess ex E.C. Hansen, 1904</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">brewer&apos;s yeast</oboInOwl:hasSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">saccharomyces carlsbergensis</oboInOwl:hasSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">saccharomyces pastorianus</oboInOwl:hasSynonym>
+        <rdfs:label>Saccharomyces pastorianus</rdfs:label>
     </owl:Class>
     
 
@@ -11617,6 +11637,16 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_451864 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_451864">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <rdfs:label>Dikarya</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_4577 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4577">
@@ -11635,6 +11665,38 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1437197"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
         <rdfs:label>commelinids</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_4751 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33154"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <rdfs:label>Fungi</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_4890 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4890">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_451864"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <oboInOwl:hasExactSynonym>ascomycetes</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>sac fungi</oboInOwl:hasExactSynonym>
+        <rdfs:label>Ascomycota</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_4930 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4930">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_716545"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <rdfs:label>Saccharomyces</rdfs:label>
     </owl:Class>
     
 
@@ -11678,6 +11740,16 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1437201"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
         <rdfs:label>rosids</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_716545 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_716545">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4890"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <rdfs:label>saccharomyceta</rdfs:label>
     </owl:Class>
     
 
@@ -11825,12 +11897,10 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_9031 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_9031">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411563"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9072"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
-        <oboInOwl:hasExactSynonym>Gallus domesticus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>bantam</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>chicken</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>chickens</oboInOwl:hasExactSynonym>
         <rdfs:label>Gallus gallus</rdfs:label>
     </owl:Class>
     
@@ -11982,8 +12052,17 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_9913 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_9913">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03414374"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9903"/>
+        <obo:IAO_0000115 xml:lang="en">Cattle (colloquially cows) are the most common type of large domesticated ungulates. They are a prominent modern member of the subfamily *Bovinae*, are the most widespread species of the genus *Bos*, and are most commonly classified collectively as *Bos taurus*... with three subspecies: *Bos taurus primigenius, Bos taurus indicus, Bos taurus taurus*.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">cattle</obo:IAO_0000118>
+        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Cattle"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <oboInOwl:hasDbXref rdf:resource="http://www.langual.org/langual_thesaurus.asp?termid=B1161"/>
+        <oboInOwl:hasDbXref rdf:resource="https://eol.org/pages/328699"/>
+        <oboInOwl:hasDbXref xml:lang="en">ITIS:183838</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref xml:lang="en">MSW3:14200687</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="en">Bos taurus Linnaeus, 1758</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>bovine</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>cattle</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>cow</oboInOwl:hasExactSynonym>
@@ -11991,6 +12070,7 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
         <oboInOwl:hasExactSynonym>domestic cattle</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>domestic cow</oboInOwl:hasExactSynonym>
         <rdfs:label>Bos taurus</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/List_of_cattle_breeds"/>
     </owl:Class>
     
 
@@ -12123,12 +12203,6 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0009001">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025496"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03430150"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002202"/>
@@ -12451,7 +12525,6 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Material anatomical entity in a gaseous, liquid, semisolid or solid state; produced by anatomical structures or derived from inhaled and ingested substances that have been modified by anatomical structures as they pass through the body.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Damion Dooley</obo:IAO_0000117>
         <rdfs:label xml:lang="en">organism substance</rdfs:label>
     </owl:Class>
     
@@ -12627,7 +12700,6 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=C0235</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">mammal milk</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="en">milk</oboInOwl:hasExactSynonym>
         <rdfs:comment xml:lang="en">LanguaL curation note: See scope note for *MILK OR MILK COMPONENT*. for lowfat milk use *FAT PARTIALLY REMOVED*; for skim milk, use *FAT FULLY REMOVED* (both found in D3. TREATMENT APPLIED).</rdfs:comment>
         <rdfs:comment xml:lang="en">LanguaL term definition: Milk is a secretion from the mammary glands of female mammals.</rdfs:comment>
         <rdfs:label>milk</rdfs:label>
@@ -12891,108 +12963,6 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
     <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing">
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
     </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000002 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000002">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000078"/>
-        <rdfs:label xml:lang="en">example to be eventually removed</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000120 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000120">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000078"/>
-        <obo:IAO_0000115 xml:lang="en">Class has all its metadata, but is either not guaranteed to be in its final location in the asserted IS_A hierarchy or refers to another class that is not complete.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">metadata complete</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000121 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000121">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000078"/>
-        <obo:IAO_0000115 xml:lang="en">term created to ease viewing/sort terms for development purpose, and will not be included in a release</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">organizational term</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000122 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000122">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000078"/>
-        <obo:IAO_0000115 xml:lang="en">Class has undergone final review, is ready for use, and will be included in the next release. Any class lacking &quot;ready_for_release&quot; should be considered likely to change place in hierarchy, have its definition refined, or be obsoleted in the next release.  Those classes deemed &quot;ready_for_release&quot; will also derived from a chain of ancestor classes that are also &quot;ready_for_release.&quot;</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">ready for release</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000123 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000123">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000078"/>
-        <obo:IAO_0000115 xml:lang="en">Class is being worked on; however, the metadata (including definition) are not complete or sufficiently clear to the branch editors.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">metadata incomplete</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000124 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000124">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000078"/>
-        <obo:IAO_0000115 xml:lang="en">Nothing done yet beyond assigning a unique class ID and proposing a preferred term.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">uncurated</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000125 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000125">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000078"/>
-        <obo:IAO_0000115 xml:lang="en">All definitions, placement in the asserted IS_A hierarchy and required minimal metadata are complete. The class is awaiting a final review by someone other than the term editor.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">pending final vetting</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000423 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000423">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000078"/>
-        <obo:IAO_0000115 xml:lang="en">Terms with this status should eventually replaced with a term from another ontology.</obo:IAO_0000115>
-        <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">to be replaced with external ontology term</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000428 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000428">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000078"/>
-        <obo:IAO_0000115 xml:lang="en">A term that is metadata complete, has been reviewed, and problems have been identified that require discussion before release. Such a term requires editor note(s) to identify the outstanding issues.</obo:IAO_0000115>
-        <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">requires discussion</rdfs:label>
-    </owl:NamedIndividual>
     
 
 
