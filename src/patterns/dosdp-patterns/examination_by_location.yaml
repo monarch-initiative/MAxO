@@ -1,0 +1,83 @@
+pattern_name: examination_by_location
+pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/examination_by_location.yaml
+description: "examination of a partical part of the body"
+
+contributors:
+  - https://orcid.org/0000-0001-7941-2961
+  - https://orcid.org/0000-0002-7356-1779
+
+classes:
+  phys_exam: OBI:0002441
+  location: owl:Thing
+
+relations:
+  has_input: RO:0002233
+  part_of: BFO:0000050
+  
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym 
+  created_by: oio:created_by
+  date: dc:date
+  comment: rdfs:comment
+  xref: oio:hasDbXref
+
+vars:
+  location: "'location'"
+  
+data_vars:
+  date: "'date'"
+  created_by: "'created_by'"
+  comment: "'comment'"
+  xref: "database cross reference"
+
+data_list_vars:
+  syns: xsd:string
+
+name:
+  text: "%s examination"
+  vars:
+   - location
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "examination of %s"
+    vars:
+     - location
+  - annotationProperty: exact_synonym
+    text: "physical examination of %s"
+    vars:
+     - location
+  - annotationProperty: exact_synonym
+    text: "%s exam"
+    vars:
+     - location
+  - annotationProperty: date
+    text: "%s"
+    vars:
+     - date
+  - annotationProperty: created_by
+    text: "%s"
+    vars:
+     - created_by
+  - annotationProperty: comment
+    text: "%s"
+    vars:
+     - comment
+  - annotationProperty: xref
+    text: "%s"
+    vars:
+     - xref
+
+exact_synonym:
+  value: syns
+
+def:
+  text: "The use of computed tomography to produce images of structures of the %s."
+  vars:
+    - location
+
+equivalentTo:
+  text: "'phys_exam' and 'has_input' some ('part_of' some %s)"
+  vars:
+    - location
+
