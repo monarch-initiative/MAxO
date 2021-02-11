@@ -13,9 +13,9 @@
      xmlns:schema="http://schema.org/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/imports/foodon_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2021-02-09/imports/foodon_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2021-02-11/imports/foodon_import.owl"/>
         <dc:source rdf:resource="http://purl.obolibrary.org/obo/foodon/releases/2021-02-03/foodon.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-09</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-11</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -3983,7 +3983,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001006"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A food product made of meat, the skeletal muscle and associated fat, and other edible tissues such as organs, livers, skin, brains, bone marrow, kidneys, or lungs, of mammals.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>http://en.wikipedia.org/wiki/Meat</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Meat</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -4921,8 +4921,8 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Mature ovary of a plant, with a fleshy part of the carpel that develops with the seed to attract animals for aid in dispersal. Botanically, nuts are considered fruits.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://eurovoc.europa.eu/drupal/?q=request&amp;amp;uri=http://eurovoc.europa.eu/1115</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://oek1.fao.org/skosmos/agrovoc/en/page/c_3119</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.fao.org/pollination/resources/glossary/en/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://oek1.fao.org/skosmos/agrovoc/en/page/c_3119</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.fao.org/pollination/resources/glossary/en/</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Fruit</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -4961,7 +4961,7 @@ https://www.politico.com/agenda/story/2016/03/crazy-us-chicken-egg-regulation-gr
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001274"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A food consisting of a round or oval body laid by the female of many animals, consisting of an ovum surrounded by layers of membranes and an outer casing, which acts to nourish and protect a developing embryo and its nutrient reserves.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Wikipedia:Egg_%28food%29</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:Egg_%28food%29</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -6444,6 +6444,20 @@ Namely, how to characterize the threshold of ingredients that make for multi-com
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00002986 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002986">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03308311"/>
+        <obo:IAO_0000115 xml:lang="en">A fish steak, alternatively known as a fish cutlet, is a cut of fish which is cut perpendicular to the spine and can either include the bones or be boneless.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0002-8844-9165"/>
+        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Fish_steak"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-12T23:41:29Z</dc:date>
+        <oboInOwl:hasExactSynonym xml:lang="en">fish cutlet</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">fish steak</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_00003004 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00003004">
@@ -6700,6 +6714,28 @@ Namely, how to characterize the threshold of ingredients that make for multi-com
 * derives from &apos;whole egg&apos; (http://purl.obolibrary.org/obo/FOODON_03420274)
         </rdfs:comment>
         <rdfs:label xml:lang="en">hen egg (whole, shell off, raw)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03301077 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03301077">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001248"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411222"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>SUBSET_SIREN:F1077</oboInOwl:hasDbXref>
+        <oboInOwl:inSubset>subset_siren</oboInOwl:inSubset>
+        <rdfs:comment xml:lang="en">SIREN DB annotation:
+* derives from &apos;part of animal&apos; (http://purl.obolibrary.org/obo/FOODON_03420164)
+        </rdfs:comment>
+        <rdfs:label xml:lang="en">fish (whole or parts)</rdfs:label>
     </owl:Class>
     
 
@@ -7473,6 +7509,44 @@ Namely, how to characterize the threshold of ingredients that make for multi-com
 * has consumer &apos;not pasteurized claim or use&apos; (http://purl.obolibrary.org/obo/FOODON_03510121)
         </rdfs:comment>
         <rdfs:label xml:lang="en">cow milk (raw)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03308311 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03308311">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03301077"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>SUBSET_SIREN:F8311</oboInOwl:hasDbXref>
+        <oboInOwl:inSubset>subset_siren</oboInOwl:inSubset>
+        <rdfs:comment xml:lang="en">SIREN DB annotation:
+* has quality &apos;sliced&apos; (http://purl.obolibrary.org/obo/FOODON_03430137)
+* derives from &apos;skeletal meat part&apos; (http://purl.obolibrary.org/obo/FOODON_03420175)
+        </rdfs:comment>
+        <rdfs:label xml:lang="en">fish (portion cut)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03308394 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03308394">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002986"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>SUBSET_SIREN:F8394</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="en">fish cutlet (raw)</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">raw fish cutlet</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">raw fish steak</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>subset_siren</oboInOwl:inSubset>
+        <rdfs:comment xml:lang="en">SIREN DB annotation:
+* has quality &apos;whole, natural shape&apos; (http://purl.obolibrary.org/obo/FOODON_03430150)
+* has quality &apos;not heat-treated&apos; (http://purl.obolibrary.org/obo/FOODON_03440003)
+* derives from &apos;skeletal meat part&apos; (http://purl.obolibrary.org/obo/FOODON_03420175)
+        </rdfs:comment>
+        <rdfs:label xml:lang="en">fish steak (raw)</rdfs:label>
     </owl:Class>
     
 
