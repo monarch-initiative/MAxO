@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2021-02-11/maxo-base.owl
+data-version: maxo/releases/2021-02-15/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Aaron Zhang" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
@@ -8,7 +8,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2021-02-11" xsd:string
+property_value: owl:versionInfo "2021-02-15" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -370,6 +370,9 @@ property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:03:43Z xsd:da
 [Term]
 id: MAXO:0000049
 name: therapeutic avoidance of physical activity
+def: "Recommendation by a clinician to avoid exercise or physical activity." []
+synonym: "avoid exercise" EXACT []
+synonym: "rest recommendation" RELATED []
 is_a: MAXO:0000011 ! physical therapy
 is_a: MAXO:0000151 ! therapeutic avoidance intervention
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:11:57Z xsd:dateTime
@@ -5780,17 +5783,29 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000528
+name: fetal examination
+name: prenatal examination
+def: "A systemic evaluation of the late embryonic stage using visual inspection, palpation, and percussion. The purpose is to determine the presence or absence of physical signs of disease or abnormality for an individual's health assessment." []
 def: "A test or diagnostic examination to assess the health status and well being of the fetus." [NCIT:C92714]
 synonym: "antenatal examination" BROAD []
+synonym: "examination of fetus" EXACT []
+synonym: "examination of late embryonic stage" EXACT []
 synonym: "fetal assessment" EXACT []
 synonym: "fetal evaluation" EXACT []
 synonym: "fetal exam" EXACT []
 synonym: "foetal assessment" EXACT []
 synonym: "foetal examination" EXACT []
+synonym: "late embryonic stage exam" EXACT []
+synonym: "physical examination of late embryonic stage" EXACT []
 synonym: "prenatal exam" BROAD []
 synonym: "prenatal examination" BROAD []
 xref: NCIT:C92714
 is_a: MAXO:0000526 ! medical examination
+is_a: MAXO:0000527 ! physical examination
+property_value: http://purl.org/dc/elements/1.1/date 2020-03-17T18:13:46Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-11T22:00:54Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+created_by: http://orcid.org/0000-0001-7941-3010
 
 [Term]
 id: MAXO:0000529
@@ -5800,7 +5815,7 @@ synonym: "fetal genetic testing" EXACT []
 synonym: "foetal genetic screening" EXACT []
 synonym: "prenatal genetic screening" EXACT []
 is_a: MAXO:0000127 ! genetic testing
-is_a: MAXO:0000528
+is_a: MAXO:0000528 ! fetal examination
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-17T18:55:32Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -5877,7 +5892,7 @@ name: bacterial vaginosis screening
 def: "A procedure conducted during pregnancy for the presence of Gardnerella vaginalis, Ureaplasma urealyticum, Mycoplasma hominis, Mobiluncus, Prevotella and anaerobic bacteria." []
 synonym: "BV testing" EXACT ABBREVIATION []
 xref: NCIT:C92740
-is_a: MAXO:0000528
+is_a: MAXO:0000528 ! fetal examination
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-19T20:17:55Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -5889,7 +5904,7 @@ synonym: "FBNCTFT" EXACT ABBREVIATION []
 synonym: "fetal fibronectin assessment" EXACT []
 synonym: "fFN testing" EXACT ABBREVIATION []
 xref: NCIT:C92786
-is_a: MAXO:0000528
+is_a: MAXO:0000528 ! fetal examination
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-19T20:22:14Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -5902,7 +5917,7 @@ synonym: "broup B Beta-hemolytic streptococcus screening" EXACT []
 synonym: "GBS" EXACT ABBREVIATION []
 synonym: "group B strep screening" EXACT []
 xref: NCIT:C92805
-is_a: MAXO:0000528
+is_a: MAXO:0000528 ! fetal examination
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-19T20:47:28Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -5914,7 +5929,7 @@ synonym: "NT testing" EXACT ABBREVIATION []
 synonym: "nuchal translucency ultrasound screening" EXACT []
 xref: NCIT:C92837
 is_a: MAXO:0000072 ! ultrasonography procedure
-is_a: MAXO:0000528
+is_a: MAXO:0000528 ! fetal examination
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-19T21:03:16Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -5922,9 +5937,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000541
 name: quad test assessment
 def: "A screening measurement in which the maternal blood levels of alpha-fetoprotein, unconjugated estriol, human chorionic gonadotrophin and Inhibin A are calculated. These are then evaluated in relation to the mother's age, weight and fetal gestational age." [NCIT:C92865]
+synonym: "quad screen" EXACT []
 synonym: "quadruple marker testing" EXACT []
 xref: NCIT:C92865
-is_a: MAXO:0000528
+is_a: MAXO:0000528 ! fetal examination
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-19T21:11:02Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -6341,7 +6357,6 @@ def: "A quantitative measurement of the amount of an electrolyte present in urin
 synonym: "electrolyte measurement" EXACT []
 xref: NCIT:C74946
 is_a: MAXO:0000566 ! clinical chemistry assessment
-is_a: MAXO:0000789 ! urine chemistry measurement
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-31T19:32:42Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -6495,6 +6510,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000596
 name: infectious disease screening
 def: "The process of taking a thorough history and physical exam to determine if a patient has been exposed to an infectious disease.  Close attention is paid to travel history, environmental exposures, and vaccination history." []
+synonym: "infectious disease testing" EXACT []
 is_a: MAXO:0000124 ! disease screening
 property_value: http://purl.org/dc/elements/1.1/date 2020-04-07T18:27:36Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -6641,7 +6657,6 @@ name: serology testing
 def: "Testing blood serum for the presence of specifc antibody or antibodies to a specific antigen.  Often used when an infection is suspected." []
 synonym: "serology assay" RELATED []
 is_a: MAXO:0000147 ! hematology testing
-is_a: MAXO:0000596 ! infectious disease screening
 property_value: http://purl.org/dc/elements/1.1/date 2020-04-08T14:34:24Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -8969,7 +8984,6 @@ synonym: "examination of abdomen" EXACT []
 synonym: "examination of the abdomen" EXACT []
 synonym: "physical examination of abdomen" EXACT []
 xref: NCIT:C167415
-is_a: MAXO:0000527 ! physical examination
 is_a: MAXO:0000782 ! obstetrics and gynecology procedure
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-10T14:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -8985,7 +8999,6 @@ synonym: "pelvic region of trunk exam" EXACT []
 synonym: "pelvis examination" EXACT []
 synonym: "physical examination of pelvic region of trunk" EXACT []
 xref: NCIT:C38104
-is_a: MAXO:0000527 ! physical examination
 is_a: MAXO:0000782 ! obstetrics and gynecology procedure
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-10T14:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -9015,7 +9028,7 @@ synonym: "fetal heart monitoring" EXACT []
 synonym: "fetal heart rate measurement" EXACT []
 xref: NCIT:C92929
 is_a: MAXO:0000490 ! heart rate measurement
-is_a: MAXO:0000528
+is_a: MAXO:0000528 ! fetal examination
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-10T19:36:36Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9061,6 +9074,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000801
 name: avoid toxoplasmosis exposure
+def: "A recommendation to avoid infection with toxoplasmosis especially when pregnant due to serious risk of passing the infection on to the baby." []
+comment: Cats play an important role in the spread of toxoplasmosis. They become infected by eating infected rodents, birds, or other small animals. The parasite is then passed in the cat’s feces. Kittens and cats can shed millions of parasites in their feces for as long as 3 weeks after infection. Mature cats are less likely to shed Toxoplasma if they have been previously infected. Cats and kittens prefer litter boxes, garden soils, and sandboxes for elimination, and you may be exposed unintentionally by touching your mouth after changing a litter box, or after gardening without gloves. Fruits and vegetables may have contact with contaminated soil or water also, and you can be infected by eating fruits and vegetables if they are not cooked, washed, or peeled. {xref="https://www.cdc.gov/parasites/toxoplasmosis/gen_info/pregnant.html"}
+comment: Risk is most profound by a pregnant mother passing toxoplasmosis to their infant.  Infected infants do not have symptoms at birth but can develop serious symptoms later in life, such as blindness or mental disability. {xref="https://www.cdc.gov/parasites/toxoplasmosis/gen_info/pregnant.html"}
 is_a: MAXO:0000043 ! communicable disease avoidance
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-10T21:19:55Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -9068,6 +9084,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000802
 name: avoid excessive exercise
+def: "Clinical recommendation to avoid strenuous exercise that may increase heart rate and temperature." []
 synonym: "abstain from excessive exercise" EXACT []
 synonym: "avoid strenuous physical work" EXACT []
 is_a: MAXO:0000049 ! therapeutic avoidance of physical activity
@@ -9085,8 +9102,143 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000804
 name: avoid destabilizing activities
 def: "Limit activities where a great deal of balance may be required." []
+synonym: "avoid acitivities requiring balance" EXACT []
 is_a: MAXO:0000049 ! therapeutic avoidance of physical activity
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-10T21:23:13Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000806
+name: pregnancy education counseling
+def: "Education by care providers about nutrition, health issues, and resources for prenatal and postnatal care." []
+synonym: "birth class recommendation" RELATED []
+synonym: "prenatal education counseling" NARROW []
+is_a: MAXO:0000077 ! behavioral counseling
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-12T20:01:45Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000807
+name: urine protein assessment
+def: "The determination of the amount of protein present in a urine sample. [ NCI ]" [NCIT:C74760]
+synonym: "urine protein measurement" EXACT []
+synonym: "urine protein testing" EXACT []
+xref: NCIT:C74760
+is_a: MAXO:0000605 ! protein assessment
+is_a: MAXO:0000789 ! urine chemistry measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-12T20:32:41Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000808
+name: urine glucose measurement
+def: "A measurement of the amount of sugar (glucose) in a urine sample." []
+synonym: "urine glucose assessment" EXACT []
+synonym: "urine glucose monitoring" EXACT []
+synonym: "urine glucose testing" EXACT []
+is_a: MAXO:0000789 ! urine chemistry measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-12T20:44:57Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000809
+name: syphilis screening
+synonym: "syphylis testing" EXACT []
+synonym: "Testing for sexually transmitted disease syphilis. Syphilis is a contagious bacterial infection caused by the spirochete Treponema pallidum." EXACT []
+is_a: MAXO:0000596 ! infectious disease screening
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-12T20:56:40Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000810
+name: rubella antibody titer testing
+def: "rubella testing" []
+def: "Testing to determine whether a patient has sufficient antibodies to be protected from rubella virus or to verify infection." []
+is_a: MAXO:0000596 ! infectious disease screening
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-12T21:04:52Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000811
+name: varicella testing
+def: "Testing to diagnose primary VZV infection (varicella) as well as reactivation (herpes zoster)." []
+synonym: "chickenpox testing" EXACT []
+synonym: "varicella-zoster virus testing" EXACT []
+synonym: "VZV testing" EXACT []
+is_a: MAXO:0000596 ! infectious disease screening
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-12T21:26:02Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000812
+name: hepatitis B assessement
+def: "Screening for hepatitis B antibodies to determine if a patient has immunity to hepatitis B." []
+synonym: "hep B antibody titer testing" EXACT []
+synonym: "hep B testing" EXACT []
+synonym: "hepatitis B testing" EXACT []
+is_a: MAXO:0000596 ! infectious disease screening
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-12T21:29:21Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000813
+name: hepatitis B surface antigen testing
+def: "HBsAg testing" []
+def: "Testing to detect hepatitis B viral antigens and an active hepatitis B infection." []
+is_a: MAXO:0000596 ! infectious disease screening
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-12T21:32:40Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000814
+name: HIV screening
+def: "Testing a patient for the antibodies to the human immunodeficiency virus (HIV)." []
+synonym: "HIV testing" EXACT []
+is_a: MAXO:0000596 ! infectious disease screening
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-12T21:40:46Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000815
+name: chlamydia screening
+def: "Testing to determine if the patient has a chlamydia bacterial infection." []
+is_a: MAXO:0000596 ! infectious disease screening
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-12T21:51:15Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000816
+name: gonorrhea testing
+def: "Testing for the sexually transmitted disease gonorrhea." []
+is_a: MAXO:0000596 ! infectious disease screening
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-12T21:54:20Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000817
+name: hepatitis C screening
+def: "Screening for hepatitis C antibodies to determine if a patient has immunity to hepatitis C." []
+synonym: "hep C testing" EXACT []
+is_a: MAXO:0000596 ! infectious disease screening
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-12T21:55:19Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000819
+name: blood specimen collection
+def: "Collecting of blood for clinical use." []
+synonym: "blood collection" EXACT []
+synonym: "collection of blood specimen" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-15T12:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000820
+name: bile specimen collection
+def: "Collecting of bile for clinical use." []
+synonym: "bile collection" EXACT []
+synonym: "collection of bile specimen" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-15T12:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -10595,10 +10747,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001156
 name: whole body examination
-def: "A systemic evaluation of the body proper using visual inspection, palpation, and percussion. The purpose is to determine the presence or absence of physical signs of disease or abnormality for an individual's health assessment." []
-synonym: "body proper exam" EXACT []
-synonym: "examination of body proper" EXACT []
-synonym: "physical examination of body proper" EXACT []
+def: "A systemic evaluation of the multicellular organism using visual inspection, palpation, and percussion. The purpose is to determine the presence or absence of physical signs of disease or abnormality for an individual's health assessment." []
+synonym: "examination of multicellular organism" EXACT []
+synonym: "examination of whole body" EXACT []
+synonym: "multicellular organism exam" EXACT []
+synonym: "physical examination of multicellular organism" EXACT []
+synonym: "whole body exam" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-10T14:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2979
 
@@ -10627,6 +10781,107 @@ intersection_of: MAXO:0000056 ! nutrition intake avoidance
 intersection_of: MAXO:0001027 FOODON:03307455 ! avoided food
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-10T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001159
+name: endocervical swab collection
+def: "Collection biological material from within the endocervix with a cotton swab." []
+synonym: "endocervical swab" EXACT []
+synonym: "swab collection of endocervix" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-15T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2978
+
+[Term]
+id: MAXO:0001160
+name: sputum specimen collection
+def: "Collecting of sputum for clinical use." []
+synonym: "collection of sputum specimen" EXACT []
+synonym: "sputum collection" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-15T12:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001161
+name: urine specimen collection
+def: "Collecting of urine for clinical use." []
+synonym: "collection of urine specimen" EXACT []
+synonym: "urine collection" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-15T12:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2974
+
+[Term]
+id: MAXO:0001162
+name: semen specimen collection
+def: "Collecting of semen for clinical use." []
+synonym: "collection of semen specimen" EXACT []
+synonym: "semen collection" EXACT []
+synonym: "sperm collection" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-15T12:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2978
+
+[Term]
+id: MAXO:0001163
+name: amniotic fluid specimen collection
+def: "Collecting of amniotic fluid for clinical use." []
+synonym: "amniotic fluid collection" EXACT []
+synonym: "collection of amniotic fluid specimen" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-15T12:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2978
+
+[Term]
+id: MAXO:0001164
+name: pus specimen collection
+def: "Collecting of pus for clinical use." []
+synonym: "collection of pus specimen" EXACT []
+synonym: "pus collection" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-15T12:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2978
+
+[Term]
+id: MAXO:0001165
+name: mucus specimen collection
+def: "Collecting of mucus for clinical use." []
+synonym: "collection of mucus specimen" EXACT []
+synonym: "mucus collection" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-15T12:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2978
+
+[Term]
+id: MAXO:0001166
+name: respiratory system mucus specimen collection
+def: "Collecting of respiratory system mucus for clinical use." []
+synonym: "collection of respiratory system mucus specimen" EXACT []
+synonym: "respiratory system mucus collection" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-15T12:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2978
+
+[Term]
+id: MAXO:0001167
+name: nasal mucus specimen collection
+def: "Collecting of nasal mucus for clinical use." []
+synonym: "collection of nasal mucus specimen" EXACT []
+synonym: "nasal mucus collection" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-15T12:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2978
+
+[Term]
+id: MAXO:0001168
+name: bodily fluid specimen collection
+def: "Collecting of bodily fluid for clinical use." []
+synonym: "bodily fluid collection" EXACT []
+synonym: "collection of bodily fluid specimen" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-15T12:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2978
+
+[Term]
+id: MAXO:0001169
+name: cerebrospinal fluid specimen collection
+def: "Collecting of cerebrospinal fluid for clinical use." []
+synonym: "cerebral spinal fluid collection" EXACT []
+synonym: "cerebrospinal fluid collection" EXACT []
+synonym: "collection of cerebrospinal fluid specimen" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-15T12:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2978
 
 [Term]
 id: MAXO:0002000
