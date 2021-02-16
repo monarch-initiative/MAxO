@@ -679,6 +679,9 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000816>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000817>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000819>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000820>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000821>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000822>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000823>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001002>))
@@ -1811,10 +1814,11 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000146> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000147> (hematology testing)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000147> "A lprocedure to measure hematopoietic components and investigate hematologic disorders in a blood sample.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000147> "A procedure to measure hematopoietic components and investigate hematologic disorders in a blood sample.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000147> "2019-01-21T21:22:45Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000147> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000147> "NCIT:C49286")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000147> "blood testing")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000147> "hematology procedure")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000147> "hematology testing"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000147> <http://purl.obolibrary.org/obo/MAXO_0000006>)
@@ -8390,6 +8394,33 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000819> <http://purl.obolibrary
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000820> (bile specimen collection)
 
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000820> <http://purl.obolibrary.org/obo/MAXO_0000547>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000821> (blood typing procedure)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000821> "A procedure to tell what a patient's blood type and cell surface markers are.")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000821> "2021-02-16T15:17:39Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000821> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000821> "blood typing procedure"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000821> <http://purl.obolibrary.org/obo/MAXO_0000147>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000822> (ABO blood typing procedure)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000822> "A procedured performed to determine the antigens patient's red blood cells (RBCs) that correspond to the four main blood groups: A, B, O, and AB.")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000822> "2021-02-16T15:25:11Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000822> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000822> "ABO blood type testing")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000822> "ABO blood typing procedure"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000822> <http://purl.obolibrary.org/obo/MAXO_0000821>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000823> (Rh factor blood typing procedure)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000823> "Testing to determine whether the protien Rhesus (Rh) factor is present on patient's red blood cells. If the protein is present, the patient is said to be Rh positive. If the protein is not present, the patient is Rh negative.")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000823> "2021-02-16T15:34:20Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000823> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000823> "Rh factor blood testing")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000823> "Rhesus factor blood testing")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000823> "Rh factor blood typing procedure"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000823> <http://purl.obolibrary.org/obo/MAXO_0000821>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0001000> (functional magnetic resonance imaging procedure)
 
