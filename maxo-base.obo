@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2021-02-15/maxo-base.owl
+data-version: maxo/releases/2021-02-16/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Aaron Zhang" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
@@ -8,7 +8,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2021-02-15" xsd:string
+property_value: owl:versionInfo "2021-02-16" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -1168,6 +1168,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000141
 name: pap smear examination
 def: "The collecting of secretions and superficial cells of the body of uterus, cervix, and ovaries; examined with a microscope to detect any abnormal cells." [NCIT:C17348]
+synonym: "cervical cancer screening" RELATED []
 synonym: "cervical smear procedure" EXACT [NCIT:C17348]
 synonym: "pap testing" EXACT [NCIT:C17348]
 synonym: "Papanicolaou smear procedure" EXACT [NCIT:C17348]
@@ -1226,7 +1227,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000147
 name: hematology testing
-def: "A lprocedure to measure hematopoietic components and investigate hematologic disorders in a blood sample." []
+def: "A procedure to measure hematopoietic components and investigate hematologic disorders in a blood sample." []
+synonym: "blood testing" EXACT []
 synonym: "hematology procedure" EXACT []
 xref: NCIT:C49286
 is_a: MAXO:0000006 ! clinical laboratory procedure
@@ -5783,29 +5785,21 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000528
-name: fetal examination
 name: prenatal examination
-def: "A systemic evaluation of the late embryonic stage using visual inspection, palpation, and percussion. The purpose is to determine the presence or absence of physical signs of disease or abnormality for an individual's health assessment." []
 def: "A test or diagnostic examination to assess the health status and well being of the fetus." [NCIT:C92714]
 synonym: "antenatal examination" BROAD []
-synonym: "examination of fetus" EXACT []
-synonym: "examination of late embryonic stage" EXACT []
 synonym: "fetal assessment" EXACT []
 synonym: "fetal evaluation" EXACT []
 synonym: "fetal exam" EXACT []
 synonym: "foetal assessment" EXACT []
 synonym: "foetal examination" EXACT []
-synonym: "late embryonic stage exam" EXACT []
-synonym: "physical examination of late embryonic stage" EXACT []
 synonym: "prenatal exam" BROAD []
 synonym: "prenatal examination" BROAD []
 xref: NCIT:C92714
 is_a: MAXO:0000526 ! medical examination
 is_a: MAXO:0000527 ! physical examination
-property_value: http://purl.org/dc/elements/1.1/date 2020-03-17T18:13:46Z xsd:string
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-11T22:00:54Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
-created_by: http://orcid.org/0000-0001-7941-3010
 
 [Term]
 id: MAXO:0000529
@@ -5815,7 +5809,7 @@ synonym: "fetal genetic testing" EXACT []
 synonym: "foetal genetic screening" EXACT []
 synonym: "prenatal genetic screening" EXACT []
 is_a: MAXO:0000127 ! genetic testing
-is_a: MAXO:0000528 ! fetal examination
+is_a: MAXO:0000528 ! prenatal examination
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-17T18:55:32Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -5892,7 +5886,7 @@ name: bacterial vaginosis screening
 def: "A procedure conducted during pregnancy for the presence of Gardnerella vaginalis, Ureaplasma urealyticum, Mycoplasma hominis, Mobiluncus, Prevotella and anaerobic bacteria." []
 synonym: "BV testing" EXACT ABBREVIATION []
 xref: NCIT:C92740
-is_a: MAXO:0000528 ! fetal examination
+is_a: MAXO:0000528 ! prenatal examination
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-19T20:17:55Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -5904,7 +5898,7 @@ synonym: "FBNCTFT" EXACT ABBREVIATION []
 synonym: "fetal fibronectin assessment" EXACT []
 synonym: "fFN testing" EXACT ABBREVIATION []
 xref: NCIT:C92786
-is_a: MAXO:0000528 ! fetal examination
+is_a: MAXO:0000528 ! prenatal examination
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-19T20:22:14Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -5917,7 +5911,7 @@ synonym: "broup B Beta-hemolytic streptococcus screening" EXACT []
 synonym: "GBS" EXACT ABBREVIATION []
 synonym: "group B strep screening" EXACT []
 xref: NCIT:C92805
-is_a: MAXO:0000528 ! fetal examination
+is_a: MAXO:0000528 ! prenatal examination
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-19T20:47:28Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -5929,7 +5923,7 @@ synonym: "NT testing" EXACT ABBREVIATION []
 synonym: "nuchal translucency ultrasound screening" EXACT []
 xref: NCIT:C92837
 is_a: MAXO:0000072 ! ultrasonography procedure
-is_a: MAXO:0000528 ! fetal examination
+is_a: MAXO:0000528 ! prenatal examination
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-19T21:03:16Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -5940,7 +5934,7 @@ def: "A screening measurement in which the maternal blood levels of alpha-fetopr
 synonym: "quad screen" EXACT []
 synonym: "quadruple marker testing" EXACT []
 xref: NCIT:C92865
-is_a: MAXO:0000528 ! fetal examination
+is_a: MAXO:0000528 ! prenatal examination
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-19T21:11:02Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -6224,7 +6218,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000570
 name: induced sputum collection
 def: "A technique to collect sputum by inhaling hypertonic saline through an oxygen mask in order to induce sputum." [PMID:32171389]
-is_a: MAXO:0000547 ! clinical biospecimen collection
+is_a: MAXO:0001160 ! sputum specimen collection
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-30T20:17:26Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9028,7 +9022,7 @@ synonym: "fetal heart monitoring" EXACT []
 synonym: "fetal heart rate measurement" EXACT []
 xref: NCIT:C92929
 is_a: MAXO:0000490 ! heart rate measurement
-is_a: MAXO:0000528 ! fetal examination
+is_a: MAXO:0000528 ! prenatal examination
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-10T19:36:36Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9229,6 +9223,7 @@ name: blood specimen collection
 def: "Collecting of blood for clinical use." []
 synonym: "blood collection" EXACT []
 synonym: "collection of blood specimen" EXACT []
+is_a: MAXO:0000547 ! clinical biospecimen collection
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-15T12:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9238,7 +9233,35 @@ name: bile specimen collection
 def: "Collecting of bile for clinical use." []
 synonym: "bile collection" EXACT []
 synonym: "collection of bile specimen" EXACT []
+is_a: MAXO:0000547 ! clinical biospecimen collection
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-15T12:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000821
+name: blood typing procedure
+def: "A procedure to tell what a patient's blood type and cell surface markers are." []
+is_a: MAXO:0000147 ! hematology testing
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T15:17:39Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000822
+name: ABO blood typing procedure
+def: "A procedured performed to determine the antigens patient's red blood cells (RBCs) that correspond to the four main blood groups: A, B, O, and AB." []
+synonym: "ABO blood type testing" EXACT []
+is_a: MAXO:0000821 ! blood typing procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T15:25:11Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000823
+name: Rh factor blood typing procedure
+def: "Testing to determine whether the protien Rhesus (Rh) factor is present on patient's red blood cells. If the protein is present, the patient is said to be Rh positive. If the protein is not present, the patient is Rh negative." []
+synonym: "Rh factor blood testing" EXACT []
+synonym: "Rhesus factor blood testing" EXACT []
+is_a: MAXO:0000821 ! blood typing procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T15:34:20Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]

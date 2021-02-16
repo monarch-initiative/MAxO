@@ -12,7 +12,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/maxo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2021-02-15/maxo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2021-02-16/maxo-base.owl"/>
         <dc:creator>Aaron Zhang</dc:creator>
         <dc:creator>Leigh Carmody</dc:creator>
         <dc:creator>Peter Robinson</dc:creator>
@@ -20,7 +20,7 @@
         <dc:title>Medical Action Ontology</dc:title>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-15</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-16</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -4108,6 +4108,7 @@
         <oboInOwl:hasExactSynonym>Papanicolaou smear procedure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>cervical smear procedure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>pap testing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>cervical cancer screening</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">pap smear examination</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -4234,10 +4235,11 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000147">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000006"/>
-        <obo:IAO_0000115>A lprocedure to measure hematopoietic components and investigate hematologic disorders in a blood sample.</obo:IAO_0000115>
+        <obo:IAO_0000115>A procedure to measure hematopoietic components and investigate hematologic disorders in a blood sample.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-21T21:22:45Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C49286</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>blood testing</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>hematology procedure</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">hematology testing</rdfs:label>
     </owl:Class>
@@ -13423,44 +13425,20 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000528 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000528">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000527"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
-                        <owl:someValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0007220"/>
-                            </owl:Restriction>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000526"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000527"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A systemic evaluation of the late embryonic stage using visual inspection, palpation, and percussion. The purpose is to determine the presence or absence of physical signs of disease or abnormality for an individual&apos;s health assessment.</obo:IAO_0000115>
         <obo:IAO_0000115>A test or diagnostic examination to assess the health status and well being of the fetus.</obo:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-03-17T18:13:46Z</dc:date>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-11T22:00:54Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-3010</oboInOwl:created_by>
         <oboInOwl:hasBroadSynonym>antenatal examination</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>prenatal exam</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>prenatal examination</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>NCIT:C92714</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">examination of fetus</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">examination of late embryonic stage</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>fetal assessment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>fetal evaluation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>fetal exam</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>foetal assessment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>foetal examination</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">late embryonic stage exam</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">physical examination of late embryonic stage</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fetal examination</rdfs:label>
         <rdfs:label xml:lang="en">prenatal examination</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -14251,7 +14229,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000570 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000570">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000547"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001160"/>
         <obo:IAO_0000115>A technique to collect sputum by inhaling hypertonic saline through an oxygen mask in order to induce sputum.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-30T20:17:26Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -19485,6 +19463,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000547"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collecting of blood for clinical use.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-15T12:00:00Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
@@ -19514,12 +19493,52 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000547"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collecting of bile for clinical use.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-15T12:00:00Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bile collection</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection of bile specimen</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bile specimen collection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000821 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000821">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000147"/>
+        <obo:IAO_0000115>A procedure to tell what a patient&apos;s blood type and cell surface markers are.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T15:17:39Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <rdfs:label xml:lang="en">blood typing procedure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000822 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000822">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000821"/>
+        <obo:IAO_0000115>A procedured performed to determine the antigens patient&apos;s red blood cells (RBCs) that correspond to the four main blood groups: A, B, O, and AB.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T15:25:11Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>ABO blood type testing</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">ABO blood typing procedure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000823 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000823">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000821"/>
+        <obo:IAO_0000115>Testing to determine whether the protien Rhesus (Rh) factor is present on patient&apos;s red blood cells. If the protein is present, the patient is said to be Rh positive. If the protein is not present, the patient is Rh negative.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T15:34:20Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>Rh factor blood testing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Rhesus factor blood testing</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">Rh factor blood typing procedure</rdfs:label>
     </owl:Class>
     
 
@@ -30541,12 +30560,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/UBERON_0007196 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0007196"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/UBERON_0007220 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0007220"/>
     
 
 

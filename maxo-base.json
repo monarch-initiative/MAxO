@@ -1081,6 +1081,11 @@
         {
           "obj": "http://purl.obolibrary.org/obo/MAXO_0000147",
           "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/MAXO_0000821"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/MAXO_0000147",
+          "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/MAXO_0001006"
         },
         {
@@ -2391,7 +2396,12 @@
         {
           "obj": "http://purl.obolibrary.org/obo/MAXO_0000547",
           "pred": "is_a",
-          "sub": "http://purl.obolibrary.org/obo/MAXO_0000570"
+          "sub": "http://purl.obolibrary.org/obo/MAXO_0000819"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/MAXO_0000547",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/MAXO_0000820"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/MAXO_0000547",
@@ -3459,6 +3469,16 @@
           "sub": "http://purl.obolibrary.org/obo/MAXO_0000798"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/MAXO_0000821",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/MAXO_0000822"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/MAXO_0000821",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/MAXO_0000823"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/MAXO_0001002",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/MAXO_0000295"
@@ -3572,6 +3592,11 @@
           "obj": "http://purl.obolibrary.org/obo/MAXO_0001129",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/MAXO_0000110"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/MAXO_0001160",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/MAXO_0000570"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/MAXO_0010002",
@@ -5637,15 +5662,6 @@
               "fillerId": "http://purl.obolibrary.org/obo/MAXO_0000017",
               "propertyId": "http://purl.obolibrary.org/obo/MAXO_0001015"
             }
-          ]
-        },
-        {
-          "definedClassId": "http://purl.obolibrary.org/obo/MAXO_0000528",
-          "genusIds": [
-            "http://purl.obolibrary.org/obo/MAXO_0000527"
-          ],
-          "restrictions": [
-            null
           ]
         },
         {
@@ -9494,11 +9510,11 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2021-02-15"
+            "val": "2021-02-16"
           }
         ],
         "subsets": [],
-        "version": "http://purl.obolibrary.org/obo/maxo/releases/2021-02-15/maxo-base.json",
+        "version": "http://purl.obolibrary.org/obo/maxo/releases/2021-02-16/maxo-base.json",
         "xrefs": []
       },
       "nodes": [
@@ -13457,6 +13473,11 @@
                 "xrefs": [
                   "NCIT:C17348"
                 ]
+              },
+              {
+                "pred": "hasRelatedSynonym",
+                "val": "cervical cancer screening",
+                "xrefs": []
               }
             ]
           },
@@ -13629,10 +13650,15 @@
               }
             ],
             "definition": {
-              "val": "A lprocedure to measure hematopoietic components and investigate hematologic disorders in a blood sample.",
+              "val": "A procedure to measure hematopoietic components and investigate hematologic disorders in a blood sample.",
               "xrefs": []
             },
             "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "blood testing",
+                "xrefs": []
+              },
               {
                 "pred": "hasExactSynonym",
                 "val": "hematology procedure",
@@ -29849,13 +29875,9 @@
         },
         {
           "id": "http://purl.obolibrary.org/obo/MAXO_0000528",
-          "lbl": "fetal examination",
+          "lbl": "prenatal examination",
           "meta": {
             "basicPropertyValues": [
-              {
-                "pred": "http://purl.org/dc/elements/1.1/date",
-                "val": "2020-03-17T18:13:46Z"
-              },
               {
                 "pred": "http://purl.org/dc/elements/1.1/date",
                 "val": "2021-02-11T22:00:54Z"
@@ -29863,15 +29885,13 @@
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
                 "val": "http://orcid.org/0000-0001-7941-2961"
-              },
-              {
-                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
-                "val": "http://orcid.org/0000-0001-7941-3010"
               }
             ],
             "definition": {
-              "val": "A systemic evaluation of the late embryonic stage using visual inspection, palpation, and percussion. The purpose is to determine the presence or absence of physical signs of disease or abnormality for an individual's health assessment.",
-              "xrefs": []
+              "val": "A test or diagnostic examination to assess the health status and well being of the fetus.",
+              "xrefs": [
+                "NCIT:C92714"
+              ]
             },
             "synonyms": [
               {
@@ -29887,16 +29907,6 @@
               {
                 "pred": "hasBroadSynonym",
                 "val": "prenatal examination",
-                "xrefs": []
-              },
-              {
-                "pred": "hasExactSynonym",
-                "val": "examination of fetus",
-                "xrefs": []
-              },
-              {
-                "pred": "hasExactSynonym",
-                "val": "examination of late embryonic stage",
                 "xrefs": []
               },
               {
@@ -29922,16 +29932,6 @@
               {
                 "pred": "hasExactSynonym",
                 "val": "foetal examination",
-                "xrefs": []
-              },
-              {
-                "pred": "hasExactSynonym",
-                "val": "late embryonic stage exam",
-                "xrefs": []
-              },
-              {
-                "pred": "hasExactSynonym",
-                "val": "physical examination of late embryonic stage",
                 "xrefs": []
               }
             ],
@@ -41983,6 +41983,88 @@
               {
                 "pred": "hasExactSynonym",
                 "val": "collection of bile specimen",
+                "xrefs": []
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/MAXO_0000821",
+          "lbl": "blood typing procedure",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.org/dc/elements/1.1/date",
+                "val": "2021-02-16T15:17:39Z"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7941-2961"
+              }
+            ],
+            "definition": {
+              "val": "A procedure to tell what a patient's blood type and cell surface markers are.",
+              "xrefs": []
+            }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/MAXO_0000822",
+          "lbl": "ABO blood typing procedure",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.org/dc/elements/1.1/date",
+                "val": "2021-02-16T15:25:11Z"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7941-2961"
+              }
+            ],
+            "definition": {
+              "val": "A procedured performed to determine the antigens patient's red blood cells (RBCs) that correspond to the four main blood groups: A, B, O, and AB.",
+              "xrefs": []
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "ABO blood type testing",
+                "xrefs": []
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/MAXO_0000823",
+          "lbl": "Rh factor blood typing procedure",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.org/dc/elements/1.1/date",
+                "val": "2021-02-16T15:34:20Z"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7941-2961"
+              }
+            ],
+            "definition": {
+              "val": "Testing to determine whether the protien Rhesus (Rh) factor is present on patient's red blood cells. If the protein is present, the patient is said to be Rh positive. If the protein is not present, the patient is Rh negative.",
+              "xrefs": []
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "Rh factor blood testing",
+                "xrefs": []
+              },
+              {
+                "pred": "hasExactSynonym",
+                "val": "Rhesus factor blood testing",
                 "xrefs": []
               }
             ]
