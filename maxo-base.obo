@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2021-02-16/maxo-base.owl
+data-version: maxo/releases/2021-02-18/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Aaron Zhang" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
@@ -8,7 +8,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2021-02-16" xsd:string
+property_value: owl:versionInfo "2021-02-18" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -599,6 +599,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000075
 name: digestive system testing
 is_a: MAXO:0000003 ! diagnostic procedure
+is_a: MAXO:0000566 ! clinical chemistry assessment
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T19:35:36Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -5786,15 +5787,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000528
 name: prenatal examination
-def: "A test or diagnostic examination to assess the health status and well being of the fetus." [NCIT:C92714]
-synonym: "antenatal examination" BROAD []
-synonym: "fetal assessment" EXACT []
-synonym: "fetal evaluation" EXACT []
-synonym: "fetal exam" EXACT []
-synonym: "foetal assessment" EXACT []
-synonym: "foetal examination" EXACT []
-synonym: "prenatal exam" BROAD []
-synonym: "prenatal examination" BROAD []
+def: "A test or diagnostic examination to assess the health status of the mother and well being of the fetus." []
+synonym: "antenatal examination" EXACT []
 xref: NCIT:C92714
 is_a: MAXO:0000526 ! medical examination
 is_a: MAXO:0000527 ! physical examination
@@ -5826,6 +5820,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000531
 name: noninvasive prenatal testing
 def: "A test that analyzes small fragments of DNA that are circulating in a pregnant woman’s blood to determine the risk that the fetus will be born with genetic abnormalities." []
+synonym: "cell free fetal DNA testing" EXACT []
 synonym: "NIPT" EXACT ABBREVIATION []
 synonym: "noninvasive prenatal screening" EXACT []
 is_a: MAXO:0000529 ! prenatal genetic testing
@@ -5921,6 +5916,7 @@ name: nuchal translucency screening
 def: "An ultrasonic examination of the fetus in the late first trimester to measure the clear space at the back of the fetal neck to assess risk of genetic or cardiac abnormalities." [NCIT:C92837]
 synonym: "NT testing" EXACT ABBREVIATION []
 synonym: "nuchal translucency ultrasound screening" EXACT []
+synonym: "ultrasonographic nuchal translucency exam" EXACT []
 xref: NCIT:C92837
 is_a: MAXO:0000072 ! ultrasonography procedure
 is_a: MAXO:0000528 ! prenatal examination
@@ -6341,6 +6337,7 @@ def: "A quantitative measurement of the amount of calcium present in a sample, u
 synonym: "calcium measurement" EXACT []
 xref: NCIT:C64488
 is_a: MAXO:0000566 ! clinical chemistry assessment
+is_a: MAXO:0000778 ! liver function testing
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-31T19:19:43Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -8885,6 +8882,7 @@ name: HCG measurement
 def: "A quantitative measurement of the amount of human chorionic gonadotropin present in urine or serum." []
 synonym: "HCG pregnancy measurement" EXACT []
 synonym: "human chorionic gonadotropin measurement" EXACT []
+is_a: MAXO:0000605 ! protein assessment
 is_a: MAXO:0000783 ! pregnancy test
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-09T20:20:44Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -8919,6 +8917,7 @@ name: blood chemistry measurement
 def: "The determination of the measured concentrations of chemical constituents of the blood by assay in a clinical laboratory. [ NCI ]" [NCIT:C47868]
 synonym: "blood chemistry test" EXACT []
 xref: NCIT:C47868
+is_a: MAXO:0000147 ! hematology testing
 is_a: MAXO:0000566 ! clinical chemistry assessment
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-09T20:32:13Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -9010,7 +9009,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000795
 name: uterine size measurement
 def: "Determination of the uterine size by ultrasound or other measurement." [PMID:16212222]
-is_a: MAXO:0000793 ! pelvic examination
+is_a: MAXO:0001153 ! uterus examination
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-09T22:03:45Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9034,6 +9033,7 @@ synonym: "EFM" EXACT ABBREVIATION []
 synonym: "external fetal heart rate monitoring" EXACT []
 synonym: "fetal Doppler ultrasound monitoring" EXACT []
 xref: NCIT:C114081
+is_a: MAXO:0000520 ! obstetric ultrasonography
 is_a: MAXO:0000796 ! fetal heart rate monitoring
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-10T19:40:07Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -9241,7 +9241,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000821
 name: blood typing procedure
 def: "A procedure to tell what a patient's blood type and cell surface markers are." []
-is_a: MAXO:0000147 ! hematology testing
+is_a: MAXO:0000829 ! blood cell measurement
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T15:17:39Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9262,6 +9262,418 @@ synonym: "Rh factor blood testing" EXACT []
 synonym: "Rhesus factor blood testing" EXACT []
 is_a: MAXO:0000821 ! blood typing procedure
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T15:34:20Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000824
+name: hemoglobin measurement
+def: "A quantitative measurement of the amount of hemoglobin present in a biospecimen. [ NCI ]" [NCIT:C64848]
+synonym: "HGB measurement" EXACT []
+xref: NCIT:C64848
+is_a: MAXO:0000147 ! hematology testing
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T20:10:36Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000825
+name: reticulocyte count
+def: "The determination of the number of reticulocytes in a blood sample. [ NCI ]" [NCIT:C51947]
+xref: NCIT:C51947
+xref: PMID:29763080
+is_a: MAXO:0001007 ! erythrocyte count
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T20:15:55Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000826
+name: serum iron measurement
+def: "A quantitative measurement of the amount of iron in serum." []
+is_a: MAXO:0000788 ! serum chemistry measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T20:19:31Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000827
+name: serum ferritin measurement
+def: "A quantitative measurement determining the amount of ferritin in serum as an indicator of iron metabolism." []
+synonym: "serum ferritin level measurement" EXACT []
+is_a: MAXO:0000788 ! serum chemistry measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T20:21:40Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000828
+name: total iron binding capacity measurement
+def: "The determination of the saturation of iron binding sites on serum transferrin proteins. [ NCI ]" [NCIT:C74718]
+synonym: "IBCT" EXACT ABBREVIATION []
+synonym: "TIBC" EXACT ABBREVIATION []
+synonym: "total iron binding content measurement" EXACT []
+xref: NCIT:C74718
+is_a: MAXO:0000788 ! serum chemistry measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T20:30:55Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000829
+name: blood cell measurement
+is_a: MAXO:0000147 ! hematology testing
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T20:40:24Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000830
+name: erythrocyte cell morphology measurement
+def: "An examination or assessment of the form and structure of red blood cells. [ NCI ]" [NCIT:C92296]
+synonym: "RBC morphology measurement" EXACT []
+synonym: "red blood cell morphology measurement" EXACT []
+xref: NCIT:C92296
+is_a: MAXO:0000829 ! blood cell measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T20:41:08Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000831
+name: blood smear test
+def: "A procedure taking a thin layer of blood smeared on a glass microscope slide and stained to allow blood cells to be examined with a microscope." []
+synonym: "blood film test" EXACT []
+synonym: "peripheral blood film test" EXACT []
+synonym: "peripheral blood smear" EXACT []
+is_a: MAXO:0000829 ! blood cell measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T20:44:14Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000832
+name: serum creatinine measurement
+def: "A quantitative measurement of the amount of creatinine present in a sample of serum." [NCIT:C61023]
+comment: Serves to assist in the evaluation of renal function. {xref="PMID:29763080"}
+xref: NCIT:C61023
+is_a: MAXO:0000788 ! serum chemistry measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T20:56:49Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000833
+name: thyroid-stimulating hormone test
+def: "Determination of thyroid stimulating hormone levels in the blood as an indicator of thyroid health." []
+synonym: "TSH level test" EXACT []
+is_a: MAXO:0000787 ! blood chemistry measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:03:38Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000834
+name: T4 thyroid hormone test
+def: "Determination of thyroxine (T4) levels in the blood as an indicator of thyroid health." []
+synonym: "T4 level test" EXACT []
+synonym: "thyroxine level test" EXACT []
+is_a: MAXO:0000787 ! blood chemistry measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:05:40Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000835
+name: T3 thyroid hormone test
+def: "Determination of triiodothyronine (T3) levels in blood as an indicator of thyroid health." []
+synonym: "T3 level test" EXACT []
+synonym: "triiodothyronine level test" EXACT []
+is_a: MAXO:0000787 ! blood chemistry measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:05:52Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000836
+name: blood coagulation test
+synonym: "coagulation study" RELATED []
+xref: NCIT:C62662
+is_a: MAXO:0000147 ! hematology testing
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:13:53Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000837
+name: partial thromboplastin time test
+def: "A measurement of the length of time that it takes for clotting to occur when reagents are added to a plasma specimen. The test is partial due to the absence of tissue factor (Factor III) from the reaction mixture." []
+synonym: "activated partial thromboplastin time test" EXACT []
+synonym: "APTT test" EXACT []
+synonym: "PTT test" EXACT []
+xref: NCIT:C38462
+is_a: MAXO:0000836 ! blood coagulation test
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:14:12Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000838
+name: prothrombin time/international normalized ratio measurement
+def: "The determination of the ratio of the prothrombin time in a subject's specimen compared to a control sample. The measurement may be expressed as a ratio or percentage. [ NCI ]" [NCIT:C170591]
+synonym: "prothrombin time actual/control measurement" EXACT []
+synonym: "PT/INR measurement" EXACT []
+synonym: "PTAC measurement" EXACT []
+xref: NCIT:C170591
+is_a: MAXO:0000836 ! blood coagulation test
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:19:29Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000839
+name: thrombin time measurement
+def: "A measurement of the time it takes a plasma sample to clot after adding the active enzyme thrombin. [ NCI ]" [NCIT:C80365]
+synonym: "TCT measurement" EXACT []
+synonym: "thrombin clotting time measurement" EXACT []
+synonym: "TT measurment" EXACT []
+xref: NCIT:C80365
+is_a: MAXO:0000836 ! blood coagulation test
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:23:02Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000840
+name: alanine transaminase test
+def: "A quantitative measurement of alanine transaminase or aminotransferase present in a sample as a measurement of liver function." []
+synonym: "alanine aminotransferase measurement" EXACT []
+synonym: "ALT test" EXACT []
+synonym: "GPT test" EXACT []
+synonym: "serum glutamic-pyruvic transaminase test" EXACT []
+synonym: "SGPT test" EXACT []
+xref: NCIT:C64433
+is_a: MAXO:0000605 ! protein assessment
+is_a: MAXO:0000778 ! liver function testing
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:34:21Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000841
+name: aspartate aminotransferase blood test
+def: "A quantitative measurement of aspartate aminotransferase present in a sample to monitor liver health." []
+synonym: "aspartate aminotransferase measurement" EXACT []
+synonym: "AST blood test" EXACT []
+synonym: "serum glutamic oxaloacetic transaminase test" EXACT []
+synonym: "SGOT test" EXACT []
+xref: NCIT:C64467
+is_a: MAXO:0000605 ! protein assessment
+is_a: MAXO:0000778 ! liver function testing
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:38:44Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000842
+name: gamma glutamyl transferase measurement
+def: "Determination of gamma-glutamyl transferase (GGT) present in the sample as a measurement of liver function." []
+synonym: "gamma glutamyl transpeptidasemeasurement" EXACT []
+synonym: "gamma-GT test" EXACT []
+synonym: "GGT test" EXACT []
+synonym: "GTP test" EXACT []
+xref: NCIT:C64847
+is_a: MAXO:0000605 ! protein assessment
+is_a: MAXO:0000778 ! liver function testing
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:42:40Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000843
+name: albumin measurement
+def: "A quantitative measurement of albumin present in a sample." [NCIT:C64431]
+synonym: "ALB level test" EXACT []
+synonym: "albumin level measurement" EXACT []
+xref: NCIT:C64431
+is_a: MAXO:0000605 ! protein assessment
+is_a: MAXO:0000778 ! liver function testing
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:45:46Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000844
+name: alkaline phosphatase measurement
+synonym: "alk phos test" EXACT []
+synonym: "ALP measurement" EXACT []
+xref: NCIT:C64432
+is_a: MAXO:0000605 ! protein assessment
+is_a: MAXO:0000778 ! liver function testing
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:50:44Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/description "A quantitative measurement of alkaline phosphatase present in a sample." xsd:string {xref="NCIT:C64432"}
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000845
+name: total bilirubin measurement
+def: "The measurement of the total amount of bilirubin present in a particular substrate. The substrate most often tested is blood, but other fluids extracted from the body may be used periodically depending on the purpose of the test." [NCIT:C38037]
+synonym: "BILI measurement" EXACT []
+synonym: "total bilirubin level measurement" EXACT []
+xref: NCIT:C38037
+is_a: MAXO:0000778 ! liver function testing
+is_a: MAXO:0000848 ! bilirubin measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:52:27Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000846
+name: lactate dehydrogenase measurement
+def: "A quantitative measurement of the amount of lactate dehydrogenase present in a sample." [NCIT:C64855]
+synonym: "LDH measurement" EXACT []
+xref: NCIT:C64855
+is_a: MAXO:0000605 ! protein assessment
+is_a: MAXO:0000778 ! liver function testing
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T14:57:21Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000847
+name: 5 prime nucleotidase measurement
+def: "The determination of the amount of 5 prime nucleotidase present in a sample." [NCIT:C79437]
+synonym: "5'- nucleotidase measurement" EXACT []
+xref: NCIT:C79437
+is_a: MAXO:0000605 ! protein assessment
+is_a: MAXO:0000778 ! liver function testing
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:01:15Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000848
+name: bilirubin measurement
+is_a: MAXO:0000075 ! digestive system testing
+is_a: MAXO:0000605 ! protein assessment
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:06:51Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000849
+name: indirect bilirubin measurement
+def: "A measurement of the unconjugated or non-water-soluble bilirubin in a biological specimen." []
+xref: NCIT:C64483
+is_a: MAXO:0000848 ! bilirubin measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:07:19Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000850
+name: total protein measurement
+xref: A quantitative measurement of total protein present in the sample\, usually serum or urine.
+xref: NCIT:C64858
+is_a: MAXO:0000605 ! protein assessment
+is_a: MAXO:0000778 ! liver function testing
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:16:41Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000851
+name: urine protein measurement
+is_a: MAXO:0000605 ! protein assessment
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:25:01Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000852
+name: 24-hour urine collection
+def: "The measurement of the total protein present in a urine sample that was collected over a period of 24 hours." [NCIT:C135567]
+synonym: "24 hour urine for total protein" EXACT []
+synonym: "24-hour urine protein test" EXACT []
+xref: NCIT:C135567
+is_a: MAXO:0000850 ! total protein measurement
+is_a: MAXO:0000851 ! urine protein measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T16:13:50Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000853
+name: serum total protein measurement
+def: "A quantitative measurement of the amount of total protein present in serum." [NCIT:C61033]
+xref: NCIT:C61033
+is_a: MAXO:0000788 ! serum chemistry measurement
+is_a: MAXO:0000850 ! total protein measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T16:23:27Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000854
+name: haptoglobin protein measurement
+def: "The determination of the amount of haptoglobin protein present in a sample." [NCIT:C74740]
+synonym: "haptog measurement" EXACT []
+xref: NCIT:C74740
+is_a: MAXO:0000605 ! protein assessment
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T17:02:35Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000855
+name: hemoglobin electrophoresis test
+def: "Determination of the types of normal or abnormal types of hemoglobin in the blood. Some types of hemoglobin are associated with sickle cell disease or anemia." []
+synonym: "Hb electrophoresis measurement" EXACT []
+synonym: "Hb ELP" EXACT []
+synonym: "hemoglobin evaluation" EXACT []
+synonym: "hemoglobin fractionation" EXACT []
+synonym: "hemoglobinopathy evaluation" NARROW []
+synonym: "sickle cell screen" NARROW []
+is_a: MAXO:0000605 ! protein assessment
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T19:58:00Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000856
+name: serum PAPP-A measurement
+def: "Determination of serum levels of pregnancy-associated plasma protein A (PAPP-A). Maternal levels of PAPP-A increase throughout the pregnancy. Low levels during pregnancy are associated with Down syndrome and trisomy 18." []
+synonym: "pregnancy-associated plasma protein A test" EXACT []
+is_a: MAXO:0000605 ! protein assessment
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T20:59:28Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000858
+name: glucose tolerance test
+def: "A test that involves administration of a know quantity of glucose as a means of screening for glucose intolerance or diabetes mellitus. Typically a baseline (fasting plasma or serum glucose) is drawn prior to the administration of the glucose bolus. Serial plasma glucose levels are obtained (e.g. 30min, 1hr, 2hr, 3hr) and a plot of plasma glucose versus time is created. Comparison of these values against standardized results can be used in establishing the diagnosis of glucose intolerance or diabetes mellitus." [NCIT:C45946]
+xref: NCIT:C45946
+is_a: MAXO:0000124 ! disease screening
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T21:38:54Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000859
+name: fetal examination
+def: "A test or diagnostic examination to assess the health status and well being of the fetus." [NCIT:C92714]
+synonym: "fetal assessment" EXACT []
+synonym: "fetal exam" EXACT []
+synonym: "foetal examination" EXACT []
+is_a: MAXO:0000528 ! prenatal examination
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-18T14:38:59Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000860
+name: assessment of fetal presentation
+def: "A series of maneuvers to determine the position and presenting part of the fetus with respect to the maternal pelvic canal in preparation for labor and the birth process." [NCIT:C92737]
+synonym: "fetal position assessment" NARROW []
+synonym: "fetal presentation assessment" EXACT []
+xref: NCIT:C92737
+is_a: MAXO:0000859 ! fetal examination
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-18T14:53:47Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000861
+name: labor induction
+def: "The use of pharmacological and/or mechanical methods to initiate labor, including spontaneous rupture of membranes without contractions. Examples of methods include: artificial rupture of membranes, balloons, oxytocin, prostaglandin, laminaria, or other cervical ripening agents." [NCIT:C92814]
+synonym: "induction of labor" EXACT []
+xref: NCIT:C92814
+is_a: MAXO:0000782 ! obstetrics and gynecology procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-18T15:06:07Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000862
+name: fetal Doppler velocimetry
+def: "An prenatal ultrasonographic method that measures blood flow velocity through either maternal or fetal vessels." [NCIT:C114080]
+synonym: "Doppler velocimetry" EXACT []
+xref: NCIT:C114080
+is_a: MAXO:0000520 ! obstetric ultrasonography
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-18T15:13:50Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000863
+name: fetal pulse oximetry
+def: "A method to assess fetal oxygenation status during labor and delivery using a noninvasive reflectance pulse oximeter. [ NCI ]" [NCIT:C92794]
+is_a: MAXO:0000617 ! pulse oximetry
+is_a: MAXO:0000859 ! fetal examination
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-18T15:16:22Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -9338,7 +9750,7 @@ synonym: "complete blood count" EXACT []
 synonym: "full blood count" EXACT []
 xref: NCIT:C28133
 is_a: MAXO:0000146 ! clinical cell count
-is_a: MAXO:0000147 ! hematology testing
+is_a: MAXO:0000829 ! blood cell measurement
 property_value: http://purl.org/dc/elements/1.1/date 2019-05-16T18:09:14Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -10743,6 +11155,7 @@ def: "A systemic evaluation of the uterus using visual inspection, palpation, an
 synonym: "examination of uterus" EXACT []
 synonym: "physical examination of uterus" EXACT []
 synonym: "uterus exam" EXACT []
+is_a: MAXO:0000782 ! obstetrics and gynecology procedure
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-10T14:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 

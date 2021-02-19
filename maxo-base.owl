@@ -12,7 +12,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/maxo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2021-02-16/maxo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2021-02-18/maxo-base.owl"/>
         <dc:creator>Aaron Zhang</dc:creator>
         <dc:creator>Leigh Carmody</dc:creator>
         <dc:creator>Peter Robinson</dc:creator>
@@ -20,7 +20,7 @@
         <dc:title>Medical Action Ontology</dc:title>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-16</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-18</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -2914,6 +2914,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000075">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000566"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-15T19:35:36Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <rdfs:label xml:lang="en">digestive system testing</rdfs:label>
@@ -13427,26 +13428,13 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000528">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000526"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000527"/>
-        <obo:IAO_0000115>A test or diagnostic examination to assess the health status and well being of the fetus.</obo:IAO_0000115>
+        <obo:IAO_0000115>A test or diagnostic examination to assess the health status of the mother and well being of the fetus.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-11T22:00:54Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasBroadSynonym>antenatal examination</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasBroadSynonym>prenatal exam</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasBroadSynonym>prenatal examination</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>NCIT:C92714</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>fetal assessment</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>fetal evaluation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>fetal exam</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>foetal assessment</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>foetal examination</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>antenatal examination</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">prenatal examination</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000528"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A test or diagnostic examination to assess the health status and well being of the fetus.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCIT:C92714</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -13487,6 +13475,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-17T20:22:26Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>NIPT</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>cell free fetal DNA testing</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>noninvasive prenatal screening</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">noninvasive prenatal testing</rdfs:label>
     </owl:Class>
@@ -13707,6 +13696,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>NCIT:C92837</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>NT testing</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>nuchal translucency ultrasound screening</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>ultrasonographic nuchal translucency exam</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">nuchal translucency screening</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -14439,6 +14429,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000581">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000566"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
         <obo:IAO_0000115>A quantitative measurement of the amount of calcium present in a sample, usually serum or urine.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-31T19:19:43Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -18838,6 +18829,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000784 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000784">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000783"/>
         <obo:IAO_0000115>A quantitative measurement of the amount of human chorionic gonadotropin present in urine or serum.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-09T20:20:44Z</dc:date>
@@ -18890,6 +18882,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000787 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000787">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000147"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000566"/>
         <obo:IAO_0000115>The determination of the measured concentrations of chemical constituents of the blood by assay in a clinical laboratory. [ NCI ]</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-09T20:32:13Z</dc:date>
@@ -19094,7 +19087,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000795 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000795">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000793"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001153"/>
         <obo:IAO_0000115>Determination of the uterine size by ultrasound or other measurement.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-09T22:03:45Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -19134,6 +19127,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000797 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000797">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000520"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000796"/>
         <obo:IAO_0000115>A technique that utilizes a Doppler transducer to monitor fetal heart rate. The transducer is placed on the maternal abdomen and detects fetal cardiac motion using ultrasound. [ NICHD NCI ]</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-10T19:40:07Z</dc:date>
@@ -19507,7 +19501,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000821 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000821">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000147"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000829"/>
         <obo:IAO_0000115>A procedure to tell what a patient&apos;s blood type and cell surface markers are.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T15:17:39Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -19540,6 +19534,718 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>Rhesus factor blood testing</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">Rh factor blood typing procedure</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000824 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000824">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000147"/>
+        <obo:IAO_0000115>A quantitative measurement of the amount of hemoglobin present in a biospecimen. [ NCI ]</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T20:10:36Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C64848</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>HGB measurement</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">hemoglobin measurement</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000824"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A quantitative measurement of the amount of hemoglobin present in a biospecimen. [ NCI ]</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C64848</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000825 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000825">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001007"/>
+        <obo:IAO_0000115>The determination of the number of reticulocytes in a blood sample. [ NCI ]</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T20:15:55Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C51947</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:29763080</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">reticulocyte count</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000825"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The determination of the number of reticulocytes in a blood sample. [ NCI ]</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C51947</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000826 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000826">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000788"/>
+        <obo:IAO_0000115>A quantitative measurement of the amount of iron in serum.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T20:19:31Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <rdfs:label xml:lang="en">serum iron measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000827 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000827">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000788"/>
+        <obo:IAO_0000115>A quantitative measurement determining the amount of ferritin in serum as an indicator of iron metabolism.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T20:21:40Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>serum ferritin level measurement</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">serum ferritin measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000828 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000828">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000788"/>
+        <obo:IAO_0000115>The determination of the saturation of iron binding sites on serum transferrin proteins. [ NCI ]</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T20:30:55Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C74718</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>IBCT</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>TIBC</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>total iron binding content measurement</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">total iron binding capacity measurement</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000828"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The determination of the saturation of iron binding sites on serum transferrin proteins. [ NCI ]</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C74718</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000828"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>IBCT</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/maxo#ABBREVIATION"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000828"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>TIBC</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/maxo#ABBREVIATION"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000829 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000829">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000147"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T20:40:24Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <rdfs:label xml:lang="en">blood cell measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000830 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000830">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000829"/>
+        <obo:IAO_0000115>An examination or assessment of the form and structure of red blood cells. [ NCI ]</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T20:41:08Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C92296</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>RBC morphology measurement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>red blood cell morphology measurement</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">erythrocyte cell morphology measurement</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000830"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An examination or assessment of the form and structure of red blood cells. [ NCI ]</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C92296</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000831 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000831">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000829"/>
+        <obo:IAO_0000115>A procedure taking a thin layer of blood smeared on a glass microscope slide and stained to allow blood cells to be examined with a microscope.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T20:44:14Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>blood film test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>peripheral blood film test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>peripheral blood smear</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">blood smear test</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000832 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000832">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000788"/>
+        <obo:IAO_0000115>A quantitative measurement of the amount of creatinine present in a sample of serum.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T20:56:49Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C61023</oboInOwl:hasDbXref>
+        <rdfs:comment>Serves to assist in the evaluation of renal function.</rdfs:comment>
+        <rdfs:label xml:lang="en">serum creatinine measurement</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000832"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A quantitative measurement of the amount of creatinine present in a sample of serum.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C61023</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000832"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>Serves to assist in the evaluation of renal function.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:29763080</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000833 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000833">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000787"/>
+        <obo:IAO_0000115>Determination of thyroid stimulating hormone levels in the blood as an indicator of thyroid health.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T21:03:38Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>TSH level test</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">thyroid-stimulating hormone test</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000834 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000834">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000787"/>
+        <obo:IAO_0000115>Determination of thyroxine (T4) levels in the blood as an indicator of thyroid health.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T21:05:40Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>T4 level test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>thyroxine level test</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">T4 thyroid hormone test</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000835 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000835">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000787"/>
+        <obo:IAO_0000115>Determination of triiodothyronine (T3) levels in blood as an indicator of thyroid health.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T21:05:52Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>T3 level test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>triiodothyronine level test</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">T3 thyroid hormone test</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000836 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000836">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000147"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T21:13:53Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C62662</oboInOwl:hasDbXref>
+        <oboInOwl:hasRelatedSynonym>coagulation study</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">blood coagulation test</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000837 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000837">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000836"/>
+        <obo:IAO_0000115>A measurement of the length of time that it takes for clotting to occur when reagents are added to a plasma specimen. The test is partial due to the absence of tissue factor (Factor III) from the reaction mixture.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T21:14:12Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C38462</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>APTT test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>PTT test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>activated partial thromboplastin time test</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">partial thromboplastin time test</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000838 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000838">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000836"/>
+        <obo:IAO_0000115>The determination of the ratio of the prothrombin time in a subject&apos;s specimen compared to a control sample. The measurement may be expressed as a ratio or percentage. [ NCI ]</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T21:19:29Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C170591</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>PT/INR measurement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>PTAC measurement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>prothrombin time actual/control measurement</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">prothrombin time/international normalized ratio measurement</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000838"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The determination of the ratio of the prothrombin time in a subject&apos;s specimen compared to a control sample. The measurement may be expressed as a ratio or percentage. [ NCI ]</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C170591</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000839 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000839">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000836"/>
+        <obo:IAO_0000115>A measurement of the time it takes a plasma sample to clot after adding the active enzyme thrombin. [ NCI ]</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T21:23:02Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C80365</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>TCT measurement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>TT measurment</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>thrombin clotting time measurement</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">thrombin time measurement</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000839"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A measurement of the time it takes a plasma sample to clot after adding the active enzyme thrombin. [ NCI ]</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C80365</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000840 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000840">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
+        <obo:IAO_0000115>A quantitative measurement of alanine transaminase or aminotransferase present in a sample as a measurement of liver function.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T21:34:21Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C64433</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>ALT test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>GPT test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>SGPT test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>alanine aminotransferase measurement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>serum glutamic-pyruvic transaminase test</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">alanine transaminase test</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000841 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000841">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
+        <obo:IAO_0000115>A quantitative measurement of aspartate aminotransferase present in a sample to monitor liver health.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T21:38:44Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C64467</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>AST blood test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>SGOT test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>aspartate aminotransferase measurement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>serum glutamic oxaloacetic transaminase test</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">aspartate aminotransferase blood test</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000842 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000842">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
+        <obo:IAO_0000115>Determination of gamma-glutamyl transferase (GGT) present in the sample as a measurement of liver function.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T21:42:40Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C64847</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>GGT test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>GTP test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>gamma glutamyl transpeptidasemeasurement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>gamma-GT test</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">gamma glutamyl transferase measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000843 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000843">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
+        <obo:IAO_0000115>A quantitative measurement of albumin present in a sample.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T21:45:46Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C64431</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>ALB level test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>albumin level measurement</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">albumin measurement</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000843"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A quantitative measurement of albumin present in a sample.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C64431</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000844 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000844">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T21:50:44Z</dc:date>
+        <dc:description>A quantitative measurement of alkaline phosphatase present in a sample.</dc:description>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C64432</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>ALP measurement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>alk phos test</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">alkaline phosphatase measurement</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000844"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+        <owl:annotatedTarget>A quantitative measurement of alkaline phosphatase present in a sample.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C64432</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000845 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000845">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000848"/>
+        <obo:IAO_0000115>The measurement of the total amount of bilirubin present in a particular substrate. The substrate most often tested is blood, but other fluids extracted from the body may be used periodically depending on the purpose of the test.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T21:52:27Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C38037</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>BILI measurement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>total bilirubin level measurement</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">total bilirubin measurement</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000845"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The measurement of the total amount of bilirubin present in a particular substrate. The substrate most often tested is blood, but other fluids extracted from the body may be used periodically depending on the purpose of the test.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C38037</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000846 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000846">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
+        <obo:IAO_0000115>A quantitative measurement of the amount of lactate dehydrogenase present in a sample.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-17T14:57:21Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C64855</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>LDH measurement</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">lactate dehydrogenase measurement</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000846"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A quantitative measurement of the amount of lactate dehydrogenase present in a sample.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C64855</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000847 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000847">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
+        <obo:IAO_0000115>The determination of the amount of 5 prime nucleotidase present in a sample.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-17T15:01:15Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C79437</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>5&apos;- nucleotidase measurement</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">5 prime nucleotidase measurement</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000847"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The determination of the amount of 5 prime nucleotidase present in a sample.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C79437</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000848 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000848">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000075"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-17T15:06:51Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <rdfs:label xml:lang="en">bilirubin measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000849 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000849">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000848"/>
+        <obo:IAO_0000115>A measurement of the unconjugated or non-water-soluble bilirubin in a biological specimen.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-17T15:07:19Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C64483</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">indirect bilirubin measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000850 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000850">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-17T15:16:41Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>A quantitative measurement of total protein present in the sample, usually serum or urine.</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCIT:C64858</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">total protein measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000851 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000851">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-17T15:25:01Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <rdfs:label xml:lang="en">urine protein measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000852 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000852">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000850"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000851"/>
+        <obo:IAO_0000115>The measurement of the total protein present in a urine sample that was collected over a period of 24 hours.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-17T16:13:50Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C135567</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>24 hour urine for total protein</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>24-hour urine protein test</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">24-hour urine collection</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000852"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The measurement of the total protein present in a urine sample that was collected over a period of 24 hours.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C135567</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000853 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000853">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000788"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000850"/>
+        <obo:IAO_0000115>A quantitative measurement of the amount of total protein present in serum.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-17T16:23:27Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C61033</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">serum total protein measurement</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000853"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A quantitative measurement of the amount of total protein present in serum.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C61033</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000854 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000854">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
+        <obo:IAO_0000115>The determination of the amount of haptoglobin protein present in a sample.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-17T17:02:35Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C74740</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>haptog measurement</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">haptoglobin protein measurement</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000854"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The determination of the amount of haptoglobin protein present in a sample.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C74740</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000855 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000855">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
+        <obo:IAO_0000115>Determination of the types of normal or abnormal types of hemoglobin in the blood. Some types of hemoglobin are associated with sickle cell disease or anemia.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-17T19:58:00Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>Hb ELP</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Hb electrophoresis measurement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>hemoglobin evaluation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>hemoglobin fractionation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>hemoglobinopathy evaluation</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>sickle cell screen</oboInOwl:hasNarrowSynonym>
+        <rdfs:label xml:lang="en">hemoglobin electrophoresis test</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000856 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000856">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
+        <obo:IAO_0000115>Determination of serum levels of pregnancy-associated plasma protein A (PAPP-A). Maternal levels of PAPP-A increase throughout the pregnancy. Low levels during pregnancy are associated with Down syndrome and trisomy 18.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-17T20:59:28Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>pregnancy-associated plasma protein A test</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">serum PAPP-A measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000858 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000858">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000124"/>
+        <obo:IAO_0000115>A test that involves administration of a know quantity of glucose as a means of screening for glucose intolerance or diabetes mellitus. Typically a baseline (fasting plasma or serum glucose) is drawn prior to the administration of the glucose bolus. Serial plasma glucose levels are obtained (e.g. 30min, 1hr, 2hr, 3hr) and a plot of plasma glucose versus time is created. Comparison of these values against standardized results can be used in establishing the diagnosis of glucose intolerance or diabetes mellitus.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-17T21:38:54Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C45946</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">glucose tolerance test</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000858"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A test that involves administration of a know quantity of glucose as a means of screening for glucose intolerance or diabetes mellitus. Typically a baseline (fasting plasma or serum glucose) is drawn prior to the administration of the glucose bolus. Serial plasma glucose levels are obtained (e.g. 30min, 1hr, 2hr, 3hr) and a plot of plasma glucose versus time is created. Comparison of these values against standardized results can be used in establishing the diagnosis of glucose intolerance or diabetes mellitus.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C45946</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000859 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000859">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000528"/>
+        <obo:IAO_0000115>A test or diagnostic examination to assess the health status and well being of the fetus.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-18T14:38:59Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>fetal assessment</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>fetal exam</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>foetal examination</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">fetal examination</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000859"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A test or diagnostic examination to assess the health status and well being of the fetus.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C92714</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000860 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000860">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000859"/>
+        <obo:IAO_0000115>A series of maneuvers to determine the position and presenting part of the fetus with respect to the maternal pelvic canal in preparation for labor and the birth process.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-18T14:53:47Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C92737</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>fetal presentation assessment</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>fetal position assessment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label xml:lang="en">assessment of fetal presentation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000860"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A series of maneuvers to determine the position and presenting part of the fetus with respect to the maternal pelvic canal in preparation for labor and the birth process.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C92737</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000861 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000861">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000782"/>
+        <obo:IAO_0000115>The use of pharmacological and/or mechanical methods to initiate labor, including spontaneous rupture of membranes without contractions. Examples of methods include: artificial rupture of membranes, balloons, oxytocin, prostaglandin, laminaria, or other cervical ripening agents.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-18T15:06:07Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C92814</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>induction of labor</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">labor induction</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000861"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The use of pharmacological and/or mechanical methods to initiate labor, including spontaneous rupture of membranes without contractions. Examples of methods include: artificial rupture of membranes, balloons, oxytocin, prostaglandin, laminaria, or other cervical ripening agents.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C92814</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000862 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000862">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000520"/>
+        <obo:IAO_0000115>An prenatal ultrasonographic method that measures blood flow velocity through either maternal or fetal vessels.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-18T15:13:50Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C114080</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Doppler velocimetry</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">fetal Doppler velocimetry</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000862"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An prenatal ultrasonographic method that measures blood flow velocity through either maternal or fetal vessels.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C114080</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000863 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000863">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000617"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000859"/>
+        <obo:IAO_0000115>A method to assess fetal oxygenation status during labor and delivery using a noninvasive reflectance pulse oximeter. [ NCI ]</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-18T15:16:22Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <rdfs:label xml:lang="en">fetal pulse oximetry</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000863"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A method to assess fetal oxygenation status during labor and delivery using a noninvasive reflectance pulse oximeter. [ NCI ]</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C92794</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -19672,7 +20378,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001006">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000146"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000147"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000829"/>
         <obo:IAO_0000115>The determination of the number of red blood cells, white blood cells, and platelets in a blood sample.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-16T18:09:14Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -23664,6 +24370,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000782"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A systemic evaluation of the uterus using visual inspection, palpation, and percussion. The purpose is to determine the presence or absence of physical signs of disease or abnormality for an individual&apos;s health assessment.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-10T14:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
