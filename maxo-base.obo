@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2021-02-18/maxo-base.owl
+data-version: maxo/releases/2021-02-22/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Aaron Zhang" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
@@ -8,7 +8,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2021-02-18" xsd:string
+property_value: owl:versionInfo "2021-02-22" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -5790,8 +5790,8 @@ name: prenatal examination
 def: "A test or diagnostic examination to assess the health status of the mother and well being of the fetus." []
 synonym: "antenatal examination" EXACT []
 xref: NCIT:C92714
-is_a: MAXO:0000526 ! medical examination
 is_a: MAXO:0000527 ! physical examination
+is_a: MAXO:0000782 ! obstetrics and gynecology procedure
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-11T22:00:54Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -8953,7 +8953,6 @@ synonym: "physical examination of breast" EXACT []
 xref: NCIT:C70552
 is_a: MAXO:0000126 ! cancer screening
 is_a: MAXO:0000782 ! obstetrics and gynecology procedure
-property_value: http://purl.org/dc/elements/1.1/date 2021-02-09T21:32:51Z xsd:dateTime
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-10T14:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9061,6 +9060,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000800
 name: avoid excessive heat
+def: "A clinical recommendation to avoid or refrain from excessively hot environments in order to maintain health or ameliorate symptoms." []
 is_a: MAXO:0000053 ! therapeutic avoidance of environmental exposure
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-10T21:19:31Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -9088,6 +9088,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000803
 name: avoid heavy lifting activities
+def: "A clinical recommendation to avoid or refrain from lifting heavy items in order to maintain health or ameliorate symptoms." []
 is_a: MAXO:0000049 ! therapeutic avoidance of physical activity
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-10T21:22:33Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -9137,8 +9138,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000809
 name: syphilis screening
+def: "Testing for sexually transmitted disease syphilis. Syphilis is a contagious bacterial infection caused by the spirochete Treponema pallidum." []
 synonym: "syphylis testing" EXACT []
-synonym: "Testing for sexually transmitted disease syphilis. Syphilis is a contagious bacterial infection caused by the spirochete Treponema pallidum." EXACT []
 is_a: MAXO:0000596 ! infectious disease screening
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-12T20:56:40Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -9146,8 +9147,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000810
 name: rubella antibody titer testing
-def: "rubella testing" []
 def: "Testing to determine whether a patient has sufficient antibodies to be protected from rubella virus or to verify infection." []
+synonym: "rubella testing" EXACT []
 is_a: MAXO:0000596 ! infectious disease screening
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-12T21:04:52Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -9177,8 +9178,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000813
 name: hepatitis B surface antigen testing
-def: "HBsAg testing" []
 def: "Testing to detect hepatitis B viral antigens and an active hepatitis B infection." []
+synonym: "HBsAg testing" EXACT []
 is_a: MAXO:0000596 ! infectious disease screening
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-12T21:32:40Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -9316,6 +9317,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000829
 name: blood cell measurement
+def: "A measurement of size, shape, number, or other parameter of blood cells in order to diagnose or treat a patient." []
 is_a: MAXO:0000147 ! hematology testing
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T20:40:24Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -9384,6 +9386,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000836
 name: blood coagulation test
+def: "A measure of a patient's ability to clot, and how long it takes to clot." []
 synonym: "coagulation study" RELATED []
 xref: NCIT:C62662
 is_a: MAXO:0000147 ! hematology testing
@@ -9484,13 +9487,13 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000844
 name: alkaline phosphatase measurement
+def: "A quantitative measurement of alkaline phosphatase present in a sample." [NCIT:C64432]
 synonym: "alk phos test" EXACT []
 synonym: "ALP measurement" EXACT []
 xref: NCIT:C64432
 is_a: MAXO:0000605 ! protein assessment
 is_a: MAXO:0000778 ! liver function testing
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:50:44Z xsd:dateTime
-property_value: http://purl.org/dc/elements/1.1/description "A quantitative measurement of alkaline phosphatase present in a sample." xsd:string {xref="NCIT:C64432"}
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -9530,6 +9533,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000848
 name: bilirubin measurement
+def: "The measurement of bilirubin present in a particular sample." []
 is_a: MAXO:0000075 ! digestive system testing
 is_a: MAXO:0000605 ! protein assessment
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:06:51Z xsd:dateTime
@@ -9547,7 +9551,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000850
 name: total protein measurement
-xref: A quantitative measurement of total protein present in the sample\, usually serum or urine.
+def: "A quantitative measurement of total protein present in the sample, usually serum or urine." []
 xref: NCIT:C64858
 is_a: MAXO:0000605 ! protein assessment
 is_a: MAXO:0000778 ! liver function testing
@@ -9557,6 +9561,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000851
 name: urine protein measurement
+def: "A test to determine the amount or type of protein present in urine." []
 is_a: MAXO:0000605 ! protein assessment
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:25:01Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961

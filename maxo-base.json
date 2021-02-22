@@ -2326,11 +2326,6 @@
         {
           "obj": "http://purl.obolibrary.org/obo/MAXO_0000526",
           "pred": "is_a",
-          "sub": "http://purl.obolibrary.org/obo/MAXO_0000528"
-        },
-        {
-          "obj": "http://purl.obolibrary.org/obo/MAXO_0000526",
-          "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/MAXO_0000574"
         },
         {
@@ -3522,6 +3517,11 @@
           "obj": "http://purl.obolibrary.org/obo/MAXO_0000782",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/MAXO_0000141"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/MAXO_0000782",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/MAXO_0000528"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/MAXO_0000782",
@@ -9800,11 +9800,11 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2021-02-18"
+            "val": "2021-02-22"
           }
         ],
         "subsets": [],
-        "version": "http://purl.obolibrary.org/obo/maxo/releases/2021-02-18/maxo-base.json",
+        "version": "http://purl.obolibrary.org/obo/maxo/releases/2021-02-22/maxo-base.json",
         "xrefs": []
       },
       "nodes": [
@@ -41303,15 +41303,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.org/dc/elements/1.1/date",
-                "val": "2021-02-09T21:32:51Z"
-              },
-              {
-                "pred": "http://purl.org/dc/elements/1.1/date",
                 "val": "2021-02-10T14:39:14Z"
-              },
-              {
-                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
-                "val": "http://orcid.org/0000-0001-7941-2961"
               },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
@@ -41723,7 +41715,11 @@
                 "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
                 "val": "http://orcid.org/0000-0001-7941-2961"
               }
-            ]
+            ],
+            "definition": {
+              "val": "A clinical recommendation to avoid or refrain from excessively hot environments in order to maintain health or ameliorate symptoms.",
+              "xrefs": []
+            }
           },
           "type": "CLASS"
         },
@@ -41798,7 +41794,11 @@
                 "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
                 "val": "http://orcid.org/0000-0001-7941-2961"
               }
-            ]
+            ],
+            "definition": {
+              "val": "A clinical recommendation to avoid or refrain from lifting heavy items in order to maintain health or ameliorate symptoms.",
+              "xrefs": []
+            }
           },
           "type": "CLASS"
         },
@@ -41955,12 +41955,11 @@
                 "val": "http://orcid.org/0000-0001-7941-2961"
               }
             ],
+            "definition": {
+              "val": "Testing for sexually transmitted disease syphilis. Syphilis is a contagious bacterial infection caused by the spirochete Treponema pallidum.",
+              "xrefs": []
+            },
             "synonyms": [
-              {
-                "pred": "hasExactSynonym",
-                "val": "Testing for sexually transmitted disease syphilis. Syphilis is a contagious bacterial infection caused by the spirochete Treponema pallidum.",
-                "xrefs": []
-              },
               {
                 "pred": "hasExactSynonym",
                 "val": "syphylis testing",
@@ -41985,9 +41984,16 @@
               }
             ],
             "definition": {
-              "val": "rubella testing",
+              "val": "Testing to determine whether a patient has sufficient antibodies to be protected from rubella virus or to verify infection.",
               "xrefs": []
-            }
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "rubella testing",
+                "xrefs": []
+              }
+            ]
           },
           "type": "CLASS"
         },
@@ -42084,7 +42090,14 @@
             "definition": {
               "val": "Testing to detect hepatitis B viral antigens and an active hepatitis B infection.",
               "xrefs": []
-            }
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "HBsAg testing",
+                "xrefs": []
+              }
+            ]
           },
           "type": "CLASS"
         },
@@ -42509,7 +42522,11 @@
                 "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
                 "val": "http://orcid.org/0000-0001-7941-2961"
               }
-            ]
+            ],
+            "definition": {
+              "val": "A measurement of size, shape, number, or other parameter of blood cells in order to diagnose or treat a patient.",
+              "xrefs": []
+            }
           },
           "type": "CLASS"
         },
@@ -42730,6 +42747,10 @@
                 "val": "http://orcid.org/0000-0001-7941-2961"
               }
             ],
+            "definition": {
+              "val": "A measure of a patient's ability to clot, and how long it takes to clot.",
+              "xrefs": []
+            },
             "synonyms": [
               {
                 "pred": "hasRelatedSynonym",
@@ -43077,14 +43098,16 @@
                 "val": "2021-02-16T21:50:44Z"
               },
               {
-                "pred": "http://purl.org/dc/elements/1.1/description",
-                "val": "A quantitative measurement of alkaline phosphatase present in a sample."
-              },
-              {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
                 "val": "http://orcid.org/0000-0001-7941-2961"
               }
             ],
+            "definition": {
+              "val": "A quantitative measurement of alkaline phosphatase present in a sample.",
+              "xrefs": [
+                "NCIT:C64432"
+              ]
+            },
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
@@ -43228,7 +43251,11 @@
                 "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
                 "val": "http://orcid.org/0000-0001-7941-2961"
               }
-            ]
+            ],
+            "definition": {
+              "val": "The measurement of bilirubin present in a particular sample.",
+              "xrefs": []
+            }
           },
           "type": "CLASS"
         },
@@ -43272,10 +43299,11 @@
                 "val": "http://orcid.org/0000-0001-7941-2961"
               }
             ],
+            "definition": {
+              "val": "A quantitative measurement of total protein present in the sample, usually serum or urine.",
+              "xrefs": []
+            },
             "xrefs": [
-              {
-                "val": "A quantitative measurement of total protein present in the sample, usually serum or urine."
-              },
               {
                 "val": "NCIT:C64858"
               }
@@ -43296,7 +43324,11 @@
                 "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
                 "val": "http://orcid.org/0000-0001-7941-2961"
               }
-            ]
+            ],
+            "definition": {
+              "val": "A test to determine the amount or type of protein present in urine.",
+              "xrefs": []
+            }
           },
           "type": "CLASS"
         },
