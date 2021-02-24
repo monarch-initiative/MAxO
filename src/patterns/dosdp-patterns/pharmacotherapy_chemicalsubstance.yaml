@@ -10,10 +10,10 @@ classes:
   pharmacotherapy: MAXO:0000058
   chemical entity: CHEBI:24431
   pharmacological role: CHEBI:52210
-  therapeutic uses: MAXO:0000864
-
+  
 relations:
-  inheres_in: RO:0000052
+  therapeutic_uses: MAXO:0000864
+  has_role: RO:0000087
   
 annotationProperties:
   exact_synonym: oio:hasExactSynonym 
@@ -70,6 +70,6 @@ exact_synonym:
   value: syns
   
 equivalentTo:
-  text: "'pharmacotherapy' and ('uses' some 'chemical entity' and ('has_role' some %s))"
+  text: "'pharmacotherapy' and ('therapeutic_uses' some 'chemical entity' and ('has_role' some %s))"
   vars:
     - drug_role
