@@ -9,6 +9,8 @@ contributors:
 classes:
   pharmacotherapy: MAXO:0000058
   chemical entity: CHEBI:24431
+  pharmacological role: CHEBI:52210
+  therapeutic uses: MAXO:0000864
 
 relations:
   inheres_in: RO:0000052
@@ -22,6 +24,7 @@ annotationProperties:
   
 vars:
   chemical_entity: "'chemical entity'"
+  drug_role: "'pharmacological role'"
 
 data_vars:
   date: "'date'"
@@ -36,12 +39,12 @@ annotations:
   - annotationProperty: exact_synonym
     text: "%s therapy"
     vars:
-     - chemical_entity
+     - drug_role
      
   - annotationProperty: exact_synonym
     text: "treatment with %s" 
     vars:
-     - chemical_entity
+     - drug_role
      
   - annotationProperty: date
     text: "%s"
@@ -67,6 +70,6 @@ exact_synonym:
   value: syns
   
 equivalentTo:
-  text: "'pharmacotherapy' and ('inheres_in' some %s)"
+  text: "'pharmacotherapy' and ('uses' some 'chemical entity' and ('has_role' some %s))"
   vars:
-    - chemical_entity
+    - drug_role
