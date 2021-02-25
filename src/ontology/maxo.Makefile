@@ -55,7 +55,11 @@ tmp/merge_def.owl: ../scripts/merge_ncit_def.tsv
   --output $@
   
 unmerge: tmp/unmerge_def.owl
-	$(ROBOT) merge -i $(SRC) --collapse-import-closure false unmerge -i $< -o unmerge.ofn && mv unmerge.ofn $(SRC)
+	$(ROBOT) merge -i $(SRC) --collapse-import-closure false unmerge -i $< convert -f ofn -o unmerge.ofn && mv unmerge.ofn $(SRC)
 	
 merge: tmp/merge_def.owl
-	$(ROBOT) merge -i $(SRC) -i $< --collapse-import-closure false -o merge.ofn && mv merge.ofn $(SRC)
+	$(ROBOT) merge -i $(SRC) -i $< --collapse-import-closure false convert -f ofn -o merge.ofn && mv merge.ofn $(SRC)
+
+replace:
+	make unmerge
+	make merge
