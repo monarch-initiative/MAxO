@@ -1,0 +1,75 @@
+pattern_name: pharmacotherapy_chemicalrole
+pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/pharmacotherapy_chemicalrole.yaml
+description: "use of a chemical substance for pharmacotherapy"
+
+contributors:
+  - https://orcid.org/0000-0001-7941-2961
+  - https://orcid.org/0000-0002-7356-1779
+
+classes:
+  pharmacotherapy: MAXO:0000058
+  chemical entity: CHEBI:24431
+  pharmacological role: CHEBI:52210
+  
+relations:
+  therapeutic_uses: MAXO:0000864
+  has_role: RO:0000087
+  
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym 
+  created_by: oio:created_by
+  date: dc:date
+  comment: rdfs:comment
+  xref: oio:hasDbXref
+  
+vars:
+  chemical_entity: "'chemical entity'"
+  drug_role: "'pharmacological role'"
+
+data_vars:
+  date: "'date'"
+  created_by: "'created_by'"
+  comment: "'comment'"
+  xref: "'xref'"
+   
+data_list_vars:
+  syns: xsd:string
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "%s therapy"
+    vars:
+     - drug_role
+     
+  - annotationProperty: exact_synonym
+    text: "treatment with %s" 
+    vars:
+     - drug_role
+     
+  - annotationProperty: date
+    text: "%s"
+    vars:
+     - date
+     
+  - annotationProperty: created_by
+    text: "%s"
+    vars:
+     - created_by
+     
+  - annotationProperty: comment
+    text: "%s"
+    vars:
+     - comment
+     
+  - annotationProperty: xref
+    text: "%s"
+    vars:
+     - xref
+   
+exact_synonym:
+  value: syns
+  
+equivalentTo:
+  text:  "'pharmacotherapy' and ('therapeutic_uses' some ('chemical entity' and ('has_role' some %s)))"
+  vars:
+    - drug_role
