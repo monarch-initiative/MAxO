@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2021-02-25/maxo-base.owl
+data-version: maxo/releases/2021-03-17/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Aaron Zhang" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
@@ -8,7 +8,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2021-02-25" xsd:string
+property_value: owl:versionInfo "2021-03-17" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -2017,10 +2017,8 @@ synonym: "cephalosporin beta-lactam therapy" EXACT []
 synonym: "cephalosporin drug therapy" EXACT []
 synonym: "cephalosporin drug treatment" EXACT []
 synonym: "cephalosporin therapies" EXACT []
-synonym: "cephalosporin therapy" EXACT []
 synonym: "cephalosporin treatment" EXACT []
 synonym: "cephalosporins therapy" EXACT []
-synonym: "treatment with cephalosporin" EXACT []
 synonym: "treatment with cephalosporin agent" EXACT []
 synonym: "treatment with cephalosporin antibacterial drug" EXACT []
 synonym: "treatment with cephalosporin antibacterial medication" EXACT []
@@ -2028,6 +2026,8 @@ synonym: "treatment with cephalosporin antibiotic drug" EXACT []
 synonym: "treatment with cephalosporin antibiotic medication" EXACT []
 xref: CHEBI:23066
 is_a: MAXO:0000432 ! beta-lactam antibacterial agent therapy
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: MAXO:0000864 CHEBI:23066 ! therapeutic uses
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:25:44Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2040,13 +2040,11 @@ synonym: "penicillin antibacterial treatment" EXACT []
 synonym: "penicillin beta-lactam therapy" EXACT []
 synonym: "penicillin drug therapy" EXACT []
 synonym: "penicillin drug treatment" EXACT []
-synonym: "penicillin therapy" EXACT []
 synonym: "penicillin treatment" EXACT []
 synonym: "treatment with a penicillin agent" EXACT []
 synonym: "treatment with a penicillin drug" EXACT []
 synonym: "treatment with a penicillin medication" EXACT []
 synonym: "treatment with a penicillin therapy" EXACT []
-synonym: "treatment with penicillin" EXACT []
 synonym: "treatment with penicillin antibacterial drug" EXACT []
 synonym: "treatment with penicillin antibacterial medication" EXACT []
 synonym: "treatment with penicillin antibiotic agent" EXACT []
@@ -2055,6 +2053,8 @@ synonym: "treatment with penicillin antibiotic medication" EXACT []
 synonym: "treatment with penicillin antibiotic therapy" EXACT []
 xref: CHEBI:17334
 is_a: MAXO:0000432 ! beta-lactam antibacterial agent therapy
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: MAXO:0000864 CHEBI:17334 ! therapeutic uses
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:26:03Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2069,7 +2069,6 @@ name: macrolide antibacterial agent therapy
 def: "Use of a drug with a macrocyclic lactone with a ring of twelve or more members which exhibits antibiotic activity." []
 synonym: "macrolide antibacterial drug therapy" EXACT []
 synonym: "macrolide antibacterial therapy" EXACT []
-synonym: "macrolide antibiotic therapy" EXACT []
 synonym: "macrolide drug therapy" EXACT []
 synonym: "macrolide drug treatment" EXACT []
 synonym: "macrolides" BROAD []
@@ -2079,9 +2078,10 @@ synonym: "Treatment with a macrolide antibacterial medication" EXACT []
 synonym: "Treatment with a macrolide antibiotic agent" EXACT []
 synonym: "Treatment with a macrolide antibiotic drug" EXACT []
 synonym: "Treatment with a macrolide antibiotic medication" EXACT []
-synonym: "treatment with macrolide antibiotic" EXACT []
 xref: CHEBI:25105
 is_a: MAXO:0000061 ! antibacterial agent therapy
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: MAXO:0000864 CHEBI:25105 ! therapeutic uses
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:26:31Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2091,17 +2091,17 @@ name: quinolone antibacterial agent therapy
 def: "Use of an organonitrogen heterocyclic antibiotic whose structure contains a quinolone or quinolone-related skeleton." []
 synonym: "quinolone antibacterial therapy" EXACT []
 synonym: "quinolone antibiotic agent treatment" EXACT []
-synonym: "quinolone antibiotic therapy" EXACT []
 synonym: "quinolones" BROAD []
 synonym: "treatment with quinolone antibacterial agent" EXACT []
 synonym: "treatment with quinolone antibacterial drug" EXACT []
 synonym: "treatment with quinolone antibacterial medication" EXACT []
-synonym: "treatment with quinolone antibiotic" EXACT []
 synonym: "treatment with quinolone antibiotic agent" EXACT []
 synonym: "treatment with quinolone antibiotic drug" EXACT []
 synonym: "treatment with quinolone antibiotic medication" EXACT []
 xref: CHEBI:86324
 is_a: MAXO:0000061 ! antibacterial agent therapy
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: MAXO:0000864 CHEBI:86324 ! therapeutic uses
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:26:50Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2121,10 +2121,11 @@ synonym: "treatment with a sulfonamide antibiotic agent" EXACT []
 synonym: "treatment with a sulfonamide antibiotic drug" EXACT []
 synonym: "treatment with a sulfonamide antibiotic medication" EXACT []
 synonym: "treatment with a sulfonamide antibiotic therapy" EXACT []
-synonym: "treatment with sulfonamide antibiotic" EXACT []
 xref: CHEBI:87228
 is_a: MAXO:0000061 ! antibacterial agent therapy
 is_a: MAXO:0000300 ! inflammatory bowel disease agent therapy
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: MAXO:0000864 CHEBI:87228 ! therapeutic uses
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:27:30Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2135,7 +2136,6 @@ def: "Treatment with a broad-spectrum polyketide antibiotic produced by the Stre
 synonym: "tetracycline antibiotic therapy" EXACT []
 synonym: "tetracycline drug therapy" EXACT []
 synonym: "tetracycline drug treatment" EXACT []
-synonym: "tetracycline therapy" EXACT []
 synonym: "treatment with a tetracycline antibacterial agent" EXACT []
 synonym: "treatment with a tetracycline antibacterial drug" EXACT []
 synonym: "treatment with a tetracycline antibacterial medication" EXACT []
@@ -2144,9 +2144,10 @@ synonym: "treatment with a tetracycline antibiotic agent" EXACT []
 synonym: "treatment with a tetracycline antibiotic drug" EXACT []
 synonym: "treatment with a tetracycline antibiotic medication" EXACT []
 synonym: "treatment with a tetracycline antibiotic therapy" EXACT []
-synonym: "treatment with tetracycline" EXACT []
 xref: CHEBI:27902
 is_a: MAXO:0000061 ! antibacterial agent therapy
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: MAXO:0000864 CHEBI:27902 ! therapeutic uses
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:28:05Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2338,15 +2339,15 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000220
 name: glucocorticoid agent therapy
 def: "Treatment with a class of steroid hormones that regulate a variety of physiological processes, in particular control of the concentration of glucose in blood." [CHEBI:24261]
-synonym: "glucocorticoid therapy" EXACT []
 synonym: "treatment with a glucocorticoid drug" EXACT []
 synonym: "treatment with a glucocorticoid medication" EXACT []
 synonym: "treatment with a glucocorticoid therapy" EXACT []
-synonym: "treatment with glucocorticoid" EXACT []
 xref: CHEBI:24261
 is_a: MAXO:0000300 ! inflammatory bowel disease agent therapy
 is_a: MAXO:0000634 ! anti-asthmatic agent therapy
 is_a: MAXO:0000640 ! corticosteroid agent therapy
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: MAXO:0000864 CHEBI:24261 ! therapeutic uses
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:44:08Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2354,12 +2355,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000221
 name: nonsteroidal anti-inflammatory agent therapy
 def: "Treatment with an anti-inflammatory drug that is not a steroid. In addition to anti-inflammatory actions, non-steroidal anti-inflammatory drugs have analgesic, antipyretic, and platelet-inhibitory actions. They act by blocking the synthesis of prostaglandins by inhibiting cyclooxygenase, which converts arachidonic acid to cyclic endoperoxides, precursors of prostaglandins." []
-synonym: "http://purl.obolibrary.org/obo/CHEBI_35475 therapy" EXACT []
 synonym: "non-steroidal anti-inflammatory drug therapy" EXACT []
 synonym: "non-steroidal anti-inflammatory medication treatment" EXACT []
 synonym: "NSAID therapy" EXACT ABBREVIATION []
 synonym: "NSAIDs therapy" EXACT ABBREVIATION []
-synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_35475" EXACT []
 synonym: "treatment with non-steroidal anti-inflammatory drug" EXACT []
 synonym: "treatment with non-steroidal anti-inflammatory medication" EXACT []
 synonym: "treatment with NSAID drug" EXACT []
@@ -3008,6 +3007,8 @@ synonym: "treatment with amphetamines" EXACT []
 xref: CHEBI:35338
 xref: NCIT:C62006
 is_a: MAXO:0000438 ! stimulant ADHD agent therapy
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: MAXO:0000864 CHEBI:35338 ! therapeutic uses
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:35:07Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -4614,7 +4615,6 @@ def: "Use of an organonitrogen heterocyclic antibiotic that contains a beta-lact
 synonym: "beta-lactam antibacterial drug therapy" EXACT []
 synonym: "beta-lactam antibacterial drug treatment" EXACT []
 synonym: "beta-lactam antibiotic agent therapy" EXACT []
-synonym: "beta-lactam antibiotic therapy" EXACT []
 synonym: "beta-lactams therapy" BROAD []
 synonym: "treatment with a beta-lactam antibacterial drug" EXACT []
 synonym: "treatment with a beta-lactam antibacterial medication" EXACT []
@@ -4623,9 +4623,10 @@ synonym: "treatment with a beta-lactam antibiotic agent" EXACT []
 synonym: "treatment with a beta-lactam antibiotic drug" EXACT []
 synonym: "treatment with a beta-lactam antibiotic medication" EXACT []
 synonym: "treatment with a beta-lactam antibiotic therapy" EXACT []
-synonym: "treatment with beta-lactam antibiotic" EXACT []
 xref: CHEBI:27933
 is_a: MAXO:0000061 ! antibacterial agent therapy
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: MAXO:0000864 CHEBI:27933 ! therapeutic uses
 property_value: http://purl.org/dc/elements/1.1/date 2019-08-29T18:00:40Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -6903,10 +6904,8 @@ id: MAXO:0000640
 name: corticosteroid agent therapy
 def: "Use of a natural or synthetic analog of the hormones secreted by the adrenal gland as a type of anti-inflammatory treatment." []
 synonym: "corticosteroid injection treatment" NARROW []
-synonym: "corticosteroid therapy" EXACT []
 synonym: "corticosteroid treatment" EXACT []
 synonym: "oral corticosteroid drug treatment" NARROW []
-synonym: "treatment with corticosteroid" EXACT []
 synonym: "treatment with corticosteroid agent" EXACT []
 synonym: "treatment with corticosteroid drug" EXACT []
 synonym: "treatment with corticosteroid medication" EXACT []

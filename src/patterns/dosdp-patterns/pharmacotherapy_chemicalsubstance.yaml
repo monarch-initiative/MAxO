@@ -9,7 +9,6 @@ contributors:
 classes:
   pharmacotherapy: MAXO:0000058
   chemical entity: CHEBI:24431
-  pharmacological role: CHEBI:52210
   
 relations:
   therapeutic_uses: MAXO:0000864
@@ -23,8 +22,7 @@ annotationProperties:
   xref: oio:hasDbXref
   
 vars:
-  chemical_entity: "'chemical entity'"
-  drug_role: "'pharmacological role'"
+  drug: "'chemical entity'"
 
 data_vars:
   date: "'date'"
@@ -36,16 +34,6 @@ data_list_vars:
   syns: xsd:string
 
 annotations:
-  - annotationProperty: exact_synonym
-    text: "%s therapy"
-    vars:
-     - drug_role
-     
-  - annotationProperty: exact_synonym
-    text: "treatment with %s" 
-    vars:
-     - drug_role
-     
   - annotationProperty: date
     text: "%s"
     vars:
@@ -70,6 +58,6 @@ exact_synonym:
   value: syns
   
 equivalentTo:
-  text:  "'pharmacotherapy' and ('therapeutic_uses' some ('chemical entity' and ('has_role' some %s)))"
+  text:  "'pharmacotherapy' and ('therapeutic_uses' some %s)"
   vars:
-    - drug_role
+    - drug
