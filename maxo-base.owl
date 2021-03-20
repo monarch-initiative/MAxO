@@ -15614,12 +15614,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000566"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
-                        <owl:someValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PR_000000001"/>
-                            </owl:Restriction>
-                        </owl:someValuesFrom>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PR_000000001"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -15631,7 +15626,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>NCIT:C64430</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protein assessment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protein test</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">protein assessment</rdfs:label>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protein measurement</rdfs:label>
     </owl:Class>
     
@@ -15646,17 +15640,11 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000566"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
-                        <owl:someValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PR_000050338"/>
-                            </owl:Restriction>
-                        </owl:someValuesFrom>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PR_000050338"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The determination of the amount of procalcitonin (human) present in the sample.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-04-07T21:30:45Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -15683,17 +15671,11 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000566"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
-                        <owl:someValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PR_000050369"/>
-                            </owl:Restriction>
-                        </owl:someValuesFrom>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PR_000050369"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The determination of the amount of D-dimer (human) present in the sample.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-04-07T21:37:45Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
@@ -20783,12 +20765,35 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000833 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000833">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000566"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PR_000028269"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000178"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000865"/>
-        <obo:IAO_0000115>Determination of thyroid stimulating hormone levels in the blood as an indicator of thyroid health.</obo:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T21:03:38Z</dc:date>
-        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The determination of the amount of thyroid stimulating hormone present in blood.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-16T21:03:38Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym>TSH level test</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">thyroid-stimulating hormone test</rdfs:label>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blood thyroid stimulating hormone test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thyroid stimulating hormone blood assessment</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thyroid-stimulating hormone test</rdfs:label>
     </owl:Class>
     
 
@@ -20796,7 +20801,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000834 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000834">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000865"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000787"/>
         <obo:IAO_0000115>Determination of thyroxine (T4) levels in the blood as an indicator of thyroid health.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T21:05:40Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -20810,7 +20815,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000835 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000835">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000865"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000787"/>
         <obo:IAO_0000115>Determination of triiodothyronine (T3) levels in blood as an indicator of thyroid health.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T21:05:52Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -20904,17 +20909,11 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000566"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
-                        <owl:someValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PR_000050341"/>
-                            </owl:Restriction>
-                        </owl:someValuesFrom>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PR_000050341"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The determination of the amount of alanine aminotransferase (human) present in the sample.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-16T21:34:21Z</dc:date>
@@ -20943,17 +20942,11 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000566"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
-                        <owl:someValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PR_000050353"/>
-                            </owl:Restriction>
-                        </owl:someValuesFrom>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PR_000050353"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The determination of the amount of aspartate aminotransferase (human) present in the sample.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-16T21:38:44Z</dc:date>
@@ -20965,7 +20958,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aspartate aminotransferase (human) test</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aspartate aminotransferase blood test</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>serum glutamic oxaloacetic transaminase test</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">aspartate aminotransferase blood test</rdfs:label>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aspartate aminotransferase measurement</rdfs:label>
     </owl:Class>
     
@@ -20980,17 +20972,11 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000566"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
-                        <owl:someValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PR_000001351"/>
-                            </owl:Restriction>
-                        </owl:someValuesFrom>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PR_000001351"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The determination of the amount of gamma-glutamyltranspeptidase present in the sample.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-16T21:42:40Z</dc:date>
@@ -21003,7 +20989,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gamma-glutamyltranspeptidase assessment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gamma-glutamyltranspeptidase test</oboInOwl:hasExactSynonym>
         <rdfs:comment>Determination of gamma-glutamyl transferase (GGT) present in the sample as a measurement of liver function.</rdfs:comment>
-        <rdfs:label xml:lang="en">gamma glutamyl transferase measurement</rdfs:label>
         <rdfs:label>gamma glutamyl transpeptidase measurement</rdfs:label>
     </owl:Class>
     
@@ -21018,17 +21003,11 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000566"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
-                        <owl:someValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PR_P02768"/>
-                            </owl:Restriction>
-                        </owl:someValuesFrom>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PR_P02768"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The determination of the amount of albumin (human) present in the sample.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-16T21:45:46Z</dc:date>
@@ -21055,17 +21034,11 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000566"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
-                        <owl:someValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PR_000023540"/>
-                            </owl:Restriction>
-                        </owl:someValuesFrom>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PR_000023540"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The determination of the amount of alkaline phosphatase present in the sample.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-16T21:50:44Z</dc:date>
@@ -21075,7 +21048,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>alk phos test</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alkaline phosphatase assessment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alkaline phosphatase test</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">alkaline phosphatase measurement</rdfs:label>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alkaline phosphatase measurement</rdfs:label>
     </owl:Class>
     
@@ -21126,37 +21098,22 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000566"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
-                        <owl:someValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PR_000001800"/>
-                            </owl:Restriction>
-                        </owl:someValuesFrom>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PR_000001800"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The determination of the amount of 5 prime nucleotidase present in a sample.</obo:IAO_0000115>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The determination of the amount of 5&apos;-nucleotidase present in the sample.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-17T15:01:15Z</dc:date>
-        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT:C79437</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCIT:C79437</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5 prime nucleotidase measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>5&apos;- nucleotidase measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5&apos;-nucleotidase assessment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5&apos;-nucleotidase test</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">5 prime nucleotidase measurement</rdfs:label>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5&apos;-nucleotidase measurement</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000847"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The determination of the amount of 5 prime nucleotidase present in a sample.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT:C79437</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -21203,15 +21160,38 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000851 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000851">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000566"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PR_000000001"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001088"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001161"/>
         <obo:IAO_0000115>A test to determine the amount or type of protein present in urine.</obo:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-17T15:25:01Z</dc:date>
-        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The determination of the amount of protein present in urine.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-17T15:25:01Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT:C74760</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protein urine assessment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>urine protein assessment</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urine protein test</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>urine protein testing</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">urine protein measurement</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protein measurement in urine</rdfs:label>
     </owl:Class>
     
 
@@ -21267,27 +21247,20 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000566"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
-                        <owl:someValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PR_000008725"/>
-                            </owl:Restriction>
-                        </owl:someValuesFrom>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PR_000008725"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The determination of the amount of haptoglobin present in the sample.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-17T17:02:35Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C74740</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>haptog measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">haptoglobin assessment</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">haptoglobin protein measurement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>haptoglobin protein measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">haptoglobin test</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">haptoglobin measurement</rdfs:label>
-        <rdfs:label xml:lang="en">haptoglobin protein measurement</rdfs:label>
     </owl:Class>
     
 
@@ -21313,7 +21286,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000856 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000856">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001174"/>
         <obo:IAO_0000115>Determination of serum levels of pregnancy-associated plasma protein A (PAPP-A). Maternal levels of PAPP-A increase throughout the pregnancy. Low levels during pregnancy are associated with Down syndrome and trisomy 18.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-17T20:59:28Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -21446,10 +21419,34 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000865 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000865">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000566"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PR_000000001"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000178"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000787"/>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-11T18:41:41Z</dc:date>
-        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <rdfs:label xml:lang="en">blood protein measurement</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The determination of the amount of protein present in blood.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-17T15:25:01Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blood protein test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protein blood assessment</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protein measurement in blood</rdfs:label>
     </owl:Class>
     
 
@@ -26201,12 +26198,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000566"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
-                        <owl:someValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PR_000050339"/>
-                            </owl:Restriction>
-                        </owl:someValuesFrom>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PR_000050339"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -26218,6 +26210,74 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">insulin hormone test</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">insulin level assessment</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">insulin measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001173 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001173">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000566"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PR_P02768"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001088"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The determination of the amount of albumin (human) present in urine.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-03-19T15:25:01Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">albumin (human) urine assessment</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urine albumin (human) test</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">albumin (human) measurement in urine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001174 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001174">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000566"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PR_000000001"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001977"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The determination of the amount of protein present in blood serum.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-03-19T15:25:01Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blood serum protein test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protein blood serum assessment</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">serum protein measurement</rdfs:label>
     </owl:Class>
     
 
@@ -31711,6 +31771,12 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PR_000028269 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PR_000028269"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PR_000050338 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PR_000050338"/>
@@ -32314,6 +32380,12 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/UBERON_0001970 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001970"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0001977 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001977"/>
     
 
 

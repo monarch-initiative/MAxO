@@ -6430,13 +6430,14 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000605
-name: protein assessment
 name: protein measurement
 def: "The determination of the amount of protein present in the sample." []
 synonym: "protein assessment" EXACT []
 synonym: "protein test" EXACT []
 xref: NCIT:C64430
 is_a: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 PR:000000001
 property_value: http://purl.org/dc/elements/1.1/date 2020-04-07T20:51:38Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -6451,7 +6452,8 @@ synonym: "procalcitonin level measurement" EXACT []
 synonym: "procalcitonin level testing" EXACT []
 synonym: "procalcitonin testing" EXACT []
 xref: NCIT:C103430
-is_a: MAXO:0000605 ! protein measurement
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 PR:000050338
 property_value: http://purl.org/dc/elements/1.1/date 2020-04-07T21:30:45Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -6467,7 +6469,8 @@ synonym: "D-dimer measurement" EXACT []
 synonym: "fibrin degradation fragment testing" EXACT []
 synonym: "fragment D-dimer testing" EXACT []
 xref: NCIT:C82621
-is_a: MAXO:0000605 ! protein measurement
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 PR:000050369
 property_value: http://purl.org/dc/elements/1.1/date 2020-04-07T21:37:45Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9116,10 +9119,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000833
 name: thyroid-stimulating hormone test
-def: "Determination of thyroid stimulating hormone levels in the blood as an indicator of thyroid health." []
+def: "The determination of the amount of thyroid stimulating hormone present in blood." []
+synonym: "blood thyroid stimulating hormone test" EXACT []
+synonym: "thyroid stimulating hormone blood assessment" EXACT []
 synonym: "TSH level test" EXACT []
-is_a: MAXO:0000865 ! blood protein measurement
-property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:03:38Z xsd:dateTime
+is_a: MAXO:0000865 ! protein measurement in blood
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:03:38Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -9128,7 +9133,7 @@ name: T4 thyroid hormone test
 def: "Determination of thyroxine (T4) levels in the blood as an indicator of thyroid health." []
 synonym: "T4 level test" EXACT []
 synonym: "thyroxine level test" EXACT []
-is_a: MAXO:0000865 ! blood protein measurement
+is_a: MAXO:0000787 ! blood chemistry measurement
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:05:40Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9138,7 +9143,7 @@ name: T3 thyroid hormone test
 def: "Determination of triiodothyronine (T3) levels in blood as an indicator of thyroid health." []
 synonym: "T3 level test" EXACT []
 synonym: "triiodothyronine level test" EXACT []
-is_a: MAXO:0000865 ! blood protein measurement
+is_a: MAXO:0000787 ! blood chemistry measurement
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:05:52Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9201,14 +9206,14 @@ synonym: "GPT test" EXACT []
 synonym: "serum glutamic-pyruvic transaminase test" EXACT []
 synonym: "SGPT test" EXACT []
 xref: NCIT:C64433
-is_a: MAXO:0000605 ! protein measurement
 is_a: MAXO:0000778 ! liver function testing
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 PR:000050341
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:34:21Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000841
-name: aspartate aminotransferase blood test
 name: aspartate aminotransferase measurement
 def: "The determination of the amount of aspartate aminotransferase (human) present in the sample." []
 synonym: "aspartate aminotransferase (human) assessment" EXACT []
@@ -9218,14 +9223,14 @@ synonym: "AST blood test" EXACT []
 synonym: "serum glutamic oxaloacetic transaminase test" EXACT []
 synonym: "SGOT test" EXACT []
 xref: NCIT:C64467
-is_a: MAXO:0000605 ! protein measurement
 is_a: MAXO:0000778 ! liver function testing
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 PR:000050353
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:38:44Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000842
-name: gamma glutamyl transferase measurement
 name: gamma glutamyl transpeptidase measurement
 def: "The determination of the amount of gamma-glutamyltranspeptidase present in the sample." []
 comment: Determination of gamma-glutamyl transferase (GGT) present in the sample as a measurement of liver function.
@@ -9236,8 +9241,9 @@ synonym: "gamma-GT test" EXACT []
 synonym: "GGT test" EXACT []
 synonym: "GTP test" EXACT []
 xref: NCIT:C64847
-is_a: MAXO:0000605 ! protein measurement
 is_a: MAXO:0000778 ! liver function testing
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 PR:000001351
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:42:40Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9252,8 +9258,9 @@ synonym: "albumin assessment" EXACT []
 synonym: "albumin level measurement" EXACT []
 synonym: "albumin test" EXACT []
 xref: NCIT:C64431
-is_a: MAXO:0000605 ! protein measurement
 is_a: MAXO:0000778 ! liver function testing
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 PR:P02768
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:45:46Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9266,8 +9273,9 @@ synonym: "alkaline phosphatase assessment" EXACT []
 synonym: "alkaline phosphatase test" EXACT []
 synonym: "ALP measurement" EXACT []
 xref: NCIT:C64432
-is_a: MAXO:0000605 ! protein measurement
 is_a: MAXO:0000778 ! liver function testing
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 PR:000023540
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:50:44Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9295,17 +9303,16 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000847
-name: 5 prime nucleotidase measurement
 name: 5'-nucleotidase measurement
-def: "The determination of the amount of 5 prime nucleotidase present in a sample." [NCIT:C79437]
 def: "The determination of the amount of 5'-nucleotidase present in the sample." []
 synonym: "5 prime nucleotidase measurement" EXACT []
 synonym: "5'- nucleotidase measurement" EXACT []
 synonym: "5'-nucleotidase assessment" EXACT []
 synonym: "5'-nucleotidase test" EXACT []
 xref: NCIT:C79437
-is_a: MAXO:0000605 ! protein measurement
 is_a: MAXO:0000778 ! liver function testing
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 PR:000001800
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:01:15Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9339,14 +9346,16 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000851
-name: urine protein measurement
+name: protein measurement in urine
 def: "A test to determine the amount or type of protein present in urine." []
+def: "The determination of the amount of protein present in urine." []
+synonym: "protein urine assessment" EXACT []
 synonym: "urine protein assessment" EXACT []
+synonym: "urine protein test" EXACT []
 synonym: "urine protein testing" EXACT []
 xref: NCIT:C74760
 is_a: MAXO:0000605 ! protein measurement
-is_a: MAXO:0001161 ! urine specimen collection
-property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:25:01Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:25:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -9357,7 +9366,7 @@ synonym: "24 hour urine for total protein" EXACT []
 synonym: "24-hour urine protein test" EXACT []
 xref: NCIT:C135567
 is_a: MAXO:0000850 ! total protein measurement
-is_a: MAXO:0000851 ! urine protein measurement
+is_a: MAXO:0000851 ! protein measurement in urine
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T16:13:50Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9374,14 +9383,14 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000854
 name: haptoglobin measurement
-name: haptoglobin protein measurement
 def: "The determination of the amount of haptoglobin present in the sample." []
 synonym: "haptog measurement" EXACT []
 synonym: "haptoglobin assessment" EXACT []
 synonym: "haptoglobin protein measurement" EXACT []
 synonym: "haptoglobin test" EXACT []
 xref: NCIT:C74740
-is_a: MAXO:0000605 ! protein measurement
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 PR:000008725
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T17:02:35Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9404,7 +9413,7 @@ id: MAXO:0000856
 name: serum PAPP-A measurement
 def: "Determination of serum levels of pregnancy-associated plasma protein A (PAPP-A). Maternal levels of PAPP-A increase throughout the pregnancy. Low levels during pregnancy are associated with Down syndrome and trisomy 18." []
 synonym: "pregnancy-associated plasma protein A test" EXACT []
-is_a: MAXO:0000605 ! protein measurement
+is_a: MAXO:0001174 ! serum protein measurement
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T20:59:28Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9470,9 +9479,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000865
-name: blood protein measurement
+name: protein measurement in blood
+def: "The determination of the amount of protein present in blood." []
+synonym: "blood protein test" EXACT []
+synonym: "protein blood assessment" EXACT []
 is_a: MAXO:0000787 ! blood chemistry measurement
-property_value: http://purl.org/dc/elements/1.1/date 2021-03-11T18:41:41Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:25:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -11140,7 +11152,27 @@ def: "The determination of the amount of insulin hormone present in the sample."
 synonym: "insulin hormone assessment" EXACT []
 synonym: "insulin hormone test" EXACT []
 synonym: "insulin level assessment" EXACT []
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 PR:000050339
 property_value: http://purl.org/dc/elements/1.1/date 2021-03-19T21:42:40Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001173
+name: albumin (human) measurement in urine
+def: "The determination of the amount of albumin (human) present in urine." []
+synonym: "albumin (human) urine assessment" EXACT []
+synonym: "urine albumin (human) test" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2021-03-19T15:25:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001174
+name: serum protein measurement
+def: "The determination of the amount of protein present in blood serum." []
+synonym: "blood serum protein test" EXACT []
+synonym: "protein blood serum assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2021-03-19T15:25:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
