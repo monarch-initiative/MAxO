@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2021-03-19/maxo-base.owl
+data-version: maxo/releases/2021-03-22/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Aaron Zhang" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
@@ -8,7 +8,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2021-03-19" xsd:string
+property_value: owl:versionInfo "2021-03-22" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -858,24 +858,24 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000108
 name: iron supplementation
-def: "Addition of iron atom to a the diet for complete nutrition support." []
+def: "Addition of iron atomiron to a the diet for complete nutrition support." []
 comment: Oral iron supplementation is an effective and well‐studied option to replenish iron stores. {xref="PMID:28328083"}
-synonym: "dietary supplementation of iron atom" EXACT []
-synonym: "iron atom supplemental intake" EXACT []
+synonym: "dietary supplementation of iron atomiron" EXACT []
+synonym: "iron atomiron supplemental intake" EXACT []
 synonym: "iron replacement therapy" NARROW []
 synonym: "oral iron supplementation" EXACT []
-synonym: "supplementation of iron atom" EXACT []
+synonym: "supplementation of iron atomiron" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:09:25Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000109
-name: vitamin C supplementation
-def: "Addition of vitamin C to the diet for adequate and complete nutrition." []
-comment: vitamin C
-synonym: "dietary supplementation of vitamin C" EXACT []
-synonym: "supplementation of vitamin C" EXACT []
-synonym: "vitamin C supplemental intake" EXACT []
+name: obsolete: vitamin C supplementation
+def: "Addition of obsolete: vitamin C to the diet for adequate and complete nutrition." []
+comment: obsolete: vitamin C
+synonym: "dietary supplementation of obsolete: vitamin C" EXACT []
+synonym: "obsolete: vitamin C supplemental intake" EXACT []
+synonym: "supplementation of obsolete: vitamin C" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:09:48Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -8457,12 +8457,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000761
-name: vitamin B supplementation
-def: "Addition of vitamin B to the diet for adequate and complete nutrition." []
-comment: vitamin B
-synonym: "dietary supplementation of vitamin B" EXACT []
-synonym: "supplementation of vitamin B" EXACT []
-synonym: "vitamin B supplemental intake" EXACT []
+name: obsolete: vitamin B supplementation
+def: "Addition of obsolete: vitamin B to the diet for adequate and complete nutrition." []
+comment: obsolete: vitamin B
+synonym: "dietary supplementation of obsolete: vitamin B" EXACT []
+synonym: "obsolete: vitamin B supplemental intake" EXACT []
+synonym: "supplementation of obsolete: vitamin B" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -8677,6 +8677,7 @@ synonym: "urine HCG pregancy test" EXACT []
 synonym: "urine HCG pregnancy measurement" EXACT []
 synonym: "urine human chorionic gonadotropin measurement" EXACT []
 is_a: MAXO:0000784 ! HCG measurement
+is_a: MAXO:0000789 ! urine chemistry measurement
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-09T20:24:57Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9346,7 +9347,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000851
-name: protein measurement in urine
+name: urine protein measurement
 def: "A test to determine the amount or type of protein present in urine." []
 def: "The determination of the amount of protein present in urine." []
 synonym: "protein urine assessment" EXACT []
@@ -9366,7 +9367,7 @@ synonym: "24 hour urine for total protein" EXACT []
 synonym: "24-hour urine protein test" EXACT []
 xref: NCIT:C135567
 is_a: MAXO:0000850 ! total protein measurement
-is_a: MAXO:0000851 ! protein measurement in urine
+is_a: MAXO:0000851 ! urine protein measurement
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T16:13:50Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9377,6 +9378,7 @@ def: "A quantitative measurement of the total amount of protein present in a sam
 xref: NCIT:C61033
 is_a: MAXO:0000788 ! serum chemistry measurement
 is_a: MAXO:0000850 ! total protein measurement
+is_a: MAXO:0001174 ! serum protein measurement
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T16:23:27Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -10632,12 +10634,12 @@ created_by: http://orcid.org/0000-0001-7941-3010
 [Term]
 id: MAXO:0001123
 name: potassium supplementation
-def: "Addition of potassium atom to a the diet for complete nutrition support." []
+def: "Addition of potassiumpotassium atom to a the diet for complete nutrition support." []
 synonym: "dietary supplementation of potassium" EXACT []
-synonym: "dietary supplementation of potassium atom" EXACT []
-synonym: "potassium atom supplemental intake" EXACT []
+synonym: "dietary supplementation of potassiumpotassium atom" EXACT []
+synonym: "potassiumpotassium atom supplemental intake" EXACT []
 synonym: "supplementation of potassium" EXACT []
-synonym: "supplementation of potassium atom" EXACT []
+synonym: "supplementation of potassiumpotassium atom" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-17T02:36:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -10685,11 +10687,11 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001128
-name: folic acid supplementation
-def: "Addition of folic acid to a the diet for complete nutrition support." []
-synonym: "dietary supplementation of folic acid" EXACT []
-synonym: "folic acid supplemental intake" EXACT []
-synonym: "supplementation of folic acid" EXACT []
+name: folic acidb9 folate supplementation
+def: "Addition of folic acidb9 folate to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of folic acidb9 folate" EXACT []
+synonym: "folic acidb9 folate supplemental intake" EXACT []
+synonym: "supplementation of folic acidb9 folate" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -10707,22 +10709,22 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001130
-name: nicotinic acid supplementation
-def: "Addition of nicotinic acid to a the diet for complete nutrition support." []
-synonym: "dietary supplementation of nicotinic acid" EXACT []
+name: nicotinic acidniacin (b3) supplementation
+def: "Addition of nicotinic acidniacin (b3) to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of nicotinic acidniacin (b3)" EXACT []
 synonym: "niacin supplementation" EXACT []
-synonym: "nicotinic acid supplemental intake" EXACT []
-synonym: "supplementation of nicotinic acid" EXACT []
+synonym: "nicotinic acidniacin (b3) supplemental intake" EXACT []
+synonym: "supplementation of nicotinic acidniacin (b3)" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001131
-name: pyridoxine supplementation
-def: "Addition of pyridoxine to a the diet for complete nutrition support." []
-synonym: "dietary supplementation of pyridoxine" EXACT []
-synonym: "pyridoxine supplemental intake" EXACT []
-synonym: "supplementation of pyridoxine" EXACT []
+name: pyridoxine (b6)pyridoxine supplementation
+def: "Addition of pyridoxine (b6)pyridoxine to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of pyridoxine (b6)pyridoxine" EXACT []
+synonym: "pyridoxine (b6)pyridoxine supplemental intake" EXACT []
+synonym: "supplementation of pyridoxine (b6)pyridoxine" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -10753,13 +10755,13 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001135
-name: fat-soluble vitamin supplementation
-def: "Addition of fat-soluble vitamin to a the diet for complete nutrition support." []
-synonym: "dietary supplementation of fat-soluble vitamin" EXACT []
+name: fat-soluble vitaminfat soluble vitamin supplementation
+def: "Addition of fat-soluble vitaminfat soluble vitamin to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of fat-soluble vitaminfat soluble vitamin" EXACT []
 synonym: "essential fat soluble vitamin supplementation" EXACT []
-synonym: "fat-soluble vitamin supplemental intake" EXACT []
+synonym: "fat-soluble vitaminfat soluble vitamin supplemental intake" EXACT []
 synonym: "supplementation of essential fat soluble vitamin" EXACT []
-synonym: "supplementation of fat-soluble vitamin" EXACT []
+synonym: "supplementation of fat-soluble vitaminfat soluble vitamin" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -10797,10 +10799,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001139
 name: calcium supplementation
-def: "Addition of calcium atom to a the diet for complete nutrition support." []
-synonym: "calcium atom supplemental intake" EXACT []
-synonym: "dietary supplementation of calcium atom" EXACT []
-synonym: "supplementation of calcium atom" EXACT []
+def: "Addition of calcium atomcalcium to a the diet for complete nutrition support." []
+synonym: "calcium atomcalcium supplemental intake" EXACT []
+synonym: "dietary supplementation of calcium atomcalcium" EXACT []
+synonym: "supplementation of calcium atomcalcium" EXACT []
 synonym: "supplementation with calcium" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -10839,12 +10841,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001143
-name: omega-3 fatty acid supplementation
-def: "Addition of omega-3 fatty acid to a the diet for complete nutrition support." []
-synonym: "dietary supplementation of omega-3 fatty acid" EXACT []
+name: omega-3-fatty acidomega-3 fatty acid supplementation
+def: "Addition of omega-3-fatty acidomega-3 fatty acid to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of omega-3-fatty acidomega-3 fatty acid" EXACT []
 synonym: "eicosapentaenoic acid supplementation" EXACT []
-synonym: "omega-3 fatty acid supplemental intake" EXACT []
-synonym: "supplementation of omega-3 fatty acid" EXACT []
+synonym: "omega-3-fatty acidomega-3 fatty acid supplemental intake" EXACT []
+synonym: "supplementation of omega-3-fatty acidomega-3 fatty acid" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -10904,12 +10906,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001149
 name: magnesium supplementation
-def: "Addition of magnesium atom to a the diet for complete nutrition support." []
-synonym: "dietary supplementation of magnesium atom" EXACT []
-synonym: "magnesium atom supplemental intake" EXACT []
+def: "Addition of magnesiummagnesium atom to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of magnesiummagnesium atom" EXACT []
 synonym: "magnesium supplemental intake" EXACT []
+synonym: "magnesiummagnesium atom supplemental intake" EXACT []
 synonym: "supplementation of magnesium" EXACT []
-synonym: "supplementation of magnesium atom" EXACT []
+synonym: "supplementation of magnesiummagnesium atom" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-30T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -11159,7 +11161,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001173
-name: albumin (human) measurement in urine
+name: urine albumin measurement
 def: "The determination of the amount of albumin (human) present in urine." []
 synonym: "albumin (human) urine assessment" EXACT []
 synonym: "urine albumin (human) test" EXACT []
@@ -11447,11 +11449,11 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010016
-name: riboflavin supplementation
-def: "Addition of riboflavin to a the diet for complete nutrition support." []
-synonym: "dietary supplementation of riboflavin" EXACT []
-synonym: "riboflavin supplemental intake" EXACT []
-synonym: "supplementation of riboflavin" EXACT []
+name: riboflavinriboflavin (b2) supplementation
+def: "Addition of riboflavinriboflavin (b2) to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of riboflavinriboflavin (b2)" EXACT []
+synonym: "riboflavinriboflavin (b2) supplemental intake" EXACT []
+synonym: "supplementation of riboflavinriboflavin (b2)" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -11477,11 +11479,11 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010019
-name: thiamine supplementation
-def: "Addition of thiamine to a the diet for complete nutrition support." []
-synonym: "dietary supplementation of thiamine" EXACT []
-synonym: "supplementation of thiamine" EXACT []
-synonym: "thiamine supplemental intake" EXACT []
+name: thiamine (b1)thiamine supplementation
+def: "Addition of thiamine (b1)thiamine to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of thiamine (b1)thiamine" EXACT []
+synonym: "supplementation of thiamine (b1)thiamine" EXACT []
+synonym: "thiamine (b1)thiamine supplemental intake" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -11570,10 +11572,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0010028
 name: cyanocobalamin supplementation
-def: "Addition of cyanocob(III)alamin to a the diet for complete nutrition support." []
-synonym: "cyanocob(III)alamin supplemental intake" EXACT []
-synonym: "dietary supplementation of cyanocob(III)alamin" EXACT []
-synonym: "supplementation of cyanocob(III)alamin" EXACT []
+def: "Addition of cyanocob(III)alamincyanocobalamin (b12) to a the diet for complete nutrition support." []
+synonym: "cyanocob(III)alamincyanocobalamin (b12) supplemental intake" EXACT []
+synonym: "dietary supplementation of cyanocob(III)alamincyanocobalamin (b12)" EXACT []
+synonym: "supplementation of cyanocob(III)alamincyanocobalamin (b12)" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -12297,12 +12299,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0010096
 name: dietary sodium intake avoidance
-def: "A medical requirement or recommendation of avoiding the consumption of sodium atom." []
-synonym: "avoid sodium atom intake" EXACT []
-synonym: "avoiding dietary sodium atom intake" EXACT []
-synonym: "sodium atom consumption avoidance" EXACT []
-synonym: "sodium atom restricted diet intake" EXACT []
-synonym: "sodium atom restriction" EXACT []
+def: "A medical requirement or recommendation of avoiding the consumption of sodium atomsodium." []
+synonym: "avoid sodium atomsodium intake" EXACT []
+synonym: "avoiding dietary sodium atomsodium intake" EXACT []
+synonym: "sodium atomsodium consumption avoidance" EXACT []
+synonym: "sodium atomsodium restricted diet intake" EXACT []
+synonym: "sodium atomsodium restriction" EXACT []
 synonym: "sodium restriction" EXACT []
 intersection_of: MAXO:0000056 ! nutrition intake avoidance
 intersection_of: MAXO:0001027 CHEBI:26708 ! avoided food
@@ -12345,15 +12347,15 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0010100
 name: dietary iron intake avoidance
-def: "A medical requirement or recommendation of avoiding the consumption of iron atom." []
-synonym: "avoid iron atom intake" EXACT []
-synonym: "avoiding dietary iron atom intake" EXACT []
+def: "A medical requirement or recommendation of avoiding the consumption of iron atomiron." []
+synonym: "avoid iron atomiron intake" EXACT []
+synonym: "avoiding dietary iron atomiron intake" EXACT []
 synonym: "dietary iron restriction" EXACT []
 synonym: "dietary iron supplementation avoidance" EXACT []
 synonym: "excessive iron consumption avoidance" EXACT []
-synonym: "iron atom consumption avoidance" EXACT []
-synonym: "iron atom restricted diet intake" EXACT []
-synonym: "iron atom restriction" EXACT []
+synonym: "iron atomiron consumption avoidance" EXACT []
+synonym: "iron atomiron restricted diet intake" EXACT []
+synonym: "iron atomiron restriction" EXACT []
 intersection_of: MAXO:0000056 ! nutrition intake avoidance
 intersection_of: MAXO:0001027 CHEBI:18248 ! avoided food
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
@@ -12565,12 +12567,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0010115
 name: dietary calcium avoidance
-def: "A medical requirement or recommendation of avoiding the consumption of calcium atom." []
-synonym: "avoid calcium atom intake" EXACT []
-synonym: "avoiding dietary calcium atom intake" EXACT []
-synonym: "calcium atom consumption avoidance" EXACT []
-synonym: "calcium atom restricted diet intake" EXACT []
-synonym: "calcium atom restriction" EXACT []
+def: "A medical requirement or recommendation of avoiding the consumption of calcium atomcalcium." []
+synonym: "avoid calcium atomcalcium intake" EXACT []
+synonym: "avoiding dietary calcium atomcalcium intake" EXACT []
+synonym: "calcium atomcalcium consumption avoidance" EXACT []
+synonym: "calcium atomcalcium restricted diet intake" EXACT []
+synonym: "calcium atomcalcium restriction" EXACT []
 intersection_of: MAXO:0000056 ! nutrition intake avoidance
 intersection_of: MAXO:0001027 CHEBI:22984 ! avoided food
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
@@ -12606,14 +12608,14 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010118
-name: dietary riboflavin intake avoidance
-def: "A medical requirement or recommendation of avoiding the consumption of riboflavin." []
-synonym: "avoid riboflavin intake" EXACT []
-synonym: "avoiding dietary riboflavin intake" EXACT []
+name: dietary riboflavinriboflavin (b2) intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of riboflavinriboflavin (b2)." []
+synonym: "avoid riboflavinriboflavin (b2) intake" EXACT []
+synonym: "avoiding dietary riboflavinriboflavin (b2) intake" EXACT []
 synonym: "B12 restriction" EXACT []
-synonym: "riboflavin consumption avoidance" EXACT []
-synonym: "riboflavin restricted diet intake" EXACT []
-synonym: "riboflavin restriction" EXACT []
+synonym: "riboflavinriboflavin (b2) consumption avoidance" EXACT []
+synonym: "riboflavinriboflavin (b2) restricted diet intake" EXACT []
+synonym: "riboflavinriboflavin (b2) restriction" EXACT []
 synonym: "vitamin B12 intake avoidance" EXACT []
 intersection_of: MAXO:0000056 ! nutrition intake avoidance
 intersection_of: MAXO:0001027 CHEBI:17015 ! avoided food
