@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2021-03-17/maxo-base.owl
+data-version: maxo/releases/2021-03-22/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Aaron Zhang" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
@@ -8,7 +8,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2021-03-17" xsd:string
+property_value: owl:versionInfo "2021-03-22" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -84,7 +84,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000006
 name: clinical laboratory procedure
-def: "Any procedure that involves testing or manipulating a sample of blood, urine, or other body substance in a laboratory setting for diagnosis, treatment, or therapy." [http://orcid.org/0000-0001-7941-2961, NCIT_C25294]
+def: "Any procedure that involves testing or manipulating a sample of blood, urine, or other body substance in a laboratory setting for diagnosis, treatment, or therapy." []
 synonym: "clinical lab testing" EXACT []
 synonym: "clinical laboratory testing" EXACT []
 synonym: "clinical testing" EXACT []
@@ -487,6 +487,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000065
 name: aerobic exercise therapy
 def: "A medical recommendation of sustained exercise that places an increased oxygen demand on the cardiovascular system and promotes an increased efficiency of the body's use of oxygen." [http://orcid.org/0000-0001-7941-2961, NCIT:C39774]
+def: "Sustained exercise that places an increased oxygen demand on the cardiovascular system and promotes an increased efficiency of the body's use of oxygen." [NCIT:C39774]
 synonym: "aerobic activity" EXACT []
 synonym: "aerobic exercise" EXACT []
 xref: NCIT:C39774
@@ -647,7 +648,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000081
 name: tobacco cessation counseling
-def: "A process by which a health professional provides education, recommendations, or interventions to help clients stop using tobacco products." [NCIT:C101244]
+def: "A process by which a health professional provides education, recommendations, or interventions to help clients stop using tobacco products. (ACC)" [NCIT:C101244]
 synonym: "smoking cessation" NARROW [http://orcid.org/0000-0001-7941-2961]
 synonym: "smoking cessation counseling" EXACT []
 xref: NCIT:C101244
@@ -667,7 +668,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000084
 name: meditation therapy
-def: "Continuous and profound contemplation or musing on a subject or series of subjects of a deep or abstruse nature; contemplation of spiritual matters." [NCIT:C51975]
+def: "Continuous and profound contemplation or musing on a subject or series of subjects of a deep or abstruse nature; contemplation of spiritual matters" [NCIT:C51975]
 xref: NCIT:C51975
 xref: SCDO:0000741
 is_a: MAXO:0000013 ! complementary and alternative medical therapy
@@ -698,7 +699,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000087
 name: massage therapy
-def: "A therapeutic method of manipulation, methodical pressure, friction, and kneading of the body." [NCIT:C15276]
+def: "A therapeutic method of manipulation, methodical pressure, friction, and kneading of the body. (from Taber's)" [NCIT:C15276]
 synonym: "massage" EXACT []
 synonym: "massage and body work" EXACT []
 xref: NCIT:C15276
@@ -857,24 +858,24 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000108
 name: iron supplementation
-def: "Addition of iron atom to a the diet for complete nutrition support." []
+def: "Addition of iron atomiron to a the diet for complete nutrition support." []
 comment: Oral iron supplementation is an effective and well‐studied option to replenish iron stores. {xref="PMID:28328083"}
-synonym: "dietary supplementation of iron atom" EXACT []
-synonym: "iron atom supplemental intake" EXACT []
+synonym: "dietary supplementation of iron atomiron" EXACT []
+synonym: "iron atomiron supplemental intake" EXACT []
 synonym: "iron replacement therapy" NARROW []
 synonym: "oral iron supplementation" EXACT []
-synonym: "supplementation of iron atom" EXACT []
+synonym: "supplementation of iron atomiron" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:09:25Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000109
-name: vitamin C supplementation
-def: "Addition of vitamin C to the diet for adequate and complete nutrition." []
-comment: vitamin C
-synonym: "dietary supplementation of vitamin C" EXACT []
-synonym: "supplementation of vitamin C" EXACT []
-synonym: "vitamin C supplemental intake" EXACT []
+name: obsolete: vitamin C supplementation
+def: "Addition of obsolete: vitamin C to the diet for adequate and complete nutrition." []
+comment: obsolete: vitamin C
+synonym: "dietary supplementation of obsolete: vitamin C" EXACT []
+synonym: "obsolete: vitamin C supplemental intake" EXACT []
+synonym: "supplementation of obsolete: vitamin C" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:09:48Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1162,7 +1163,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000141
 name: pap smear examination
-def: "The collecting of secretions and superficial cells of the body of uterus, cervix, and ovaries; examined with a microscope to detect any abnormal cells." [NCIT:C17348]
+def: "A biospecimen collection and staining procedure in which secretions and superficial cells of the cervix are collected and stained with the Papanicolaou stain followed by microscopic examination to identify the presence of abnormal cells." [NCIT:C17348]
 synonym: "cervical cancer screening" RELATED []
 synonym: "cervical smear procedure" EXACT [NCIT:C17348]
 synonym: "pap testing" EXACT [NCIT:C17348]
@@ -1176,7 +1177,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000142
 name: sputum cytology examination
-def: "Examination under a microscope of cells found in sputum (mucus and other matter brought up from the lungs by coughing). The test checks for abnormal cells, such as lung cancer cells." [NCIT:C16192]
+def: "A diagnostic technique for lung cancer detection.  Looks for abnormal cell cytology in sputum." [NCIT:C16192]
 synonym: "sputum cytology testing" EXACT []
 synonym: "sputum smear examination" EXACT []
 synonym: "sputum smear testing" EXACT []
@@ -1198,6 +1199,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000144
 name: histological procedure
 def: "Technique or procedure used for the study of the microanatomy of tissues and their cellular structure for the diagnosis or treatment of a disease." [http://orcid.org/0000-0001-7941-2961, NCIT:C16680]
+def: "Technique or procedure used for the study of the microanatomy of tissues and their cellular structure; usually involves microscopic examination of tissue slices." [NCIT:C16680]
 synonym: "histological testing" EXACT []
 xref: NCIT:C16680
 is_a: MAXO:0000006 ! clinical laboratory procedure
@@ -1211,7 +1213,7 @@ name: obsolete clinical pathology procedure
 [Term]
 id: MAXO:0000146
 name: clinical cell count
-def: "A procedure to determine the number of cells in a clinical sample." [http://orcid.org/0000-0001-7941-2961, NCIT:C48938]
+def: "A procedure to determine the number of cells in a clinical sample." [NCIT:C48938]
 synonym: "cell count" EXACT []
 synonym: "clinical pathology cell count" NARROW []
 xref: NCIT:C48938
@@ -1401,7 +1403,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000164
 name: uricosuric agent therapy
-def: "Substance that may reduce inflammation, stimulate elimination of uric acid, or increase production of uric acid." [NCIT:C29733]
+def: "Pharmaceutical Anti-gout Preparations such as colchicine, allopurinol, probenecid, and sulfinpyrazone contain natural or synthetic agents against gout, a condition characterized by increased uric acid accumulation. Anti-gout agents may reduce inflammation, stimulate elimination of uric acid, or increase production of uric acid. (NCI04)" [NCIT:C29733]
 synonym: "anti-gout agent therapy" EXACT []
 synonym: "anti-gout combination medicine therapy" EXACT []
 synonym: "anti-gout drug therapy" EXACT []
@@ -3554,7 +3556,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000312
 name: respiratory tract agent therapy
-def: "Use of an agent that exerts a physiologic effect on any anatomic entity that is part of the respiratory tract and airways." [NCIT:C78273]
+def: "An agent that exerts a physiologic effect on any anatomic entity that is part of the respiratory tract and airways." [NCIT:C78273]
 synonym: "agent affecting respiratory system treatment" EXACT []
 synonym: "respiratory tract agent treatment" EXACT []
 synonym: "respiratory tract drug treatment therapy" EXACT []
@@ -4701,7 +4703,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000439
 name: selective serotonin reuptake inhibitor agent therapy
-def: "Treatment with a medication that increases the extracellular level of the neurotransmitter serotonin (5-HT) by inhibiting its reuptake into the presynaptic cell." [NCIT:C94725]
+def: "Any agent that increases the extracellular level of the neurotransmitter serotonin (5-HT) by inhibiting its reuptake into the presynaptic cell. Increased level in the synaptic cleft prolongs the action of 5-HT on the postsynaptic receptor. This type of agent is typically used as an antidepressant and in the treatment of anxiety disorders and some personality disorders. They are also typically effective and used in treating some cases of insomnia." [NCIT:C94725]
 comment: Any agent that increases the extracellular level of the neurotransmitter serotonin (5-HT) by inhibiting its reuptake into the presynaptic cell. Increased level in the synaptic cleft prolongs the action of 5-HT on the postsynaptic receptor. This type of agent is typically used as an antidepressant and in the treatment of anxiety disorders and some personality disorders. They are also typically effective and used in treating some cases of insomnia. {xref="NCIT:C94725"}
 synonym: "selective serotonin reuptake inhibitor drug therapy" EXACT []
 synonym: "selective serotonin reuptake inhibitor drug treatment" EXACT []
@@ -4723,7 +4725,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000440
 name: colony stimulating factor agent therapy
-def: "Treatment with colony-stimulating factors (CSF) can help the blood-forming tissue recover from the effects of chemotherapy and radiation therapy. These factors include interleukin-3 (IL-3), granulocyte colony-stimulating factor (G-CSF), macrophage colony-stimulating factor (M-CSF), and granulocyte-macrophage colony-stimulating factor (GM-CSF)." [NCIT:C387]
+def: "Glycoprotein growth factors produced by monocytes, macrophages, or activated lymphocytes that stimulate the proliferation of bone marrow cells and differentiation of stem cells into colonies of granulocytes, monocytes, or macrophages.  These substances act in either paracrine or autocrine fashion on marrow cells, appear to act synergistically in complex and poorly understood ways.  Each appears to exert actions on several lines of progenitor cells and to influence end cell function.  Treatment with colony-stimulating factors (CSF) can help the blood-forming tissue recover from the effects of chemotherapy and radiation therapy.  These factors include interleukin-3 (IL-3), granulocyte colony-stimulating factor (G-CSF), macrophage colony-stimulating factor (M-CSF), and granulocyte-macrophage colony-stimulating factor (GM-CSF)." [NCIT:C387]
 synonym: "CSF agent therapy" EXACT ABBREVIATION []
 synonym: "recombinant colony stimulating factor drug therapy" EXACT []
 synonym: "recombinant colony-stimulating factor treatment" EXACT []
@@ -4954,7 +4956,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000460
 name: therapeutic irrigation
-def: "Washing out a hollow organ by flushing with a fluid." [NCIT:C38068]
+def: "Washing out a hollow organ (especially the stomach) by flushing with a fluid." [NCIT:C38068]
 synonym: "lavage" EXACT []
 xref: NCIT:C38068
 xref: OMIT:0008013
@@ -5604,6 +5606,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000526
 name: medical examination
+def: "An appraisal or evaluation of a patient's condition by a clinician that is based on a physical exam, medical history, and the patient's account of symptoms." [NCIT:C25305]
 def: "An appraisal or evaluation of a patient's condition by a clinician that is based on a physical exam, medical history, and the patient's account of symptoms." [NCIT:C25305, PMID:19567008]
 synonym: "clinical examination" EXACT []
 xref: NCIT:C25305
@@ -6401,7 +6404,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000602
 name: hemodialysis
-def: "A therapeutic procedure used in patients with kidney failure. It involves the extracorporeal removal of harmful wastes and fluids from the blood using a dialysis machine. Following the dialysis, the blood is returned to the body." [NCIT:C15248]
+def: "A therapeutic procedure used in patients with kidney failure.  It involves the extracorporeal removal of harmful wastes and fluids from the blood using a dialysis machine.  Following the dialysis, the blood is returned to the body." [NCIT:C15248]
 xref: NCIT:C15248
 is_a: MAXO:0000601 ! renal dialysis
 property_value: http://purl.org/dc/elements/1.1/date 2020-04-07T20:03:50Z xsd:dateTime
@@ -6410,7 +6413,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000603
 name: peritoneal dialysis
-def: "A form of dialysis that uses the peritoneum as a membrane across which the infused dialysate exchanges nutrients for waste products that are removed when the fluid is exchanged." [NCIT:C15297]
+def: "A form of dialysis that uses the peritoneum as a membrane across which the infused diasylate exchanges nutrients for waste products that are removed when the fluid is exchanged." [NCIT:C15297]
 xref: NCIT:C15297
 is_a: MAXO:0000601 ! renal dialysis
 property_value: http://purl.org/dc/elements/1.1/date 2020-04-07T20:04:03Z xsd:dateTime
@@ -6427,39 +6430,48 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000605
-name: protein assessment
-def: "A term that refers to a chemistry test measuring a specific protein or enzyme in the peripheral blood or body fluid." [NCIT:C64430]
-synonym: "enzyme measurement" NARROW []
-synonym: "protein measurement" EXACT []
+name: protein measurement
+def: "The determination of the amount of protein present in the sample." []
+synonym: "protein assessment" EXACT []
+synonym: "protein test" EXACT []
 xref: NCIT:C64430
 is_a: MAXO:0000566 ! clinical chemistry assessment
-property_value: http://purl.org/dc/elements/1.1/date 2020-04-07T20:51:38Z xsd:dateTime
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 PR:000000001
+property_value: http://purl.org/dc/elements/1.1/date 2020-04-07T20:51:38Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000606
 name: procalcitonin assessment
-def: "The determination of the amount of the procalcitonin in a sample." [NCIT:C103430]
+def: "The determination of the amount of procalcitonin (human) present in the sample." []
 comment: A substance produced in response to bacterial infections and tissue injury.
+synonym: "procalcitonin (human) assessment" EXACT []
+synonym: "procalcitonin (human) test" EXACT []
 synonym: "procalcitonin level measurement" EXACT []
 synonym: "procalcitonin level testing" EXACT []
 synonym: "procalcitonin testing" EXACT []
 xref: NCIT:C103430
-is_a: MAXO:0000605 ! protein assessment
-property_value: http://purl.org/dc/elements/1.1/date 2020-04-07T21:30:45Z xsd:dateTime
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 PR:000050338
+property_value: http://purl.org/dc/elements/1.1/date 2020-04-07T21:30:45Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000607
 name: D-dimer assessment
-def: "A quantification of a fibrin degradation product in blood used in the diagnosis of thrombosis." []
+def: "The determination of the amount of D-dimer (human) present in the sample." []
+comment: A quantification of a fibrin degradation product in blood used in the diagnosis of thrombosis.
 synonym: "D dimer level testing" EXACT []
+synonym: "D-dimer (human) assessment" EXACT []
+synonym: "D-dimer (human) test" EXACT []
 synonym: "D-dimer measurement" EXACT []
 synonym: "fibrin degradation fragment testing" EXACT []
 synonym: "fragment D-dimer testing" EXACT []
 xref: NCIT:C82621
-is_a: MAXO:0000605 ! protein assessment
-property_value: http://purl.org/dc/elements/1.1/date 2020-04-07T21:37:45Z xsd:dateTime
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 PR:000050369
+property_value: http://purl.org/dc/elements/1.1/date 2020-04-07T21:37:45Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -6485,7 +6497,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000610
 name: clinical ELISA testing
-def: "A highly sensitive technique for detecting and measuring antigens or antibodies in a solution; the solution is run over a surface to which immobilized antibodies specific to the substance have been attached, and if the substance is present, it will bind to the antibody layer, and its presence is verified and visualized with an application of antibodies that have been tagged in some way." [NCIT:C16553]
+def: "A highly sensitive technique for detecting and measuring antigens or antibodies in a solution; the solution is run over a surface to which immobilized antibodies specific to the substance have been attached, and if the substance is present, it will bind to the antibody layer, and its presence is verified and visualized with an application of antibodies that have been tagged in some way. (BioTech Life Science Dictionary)" [NCIT:C16553]
 synonym: "enzyme linked immunosorbent assay testing" EXACT []
 synonym: "enzyme-linked immunosorbent assay" EXACT []
 xref: NCIT:C16553
@@ -6580,7 +6592,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000620
 name: central venous cannula insertion
-def: "A procedure of surgical placement of a catheter, which lumen is usually occupied by a trocar, into the central vein (internal jugular, subclavian, and femoral often used) or veins, to provide vascular access for measurement of hemodynamic variables that cannot be measured accurately by noninvasive means. It also can be used to deliver medications that were too potent or too toxic to be administered through peripheral access, for parenteral nutrition delivery; and for placing wires and pulmonary artery catheters. Central veins are usually cannulated percutaneously. The procedure is associated with many adverse events and has to be performed or supervised by an experienced physician." [NCIT:C40972]
+def: "A procedure of surgical placement of a catheter, which lumen is usually occupied by a trocar, into the central vein (internal jugular, subclavian, and femoral often used) or veins, to provide vascular access for measurement of hemodynamic variables that cannot be measured accurately by noninvasive means.  It also can be used to deliver medications that were too potent or too toxic to be administered through peripheral access, for parenteral nutrition delivery; and for placing wires and pulmonary artery catheters. Central veins are usually cannulated percutaneously. The procedure is associated with many adverse events and has to be performed or supervised by an experienced physician." [NCIT:C40972]
 synonym: "central line insertion" EXACT []
 synonym: "central line placement" EXACT []
 synonym: "central venous access catheter insertion" EXACT []
@@ -8090,7 +8102,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000729
 name: transrectal ultrasonography
-def: "A procedure that uses sound waves to create a video image of the pelvic organs and tissues. A small, lubricated probe placed into the rectum releases sound waves, which create echoes as they enter a pelvic organ. The echoes that bounce back are sent to a computer that translates the pattern of echoes into a picture of the specific organ under examination. This procedure is most often used to evaluate the prostate gland." [NCIT:C18315]
+def: "A procedure that uses sound waves to create a video image of the pelvic organs and tissues. A small, lubricated probe placed into the rectum releases sound waves, which create echoes as they enter a pelvic organ. The echoes that bounce back are sent to a computer that translates the pattern of echoes into a picture of the specific organ under examination.  This procedure is most often used to evaluate the prostate gland." [NCIT:C18315]
 synonym: "diagnostic transrectal ultrasound" EXACT []
 synonym: "endorectal sonography" EXACT []
 synonym: "endorectal ultrasound" EXACT []
@@ -8333,7 +8345,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000750
 name: transplant conditioning
-def: "Administration of high doses of chemotherapy or radiation therapy, as well as immunosuppressive therapy, to a transplant recipient prior to a bone marrow or hematopoietic stem cell transplant. Conditioning destroys the patient's abnormal blood cells or cancer, as well as slows the patient's immune response against the donor bone marrow (graft rejection)." [NCIT:C64468]
+def: "Administration of high doses of chemotherapy or radiation therapy, as well as immunosuppressive therapy, to a transplant recipient prior to a bone marrow or hematopoietic stem cell transplant.  Conditioning destroys the patient's abnormal blood cells or cancer, as well as slows the patient's immune response against the donor bone marrow (graft rejection)." [NCIT:C64468]
 synonym: "conditioning regimen" EXACT []
 xref: NCIT:C64468
 is_a: MAXO:0000647 ! chemotherapy
@@ -8445,12 +8457,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000761
-name: vitamin B supplementation
-def: "Addition of vitamin B to the diet for adequate and complete nutrition." []
-comment: vitamin B
-synonym: "dietary supplementation of vitamin B" EXACT []
-synonym: "supplementation of vitamin B" EXACT []
-synonym: "vitamin B supplemental intake" EXACT []
+name: obsolete: vitamin B supplementation
+def: "Addition of obsolete: vitamin B to the diet for adequate and complete nutrition." []
+comment: obsolete: vitamin B
+synonym: "dietary supplementation of obsolete: vitamin B" EXACT []
+synonym: "obsolete: vitamin B supplemental intake" EXACT []
+synonym: "supplementation of obsolete: vitamin B" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -8639,7 +8651,7 @@ name: HCG measurement
 def: "A quantitative measurement of the amount of human chorionic gonadotropin present in urine or serum." []
 synonym: "HCG pregnancy measurement" EXACT []
 synonym: "human chorionic gonadotropin measurement" EXACT []
-is_a: MAXO:0000605 ! protein assessment
+is_a: MAXO:0000605 ! protein measurement
 is_a: MAXO:0000783 ! pregnancy test
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-09T20:20:44Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -8665,13 +8677,14 @@ synonym: "urine HCG pregancy test" EXACT []
 synonym: "urine HCG pregnancy measurement" EXACT []
 synonym: "urine human chorionic gonadotropin measurement" EXACT []
 is_a: MAXO:0000784 ! HCG measurement
+is_a: MAXO:0000789 ! urine chemistry measurement
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-09T20:24:57Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000787
 name: blood chemistry measurement
-def: "The determination of the measured concentrations of chemical constituents of the blood by assay in a clinical laboratory. [ NCI ]" [NCIT:C47868]
+def: "The determination of the measured concentrations of chemical constituents of the blood by assay in a clinical laboratory." [NCIT:C47868]
 synonym: "blood chemistry test" EXACT []
 xref: NCIT:C47868
 is_a: MAXO:0000147 ! hematology testing
@@ -8682,7 +8695,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000788
 name: serum chemistry measurement
-def: "A quantitative measurement of a particular substance present in a sample of serum. [ NCI ]" [NCIT:C61014]
+def: "A quantitative measurement of a particular substance present in a sample of serum." [NCIT:C61014]
 xref: NCIT:C61014
 is_a: MAXO:0000787 ! blood chemistry measurement
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-09T20:41:32Z xsd:dateTime
@@ -8691,7 +8704,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000789
 name: urine chemistry measurement
-def: "A quantitative measurement of a particular substance present in a sample of urine. [ NCI ]" [NCIT:C61044]
+def: "A quantitative measurement of a particular substance present in a sample of urine." [NCIT:C61044]
 xref: NCIT:C61044
 is_a: MAXO:0000566 ! clinical chemistry assessment
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-09T21:22:57Z xsd:dateTime
@@ -8716,7 +8729,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000791
 name: breast self-examination
-def: "Procedure where the individual examines their own breasts for lumps and other changes. [ NCI ]" [NCIT:C70551]
+def: "Procedure where the individual examines their own breasts for lumps and other changes." [NCIT:C70551]
 synonym: "breast self-exam" EXACT []
 synonym: "breast self-surveillance" EXACT []
 xref: NCIT:C70551
@@ -8784,7 +8797,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000797
 name: fetal Doppler monitoring
-def: "A technique that utilizes a Doppler transducer to monitor fetal heart rate. The transducer is placed on the maternal abdomen and detects fetal cardiac motion using ultrasound. [ NICHD NCI ]" [NCIT:C114081]
+def: "A technique that utilizes a Doppler transducer to monitor fetal heart rate. The transducer is placed on the maternal abdomen and detects fetal cardiac motion using ultrasound." [NCIT:C114081]
 synonym: "EFM" EXACT ABBREVIATION []
 synonym: "external fetal heart rate monitoring" EXACT []
 synonym: "fetal Doppler ultrasound monitoring" EXACT []
@@ -8797,7 +8810,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000798
 name: internal fetal heart rate monitoring
-def: "A technique that utilizes a wire attached to the fetal scalp to monitor fetal heart rate. The wire detects fetal cardiac electrical activity to determine the baseline fetal heart rate and variability. [ NICHD NCI ]" [NCIT:C114083]
+def: "A technique that utilizes a wire attached to the fetal scalp to monitor fetal heart rate. The wire detects fetal cardiac electrical activity to determine the baseline fetal heart rate and variability." [NCIT:C114083]
 synonym: "fetal scalp electrode monitoring" EXACT []
 synonym: "FSE" EXACT ABBREVIATION []
 xref: NCIT:C114083
@@ -8871,15 +8884,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000807
-name: urine protein assessment
-def: "The determination of the amount of protein present in a urine sample. [ NCI ]" [NCIT:C74760]
-synonym: "urine protein measurement" EXACT []
-synonym: "urine protein testing" EXACT []
-xref: NCIT:C74760
-is_a: MAXO:0000605 ! protein assessment
-is_a: MAXO:0000789 ! urine chemistry measurement
-property_value: http://purl.org/dc/elements/1.1/date 2021-02-12T20:32:41Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
+name: obsolete urine protein assessment
+replaced_by: MAXO:0000851
 
 [Term]
 id: MAXO:0000808
@@ -9025,7 +9031,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000824
 name: hemoglobin measurement
-def: "A quantitative measurement of the amount of hemoglobin present in a biospecimen. [ NCI ]" [NCIT:C64848]
+def: "A quantitative measurement of the amount of hemoglobin present in a sample." [NCIT:C64848]
 synonym: "HGB measurement" EXACT []
 xref: NCIT:C64848
 is_a: MAXO:0000147 ! hematology testing
@@ -9035,7 +9041,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000825
 name: reticulocyte count
-def: "The determination of the number of reticulocytes in a blood sample. [ NCI ]" [NCIT:C51947]
+def: "The determination of the number of reticulocytes in a blood sample." [NCIT:C51947]
 xref: NCIT:C51947
 xref: PMID:29763080
 is_a: MAXO:0001007 ! erythrocyte count
@@ -9062,7 +9068,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000828
 name: total iron binding capacity measurement
-def: "The determination of the saturation of iron binding sites on serum transferrin proteins. [ NCI ]" [NCIT:C74718]
+def: "The determination of the saturation of iron binding sites on serum transferrin proteins." [NCIT:C74718]
 synonym: "IBCT" EXACT ABBREVIATION []
 synonym: "TIBC" EXACT ABBREVIATION []
 synonym: "total iron binding content measurement" EXACT []
@@ -9082,7 +9088,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000830
 name: erythrocyte cell morphology measurement
-def: "An examination or assessment of the form and structure of red blood cells. [ NCI ]" [NCIT:C92296]
+def: "An examination or assessment of the form and structure of red blood cells." [NCIT:C92296]
 synonym: "RBC morphology measurement" EXACT []
 synonym: "red blood cell morphology measurement" EXACT []
 xref: NCIT:C92296
@@ -9114,10 +9120,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000833
 name: thyroid-stimulating hormone test
-def: "Determination of thyroid stimulating hormone levels in the blood as an indicator of thyroid health." []
+def: "The determination of the amount of thyroid stimulating hormone present in blood." []
+synonym: "blood thyroid stimulating hormone test" EXACT []
+synonym: "thyroid stimulating hormone blood assessment" EXACT []
 synonym: "TSH level test" EXACT []
-is_a: MAXO:0000787 ! blood chemistry measurement
-property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:03:38Z xsd:dateTime
+is_a: MAXO:0000865 ! protein measurement in blood
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:03:38Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -9165,7 +9173,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000838
 name: prothrombin time/international normalized ratio measurement
-def: "The determination of the ratio of the prothrombin time in a subject's specimen compared to a control sample. The measurement may be expressed as a ratio or percentage. [ NCI ]" [NCIT:C170591]
+def: "The determination of the ratio of the prothrombin time in a subject's specimen compared to a control sample. The measurement may be expressed as a ratio or percentage." [NCIT:C170591]
 synonym: "prothrombin time actual/control measurement" EXACT []
 synonym: "PT/INR measurement" EXACT []
 synonym: "PTAC measurement" EXACT []
@@ -9177,7 +9185,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000839
 name: thrombin time measurement
-def: "A measurement of the time it takes a plasma sample to clot after adding the active enzyme thrombin. [ NCI ]" [NCIT:C80365]
+def: "A measurement of the time it takes a plasma sample to clot after adding the active enzyme thrombin." [NCIT:C80365]
 synonym: "TCT measurement" EXACT []
 synonym: "thrombin clotting time measurement" EXACT []
 synonym: "TT measurment" EXACT []
@@ -9189,68 +9197,87 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000840
 name: alanine transaminase test
-def: "A quantitative measurement of alanine transaminase or aminotransferase present in a sample as a measurement of liver function." []
+def: "The determination of the amount of alanine aminotransferase (human) present in the sample." []
+synonym: "alanine aminotransferase (human) assessment" EXACT []
+synonym: "alanine aminotransferase (human) test" EXACT []
 synonym: "alanine aminotransferase measurement" EXACT []
+synonym: "alanine transaminase measurement" EXACT []
 synonym: "ALT test" EXACT []
 synonym: "GPT test" EXACT []
 synonym: "serum glutamic-pyruvic transaminase test" EXACT []
 synonym: "SGPT test" EXACT []
 xref: NCIT:C64433
-is_a: MAXO:0000605 ! protein assessment
 is_a: MAXO:0000778 ! liver function testing
-property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:34:21Z xsd:dateTime
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 PR:000050341
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:34:21Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000841
-name: aspartate aminotransferase blood test
-def: "A quantitative measurement of aspartate aminotransferase present in a sample to monitor liver health." []
-synonym: "aspartate aminotransferase measurement" EXACT []
+name: aspartate aminotransferase measurement
+def: "The determination of the amount of aspartate aminotransferase (human) present in the sample." []
+synonym: "aspartate aminotransferase (human) assessment" EXACT []
+synonym: "aspartate aminotransferase (human) test" EXACT []
+synonym: "aspartate aminotransferase blood test" EXACT []
 synonym: "AST blood test" EXACT []
 synonym: "serum glutamic oxaloacetic transaminase test" EXACT []
 synonym: "SGOT test" EXACT []
 xref: NCIT:C64467
-is_a: MAXO:0000605 ! protein assessment
 is_a: MAXO:0000778 ! liver function testing
-property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:38:44Z xsd:dateTime
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 PR:000050353
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:38:44Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000842
-name: gamma glutamyl transferase measurement
-def: "Determination of gamma-glutamyl transferase (GGT) present in the sample as a measurement of liver function." []
-synonym: "gamma glutamyl transpeptidasemeasurement" EXACT []
+name: gamma glutamyl transpeptidase measurement
+def: "The determination of the amount of gamma-glutamyltranspeptidase present in the sample." []
+comment: Determination of gamma-glutamyl transferase (GGT) present in the sample as a measurement of liver function.
+synonym: "gamma glutamyl transpeptidase measurement" EXACT []
+synonym: "gamma-glutamyltranspeptidase assessment" EXACT []
+synonym: "gamma-glutamyltranspeptidase test" EXACT []
 synonym: "gamma-GT test" EXACT []
 synonym: "GGT test" EXACT []
 synonym: "GTP test" EXACT []
 xref: NCIT:C64847
-is_a: MAXO:0000605 ! protein assessment
 is_a: MAXO:0000778 ! liver function testing
-property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:42:40Z xsd:dateTime
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 PR:000001351
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:42:40Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000843
 name: albumin measurement
-def: "A quantitative measurement of albumin present in a sample." [NCIT:C64431]
+def: "The determination of the amount of albumin (human) present in the sample." []
 synonym: "ALB level test" EXACT []
+synonym: "albumin (human) assessment" EXACT []
+synonym: "albumin (human) test" EXACT []
+synonym: "albumin assessment" EXACT []
 synonym: "albumin level measurement" EXACT []
+synonym: "albumin test" EXACT []
 xref: NCIT:C64431
-is_a: MAXO:0000605 ! protein assessment
 is_a: MAXO:0000778 ! liver function testing
-property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:45:46Z xsd:dateTime
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 PR:P02768
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:45:46Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000844
 name: alkaline phosphatase measurement
-def: "A quantitative measurement of alkaline phosphatase present in a sample." [NCIT:C64432]
+def: "The determination of the amount of alkaline phosphatase present in the sample." []
 synonym: "alk phos test" EXACT []
+synonym: "alkaline phosphatase assessment" EXACT []
+synonym: "alkaline phosphatase test" EXACT []
 synonym: "ALP measurement" EXACT []
 xref: NCIT:C64432
-is_a: MAXO:0000605 ! protein assessment
 is_a: MAXO:0000778 ! liver function testing
-property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:50:44Z xsd:dateTime
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 PR:000023540
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:50:44Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -9268,23 +9295,26 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000846
 name: lactate dehydrogenase measurement
-def: "A quantitative measurement of the amount of lactate dehydrogenase present in a sample." [NCIT:C64855]
 synonym: "LDH measurement" EXACT []
 xref: NCIT:C64855
-is_a: MAXO:0000605 ! protein assessment
+is_a: MAXO:0000605 ! protein measurement
 is_a: MAXO:0000778 ! liver function testing
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T14:57:21Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000847
-name: 5 prime nucleotidase measurement
-def: "The determination of the amount of 5 prime nucleotidase present in a sample." [NCIT:C79437]
+name: 5'-nucleotidase measurement
+def: "The determination of the amount of 5'-nucleotidase present in the sample." []
+synonym: "5 prime nucleotidase measurement" EXACT []
 synonym: "5'- nucleotidase measurement" EXACT []
+synonym: "5'-nucleotidase assessment" EXACT []
+synonym: "5'-nucleotidase test" EXACT []
 xref: NCIT:C79437
-is_a: MAXO:0000605 ! protein assessment
 is_a: MAXO:0000778 ! liver function testing
-property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:01:15Z xsd:dateTime
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 PR:000001800
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:01:15Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -9292,7 +9322,7 @@ id: MAXO:0000848
 name: bilirubin measurement
 def: "The measurement of bilirubin present in a particular sample." []
 is_a: MAXO:0000075 ! digestive system testing
-is_a: MAXO:0000605 ! protein assessment
+is_a: MAXO:0000605 ! protein measurement
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:06:51Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9310,7 +9340,7 @@ id: MAXO:0000850
 name: total protein measurement
 def: "A quantitative measurement of total protein present in the sample, usually serum or urine." []
 xref: NCIT:C64858
-is_a: MAXO:0000605 ! protein assessment
+is_a: MAXO:0000605 ! protein measurement
 is_a: MAXO:0000778 ! liver function testing
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:16:41Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -9319,8 +9349,14 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000851
 name: urine protein measurement
 def: "A test to determine the amount or type of protein present in urine." []
-is_a: MAXO:0000605 ! protein assessment
-property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:25:01Z xsd:dateTime
+def: "The determination of the amount of protein present in urine." []
+synonym: "protein urine assessment" EXACT []
+synonym: "urine protein assessment" EXACT []
+synonym: "urine protein test" EXACT []
+synonym: "urine protein testing" EXACT []
+xref: NCIT:C74760
+is_a: MAXO:0000605 ! protein measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:25:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -9338,21 +9374,26 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000853
 name: serum total protein measurement
-def: "A quantitative measurement of the amount of total protein present in serum." [NCIT:C61033]
+def: "A quantitative measurement of the total amount of protein present in a sample of serum." [NCIT:C61033]
 xref: NCIT:C61033
 is_a: MAXO:0000788 ! serum chemistry measurement
 is_a: MAXO:0000850 ! total protein measurement
+is_a: MAXO:0001174 ! serum protein measurement
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T16:23:27Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000854
-name: haptoglobin protein measurement
-def: "The determination of the amount of haptoglobin protein present in a sample." [NCIT:C74740]
+name: haptoglobin measurement
+def: "The determination of the amount of haptoglobin present in the sample." []
 synonym: "haptog measurement" EXACT []
+synonym: "haptoglobin assessment" EXACT []
+synonym: "haptoglobin protein measurement" EXACT []
+synonym: "haptoglobin test" EXACT []
 xref: NCIT:C74740
-is_a: MAXO:0000605 ! protein assessment
-property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T17:02:35Z xsd:dateTime
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 PR:000008725
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T17:02:35Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -9365,7 +9406,7 @@ synonym: "hemoglobin evaluation" EXACT []
 synonym: "hemoglobin fractionation" EXACT []
 synonym: "hemoglobinopathy evaluation" NARROW []
 synonym: "sickle cell screen" NARROW []
-is_a: MAXO:0000605 ! protein assessment
+is_a: MAXO:0000605 ! protein measurement
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T19:58:00Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9374,14 +9415,14 @@ id: MAXO:0000856
 name: serum PAPP-A measurement
 def: "Determination of serum levels of pregnancy-associated plasma protein A (PAPP-A). Maternal levels of PAPP-A increase throughout the pregnancy. Low levels during pregnancy are associated with Down syndrome and trisomy 18." []
 synonym: "pregnancy-associated plasma protein A test" EXACT []
-is_a: MAXO:0000605 ! protein assessment
+is_a: MAXO:0001174 ! serum protein measurement
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T20:59:28Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000858
 name: glucose tolerance test
-def: "A test that involves administration of a know quantity of glucose as a means of screening for glucose intolerance or diabetes mellitus. Typically a baseline (fasting plasma or serum glucose) is drawn prior to the administration of the glucose bolus. Serial plasma glucose levels are obtained (e.g. 30min, 1hr, 2hr, 3hr) and a plot of plasma glucose versus time is created. Comparison of these values against standardized results can be used in establishing the diagnosis of glucose intolerance or diabetes mellitus." [NCIT:C45946]
+def: "A test that involves administration of a know quantity of glucose as a means of screening for glucose intolerance or diabetes mellitus. Typically a baseline (fasting plasma or serum glucose) is drawn prior to the administration of the glucose bolus.  Serial plasma glucose levels are obtained (e.g. 30min, 1hr, 2hr, 3hr) and a plot of plasma glucose versus time is created.  Comparison of these values against standardized results can be used in establishing the diagnosis of glucose intolerance or diabetes mellitus." [NCIT:C45946]
 xref: NCIT:C45946
 is_a: MAXO:0000124 ! disease screening
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T21:38:54Z xsd:dateTime
@@ -9412,7 +9453,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000861
 name: labor induction
-def: "The use of pharmacological and/or mechanical methods to initiate labor, including spontaneous rupture of membranes without contractions. Examples of methods include: artificial rupture of membranes, balloons, oxytocin, prostaglandin, laminaria, or other cervical ripening agents." [NCIT:C92814]
+def: "The use of pharmacological and/or mechanical methods to initiate labor, including spontaneous rupture of membranes without contractions. Examples of methods include: artificial rupture of membranes, balloons, oxytocin, prostaglandin, laminaria, or other cervical ripening agents. (adapted from reVITALize)" [NCIT:C92814]
 synonym: "induction of labor" EXACT []
 xref: NCIT:C92814
 is_a: MAXO:0000782 ! obstetrics and gynecology procedure
@@ -9422,7 +9463,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000862
 name: fetal Doppler velocimetry
-def: "An prenatal ultrasonographic method that measures blood flow velocity through either maternal or fetal vessels." [NCIT:C114080]
+def: "An antenatal ultrasonographic method that measures blood flow velocity through either maternal or fetal vessels." [NCIT:C114080]
 synonym: "Doppler velocimetry" EXACT []
 xref: NCIT:C114080
 is_a: MAXO:0000520 ! obstetric ultrasonography
@@ -9432,16 +9473,26 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000863
 name: fetal pulse oximetry
-def: "A method to assess fetal oxygenation status during labor and delivery using a noninvasive reflectance pulse oximeter. [ NCI ]" [NCIT:C92794]
+def: "A method to assess fetal oxygenation status during labor and delivery using a noninvasive reflectance pulse oximeter." [NCIT:C92794]
 is_a: MAXO:0000617 ! pulse oximetry
 is_a: MAXO:0000859 ! fetal examination
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-18T15:16:22Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0000865
+name: protein measurement in blood
+def: "The determination of the amount of protein present in blood." []
+synonym: "blood protein test" EXACT []
+synonym: "protein blood assessment" EXACT []
+is_a: MAXO:0000787 ! blood chemistry measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:25:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0001000
 name: functional magnetic resonance imaging procedure
-def: "A type of MRI that takes a series of images of an organ in quick succession and statistically analyzes the differences between the images." [NCIT:C17958]
+def: "The principle of functional MRI imaging is to take a series of images of an organ in quick succession and to statistically analyze the images for differences among them.  Most commonly used in studies of brain function." [NCIT:C17958]
 synonym: "fMRI" EXACT ABBREVIATION []
 synonym: "Functional MRI" EXACT ABBREVIATION []
 xref: NCIT:C17958
@@ -10583,12 +10634,12 @@ created_by: http://orcid.org/0000-0001-7941-3010
 [Term]
 id: MAXO:0001123
 name: potassium supplementation
-def: "Addition of potassium atom to a the diet for complete nutrition support." []
+def: "Addition of potassiumpotassium atom to a the diet for complete nutrition support." []
 synonym: "dietary supplementation of potassium" EXACT []
-synonym: "dietary supplementation of potassium atom" EXACT []
-synonym: "potassium atom supplemental intake" EXACT []
+synonym: "dietary supplementation of potassiumpotassium atom" EXACT []
+synonym: "potassiumpotassium atom supplemental intake" EXACT []
 synonym: "supplementation of potassium" EXACT []
-synonym: "supplementation of potassium atom" EXACT []
+synonym: "supplementation of potassiumpotassium atom" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-17T02:36:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -10636,11 +10687,11 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001128
-name: folic acid supplementation
-def: "Addition of folic acid to a the diet for complete nutrition support." []
-synonym: "dietary supplementation of folic acid" EXACT []
-synonym: "folic acid supplemental intake" EXACT []
-synonym: "supplementation of folic acid" EXACT []
+name: folic acidb9 folate supplementation
+def: "Addition of folic acidb9 folate to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of folic acidb9 folate" EXACT []
+synonym: "folic acidb9 folate supplemental intake" EXACT []
+synonym: "supplementation of folic acidb9 folate" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -10658,22 +10709,22 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001130
-name: nicotinic acid supplementation
-def: "Addition of nicotinic acid to a the diet for complete nutrition support." []
-synonym: "dietary supplementation of nicotinic acid" EXACT []
+name: nicotinic acidniacin (b3) supplementation
+def: "Addition of nicotinic acidniacin (b3) to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of nicotinic acidniacin (b3)" EXACT []
 synonym: "niacin supplementation" EXACT []
-synonym: "nicotinic acid supplemental intake" EXACT []
-synonym: "supplementation of nicotinic acid" EXACT []
+synonym: "nicotinic acidniacin (b3) supplemental intake" EXACT []
+synonym: "supplementation of nicotinic acidniacin (b3)" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001131
-name: pyridoxine supplementation
-def: "Addition of pyridoxine to a the diet for complete nutrition support." []
-synonym: "dietary supplementation of pyridoxine" EXACT []
-synonym: "pyridoxine supplemental intake" EXACT []
-synonym: "supplementation of pyridoxine" EXACT []
+name: pyridoxine (b6)pyridoxine supplementation
+def: "Addition of pyridoxine (b6)pyridoxine to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of pyridoxine (b6)pyridoxine" EXACT []
+synonym: "pyridoxine (b6)pyridoxine supplemental intake" EXACT []
+synonym: "supplementation of pyridoxine (b6)pyridoxine" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -10704,13 +10755,13 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001135
-name: fat-soluble vitamin supplementation
-def: "Addition of fat-soluble vitamin to a the diet for complete nutrition support." []
-synonym: "dietary supplementation of fat-soluble vitamin" EXACT []
+name: fat-soluble vitaminfat soluble vitamin supplementation
+def: "Addition of fat-soluble vitaminfat soluble vitamin to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of fat-soluble vitaminfat soluble vitamin" EXACT []
 synonym: "essential fat soluble vitamin supplementation" EXACT []
-synonym: "fat-soluble vitamin supplemental intake" EXACT []
+synonym: "fat-soluble vitaminfat soluble vitamin supplemental intake" EXACT []
 synonym: "supplementation of essential fat soluble vitamin" EXACT []
-synonym: "supplementation of fat-soluble vitamin" EXACT []
+synonym: "supplementation of fat-soluble vitaminfat soluble vitamin" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -10748,10 +10799,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001139
 name: calcium supplementation
-def: "Addition of calcium atom to a the diet for complete nutrition support." []
-synonym: "calcium atom supplemental intake" EXACT []
-synonym: "dietary supplementation of calcium atom" EXACT []
-synonym: "supplementation of calcium atom" EXACT []
+def: "Addition of calcium atomcalcium to a the diet for complete nutrition support." []
+synonym: "calcium atomcalcium supplemental intake" EXACT []
+synonym: "dietary supplementation of calcium atomcalcium" EXACT []
+synonym: "supplementation of calcium atomcalcium" EXACT []
 synonym: "supplementation with calcium" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -10790,12 +10841,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001143
-name: omega-3 fatty acid supplementation
-def: "Addition of omega-3 fatty acid to a the diet for complete nutrition support." []
-synonym: "dietary supplementation of omega-3 fatty acid" EXACT []
+name: omega-3-fatty acidomega-3 fatty acid supplementation
+def: "Addition of omega-3-fatty acidomega-3 fatty acid to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of omega-3-fatty acidomega-3 fatty acid" EXACT []
 synonym: "eicosapentaenoic acid supplementation" EXACT []
-synonym: "omega-3 fatty acid supplemental intake" EXACT []
-synonym: "supplementation of omega-3 fatty acid" EXACT []
+synonym: "omega-3-fatty acidomega-3 fatty acid supplemental intake" EXACT []
+synonym: "supplementation of omega-3-fatty acidomega-3 fatty acid" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -10855,12 +10906,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001149
 name: magnesium supplementation
-def: "Addition of magnesium atom to a the diet for complete nutrition support." []
-synonym: "dietary supplementation of magnesium atom" EXACT []
-synonym: "magnesium atom supplemental intake" EXACT []
+def: "Addition of magnesiummagnesium atom to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of magnesiummagnesium atom" EXACT []
 synonym: "magnesium supplemental intake" EXACT []
+synonym: "magnesiummagnesium atom supplemental intake" EXACT []
 synonym: "supplementation of magnesium" EXACT []
-synonym: "supplementation of magnesium atom" EXACT []
+synonym: "supplementation of magnesiummagnesium atom" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-30T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -11095,6 +11146,36 @@ synonym: "testis ultrasound procedure" EXACT []
 synonym: "ultrasonography of testis" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-3010
+
+[Term]
+id: MAXO:0001172
+name: insulin measurement
+def: "The determination of the amount of insulin hormone present in the sample." []
+synonym: "insulin hormone assessment" EXACT []
+synonym: "insulin hormone test" EXACT []
+synonym: "insulin level assessment" EXACT []
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 PR:000050339
+property_value: http://purl.org/dc/elements/1.1/date 2021-03-19T21:42:40Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001173
+name: urine albumin measurement
+def: "The determination of the amount of albumin (human) present in urine." []
+synonym: "albumin (human) urine assessment" EXACT []
+synonym: "urine albumin (human) test" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2021-03-19T15:25:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001174
+name: serum protein measurement
+def: "The determination of the amount of protein present in blood serum." []
+synonym: "blood serum protein test" EXACT []
+synonym: "protein blood serum assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2021-03-19T15:25:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0002000
@@ -11368,11 +11449,11 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010016
-name: riboflavin supplementation
-def: "Addition of riboflavin to a the diet for complete nutrition support." []
-synonym: "dietary supplementation of riboflavin" EXACT []
-synonym: "riboflavin supplemental intake" EXACT []
-synonym: "supplementation of riboflavin" EXACT []
+name: riboflavinriboflavin (b2) supplementation
+def: "Addition of riboflavinriboflavin (b2) to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of riboflavinriboflavin (b2)" EXACT []
+synonym: "riboflavinriboflavin (b2) supplemental intake" EXACT []
+synonym: "supplementation of riboflavinriboflavin (b2)" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -11398,11 +11479,11 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010019
-name: thiamine supplementation
-def: "Addition of thiamine to a the diet for complete nutrition support." []
-synonym: "dietary supplementation of thiamine" EXACT []
-synonym: "supplementation of thiamine" EXACT []
-synonym: "thiamine supplemental intake" EXACT []
+name: thiamine (b1)thiamine supplementation
+def: "Addition of thiamine (b1)thiamine to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of thiamine (b1)thiamine" EXACT []
+synonym: "supplementation of thiamine (b1)thiamine" EXACT []
+synonym: "thiamine (b1)thiamine supplemental intake" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -11491,10 +11572,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0010028
 name: cyanocobalamin supplementation
-def: "Addition of cyanocob(III)alamin to a the diet for complete nutrition support." []
-synonym: "cyanocob(III)alamin supplemental intake" EXACT []
-synonym: "dietary supplementation of cyanocob(III)alamin" EXACT []
-synonym: "supplementation of cyanocob(III)alamin" EXACT []
+def: "Addition of cyanocob(III)alamincyanocobalamin (b12) to a the diet for complete nutrition support." []
+synonym: "cyanocob(III)alamincyanocobalamin (b12) supplemental intake" EXACT []
+synonym: "dietary supplementation of cyanocob(III)alamincyanocobalamin (b12)" EXACT []
+synonym: "supplementation of cyanocob(III)alamincyanocobalamin (b12)" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -12218,12 +12299,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0010096
 name: dietary sodium intake avoidance
-def: "A medical requirement or recommendation of avoiding the consumption of sodium atom." []
-synonym: "avoid sodium atom intake" EXACT []
-synonym: "avoiding dietary sodium atom intake" EXACT []
-synonym: "sodium atom consumption avoidance" EXACT []
-synonym: "sodium atom restricted diet intake" EXACT []
-synonym: "sodium atom restriction" EXACT []
+def: "A medical requirement or recommendation of avoiding the consumption of sodium atomsodium." []
+synonym: "avoid sodium atomsodium intake" EXACT []
+synonym: "avoiding dietary sodium atomsodium intake" EXACT []
+synonym: "sodium atomsodium consumption avoidance" EXACT []
+synonym: "sodium atomsodium restricted diet intake" EXACT []
+synonym: "sodium atomsodium restriction" EXACT []
 synonym: "sodium restriction" EXACT []
 intersection_of: MAXO:0000056 ! nutrition intake avoidance
 intersection_of: MAXO:0001027 CHEBI:26708 ! avoided food
@@ -12266,15 +12347,15 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0010100
 name: dietary iron intake avoidance
-def: "A medical requirement or recommendation of avoiding the consumption of iron atom." []
-synonym: "avoid iron atom intake" EXACT []
-synonym: "avoiding dietary iron atom intake" EXACT []
+def: "A medical requirement or recommendation of avoiding the consumption of iron atomiron." []
+synonym: "avoid iron atomiron intake" EXACT []
+synonym: "avoiding dietary iron atomiron intake" EXACT []
 synonym: "dietary iron restriction" EXACT []
 synonym: "dietary iron supplementation avoidance" EXACT []
 synonym: "excessive iron consumption avoidance" EXACT []
-synonym: "iron atom consumption avoidance" EXACT []
-synonym: "iron atom restricted diet intake" EXACT []
-synonym: "iron atom restriction" EXACT []
+synonym: "iron atomiron consumption avoidance" EXACT []
+synonym: "iron atomiron restricted diet intake" EXACT []
+synonym: "iron atomiron restriction" EXACT []
 intersection_of: MAXO:0000056 ! nutrition intake avoidance
 intersection_of: MAXO:0001027 CHEBI:18248 ! avoided food
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
@@ -12486,12 +12567,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0010115
 name: dietary calcium avoidance
-def: "A medical requirement or recommendation of avoiding the consumption of calcium atom." []
-synonym: "avoid calcium atom intake" EXACT []
-synonym: "avoiding dietary calcium atom intake" EXACT []
-synonym: "calcium atom consumption avoidance" EXACT []
-synonym: "calcium atom restricted diet intake" EXACT []
-synonym: "calcium atom restriction" EXACT []
+def: "A medical requirement or recommendation of avoiding the consumption of calcium atomcalcium." []
+synonym: "avoid calcium atomcalcium intake" EXACT []
+synonym: "avoiding dietary calcium atomcalcium intake" EXACT []
+synonym: "calcium atomcalcium consumption avoidance" EXACT []
+synonym: "calcium atomcalcium restricted diet intake" EXACT []
+synonym: "calcium atomcalcium restriction" EXACT []
 intersection_of: MAXO:0000056 ! nutrition intake avoidance
 intersection_of: MAXO:0001027 CHEBI:22984 ! avoided food
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
@@ -12527,14 +12608,14 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010118
-name: dietary riboflavin intake avoidance
-def: "A medical requirement or recommendation of avoiding the consumption of riboflavin." []
-synonym: "avoid riboflavin intake" EXACT []
-synonym: "avoiding dietary riboflavin intake" EXACT []
+name: dietary riboflavinriboflavin (b2) intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of riboflavinriboflavin (b2)." []
+synonym: "avoid riboflavinriboflavin (b2) intake" EXACT []
+synonym: "avoiding dietary riboflavinriboflavin (b2) intake" EXACT []
 synonym: "B12 restriction" EXACT []
-synonym: "riboflavin consumption avoidance" EXACT []
-synonym: "riboflavin restricted diet intake" EXACT []
-synonym: "riboflavin restriction" EXACT []
+synonym: "riboflavinriboflavin (b2) consumption avoidance" EXACT []
+synonym: "riboflavinriboflavin (b2) restricted diet intake" EXACT []
+synonym: "riboflavinriboflavin (b2) restriction" EXACT []
 synonym: "vitamin B12 intake avoidance" EXACT []
 intersection_of: MAXO:0000056 ! nutrition intake avoidance
 intersection_of: MAXO:0001027 CHEBI:17015 ! avoided food
