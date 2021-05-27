@@ -23,7 +23,6 @@ Import(<http://purl.obolibrary.org/obo/maxo/imports/pr_import.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/imports/ro_import.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/imports/uberon_import.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/patterns/definitions.owl>)
-Annotation(dce:creator "Aaron Zhang")
 Annotation(dce:creator "Leigh Carmody")
 Annotation(dce:creator "Peter Robinson")
 Annotation(dce:description "An ontology to represent medically relevant actions, procedures, therapies, interventions, and recommendations.")
@@ -723,6 +722,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000861>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000862>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000863>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000865>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000869>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001002>))
@@ -1547,7 +1547,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/MAXO_0000108> "iron replacement therapy")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:28328083") rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0000108> "Oral iron supplementation is an effective and well‐studied option to replenish iron stores.")
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000109> (vitamin C supplementation)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000109> (obsolete: vitamin C supplementation)
 
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000109> "2019-01-19T21:09:48Z"^^xsd:dateTime)
 
@@ -4798,7 +4798,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000487> "PMID:2647562")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000487> "clinical measurement")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000487> "clinical assessment"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000487> <http://purl.obolibrary.org/obo/MAXO_0000002>)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000487> <http://purl.obolibrary.org/obo/MAXO_0000003>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000488> (body temperature measurement)
@@ -8194,7 +8193,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000791> <http://purl.obolibrary
 
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000792> "NCIT:C167415")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000792> "examination of the abdomen")
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000792> <http://purl.obolibrary.org/obo/MAXO_0000782>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000793> (pelvic examination)
 
@@ -8708,7 +8706,7 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000850> "to
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000850> <http://purl.obolibrary.org/obo/MAXO_0000605>)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000850> <http://purl.obolibrary.org/obo/MAXO_0000778>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000851> (protein measurement in urine)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000851> (urine protein measurement)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000851> "A test to determine the amount or type of protein present in urine.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000851> "NCIT:C74760"^^xsd:string)
@@ -8832,6 +8830,17 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000863> <http://purl.obolibrary
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000865> (protein measurement in blood)
 
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000865> <http://purl.obolibrary.org/obo/MAXO_0000787>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000869> (obstetric abdominal examination)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000869> "A systemic evaluation of the abdomen using visual inspection, palpation, and percussion during pregnancy to determine the health of the mother and fetus.")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000869> "2021-05-27T15:12:17Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000869> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000869> "abdominal examination during pregnancy")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000869> "pregnant abdomen examination")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000869> "obstetric abdominal examination"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000869> <http://purl.obolibrary.org/obo/MAXO_0000782>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000869> <http://purl.obolibrary.org/obo/MAXO_0000792>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0001000> (functional magnetic resonance imaging procedure)
 
