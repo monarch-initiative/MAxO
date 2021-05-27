@@ -11,9 +11,9 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/imports/obi_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2021-03-22/imports/obi_import.owl"/>
-        <dc:source rdf:resource="http://purl.obolibrary.org/obo/obi/2020-12-16/obi.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-03-22</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2021-05-27/imports/obi_import.owl"/>
+        <dc:source rdf:resource="http://purl.obolibrary.org/obo/obi/2021-04-06/obi.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-05-27</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -64,7 +64,9 @@
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
         <obo:IAO_0000111>definition</obo:IAO_0000111>
         <obo:IAO_0000111 xml:lang="en">definition</obo:IAO_0000111>
+        <obo:IAO_0000111>textual definition</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">The official OBI definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">2012-04-05: 
 Barry Smith
@@ -91,6 +93,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
         <rdfs:label>definition</rdfs:label>
         <rdfs:label xml:lang="en">definition</rdfs:label>
+        <rdfs:label>textual definition</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -1242,6 +1245,18 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_16113 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_16113">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
+        <obo:IAO_0000111>cholesterol</obo:IAO_0000111>
+        <obo:IAO_0000115>A cholestanoid consisting of cholestane having a double bond at the 5,6-position as well as a 3beta-hydroxy group.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
+        <rdfs:label>cholesterol</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_16670 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_16670">
@@ -1262,6 +1277,18 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <obo:IAO_0000115>An aldohexose used as a source of energy and metabolic intermediate.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
         <rdfs:label>glucose</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_17855 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_17855">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
+        <obo:IAO_0000111>triglyceride</obo:IAO_0000111>
+        <obo:IAO_0000115>Any glyceride resulting from the condensation of all three hydroxy groups of glycerol (propane-1,2,3-triol) with fatty acids.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
+        <rdfs:label>triglyceride</rdfs:label>
     </owl:Class>
     
 
@@ -2718,6 +2745,30 @@ In regard to the statement that reagents are &apos;distinct&apos; from the speci
         <obo:IAO_0000115>An amino acid chain that is produced de novo by ribosome-mediated translation of a genetically-encoded mRNA, and any derivatives thereof.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/pr.owl"/>
         <rdfs:label>protein</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PR_000008725 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PR_000008725">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PR_000000001"/>
+        <obo:IAO_0000111>haptoglobin</obo:IAO_0000111>
+        <obo:IAO_0000115>A protein that is a translation product of the human HP gene or a 1:1 ortholog thereof.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/pr.owl"/>
+        <rdfs:label>haptoglobin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PR_000050353 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PR_000050353">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PR_000000001"/>
+        <obo:IAO_0000111>aspartate aminotransferase (human)</obo:IAO_0000111>
+        <obo:IAO_0000115>A protein that is a translation product of any of the following genes in human: GOT1/GOT2.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/pr.owl"/>
+        <rdfs:label>aspartate aminotransferase (human)</rdfs:label>
     </owl:Class>
     
 

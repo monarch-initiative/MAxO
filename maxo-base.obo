@@ -1,14 +1,13 @@
 format-version: 1.2
-data-version: maxo/releases/2021-03-22/maxo-base.owl
+data-version: maxo/releases/2021-05-27/maxo-base.owl
 ontology: maxo/maxo-base
-property_value: http://purl.org/dc/elements/1.1/creator "Aaron Zhang" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "An ontology to represent medically relevant actions, procedures, therapies, interventions, and recommendations." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2021-03-22" xsd:string
+property_value: owl:versionInfo "2021-05-27" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -486,8 +485,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000065
 name: aerobic exercise therapy
-def: "A medical recommendation of sustained exercise that places an increased oxygen demand on the cardiovascular system and promotes an increased efficiency of the body's use of oxygen." [http://orcid.org/0000-0001-7941-2961, NCIT:C39774]
 def: "Sustained exercise that places an increased oxygen demand on the cardiovascular system and promotes an increased efficiency of the body's use of oxygen." [NCIT:C39774]
+comment: A medical recommendation of sustained exercise that places an increased oxygen demand on the cardiovascular system and promotes an increased efficiency of the body's use of oxygen. {xref="http://orcid.org/0000-0001-7941-2961", xref="NCIT:C39774"}
 synonym: "aerobic activity" EXACT []
 synonym: "aerobic exercise" EXACT []
 xref: NCIT:C39774
@@ -1198,7 +1197,6 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000144
 name: histological procedure
-def: "Technique or procedure used for the study of the microanatomy of tissues and their cellular structure for the diagnosis or treatment of a disease." [http://orcid.org/0000-0001-7941-2961, NCIT:C16680]
 def: "Technique or procedure used for the study of the microanatomy of tissues and their cellular structure; usually involves microscopic examination of tissue slices." [NCIT:C16680]
 synonym: "histological testing" EXACT []
 xref: NCIT:C16680
@@ -3107,6 +3105,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000270
 name: irritable bowel syndrome agent therapy
+def: "Treatment with any agent that helps treat irritable bowel syndrome." []
 is_a: MAXO:0000267 ! gastrointestinal agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:37:54Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -5228,7 +5227,6 @@ def: "A measurement performed in a clinical setting using clinician's observatio
 synonym: "clinical measurement" EXACT []
 xref: CMO:0000000
 xref: PMID:2647562
-is_a: MAXO:0000002 ! therapeutic procedure
 is_a: MAXO:0000003 ! diagnostic procedure
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-21T20:29:43Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -8746,7 +8744,6 @@ synonym: "examination of abdomen" EXACT []
 synonym: "examination of the abdomen" EXACT []
 synonym: "physical examination of abdomen" EXACT []
 xref: NCIT:C167415
-is_a: MAXO:0000782 ! obstetrics and gynecology procedure
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-10T14:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9487,6 +9484,17 @@ synonym: "blood protein test" EXACT []
 synonym: "protein blood assessment" EXACT []
 is_a: MAXO:0000787 ! blood chemistry measurement
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:25:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000869
+name: obstetric abdominal examination
+def: "A systemic evaluation of the abdomen using visual inspection, palpation, and percussion during pregnancy to determine the health of the mother and fetus." []
+synonym: "abdominal examination during pregnancy" EXACT []
+synonym: "pregnant abdomen examination" EXACT []
+is_a: MAXO:0000782 ! obstetrics and gynecology procedure
+is_a: MAXO:0000792 ! abdominal examination
+property_value: http://purl.org/dc/elements/1.1/date 2021-05-27T15:12:17Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]

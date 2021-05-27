@@ -29,6 +29,7 @@ Annotation(dce:description "An ontology to represent medically relevant actions,
 Annotation(dce:title "Medical Action Ontology")
 Annotation(dcterms:license <https://creativecommons.org/licenses/by/4.0/>)
 
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007565>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000003>))
@@ -723,6 +724,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000862>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000863>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000865>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000869>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000870>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001002>))
@@ -1284,7 +1286,7 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000068> "tr
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000068> <http://purl.obolibrary.org/obo/MAXO_0000002>)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000068> <http://purl.obolibrary.org/obo/MAXO_0000004>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000070> (liver transplantation)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000070> (liver transplantation surgical procedure)
 
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000070> "NCIT:C15271")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000070> "hepatic transplantation")
@@ -8109,11 +8111,9 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000783> <http://purl.obolibrary
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000784> "A quantitative measurement of the amount of human chorionic gonadotropin present in urine or serum.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000784> "2021-02-09T20:20:44Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000784> <http://orcid.org/0000-0001-7941-2961>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000784> "HCG pregnancy measurement")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000784> "human chorionic gonadotropin measurement")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000784> "HCG measurement"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000784> <http://purl.obolibrary.org/obo/MAXO_0000605>)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000784> <http://purl.obolibrary.org/obo/MAXO_0000783>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000785> (serum HCG measurement)
 
@@ -8839,8 +8839,19 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <h
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000869> "abdominal examination during pregnancy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000869> "pregnant abdomen examination")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000869> "obstetric abdominal examination"@en)
+EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0000869> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000527> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0007565>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0000916>)))))
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000869> <http://purl.obolibrary.org/obo/MAXO_0000782>)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000869> <http://purl.obolibrary.org/obo/MAXO_0000792>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000870> (pregnancy HCG test)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000870> "A quantitative measurement of the amount of human chorionic gonadotropin present in urine or serum for the purpose of determining whether the patient is pregnant.")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000870> "2021-05-27T19:38:10Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000870> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000870> "HCG pregnancy test")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000870> "pregnancy HCG test"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000870> <http://purl.obolibrary.org/obo/MAXO_0000783>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000870> <http://purl.obolibrary.org/obo/MAXO_0000784>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0001000> (functional magnetic resonance imaging procedure)
 
