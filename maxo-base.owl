@@ -12,14 +12,14 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/maxo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2021-05-27/maxo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2021-05-28/maxo-base.owl"/>
         <dc:creator>Leigh Carmody</dc:creator>
         <dc:creator>Peter Robinson</dc:creator>
         <dc:description>An ontology to represent medically relevant actions, procedures, therapies, interventions, and recommendations.</dc:description>
         <dc:title>Medical Action Ontology</dc:title>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-05-27</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-05-28</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -185,6 +185,12 @@
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <rdfs:label xml:lang="en">avoided food</rdfs:label>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000052 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000052"/>
     
 
 
@@ -406,6 +412,12 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_18257 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_18257"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_21241 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_21241"/>
     
 
 
@@ -1327,6 +1339,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_75769 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_75769"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_76916 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_76916"/>
@@ -1639,12 +1657,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/FOODON_03413763 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03413763"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/FOODON_03420177 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03420177"/>
@@ -1675,12 +1687,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/FOODON_03460216 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03460216"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0007565 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007565"/>
@@ -1690,12 +1696,6 @@
     <!-- http://purl.obolibrary.org/obo/HP_0000015 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000015"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0000118 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000118"/>
     
 
 
@@ -2299,9 +2299,10 @@
         <oboInOwl:hasDbXref>NCIT:C101516</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCIT:C15747</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>comfort care</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>palliative therapeutics</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>symptom management</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>supportive care</oboInOwl:hasNarrowSynonym>
-        <rdfs:label xml:lang="en">palliative therapeutics</rdfs:label>
+        <rdfs:label xml:lang="en">palliative care</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000021"/>
@@ -2441,10 +2442,9 @@
     <!-- http://purl.obolibrary.org/obo/MAXO_0000044 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000044">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000151"/>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-11T19:59:24Z</dc:date>
-        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <rdfs:label xml:lang="en">physiologic state avoidance</rdfs:label>
+        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001113"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete physiologic state</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:deprecated>
     </owl:Class>
     
 
@@ -2455,7 +2455,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000044"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0001113"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000521"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0001944"/>
@@ -2463,12 +2463,12 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000044"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical requirement or recommendation to avoid dehydration.</obo:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-11T19:59:44Z</dc:date>
-        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid dehydration</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dehydration avoidance</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical requirement or recommendation of avoiding or preventing Dehydration.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-09-15T11:00:00Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dehydration avoidance</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid Dehydration recommendation</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dehydration prevention recommendation</rdfs:label>
     </owl:Class>
     
 
@@ -2479,7 +2479,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000044"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0001113"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000521"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000822"/>
@@ -2487,12 +2487,12 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000044"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical requirement or recommendation to avoid hypertension.</obo:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-11T19:59:54Z</dc:date>
-        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid hypertension</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hypertension avoidance</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical requirement or recommendation of avoiding or preventing Hypertension.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-09-15T11:00:00Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hypertension avoidance</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid Hypertension recommendation</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hypertension prevention recommendation</rdfs:label>
     </owl:Class>
     
 
@@ -2503,7 +2503,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000044"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0001113"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000521"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0001513"/>
@@ -2511,11 +2511,12 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000044"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical recommendation to avoid obesity.</obo:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-11T20:01:31Z</dc:date>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid obesity</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obesity avoidance</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical requirement or recommendation of avoiding or preventing Obesity.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-09-15T11:00:00Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Obesity avoidance</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid Obesity recommendation</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obesity prevention recommendation</rdfs:label>
     </owl:Class>
     
 
@@ -2526,7 +2527,18 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000044"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0001113"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000521"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0001944"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0001113"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000521"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0011123"/>
@@ -2534,12 +2546,12 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000044"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical requirement or recommendation to avoid skin inflammation.</obo:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-11T20:03:43Z</dc:date>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid skin abrasion</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid skin inflammation</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skin inflammation avoidance</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical requirement or recommendation of avoiding or preventing Inflammatory abnormality of the skin.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-09-15T11:00:00Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inflammatory abnormality of the skin avoidance</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid Inflammatory abnormality of the skin recommendation</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inflammation of the skin prevention recommendation</rdfs:label>
     </owl:Class>
     
 
@@ -2553,8 +2565,10 @@
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-11T20:11:57Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>avoid exercise</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>avoidance of physical activity recommendation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>rest recommendation</oboInOwl:hasRelatedSynonym>
-        <rdfs:label xml:lang="en">therapeutic avoidance of physical activity</rdfs:label>
+        <rdfs:comment>avoidance of physical activity therapeutic recommendation</rdfs:comment>
+        <rdfs:label xml:lang="en">physical activity avoidance recommendation</rdfs:label>
     </owl:Class>
     
 
@@ -2563,10 +2577,12 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000050">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000049"/>
+        <obo:IAO_0000115>A recommendation by a clinician or therapist to avoid any impact activities to prevent medical issues or help the physical wellbeing of a patient.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-11T20:12:16Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>impact sports avoidance</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">therapeutic impact activities avoidance</rdfs:label>
+        <oboInOwl:hasExactSynonym>therapeutic recommendation to avoid impact activities</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">impact activities avoidance recommendation</rdfs:label>
     </owl:Class>
     
 
@@ -2575,9 +2591,11 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000051">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000049"/>
+        <obo:IAO_0000115>A recommendation by a clinician or therapist to avoid isometric exercises to prevent medical issues or help the physical wellbeing of a patient.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-11T20:13:10Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <rdfs:label xml:lang="en">therapeutic isometric exercise avoidance</rdfs:label>
+        <oboInOwl:hasExactSynonym>therapeutic recommendation to avoid isometric exercise</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">isometric exercise avoidance recommendation</rdfs:label>
     </owl:Class>
     
 
@@ -3478,14 +3496,15 @@
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Addition of multivitamin preparation to the diet for adequate and complete nutrition.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-19T21:08:59Z</dc:date>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-11-23T09:00:01Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasDbXref>NCIT:C1654</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dietary supplementation of multivitamin preparation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">multivitamin preparation supplemental intake</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">supplementation of multivitamin preparation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">supplementation with multivitamin</oboInOwl:hasExactSynonym>
         <rdfs:comment>A dietary supplement containing all or most of the vitamins that may not be readily available in the diet. Vitamins may be classified according to their solubility either in lipids (vitamins A, D, E, K, F) or in water (vitamins C, B-complex). Present in minute amounts in various foods, vitamins are essential to maintaining normal metabolism and biochemical functions.</rdfs:comment>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">multivitamin preparation</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">multivitamin supplementation</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3548,21 +3567,21 @@
                         <owl:someValuesFrom>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03413763"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_21241"/>
                             </owl:Restriction>
                         </owl:someValuesFrom>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Addition of obsolete: vitamin C to the diet for adequate and complete nutrition.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Addition of vitamin C to the diet for adequate and complete nutrition.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-19T21:09:48Z</dc:date>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-11-23T09:00:01Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dietary supplementation of obsolete: vitamin C</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete: vitamin C supplemental intake</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">supplementation of obsolete: vitamin C</oboInOwl:hasExactSynonym>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete: vitamin C</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete: vitamin C supplementation</rdfs:label>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dietary supplementation of vitamin C</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">supplementation of vitamin C</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vitamin C supplemental intake</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vitamin C supplementation</rdfs:label>
     </owl:Class>
     
 
@@ -17664,15 +17683,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000676 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000676">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000667"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000673"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000680"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000702"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000707"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000712"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000718"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000723"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000725"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000021"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000665"/>
         <obo:IAO_0000115>An evaluation by a physician who specializes in Hospice and Palliative Medicine who provides care to prevent and relieve the suffering experienced by patients with life-limiting illnesses. This specialist works with an interdisciplinary hospice or palliative care team to optimize quality of life while addressing the physical, psychological, social and spiritual needs of both patient and family.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-01T19:53:31Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -19547,7 +19559,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dietary supplementation of vitamin b12</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">supplementation of vitamin b12</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vitamin b12 supplemental intake</oboInOwl:hasExactSynonym>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vitamin b12</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vitamin b12 supplementation</rdfs:label>
     </owl:Class>
     
@@ -19565,21 +19576,20 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
                         <owl:someValuesFrom>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03460216"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_75769"/>
                             </owl:Restriction>
                         </owl:someValuesFrom>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Addition of obsolete: vitamin B to the diet for adequate and complete nutrition.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Addition of B vitaminvitamin B to the diet for adequate and complete nutrition.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-11-23T09:00:01Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dietary supplementation of obsolete: vitamin B</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete: vitamin B supplemental intake</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">supplementation of obsolete: vitamin B</oboInOwl:hasExactSynonym>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete: vitamin B</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete: vitamin B supplementation</rdfs:label>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B vitaminvitamin B supplemental intake</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dietary supplementation of B vitaminvitamin B</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">supplementation of B vitaminvitamin B</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B vitaminvitamin B supplementation</rdfs:label>
     </owl:Class>
     
 
@@ -19891,11 +19901,9 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000784">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000783"/>
         <obo:IAO_0000115>A quantitative measurement of the amount of human chorionic gonadotropin present in urine or serum.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-09T20:20:44Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasExactSynonym>HCG pregnancy measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>human chorionic gonadotropin measurement</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">HCG measurement</rdfs:label>
     </owl:Class>
@@ -20320,7 +20328,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000804">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000049"/>
-        <obo:IAO_0000115>Limit activities where a great deal of balance may be required.</obo:IAO_0000115>
+        <obo:IAO_0000115>Limit activities where a great deal of balance may be required to prevent issues or help the wellbeing of a patient.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-10T21:23:13Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>avoid acitivities requiring balance</oboInOwl:hasExactSynonym>
@@ -21452,6 +21460,30 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000869 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000869">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000527"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007565"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                                <owl:someValuesFrom>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000916"/>
+                                    </owl:Restriction>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000782"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000792"/>
         <obo:IAO_0000115>A systemic evaluation of the abdomen using visual inspection, palpation, and percussion during pregnancy to determine the health of the mother and fetus.</obo:IAO_0000115>
@@ -21460,6 +21492,20 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>abdominal examination during pregnancy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>pregnant abdomen examination</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">obstetric abdominal examination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000870 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000870">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000783"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000784"/>
+        <obo:IAO_0000115>A quantitative measurement of the amount of human chorionic gonadotropin present in urine or serum for the purpose of determining whether the patient is pregnant.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-05-27T19:38:10Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>HCG pregnancy test</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">pregnancy HCG test</rdfs:label>
     </owl:Class>
     
 
@@ -21825,7 +21871,9 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000107"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Addition of vitamin supplement, prenatal to the diet for adequate and complete nutrition.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-23T19:56:32Z</dc:date>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-11-23T09:00:01Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasDbXref>NCIT:C92860</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>antenatal supplementation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>antenatal vitamin supplement treatment</oboInOwl:hasExactSynonym>
@@ -21836,7 +21884,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>treatment with prenatal supplements</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vitamin supplement, prenatal supplemental intake</oboInOwl:hasExactSynonym>
         <rdfs:comment>A vitamin enriched supplement containing higher doses for specific nutrients such as folic acid, intended for women before, during and after pregnancy and also during their lactating phase.</rdfs:comment>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vitamin supplement, prenatal</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prenatal vitamin supplementation</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -24496,19 +24543,21 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000044"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000017"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000521"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0001944"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical requirement or recommendation to avoid abnormal phenotypes.</obo:IAO_0000115>
+        <obo:IAO_0000115>A medical requirement or recommendation of avoiding or preventing abnormal physiologic state.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-09-15T11:00:00Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid phenotype abnormality</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal phenotype avoidance</rdfs:label>
+        <oboInOwl:hasExactSynonym>avoid physiologic state recommendation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>prevent physiologic state avoidance</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>prevent physiologic state recommendation</oboInOwl:hasExactSynonym>
+        <rdfs:label>prevention of abnormal physiologic state</rdfs:label>
     </owl:Class>
     
 
@@ -24519,7 +24568,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000044"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0001113"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000521"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0001946"/>
@@ -24527,11 +24576,12 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical requirement or recommendation to avoid ketosis.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical requirement or recommendation of avoiding or preventing Ketosis.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-09-15T11:00:00Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid ketosis</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ketosis avoidance</rdfs:label>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ketosis avoidance</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid Ketosis recommendation</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ketosis prevention recommendation</rdfs:label>
     </owl:Class>
     
 
@@ -24542,7 +24592,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000044"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0001113"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000521"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000819"/>
@@ -24550,11 +24600,12 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical requirement or recommendation to avoid diabetes.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical requirement or recommendation of avoiding or preventing Diabetes mellitus.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-09-15T11:00:00Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid diabetes</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">diabetes avoidance</rdfs:label>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diabetes mellitus avoidance</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid Diabetes mellitus recommendation</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diabetes mellitus prevention recommendation</rdfs:label>
     </owl:Class>
     
 
@@ -24565,7 +24616,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000044"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0001113"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000521"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0001945"/>
@@ -24573,12 +24624,12 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical requirement or recommendation to avoid a febrile state.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical requirement or recommendation of avoiding or preventing Fever.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-09-15T11:00:00Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid febrile state</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid fever</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fever avoidance</rdfs:label>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fever avoidance</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid Fever recommendation</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fever prevention recommendation</rdfs:label>
     </owl:Class>
     
 
@@ -24589,7 +24640,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000044"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0001113"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000521"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0001250"/>
@@ -24597,12 +24648,12 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical requirement or recommendation to avoid seizures.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommendation to avoid triggers known to cause seizures or take medicine to avoid seizures.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-09-15T11:00:00Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid seizure</oboInOwl:hasExactSynonym>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommendation to avoid triggers known to cause seizures or take medicine to avoid seizures.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">seizure avoidance</rdfs:label>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seizure avoidance</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid Seizure recommendation</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">seizure prevention recommendation</rdfs:label>
     </owl:Class>
     
 
@@ -24613,7 +24664,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000044"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0001113"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000521"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0002615"/>
@@ -24621,11 +24672,12 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical requirement or recommendation to avoid hypotension.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical requirement or recommendation of avoiding or preventing Hypotension.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-09-15T11:00:00Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid hypotension</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hypotension avoidance</rdfs:label>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hypotension avoidance</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid Hypotension recommendation</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hypotension prevention recommendation</rdfs:label>
     </owl:Class>
     
 
@@ -24636,7 +24688,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000044"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0001113"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000521"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003074"/>
@@ -24644,11 +24696,12 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical requirement or recommendation to avoid hyperglycemia.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical requirement or recommendation of avoiding or preventing Hyperglycemia.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-09-15T11:00:00Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid hyperglycemia</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyperglycemia avoidance</rdfs:label>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hyperglycemia avoidance</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid Hyperglycemia recommendation</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyperglycemia prevention recommendation</rdfs:label>
     </owl:Class>
     
 
@@ -24659,7 +24712,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000044"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0001113"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000521"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0001824"/>
@@ -24667,11 +24720,12 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical requirement or recommendation to avoid weight loss</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical requirement or recommendation of avoiding or preventing Weight loss.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-09-15T11:00:00Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid weight loss</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">weight loss avoidance</rdfs:label>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weight loss avoidance</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avoid Weight loss recommendation</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">weight loss avoidance recommendation</rdfs:label>
     </owl:Class>
     
 
@@ -24945,7 +24999,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dietary supplementation of Vitamin</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">supplementation of Vitamin</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">supplementation with vitamin</oboInOwl:hasExactSynonym>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vitamin</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vitamin supplementation</rdfs:label>
     </owl:Class>
     
@@ -25475,7 +25528,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dietary supplementation of dietary supplement, fibre</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">supplementation of dietary supplement, fibre</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">supplementation with soluble fiber</oboInOwl:hasExactSynonym>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dietary supplement, fibre</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">soluble fiber supplementation</rdfs:label>
     </owl:Class>
     
@@ -25506,7 +25558,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dietary supplementation of fish oil</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fish oil supplemental intake</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">supplementation of fish oil</oboInOwl:hasExactSynonym>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fish oil</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fish oil supplementation</rdfs:label>
     </owl:Class>
     
