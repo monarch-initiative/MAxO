@@ -15,9 +15,9 @@
      xmlns:schema="http://schema.org/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/imports/foodon_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2021-05-27/imports/foodon_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2021-06-07/imports/foodon_import.owl"/>
         <dc:source rdf:resource="http://purl.obolibrary.org/obo/foodon/releases/2021-05-24/foodon.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-05-27</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-06-07</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -507,6 +507,19 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <obo:IAO_0000119 xml:lang="en">FoodOn</obo:IAO_0000119>
         <rdfs:label xml:lang="en">has ingredient</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.fda.gov/food/food-ingredients-packaging/overview-food-ingredients-additives-colors"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000052 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000052">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002314"/>
+        <obo:IAO_0000111 xml:lang="en">inheres in</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">a relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
+        <rdfs:label xml:lang="en">inheres in</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2455,6 +2468,28 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label xml:lang="en">iron</rdfs:label>
         <rdfs:label>iron atom</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_21241 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_21241">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27314"/>
+        <obo:GENEPIO_0000006 xml:lang="en">vitamin C role</obo:GENEPIO_0000006>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
+        <oboInOwl:hasDbXref rdf:resource="http://www.langual.org/langual_thesaurus.asp?termid=B3763"/>
+        <oboInOwl:hasDbXref>PMID:21885436</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Vitamin C</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>vitamina C</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>vitamine C</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>vitaminum C</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>CHEBI:21241</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
+        <rdfs:label>vitamin C</rdfs:label>
+        <rdfs:label xml:lang="en">vitamin C</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">DIRECTIVE 2002/46/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 10 June 2002 on the approximation of the laws of the Member States relating to food supplements [http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2002:183:0051:0057:EN:PDF].</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -5751,7 +5786,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001006"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A food product made of meat, the skeletal muscle and associated fat, and other edible tissues such as organs, livers, skin, brains, bone marrow, kidneys, or lungs, of mammals.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>http://en.wikipedia.org/wiki/Meat</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Meat</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -6705,7 +6740,7 @@ https://www.politico.com/agenda/story/2016/03/crazy-us-chicken-egg-regulation-gr
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001274"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A food consisting of a round or oval body laid by the female of many animals, consisting of an ovum surrounded by layers of membranes and an outer casing, which acts to nourish and protect a developing embryo and its nutrient reserves.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:Egg_%28food%29</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Wikipedia:Egg_%28food%29</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 

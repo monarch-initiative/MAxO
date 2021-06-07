@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2021-05-28/maxo-base.owl
+data-version: maxo/releases/2021-06-07/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
@@ -7,7 +7,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2021-05-28" xsd:string
+property_value: owl:versionInfo "2021-06-07" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -44,6 +44,7 @@ synonym: "diagnostic testing" EXACT []
 xref: NCIT:C18020
 xref: OGMS:0000104
 is_a: MAXO:0000001 ! medical action
+equivalent_to: OBI:0002650
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:10:20Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -362,8 +363,6 @@ def: "A medical requirement or recommendation of avoiding or preventing Inflamma
 synonym: "avoid Inflammatory abnormality of the skin recommendation" EXACT []
 synonym: "Inflammatory abnormality of the skin avoidance" EXACT []
 intersection_of: MAXO:0001113 ! prevention of abnormal physiologic state
-intersection_of: MAXO:0001113 ! prevention of abnormal physiologic state
-intersection_of: MAXO:0000521 HP:0001944 ! avoided behavior
 intersection_of: MAXO:0000521 HP:0011123 ! avoided behavior
 property_value: http://purl.org/dc/elements/1.1/date 2020-09-15T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -882,7 +881,6 @@ def: "Addition of vitamin C to the diet for adequate and complete nutrition." []
 synonym: "dietary supplementation of vitamin C" EXACT []
 synonym: "supplementation of vitamin C" EXACT []
 synonym: "vitamin C supplemental intake" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:09:48Z xsd:dateTime
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -893,7 +891,6 @@ def: "Addition of vitamin D to a the diet for complete nutrition support." []
 synonym: "dietary supplementation of vitamin D" EXACT []
 synonym: "supplementation of vitamin D" EXACT []
 synonym: "vitamin D supplemental intake" EXACT []
-is_a: MAXO:0001129 ! vitamin supplementation
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:09:59Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1060,14 +1057,8 @@ replaced_by: MAXO:0000528
 
 [Term]
 id: MAXO:0000129
-name: biopsy procedure
-def: "An examination of tissue removed from the body to assess the presence, cause, or extent of a disease." []
-synonym: "biopsy" EXACT []
-xref: NCIT:C15189
-xref: OPMI:0000274
-is_a: MAXO:0000003 ! diagnostic procedure
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7941-2961
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-20T00:52:34Z xsd:dateTime
+name: obsolete biopsy procedure
+replaced_by: OBI:0002650
 
 [Term]
 id: MAXO:0000130
@@ -8397,7 +8388,7 @@ name: liquid biopsy
 def: "The sampling and analysis of non-solid biological tissue often through rapid and non-invasive methods, which allows the assessment in real-time of the evolving landscape of cancer." [PMID:32580740]
 synonym: "solid tumor monitoring" RELATED []
 is_a: MAXO:0000126 ! cancer screening
-is_a: MAXO:0000129 ! biopsy procedure
+is_a: OBI:0002650
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-19T20:45:40Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9690,7 +9681,6 @@ synonym: "treatment with prenatal supplements" EXACT []
 synonym: "vitamin supplement, prenatal supplemental intake" EXACT []
 xref: NCIT:C92860
 is_a: MAXO:0000107 ! multivitamin supplementation
-property_value: http://purl.org/dc/elements/1.1/date 2019-07-23T19:56:32Z xsd:dateTime
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -13482,6 +13472,10 @@ created_by: http://orcid.org/0000-0002-7463-6306
 [Term]
 id: OBI:0002600
 is_a: MAXO:0000547 ! clinical biospecimen collection
+
+[Term]
+id: OBI:0002650
+is_a: MAXO:0000003 ! diagnostic procedure
 
 [Typedef]
 id: MAXO:0000521

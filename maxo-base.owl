@@ -12,14 +12,14 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/maxo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2021-05-28/maxo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2021-06-07/maxo-base.owl"/>
         <dc:creator>Leigh Carmody</dc:creator>
         <dc:creator>Peter Robinson</dc:creator>
         <dc:description>An ontology to represent medically relevant actions, procedures, therapies, interventions, and recommendations.</dc:description>
         <dc:title>Medical Action Ontology</dc:title>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-05-28</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-06-07</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1946,6 +1946,7 @@
     <!-- http://purl.obolibrary.org/obo/MAXO_0000003 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000003">
+        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/OBI_0002650"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000001"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any procedure or test to diagnose a disease or disorder.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-16T20:10:20Z</dc:date>
@@ -2524,17 +2525,6 @@
     <!-- http://purl.obolibrary.org/obo/MAXO_0000048 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000048">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0001113"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000521"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0001944"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -3497,7 +3487,6 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Addition of multivitamin preparation to the diet for adequate and complete nutrition.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-19T21:08:59Z</dc:date>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-11-23T09:00:01Z</dc:date>
-        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasDbXref>NCIT:C1654</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dietary supplementation of multivitamin preparation</oboInOwl:hasExactSynonym>
@@ -3575,7 +3564,6 @@
             </owl:Class>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Addition of vitamin C to the diet for adequate and complete nutrition.</obo:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-19T21:09:48Z</dc:date>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-11-23T09:00:01Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dietary supplementation of vitamin C</oboInOwl:hasExactSynonym>
@@ -3605,7 +3593,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001129"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Addition of vitamin D to a the diet for complete nutrition support.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-19T21:09:59Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
@@ -3954,14 +3941,9 @@
     <!-- http://purl.obolibrary.org/obo/MAXO_0000129 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000003"/>
-        <obo:IAO_0000115>An examination of tissue removed from the body to assess the presence, cause, or extent of a disease.</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-20T00:52:34Z</dc:date>
-        <oboInOwl:hasDbXref>NCIT:C15189</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>OPMI:0000274</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>biopsy</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">biopsy procedure</rdfs:label>
+        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/OBI_0002650"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete biopsy procedure</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:deprecated>
     </owl:Class>
     
 
@@ -9247,7 +9229,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -9275,7 +9257,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -9303,7 +9285,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -9331,7 +9313,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -9359,7 +9341,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -9387,7 +9369,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -9415,7 +9397,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -9444,7 +9426,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -9472,7 +9454,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -9500,7 +9482,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -9528,7 +9510,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -9556,7 +9538,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -9584,7 +9566,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -9612,7 +9594,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -9640,7 +9622,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -9668,7 +9650,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -9696,7 +9678,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -9724,7 +9706,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -9752,7 +9734,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -9780,7 +9762,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -9808,7 +9790,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -9836,7 +9818,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -9864,7 +9846,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -9892,7 +9874,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -9920,7 +9902,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -9948,7 +9930,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -9976,7 +9958,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10004,7 +9986,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10032,7 +10014,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10060,7 +10042,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10088,7 +10070,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10116,7 +10098,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10144,7 +10126,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10172,7 +10154,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10200,7 +10182,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10228,7 +10210,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10256,7 +10238,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10284,7 +10266,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10312,7 +10294,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10340,7 +10322,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10368,7 +10350,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10396,7 +10378,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10424,7 +10406,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10452,7 +10434,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10480,7 +10462,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10508,7 +10490,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10536,7 +10518,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10564,7 +10546,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10592,7 +10574,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10620,7 +10602,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10648,7 +10630,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10676,7 +10658,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10704,7 +10686,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10732,7 +10714,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10760,7 +10742,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10788,7 +10770,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10816,7 +10798,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10844,7 +10826,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10874,7 +10856,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10902,7 +10884,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10931,7 +10913,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10959,7 +10941,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -10987,7 +10969,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11015,7 +10997,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11043,7 +11025,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11071,7 +11053,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11099,7 +11081,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11127,7 +11109,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11155,7 +11137,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11183,7 +11165,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11211,7 +11193,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11239,7 +11221,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11267,7 +11249,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11295,7 +11277,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11323,7 +11305,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11351,7 +11333,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11379,7 +11361,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11407,7 +11389,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11435,7 +11417,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11463,7 +11445,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11491,7 +11473,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11519,7 +11501,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11547,7 +11529,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11575,7 +11557,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11603,7 +11585,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11631,7 +11613,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11659,7 +11641,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11687,7 +11669,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11715,7 +11697,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11743,7 +11725,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11771,7 +11753,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11799,7 +11781,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11827,7 +11809,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11855,7 +11837,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11883,7 +11865,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11911,7 +11893,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11939,7 +11921,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -11967,7 +11949,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -14305,7 +14287,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -19448,7 +19430,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000755">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000126"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0002650"/>
         <obo:IAO_0000115>The sampling and analysis of non-solid biological tissue often through rapid and non-invasive methods, which allows the assessment in real-time of the evolving landscape of cancer.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T20:45:40Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -21870,9 +21852,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000107"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Addition of vitamin supplement, prenatal to the diet for adequate and complete nutrition.</obo:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-23T19:56:32Z</dc:date>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-11-23T09:00:01Z</dc:date>
-        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasDbXref>NCIT:C92860</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>antenatal supplementation</oboInOwl:hasExactSynonym>
@@ -24736,7 +24716,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000129"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002650"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
@@ -31791,6 +31771,12 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OBIB_0000211 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBIB_0000211"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBI_0000661 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000661"/>
@@ -31802,6 +31788,50 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002600">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000547"/>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0002650 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002650">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000003"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0002651 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002651"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0002652 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002652"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0002653 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002653"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0002654 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002654"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0002655 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002655"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0002657 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002657"/>
     
 
 
