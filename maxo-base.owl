@@ -12,14 +12,14 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/maxo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2021-06-07/maxo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2021-06-08/maxo-base.owl"/>
         <dc:creator>Leigh Carmody</dc:creator>
         <dc:creator>Peter Robinson</dc:creator>
         <dc:description>An ontology to represent medically relevant actions, procedures, therapies, interventions, and recommendations.</dc:description>
         <dc:title>Medical Action Ontology</dc:title>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-06-07</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-06-08</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1946,7 +1946,6 @@
     <!-- http://purl.obolibrary.org/obo/MAXO_0000003 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000003">
-        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/OBI_0002650"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000001"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any procedure or test to diagnose a disease or disorder.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-16T20:10:20Z</dc:date>
@@ -3871,7 +3870,7 @@
     <!-- http://purl.obolibrary.org/obo/MAXO_0000125 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000125">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000124"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000873"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Testing conducted utilizing a manual or microprocessor audiometer to test for hearing loss.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-20T00:42:26Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -3911,6 +3910,7 @@
     <!-- http://purl.obolibrary.org/obo/MAXO_0000127 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000127">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000003"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000124"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The process of isolating and testing the DNA of an embryo or a person to detect the presence of genetic alterations or defects that may predispose to the future development of a disease or disorder.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-20T00:46:22Z</dc:date>
@@ -12877,8 +12877,10 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000457">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000002"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000021"/>
+        <obo:IAO_0000115>The management of pain by interventional procedures, pharmacotherapy, physical therapy, psychological counseling, or complementary and alternative medical therapies designed to treat or alleviate pain.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-08T17:26:31Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>pain therapy</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">pain management</rdfs:label>
     </owl:Class>
     
@@ -14383,6 +14385,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000539">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000528"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000596"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Screening with a swab from the vaginal and rectal areas in late pregnancy to test for the presence of Group B streptococcal infection.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-19T20:47:28Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -15162,7 +15165,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000581">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000566"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
         <obo:IAO_0000115>A quantitative measurement of the amount of calcium present in a sample, usually serum or urine.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-31T19:19:43Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -15835,7 +15837,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000616 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000616">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000487"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The measurement of the ratio of oxygenated hemoglobin to total hemoglobin in the blood.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-08T18:45:55Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -20009,7 +20011,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000126"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000782"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A systemic evaluation of the breast using visual inspection, palpation, and percussion. The purpose is to determine the presence or absence of physical signs of disease or abnormality for an individual&apos;s health assessment.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-10T14:39:14Z</dc:date>
@@ -20914,9 +20915,16 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>alanine aminotransferase measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alanine transaminase measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>serum glutamic-pyruvic transaminase test</oboInOwl:hasExactSynonym>
+        <rdfs:comment>Alanine aminotransferase is an enzyme produced mainly in the liver. When serum activity is measured, it provides a marker of hepatic disease.</rdfs:comment>
         <rdfs:label xml:lang="en">alanine transaminase test</rdfs:label>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alanine transaminase test</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000840"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>Alanine aminotransferase is an enzyme produced mainly in the liver. When serum activity is measured, it provides a marker of hepatic disease.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:1992953</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -20945,8 +20953,15 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aspartate aminotransferase (human) test</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aspartate aminotransferase blood test</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>serum glutamic oxaloacetic transaminase test</oboInOwl:hasExactSynonym>
+        <rdfs:comment>Alanine aminotransferase (ALT), aspartate aminotransferase (AST) and gamma-glutamyl transferase (GGT) are enzymes measured in serum or plasma to investigate liver disease.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aspartate aminotransferase measurement</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000841"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>Alanine aminotransferase (ALT), aspartate aminotransferase (AST) and gamma-glutamyl transferase (GGT) are enzymes measured in serum or plasma to investigate liver disease.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:24072574</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -20978,6 +20993,12 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <rdfs:comment>Determination of gamma-glutamyl transferase (GGT) present in the sample as a measurement of liver function.</rdfs:comment>
         <rdfs:label>gamma glutamyl transpeptidase measurement</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000842"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>Determination of gamma-glutamyl transferase (GGT) present in the sample as a measurement of liver function.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:24072574</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -20995,7 +21016,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The determination of the amount of albumin (human) present in the sample.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-16T21:45:46Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
@@ -21026,7 +21046,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The determination of the amount of alkaline phosphatase present in the sample.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-16T21:50:44Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
@@ -21043,7 +21062,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000845 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000845">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000848"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The measurement of the total amount of bilirubin present in a particular substrate. The substrate most often tested is blood, but other fluids extracted from the body may be used periodically depending on the purpose of the test.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-16T21:52:27Z</dc:date>
@@ -21066,7 +21084,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000846">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
+        <obo:IAO_0000115>The determination of the amount of lactate dehydrogenase present in the sample.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-17T14:57:21Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C64855</oboInOwl:hasDbXref>
@@ -21090,7 +21108,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The determination of the amount of 5&apos;-nucleotidase present in the sample.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-17T15:01:15Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
@@ -21107,7 +21124,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000848 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000848">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000075"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
         <obo:IAO_0000115>The measurement of bilirubin present in a particular sample.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-17T15:06:51Z</dc:date>
@@ -21134,7 +21150,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000850">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
         <obo:IAO_0000115>A quantitative measurement of total protein present in the sample, usually serum or urine.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-17T15:16:41Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -21488,6 +21503,175 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>HCG pregnancy test</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">pregnancy HCG test</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000871 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000871">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000527"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007565"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                                <owl:someValuesFrom>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004801"/>
+                                    </owl:Restriction>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000782"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001154"/>
+        <obo:IAO_0000115>A systemic evaluation of the cervix during pregnancy to determine dilation and effacement of the cervix, cervical position and consistancy, and fetal position.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-06-07T18:34:00Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>cervical exam while pregnant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>obstetric examination of the cervix.</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>pregnant cervical exam</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">obstetric cervical examination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000872 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000872">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000126"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000790"/>
+        <obo:IAO_0000115>An evaluation of the breast using visual inspection, palpation, and percussion for the specific purpose of identifying breast changes which may be cancer.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-06-07T18:51:49Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>cancer breast exam</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">cancer screening breast examination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000873 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000873">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000003"/>
+        <obo:IAO_0000115>A test that evaluates of the sensitivity of a person&apos;s sense of hearing and is used to determine a person&apos;s hearing sensitivity at different frequencies.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-06-07T21:03:43Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>hearing assessment</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>hearing exam</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>hearing test</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">hearing examination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000874 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000874">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000843"/>
+        <obo:IAO_0000115>The determination of the amount of albumin (human) present in the sample in order to assess the liver&apos;s function.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-06-08T14:05:06Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>albumin test for liver function assessment</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>liver function albumin test</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">albumin test for liver function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000875 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000875">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000847"/>
+        <obo:IAO_0000115>The determination of the amount of 5&apos;-nucleotidase present in the sample to assess liver function.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-06-08T14:17:21Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>5&apos;-nucleotidase test for liver function assessment</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>liver function 5&apos;-nucleotidase measurement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>liver function 5&apos;-nucleotidase test</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">5&apos;-nucleotidase measurement for liver function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000876 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000876">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000844"/>
+        <obo:IAO_0000115>The determination of the amount of alkaline phosphatase present in the sample for assessment of liver function.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-06-08T14:20:25Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>alkaline phosphatase measurement for liver function assessment</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>liver function alk phos test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>liver function alkaline phosphatase measurement</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">alkaline phosphatase measurement for liver function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000877 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000877">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000581"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
+        <obo:IAO_0000115>A quantitative measurement of the amount of calcium present in a sample, usually serum or urine for the assessment of liver function.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-06-08T14:23:54Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>calcium test for liver function assessement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>liver function calcium test</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">calcium assessment for liver function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000878 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000878">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000846"/>
+        <obo:IAO_0000115>The determination of the amount of lactate dehydrogenase present in the sample to assess liver function.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-06-08T14:34:11Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <rdfs:label xml:lang="en">lactate dehydrogenase measurement for liver assessment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000879 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000879">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000845"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-06-08T14:47:38Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <rdfs:label xml:lang="en">total bilirubin measurement for assessment of liver function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000880 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000880">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000849"/>
+        <obo:IAO_0000115>A measurement of the unconjugated or non-water-soluble bilirubin in a biological specimen to assess liver function.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-06-08T15:31:21Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <rdfs:label xml:lang="en">indirect bilirubin measurement for assessment of liver function</rdfs:label>
     </owl:Class>
     
 
@@ -31771,12 +31955,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/OBIB_0000211 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBIB_0000211"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/OBI_0000661 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000661"/>
@@ -31826,6 +32004,12 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/OBI_0002655 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002655"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0002656 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002656"/>
     
 
 
@@ -32744,6 +32928,12 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/UBERON_0004537 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0004537"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0004801 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0004801"/>
     
 
 

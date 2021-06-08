@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2021-06-07/maxo-base.owl
+data-version: maxo/releases/2021-06-08/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
@@ -7,7 +7,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2021-06-07" xsd:string
+property_value: owl:versionInfo "2021-06-08" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -44,7 +44,6 @@ synonym: "diagnostic testing" EXACT []
 xref: NCIT:C18020
 xref: OGMS:0000104
 is_a: MAXO:0000001 ! medical action
-equivalent_to: OBI:0002650
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:10:20Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1027,7 +1026,7 @@ def: "Testing conducted utilizing a manual or microprocessor audiometer to test 
 synonym: "hearing exam procedure" EXACT []
 synonym: "hearing testing procedure" EXACT []
 xref: NCIT:C38036
-is_a: MAXO:0000124 ! disease screening
+is_a: MAXO:0000873 ! hearing examination
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-20T00:42:26Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1046,6 +1045,7 @@ name: genetic testing
 def: "The process of isolating and testing the DNA of an embryo or a person to detect the presence of genetic alterations or defects that may predispose to the future development of a disease or disorder." [NCIT:C15709]
 synonym: "genetic analysis" EXACT []
 xref: NCIT:C15709
+is_a: MAXO:0000003 ! diagnostic procedure
 is_a: MAXO:0000124 ! disease screening
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-20T00:46:22Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4919,6 +4919,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000457
 name: pain management
+def: "The management of pain by interventional procedures, pharmacotherapy, physical therapy, psychological counseling, or complementary and alternative medical therapies designed to treat or alleviate pain." []
+synonym: "pain therapy" EXACT []
 is_a: MAXO:0000002 ! therapeutic procedure
 is_a: MAXO:0000021 ! palliative care
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-08T17:26:31Z xsd:dateTime
@@ -5742,6 +5744,7 @@ synonym: "GBS" EXACT ABBREVIATION []
 synonym: "group B strep screening" EXACT []
 xref: NCIT:C92805
 is_a: MAXO:0000528 ! prenatal examination
+is_a: MAXO:0000596 ! infectious disease screening
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-19T20:47:28Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -6170,7 +6173,6 @@ def: "A quantitative measurement of the amount of calcium present in a sample, u
 synonym: "calcium measurement" EXACT []
 xref: NCIT:C64488
 is_a: MAXO:0000566 ! clinical chemistry assessment
-is_a: MAXO:0000778 ! liver function testing
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-31T19:19:43Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -6555,7 +6557,7 @@ id: MAXO:0000616
 name: oxygen saturation measurement
 def: "The measurement of the ratio of oxygenated hemoglobin to total hemoglobin in the blood." [NCIT:C60832]
 xref: NCIT:C60832
-is_a: MAXO:0000003 ! diagnostic procedure
+is_a: MAXO:0000487 ! clinical assessment
 property_value: http://purl.org/dc/elements/1.1/date 2020-04-08T18:45:55Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -8707,7 +8709,6 @@ synonym: "clinical breast exam" EXACT []
 synonym: "examination of breast" EXACT []
 synonym: "physical examination of breast" EXACT []
 xref: NCIT:C70552
-is_a: MAXO:0000126 ! cancer screening
 is_a: MAXO:0000782 ! obstetrics and gynecology procedure
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-10T14:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -9183,6 +9184,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000840
 name: alanine transaminase test
 def: "The determination of the amount of alanine aminotransferase (human) present in the sample." []
+comment: Alanine aminotransferase is an enzyme produced mainly in the liver. When serum activity is measured, it provides a marker of hepatic disease. {xref="PMID:1992953"}
 synonym: "alanine aminotransferase (human) assessment" EXACT []
 synonym: "alanine aminotransferase (human) test" EXACT []
 synonym: "alanine aminotransferase measurement" EXACT []
@@ -9202,6 +9204,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000841
 name: aspartate aminotransferase measurement
 def: "The determination of the amount of aspartate aminotransferase (human) present in the sample." []
+comment: Alanine aminotransferase (ALT), aspartate aminotransferase (AST) and gamma-glutamyl transferase (GGT) are enzymes measured in serum or plasma to investigate liver disease. {xref="PMID:24072574"}
 synonym: "aspartate aminotransferase (human) assessment" EXACT []
 synonym: "aspartate aminotransferase (human) test" EXACT []
 synonym: "aspartate aminotransferase blood test" EXACT []
@@ -9219,7 +9222,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000842
 name: gamma glutamyl transpeptidase measurement
 def: "The determination of the amount of gamma-glutamyltranspeptidase present in the sample." []
-comment: Determination of gamma-glutamyl transferase (GGT) present in the sample as a measurement of liver function.
+comment: Determination of gamma-glutamyl transferase (GGT) present in the sample as a measurement of liver function. {xref="PMID:24072574"}
 synonym: "gamma glutamyl transpeptidase measurement" EXACT []
 synonym: "gamma-glutamyltranspeptidase assessment" EXACT []
 synonym: "gamma-glutamyltranspeptidase test" EXACT []
@@ -9244,7 +9247,6 @@ synonym: "albumin assessment" EXACT []
 synonym: "albumin level measurement" EXACT []
 synonym: "albumin test" EXACT []
 xref: NCIT:C64431
-is_a: MAXO:0000778 ! liver function testing
 intersection_of: MAXO:0000566 ! clinical chemistry assessment
 intersection_of: RO:0002233 PR:P02768
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:45:46Z xsd:string
@@ -9259,7 +9261,6 @@ synonym: "alkaline phosphatase assessment" EXACT []
 synonym: "alkaline phosphatase test" EXACT []
 synonym: "ALP measurement" EXACT []
 xref: NCIT:C64432
-is_a: MAXO:0000778 ! liver function testing
 intersection_of: MAXO:0000566 ! clinical chemistry assessment
 intersection_of: RO:0002233 PR:000023540
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:50:44Z xsd:string
@@ -9272,7 +9273,6 @@ def: "The measurement of the total amount of bilirubin present in a particular s
 synonym: "BILI measurement" EXACT []
 synonym: "total bilirubin level measurement" EXACT []
 xref: NCIT:C38037
-is_a: MAXO:0000778 ! liver function testing
 is_a: MAXO:0000848 ! bilirubin measurement
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:52:27Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -9280,10 +9280,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000846
 name: lactate dehydrogenase measurement
+def: "The determination of the amount of lactate dehydrogenase present in the sample." []
 synonym: "LDH measurement" EXACT []
 xref: NCIT:C64855
 is_a: MAXO:0000605 ! protein measurement
-is_a: MAXO:0000778 ! liver function testing
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T14:57:21Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9296,7 +9296,6 @@ synonym: "5'- nucleotidase measurement" EXACT []
 synonym: "5'-nucleotidase assessment" EXACT []
 synonym: "5'-nucleotidase test" EXACT []
 xref: NCIT:C79437
-is_a: MAXO:0000778 ! liver function testing
 intersection_of: MAXO:0000566 ! clinical chemistry assessment
 intersection_of: RO:0002233 PR:000001800
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:01:15Z xsd:string
@@ -9306,7 +9305,6 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000848
 name: bilirubin measurement
 def: "The measurement of bilirubin present in a particular sample." []
-is_a: MAXO:0000075 ! digestive system testing
 is_a: MAXO:0000605 ! protein measurement
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:06:51Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -9326,7 +9324,6 @@ name: total protein measurement
 def: "A quantitative measurement of total protein present in the sample, usually serum or urine." []
 xref: NCIT:C64858
 is_a: MAXO:0000605 ! protein measurement
-is_a: MAXO:0000778 ! liver function testing
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:16:41Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9493,6 +9490,111 @@ synonym: "HCG pregnancy test" EXACT []
 is_a: MAXO:0000783 ! pregnancy test
 is_a: MAXO:0000784 ! HCG measurement
 property_value: http://purl.org/dc/elements/1.1/date 2021-05-27T19:38:10Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000871
+name: obstetric cervical examination
+def: "A systemic evaluation of the cervix during pregnancy to determine dilation and effacement of the cervix, cervical position and consistancy, and fetal position." []
+synonym: "cervical exam while pregnant" EXACT []
+synonym: "obstetric examination of the cervix." EXACT []
+synonym: "pregnant cervical exam" EXACT []
+is_a: MAXO:0000782 ! obstetrics and gynecology procedure
+is_a: MAXO:0001154 ! cervical examination
+property_value: http://purl.org/dc/elements/1.1/date 2021-06-07T18:34:00Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000872
+name: cancer screening breast examination
+def: "An evaluation of the breast using visual inspection, palpation, and percussion for the specific purpose of identifying breast changes which may be cancer." []
+synonym: "cancer breast exam" EXACT []
+is_a: MAXO:0000126 ! cancer screening
+is_a: MAXO:0000790 ! clinical breast examination
+property_value: http://purl.org/dc/elements/1.1/date 2021-06-07T18:51:49Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000873
+name: hearing examination
+def: "A test that evaluates of the sensitivity of a person's sense of hearing and is used to determine a person's hearing sensitivity at different frequencies." []
+synonym: "hearing assessment" EXACT []
+synonym: "hearing exam" EXACT []
+synonym: "hearing test" EXACT []
+is_a: MAXO:0000003 ! diagnostic procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-06-07T21:03:43Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000874
+name: albumin test for liver function
+def: "The determination of the amount of albumin (human) present in the sample in order to assess the liver's function." []
+synonym: "albumin test for liver function assessment" EXACT []
+synonym: "liver function albumin test" EXACT []
+is_a: MAXO:0000778 ! liver function testing
+is_a: MAXO:0000843 ! albumin measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-06-08T14:05:06Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000875
+name: 5'-nucleotidase measurement for liver function
+def: "The determination of the amount of 5'-nucleotidase present in the sample to assess liver function." []
+synonym: "5'-nucleotidase test for liver function assessment" EXACT []
+synonym: "liver function 5'-nucleotidase measurement" EXACT []
+synonym: "liver function 5'-nucleotidase test" EXACT []
+is_a: MAXO:0000778 ! liver function testing
+is_a: MAXO:0000847 ! 5'-nucleotidase measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-06-08T14:17:21Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000876
+name: alkaline phosphatase measurement for liver function
+def: "The determination of the amount of alkaline phosphatase present in the sample for assessment of liver function." []
+synonym: "alkaline phosphatase measurement for liver function assessment" EXACT []
+synonym: "liver function alk phos test" EXACT []
+synonym: "liver function alkaline phosphatase measurement" EXACT []
+is_a: MAXO:0000778 ! liver function testing
+is_a: MAXO:0000844 ! alkaline phosphatase measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-06-08T14:20:25Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000877
+name: calcium assessment for liver function
+def: "A quantitative measurement of the amount of calcium present in a sample, usually serum or urine for the assessment of liver function." []
+synonym: "calcium test for liver function assessement" EXACT []
+synonym: "liver function calcium test" EXACT []
+is_a: MAXO:0000581 ! calcium assessment
+is_a: MAXO:0000778 ! liver function testing
+property_value: http://purl.org/dc/elements/1.1/date 2021-06-08T14:23:54Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000878
+name: lactate dehydrogenase measurement for liver assessment
+def: "The determination of the amount of lactate dehydrogenase present in the sample to assess liver function." []
+is_a: MAXO:0000778 ! liver function testing
+is_a: MAXO:0000846 ! lactate dehydrogenase measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-06-08T14:34:11Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000879
+name: total bilirubin measurement for assessment of liver function
+is_a: MAXO:0000778 ! liver function testing
+is_a: MAXO:0000845 ! total bilirubin measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-06-08T14:47:38Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000880
+name: indirect bilirubin measurement for assessment of liver function
+def: "A measurement of the unconjugated or non-water-soluble bilirubin in a biological specimen to assess liver function." []
+is_a: MAXO:0000778 ! liver function testing
+is_a: MAXO:0000849 ! indirect bilirubin measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-06-08T15:31:21Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
