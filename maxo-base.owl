@@ -12,14 +12,14 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/maxo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2021-06-10/maxo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2021-06-11/maxo-base.owl"/>
         <dc:creator>Leigh Carmody</dc:creator>
         <dc:creator>Peter Robinson</dc:creator>
         <dc:description>An ontology to represent medically relevant actions, procedures, therapies, interventions, and recommendations.</dc:description>
         <dc:title>Medical Action Ontology</dc:title>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-06-10</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-06-11</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -2889,33 +2889,14 @@
     <!-- http://purl.obolibrary.org/obo/MAXO_0000070 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000070">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000068"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
-                        <owl:someValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002107"/>
-                            </owl:Restriction>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The surgical transfer of a healthy liver to a patient.</obo:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-06-24T20:39:14Z</dc:date>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001175"/>
         <oboInOwl:hasDbXref>NCIT:C15271</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>hepatic transplantation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>liver grafting</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>liver transplantation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">liver transplantation surgical procedure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>surgical transplantation of the liver</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transplantation of liver</oboInOwl:hasExactSynonym>
-        <rdfs:label>liver transplantation</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete liver transplantation</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:deprecated>
     </owl:Class>
     
 
@@ -7178,6 +7159,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000236">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000015"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000062"/>
+        <obo:IAO_0000115>Treatment with a biological agent (monoclonal antibody) that target factors responsible for deregulated cell proliferation as in cancer.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T18:55:45Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C15490</oboInOwl:hasDbXref>
@@ -7685,6 +7667,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000255">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000163"/>
+        <obo:IAO_0000115>Treatment with an antidepressant that can be used to treat anxiety.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T20:32:25Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <rdfs:label xml:lang="en">antidepressant anxiolytics</rdfs:label>
@@ -8011,7 +7994,9 @@
     <!-- http://purl.obolibrary.org/obo/MAXO_0000268 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000268">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000245"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000267"/>
+        <obo:IAO_0000115>Treatment to regulate muscle contractions in the gastrointestinal tract.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T20:37:00Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>gastrointestinal anti-spasmodic agent therapy</oboInOwl:hasExactSynonym>
@@ -8207,6 +8192,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000280">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000283"/>
+        <obo:IAO_0000115>Treatment with an agent or medication that regulates hormones released by the pituitary.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T20:44:06Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>treatment with pituitary modifier</oboInOwl:hasExactSynonym>
@@ -8222,6 +8208,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000281">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000283"/>
+        <obo:IAO_0000115>Treatment with an agent regulating protaglandins.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T20:45:21Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>treatment with prostaglandin modifier</oboInOwl:hasExactSynonym>
@@ -8237,9 +8224,12 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000282">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000283"/>
+        <obo:IAO_0000115>Treatment with any agent or medication that modifies androgen, estrogens, and/or progestogens.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T20:46:02Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>sex hormone modifying drug treatment</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>gonadal steroid modifying agent therapy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>gonadocorticoid modifying agent therapy</oboInOwl:hasNarrowSynonym>
         <rdfs:label xml:lang="en">sex hormone modifying agent therapy</rdfs:label>
     </owl:Class>
     
@@ -8271,6 +8261,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000284">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000283"/>
+        <obo:IAO_0000115>Treatment with an agent or medication that regulates hormones released by the thyroid.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T20:51:04Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>treatment with thyroid modifier</oboInOwl:hasExactSynonym>
@@ -8302,6 +8293,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000286">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000282"/>
+        <obo:IAO_0000115>Treatment with an agent to modify androgen action.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T20:51:44Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>treatment with androgen agent</oboInOwl:hasExactSynonym>
@@ -8362,6 +8354,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000288">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000282"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000744"/>
+        <obo:IAO_0000115>Treatment with an agent to modify progestin action.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T20:52:15Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>progestin modifying drug treatment</oboInOwl:hasExactSynonym>
@@ -8378,6 +8371,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000289">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000282"/>
+        <obo:IAO_0000115>Treatment with an agent to that selectively modifies estrogen receptor action.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T20:52:46Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <rdfs:label xml:lang="en">selective-estrogen receptor modifying agent therapy</rdfs:label>
@@ -8430,6 +8424,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000291">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000286"/>
+        <obo:IAO_0000115>Use of a compound which increases or activates the biosynthesis or actions of androgens.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T20:54:46Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>treatment with androgen agonist</oboInOwl:hasExactSynonym>
@@ -8675,6 +8670,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000298">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000295"/>
+        <obo:IAO_0000115>Treatment with antibodies to a disease to provide a temporary immunity.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T21:00:40Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <rdfs:label xml:lang="en">passive immunizing agent therapy</rdfs:label>
@@ -8730,6 +8726,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000304">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+        <obo:IAO_0000115>Treatment with drug or agent to treat or prevent deformities or abnormalities of the bone caused by a metabolic disorder.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T21:04:21Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>metabolic bone disease drug treatment</oboInOwl:hasExactSynonym>
@@ -8789,6 +8786,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000306">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000305"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000633"/>
+        <obo:IAO_0000115>Treatment with medication delivered directly to the eye to treat allergies or allergy symptoms.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T21:04:55Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <rdfs:label xml:lang="en">ophthalmic anti-allergy agent therapy</rdfs:label>
@@ -8842,6 +8840,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000308">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000169"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000305"/>
+        <obo:IAO_0000115>Treatment with an agent or medication formulated to be applied in the eyes, to reduce pain or to treat inflammation, especially used after eye surgery to relieve pain.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T21:05:47Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <rdfs:label xml:lang="en">ophthalmic anti-inflammatory agent therapy</rdfs:label>
@@ -8853,6 +8852,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000309">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000305"/>
+        <obo:IAO_0000115>Treatment with an agent applied directly to the eye to treat elevated intraocular pressure (IOP) via regulating prostaglandin and prostamide.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T21:06:19Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <rdfs:label xml:lang="en">ophthalmic prostaglandin and prostamide agent therapy</rdfs:label>
@@ -8956,6 +8956,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000314">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000312"/>
+        <obo:IAO_0000115>Treatment with an inhaled agent that reduces inflammation and mucus in the airways that carry air to the lungs.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T21:09:38Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>inhaled corticosteroid drug treatment</oboInOwl:hasExactSynonym>
@@ -9049,6 +9050,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000317">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000316"/>
+        <obo:IAO_0000115>Treatment with an agent that blocks the effect of acetylcholine in airways and nasal passages to keep the airways from constricting during asthma and allergy-related brathing issues.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T21:10:37Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>anticholinergic bronchodilator drug treatment</oboInOwl:hasExactSynonym>
@@ -9061,6 +9063,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000318">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000316"/>
+        <obo:IAO_0000115>Treatment with a phosphodiesterase (PDE) inhibitor that decreases mean pulmonary arterial pressure.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T21:11:08Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>phosphodiesterase inhibitor bronchodilator drug treatment</oboInOwl:hasExactSynonym>
@@ -9073,9 +9076,14 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000319">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000316"/>
+        <obo:IAO_0000115>Treatment with an agent for reversible airway obstruction in diseases such as asthma and COPD. These agents produce bronchodilation by stimulating beta2 adrenergic receptors on airway smooth muscle.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T21:11:37Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>adrenergic bronchiodilator agent therapy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>adrenergic bronchiodilator agent treatment</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>adrenergic bronchiodilator drug therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>sympathomimetic bronchodilator drug therapy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>treatment with adrenergic bronchiodilator agent</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">sympathomimetic bronchodilator agent therapy</rdfs:label>
     </owl:Class>
     
@@ -9085,6 +9093,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000320">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000312"/>
+        <obo:IAO_0000115>Treatment with an agent that block mast cell degranulation, stabilizing the cell and thereby preventing the release of histamine and other factors thereby preventing or regulating allergic disorders.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T21:12:02Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C29714</oboInOwl:hasDbXref>
@@ -9100,6 +9109,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000321">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000312"/>
+        <obo:IAO_0000115>Treatment with an agent that decreases pulmonary hypertension.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T21:12:15Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>pulmonary antihypertensive drug treatment</oboInOwl:hasExactSynonym>
@@ -12547,6 +12557,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000441">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000440"/>
+        <obo:IAO_0000115>Treatment with an agent that stimulate the proliferation of bone marrow cells and differentiation of stem cells into colonies of granulocytes.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-08T18:06:31Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C1287</oboInOwl:hasDbXref>
@@ -12577,6 +12588,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000442">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000179"/>
+        <obo:IAO_0000115>Treatment with agents or medications which modulate the bone marrow&apos;s production of red blood cells.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-08T18:37:29Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>erythropoietin modulating treatment</oboInOwl:hasExactSynonym>
@@ -13041,6 +13053,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000465">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000011"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000458"/>
+        <obo:IAO_0000115>Therapy occuring in a pool or bath which is a low-impact activity and takes the pressure off your bones, joints, and muscles.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-08T18:07:42Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <rdfs:label xml:lang="en">aquatic exercise therapy</rdfs:label>
@@ -13274,10 +13287,10 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000477">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000002"/>
+        <obo:IAO_0000115>Any procedure relating to the branch of medicine dealing with the correction of deformities of bones or muscles.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-20T17:50:35Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>MeSH:D019637</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Any procedure relating to the branch of medicine dealing with the correction of deformities of bones or muscles.</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>orthopaedic procedure</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">orthopedic procedure</rdfs:label>
     </owl:Class>
@@ -15838,6 +15851,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000614">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000613"/>
+        <obo:IAO_0000115>Immunofluorescence staining used in a pathology or clinical lab to diagnose diseases of the skin, kidney, heart, cilia and other organ systems.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-08T15:46:23Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <rdfs:label xml:lang="en">clinical immunofluorescence assay testing</rdfs:label>
@@ -16814,6 +16828,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+        <obo:IAO_0000115>Treatment with an agent that modifies a particular molecular pathway.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-05-28T19:11:27Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>CHEBI:52206</oboInOwl:hasExactSynonym>
@@ -17177,9 +17192,9 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000654">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000190"/>
+        <obo:IAO_0000115>Treatment with a group of pharmaceutical drugs used primarily in treatment of essential hypertension. These drugs inhibit the first and rate-limiting step of the renin–angiotensin–aldosterone system, namely the conversion of angiotensinogen to angiotensin I.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-06-04T17:32:06Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasExactSynonym>Treatment with a group of pharmaceutical drugs used primarily in treatment of essential hypertension. These drugs inhibit the first and rate-limiting step of the renin–angiotensin–aldosterone system, namely the conversion of angiotensinogen to angiotensin I.</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">renin inhibitor therapy</rdfs:label>
     </owl:Class>
     
@@ -17480,6 +17495,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000267"/>
+        <obo:IAO_0000115>Treatment with an agent that is used to prevent or inhibit diarrhea.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-06-09T15:32:19Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>CHEBI:55323</oboInOwl:hasDbXref>
@@ -17919,6 +17935,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000684">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000680"/>
+        <obo:IAO_0000115>An assessment with an internist trained in critical care medicine who has expertise in the diagnosis, treatment and support of critically ill and injured patients, particularly trauma victims and patients with multiple organ dysfunction.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-01T20:35:47Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>consultation with critical care medicine internist</oboInOwl:hasExactSynonym>
@@ -21019,12 +21036,11 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <oboInOwl:hasDbXref>NCIT:C64847</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>GGT test</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>GTP test</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>gamma glutamyl transpeptidase measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>gamma-GT test</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gamma-glutamyltranspeptidase assessment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gamma-glutamyltranspeptidase test</oboInOwl:hasExactSynonym>
         <rdfs:comment>Determination of gamma-glutamyl transferase (GGT) present in the sample as a measurement of liver function.</rdfs:comment>
-        <rdfs:label>gamma glutamyl transpeptidase measurement</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gamma glutamyl transpeptidase measurement</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000842"/>
@@ -21687,6 +21703,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000879">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000845"/>
+        <obo:IAO_0000115>The measurement of the total amount of bilirubin present in a particular substrate in order to assess liver function. The substrate most often tested is blood, but other fluids extracted from the body may be used periodically depending on the purpose of the test.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-06-08T14:47:38Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <rdfs:label xml:lang="en">total bilirubin measurement for assessment of liver function</rdfs:label>
@@ -21790,6 +21807,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001003">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000218"/>
+        <obo:IAO_0000115>Treatment with a drug that deters or encourages the cessation of drinking alcohol.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-15T16:33:57Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>alcohol deterrent drug treatment</oboInOwl:hasExactSynonym>
@@ -21802,6 +21820,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001004">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000218"/>
+        <obo:IAO_0000115>Treatment with a drug that deters smoking or encourages the cessation of smoking tobacco.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-15T16:44:49Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>smoking cessation drug treatment</oboInOwl:hasExactSynonym>
@@ -21913,9 +21932,9 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001009">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000544"/>
+        <obo:IAO_0000115>A test to determine the number of neutrophils in a sample of blood.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-16T18:24:56Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasExactSynonym>A test to determine the number of neutrophils in a sample of blood.</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">neutrophil count</rdfs:label>
     </owl:Class>
     
@@ -25044,6 +25063,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <obo:IAO_0000115>Treatment with any agent that lowers cholesterol.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-11-17T11:00:00Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anticholesteremic drug therapy</oboInOwl:hasExactSynonym>
@@ -26537,6 +26557,36 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blood serum protein test</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protein blood serum assessment</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">serum protein measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001175 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001175">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000068"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002107"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The surgical transfer of a healthy liver to a patient.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-06-24T20:39:14Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT:C15271</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">liver transplantation surgical procedure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transplantation of liver</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">liver transplantation</rdfs:label>
     </owl:Class>
     
 

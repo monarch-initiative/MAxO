@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2021-06-10/maxo-base.owl
+data-version: maxo/releases/2021-06-11/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
@@ -7,7 +7,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2021-06-10" xsd:string
+property_value: owl:versionInfo "2021-06-11" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -548,17 +548,13 @@ replaced_by: MAXO:0010038
 
 [Term]
 id: MAXO:0000070
-name: liver transplantation
-def: "The surgical transfer of a healthy liver to a patient." []
+name: obsolete liver transplantation
 synonym: "hepatic transplantation" EXACT []
 synonym: "liver grafting" EXACT []
 synonym: "liver transplantation" EXACT []
-synonym: "liver transplantation surgical procedure" EXACT []
 synonym: "surgical transplantation of the liver" EXACT []
-synonym: "transplantation of liver" EXACT []
 xref: NCIT:C15271
-property_value: http://purl.org/dc/elements/1.1/date 2020-06-24T20:39:14Z xsd:string
-created_by: http://orcid.org/0000-0001-7941-2961
+replaced_by: MAXO:0001175
 
 [Term]
 id: MAXO:0000071
@@ -2655,6 +2651,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000236
 name: antineoplastic monoclonal antibody agent therapy
+def: "Treatment with a biological agent (monoclonal antibody) that target factors responsible for deregulated cell proliferation as in cancer." []
 synonym: "antineoplastic monoclonal antibodies therapy" EXACT []
 synonym: "antineoplastic monoclonal antibody drug treatment" EXACT []
 xref: NCIT:C15490
@@ -2946,6 +2943,7 @@ replaced_by: MAXO:0000163
 [Term]
 id: MAXO:0000255
 name: antidepressant anxiolytics
+def: "Treatment with an antidepressant that can be used to treat anxiety." []
 is_a: MAXO:0000163 ! anxiolytic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:32:25Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3102,10 +3100,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000268
 name: gastrointestinal antispasmodics agent therapy
+def: "Treatment to regulate muscle contractions in the gastrointestinal tract." []
 synonym: "gastrointestinal anti-spasmodic agent therapy" EXACT []
 synonym: "gastrointestinal antispasmodic agent therapy" EXACT []
 synonym: "gastrointestinal antispasmodic drug treatment" EXACT []
 synonym: "gastrointestinal antispasmodic treatment therapy" EXACT []
+is_a: MAXO:0000245 ! antispasticity agent therapy
 is_a: MAXO:0000267 ! gastrointestinal agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:37:00Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3217,6 +3217,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000280
 name: pituitary-modifying, hormonal agent therapy
+def: "Treatment with an agent or medication that regulates hormones released by the pituitary." []
 synonym: "treatment with pituitary modifier" EXACT []
 synonym: "treatment with pituitary modifying agent" EXACT []
 synonym: "treatment with pituitary modifying drug" EXACT []
@@ -3228,6 +3229,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000281
 name: prostaglandin-modifying, hormonal agent therapy
+def: "Treatment with an agent regulating protaglandins." []
 synonym: "treatment with prostaglandin modifier" EXACT []
 synonym: "treatment with prostaglandin modifying agent" EXACT []
 synonym: "treatment with prostaglandin modifying drug" EXACT []
@@ -3239,6 +3241,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000282
 name: sex hormone modifying agent therapy
+def: "Treatment with any agent or medication that modifies androgen, estrogens, and/or progestogens." []
+synonym: "gonadal steroid modifying agent therapy" NARROW []
+synonym: "gonadocorticoid modifying agent therapy" NARROW []
 synonym: "sex hormone modifying drug treatment" EXACT []
 is_a: MAXO:0000283 ! hormone modifying therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:46:02Z xsd:dateTime
@@ -3265,6 +3270,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000284
 name: thyroid-modifying hormonal agent therapy
+def: "Treatment with an agent or medication that regulates hormones released by the thyroid." []
 synonym: "treatment with thyroid modifier" EXACT []
 synonym: "treatment with thyroid modifying agent" EXACT []
 synonym: "treatment with thyroid modifying drug" EXACT []
@@ -3288,6 +3294,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000286
 name: androgen modifying agent therapy
+def: "Treatment with an agent to modify androgen action." []
 synonym: "treatment with androgen agent" EXACT []
 synonym: "treatment with androgen drug" EXACT []
 synonym: "treatment with androgen medication" EXACT []
@@ -3318,6 +3325,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000288
 name: progestin modifying agent therapy
+def: "Treatment with an agent to modify progestin action." []
 synonym: "progestin modifying drug treatment" EXACT []
 synonym: "treatment with progestin modifier" EXACT []
 synonym: "treatment with progestin modifying agent" EXACT []
@@ -3331,6 +3339,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000289
 name: selective-estrogen receptor modifying agent therapy
+def: "Treatment with an agent to that selectively modifies estrogen receptor action." []
 is_a: MAXO:0000282 ! sex hormone modifying agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:52:46Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3354,6 +3363,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000291
 name: androgen stimulant agent therapy
+def: "Use of a compound which increases or activates the biosynthesis or actions of androgens." []
 synonym: "treatment with androgen agonist" EXACT []
 synonym: "treatment with androgen stimulant" EXACT []
 is_a: MAXO:0000286 ! androgen modifying agent therapy
@@ -3475,6 +3485,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000298
 name: passive immunizing agent therapy
+def: "Treatment with antibodies to a disease to provide a temporary immunity." []
 is_a: MAXO:0000295 ! immunological agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:00:40Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3504,6 +3515,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000304
 name: metabolic bone disease agent therapy
+def: "Treatment with drug or agent to treat or prevent deformities or abnormalities of the bone caused by a metabolic disorder." []
 synonym: "metabolic bone disease drug treatment" EXACT []
 is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:04:21Z xsd:dateTime
@@ -3533,6 +3545,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000306
 name: ophthalmic anti-allergy agent therapy
+def: "Treatment with medication delivered directly to the eye to treat allergies or allergy symptoms." []
 is_a: MAXO:0000305 ! ophthalmic agent therapy
 is_a: MAXO:0000633 ! allergy agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:04:55Z xsd:dateTime
@@ -3557,6 +3570,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000308
 name: ophthalmic anti-inflammatory agent therapy
+def: "Treatment with an agent or medication formulated to be applied in the eyes, to reduce pain or to treat inflammation, especially used after eye surgery to relieve pain." []
 is_a: MAXO:0000169 ! anti-inflammatory agent therapy
 is_a: MAXO:0000305 ! ophthalmic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:05:47Z xsd:dateTime
@@ -3565,6 +3579,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000309
 name: ophthalmic prostaglandin and prostamide agent therapy
+def: "Treatment with an agent applied directly to the eye to treat elevated intraocular pressure (IOP) via regulating prostaglandin and prostamide." []
 is_a: MAXO:0000305 ! ophthalmic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:06:19Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3620,6 +3635,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000314
 name: inhaled corticosteroid agent therapy
+def: "Treatment with an inhaled agent that reduces inflammation and mucus in the airways that carry air to the lungs." []
 synonym: "inhaled corticosteroid drug treatment" EXACT []
 is_a: MAXO:0000312 ! respiratory tract agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:09:38Z xsd:dateTime
@@ -3659,6 +3675,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000317
 name: anticholinergic bronchodilator agent therapy
+def: "Treatment with an agent that blocks the effect of acetylcholine in airways and nasal passages to keep the airways from constricting during asthma and allergy-related brathing issues." []
 synonym: "anticholinergic bronchodilator drug treatment" EXACT []
 is_a: MAXO:0000316 ! bronchodilator agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:10:37Z xsd:dateTime
@@ -3667,6 +3684,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000318
 name: phosphodiesterase inhibitor bronchodilator agent therapy
+def: "Treatment with a phosphodiesterase (PDE) inhibitor that decreases mean pulmonary arterial pressure." []
 synonym: "phosphodiesterase inhibitor bronchodilator drug treatment" EXACT []
 is_a: MAXO:0000316 ! bronchodilator agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:11:08Z xsd:dateTime
@@ -3675,7 +3693,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000319
 name: sympathomimetic bronchodilator agent therapy
+def: "Treatment with an agent for reversible airway obstruction in diseases such as asthma and COPD. These agents produce bronchodilation by stimulating beta2 adrenergic receptors on airway smooth muscle." []
+synonym: "adrenergic bronchiodilator agent therapy" EXACT []
+synonym: "adrenergic bronchiodilator agent treatment" EXACT []
+synonym: "adrenergic bronchiodilator drug therapy" EXACT []
 synonym: "sympathomimetic bronchodilator drug therapy" EXACT []
+synonym: "treatment with adrenergic bronchiodilator agent" EXACT []
 is_a: MAXO:0000316 ! bronchodilator agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:11:37Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3683,6 +3706,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000320
 name: mast cell stabilizer agent therapy
+def: "Treatment with an agent that block mast cell degranulation, stabilizing the cell and thereby preventing the release of histamine and other factors thereby preventing or regulating allergic disorders." []
 synonym: "mast cell stabiliser agent therapy" EXACT []
 synonym: "mast cell stabiliser drug treatment" EXACT []
 synonym: "mast cell stabilizer drug treatment" EXACT []
@@ -3694,6 +3718,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000321
 name: pulmonary antihypertensive agent therapy
+def: "Treatment with an agent that decreases pulmonary hypertension." []
 synonym: "pulmonary antihypertensive drug treatment" EXACT []
 is_a: MAXO:0000312 ! respiratory tract agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:12:15Z xsd:dateTime
@@ -4771,6 +4796,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000441
 name: granulocyte colony stimulating factor agent therapy
+def: "Treatment with an agent that stimulate the proliferation of bone marrow cells and differentiation of stem cells into colonies of granulocytes." []
 synonym: "G-CSF treatment" EXACT ABBREVIATION []
 synonym: "granulocyte-colony stimulating factor treatment therapy" EXACT []
 synonym: "recombinant colony-stimulating factor 3 treatment therapy" EXACT []
@@ -4785,6 +4811,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000442
 name: erythropoietin regulating agent therapy
+def: "Treatment with agents or medications which modulate the bone marrow's production of red blood cells." []
 synonym: "erythropoietin modulating treatment" EXACT []
 is_a: MAXO:0000179 ! blood formation agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-10-08T18:37:29Z xsd:dateTime
@@ -5031,6 +5058,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000465
 name: aquatic exercise therapy
+def: "Therapy occuring in a pool or bath which is a low-impact activity and takes the pressure off your bones, joints, and muscles." []
 is_a: MAXO:0000011 ! physical therapy
 is_a: MAXO:0000458 ! hydrotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-08T18:07:42Z xsd:dateTime
@@ -5154,7 +5182,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000477
 name: orthopedic procedure
-synonym: "Any procedure relating to the branch of medicine dealing with the correction of deformities of bones or muscles." EXACT []
+def: "Any procedure relating to the branch of medicine dealing with the correction of deformities of bones or muscles." []
 synonym: "orthopaedic procedure" EXACT []
 xref: MeSH:D019637
 is_a: MAXO:0000002 ! therapeutic procedure
@@ -6571,6 +6599,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000614
 name: clinical immunofluorescence assay testing
+def: "Immunofluorescence staining used in a pathology or clinical lab to diagnose diseases of the skin, kidney, heart, cilia and other organ systems." []
 is_a: MAXO:0000613 ! clinical immunoassay
 property_value: http://purl.org/dc/elements/1.1/date 2020-04-08T15:46:23Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -6999,6 +7028,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000644
 name: molecular pathway modifying agent therapy
+def: "Treatment with an agent that modifies a particular molecular pathway." []
 synonym: "biochemical role therapy" EXACT []
 synonym: "CHEBI:52206" EXACT []
 synonym: "treatment with biochemical role" EXACT []
@@ -7160,7 +7190,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000654
 name: renin inhibitor therapy
-synonym: "Treatment with a group of pharmaceutical drugs used primarily in treatment of essential hypertension. These drugs inhibit the first and rate-limiting step of the renin–angiotensin–aldosterone system, namely the conversion of angiotensinogen to angiotensin I." EXACT []
+def: "Treatment with a group of pharmaceutical drugs used primarily in treatment of essential hypertension. These drugs inhibit the first and rate-limiting step of the renin–angiotensin–aldosterone system, namely the conversion of angiotensinogen to angiotensin I." []
 is_a: MAXO:0000190 ! RAAS inhibitor therapy
 property_value: http://purl.org/dc/elements/1.1/date 2020-06-04T17:32:06Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -7276,6 +7306,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000664
 name: antidiarrheal agent therapy
+def: "Treatment with an agent that is used to prevent or inhibit diarrhea." []
 synonym: "anti-diarrheal agent therapy" EXACT []
 synonym: "antidiarrhoeal agent therapy" EXACT []
 synonym: "antidiarrhoeal drug therapy" EXACT []
@@ -7559,6 +7590,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000684
 name: critical care medicine internist evaluation
+def: "An assessment with an internist trained in critical care medicine who has expertise in the diagnosis, treatment and support of critically ill and injured patients, particularly trauma victims and patients with multiple organ dysfunction." []
 synonym: "consultation with critical care medicine internist" EXACT []
 synonym: "consultation with internal medicine critical care medicine specialist" EXACT []
 synonym: "internal medicine critical care medicine consultation" EXACT []
@@ -9259,7 +9291,6 @@ id: MAXO:0000842
 name: gamma glutamyl transpeptidase measurement
 def: "The determination of the amount of gamma-glutamyltranspeptidase present in the sample." []
 comment: Determination of gamma-glutamyl transferase (GGT) present in the sample as a measurement of liver function. {xref="PMID:24072574"}
-synonym: "gamma glutamyl transpeptidase measurement" EXACT []
 synonym: "gamma-glutamyltranspeptidase assessment" EXACT []
 synonym: "gamma-glutamyltranspeptidase test" EXACT []
 synonym: "gamma-GT test" EXACT []
@@ -9618,6 +9649,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000879
 name: total bilirubin measurement for assessment of liver function
+def: "The measurement of the total amount of bilirubin present in a particular substrate in order to assess liver function. The substrate most often tested is blood, but other fluids extracted from the body may be used periodically depending on the purpose of the test." []
 is_a: MAXO:0000778 ! liver function testing
 is_a: MAXO:0000845 ! total bilirubin measurement
 property_value: http://purl.org/dc/elements/1.1/date 2021-06-08T14:47:38Z xsd:dateTime
@@ -9672,6 +9704,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001003
 name: alcohol deterrent agent therapy
+def: "Treatment with a drug that deters or encourages the cessation of drinking alcohol." []
 synonym: "alcohol deterrent drug treatment" EXACT []
 is_a: MAXO:0000218 ! abuse deterrent agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-05-15T16:33:57Z xsd:dateTime
@@ -9680,6 +9713,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001004
 name: smoking cessation agent therapy
+def: "Treatment with a drug that deters smoking or encourages the cessation of smoking tobacco." []
 synonym: "smoking cessation drug treatment" EXACT []
 is_a: MAXO:0000218 ! abuse deterrent agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-05-15T16:44:49Z xsd:dateTime
@@ -9735,7 +9769,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001009
 name: neutrophil count
-synonym: "A test to determine the number of neutrophils in a sample of blood." EXACT []
+def: "A test to determine the number of neutrophils in a sample of blood." []
 is_a: MAXO:0000544 ! granulocyte count
 property_value: http://purl.org/dc/elements/1.1/date 2019-05-16T18:24:56Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -10795,6 +10829,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001124
 name: anticholesteric agent therapy
+def: "Treatment with any agent that lowers cholesterol." []
 synonym: "anticholesteremic drug therapy" EXACT []
 synonym: "antihypercholesterolemic agent therapy" EXACT []
 synonym: "cholesterol inhibitor therapy" EXACT []
@@ -11321,6 +11356,16 @@ def: "The determination of the amount of protein present in blood serum." []
 synonym: "blood serum protein test" EXACT []
 synonym: "protein blood serum assessment" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2021-03-19T15:25:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001175
+name: liver transplantation
+def: "The surgical transfer of a healthy liver to a patient." []
+synonym: "liver transplantation surgical procedure" EXACT []
+synonym: "transplantation of liver" EXACT []
+xref: NCIT:C15271
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-24T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
