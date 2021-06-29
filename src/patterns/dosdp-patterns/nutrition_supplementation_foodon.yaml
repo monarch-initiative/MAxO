@@ -22,7 +22,7 @@ annotationProperties:
   xref: oio:hasDbXref
   
 vars:
-  food: "'food material'"
+  food_material: "'food material'"
 
 data_vars:
   date: "'date'"
@@ -36,23 +36,23 @@ data_list_vars:
 name:
   text: "%s supplementation"
   vars:
-   - food
+   - food_material
 
 annotations:
   - annotationProperty: exact_synonym
     text: "%s supplemental intake"
     vars:
-     - food
+     - food_material
      
   - annotationProperty: exact_synonym
     text: "supplementation of %s" 
     vars:
-     - food
+     - food_material
 
   - annotationProperty: exact_synonym
     text: "dietary supplementation of %s"
     vars:
-     - food
+     - food_material
      
   - annotationProperty: date
     text: "%s"
@@ -67,7 +67,7 @@ annotations:
   - annotationProperty: comment
     text: "%s"
     vars:
-     - food
+     - comment
      
   - annotationProperty: xref
     text: "%s"
@@ -80,10 +80,10 @@ exact_synonym:
 def:
   text: "Addition of %s to the diet for adequate and complete nutrition."
   vars:
-    - food
+    - food_material
 
 equivalentTo:
   text: "'nutritional supplementation' and 'has_input' some ('part_of' some %s)"
   vars:
-    - food
+    - food_material
    

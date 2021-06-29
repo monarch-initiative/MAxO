@@ -23,13 +23,13 @@ Import(<http://purl.obolibrary.org/obo/maxo/imports/pr_import.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/imports/ro_import.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/imports/uberon_import.owl>)
 Import(<http://purl.obolibrary.org/obo/maxo/patterns/definitions.owl>)
-Annotation(dce:creator "Aaron Zhang")
 Annotation(dce:creator "Leigh Carmody")
 Annotation(dce:creator "Peter Robinson")
 Annotation(dce:description "An ontology to represent medically relevant actions, procedures, therapies, interventions, and recommendations.")
 Annotation(dce:title "Medical Action Ontology")
 Annotation(dcterms:license <https://creativecommons.org/licenses/by/4.0/>)
 
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007565>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000003>))
@@ -723,6 +723,18 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000861>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000862>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000863>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000865>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000869>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000870>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000871>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000872>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000873>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000874>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000875>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000876>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000877>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000878>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000879>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000880>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001002>))
@@ -750,6 +762,14 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0030012>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0030018>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0000661>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0002600>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0002650>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0002651>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0002652>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0002653>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0002654>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0002655>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0002656>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0002657>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0000521>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0000864>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0001015>))
@@ -1033,7 +1053,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000020> "behavioral preventative care"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000020> <http://purl.obolibrary.org/obo/MAXO_0000017>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000021> (palliative therapeutics)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000021> (palliative care)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:27162584") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000021> "An approach that improves the quality of life of patients and their families facing the problems associated with life-threatening illness, through the prevention and relief of suffering by means of early identification and impeccable assessment and treatment of pain and other problems, physical, psychosocial, and spiritual’.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000021> "2018-11-16T20:23:01Z"^^xsd:dateTime)
@@ -1041,9 +1061,10 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <h
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000021> "NCIT:C101516")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000021> "NCIT:C15747")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000021> "comfort care")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000021> "palliative therapeutics")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000021> "symptom management")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/MAXO_0000021> "supportive care")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000021> "palliative therapeutics"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000021> "palliative care"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000021> <http://purl.obolibrary.org/obo/MAXO_0000001>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000022> (hospice care)
@@ -1094,59 +1115,36 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000043> "communicable disease avoidance"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000043> <http://purl.obolibrary.org/obo/MAXO_0000042>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000044> (physiologic state avoidance)
-
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000044> "2019-01-11T19:59:24Z"^^xsd:dateTime)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000044> <http://orcid.org/0000-0001-7941-2961>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000044> "physiologic state avoidance"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000044> <http://purl.obolibrary.org/obo/MAXO_0000151>)
-
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000045> (dehydration avoidance)
-
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000045> "2019-01-11T19:59:44Z"^^xsd:dateTime)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000045> <http://orcid.org/0000-0001-7941-2961>)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000045> <http://purl.obolibrary.org/obo/MAXO_0000044>)
-
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000046> (hypertension avoidance)
-
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000046> "2019-01-11T19:59:54Z"^^xsd:dateTime)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000046> <http://orcid.org/0000-0001-7941-2961>)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000046> <http://purl.obolibrary.org/obo/MAXO_0000044>)
-
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000047> (obesity avoidance)
-
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000047> "2019-01-11T20:01:31Z"^^xsd:dateTime)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000047> <http://purl.obolibrary.org/obo/MAXO_0000044>)
-
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000048> (skin inflammation avoidance)
-
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000048> "2019-01-11T20:03:43Z"^^xsd:dateTime)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000048> <http://purl.obolibrary.org/obo/MAXO_0000044>)
-
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000049> (therapeutic avoidance of physical activity)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000049> (physical activity avoidance recommendation)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000049> "Recommendation by a clinician to avoid exercise or physical activity.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000049> "2019-01-11T20:11:57Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000049> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000049> "avoid exercise")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000049> "avoidance of physical activity recommendation")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/MAXO_0000049> "rest recommendation")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000049> "therapeutic avoidance of physical activity"@en)
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0000049> "avoidance of physical activity therapeutic recommendation")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000049> "physical activity avoidance recommendation"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000049> <http://purl.obolibrary.org/obo/MAXO_0000011>)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000049> <http://purl.obolibrary.org/obo/MAXO_0000151>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000050> (therapeutic impact activities avoidance)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000050> (impact activities avoidance recommendation)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000050> "A recommendation by a clinician or therapist to avoid any impact activities to prevent medical issues or help the physical wellbeing of a patient.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000050> "2019-01-11T20:12:16Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000050> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000050> "impact sports avoidance")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000050> "therapeutic impact activities avoidance"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000050> "therapeutic recommendation to avoid impact activities")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000050> "impact activities avoidance recommendation"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000050> <http://purl.obolibrary.org/obo/MAXO_0000049>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000051> (therapeutic isometric exercise avoidance)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000051> (isometric exercise avoidance recommendation)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000051> "A recommendation by a clinician or therapist to avoid isometric exercises to prevent medical issues or help the physical wellbeing of a patient.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000051> "2019-01-11T20:13:10Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000051> <http://orcid.org/0000-0001-7941-2961>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000051> "therapeutic isometric exercise avoidance"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000051> "therapeutic recommendation to avoid isometric exercise")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000051> "isometric exercise avoidance recommendation"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000051> <http://purl.obolibrary.org/obo/MAXO_0000049>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000053> (therapeutic avoidance of environmental exposure)
@@ -1159,6 +1157,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000053> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000054> (radiation exposure avoidance)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000054> "A clinical recommendation to avoid or refrain from unnecessary radiation exposure.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000054> "2019-01-11T20:50:51Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000054> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000054> "radiation exposure avoidance"@en)
@@ -1166,6 +1165,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000054> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000055> (sunlight avoidance)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000055> "A clinical recommendation to avoid or refrain from unnecessary sulight exposure.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000055> "2019-01-11T20:56:19Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000055> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000055> "sunlight avoidance"@en)
@@ -1173,6 +1173,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000055> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000056> (nutrition intake avoidance)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000056> "A clinical recommendation to avoid the process of taking in of nutrients, especially by eating or drinking, considered in relation to the body’s dietary needs.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000056> "2019-01-11T20:56:39Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000056> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000056> "food consumption avoidance")
@@ -1262,6 +1263,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000066> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000067> (lung volume reduction surgery)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000067> "A procedure designed to help you breathe easier when your lungs have been damaged by disease. The goal of the surgery is to remove the area of the lung most affected by disease, allowing the remaining lung to function more efficiently, and improve your breathing ability and quality of life.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000067> "2019-01-15T19:14:42Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000067> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000067> "lung volume reduction surgery"@en)
@@ -1284,17 +1286,17 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000068> "tr
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000068> <http://purl.obolibrary.org/obo/MAXO_0000002>)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000068> <http://purl.obolibrary.org/obo/MAXO_0000004>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000070> (liver transplantation)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000070> (obsolete liver transplantation)
 
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000070> "NCIT:C15271")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000070> "hepatic transplantation")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000070> "liver grafting")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000070> "liver transplantation")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000070> "surgical transplantation of the liver")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000070> "liver transplantation surgical procedure"@en)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000071> (chemical exposure avoidance)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000071> "A clinical recommendation to avoid or refrain from unnecessary chemical exposure.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000071> "2019-01-15T19:31:56Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000071> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000071> "chemical exposure avoidance"@en)
@@ -1328,6 +1330,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000074> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000075> (digestive system testing)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000075> "The quantitative measurement of digestive system tests to diagnose or treat a digestive disorder using clinical laboratory procedures, imaging tests, endoscopic or other procedures.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000075> "2019-01-15T19:35:36Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000075> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000075> "digestive system testing"@en)
@@ -1482,6 +1485,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000090> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000092> (excessive alcohol avoidance)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000092> "A medical requirement or recommendation of avoiding the consumption of large amounts of alcohol.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000092> "2019-01-19T20:54:50Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000092> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000092> "excessive alcohol avoidance"@en)
@@ -1489,6 +1493,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000092> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000093> (estrogen-containing food avoidance)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000093> "A clinical recommendation to avoid foods with high concentrations of estrogen.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000093> "2019-01-19T20:55:05Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000093> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0000093> "Some processed foods and soy contain large amounts of estrogen.")
@@ -1497,6 +1502,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000093> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000096> (excessive protein consumption avoidance)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000096> "A clinical recomendation to avoid high-protein diets which may worsen kidney function.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000096> "2019-01-19T21:00:36Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000096> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000096> "excessive protein consumption avoidance"@en)
@@ -1504,6 +1510,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000096> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000097> (fasting avoidance)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000097> "Clinical recommendation to avoid fasting due to health risks.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000097> "2019-01-19T21:01:13Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000097> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000097> "fasting avoidance"@en)
@@ -1535,7 +1542,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000106> <http://purl.obolibrary
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000107> (multivitamin supplementation)
 
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000107> "2019-01-19T21:08:59Z"^^xsd:dateTime)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000107> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000107> "NCIT:C1654")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NCIT:C1654") rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0000107> "A dietary supplement containing all or most of the vitamins that may not be readily available in the diet. Vitamins may be classified according to their solubility either in lipids (vitamins A, D, E, K, F) or in water (vitamins C, B-complex). Present in minute amounts in various foods, vitamins are essential to maintaining normal metabolism and biochemical functions.")
 
@@ -1547,14 +1553,9 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/MAXO_0000108> "iron replacement therapy")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:28328083") rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0000108> "Oral iron supplementation is an effective and well‐studied option to replenish iron stores.")
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000109> (vitamin C supplementation)
-
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000109> "2019-01-19T21:09:48Z"^^xsd:dateTime)
-
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000110> (vitamin D supplementation)
 
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000110> "2019-01-19T21:09:59Z"^^xsd:dateTime)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000110> <http://purl.obolibrary.org/obo/MAXO_0001129>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000112> (food antioxidant supplementation)
 
@@ -1657,6 +1658,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000121> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000123> (disease exposure immunization)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000123> "The intentional exposure to a disease in order to achieve immunization.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000123> "2019-01-20T00:36:49Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000123> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000123> "disease exposure immunization"@en)
@@ -1681,7 +1683,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000125> "hearing exam procedure")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000125> "hearing testing procedure")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000125> "audiometric testing"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000125> <http://purl.obolibrary.org/obo/MAXO_0000124>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000125> <http://purl.obolibrary.org/obo/MAXO_0000873>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000126> (cancer screening)
 
@@ -1700,18 +1702,8 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <h
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000127> "NCIT:C15709")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000127> "genetic analysis")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000127> "genetic testing"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000127> <http://purl.obolibrary.org/obo/MAXO_0000003>)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000127> <http://purl.obolibrary.org/obo/MAXO_0000124>)
-
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000129> (biopsy procedure)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000129> "An examination of tissue removed from the body to assess the presence, cause, or extent of a disease.")
-AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/MAXO_0000129> <http://orcid.org/0000-0001-7941-2961>)
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000129> "2019-01-20T00:52:34Z"^^xsd:dateTime)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000129> "NCIT:C15189")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000129> "OPMI:0000274")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000129> "biopsy")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000129> "biopsy procedure"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000129> <http://purl.obolibrary.org/obo/MAXO_0000003>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000130> (endoscopic procedure)
 
@@ -1726,6 +1718,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000130> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000131> (location specific endoscopy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000131> "A diagnostic or therapeutic procedure in which an endoscope is inserted in a tubular portion of a specific body part or body location.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000131> "2019-01-20T01:03:18Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000131> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000131> "endoscopy by site")
@@ -1734,6 +1727,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000131> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000132> (specific technique endoscopy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000132> "A diagnostic or therapeutic procedure in which an endoscope is inserted in a tubular organ using a specific endoscopic technique.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000132> "2019-01-20T01:03:28Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000132> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000132> "endoscopy by type")
@@ -2003,6 +1997,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000161> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000162> (adrenal-modifying, hormonal agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000162> "Use of any agent that can alter adrenal gland functions.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000162> "2019-01-22T17:54:15Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000162> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000162> "treatment with adrenal modifier")
@@ -2168,8 +2163,11 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000171> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000172> (therapeutic antidotes, deterrents, and toxicologic agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000172> "A grouping of agents that are used as antidotes, deterrents, or to counteract the effects of a toxic agents on the body.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000172> "2019-01-22T18:01:36Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000172> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/MAXO_0000172> "antidote therapy")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/MAXO_0000172> "rescue therapy")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000172> "therapeutic antidotes, deterrents, and toxicologic agent therapy"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000172> <http://purl.obolibrary.org/obo/MAXO_0000058>)
 
@@ -2216,9 +2214,11 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000174> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000175> (blood glucose regulator therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000175> "Any drug that works to lower abnormally high glucose (sugar) levels in the blood, which are characteristic of the endocrine system disorder known as diabetes mellitus.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000175> "2019-01-22T18:11:18Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000175> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000175> "blood glucose regulator drug treatment")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/MAXO_0000175> "Treatment with an agent that regulates blood glucose levels.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000175> "blood glucose regulator therapy"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000175> <http://purl.obolibrary.org/obo/MAXO_0000058>)
 
@@ -2263,6 +2263,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000178> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000179> (blood formation agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000179> "Treatment with an agent that stimulates formation of blood cells.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000179> "2019-01-22T18:12:20Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000179> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000179> "blood formation agent therapy"@en)
@@ -2750,6 +2751,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000206> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000207> (glutamate reducing agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000207> "Treatment with an agent which decreases glutamate.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000207> "2019-01-22T18:29:56Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000207> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000207> "glutamate reducing agent therapy"@en)
@@ -2788,6 +2790,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000210> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000211> (glutamatergic pathway modifying agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000211> "Treatment with an agent which modifies glutamate.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000211> "2019-01-22T18:33:33Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000211> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000211> "glutamate modulator therapy")
@@ -2866,6 +2869,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000218> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000219> (toxicologic agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000219> "An agent used to treat a toxicologic agent.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000219> "2019-01-22T18:42:18Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000219> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000219> "toxicologic drug therapy")
@@ -3138,6 +3142,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000234> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000235> (antineoplastic molecular target inhibitor agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000235> "A treatment that uses drugs to target specific genes and proteins that are involved in the growth and survival of cancer cells.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000235> "2019-01-22T18:55:15Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000235> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000235> "antineoplastic molecular target inhibitor drug treatment")
@@ -3154,6 +3159,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000235> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000236> (antineoplastic monoclonal antibody agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000236> "Treatment with a biological agent (monoclonal antibody) that target factors responsible for deregulated cell proliferation as in cancer.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000236> "2019-01-22T18:55:45Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000236> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000236> "NCIT:C15490")
@@ -3283,6 +3289,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000244> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000245> (antispasticity agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000245> "Treatment with an agent that suppresses muscle spasms.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000245> "2019-01-22T19:02:05Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000245> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000245> "CHEBI:53784")
@@ -3430,6 +3437,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000253> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000255> (antidepressant anxiolytics)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000255> "Treatment with an antidepressant that can be used to treat anxiety.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000255> "2019-01-22T20:32:25Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000255> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000255> "antidepressant anxiolytics"@en)
@@ -3457,6 +3465,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000256> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000257> (antidiabetic agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000257> "Treatment with any agent that treats or prevents diabetes or diabetes symptoms.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000257> "2019-01-22T20:33:31Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000257> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000257> "anti-diabetic therapy")
@@ -3467,6 +3476,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000257> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000258> (glycemic agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000258> "Treatment with any drug or agent taken that maintains ando/or regulates blood glucose levels.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000258> "2019-01-22T20:33:43Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000258> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000258> "glycemic agent drug therapy")
@@ -3531,6 +3541,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000262> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000264> (dental and oral agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000264> "Any agent or drug used to treat oral diseases.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000264> "2019-01-22T20:35:53Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000264> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000264> "dental and oral agent therapy"@en)
@@ -3567,6 +3578,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000267> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000268> (gastrointestinal antispasmodics agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000268> "Treatment to regulate muscle contractions in the gastrointestinal tract.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000268> "2019-01-22T20:37:00Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000268> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000268> "gastrointestinal anti-spasmodic agent therapy")
@@ -3574,6 +3586,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000268> "gastrointestinal antispasmodic drug treatment")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000268> "gastrointestinal antispasmodic treatment therapy")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000268> "gastrointestinal antispasmodics agent therapy"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000268> <http://purl.obolibrary.org/obo/MAXO_0000245>)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000268> <http://purl.obolibrary.org/obo/MAXO_0000267>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000269> (H2-receptor antagonist agent therapy)
@@ -3604,10 +3617,12 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000270> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000271> (gastrointestinal protectant agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000271> "Treatment with medications that coat the ulcerated surfaces of gastrointestinal lining and are used mainly for peptic ulcer disease.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000271> "2019-01-22T20:38:16Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000271> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000271> "gastrointestinal protectant drug treatment")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000271> "gastrointestinal protectant treatment therapy")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000271> "gastroprotectant")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000271> "gastrointestinal protectant agent therapy"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000271> <http://purl.obolibrary.org/obo/MAXO_0000267>)
 
@@ -3638,13 +3653,16 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000274> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000275> (urinary antispasmodic agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000275> "Treatment to  inhibit involuntary detrusor muscle contractions.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000275> "2019-01-22T20:39:46Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000275> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000275> "urinary antispasmodic agent therapy"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000275> <http://purl.obolibrary.org/obo/MAXO_0000245>)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000275> <http://purl.obolibrary.org/obo/MAXO_0000274>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000276> (benign prostate hypertrophy agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000276> "Treatment with agent to increase urine flow in patients with an enlarged prostate.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000276> "2019-01-22T20:40:09Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000276> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000276> "benign prostate hypertrophy agent therapy"@en)
@@ -3652,6 +3670,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000276> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000277> (phosphate binders agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000277> "Treatment with agents used to reduce the absorption of dietary phosphate")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000277> "2019-01-22T20:40:24Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000277> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000277> "phosphate binders agent therapy"@en)
@@ -3659,6 +3678,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000277> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000279> (Glucocorticoids/ Mineralocorticoids therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000279> "Treatments that are anti-inflammatory and immunosuppressive.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000279> "2019-01-22T20:42:45Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000279> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000279> "Glucocorticoids/ Mineralocorticoids therapy"@en)
@@ -3666,6 +3686,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000279> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000280> (pituitary-modifying, hormonal agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000280> "Treatment with an agent or medication that regulates hormones released by the pituitary.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000280> "2019-01-22T20:44:06Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000280> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000280> "treatment with pituitary modifier")
@@ -3677,6 +3698,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000280> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000281> (prostaglandin-modifying, hormonal agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000281> "Treatment with an agent regulating protaglandins.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000281> "2019-01-22T20:45:21Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000281> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000281> "treatment with prostaglandin modifier")
@@ -3688,9 +3710,12 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000281> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000282> (sex hormone modifying agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000282> "Treatment with any agent or medication that modifies androgen, estrogens, and/or progestogens.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000282> "2019-01-22T20:46:02Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000282> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000282> "sex hormone modifying drug treatment")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/MAXO_0000282> "gonadal steroid modifying agent therapy")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/MAXO_0000282> "gonadocorticoid modifying agent therapy")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000282> "sex hormone modifying agent therapy"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000282> <http://purl.obolibrary.org/obo/MAXO_0000283>)
 
@@ -3714,6 +3739,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000283> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000284> (thyroid-modifying hormonal agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000284> "Treatment with an agent or medication that regulates hormones released by the thyroid.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000284> "2019-01-22T20:51:04Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000284> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000284> "treatment with thyroid modifier")
@@ -3737,6 +3763,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000285> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000286> (androgen modifying agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000286> "Treatment with an agent to modify androgen action.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000286> "2019-01-22T20:51:44Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000286> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000286> "treatment with androgen agent")
@@ -3765,6 +3792,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000287> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000288> (progestin modifying agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000288> "Treatment with an agent to modify progestin action.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000288> "2019-01-22T20:52:15Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000288> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000288> "progestin modifying drug treatment")
@@ -3778,6 +3806,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000288> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000289> (selective-estrogen receptor modifying agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000289> "Treatment with an agent to that selectively modifies estrogen receptor action.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000289> "2019-01-22T20:52:46Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000289> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000289> "selective-estrogen receptor modifying agent therapy"@en)
@@ -3801,6 +3830,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000290> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000291> (androgen stimulant agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000291> "Use of a compound which increases or activates the biosynthesis or actions of androgens.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000291> "2019-01-22T20:54:46Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000291> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000291> "treatment with androgen agonist")
@@ -3916,6 +3946,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000297> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000298> (passive immunizing agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000298> "Treatment with antibodies to a disease to provide a temporary immunity.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000298> "2019-01-22T21:00:40Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000298> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000298> "passive immunizing agent therapy"@en)
@@ -3946,6 +3977,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000302> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000304> (metabolic bone disease agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000304> "Treatment with drug or agent to treat or prevent deformities or abnormalities of the bone caused by a metabolic disorder.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000304> "2019-01-22T21:04:21Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000304> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000304> "metabolic bone disease drug treatment")
@@ -3974,6 +4006,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000305> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000306> (ophthalmic anti-allergy agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000306> "Treatment with medication delivered directly to the eye to treat allergies or allergy symptoms.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000306> "2019-01-22T21:04:55Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000306> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000306> "ophthalmic anti-allergy agent therapy"@en)
@@ -3997,6 +4030,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000307> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000308> (ophthalmic anti-inflammatory agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000308> "Treatment with an agent or medication formulated to be applied in the eyes, to reduce pain or to treat inflammation, especially used after eye surgery to relieve pain.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000308> "2019-01-22T21:05:47Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000308> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000308> "ophthalmic anti-inflammatory agent therapy"@en)
@@ -4005,6 +4039,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000308> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000309> (ophthalmic prostaglandin and prostamide agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000309> "Treatment with an agent applied directly to the eye to treat elevated intraocular pressure (IOP) via regulating prostaglandin and prostamide.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000309> "2019-01-22T21:06:19Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000309> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000309> "ophthalmic prostaglandin and prostamide agent therapy"@en)
@@ -4055,6 +4090,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000313> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000314> (inhaled corticosteroid agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000314> "Treatment with an inhaled agent that reduces inflammation and mucus in the airways that carry air to the lungs.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000314> "2019-01-22T21:09:38Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000314> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000314> "inhaled corticosteroid drug treatment")
@@ -4091,6 +4127,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000316> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000317> (anticholinergic bronchodilator agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000317> "Treatment with an agent that blocks the effect of acetylcholine in airways and nasal passages to keep the airways from constricting during asthma and allergy-related brathing issues.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000317> "2019-01-22T21:10:37Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000317> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000317> "anticholinergic bronchodilator drug treatment")
@@ -4099,6 +4136,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000317> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000318> (phosphodiesterase inhibitor bronchodilator agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000318> "Treatment with a phosphodiesterase (PDE) inhibitor that decreases mean pulmonary arterial pressure.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000318> "2019-01-22T21:11:08Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000318> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000318> "phosphodiesterase inhibitor bronchodilator drug treatment")
@@ -4107,14 +4145,20 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000318> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000319> (sympathomimetic bronchodilator agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000319> "Treatment with an agent for reversible airway obstruction in diseases such as asthma and COPD. These agents produce bronchodilation by stimulating beta2 adrenergic receptors on airway smooth muscle.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000319> "2019-01-22T21:11:37Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000319> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000319> "adrenergic bronchiodilator agent therapy")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000319> "adrenergic bronchiodilator agent treatment")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000319> "adrenergic bronchiodilator drug therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000319> "sympathomimetic bronchodilator drug therapy")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000319> "treatment with adrenergic bronchiodilator agent")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000319> "sympathomimetic bronchodilator agent therapy"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000319> <http://purl.obolibrary.org/obo/MAXO_0000316>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000320> (mast cell stabilizer agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000320> "Treatment with an agent that block mast cell degranulation, stabilizing the cell and thereby preventing the release of histamine and other factors thereby preventing or regulating allergic disorders.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000320> "2019-01-22T21:12:02Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000320> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000320> "NCIT:C29714")
@@ -4126,6 +4170,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000320> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000321> (pulmonary antihypertensive agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000321> "Treatment with an agent that decreases pulmonary hypertension.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000321> "2019-01-22T21:12:15Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000321> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000321> "pulmonary antihypertensive drug treatment")
@@ -4346,6 +4391,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000440> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000441> (granulocyte colony stimulating factor agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000441> "Treatment with an agent that stimulate the proliferation of bone marrow cells and differentiation of stem cells into colonies of granulocytes.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000441> "2019-10-08T18:06:31Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000441> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000441> "NCIT:C1287")
@@ -4360,6 +4406,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000441> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000442> (erythropoietin regulating agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000442> "Treatment with agents or medications which modulate the bone marrow's production of red blood cells.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000442> "2019-10-08T18:37:29Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000442> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000442> "erythropoietin modulating treatment")
@@ -4526,8 +4573,10 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000456> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000457> (pain management)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000457> "The management of pain by interventional procedures, pharmacotherapy, physical therapy, psychological counseling, or complementary and alternative medical therapies designed to treat or alleviate pain.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000457> "2020-01-08T17:26:31Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000457> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000457> "pain therapy")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000457> "pain management"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000457> <http://purl.obolibrary.org/obo/MAXO_0000002>)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000457> <http://purl.obolibrary.org/obo/MAXO_0000021>)
@@ -4602,6 +4651,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000463> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000465> (aquatic exercise therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000465> "Therapy occuring in a pool or bath which is a low-impact activity and takes the pressure off your bones, joints, and muscles.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000465> "2020-01-08T18:07:42Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000465> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000465> "aquatic exercise therapy"@en)
@@ -4692,10 +4742,10 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000476> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000477> (orthopedic procedure)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000477> "Any procedure relating to the branch of medicine dealing with the correction of deformities of bones or muscles.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000477> "2020-01-20T17:50:35Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000477> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000477> "MeSH:D019637")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000477> "Any procedure relating to the branch of medicine dealing with the correction of deformities of bones or muscles.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000477> "orthopaedic procedure")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000477> "orthopedic procedure"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000477> <http://purl.obolibrary.org/obo/MAXO_0000002>)
@@ -4798,7 +4848,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000487> "PMID:2647562")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000487> "clinical measurement")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000487> "clinical assessment"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000487> <http://purl.obolibrary.org/obo/MAXO_0000002>)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000487> <http://purl.obolibrary.org/obo/MAXO_0000003>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000488> (body temperature measurement)
@@ -5312,6 +5361,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000539> "group B strep screening")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000539> "prenatal group B streptococcus screening"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000539> <http://purl.obolibrary.org/obo/MAXO_0000528>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000539> <http://purl.obolibrary.org/obo/MAXO_0000596>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000540> (nuchal translucency screening)
 
@@ -5734,7 +5784,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000581> "calcium measurement")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000581> "calcium assessment"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000581> <http://purl.obolibrary.org/obo/MAXO_0000566>)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000581> <http://purl.obolibrary.org/obo/MAXO_0000778>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000582> (electrolyte assessment)
 
@@ -6001,7 +6050,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000606> "procalcitonin level testing")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000606> "procalcitonin testing")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0000606> "A substance produced in response to bacterial infections and tissue injury.")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000606> "procalcitonin assessment"@en)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000607> (D-dimer assessment)
 
@@ -6011,7 +6059,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000607> "fibrin degradation fragment testing")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000607> "fragment D-dimer testing")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0000607> "A quantification of a fibrin degradation product in blood used in the diagnosis of thrombosis.")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000607> "D-dimer assessment"@en)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000608> (serum phosphate assessment)
 
@@ -6076,6 +6123,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000613> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000614> (clinical immunofluorescence assay testing)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000614> "Immunofluorescence staining used in a pathology or clinical lab to diagnose diseases of the skin, kidney, heart, cilia and other organ systems.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000614> "2020-04-08T15:46:23Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000614> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000614> "clinical immunofluorescence assay testing"@en)
@@ -6099,7 +6147,7 @@ AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000616> "2020
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000616> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000616> "NCIT:C60832")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000616> "oxygen saturation measurement"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000616> <http://purl.obolibrary.org/obo/MAXO_0000003>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000616> <http://purl.obolibrary.org/obo/MAXO_0000487>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000617> (pulse oximetry)
 
@@ -6475,6 +6523,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000643> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000644> (molecular pathway modifying agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000644> "Treatment with an agent that modifies a particular molecular pathway.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000644> "2020-05-28T19:11:27Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000644> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000644> "CHEBI:52206")
@@ -6623,9 +6672,9 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000653> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000654> (renin inhibitor therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000654> "Treatment with a group of pharmaceutical drugs used primarily in treatment of essential hypertension. These drugs inhibit the first and rate-limiting step of the renin–angiotensin–aldosterone system, namely the conversion of angiotensinogen to angiotensin I.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000654> "2020-06-04T17:32:06Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000654> <http://orcid.org/0000-0001-7941-2961>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000654> "Treatment with a group of pharmaceutical drugs used primarily in treatment of essential hypertension. These drugs inhibit the first and rate-limiting step of the renin–angiotensin–aldosterone system, namely the conversion of angiotensinogen to angiotensin I.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000654> "renin inhibitor therapy"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000654> <http://purl.obolibrary.org/obo/MAXO_0000190>)
 
@@ -6680,6 +6729,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000658> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000659> (AMPA-targeting agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000659> "Treatment with an agent which regulates AMPA recepter signaling.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000659> "2020-06-08T17:48:19Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000659> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000659> "AMPA-targeting agent therapy"@en)
@@ -6729,6 +6779,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000663> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000664> (antidiarrheal agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000664> "Treatment with an agent that is used to prevent or inhibit diarrhea.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000664> "2020-06-09T15:32:19Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000664> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000664> "CHEBI:55323")
@@ -6878,15 +6929,8 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynon
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/MAXO_0000676> "palliative care specialist referral")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/MAXO_0000676> "referral to palliative care specialist")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000676> "hospice and palliative medicine specialist evaluation"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000676> <http://purl.obolibrary.org/obo/MAXO_0000667>)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000676> <http://purl.obolibrary.org/obo/MAXO_0000673>)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000676> <http://purl.obolibrary.org/obo/MAXO_0000680>)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000676> <http://purl.obolibrary.org/obo/MAXO_0000702>)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000676> <http://purl.obolibrary.org/obo/MAXO_0000707>)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000676> <http://purl.obolibrary.org/obo/MAXO_0000712>)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000676> <http://purl.obolibrary.org/obo/MAXO_0000718>)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000676> <http://purl.obolibrary.org/obo/MAXO_0000723>)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000676> <http://purl.obolibrary.org/obo/MAXO_0000725>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000676> <http://purl.obolibrary.org/obo/MAXO_0000021>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000676> <http://purl.obolibrary.org/obo/MAXO_0000665>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000677> (pain medicine specialist evaluation)
 
@@ -7015,6 +7059,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000683> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000684> (critical care medicine internist evaluation)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000684> "An assessment with an internist trained in critical care medicine who has expertise in the diagnosis, treatment and support of critically ill and injured patients, particularly trauma victims and patients with multiple organ dysfunction.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000684> "2020-07-01T20:35:47Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000684> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000684> "consultation with critical care medicine internist")
@@ -7527,6 +7572,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000722> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000723> (psychiatry and neurology specialist evaluation)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000723> "Evaluation by a physician who specializes in the evaluation and treatment of of the brain.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000723> "2020-07-13T17:01:27Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000723> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000723> "psychiatry and neurology specialist evaluation"@en)
@@ -7879,7 +7925,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <h
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/MAXO_0000755> "solid tumor monitoring")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000755> "liquid biopsy"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000755> <http://purl.obolibrary.org/obo/MAXO_0000126>)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000755> <http://purl.obolibrary.org/obo/MAXO_0000129>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000755> <http://purl.obolibrary.org/obo/OBI_0002650>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000756> (blood transfusion)
 
@@ -8110,11 +8156,9 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000783> <http://purl.obolibrary
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000784> "A quantitative measurement of the amount of human chorionic gonadotropin present in urine or serum.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000784> "2021-02-09T20:20:44Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000784> <http://orcid.org/0000-0001-7941-2961>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000784> "HCG pregnancy measurement")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000784> "human chorionic gonadotropin measurement")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000784> "HCG measurement"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000784> <http://purl.obolibrary.org/obo/MAXO_0000605>)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000784> <http://purl.obolibrary.org/obo/MAXO_0000783>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000785> (serum HCG measurement)
 
@@ -8176,7 +8220,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000790> "NCIT:C70552")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000790> "clinical breast exam")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NCIT:C70552") rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0000790> "An exam of the breast performed by a health care provider to check for lumps or other changes. [ NCI ]")
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000790> <http://purl.obolibrary.org/obo/MAXO_0000126>)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000790> <http://purl.obolibrary.org/obo/MAXO_0000782>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000791> (breast self-examination)
@@ -8194,7 +8237,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000791> <http://purl.obolibrary
 
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000792> "NCIT:C167415")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000792> "examination of the abdomen")
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000792> <http://purl.obolibrary.org/obo/MAXO_0000782>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000793> (pelvic examination)
 
@@ -8302,7 +8344,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000803> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000804> (avoid destabilizing activities)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000804> "Limit activities where a great deal of balance may be required.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000804> "Limit activities where a great deal of balance may be required to prevent issues or help the wellbeing of a patient.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000804> "2021-02-10T21:23:13Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000804> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000804> "avoid acitivities requiring balance")
@@ -8616,7 +8658,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000840> "SGPT test")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000840> "alanine aminotransferase measurement")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000840> "serum glutamic-pyruvic transaminase test")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000840> "alanine transaminase test"@en)
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:1992953") rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0000840> "Alanine aminotransferase is an enzyme produced mainly in the liver. When serum activity is measured, it provides a marker of hepatic disease.")
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000840> <http://purl.obolibrary.org/obo/MAXO_0000778>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000841> (aspartate aminotransferase measurement)
@@ -8625,6 +8667,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000841> "AST blood test")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000841> "SGOT test")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000841> "serum glutamic oxaloacetic transaminase test")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:24072574") rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0000841> "Alanine aminotransferase (ALT), aspartate aminotransferase (AST) and gamma-glutamyl transferase (GGT) are enzymes measured in serum or plasma to investigate liver disease.")
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000841> <http://purl.obolibrary.org/obo/MAXO_0000778>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000842> (gamma glutamyl transpeptidase measurement)
@@ -8632,9 +8675,8 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000841> <http://purl.obolibrary
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000842> "NCIT:C64847")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000842> "GGT test")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000842> "GTP test")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000842> "gamma glutamyl transpeptidase measurement")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000842> "gamma-GT test")
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0000842> "Determination of gamma-glutamyl transferase (GGT) present in the sample as a measurement of liver function.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:24072574") rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0000842> "Determination of gamma-glutamyl transferase (GGT) present in the sample as a measurement of liver function.")
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000842> <http://purl.obolibrary.org/obo/MAXO_0000778>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000843> (albumin measurement)
@@ -8642,15 +8684,12 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000842> <http://purl.obolibrary
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000843> "NCIT:C64431")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000843> "ALB level test")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000843> "albumin level measurement")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000843> "albumin measurement"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000843> <http://purl.obolibrary.org/obo/MAXO_0000778>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000844> (alkaline phosphatase measurement)
 
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000844> "NCIT:C64432")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000844> "ALP measurement")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000844> "alk phos test")
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000844> <http://purl.obolibrary.org/obo/MAXO_0000778>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000845> (total bilirubin measurement)
 
@@ -8661,24 +8700,22 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000845> "BILI measurement")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000845> "total bilirubin level measurement")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000845> "total bilirubin measurement"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000845> <http://purl.obolibrary.org/obo/MAXO_0000778>)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000845> <http://purl.obolibrary.org/obo/MAXO_0000848>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000846> (lactate dehydrogenase measurement)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000846> "The determination of the amount of lactate dehydrogenase present in the sample.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000846> "2021-02-17T14:57:21Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000846> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000846> "NCIT:C64855")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000846> "LDH measurement")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000846> "lactate dehydrogenase measurement"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000846> <http://purl.obolibrary.org/obo/MAXO_0000605>)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000846> <http://purl.obolibrary.org/obo/MAXO_0000778>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000847> (5'-nucleotidase measurement)
 
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000847> "NCIT:C79437")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000847> "5'- nucleotidase measurement")
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000847> <http://purl.obolibrary.org/obo/MAXO_0000778>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000848> (bilirubin measurement)
 
@@ -8686,7 +8723,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000848> "2021-02-17T15:06:51Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000848> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000848> "bilirubin measurement"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000848> <http://purl.obolibrary.org/obo/MAXO_0000075>)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000848> <http://purl.obolibrary.org/obo/MAXO_0000605>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000849> (indirect bilirubin measurement)
@@ -8706,11 +8742,9 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <h
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000850> "NCIT:C64858")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000850> "total protein measurement"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000850> <http://purl.obolibrary.org/obo/MAXO_0000605>)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000850> <http://purl.obolibrary.org/obo/MAXO_0000778>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000851> (protein measurement in urine)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000851> (urine protein measurement)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000851> "A test to determine the amount or type of protein present in urine.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000851> "NCIT:C74760"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000851> "urine protein assessment")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000851> "urine protein testing")
@@ -8833,6 +8867,135 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000863> <http://purl.obolibrary
 
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000865> <http://purl.obolibrary.org/obo/MAXO_0000787>)
 
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000869> (obstetric abdominal examination)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000869> "A systemic evaluation of the abdomen using visual inspection, palpation, and percussion during pregnancy to determine the health of the mother and fetus.")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000869> "2021-05-27T15:12:17Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000869> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000869> "abdominal examination during pregnancy")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000869> "pregnant abdomen examination")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000869> "obstetric abdominal examination"@en)
+EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0000869> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000527> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/UBERON_0009097> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0000916>)))))
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000869> <http://purl.obolibrary.org/obo/MAXO_0000782>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000869> <http://purl.obolibrary.org/obo/MAXO_0000792>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000870> (pregnancy HCG test)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000870> "A quantitative measurement of the amount of human chorionic gonadotropin present in urine or serum for the purpose of determining whether the patient is pregnant.")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000870> "2021-05-27T19:38:10Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000870> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000870> "HCG pregnancy test")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000870> "pregnancy HCG test"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000870> <http://purl.obolibrary.org/obo/MAXO_0000783>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000870> <http://purl.obolibrary.org/obo/MAXO_0000784>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000871> (obstetric cervical examination)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000871> "A systemic evaluation of the cervix during pregnancy to determine dilation and effacement of the cervix, cervical position and consistancy, and fetal position.")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000871> "2021-06-07T18:34:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000871> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000871> "cervical exam while pregnant")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000871> "obstetric examination of the cervix.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000871> "pregnant cervical exam")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000871> "obstetric cervical examination"@en)
+EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0000871> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000527> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/UBERON_0009097> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0004801>)))))
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000871> <http://purl.obolibrary.org/obo/MAXO_0000782>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000871> <http://purl.obolibrary.org/obo/MAXO_0001154>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000872> (cancer screening breast examination)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000872> "An evaluation of the breast using visual inspection, palpation, and percussion for the specific purpose of identifying breast changes which may be cancer.")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000872> "2021-06-07T18:51:49Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000872> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000872> "cancer breast exam")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000872> "cancer screening breast examination"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000872> <http://purl.obolibrary.org/obo/MAXO_0000126>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000872> <http://purl.obolibrary.org/obo/MAXO_0000790>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000873> (hearing examination)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000873> "A test that evaluates of the sensitivity of a person's sense of hearing and is used to determine a person's hearing sensitivity at different frequencies.")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000873> "2021-06-07T21:03:43Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000873> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000873> "hearing assessment")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000873> "hearing exam")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000873> "hearing test")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000873> "hearing examination"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000873> <http://purl.obolibrary.org/obo/MAXO_0000003>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000874> (albumin test for liver function)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000874> "The determination of the amount of albumin (human) present in the sample in order to assess the liver's function.")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000874> "2021-06-08T14:05:06Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000874> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000874> "albumin test for liver function assessment")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000874> "liver function albumin test")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000874> "albumin test for liver function"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000874> <http://purl.obolibrary.org/obo/MAXO_0000778>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000874> <http://purl.obolibrary.org/obo/MAXO_0000843>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000875> (5'-nucleotidase measurement for liver function)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000875> "The determination of the amount of 5'-nucleotidase present in the sample to assess liver function.")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000875> "2021-06-08T14:17:21Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000875> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000875> "5'-nucleotidase test for liver function assessment")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000875> "liver function 5'-nucleotidase measurement")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000875> "liver function 5'-nucleotidase test")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000875> "5'-nucleotidase measurement for liver function"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000875> <http://purl.obolibrary.org/obo/MAXO_0000778>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000875> <http://purl.obolibrary.org/obo/MAXO_0000847>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000876> (alkaline phosphatase measurement for liver function)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000876> "The determination of the amount of alkaline phosphatase present in the sample for assessment of liver function.")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000876> "2021-06-08T14:20:25Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000876> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000876> "alkaline phosphatase measurement for liver function assessment")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000876> "liver function alk phos test")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000876> "liver function alkaline phosphatase measurement")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000876> "alkaline phosphatase measurement for liver function"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000876> <http://purl.obolibrary.org/obo/MAXO_0000778>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000876> <http://purl.obolibrary.org/obo/MAXO_0000844>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000877> (calcium assessment for liver function)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000877> "A quantitative measurement of the amount of calcium present in a sample, usually serum or urine for the assessment of liver function.")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000877> "2021-06-08T14:23:54Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000877> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000877> "calcium test for liver function assessement")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000877> "liver function calcium test")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000877> "calcium assessment for liver function"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000877> <http://purl.obolibrary.org/obo/MAXO_0000581>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000877> <http://purl.obolibrary.org/obo/MAXO_0000778>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000878> (lactate dehydrogenase measurement for liver assessment)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000878> "The determination of the amount of lactate dehydrogenase present in the sample to assess liver function.")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000878> "2021-06-08T14:34:11Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000878> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000878> "lactate dehydrogenase measurement for liver assessment"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000878> <http://purl.obolibrary.org/obo/MAXO_0000778>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000878> <http://purl.obolibrary.org/obo/MAXO_0000846>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000879> (total bilirubin measurement for assessment of liver function)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000879> "The measurement of the total amount of bilirubin present in a particular substrate in order to assess liver function. The substrate most often tested is blood, but other fluids extracted from the body may be used periodically depending on the purpose of the test.")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000879> "2021-06-08T14:47:38Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000879> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000879> "total bilirubin measurement for assessment of liver function"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000879> <http://purl.obolibrary.org/obo/MAXO_0000778>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000879> <http://purl.obolibrary.org/obo/MAXO_0000845>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000880> (indirect bilirubin measurement for assessment of liver function)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000880> "A measurement of the unconjugated or non-water-soluble bilirubin in a biological specimen to assess liver function.")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000880> "2021-06-08T15:31:21Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000880> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000880> "indirect bilirubin measurement for assessment of liver function"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000880> <http://purl.obolibrary.org/obo/MAXO_0000778>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000880> <http://purl.obolibrary.org/obo/MAXO_0000849>)
+
 # Class: <http://purl.obolibrary.org/obo/MAXO_0001000> (functional magnetic resonance imaging procedure)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NCIT:C17958"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0001000> "The principle of functional MRI imaging is to take a series of images of an organ in quick succession and to statistically analyze the images for differences among them.  Most commonly used in studies of brain function."^^xsd:string)
@@ -8872,6 +9035,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001002> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0001003> (alcohol deterrent agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0001003> "Treatment with a drug that deters or encourages the cessation of drinking alcohol.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0001003> "2019-05-15T16:33:57Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0001003> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0001003> "alcohol deterrent drug treatment")
@@ -8880,6 +9044,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001003> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0001004> (smoking cessation agent therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0001004> "Treatment with a drug that deters smoking or encourages the cessation of smoking tobacco.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0001004> "2019-05-15T16:44:49Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0001004> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0001004> "smoking cessation drug treatment")
@@ -8935,9 +9100,9 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001008> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0001009> (neutrophil count)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0001009> "A test to determine the number of neutrophils in a sample of blood.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0001009> "2019-05-16T18:24:56Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0001009> <http://orcid.org/0000-0001-7941-2961>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0001009> "A test to determine the number of neutrophils in a sample of blood.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0001009> "neutrophil count"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001009> <http://purl.obolibrary.org/obo/MAXO_0000544>)
 
@@ -8994,8 +9159,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001018> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0001019> (prenatal vitamin supplementation)
 
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0001019> "2019-07-23T19:56:32Z"^^xsd:dateTime)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0001019> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0001019> "NCIT:C92860")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0001019> "antenatal supplementation")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0001019> "antenatal vitamin supplement treatment")
@@ -9109,6 +9272,17 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0001026> "beta-adrenergic agonist agent therapy"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001026> <http://purl.obolibrary.org/obo/MAXO_0000186>)
 
+# Class: <http://purl.obolibrary.org/obo/MAXO_0001113> (prevention of abnormal physiologic state)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0001113> "A medical requirement or recommendation of avoiding or preventing abnormal physiologic state.")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0001113> "2020-09-15T11:00:00Z"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0001113> "http://orcid.org/0000-0001-7941-2961"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0001113> "avoid physiologic state recommendation")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0001113> "prevent physiologic state avoidance")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0001113> "prevent physiologic state recommendation")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0001113> "prevention of abnormal physiologic state")
+EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0001113> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000017> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/MAXO_0000521> <http://purl.obolibrary.org/obo/HP_0001944>)))
+
 # Class: <http://purl.obolibrary.org/obo/MAXO_0001153> (uterus examination)
 
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001153> <http://purl.obolibrary.org/obo/MAXO_0000782>)
@@ -9155,10 +9329,15 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0030018> <http://purl.obolibrary
 
 SubClassOf(<http://purl.obolibrary.org/obo/OBI_0002600> <http://purl.obolibrary.org/obo/MAXO_0000547>)
 
+# Class: <http://purl.obolibrary.org/obo/OBI_0002650> (biopsy)
+
+SubClassOf(<http://purl.obolibrary.org/obo/OBI_0002650> <http://purl.obolibrary.org/obo/MAXO_0000003>)
+
 
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0001028> "2019-07-12T14:23:27Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0001028> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0001028> "avoided excessive intake of food"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0001124> "Treatment with any agent that lowers cholesterol.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0001124> "anticholesteric agent therapy")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0001125> "Therapy with an agent that inhibits the function of the sodium-potassium-chloride (Na+, K+, Cl-) cotransporter system in the thick ascending limb of the loop of Henle, thereby inhibiting the reabsorption of sodium, potassium, and chloride ions. This leads to an increase in the excretion of sodium, potassium, chloride, calcium, magnesium, ammonium and water.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0001125> "loop diuretic agent therapy")

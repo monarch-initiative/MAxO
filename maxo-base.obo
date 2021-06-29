@@ -1,14 +1,13 @@
 format-version: 1.2
-data-version: maxo/releases/2021-03-22/maxo-base.owl
+data-version: maxo/releases/2021-06-11/maxo-base.owl
 ontology: maxo/maxo-base
-property_value: http://purl.org/dc/elements/1.1/creator "Aaron Zhang" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "An ontology to represent medically relevant actions, procedures, therapies, interventions, and recommendations." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2021-03-22" xsd:string
+property_value: owl:versionInfo "2021-06-11" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -238,9 +237,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000021
-name: palliative therapeutics
+name: palliative care
 def: "An approach that improves the quality of life of patients and their families facing the problems associated with life-threatening illness, through the prevention and relief of suffering by means of early identification and impeccable assessment and treatment of pain and other problems, physical, psychosocial, and spiritual’." [PMID:27162584]
 synonym: "comfort care" EXACT []
+synonym: "palliative therapeutics" EXACT []
 synonym: "supportive care" NARROW []
 synonym: "symptom management" EXACT []
 xref: NCIT:C101516
@@ -264,7 +264,7 @@ name: end-of life care
 def: "Care for patients with a progressive life-limiting disease with a prognosis of months or less." [PMID:23796586]
 synonym: "end-of-life treatment management" EXACT []
 xref: NCIT:C67359
-is_a: MAXO:0000021 ! palliative therapeutics
+is_a: MAXO:0000021 ! palliative care
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-09T20:15:05Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -319,59 +319,60 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000044
-name: physiologic state avoidance
-is_a: MAXO:0000151 ! therapeutic avoidance intervention
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T19:59:24Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
+name: obsolete physiologic state
+replaced_by: MAXO:0001113
 
 [Term]
 id: MAXO:0000045
-name: dehydration avoidance
-def: "A medical requirement or recommendation to avoid dehydration." []
-synonym: "avoid dehydration" EXACT []
-is_a: MAXO:0000044 ! physiologic state avoidance
-intersection_of: MAXO:0000044 ! physiologic state avoidance
+name: dehydration prevention recommendation
+def: "A medical requirement or recommendation of avoiding or preventing Dehydration." []
+synonym: "avoid Dehydration recommendation" EXACT []
+synonym: "Dehydration avoidance" EXACT []
+intersection_of: MAXO:0001113 ! prevention of abnormal physiologic state
 intersection_of: MAXO:0000521 HP:0001944 ! avoided behavior
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T19:59:44Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date 2020-09-15T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000046
-name: hypertension avoidance
-def: "A medical requirement or recommendation to avoid hypertension." []
-synonym: "avoid hypertension" EXACT []
-is_a: MAXO:0000044 ! physiologic state avoidance
-intersection_of: MAXO:0000044 ! physiologic state avoidance
+name: hypertension prevention recommendation
+def: "A medical requirement or recommendation of avoiding or preventing Hypertension." []
+synonym: "avoid Hypertension recommendation" EXACT []
+synonym: "Hypertension avoidance" EXACT []
+intersection_of: MAXO:0001113 ! prevention of abnormal physiologic state
 intersection_of: MAXO:0000521 HP:0000822 ! avoided behavior
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T19:59:54Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date 2020-09-15T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000047
-name: obesity avoidance
-def: "A medical recommendation to avoid obesity." []
-synonym: "avoid obesity" EXACT []
-is_a: MAXO:0000044 ! physiologic state avoidance
-intersection_of: MAXO:0000044 ! physiologic state avoidance
+name: obesity prevention recommendation
+def: "A medical requirement or recommendation of avoiding or preventing Obesity." []
+synonym: "avoid Obesity recommendation" EXACT []
+synonym: "Obesity avoidance" EXACT []
+intersection_of: MAXO:0001113 ! prevention of abnormal physiologic state
 intersection_of: MAXO:0000521 HP:0001513 ! avoided behavior
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:01:31Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date 2020-09-15T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000048
-name: skin inflammation avoidance
-def: "A medical requirement or recommendation to avoid skin inflammation." []
-synonym: "avoid skin abrasion" EXACT []
-synonym: "avoid skin inflammation" EXACT []
-is_a: MAXO:0000044 ! physiologic state avoidance
-intersection_of: MAXO:0000044 ! physiologic state avoidance
+name: inflammation of the skin prevention recommendation
+def: "A medical requirement or recommendation of avoiding or preventing Inflammatory abnormality of the skin." []
+synonym: "avoid Inflammatory abnormality of the skin recommendation" EXACT []
+synonym: "Inflammatory abnormality of the skin avoidance" EXACT []
+intersection_of: MAXO:0001113 ! prevention of abnormal physiologic state
 intersection_of: MAXO:0000521 HP:0011123 ! avoided behavior
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:03:43Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date 2020-09-15T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000049
-name: therapeutic avoidance of physical activity
+name: physical activity avoidance recommendation
 def: "Recommendation by a clinician to avoid exercise or physical activity." []
+comment: avoidance of physical activity therapeutic recommendation
 synonym: "avoid exercise" EXACT []
+synonym: "avoidance of physical activity recommendation" EXACT []
 synonym: "rest recommendation" RELATED []
 is_a: MAXO:0000011 ! physical therapy
 is_a: MAXO:0000151 ! therapeutic avoidance intervention
@@ -380,16 +381,20 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000050
-name: therapeutic impact activities avoidance
+name: impact activities avoidance recommendation
+def: "A recommendation by a clinician or therapist to avoid any impact activities to prevent medical issues or help the physical wellbeing of a patient." []
 synonym: "impact sports avoidance" EXACT []
-is_a: MAXO:0000049 ! therapeutic avoidance of physical activity
+synonym: "therapeutic recommendation to avoid impact activities" EXACT []
+is_a: MAXO:0000049 ! physical activity avoidance recommendation
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:12:16Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000051
-name: therapeutic isometric exercise avoidance
-is_a: MAXO:0000049 ! therapeutic avoidance of physical activity
+name: isometric exercise avoidance recommendation
+def: "A recommendation by a clinician or therapist to avoid isometric exercises to prevent medical issues or help the physical wellbeing of a patient." []
+synonym: "therapeutic recommendation to avoid isometric exercise" EXACT []
+is_a: MAXO:0000049 ! physical activity avoidance recommendation
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:13:10Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -404,6 +409,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000054
 name: radiation exposure avoidance
+def: "A clinical recommendation to avoid or refrain from unnecessary radiation exposure." []
 is_a: MAXO:0000053 ! therapeutic avoidance of environmental exposure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:50:51Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -411,6 +417,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000055
 name: sunlight avoidance
+def: "A clinical recommendation to avoid or refrain from unnecessary sulight exposure." []
 is_a: MAXO:0000053 ! therapeutic avoidance of environmental exposure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:56:19Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -418,6 +425,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000056
 name: nutrition intake avoidance
+def: "A clinical recommendation to avoid the process of taking in of nutrients, especially by eating or drinking, considered in relation to the body’s dietary needs." []
 synonym: "food consumption avoidance" EXACT []
 is_a: MAXO:0000009 ! nutrition intervention
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-11T20:56:39Z xsd:dateTime
@@ -486,8 +494,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000065
 name: aerobic exercise therapy
-def: "A medical recommendation of sustained exercise that places an increased oxygen demand on the cardiovascular system and promotes an increased efficiency of the body's use of oxygen." [http://orcid.org/0000-0001-7941-2961, NCIT:C39774]
 def: "Sustained exercise that places an increased oxygen demand on the cardiovascular system and promotes an increased efficiency of the body's use of oxygen." [NCIT:C39774]
+comment: A medical recommendation of sustained exercise that places an increased oxygen demand on the cardiovascular system and promotes an increased efficiency of the body's use of oxygen. {xref="http://orcid.org/0000-0001-7941-2961", xref="NCIT:C39774"}
 synonym: "aerobic activity" EXACT []
 synonym: "aerobic exercise" EXACT []
 xref: NCIT:C39774
@@ -511,6 +519,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000067
 name: lung volume reduction surgery
+def: "A procedure designed to help you breathe easier when your lungs have been damaged by disease. The goal of the surgery is to remove the area of the lung most affected by disease, allowing the remaining lung to function more efficiently, and improve your breathing ability and quality of life." []
 is_a: MAXO:0000004 ! surgical procedure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T19:14:42Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -539,22 +548,18 @@ replaced_by: MAXO:0010038
 
 [Term]
 id: MAXO:0000070
-name: liver transplantation
-name: liver transplantation surgical procedure
-def: "The surgical transfer of a healthy liver to a patient." []
+name: obsolete liver transplantation
 synonym: "hepatic transplantation" EXACT []
 synonym: "liver grafting" EXACT []
 synonym: "liver transplantation" EXACT []
-synonym: "liver transplantation surgical procedure" EXACT []
 synonym: "surgical transplantation of the liver" EXACT []
-synonym: "transplantation of liver" EXACT []
 xref: NCIT:C15271
-property_value: http://purl.org/dc/elements/1.1/date 2020-06-24T20:39:14Z xsd:string
-created_by: http://orcid.org/0000-0001-7941-2961
+replaced_by: MAXO:0001175
 
 [Term]
 id: MAXO:0000071
 name: chemical exposure avoidance
+def: "A clinical recommendation to avoid or refrain from unnecessary chemical exposure." []
 is_a: MAXO:0000053 ! therapeutic avoidance of environmental exposure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T19:31:56Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -593,6 +598,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000075
 name: digestive system testing
+def: "The quantitative measurement of digestive system tests to diagnose or treat a digestive disorder using clinical laboratory procedures, imaging tests, endoscopic or other procedures." []
 is_a: MAXO:0000003 ! diagnostic procedure
 is_a: MAXO:0000566 ! clinical chemistry assessment
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T19:35:36Z xsd:dateTime
@@ -752,6 +758,7 @@ replaced_by: MAXO:0010050
 [Term]
 id: MAXO:0000092
 name: excessive alcohol avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of large amounts of alcohol." []
 is_a: MAXO:0010050 ! alcohol intake avoidance
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T20:54:50Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -759,6 +766,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000093
 name: estrogen-containing food avoidance
+def: "A clinical recommendation to avoid foods with high concentrations of estrogen." []
 comment: Some processed foods and soy contain large amounts of estrogen.
 is_a: MAXO:0000056 ! nutrition intake avoidance
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T20:55:05Z xsd:dateTime
@@ -772,6 +780,7 @@ replaced_by: MAXO:0010100
 [Term]
 id: MAXO:0000096
 name: excessive protein consumption avoidance
+def: "A clinical recomendation to avoid high-protein diets which may worsen kidney function." []
 is_a: MAXO:0010002 ! protein intake avoidance
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:00:36Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -779,6 +788,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000097
 name: fasting avoidance
+def: "Clinical recommendation to avoid fasting due to health risks." []
 is_a: MAXO:0000009 ! nutrition intervention
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:01:13Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -846,13 +856,13 @@ id: MAXO:0000107
 name: multivitamin supplementation
 def: "Addition of multivitamin preparation to the diet for adequate and complete nutrition." []
 comment: A dietary supplement containing all or most of the vitamins that may not be readily available in the diet. Vitamins may be classified according to their solubility either in lipids (vitamins A, D, E, K, F) or in water (vitamins C, B-complex). Present in minute amounts in various foods, vitamins are essential to maintaining normal metabolism and biochemical functions. {xref="NCIT:C1654"}
-comment: multivitamin preparation
 synonym: "dietary supplementation of multivitamin preparation" EXACT []
 synonym: "multivitamin preparation supplemental intake" EXACT []
 synonym: "supplementation of multivitamin preparation" EXACT []
 synonym: "supplementation with multivitamin" EXACT []
 xref: NCIT:C1654
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:08:59Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -870,13 +880,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000109
-name: obsolete: vitamin C supplementation
-def: "Addition of obsolete: vitamin C to the diet for adequate and complete nutrition." []
-comment: obsolete: vitamin C
-synonym: "dietary supplementation of obsolete: vitamin C" EXACT []
-synonym: "obsolete: vitamin C supplemental intake" EXACT []
-synonym: "supplementation of obsolete: vitamin C" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:09:48Z xsd:dateTime
+name: vitamin C supplementation
+def: "Addition of vitamin C to the diet for adequate and complete nutrition." []
+synonym: "dietary supplementation of vitamin C" EXACT []
+synonym: "supplementation of vitamin C" EXACT []
+synonym: "vitamin C supplemental intake" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -886,7 +895,6 @@ def: "Addition of vitamin D to a the diet for complete nutrition support." []
 synonym: "dietary supplementation of vitamin D" EXACT []
 synonym: "supplementation of vitamin D" EXACT []
 synonym: "vitamin D supplemental intake" EXACT []
-is_a: MAXO:0001129 ! vitamin supplementation
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:09:59Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1002,6 +1010,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000123
 name: disease exposure immunization
+def: "The intentional exposure to a disease in order to achieve immunization." []
 is_a: MAXO:0000120 ! active immunization
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-20T00:36:49Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -1023,7 +1032,7 @@ def: "Testing conducted utilizing a manual or microprocessor audiometer to test 
 synonym: "hearing exam procedure" EXACT []
 synonym: "hearing testing procedure" EXACT []
 xref: NCIT:C38036
-is_a: MAXO:0000124 ! disease screening
+is_a: MAXO:0000873 ! hearing examination
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-20T00:42:26Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1042,6 +1051,7 @@ name: genetic testing
 def: "The process of isolating and testing the DNA of an embryo or a person to detect the presence of genetic alterations or defects that may predispose to the future development of a disease or disorder." [NCIT:C15709]
 synonym: "genetic analysis" EXACT []
 xref: NCIT:C15709
+is_a: MAXO:0000003 ! diagnostic procedure
 is_a: MAXO:0000124 ! disease screening
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-20T00:46:22Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -1053,14 +1063,8 @@ replaced_by: MAXO:0000528
 
 [Term]
 id: MAXO:0000129
-name: biopsy procedure
-def: "An examination of tissue removed from the body to assess the presence, cause, or extent of a disease." []
-synonym: "biopsy" EXACT []
-xref: NCIT:C15189
-xref: OPMI:0000274
-is_a: MAXO:0000003 ! diagnostic procedure
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7941-2961
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-20T00:52:34Z xsd:dateTime
+name: obsolete biopsy procedure
+replaced_by: OBI:0002650
 
 [Term]
 id: MAXO:0000130
@@ -1076,6 +1080,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000131
 name: location specific endoscopy
+def: "A diagnostic or therapeutic procedure in which an endoscope is inserted in a tubular portion of a specific body part or body location." []
 synonym: "endoscopy by site" EXACT []
 is_a: MAXO:0000130 ! endoscopic procedure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-20T01:03:18Z xsd:dateTime
@@ -1084,6 +1089,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000132
 name: specific technique endoscopy
+def: "A diagnostic or therapeutic procedure in which an endoscope is inserted in a tubular organ using a specific endoscopic technique." []
 synonym: "endoscopy by type" EXACT []
 synonym: "specific type endoscopy" EXACT []
 is_a: MAXO:0000130 ! endoscopic procedure
@@ -1198,7 +1204,6 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000144
 name: histological procedure
-def: "Technique or procedure used for the study of the microanatomy of tissues and their cellular structure for the diagnosis or treatment of a disease." [http://orcid.org/0000-0001-7941-2961, NCIT:C16680]
 def: "Technique or procedure used for the study of the microanatomy of tissues and their cellular structure; usually involves microscopic examination of tissue slices." [NCIT:C16680]
 synonym: "histological testing" EXACT []
 xref: NCIT:C16680
@@ -1372,6 +1377,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000162
 name: adrenal-modifying, hormonal agent therapy
+def: "Use of any agent that can alter adrenal gland functions." []
 synonym: "treatment with adrenal modifier" EXACT []
 synonym: "treatment with adrenal modifying agent" EXACT []
 synonym: "treatment with adrenal modifying drug" EXACT []
@@ -1552,6 +1558,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000172
 name: therapeutic antidotes, deterrents, and toxicologic agent therapy
+def: "A grouping of agents that are used as antidotes, deterrents, or to counteract the effects of a toxic agents on the body." []
+synonym: "antidote therapy" RELATED []
+synonym: "rescue therapy" RELATED []
 is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:01:36Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -1602,7 +1611,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000175
 name: blood glucose regulator therapy
+def: "Any drug that works to lower abnormally high glucose (sugar) levels in the blood, which are characteristic of the endocrine system disorder known as diabetes mellitus." []
 synonym: "blood glucose regulator drug treatment" EXACT []
+synonym: "Treatment with an agent that regulates blood glucose levels." RELATED []
 is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:11:18Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -1651,6 +1662,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000179
 name: blood formation agent therapy
+def: "Treatment with an agent that stimulates formation of blood cells." []
 is_a: MAXO:0000176 ! hematologic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:12:20Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -2196,6 +2208,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000207
 name: glutamate reducing agent therapy
+def: "Treatment with an agent which decreases glutamate." []
 is_a: MAXO:0000211 ! glutamatergic pathway modifying agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:29:56Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -2242,6 +2255,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000211
 name: glutamatergic pathway modifying agent therapy
+def: "Treatment with an agent which modifies glutamate." []
 synonym: "glutamate modulator therapy" EXACT []
 synonym: "glutamate pathway modifying drug treatment" EXACT []
 synonym: "glutamatergic drug therapy" EXACT []
@@ -2332,6 +2346,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000219
 name: toxicologic agent therapy
+def: "An agent used to treat a toxicologic agent." []
 synonym: "toxicologic drug therapy" EXACT []
 is_a: MAXO:0000172 ! therapeutic antidotes, deterrents, and toxicologic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T18:42:18Z xsd:dateTime
@@ -2619,6 +2634,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000235
 name: antineoplastic molecular target inhibitor agent therapy
+def: "A treatment that uses drugs to target specific genes and proteins that are involved in the growth and survival of cancer cells." []
 synonym: "antineoplastic molecular target inhibitor drug treatment" EXACT []
 synonym: "cancer targeted inhibitor drug treatment" EXACT []
 synonym: "cancer targeted inhibitor therapy" EXACT []
@@ -2635,6 +2651,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000236
 name: antineoplastic monoclonal antibody agent therapy
+def: "Treatment with a biological agent (monoclonal antibody) that target factors responsible for deregulated cell proliferation as in cancer." []
 synonym: "antineoplastic monoclonal antibodies therapy" EXACT []
 synonym: "antineoplastic monoclonal antibody drug treatment" EXACT []
 xref: NCIT:C15490
@@ -2767,6 +2784,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000245
 name: antispasticity agent therapy
+def: "Treatment with an agent that suppresses muscle spasms." []
 synonym: "anti-spasticity agent therapy" EXACT []
 synonym: "antispasmodic agent therapy" EXACT []
 synonym: "antispasmodic drug therapy" EXACT []
@@ -2925,6 +2943,7 @@ replaced_by: MAXO:0000163
 [Term]
 id: MAXO:0000255
 name: antidepressant anxiolytics
+def: "Treatment with an antidepressant that can be used to treat anxiety." []
 is_a: MAXO:0000163 ! anxiolytic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:32:25Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -2952,6 +2971,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000257
 name: antidiabetic agent therapy
+def: "Treatment with any agent that treats or prevents diabetes or diabetes symptoms." []
 synonym: "anti-diabetic therapy" EXACT []
 synonym: "antidiabetic agent drug treatment" EXACT []
 synonym: "antidiabetic therapy" EXACT []
@@ -2962,6 +2982,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000258
 name: glycemic agent therapy
+def: "Treatment with any drug or agent taken that maintains ando/or regulates blood glucose levels." []
 synonym: "glycemic agent drug therapy" EXACT []
 synonym: "glycemic regulation agent therapy" EXACT []
 synonym: "glycemic regulation drug treatment" EXACT []
@@ -3034,6 +3055,7 @@ replaced_by: MAXO:0000262
 [Term]
 id: MAXO:0000264
 name: dental and oral agent therapy
+def: "Any agent or drug used to treat oral diseases." []
 is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:35:53Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3078,10 +3100,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000268
 name: gastrointestinal antispasmodics agent therapy
+def: "Treatment to regulate muscle contractions in the gastrointestinal tract." []
 synonym: "gastrointestinal anti-spasmodic agent therapy" EXACT []
 synonym: "gastrointestinal antispasmodic agent therapy" EXACT []
 synonym: "gastrointestinal antispasmodic drug treatment" EXACT []
 synonym: "gastrointestinal antispasmodic treatment therapy" EXACT []
+is_a: MAXO:0000245 ! antispasticity agent therapy
 is_a: MAXO:0000267 ! gastrointestinal agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:37:00Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3107,6 +3131,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000270
 name: irritable bowel syndrome agent therapy
+def: "Treatment with any agent that helps treat irritable bowel syndrome." []
 is_a: MAXO:0000267 ! gastrointestinal agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:37:54Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3114,8 +3139,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000271
 name: gastrointestinal protectant agent therapy
+def: "Treatment with medications that coat the ulcerated surfaces of gastrointestinal lining and are used mainly for peptic ulcer disease." []
 synonym: "gastrointestinal protectant drug treatment" EXACT []
 synonym: "gastrointestinal protectant treatment therapy" EXACT []
+synonym: "gastroprotectant" EXACT []
 is_a: MAXO:0000267 ! gastrointestinal agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:38:16Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3152,6 +3179,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000275
 name: urinary antispasmodic agent therapy
+def: "Treatment to  inhibit involuntary detrusor muscle contractions." []
+is_a: MAXO:0000245 ! antispasticity agent therapy
 is_a: MAXO:0000274 ! genitourinary agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:39:46Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3159,6 +3188,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000276
 name: benign prostate hypertrophy agent therapy
+def: "Treatment with agent to increase urine flow in patients with an enlarged prostate." []
 is_a: MAXO:0000274 ! genitourinary agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:40:09Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3166,6 +3196,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000277
 name: phosphate binders agent therapy
+def: "Treatment with agents used to reduce the absorption of dietary phosphate" []
 is_a: MAXO:0000274 ! genitourinary agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:40:24Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3178,6 +3209,7 @@ replaced_by: MAXO:0000274
 [Term]
 id: MAXO:0000279
 name: Glucocorticoids/ Mineralocorticoids therapy
+def: "Treatments that are anti-inflammatory and immunosuppressive." []
 is_a: MAXO:0000162 ! adrenal-modifying, hormonal agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:42:45Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3185,6 +3217,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000280
 name: pituitary-modifying, hormonal agent therapy
+def: "Treatment with an agent or medication that regulates hormones released by the pituitary." []
 synonym: "treatment with pituitary modifier" EXACT []
 synonym: "treatment with pituitary modifying agent" EXACT []
 synonym: "treatment with pituitary modifying drug" EXACT []
@@ -3196,6 +3229,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000281
 name: prostaglandin-modifying, hormonal agent therapy
+def: "Treatment with an agent regulating protaglandins." []
 synonym: "treatment with prostaglandin modifier" EXACT []
 synonym: "treatment with prostaglandin modifying agent" EXACT []
 synonym: "treatment with prostaglandin modifying drug" EXACT []
@@ -3207,6 +3241,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000282
 name: sex hormone modifying agent therapy
+def: "Treatment with any agent or medication that modifies androgen, estrogens, and/or progestogens." []
+synonym: "gonadal steroid modifying agent therapy" NARROW []
+synonym: "gonadocorticoid modifying agent therapy" NARROW []
 synonym: "sex hormone modifying drug treatment" EXACT []
 is_a: MAXO:0000283 ! hormone modifying therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:46:02Z xsd:dateTime
@@ -3233,6 +3270,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000284
 name: thyroid-modifying hormonal agent therapy
+def: "Treatment with an agent or medication that regulates hormones released by the thyroid." []
 synonym: "treatment with thyroid modifier" EXACT []
 synonym: "treatment with thyroid modifying agent" EXACT []
 synonym: "treatment with thyroid modifying drug" EXACT []
@@ -3256,6 +3294,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000286
 name: androgen modifying agent therapy
+def: "Treatment with an agent to modify androgen action." []
 synonym: "treatment with androgen agent" EXACT []
 synonym: "treatment with androgen drug" EXACT []
 synonym: "treatment with androgen medication" EXACT []
@@ -3286,6 +3325,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000288
 name: progestin modifying agent therapy
+def: "Treatment with an agent to modify progestin action." []
 synonym: "progestin modifying drug treatment" EXACT []
 synonym: "treatment with progestin modifier" EXACT []
 synonym: "treatment with progestin modifying agent" EXACT []
@@ -3299,6 +3339,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000289
 name: selective-estrogen receptor modifying agent therapy
+def: "Treatment with an agent to that selectively modifies estrogen receptor action." []
 is_a: MAXO:0000282 ! sex hormone modifying agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:52:46Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3322,6 +3363,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000291
 name: androgen stimulant agent therapy
+def: "Use of a compound which increases or activates the biosynthesis or actions of androgens." []
 synonym: "treatment with androgen agonist" EXACT []
 synonym: "treatment with androgen stimulant" EXACT []
 is_a: MAXO:0000286 ! androgen modifying agent therapy
@@ -3443,6 +3485,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000298
 name: passive immunizing agent therapy
+def: "Treatment with antibodies to a disease to provide a temporary immunity." []
 is_a: MAXO:0000295 ! immunological agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:00:40Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3472,6 +3515,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000304
 name: metabolic bone disease agent therapy
+def: "Treatment with drug or agent to treat or prevent deformities or abnormalities of the bone caused by a metabolic disorder." []
 synonym: "metabolic bone disease drug treatment" EXACT []
 is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:04:21Z xsd:dateTime
@@ -3501,6 +3545,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000306
 name: ophthalmic anti-allergy agent therapy
+def: "Treatment with medication delivered directly to the eye to treat allergies or allergy symptoms." []
 is_a: MAXO:0000305 ! ophthalmic agent therapy
 is_a: MAXO:0000633 ! allergy agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:04:55Z xsd:dateTime
@@ -3525,6 +3570,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000308
 name: ophthalmic anti-inflammatory agent therapy
+def: "Treatment with an agent or medication formulated to be applied in the eyes, to reduce pain or to treat inflammation, especially used after eye surgery to relieve pain." []
 is_a: MAXO:0000169 ! anti-inflammatory agent therapy
 is_a: MAXO:0000305 ! ophthalmic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:05:47Z xsd:dateTime
@@ -3533,6 +3579,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000309
 name: ophthalmic prostaglandin and prostamide agent therapy
+def: "Treatment with an agent applied directly to the eye to treat elevated intraocular pressure (IOP) via regulating prostaglandin and prostamide." []
 is_a: MAXO:0000305 ! ophthalmic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:06:19Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3588,6 +3635,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000314
 name: inhaled corticosteroid agent therapy
+def: "Treatment with an inhaled agent that reduces inflammation and mucus in the airways that carry air to the lungs." []
 synonym: "inhaled corticosteroid drug treatment" EXACT []
 is_a: MAXO:0000312 ! respiratory tract agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:09:38Z xsd:dateTime
@@ -3627,6 +3675,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000317
 name: anticholinergic bronchodilator agent therapy
+def: "Treatment with an agent that blocks the effect of acetylcholine in airways and nasal passages to keep the airways from constricting during asthma and allergy-related brathing issues." []
 synonym: "anticholinergic bronchodilator drug treatment" EXACT []
 is_a: MAXO:0000316 ! bronchodilator agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:10:37Z xsd:dateTime
@@ -3635,6 +3684,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000318
 name: phosphodiesterase inhibitor bronchodilator agent therapy
+def: "Treatment with a phosphodiesterase (PDE) inhibitor that decreases mean pulmonary arterial pressure." []
 synonym: "phosphodiesterase inhibitor bronchodilator drug treatment" EXACT []
 is_a: MAXO:0000316 ! bronchodilator agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:11:08Z xsd:dateTime
@@ -3643,7 +3693,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000319
 name: sympathomimetic bronchodilator agent therapy
+def: "Treatment with an agent for reversible airway obstruction in diseases such as asthma and COPD. These agents produce bronchodilation by stimulating beta2 adrenergic receptors on airway smooth muscle." []
+synonym: "adrenergic bronchiodilator agent therapy" EXACT []
+synonym: "adrenergic bronchiodilator agent treatment" EXACT []
+synonym: "adrenergic bronchiodilator drug therapy" EXACT []
 synonym: "sympathomimetic bronchodilator drug therapy" EXACT []
+synonym: "treatment with adrenergic bronchiodilator agent" EXACT []
 is_a: MAXO:0000316 ! bronchodilator agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:11:37Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3651,6 +3706,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000320
 name: mast cell stabilizer agent therapy
+def: "Treatment with an agent that block mast cell degranulation, stabilizing the cell and thereby preventing the release of histamine and other factors thereby preventing or regulating allergic disorders." []
 synonym: "mast cell stabiliser agent therapy" EXACT []
 synonym: "mast cell stabiliser drug treatment" EXACT []
 synonym: "mast cell stabilizer drug treatment" EXACT []
@@ -3662,6 +3718,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000321
 name: pulmonary antihypertensive agent therapy
+def: "Treatment with an agent that decreases pulmonary hypertension." []
 synonym: "pulmonary antihypertensive drug treatment" EXACT []
 is_a: MAXO:0000312 ! respiratory tract agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:12:15Z xsd:dateTime
@@ -4739,6 +4796,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000441
 name: granulocyte colony stimulating factor agent therapy
+def: "Treatment with an agent that stimulate the proliferation of bone marrow cells and differentiation of stem cells into colonies of granulocytes." []
 synonym: "G-CSF treatment" EXACT ABBREVIATION []
 synonym: "granulocyte-colony stimulating factor treatment therapy" EXACT []
 synonym: "recombinant colony-stimulating factor 3 treatment therapy" EXACT []
@@ -4753,6 +4811,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000442
 name: erythropoietin regulating agent therapy
+def: "Treatment with agents or medications which modulate the bone marrow's production of red blood cells." []
 synonym: "erythropoietin modulating treatment" EXACT []
 is_a: MAXO:0000179 ! blood formation agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-10-08T18:37:29Z xsd:dateTime
@@ -4921,8 +4980,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000457
 name: pain management
+def: "The management of pain by interventional procedures, pharmacotherapy, physical therapy, psychological counseling, or complementary and alternative medical therapies designed to treat or alleviate pain." []
+synonym: "pain therapy" EXACT []
 is_a: MAXO:0000002 ! therapeutic procedure
-is_a: MAXO:0000021 ! palliative therapeutics
+is_a: MAXO:0000021 ! palliative care
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-08T17:26:31Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -4997,6 +5058,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000465
 name: aquatic exercise therapy
+def: "Therapy occuring in a pool or bath which is a low-impact activity and takes the pressure off your bones, joints, and muscles." []
 is_a: MAXO:0000011 ! physical therapy
 is_a: MAXO:0000458 ! hydrotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-08T18:07:42Z xsd:dateTime
@@ -5120,7 +5182,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000477
 name: orthopedic procedure
-synonym: "Any procedure relating to the branch of medicine dealing with the correction of deformities of bones or muscles." EXACT []
+def: "Any procedure relating to the branch of medicine dealing with the correction of deformities of bones or muscles." []
 synonym: "orthopaedic procedure" EXACT []
 xref: MeSH:D019637
 is_a: MAXO:0000002 ! therapeutic procedure
@@ -5228,7 +5290,6 @@ def: "A measurement performed in a clinical setting using clinician's observatio
 synonym: "clinical measurement" EXACT []
 xref: CMO:0000000
 xref: PMID:2647562
-is_a: MAXO:0000002 ! therapeutic procedure
 is_a: MAXO:0000003 ! diagnostic procedure
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-21T20:29:43Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -5745,6 +5806,7 @@ synonym: "GBS" EXACT ABBREVIATION []
 synonym: "group B strep screening" EXACT []
 xref: NCIT:C92805
 is_a: MAXO:0000528 ! prenatal examination
+is_a: MAXO:0000596 ! infectious disease screening
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-19T20:47:28Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -6173,7 +6235,6 @@ def: "A quantitative measurement of the amount of calcium present in a sample, u
 synonym: "calcium measurement" EXACT []
 xref: NCIT:C64488
 is_a: MAXO:0000566 ! clinical chemistry assessment
-is_a: MAXO:0000778 ! liver function testing
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-31T19:19:43Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -6538,6 +6599,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000614
 name: clinical immunofluorescence assay testing
+def: "Immunofluorescence staining used in a pathology or clinical lab to diagnose diseases of the skin, kidney, heart, cilia and other organ systems." []
 is_a: MAXO:0000613 ! clinical immunoassay
 property_value: http://purl.org/dc/elements/1.1/date 2020-04-08T15:46:23Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -6558,7 +6620,7 @@ id: MAXO:0000616
 name: oxygen saturation measurement
 def: "The measurement of the ratio of oxygenated hemoglobin to total hemoglobin in the blood." [NCIT:C60832]
 xref: NCIT:C60832
-is_a: MAXO:0000003 ! diagnostic procedure
+is_a: MAXO:0000487 ! clinical assessment
 property_value: http://purl.org/dc/elements/1.1/date 2020-04-08T18:45:55Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -6966,6 +7028,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000644
 name: molecular pathway modifying agent therapy
+def: "Treatment with an agent that modifies a particular molecular pathway." []
 synonym: "biochemical role therapy" EXACT []
 synonym: "CHEBI:52206" EXACT []
 synonym: "treatment with biochemical role" EXACT []
@@ -7127,7 +7190,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000654
 name: renin inhibitor therapy
-synonym: "Treatment with a group of pharmaceutical drugs used primarily in treatment of essential hypertension. These drugs inhibit the first and rate-limiting step of the renin–angiotensin–aldosterone system, namely the conversion of angiotensinogen to angiotensin I." EXACT []
+def: "Treatment with a group of pharmaceutical drugs used primarily in treatment of essential hypertension. These drugs inhibit the first and rate-limiting step of the renin–angiotensin–aldosterone system, namely the conversion of angiotensinogen to angiotensin I." []
 is_a: MAXO:0000190 ! RAAS inhibitor therapy
 property_value: http://purl.org/dc/elements/1.1/date 2020-06-04T17:32:06Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -7188,6 +7251,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000659
 name: AMPA-targeting agent therapy
+def: "Treatment with an agent which regulates AMPA recepter signaling." []
 is_a: MAXO:0000211 ! glutamatergic pathway modifying agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2020-06-08T17:48:19Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -7242,6 +7306,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000664
 name: antidiarrheal agent therapy
+def: "Treatment with an agent that is used to prevent or inhibit diarrhea." []
 synonym: "anti-diarrheal agent therapy" EXACT []
 synonym: "antidiarrhoeal agent therapy" EXACT []
 synonym: "antidiarrhoeal drug therapy" EXACT []
@@ -7392,15 +7457,8 @@ synonym: "palliative care specialist evaluation" NARROW []
 synonym: "palliative care specialist referral" NARROW []
 synonym: "referral to hospice and palliative medicine specialist" EXACT []
 synonym: "referral to palliative care specialist" NARROW []
-is_a: MAXO:0000667 ! anesthesiology specialist evaluation
-is_a: MAXO:0000673 ! family medicine specialist evaluation
-is_a: MAXO:0000680 ! internal medicine specialist evaluation
-is_a: MAXO:0000702 ! obstetrics and gynecology specialist evaluation
-is_a: MAXO:0000707 ! pediatrician evaluation
-is_a: MAXO:0000712 ! physiatrist evaluation
-is_a: MAXO:0000718 ! radiologist evaluation
-is_a: MAXO:0000723 ! psychiatry and neurology specialist evaluation
-is_a: MAXO:0000725 ! surgeon evaluation
+is_a: MAXO:0000021 ! palliative care
+is_a: MAXO:0000665 ! medical specialist evaluation
 property_value: http://purl.org/dc/elements/1.1/date 2020-07-01T19:53:31Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -7532,6 +7590,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000684
 name: critical care medicine internist evaluation
+def: "An assessment with an internist trained in critical care medicine who has expertise in the diagnosis, treatment and support of critically ill and injured patients, particularly trauma victims and patients with multiple organ dysfunction." []
 synonym: "consultation with critical care medicine internist" EXACT []
 synonym: "consultation with internal medicine critical care medicine specialist" EXACT []
 synonym: "internal medicine critical care medicine consultation" EXACT []
@@ -8044,6 +8103,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000723
 name: psychiatry and neurology specialist evaluation
+def: "Evaluation by a physician who specializes in the evaluation and treatment of of the brain." []
 is_a: MAXO:0000665 ! medical specialist evaluation
 property_value: http://purl.org/dc/elements/1.1/date 2020-07-13T17:01:27Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -8398,7 +8458,7 @@ name: liquid biopsy
 def: "The sampling and analysis of non-solid biological tissue often through rapid and non-invasive methods, which allows the assessment in real-time of the evolving landscape of cancer." [PMID:32580740]
 synonym: "solid tumor monitoring" RELATED []
 is_a: MAXO:0000126 ! cancer screening
-is_a: MAXO:0000129 ! biopsy procedure
+is_a: OBI:0002650
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-19T20:45:40Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -8448,7 +8508,6 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000760
 name: vitamin b12 supplementation
 def: "Addition of vitamin b12 to the diet for adequate and complete nutrition." []
-comment: vitamin b12
 synonym: "dietary supplementation of vitamin b12" EXACT []
 synonym: "supplementation of vitamin b12" EXACT []
 synonym: "vitamin b12 supplemental intake" EXACT []
@@ -8457,12 +8516,11 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000761
-name: obsolete: vitamin B supplementation
-def: "Addition of obsolete: vitamin B to the diet for adequate and complete nutrition." []
-comment: obsolete: vitamin B
-synonym: "dietary supplementation of obsolete: vitamin B" EXACT []
-synonym: "obsolete: vitamin B supplemental intake" EXACT []
-synonym: "supplementation of obsolete: vitamin B" EXACT []
+name: B vitaminvitamin B supplementation
+def: "Addition of B vitaminvitamin B to the diet for adequate and complete nutrition." []
+synonym: "B vitaminvitamin B supplemental intake" EXACT []
+synonym: "dietary supplementation of B vitaminvitamin B" EXACT []
+synonym: "supplementation of B vitaminvitamin B" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -8649,10 +8707,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000784
 name: HCG measurement
 def: "A quantitative measurement of the amount of human chorionic gonadotropin present in urine or serum." []
-synonym: "HCG pregnancy measurement" EXACT []
 synonym: "human chorionic gonadotropin measurement" EXACT []
 is_a: MAXO:0000605 ! protein measurement
-is_a: MAXO:0000783 ! pregnancy test
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-09T20:20:44Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -8721,7 +8777,6 @@ synonym: "clinical breast exam" EXACT []
 synonym: "examination of breast" EXACT []
 synonym: "physical examination of breast" EXACT []
 xref: NCIT:C70552
-is_a: MAXO:0000126 ! cancer screening
 is_a: MAXO:0000782 ! obstetrics and gynecology procedure
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-10T14:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -8746,7 +8801,6 @@ synonym: "examination of abdomen" EXACT []
 synonym: "examination of the abdomen" EXACT []
 synonym: "physical examination of abdomen" EXACT []
 xref: NCIT:C167415
-is_a: MAXO:0000782 ! obstetrics and gynecology procedure
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-10T14:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -8851,7 +8905,7 @@ name: avoid excessive exercise
 def: "Clinical recommendation to avoid strenuous exercise that may increase heart rate and temperature." []
 synonym: "abstain from excessive exercise" EXACT []
 synonym: "avoid strenuous physical work" EXACT []
-is_a: MAXO:0000049 ! therapeutic avoidance of physical activity
+is_a: MAXO:0000049 ! physical activity avoidance recommendation
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-10T21:22:05Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -8859,16 +8913,16 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000803
 name: avoid heavy lifting activities
 def: "A clinical recommendation to avoid or refrain from lifting heavy items in order to maintain health or ameliorate symptoms." []
-is_a: MAXO:0000049 ! therapeutic avoidance of physical activity
+is_a: MAXO:0000049 ! physical activity avoidance recommendation
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-10T21:22:33Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000804
 name: avoid destabilizing activities
-def: "Limit activities where a great deal of balance may be required." []
+def: "Limit activities where a great deal of balance may be required to prevent issues or help the wellbeing of a patient." []
 synonym: "avoid acitivities requiring balance" EXACT []
-is_a: MAXO:0000049 ! therapeutic avoidance of physical activity
+is_a: MAXO:0000049 ! physical activity avoidance recommendation
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-10T21:23:13Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9198,6 +9252,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000840
 name: alanine transaminase test
 def: "The determination of the amount of alanine aminotransferase (human) present in the sample." []
+comment: Alanine aminotransferase is an enzyme produced mainly in the liver. When serum activity is measured, it provides a marker of hepatic disease. {xref="PMID:1992953"}
 synonym: "alanine aminotransferase (human) assessment" EXACT []
 synonym: "alanine aminotransferase (human) test" EXACT []
 synonym: "alanine aminotransferase measurement" EXACT []
@@ -9217,6 +9272,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000841
 name: aspartate aminotransferase measurement
 def: "The determination of the amount of aspartate aminotransferase (human) present in the sample." []
+comment: Alanine aminotransferase (ALT), aspartate aminotransferase (AST) and gamma-glutamyl transferase (GGT) are enzymes measured in serum or plasma to investigate liver disease. {xref="PMID:24072574"}
 synonym: "aspartate aminotransferase (human) assessment" EXACT []
 synonym: "aspartate aminotransferase (human) test" EXACT []
 synonym: "aspartate aminotransferase blood test" EXACT []
@@ -9234,8 +9290,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000842
 name: gamma glutamyl transpeptidase measurement
 def: "The determination of the amount of gamma-glutamyltranspeptidase present in the sample." []
-comment: Determination of gamma-glutamyl transferase (GGT) present in the sample as a measurement of liver function.
-synonym: "gamma glutamyl transpeptidase measurement" EXACT []
+comment: Determination of gamma-glutamyl transferase (GGT) present in the sample as a measurement of liver function. {xref="PMID:24072574"}
 synonym: "gamma-glutamyltranspeptidase assessment" EXACT []
 synonym: "gamma-glutamyltranspeptidase test" EXACT []
 synonym: "gamma-GT test" EXACT []
@@ -9259,7 +9314,6 @@ synonym: "albumin assessment" EXACT []
 synonym: "albumin level measurement" EXACT []
 synonym: "albumin test" EXACT []
 xref: NCIT:C64431
-is_a: MAXO:0000778 ! liver function testing
 intersection_of: MAXO:0000566 ! clinical chemistry assessment
 intersection_of: RO:0002233 PR:P02768
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:45:46Z xsd:string
@@ -9274,7 +9328,6 @@ synonym: "alkaline phosphatase assessment" EXACT []
 synonym: "alkaline phosphatase test" EXACT []
 synonym: "ALP measurement" EXACT []
 xref: NCIT:C64432
-is_a: MAXO:0000778 ! liver function testing
 intersection_of: MAXO:0000566 ! clinical chemistry assessment
 intersection_of: RO:0002233 PR:000023540
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:50:44Z xsd:string
@@ -9287,7 +9340,6 @@ def: "The measurement of the total amount of bilirubin present in a particular s
 synonym: "BILI measurement" EXACT []
 synonym: "total bilirubin level measurement" EXACT []
 xref: NCIT:C38037
-is_a: MAXO:0000778 ! liver function testing
 is_a: MAXO:0000848 ! bilirubin measurement
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-16T21:52:27Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -9295,10 +9347,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000846
 name: lactate dehydrogenase measurement
+def: "The determination of the amount of lactate dehydrogenase present in the sample." []
 synonym: "LDH measurement" EXACT []
 xref: NCIT:C64855
 is_a: MAXO:0000605 ! protein measurement
-is_a: MAXO:0000778 ! liver function testing
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T14:57:21Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9311,7 +9363,6 @@ synonym: "5'- nucleotidase measurement" EXACT []
 synonym: "5'-nucleotidase assessment" EXACT []
 synonym: "5'-nucleotidase test" EXACT []
 xref: NCIT:C79437
-is_a: MAXO:0000778 ! liver function testing
 intersection_of: MAXO:0000566 ! clinical chemistry assessment
 intersection_of: RO:0002233 PR:000001800
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:01:15Z xsd:string
@@ -9321,7 +9372,6 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000848
 name: bilirubin measurement
 def: "The measurement of bilirubin present in a particular sample." []
-is_a: MAXO:0000075 ! digestive system testing
 is_a: MAXO:0000605 ! protein measurement
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:06:51Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -9341,14 +9391,12 @@ name: total protein measurement
 def: "A quantitative measurement of total protein present in the sample, usually serum or urine." []
 xref: NCIT:C64858
 is_a: MAXO:0000605 ! protein measurement
-is_a: MAXO:0000778 ! liver function testing
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:16:41Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000851
 name: urine protein measurement
-def: "A test to determine the amount or type of protein present in urine." []
 def: "The determination of the amount of protein present in urine." []
 synonym: "protein urine assessment" EXACT []
 synonym: "urine protein assessment" EXACT []
@@ -9490,6 +9538,133 @@ property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:25:01Z xsd:st
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0000869
+name: obstetric abdominal examination
+def: "A systemic evaluation of the abdomen using visual inspection, palpation, and percussion during pregnancy to determine the health of the mother and fetus." []
+synonym: "abdominal examination during pregnancy" EXACT []
+synonym: "pregnant abdomen examination" EXACT []
+is_a: MAXO:0000782 ! obstetrics and gynecology procedure
+is_a: MAXO:0000792 ! abdominal examination
+property_value: http://purl.org/dc/elements/1.1/date 2021-05-27T15:12:17Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000870
+name: pregnancy HCG test
+def: "A quantitative measurement of the amount of human chorionic gonadotropin present in urine or serum for the purpose of determining whether the patient is pregnant." []
+synonym: "HCG pregnancy test" EXACT []
+is_a: MAXO:0000783 ! pregnancy test
+is_a: MAXO:0000784 ! HCG measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-05-27T19:38:10Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000871
+name: obstetric cervical examination
+def: "A systemic evaluation of the cervix during pregnancy to determine dilation and effacement of the cervix, cervical position and consistancy, and fetal position." []
+synonym: "cervical exam while pregnant" EXACT []
+synonym: "obstetric examination of the cervix." EXACT []
+synonym: "pregnant cervical exam" EXACT []
+is_a: MAXO:0000782 ! obstetrics and gynecology procedure
+is_a: MAXO:0001154 ! cervical examination
+property_value: http://purl.org/dc/elements/1.1/date 2021-06-07T18:34:00Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000872
+name: cancer screening breast examination
+def: "An evaluation of the breast using visual inspection, palpation, and percussion for the specific purpose of identifying breast changes which may be cancer." []
+synonym: "cancer breast exam" EXACT []
+is_a: MAXO:0000126 ! cancer screening
+is_a: MAXO:0000790 ! clinical breast examination
+property_value: http://purl.org/dc/elements/1.1/date 2021-06-07T18:51:49Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000873
+name: hearing examination
+def: "A test that evaluates of the sensitivity of a person's sense of hearing and is used to determine a person's hearing sensitivity at different frequencies." []
+synonym: "hearing assessment" EXACT []
+synonym: "hearing exam" EXACT []
+synonym: "hearing test" EXACT []
+is_a: MAXO:0000003 ! diagnostic procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-06-07T21:03:43Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000874
+name: albumin test for liver function
+def: "The determination of the amount of albumin (human) present in the sample in order to assess the liver's function." []
+synonym: "albumin test for liver function assessment" EXACT []
+synonym: "liver function albumin test" EXACT []
+is_a: MAXO:0000778 ! liver function testing
+is_a: MAXO:0000843 ! albumin measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-06-08T14:05:06Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000875
+name: 5'-nucleotidase measurement for liver function
+def: "The determination of the amount of 5'-nucleotidase present in the sample to assess liver function." []
+synonym: "5'-nucleotidase test for liver function assessment" EXACT []
+synonym: "liver function 5'-nucleotidase measurement" EXACT []
+synonym: "liver function 5'-nucleotidase test" EXACT []
+is_a: MAXO:0000778 ! liver function testing
+is_a: MAXO:0000847 ! 5'-nucleotidase measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-06-08T14:17:21Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000876
+name: alkaline phosphatase measurement for liver function
+def: "The determination of the amount of alkaline phosphatase present in the sample for assessment of liver function." []
+synonym: "alkaline phosphatase measurement for liver function assessment" EXACT []
+synonym: "liver function alk phos test" EXACT []
+synonym: "liver function alkaline phosphatase measurement" EXACT []
+is_a: MAXO:0000778 ! liver function testing
+is_a: MAXO:0000844 ! alkaline phosphatase measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-06-08T14:20:25Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000877
+name: calcium assessment for liver function
+def: "A quantitative measurement of the amount of calcium present in a sample, usually serum or urine for the assessment of liver function." []
+synonym: "calcium test for liver function assessement" EXACT []
+synonym: "liver function calcium test" EXACT []
+is_a: MAXO:0000581 ! calcium assessment
+is_a: MAXO:0000778 ! liver function testing
+property_value: http://purl.org/dc/elements/1.1/date 2021-06-08T14:23:54Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000878
+name: lactate dehydrogenase measurement for liver assessment
+def: "The determination of the amount of lactate dehydrogenase present in the sample to assess liver function." []
+is_a: MAXO:0000778 ! liver function testing
+is_a: MAXO:0000846 ! lactate dehydrogenase measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-06-08T14:34:11Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000879
+name: total bilirubin measurement for assessment of liver function
+def: "The measurement of the total amount of bilirubin present in a particular substrate in order to assess liver function. The substrate most often tested is blood, but other fluids extracted from the body may be used periodically depending on the purpose of the test." []
+is_a: MAXO:0000778 ! liver function testing
+is_a: MAXO:0000845 ! total bilirubin measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-06-08T14:47:38Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000880
+name: indirect bilirubin measurement for assessment of liver function
+def: "A measurement of the unconjugated or non-water-soluble bilirubin in a biological specimen to assess liver function." []
+is_a: MAXO:0000778 ! liver function testing
+is_a: MAXO:0000849 ! indirect bilirubin measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-06-08T15:31:21Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0001000
 name: functional magnetic resonance imaging procedure
 def: "The principle of functional MRI imaging is to take a series of images of an organ in quick succession and to statistically analyze the images for differences among them.  Most commonly used in studies of brain function." [NCIT:C17958]
@@ -9529,6 +9704,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001003
 name: alcohol deterrent agent therapy
+def: "Treatment with a drug that deters or encourages the cessation of drinking alcohol." []
 synonym: "alcohol deterrent drug treatment" EXACT []
 is_a: MAXO:0000218 ! abuse deterrent agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-05-15T16:33:57Z xsd:dateTime
@@ -9537,6 +9713,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001004
 name: smoking cessation agent therapy
+def: "Treatment with a drug that deters smoking or encourages the cessation of smoking tobacco." []
 synonym: "smoking cessation drug treatment" EXACT []
 is_a: MAXO:0000218 ! abuse deterrent agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-05-15T16:44:49Z xsd:dateTime
@@ -9592,7 +9769,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001009
 name: neutrophil count
-synonym: "A test to determine the number of neutrophils in a sample of blood." EXACT []
+def: "A test to determine the number of neutrophils in a sample of blood." []
 is_a: MAXO:0000544 ! granulocyte count
 property_value: http://purl.org/dc/elements/1.1/date 2019-05-16T18:24:56Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -9665,7 +9842,6 @@ id: MAXO:0001019
 name: prenatal vitamin supplementation
 def: "Addition of vitamin supplement, prenatal to the diet for adequate and complete nutrition." []
 comment: A vitamin enriched supplement containing higher doses for specific nutrients such as folic acid, intended for women before, during and after pregnancy and also during their lactating phase. {xref="NCIT:C92860"}
-comment: vitamin supplement, prenatal
 synonym: "antenatal supplementation" EXACT []
 synonym: "antenatal vitamin supplement treatment" EXACT []
 synonym: "antenatal vitamin treatment" EXACT []
@@ -9676,7 +9852,7 @@ synonym: "treatment with prenatal supplements" EXACT []
 synonym: "vitamin supplement, prenatal supplemental intake" EXACT []
 xref: NCIT:C92860
 is_a: MAXO:0000107 ! multivitamin supplementation
-property_value: http://purl.org/dc/elements/1.1/date 2019-07-23T19:56:32Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -10528,82 +10704,89 @@ name: obsolete kidney ct
 
 [Term]
 id: MAXO:0001113
-name: abnormal phenotype avoidance
-def: "A medical requirement or recommendation to avoid abnormal phenotypes." []
-synonym: "avoid phenotype abnormality" EXACT []
-intersection_of: MAXO:0000044 ! physiologic state avoidance
-intersection_of: MAXO:0000521 HP:0000118 ! avoided behavior
+name: prevention of abnormal physiologic state
+def: "A medical requirement or recommendation of avoiding or preventing abnormal physiologic state." []
+synonym: "avoid physiologic state recommendation" EXACT []
+synonym: "prevent physiologic state avoidance" EXACT []
+synonym: "prevent physiologic state recommendation" EXACT []
+intersection_of: MAXO:0000017 ! preventative therapeutics
+intersection_of: MAXO:0000521 HP:0001944 ! avoided behavior
 property_value: http://purl.org/dc/elements/1.1/date 2020-09-15T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001114
-name: ketosis avoidance
-def: "A medical requirement or recommendation to avoid ketosis." []
-synonym: "avoid ketosis" EXACT []
-intersection_of: MAXO:0000044 ! physiologic state avoidance
+name: ketosis prevention recommendation
+def: "A medical requirement or recommendation of avoiding or preventing Ketosis." []
+synonym: "avoid Ketosis recommendation" EXACT []
+synonym: "Ketosis avoidance" EXACT []
+intersection_of: MAXO:0001113 ! prevention of abnormal physiologic state
 intersection_of: MAXO:0000521 HP:0001946 ! avoided behavior
 property_value: http://purl.org/dc/elements/1.1/date 2020-09-15T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001115
-name: diabetes avoidance
-def: "A medical requirement or recommendation to avoid diabetes." []
-synonym: "avoid diabetes" EXACT []
-intersection_of: MAXO:0000044 ! physiologic state avoidance
+name: Diabetes mellitus prevention recommendation
+def: "A medical requirement or recommendation of avoiding or preventing Diabetes mellitus." []
+synonym: "avoid Diabetes mellitus recommendation" EXACT []
+synonym: "Diabetes mellitus avoidance" EXACT []
+intersection_of: MAXO:0001113 ! prevention of abnormal physiologic state
 intersection_of: MAXO:0000521 HP:0000819 ! avoided behavior
 property_value: http://purl.org/dc/elements/1.1/date 2020-09-15T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001116
-name: fever avoidance
-def: "A medical requirement or recommendation to avoid a febrile state." []
-synonym: "avoid febrile state" EXACT []
-synonym: "avoid fever" EXACT []
-intersection_of: MAXO:0000044 ! physiologic state avoidance
+name: fever prevention recommendation
+def: "A medical requirement or recommendation of avoiding or preventing Fever." []
+synonym: "avoid Fever recommendation" EXACT []
+synonym: "Fever avoidance" EXACT []
+intersection_of: MAXO:0001113 ! prevention of abnormal physiologic state
 intersection_of: MAXO:0000521 HP:0001945 ! avoided behavior
 property_value: http://purl.org/dc/elements/1.1/date 2020-09-15T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001117
-name: seizure avoidance
-def: "A medical requirement or recommendation to avoid seizures." []
-comment: Recommendation to avoid triggers known to cause seizures or take medicine to avoid seizures.
-synonym: "avoid seizure" EXACT []
-intersection_of: MAXO:0000044 ! physiologic state avoidance
+name: seizure prevention recommendation
+def: "Recommendation to avoid triggers known to cause seizures or take medicine to avoid seizures." []
+synonym: "avoid Seizure recommendation" EXACT []
+synonym: "Seizure avoidance" EXACT []
+intersection_of: MAXO:0001113 ! prevention of abnormal physiologic state
 intersection_of: MAXO:0000521 HP:0001250 ! avoided behavior
 property_value: http://purl.org/dc/elements/1.1/date 2020-09-15T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001118
-name: hypotension avoidance
-def: "A medical requirement or recommendation to avoid hypotension." []
-synonym: "avoid hypotension" EXACT []
-intersection_of: MAXO:0000044 ! physiologic state avoidance
+name: hypotension prevention recommendation
+def: "A medical requirement or recommendation of avoiding or preventing Hypotension." []
+synonym: "avoid Hypotension recommendation" EXACT []
+synonym: "Hypotension avoidance" EXACT []
+intersection_of: MAXO:0001113 ! prevention of abnormal physiologic state
 intersection_of: MAXO:0000521 HP:0002615 ! avoided behavior
 property_value: http://purl.org/dc/elements/1.1/date 2020-09-15T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001119
-name: hyperglycemia avoidance
-def: "A medical requirement or recommendation to avoid hyperglycemia." []
-synonym: "avoid hyperglycemia" EXACT []
-intersection_of: MAXO:0000044 ! physiologic state avoidance
+name: hyperglycemia prevention recommendation
+def: "A medical requirement or recommendation of avoiding or preventing Hyperglycemia." []
+synonym: "avoid Hyperglycemia recommendation" EXACT []
+synonym: "Hyperglycemia avoidance" EXACT []
+intersection_of: MAXO:0001113 ! prevention of abnormal physiologic state
 intersection_of: MAXO:0000521 HP:0003074 ! avoided behavior
 property_value: http://purl.org/dc/elements/1.1/date 2020-09-15T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001120
-name: weight loss avoidance
-def: "A medical requirement or recommendation to avoid weight loss" []
-synonym: "avoid weight loss" EXACT []
-intersection_of: MAXO:0000044 ! physiologic state avoidance
+name: weight loss avoidance recommendation
+def: "A medical requirement or recommendation of avoiding or preventing Weight loss." []
+synonym: "avoid Weight loss recommendation" EXACT []
+synonym: "Weight loss avoidance" EXACT []
+intersection_of: MAXO:0001113 ! prevention of abnormal physiologic state
 intersection_of: MAXO:0000521 HP:0001824 ! avoided behavior
 property_value: http://purl.org/dc/elements/1.1/date 2020-09-15T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -10646,6 +10829,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001124
 name: anticholesteric agent therapy
+def: "Treatment with any agent that lowers cholesterol." []
 synonym: "anticholesteremic drug therapy" EXACT []
 synonym: "antihypercholesterolemic agent therapy" EXACT []
 synonym: "cholesterol inhibitor therapy" EXACT []
@@ -10699,7 +10883,6 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0001129
 name: vitamin supplementation
 def: "Addition of Vitamin to the diet for adequate and complete nutrition." []
-comment: Vitamin
 synonym: "dietary supplementation of Vitamin" EXACT []
 synonym: "supplementation of Vitamin" EXACT []
 synonym: "supplementation with vitamin" EXACT []
@@ -10884,7 +11067,6 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0001147
 name: soluble fiber supplementation
 def: "Addition of dietary supplement, fibre to the diet for adequate and complete nutrition." []
-comment: dietary supplement, fibre
 synonym: "dietary supplement, fibre supplemental intake" EXACT []
 synonym: "dietary supplementation of dietary supplement, fibre" EXACT []
 synonym: "supplementation of dietary supplement, fibre" EXACT []
@@ -10896,7 +11078,6 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0001148
 name: fish oil supplementation
 def: "Addition of fish oil to the diet for adequate and complete nutrition." []
-comment: fish oil
 synonym: "dietary supplementation of fish oil" EXACT []
 synonym: "fish oil supplemental intake" EXACT []
 synonym: "supplementation of fish oil" EXACT []
@@ -11175,6 +11356,16 @@ def: "The determination of the amount of protein present in blood serum." []
 synonym: "blood serum protein test" EXACT []
 synonym: "protein blood serum assessment" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2021-03-19T15:25:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001175
+name: liver transplantation
+def: "The surgical transfer of a healthy liver to a patient." []
+synonym: "liver transplantation surgical procedure" EXACT []
+synonym: "transplantation of liver" EXACT []
+xref: NCIT:C15271
+property_value: http://purl.org/dc/elements/1.1/date 2020-06-24T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -13463,6 +13654,10 @@ created_by: http://orcid.org/0000-0002-7463-6306
 [Term]
 id: OBI:0002600
 is_a: MAXO:0000547 ! clinical biospecimen collection
+
+[Term]
+id: OBI:0002650
+is_a: MAXO:0000003 ! diagnostic procedure
 
 [Typedef]
 id: MAXO:0000521
