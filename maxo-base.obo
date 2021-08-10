@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2021-06-11/maxo-base.owl
+data-version: maxo/releases/2021-08-10/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
@@ -7,7 +7,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2021-06-11" xsd:string
+property_value: owl:versionInfo "2021-08-10" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -536,7 +536,6 @@ synonym: "transplantation surgical procedure" EXACT []
 xref: NCIT:C15342
 xref: NCIT:C15431
 xref: OBI:0000105
-is_a: MAXO:0000002 ! therapeutic procedure
 is_a: MAXO:0000004 ! surgical procedure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T19:15:04Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3687,6 +3686,7 @@ name: phosphodiesterase inhibitor bronchodilator agent therapy
 def: "Treatment with a phosphodiesterase (PDE) inhibitor that decreases mean pulmonary arterial pressure." []
 synonym: "phosphodiesterase inhibitor bronchodilator drug treatment" EXACT []
 is_a: MAXO:0000316 ! bronchodilator agent therapy
+is_a: MAXO:0000908 ! phosphodiesterase inhibitor therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T21:11:08Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -4887,7 +4887,7 @@ synonym: "abscission" EXACT []
 synonym: "excision" BROAD []
 synonym: "surgical removal" EXACT []
 xref: NCIT:C15232
-is_a: MAXO:0000004 ! surgical procedure
+is_a: MAXO:0000885 ! surgical removal procedure
 property_value: http://purl.org/dc/elements/1.1/date 2019-12-27T17:21:50Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9665,6 +9665,250 @@ property_value: http://purl.org/dc/elements/1.1/date 2021-06-08T15:31:21Z xsd:da
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0000882
+name: behavioral intervention
+def: "The use of operant conditioning, including rewards and punishments, in helping a person create an atmosphere where he or she does not contribute to painful stimuli." [NCIT:C15184]
+synonym: "behavior conditioning therapy" EXACT []
+synonym: "behavioral modification" EXACT []
+synonym: "behavioral treatment" EXACT []
+synonym: "behavioural intervention" EXACT []
+synonym: "behavioural modification" EXACT []
+xref: NCIT:C15184
+is_a: MAXO:0000010 ! cognitive and behavioral intervention
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-05T17:18:12Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000883
+name: cognitive behavior therapy
+def: "A type of psychotherapy utilized to treat different forms of mental disorders.The treatment involves the identification of unhelpful or destructive patterns of thinking and behaviors and the subsequent replacement with behaviors that are beneficial and constructive." [NCIT:C64345]
+synonym: "cognitive therapy" EXACT []
+xref: NCIT:C64345
+is_a: MAXO:0000077 ! behavioral counseling
+is_a: MAXO:0000882 ! behavioral intervention
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-05T17:53:44Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000884
+name: behavioral dietary intervention
+def: "The use of operant conditioning to alter a person's dietary choices and behaviors." [NCIT:C67021]
+xref: NCIT:C67021
+is_a: MAXO:0000088 ! dietary intervention
+is_a: MAXO:0000882 ! behavioral intervention
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-05T17:56:02Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000885
+name: surgical removal procedure
+def: "A surgical procedure that leads to the removal of body part or body fluid." []
+is_a: MAXO:0000004 ! surgical procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-05T19:16:15Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000886
+name: kidney function testing
+def: "A laboratory procedure that evaluates the kidney function." [NCIT:C74972]
+synonym: "rental function test" EXACT []
+xref: NCIT:C74972
+is_a: MAXO:0000003 ! diagnostic procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-06T18:59:22Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000887
+name: glomerular filtration rate test
+def: "A measurement of the volume of fluid filtered from the renal glomerular capillaries into the Bowman's capsule per unit time." []
+def: "GFR test" []
+is_a: MAXO:0000886 ! kidney function testing
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-09T13:28:29Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000888
+name: estimated glomerular filtration rate calculation
+def: "An estimated rate of glomerular filtration is calculated from blood creatinine test, age, body size and gender." []
+synonym: "eGFR test" EXACT []
+is_a: MAXO:0000887 ! glomerular filtration rate test
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-09T15:51:41Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000889
+name: renal calculi removal
+def: "Removal of hard deposits made of minerals and salts also called 'kidney stones' or 'renal calculi' by any of a number of methods." []
+synonym: "kidney stone removal" EXACT []
+is_a: MAXO:0000890 ! calculi removal
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-09T16:22:26Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000890
+name: calculi removal
+def: "Removal of hard deposits made of minerals and salts also called 'stones' or 'calculi' by any of a number of methods. Stones can be found in the kidney, gallbladder, urethra, salivary gland or other ducts." []
+synonym: "stone removal" EXACT []
+is_a: MAXO:0000885 ! surgical removal procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-09T16:46:18Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000891
+name: lithotripsy
+def: "A procedure to break a stone into small particles that can be more easily cleared from the body." [NCIT:C51994]
+xref: NCIT:C51994
+is_a: MAXO:0000890 ! calculi removal
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-09T17:17:19Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000892
+name: renal lithotripsy
+is_a: MAXO:0000889 ! renal calculi removal
+is_a: MAXO:0000891 ! lithotripsy
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-09T17:20:00Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000893
+name: laser lithotripsy
+def: "A scope is inserted in the urinary tract to locate the stone. Using an optical fiber, laser light is directly emitted to the stone causing stone fragmentation." []
+is_a: MAXO:0000891 ! lithotripsy
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-09T17:21:56Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000894
+name: extracorporeal shock wave lithotripsy
+def: "Using a lithotripter to aim sound waves directly at stones through the body, the shock waves break down stones or calculi which are then able to pass." []
+synonym: "ESWL" EXACT ABBREVIATION []
+synonym: "extracorporeal shock-wave lithotripsy" EXACT []
+synonym: "shock wave lithotripsy" EXACT []
+synonym: "shock-wave lithotripsy" EXACT []
+is_a: MAXO:0000891 ! lithotripsy
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-09T17:22:14Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000895
+name: percutaneous nephrolithotomy
+def: "A small cut is made through the patient's back and a nephroscope is inserted to locate and remove the kidney stone." []
+is_a: MAXO:0000889 ! renal calculi removal
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-09T18:17:54Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000896
+name: ureteroscopy
+def: "Examination of the ureter using a specialized video camera (ureteroscope)." []
+is_a: MAXO:0000131 ! location specific endoscopy
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-09T18:21:21Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000897
+name: ureteroscopic stone removal
+def: "A ureteroscope is inserted into the ureter and a wire basket inserted through the tube to remove the stone(s). In addition, a laser or other mechanical device can be used to break up the stone(s)." []
+is_a: MAXO:0000890 ! calculi removal
+is_a: MAXO:0000896 ! ureteroscopy
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-09T18:26:36Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000898
+name: purine antagonist agent therapy
+def: "Treatment with an antimetabolite that affects the metabolism and utilization of purines." []
+synonym: "purine inhibitor agent therapy" EXACT []
+xref: NCIT:C1556
+is_a: MAXO:0000233 ! antimetabolite agent therapy
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-09T19:15:23Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000900
+name: electrocardiography
+def: "A procedure that displays the electrical activity of the heart." [NCIT:C38053]
+synonym: "ECG" EXACT ABBREVIATION []
+synonym: "EKG" EXACT ABBREVIATION []
+xref: NCIT:C38053
+is_a: MAXO:0000493 ! cardiovascular diagnostic procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-09T19:19:35Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000903
+name: aspirin therapy
+def: "Treatment with acetylsalicylic acid. It is often a treatment for pain, fever, inflammation or to reduce risk of heart attack." []
+synonym: "acetylsalicylic acid therapy" EXACT []
+synonym: "treatment with aspirin" EXACT []
+is_a: MAXO:0000221 ! nonsteroidal anti-inflammatory agent therapy
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-10T14:35:53Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000904
+name: alpha-glucosidase inhibitor therapy
+def: "Treatment with an inhibitor that inteferes with the action of alpha-glucosidase." []
+xref: CHEBI:67239
+is_a: MAXO:0000257 ! antidiabetic agent therapy
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-10T14:39:44Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000905
+name: benzodiazepine agent therapy
+def: "Treatment with one of a group of heterocyclic compounds with a core structure containing a benzene ring fused to a diazepine ring. It is often used to treat anxiety." []
+xref: CHEBI:22720
+is_a: MAXO:0000163 ! anxiolytic agent therapy
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-10T14:58:25Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000906
+name: T-type calcium channel blocking agent therapy
+def: "Treatment with a pharmaceutical agent that inhibits T-type calcium channels." []
+synonym: "T-type calcium channel antagonist therapy" EXACT []
+is_a: MAXO:0000434 ! calcium channel blocking agent therapy
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-10T15:05:39Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000907
+name: L-type calcium channel blocking agent therapy
+def: "Treatment with a pharmaceutical agent that inhibits L-type calcium channels." []
+synonym: "L-type calcium channel antagonist therapy" EXACT []
+is_a: MAXO:0000434 ! calcium channel blocking agent therapy
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-10T15:10:56Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000908
+name: phosphodiesterase inhibitor therapy
+def: "Treatment with a phosphodiesterase (PDE) inhibitor." []
+synonym: "PDE inhibitor therapy" EXACT []
+is_a: MAXO:0000648 ! enzyme inhibitor agent therapy
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-10T15:15:41Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000909
+name: weight loss pharmacotherapy
+def: "An agent or drug used to reduce or control weight." []
+is_a: MAXO:0000058 ! pharmacotherapy
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-10T18:20:00Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000910
+name: anti-obesity agent therapy
+def: "Treatment with an agent or drug to reduce or control weight in obese patients." []
+xref: CHEBI:74518
+is_a: MAXO:0000909 ! weight loss pharmacotherapy
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-10T18:21:20Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0001000
 name: functional magnetic resonance imaging procedure
 def: "The principle of functional MRI imaging is to take a series of images of an organ in quick succession and to statistically analyze the images for differences among them.  Most commonly used in studies of brain function." [NCIT:C17958]
@@ -11024,12 +11268,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001143
-name: omega-3-fatty acidomega-3 fatty acid supplementation
-def: "Addition of omega-3-fatty acidomega-3 fatty acid to a the diet for complete nutrition support." []
-synonym: "dietary supplementation of omega-3-fatty acidomega-3 fatty acid" EXACT []
+name: omega-3 fatty acidomega-3-fatty acid supplementation
+def: "Addition of omega-3 fatty acidomega-3-fatty acid to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of omega-3 fatty acidomega-3-fatty acid" EXACT []
 synonym: "eicosapentaenoic acid supplementation" EXACT []
-synonym: "omega-3-fatty acidomega-3 fatty acid supplemental intake" EXACT []
-synonym: "supplementation of omega-3-fatty acidomega-3 fatty acid" EXACT []
+synonym: "omega-3 fatty acidomega-3-fatty acid supplemental intake" EXACT []
+synonym: "supplementation of omega-3 fatty acidomega-3-fatty acid" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -11369,6 +11613,48 @@ property_value: http://purl.org/dc/elements/1.1/date 2020-06-24T20:39:14Z xsd:st
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0001176
+synonym: "K-channel modulator therapy" EXACT []
+synonym: "potassium channel modulator therapy" EXACT []
+synonym: "treatment with potassium channel modulator" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-10T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001177
+synonym: "K-channel antagonist therapy" EXACT []
+synonym: "K-channel inhibitor therapy" EXACT []
+synonym: "potassium channel antagonist therapy" EXACT []
+synonym: "potassium channel blocker therapy" EXACT []
+synonym: "treatment with potassium channel blocker" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-10T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001178
+synonym: "EC 1.17.3.2 (xanthine oxidase) inhibitor therapy" EXACT []
+synonym: "treatment with EC 1.17.3.2 (xanthine oxidase) inhibitor" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-10T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001179
+synonym: "P2 antagonist therapy" EXACT []
+synonym: "purinergic receptor P2 antagonist therapy" EXACT []
+synonym: "treatment with purinergic receptor P2 antagonist" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-10T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001180
+synonym: "ADP receptor inhibitor therapy" EXACT []
+synonym: "P2Y12 receptor antagonist therapy" EXACT []
+synonym: "purinergic PY12 antagonist therapy" EXACT []
+synonym: "treatment with P2Y12 receptor antagonist" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-10T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0002000
 name: cannabis consumption avoidance
 def: "A medical requirement or recommendation of avoiding cannabis consumption." []
@@ -11670,11 +11956,11 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010019
-name: thiamine (b1)thiamine supplementation
-def: "Addition of thiamine (b1)thiamine to a the diet for complete nutrition support." []
-synonym: "dietary supplementation of thiamine (b1)thiamine" EXACT []
-synonym: "supplementation of thiamine (b1)thiamine" EXACT []
-synonym: "thiamine (b1)thiamine supplemental intake" EXACT []
+name: thiaminethiamine (b1)vitamin B1 supplementation
+def: "Addition of thiaminethiamine (b1)vitamin B1 to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of thiaminethiamine (b1)vitamin B1" EXACT []
+synonym: "supplementation of thiaminethiamine (b1)vitamin B1" EXACT []
+synonym: "thiaminethiamine (b1)vitamin B1 supplemental intake" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -11763,10 +12049,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0010028
 name: cyanocobalamin supplementation
-def: "Addition of cyanocob(III)alamincyanocobalamin (b12) to a the diet for complete nutrition support." []
-synonym: "cyanocob(III)alamincyanocobalamin (b12) supplemental intake" EXACT []
-synonym: "dietary supplementation of cyanocob(III)alamincyanocobalamin (b12)" EXACT []
-synonym: "supplementation of cyanocob(III)alamincyanocobalamin (b12)" EXACT []
+def: "Addition of cyanocobalamin (b12)cyanocob(III)alamin to a the diet for complete nutrition support." []
+synonym: "cyanocobalamin (b12)cyanocob(III)alamin supplemental intake" EXACT []
+synonym: "dietary supplementation of cyanocobalamin (b12)cyanocob(III)alamin" EXACT []
+synonym: "supplementation of cyanocobalamin (b12)cyanocob(III)alamin" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -11823,6 +12109,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0010034
 name: corneal transplantation
 def: "The surgical transfer of a healthy cornea to a patient." []
+synonym: "keratoplasty" EXACT []
 synonym: "transplantation of cornea" EXACT []
 xref: NCIT:C50514
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T10:00:01Z xsd:string
@@ -12490,13 +12777,13 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0010096
 name: dietary sodium intake avoidance
-def: "A medical requirement or recommendation of avoiding the consumption of sodium atomsodium." []
-synonym: "avoid sodium atomsodium intake" EXACT []
-synonym: "avoiding dietary sodium atomsodium intake" EXACT []
-synonym: "sodium atomsodium consumption avoidance" EXACT []
-synonym: "sodium atomsodium restricted diet intake" EXACT []
-synonym: "sodium atomsodium restriction" EXACT []
+def: "A medical requirement or recommendation of avoiding the consumption of sodiumsodium atom." []
+synonym: "avoid sodiumsodium atom intake" EXACT []
+synonym: "avoiding dietary sodiumsodium atom intake" EXACT []
 synonym: "sodium restriction" EXACT []
+synonym: "sodiumsodium atom consumption avoidance" EXACT []
+synonym: "sodiumsodium atom restricted diet intake" EXACT []
+synonym: "sodiumsodium atom restriction" EXACT []
 intersection_of: MAXO:0000056 ! nutrition intake avoidance
 intersection_of: MAXO:0001027 CHEBI:26708 ! avoided food
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
@@ -12890,6 +13177,7 @@ synonym: "heart ultrasound imaging procedure" EXACT []
 synonym: "heart ultrasound procedure" EXACT []
 synonym: "sonography of heart" EXACT []
 synonym: "ultrasonography of heart" EXACT []
+is_a: MAXO:0000493 ! cardiovascular diagnostic procedure
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-24T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
