@@ -1,15 +1,14 @@
-pattern_name: radiograph_by_location
-pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/radiograph_by_location.yaml
-description: "radiography of a partical part of the body"
+pattern_name: vitamin_measurement
+pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns-dev/vitamin_measurement.yaml
+description: "An assessment of vitamin(s) in a clinical sample."
 
 contributors:
   - https://orcid.org/0000-0001-7941-2961
   - https://orcid.org/0000-0002-7356-1779
 
 classes:
-  radiograph: MAXO:0000595
-  location: owl:Thing
-
+  clinical chemistry assessment: MAXO:0000566
+  food material: FOODON:00002403
 relations:
   has_input: RO:0002233
   part_of: BFO:0000050
@@ -20,52 +19,50 @@ annotationProperties:
   date: dc:date
   comment: rdfs:comment
   xref: oio:hasDbXref
-
-vars:
-  location: "'location'"
   
+vars:
+  food_material: "'food material'"
+
 data_vars:
   date: "'date'"
   created_by: "'created_by'"
   comment: "'comment'"
-  xref: "database cross reference"
+  xref: "'xref'"
+
 data_list_vars:
   syns: xsd:string
-
+  
 name:
-  text: "%s radiograph procedure"
+  text: "%s measurement"
   vars:
-   - location
+   - food_material
 
 annotations:
   - annotationProperty: exact_synonym
-    text: "radiography of %s"
+    text: "%s assessment"
     vars:
-     - location
+     - food_material
+     
   - annotationProperty: exact_synonym
-    text: "radiograph of %s"
+    text: "%s test" 
     vars:
-     - location
-  - annotationProperty: exact_synonym
-    text: "%s X-ray procedure"
-    vars:
-     - location
-  - annotationProperty: exact_synonym
-    text: "%s radiogram procedure"
-    vars:
-     - location
+     - food_material
+     
   - annotationProperty: date
     text: "%s"
     vars:
      - date
+     
   - annotationProperty: created_by
     text: "%s"
     vars:
      - created_by
+     
   - annotationProperty: comment
     text: "%s"
     vars:
      - comment
+     
   - annotationProperty: xref
     text: "%s"
     vars:
@@ -75,12 +72,12 @@ exact_synonym:
   value: syns
 
 def:
-  text: "Use of an imaging test that uses small amounts of radiation to produce pictures of %s."
+  text: "The determination of the amount of %s present in the sample."
   vars:
-    - location
+    - food_material
 
 equivalentTo:
-  text: "'radiograph' and 'has_input' some ('part_of' some %s)"
+  text: "'clinical chemistry assessment' and 'has_input' some %s"
   vars:
-    - location
-
+    - food_material
+   
