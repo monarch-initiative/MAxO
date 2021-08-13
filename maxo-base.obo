@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2021-08-10/maxo-base.owl
+data-version: maxo/releases/2021-08-13/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
@@ -7,7 +7,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2021-08-10" xsd:string
+property_value: owl:versionInfo "2021-08-13" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -218,7 +218,7 @@ id: MAXO:0000018
 name: biomarker analysis
 def: "A broad subcategory of medical signs or objective indications of medical state which can be measured accurately and reproducibly." [PMID:20978388]
 xref: NCIT:C63333
-is_a: MAXO:0000117 ! contraceptive pregnancy prevention
+is_a: MAXO:0000003 ! diagnostic procedure
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:22:04Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -969,6 +969,7 @@ synonym: "contraceptive management" EXACT []
 synonym: "pregnancy prevention" EXACT []
 xref: NCIT:C37932
 is_a: MAXO:0000017 ! preventative therapeutics
+is_a: MAXO:0000782 ! obstetrics and gynecology procedure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:34:14Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -4983,7 +4984,6 @@ name: pain management
 def: "The management of pain by interventional procedures, pharmacotherapy, physical therapy, psychological counseling, or complementary and alternative medical therapies designed to treat or alleviate pain." []
 synonym: "pain therapy" EXACT []
 is_a: MAXO:0000002 ! therapeutic procedure
-is_a: MAXO:0000021 ! palliative care
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-08T17:26:31Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -6380,19 +6380,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000595
-name: radiograph imaging procedure
-def: "A procedure producing an image on a radiosensitive surface by x-ray radiation that has penetrated and passed through a structure in order to diagnose or treat a patient." []
-synonym: "radiogram imaging procedure" EXACT []
-synonym: "radiographic imaging procedure" EXACT []
-synonym: "radiographic procedure" EXACT []
-synonym: "radiography" EXACT []
-synonym: "radiography imaging procedure" EXACT []
-synonym: "X-ray imaging procedure" EXACT []
-xref: NCIT:C38101
-xref: NCIT:C60727
 is_a: MAXO:0000005 ! clinical imaging procedure
-property_value: http://purl.org/dc/elements/1.1/date 2020-04-07T15:49:43Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000596
@@ -8721,7 +8709,7 @@ synonym: "serum HCG pregnancy measurement" EXACT []
 synonym: "serum human chorionic gonadotropin measurement" EXACT []
 xref: NCIT:C73495
 is_a: MAXO:0000784 ! HCG measurement
-is_a: MAXO:0000788 ! serum chemistry measurement
+is_a: MAXO:0001174 ! serum protein measurement
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-09T20:22:47Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -8733,7 +8721,7 @@ synonym: "urine HCG pregancy test" EXACT []
 synonym: "urine HCG pregnancy measurement" EXACT []
 synonym: "urine human chorionic gonadotropin measurement" EXACT []
 is_a: MAXO:0000784 ! HCG measurement
-is_a: MAXO:0000789 ! urine chemistry measurement
+is_a: MAXO:0000851 ! urine protein measurement
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-09T20:24:57Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9255,7 +9243,6 @@ def: "The determination of the amount of alanine aminotransferase (human) presen
 comment: Alanine aminotransferase is an enzyme produced mainly in the liver. When serum activity is measured, it provides a marker of hepatic disease. {xref="PMID:1992953"}
 synonym: "alanine aminotransferase (human) assessment" EXACT []
 synonym: "alanine aminotransferase (human) test" EXACT []
-synonym: "alanine aminotransferase measurement" EXACT []
 synonym: "alanine transaminase measurement" EXACT []
 synonym: "ALT test" EXACT []
 synonym: "GPT test" EXACT []
@@ -9372,7 +9359,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000848
 name: bilirubin measurement
 def: "The measurement of bilirubin present in a particular sample." []
-is_a: MAXO:0000605 ! protein measurement
+is_a: MAXO:0000566 ! clinical chemistry assessment
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-17T15:06:51Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9906,6 +9893,399 @@ def: "Treatment with an agent or drug to reduce or control weight in obese patie
 xref: CHEBI:74518
 is_a: MAXO:0000909 ! weight loss pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2021-08-10T18:21:20Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000911
+name: pain management for palliative care
+def: "The management of pain by interventional procedures, pharmacotherapy, physical therapy, psychological counseling, or complementary and alternative medical therapies designed to treat or alleviate pain specifically for patients receiving palliative care treatment." []
+is_a: MAXO:0000021 ! palliative care
+is_a: MAXO:0000457 ! pain management
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-11T14:13:00Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000912
+name: assessment for sleep disturbance
+def: "A measurement or assessment to determine if a patient's sleep is disrupted." []
+synonym: "assessement for sleep disorders" EXACT []
+synonym: "sleep assessment" EXACT []
+synonym: "sleep disturbance screening" EXACT []
+is_a: MAXO:0000003 ! diagnostic procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-11T14:52:56Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000913
+name: sleep assessment questionnaire
+def: "A questionnaire designed to determine sleep quality, daytime sleepiness, or other issues related to having restful sleep." []
+is_a: MAXO:0000912 ! assessment for sleep disturbance
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-11T14:56:38Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000914
+name: actigraphy
+def: "Use of a portable device (actigraph) to study sleep-wake patterns and circadian rhythms by assessing movement." [PMID:26608435]
+is_a: MAXO:0000912 ! assessment for sleep disturbance
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-11T14:59:42Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000915
+name: polysomnography
+def: "A group of tests (usually central electroencephalogram (EEG) (C3 or C4), reference occipital EEG (O1 or O2), right and left electro-oculogram (EOG), mental or submental electromylogram (EMG), thoracic effort, abdominal effort, nasal and oral airflow, a microphone to record snoring, pulse oxygen saturation, EKG, and video recording to document body positions during sleep) taken during sleep." [PMID:26608435]
+synonym: "PSG" EXACT ABBREVIATION []
+xref: NCIT:C114185
+is_a: MAXO:0000912 ! assessment for sleep disturbance
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-11T15:00:34Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000916
+name: airway endoscopy
+def: "An instrument is inserted into the air passage of a patient while the patient is breathing spontaneously or is under controlled ventilation. The airway is illuminated, enabling the surgeon to look for any abnormality under magnification and to perform any procedure both in the upper and lower air passages." [PMID:26862286]
+is_a: MAXO:0000131 ! location specific endoscopy
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-11T15:32:04Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000917
+name: placement of a stent
+def: "Insertion of a tube into a blocked passageway, such as a blood vessel, to keep it open." []
+synonym: "stenting" RELATED []
+is_a: MAXO:0000473 ! medical device implantation
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-11T16:01:02Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000918
+name: insertion of a nasopharyngeal stent
+def: "A tube-shaped medical device is inserted into the nasal passage to prevent obstruction of the airway." []
+synonym: "placement of nasal stent" EXACT []
+synonym: "placement of nasopharyngeal stent" EXACT []
+is_a: MAXO:0000917 ! placement of a stent
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-11T16:26:00Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000919
+name: dietician evaluation
+def: "An evaluation by a professional trained and qualified to provide nutritional services at individual, institutional and community levels in term of assessing nutritional needs." []
+synonym: "nutritionist evaluation" NARROW []
+xref: NCIT:C28248
+is_a: MAXO:0000731 ! allied health professional evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-11T17:06:20Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000920
+name: physical therapist evaluation
+def: "An evaluation by a trained and certified individual who applies knowledge of the concepts, principles, and practices of physical therapy for the treatment or prevention of physical disability or disease." []
+synonym: "physiotherapist evaluation" EXACT []
+xref: NCIT:C53422
+is_a: MAXO:0000731 ! allied health professional evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-11T17:11:32Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000921
+name: respiratory therapist evaluation
+def: "An evaluation by a professional  trained and qualified to perform technical work concerned with administering therapeutic and diagnostic respiratory care and life support to patients with cardiopulmonary deficiencies and abnormalities." []
+xref: NCIT:C53425
+is_a: MAXO:0000731 ! allied health professional evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-11T17:34:31Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000922
+name: social worker evaluation
+def: "Evaluation by a professionally trained person who is employed in the administration of charity, social service, and welfare. The assistance this professional provides helps disadvantaged individuals and families adjust themselves to the community." []
+xref: NCIT:C28190
+is_a: MAXO:0000731 ! allied health professional evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-11T17:59:26Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000923
+name: newborn examination
+def: "A general assessment of the overall health of a newborn." [NCIT:C84749]
+xref: NCIT:C84749
+is_a: MAXO:0000527 ! physical examination
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-11T19:22:27Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000924
+name: newborn behavior examination
+def: "The assessment of behavior in neonates." [NCIT:C81314]
+xref: NCIT:C81314
+is_a: MAXO:0000923 ! newborn examination
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-11T19:25:11Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000925
+name: Apgar testing
+def: "A test conducted at 1 minute and 5 minutes after birth to determine the overall health of the newborn." []
+xref: NCIT:C81230
+is_a: MAXO:0000923 ! newborn examination
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-11T19:31:30Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000926
+name: intrapartum fetal stimulation
+def: "Any method used to elicit a fetal heart rate acceleration response during labor." [NCIT:C114084]
+xref: NCIT:C114084
+is_a: MAXO:0000782 ! obstetrics and gynecology procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-11T19:47:14Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000927
+name: newborn heart rate measurement
+def: "Determination of the newborn's heart rate." []
+xref: NCIT_C87103
+is_a: MAXO:0000490 ! heart rate measurement
+is_a: MAXO:0000923 ! newborn examination
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-11T20:53:10Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000928
+name: manual fetal rotation
+def: "A procedure during labor in which the occiput is manually rotated from posterior to anterior." [NCIT:C114133]
+xref: NCIT:C114133
+is_a: MAXO:0000782 ! obstetrics and gynecology procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-11T20:56:18Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000929
+name: external fetal rotation
+def: "A manual method of maneuvering the fetus from outside the mother's abdomen to convert a breech into a cephalic presentation." [NCIT:C92776]
+xref: NCIT:C92776
+is_a: MAXO:0000782 ! obstetrics and gynecology procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-11T20:58:11Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000930
+name: speech therapy
+def: "The treatment of communication disorders (speech disorders and language disorders), cognitive-communication disorders, voice disorders, and swallowing disorders." [NCIT:C159273]
+synonym: "speech language therapy" EXACT []
+xref: NCIT:C159273
+is_a: MAXO:0000002 ! therapeutic procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T13:17:16Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000931
+name: psychologist evaluation
+def: "An evaluation by a person who specializes in the study of mind and behavior or in the treatment of mental, emotional, and behavioral disorders." [NCIT:C28181]
+xref: NCIT:C28181
+is_a: MAXO:0000731 ! allied health professional evaluation
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T13:32:47Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000932
+name: electroencephalography
+def: "The neurophysiologic exploration of the electrical activity of the brain by the application of electrodes to the scalp. The resulting traces are known as an electroencephalogram (EEG). This test is used to assess brain damage, epilepsy and other problems." [NCIT:C38054]
+synonym: "EEG" EXACT ABBREVIATION []
+xref: NCIT:C38054
+is_a: MAXO:0000003 ! diagnostic procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T13:47:43Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000933
+name: enzyme replacement or supplementation therapy
+def: "Treatment with a synthetic enzyme or mixture of enzymes used to replace or supplement enzymes to treat enzyme deficiency." []
+xref: NCIT:C29726
+is_a: MAXO:0000015 ! biologic therapy
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T13:51:53Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000934
+name: urine phosphoethanolamine measurement
+def: "Detection of phosphoethanolamine in urine." []
+is_a: MAXO:0000789 ! urine chemistry measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T13:57:56Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000935
+name: bone specific alkaline phosphatase measurement
+def: "The determination of the amount of bone specific alkaline phosphatase present in a sample." [NCIT:C92287]
+synonym: "ALPBS test" EXACT ABBREVIATION []
+synonym: "bone ALP measurement" EXACT ABBREVIATION []
+xref: NCIT:C92287
+is_a: MAXO:0000844 ! alkaline phosphatase measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T14:00:14Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000936
+name: alkaline phosphatase enzyme activity test
+def: "Measurement of alkaline phosphatase enzamatic activity in a biological sample." []
+is_a: MAXO:0000844 ! alkaline phosphatase measurement
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T14:13:09Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000937
+name: inorganic pyrophosphate measurement
+def: "The determination of the amount of inorganic pyrophosphate present in a sample." []
+synonym: "PPI measurement" EXACT ABBREVIATION []
+synonym: "PPi measurement" EXACT ABBREVIATION []
+xref: NCIT:C161358
+is_a: MAXO:0000566 ! clinical chemistry assessment
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T15:24:26Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000938
+name: resective brain surgery
+def: "Open brain surgery to remove part of the brain causing seizures." []
+is_a: MAXO:0000448 ! surgical resection
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T15:36:25Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000939
+name: stimulation procedure
+def: "Procedure to arouse the body or parts to increase functional activity." []
+is_a: MAXO:0000002 ! therapeutic procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T15:41:57Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000940
+name: responsive neurostimulation
+def: "Placement of a stimulator electrode in the part of the brain causing seizures." []
+synonym: "RNS" EXACT []
+is_a: MAXO:0000939 ! stimulation procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T15:44:05Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000941
+name: extracardiac stimulation
+is_a: MAXO:0000939 ! stimulation procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T15:47:24Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000942
+name: vagus nerve stimulation
+def: "A procedure that uses a device to stimulate the vagus nerve with electrical impulses." []
+is_a: MAXO:0000939 ! stimulation procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T19:05:29Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000943
+name: deep brain stimulation
+def: "A neurosurgical procedure involving the placement of a medical device called a neurostimulator (sometimes referred to as a \"brain pacemaker\"), which sends electrical impulses, through implanted electrodes, to specific targets in the brain (brain nuclei) for the treatment of movement disorders, including Parkinson's disease, essential tremor, and dystonia.[1] and other conditions such as obsessive-compulsive disorder and epilepsy." [https://en.wikipedia.org/wiki/Deep_brain_stimulation]
+synonym: "DBS" EXACT ABBREVIATION []
+is_a: MAXO:0000939 ! stimulation procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T19:24:31Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000944
+name: cranial electrical stimulation
+def: "The use of skin electrodes to pass a low intensity, pulsed electrical current through the scalp and into the brain. This procedure is used to treat a variety of illnesses including anxiety, depression, and chronic pain." []
+xref: NCIT:C116561
+is_a: MAXO:0000939 ! stimulation procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T19:29:07Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000945
+name: spinal cord stimulation
+def: "An invasive procedure to stimulate the spinal cord to aid in the management of chronic, intractable pain of the trunk and/or limbs, including unilateral or bilateral pain." []
+is_a: MAXO:0000939 ! stimulation procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T19:30:24Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000946
+name: neurosurgical procedure
+def: "Any surgical procedure performed on nervous system tissue." []
+synonym: "neurosurgery" EXACT []
+is_a: MAXO:0000004 ! surgical procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T19:44:10Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000947
+name: brain surgery
+def: "Surgery performed on any part of the brain." [NCIT:C154268]
+xref: NCIT:C154268
+is_a: MAXO:0000946 ! neurosurgical procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T19:45:31Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000948
+name: craniotomy
+def: "Surgical creation of an opening of the skull." [NCIT:C15214]
+synonym: "cranial surgery" BROAD []
+xref: NCIT:C15214
+is_a: MAXO:0000946 ! neurosurgical procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T19:47:17Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000949
+name: calcitonin treatment
+def: "Treatment with a hormone that is naturally produced in the thyroid. When calcitonin given to patients with osteoporosis, calcitonin produces modest increases in bone mass because it slows the rate at which osteoclasts absorb bone." []
+synonym: "calcitonin therapy" EXACT []
+is_a: MAXO:0000015 ! biologic therapy
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T19:57:09Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000950
+name: supportive care
+def: "Supportive therapy involves the teaching of such life skills as managing medication, learning to socialize, handling finances, and getting a job." []
+is_a: MAXO:0000002 ! therapeutic procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T20:10:44Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000951
+name: physiological support therapy
+def: "Therapeutic care designed to maintain the natural processes of the body and return to a more normal state of health." [NCIT:C66895]
+is_a: MAXO:0000002 ! therapeutic procedure
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T20:14:31Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000952
+name: hydration therapy
+is_a: MAXO:0000951 ! physiological support therapy
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T20:16:16Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000953
+name: saline hydration
+def: "Use of isotonic saline intravenously." []
+is_a: MAXO:0000952 ! hydration therapy
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T20:16:36Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000954
+name: bisphosphonate agent therapy
+def: "Treatment with a set of compounds that allow osteoblasts (bone building cells) to work more effectively, improving bone mass. Bisphosphonates are used in the treatment of osteoporosis, Paget's disease of bone, and may be used to lower high calcium levels." []
+is_a: MAXO:0000058 ! pharmacotherapy
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T20:21:07Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -11109,7 +11489,7 @@ def: "Avoid the administration or use of radiograph imaging procedure." []
 synonym: "avoid radiograph imaging procedure" EXACT []
 synonym: "avoiding radiograph imaging procedure" EXACT []
 intersection_of: MAXO:0001014 ! medical action avoidance
-intersection_of: MAXO:0001015 MAXO:0000595 ! avoided medical action radiograph imaging procedure
+intersection_of: MAXO:0001015 MAXO:0000595 ! avoided medical action
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -11614,6 +11994,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001176
+name: potassium channel modulator agent therapy
+def: "Treatment with drug or agent that regulates potassium channels." []
 synonym: "K-channel modulator therapy" EXACT []
 synonym: "potassium channel modulator therapy" EXACT []
 synonym: "treatment with potassium channel modulator" EXACT []
@@ -11622,6 +12004,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001177
+name: potassium channel blocker agent therapy
+def: "Treatment with a drug or agent that inhibits potassium channels." []
 synonym: "K-channel antagonist therapy" EXACT []
 synonym: "K-channel inhibitor therapy" EXACT []
 synonym: "potassium channel antagonist therapy" EXACT []
@@ -11632,6 +12016,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001178
+name: xanthine oxidase inhibitor agent therapy
+def: "Treatment with a drug or agent that inhibits xanthine oxidase." []
 synonym: "EC 1.17.3.2 (xanthine oxidase) inhibitor therapy" EXACT []
 synonym: "treatment with EC 1.17.3.2 (xanthine oxidase) inhibitor" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2021-08-10T11:00:00Z xsd:string
@@ -11639,6 +12025,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001179
+name: purinergic receptor P2 antagonist agent therapy
+def: "Treatment with a drug or agent that inhibits purinergic P2 receptor." []
 synonym: "P2 antagonist therapy" EXACT []
 synonym: "purinergic receptor P2 antagonist therapy" EXACT []
 synonym: "treatment with purinergic receptor P2 antagonist" EXACT []
@@ -11647,11 +12035,23 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001180
+name: P2Y12 receptor antagonist agent therapy
+def: "Treatment with a drug or agent that inhibits P2Y12 receptor." []
 synonym: "ADP receptor inhibitor therapy" EXACT []
 synonym: "P2Y12 receptor antagonist therapy" EXACT []
 synonym: "purinergic PY12 antagonist therapy" EXACT []
 synonym: "treatment with P2Y12 receptor antagonist" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2021-08-10T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001181
+name: serum alkaline phosphatase measurement
+def: "The determination of the amount of alkaline phosphatase present in blood serum." []
+synonym: "alkaline phosphatase blood serum assessment" EXACT []
+synonym: "blood serum alkaline phosphatase test" EXACT []
+synonym: "serum Alk phos measurement" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T15:25:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
