@@ -12,14 +12,14 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/maxo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2021-08-13/maxo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2021-08-16/maxo-base.owl"/>
         <dc:creator>Leigh Carmody</dc:creator>
         <dc:creator>Peter Robinson</dc:creator>
         <dc:description>An ontology to represent medically relevant actions, procedures, therapies, interventions, and recommendations.</dc:description>
         <dc:title>Medical Action Ontology</dc:title>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-08-13</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-08-16</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -13960,28 +13960,10 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000511 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000511">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000509"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A form of non-invasive mechanical pressure support ventilation that uses a time-cycled change of the applied positive airway pressure level to support spontaneous breathing activity.</obo:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-23T18:27:45Z</dc:date>
-        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasDbXref>MeSH:D007385</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT:C124039</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>BiPAP ventilation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>biphasic positive airway pressure ventilation</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">bilevel positive airway pressure ventilation</rdfs:label>
+        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000956"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete bilevel positive airway pressure ventilation</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:deprecated>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000511"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A form of non-invasive mechanical pressure support ventilation that uses a time-cycled change of the applied positive airway pressure level to support spontaneous breathing activity.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT:C124039</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000511"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>BiPAP ventilation</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/maxo#ABBREVIATION"/>
-    </owl:Axiom>
     
 
 
@@ -22841,6 +22823,70 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <rdfs:label xml:lang="en">bisphosphonate agent therapy</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000955 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000955">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000509"/>
+        <obo:IAO_0000115>Bi-level positive airway pressure (or trade name BiPAP) delivers, by mask, two levels of pressure in response to patient flow. It is intended to support ventilation in a nonin-vasive way in spontaneously but insufficiently breathing patients in the home care environment.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-13T20:17:37Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>BiPAP</oboInOwl:hasExactSynonym>
+        <rdfs:comment>Two new ventilatory techniques with almost identical names have been developed for adults: BiPAP(trademark) and BIPAP. BiPAP is a trade name derived from &apos;bi-level positive airway pressure&apos;. BiPAP delivers, by mask, two levels of pressure in response to patient flow. It is intended to support ventilation in a nonin-vasive way in spontaneously but insufficiently breathing patients in the home care environment. In contrast, BIPAP (biphasic positive airway pressure) is a mode of ventilation developed for full ventilatory support in intensive care settings with the use of an endotracheal tube.</rdfs:comment>
+        <rdfs:label xml:lang="en">bi-level positive airway pressure ventilation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000955"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Bi-level positive airway pressure (or trade name BiPAP) delivers, by mask, two levels of pressure in response to patient flow. It is intended to support ventilation in a nonin-vasive way in spontaneously but insufficiently breathing patients in the home care environment.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:11353935</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000955"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>BiPAP</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/maxo#ABBREVIATION"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000955"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>Two new ventilatory techniques with almost identical names have been developed for adults: BiPAP(trademark) and BIPAP. BiPAP is a trade name derived from &apos;bi-level positive airway pressure&apos;. BiPAP delivers, by mask, two levels of pressure in response to patient flow. It is intended to support ventilation in a nonin-vasive way in spontaneously but insufficiently breathing patients in the home care environment. In contrast, BIPAP (biphasic positive airway pressure) is a mode of ventilation developed for full ventilatory support in intensive care settings with the use of an endotracheal tube.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:11353935</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000956 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000956">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000509"/>
+        <obo:IAO_0000115>Biphasic positive airway pressure ventilation (BIPAP) is a mode of ventilation developed for full ventilatory support in intensive care settings with the use of an endotracheal tube.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-13T20:22:51Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>BIPAP</oboInOwl:hasExactSynonym>
+        <rdfs:comment>Recently two new ventilatory techniques with almost identical names have been developed for adults: BiPAP(trademark) and BIPAP. BiPAP is a trade name derived from &apos;bi-level positive airway pressure&apos;. BiPAP delivers, by mask, two levels of pressure in response to patient flow. It is intended to support ventilation in a nonin-vasive way in spontaneously but insufficiently breathing patients in the home care environment. In contrast, BIPAP (biphasic positive airway pressure) is a mode of ventilation developed for full ventilatory support in intensive care settings with the use of an endotracheal tube.</rdfs:comment>
+        <rdfs:label xml:lang="en">biphasic positive airway pressure ventilation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000956"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Biphasic positive airway pressure ventilation (BIPAP) is a mode of ventilation developed for full ventilatory support in intensive care settings with the use of an endotracheal tube.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:11353935</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000956"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>BIPAP</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/maxo#ABBREVIATION"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000956"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>Recently two new ventilatory techniques with almost identical names have been developed for adults: BiPAP(trademark) and BIPAP. BiPAP is a trade name derived from &apos;bi-level positive airway pressure&apos;. BiPAP delivers, by mask, two levels of pressure in response to patient flow. It is intended to support ventilation in a nonin-vasive way in spontaneously but insufficiently breathing patients in the home care environment. In contrast, BIPAP (biphasic positive airway pressure) is a mode of ventilation developed for full ventilatory support in intensive care settings with the use of an endotracheal tube.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:11353935</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
