@@ -9,7 +9,7 @@ MAxO will provide a vocabulary to annotate diseases and phenotypes with recommen
 # License
 
 
-MAxO is available under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+MAxO is available under [CC-BY 4.0](LICENSE)
 
 ![CC BY 4.0](https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png "CC-BY 4.0")
 
