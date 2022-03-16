@@ -11,9 +11,9 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/imports/obi_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2021-08-19/imports/obi_import.owl"/>
-        <dc:source rdf:resource="http://purl.obolibrary.org/obo/obi/2021-04-06/obi.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-08-19</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2022-03-16/imports/obi_import.owl"/>
+        <dc:source rdf:resource="http://purl.obolibrary.org/obo/obi/2022-01-03/obi.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-03-16</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -421,7 +421,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <obo:IAO_0000111 xml:lang="en">has_specified_input</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">see is_input_of example_of_usage</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
-        <obo:IAO_0000115 xml:lang="en">A relation between a planned process and a continuant participating in that process that is not created during  the process. The presence of the continuant during the process is explicitly specified in the plan specification which the process realizes the concretization of.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">The inverse property of is_specified_input_of</obo:IAO_0000115>
         <obo:IAO_0000116>8/17/09: specified inputs of one process are not necessarily specified inputs of a larger process that it is part of. This is in contrast to how &apos;has participant&apos; works.</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000117>PERSON: Bjoern Peters</obo:IAO_0000117>
@@ -463,7 +463,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <obo:IAO_0000111>has_specified_output</obo:IAO_0000111>
         <obo:IAO_0000111 xml:lang="en">has_specified_output</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
-        <obo:IAO_0000115 xml:lang="en">A relation between a planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">The inverse property of is_specified_output_of</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000117>PERSON: Bjoern Peters</obo:IAO_0000117>
         <obo:IAO_0000117>PERSON: Larry Hunter</obo:IAO_0000117>
@@ -1366,6 +1366,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
         <obo:BFO_0000179>material</obo:BFO_0000179>
         <obo:BFO_0000180>MaterialEntity</obo:BFO_0000180>
+        <obo:IAO_0000111 xml:lang="en">material entity</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">a flame</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">a forest fire</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">a human being</obo:IAO_0000112>
@@ -1382,6 +1383,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <obo:IAO_0000116 xml:lang="en">BFO 2 Reference: Material entities (continuants) can preserve their identity even while gaining and losing material parts. Continuants are contrasted with occurrents, which unfold themselves in successive temporal parts or phases [60</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">BFO 2 Reference: Object, Fiat Object Part and Object Aggregate are not intended to be exhaustive of Material Entity. Users are invited to propose new subcategories of Material Entity.</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">BFO 2 Reference: ‘Matter’ is intended to encompass both mass and energy (we will address the ontological treatment of portions of energy in a later version of BFO). A portion of matter is anything that includes elementary particles among its proper or improper parts: quarks and leptons, including electrons, as the smallest particles thus far discovered; baryons (including protons and neutrons) at a higher level of granularity; atoms and molecules at still higher levels, forming the cells, organs, organisms and other material entities studied by biologists, the portions of rock studied by geologists, the fossils studied by paleontologists, and so on.Material entities are three-dimensional entities (entities extended in three spatial dimensions), as contrasted with the processes in which they participate, which are four-dimensional entities (entities extended also along the dimension of time).According to the FMA, material entities may have immaterial entities as parts – including the entities identified below as sites; for example the interior (or ‘lumen’) of your small intestine is a part of your body. BFO 2.0 embodies a decision to follow the FMA here.</obo:IAO_0000116>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ido.owl"/>
         <obo:IAO_0000600 xml:lang="en">A material entity is an independent continuant that has some portion of matter as proper or improper continuant part. (axiom label in BFO2 Reference: [019-002])</obo:IAO_0000600>
         <obo:IAO_0000601 xml:lang="en">Every entity which has a material entity as continuant part is a material entity. (axiom label in BFO2 Reference: [020-002])</obo:IAO_0000601>
         <obo:IAO_0000601 xml:lang="en">every entity of which a material entity is continuant part is also a material entity. (axiom label in BFO2 Reference: [021-002])</obo:IAO_0000601>
@@ -1450,6 +1452,18 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <obo:IAO_0000115>Amide derived from two or more amino carboxylic acid molecules (the same or different) by formation of a covalent bond from the carbonyl carbon of one to the nitrogen atom of another with formal loss of water. The term is usually applied to structures formed from alpha-amino acids, but it includes those derived from any amino carboxylic acid. X = OH, OR, NH2, NHR, etc.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
         <rdfs:label>peptide</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_16919 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_16919">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
+        <obo:IAO_0000111>creatine</obo:IAO_0000111>
+        <obo:IAO_0000115>A glycine derivative having methyl and amidino groups attached to the nitrogen.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
+        <rdfs:label>creatine</rdfs:label>
     </owl:Class>
     
 
@@ -3561,6 +3575,7 @@ In regard to the statement that reagents are &apos;distinct&apos; from the speci
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
         <obo:IAO_0000115>A biopsy involving a surgical incision into an organism to access the biopsy material.</obo:IAO_0000115>
         <obo:IAO_0000117>Damion Dooley</obo:IAO_0000117>
+        <obo:IAO_0000118>excisional biopsy</obo:IAO_0000118>
         <obo:IAO_0000118>open biopsy</obo:IAO_0000118>
         <obo:IAO_0000119>https://www.mayoclinic.org/diseases-conditions/cancer/in-depth/biopsy/art-20043922</obo:IAO_0000119>
         <rdfs:label>surgical biopsy</rdfs:label>
@@ -3600,9 +3615,9 @@ In regard to the statement that reagents are &apos;distinct&apos; from the speci
         <obo:IAO_0000111>lower respiratory tract aspirate specimen</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
         <obo:IAO_0000115>A specimen that is collected with a suctioning tube from the lower respiratory tract.</obo:IAO_0000115>
-        <obo:IAO_0000117>Asiyah Yu Lin|ORCID:0000-0003-2620-0345</obo:IAO_0000117>
+        <obo:IAO_0000117>Asiyah Yu Lin ORCID:0000-0003-2620-0345</obo:IAO_0000117>
         <obo:IAO_0000118>lower respiratory tract wash specimen</obo:IAO_0000118>
-        <obo:IAO_0000119>Asiyah Yu Lin|ORCID:0000-0003-2620-0345</obo:IAO_0000119>
+        <obo:IAO_0000119>Asiyah Yu Lin ORCID:0000-0003-2620-0345</obo:IAO_0000119>
         <rdfs:label>lower respiratory tract aspirate specimen</rdfs:label>
     </owl:Class>
     
@@ -3640,8 +3655,8 @@ In regard to the statement that reagents are &apos;distinct&apos; from the speci
         <obo:IAO_0000111>upper respiratory specimen</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
         <obo:IAO_0000115>A specimen that is derived from the upper respiratory tract</obo:IAO_0000115>
-        <obo:IAO_0000117>Asiyah Yu Lin|ORCID:0000-0003-2620-0345</obo:IAO_0000117>
-        <obo:IAO_0000119>Asiyah Yu Lin|ORCID:0000-0003-2620-0345</obo:IAO_0000119>
+        <obo:IAO_0000117>Asiyah Yu Lin ORCID:0000-0003-2620-0345</obo:IAO_0000117>
+        <obo:IAO_0000119>Asiyah Yu Lin ORCID:0000-0003-2620-0345</obo:IAO_0000119>
         <rdfs:label>upper respiratory specimen</rdfs:label>
     </owl:Class>
     
@@ -3679,8 +3694,8 @@ In regard to the statement that reagents are &apos;distinct&apos; from the speci
         <obo:IAO_0000111>lower respiratory tract specimen</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
         <obo:IAO_0000115>A specimen that is derived from the lower respiratory tract.</obo:IAO_0000115>
-        <obo:IAO_0000117>Asiyah Yu Lin|ORCID:0000-0003-2620-0345</obo:IAO_0000117>
-        <obo:IAO_0000119>Asiyah Yu Lin|ORCID:0000-0003-2620-0345</obo:IAO_0000119>
+        <obo:IAO_0000117>Asiyah Yu Lin ORCID:0000-0003-2620-0345</obo:IAO_0000117>
+        <obo:IAO_0000119>Asiyah Yu Lin ORCID:0000-0003-2620-0345</obo:IAO_0000119>
         <rdfs:label>lower respiratory tract specimen</rdfs:label>
     </owl:Class>
     
@@ -4245,6 +4260,18 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
         <obo:IAO_0000115>Last portion of the large intestine before it becomes the rectum.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uberon.owl"/>
         <rdfs:label>colon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0001159 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001159">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000465"/>
+        <obo:IAO_0000111>sigmoid colon</obo:IAO_0000111>
+        <obo:IAO_0000115>The part of the large intestine that is closest to the rectum and anus. It forms a loop that averages about 40 cm. in length, and normally lies within the pelvis, but on account of its freedom of movement it is liable to be displaced into the abdominal cavity.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uberon.owl"/>
+        <rdfs:label>sigmoid colon</rdfs:label>
     </owl:Class>
     
 
