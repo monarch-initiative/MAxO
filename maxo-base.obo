@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2022-03-16/maxo-base.owl
+data-version: maxo/releases/2022-03-17/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
@@ -7,7 +7,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2022-03-16" xsd:string
+property_value: owl:versionInfo "2022-03-17" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -1068,6 +1068,7 @@ synonym: "endoscopic exam" EXACT []
 synonym: "endoscopy" EXACT [NCIT:C16546]
 xref: NCIT:C16546
 is_a: MAXO:0000002 ! therapeutic procedure
+is_a: MAXO:0000003 ! diagnostic procedure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-20T01:01:22Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9768,18 +9769,19 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000896
-name: ureteroscopy
+name: obsolete ureteroscopy
 def: "Examination of the ureter using a specialized video camera (ureteroscope)." []
-is_a: MAXO:0000131 ! location specific endoscopy
 property_value: http://purl.org/dc/elements/1.1/date 2021-08-09T18:21:21Z xsd:dateTime
+is_obsolete: true
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000897
 name: ureteroscopic stone removal
 def: "A ureteroscope is inserted into the ureter and a wire basket inserted through the tube to remove the stone(s). In addition, a laser or other mechanical device can be used to break up the stone(s)." []
+is_a: MAXO:0000132 ! specific technique endoscopy
 is_a: MAXO:0000890 ! calculi removal
-is_a: MAXO:0000896 ! ureteroscopy
+is_a: MAXO:0001194 ! ureteroscopy
 property_value: http://purl.org/dc/elements/1.1/date 2021-08-09T18:26:36Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
