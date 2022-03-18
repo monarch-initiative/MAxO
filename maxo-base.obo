@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2021-08-19/maxo-base.owl
+data-version: maxo/releases/2022-03-18/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
@@ -7,7 +7,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2021-08-19" xsd:string
+property_value: owl:versionInfo "2022-03-18" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -1021,6 +1021,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000125
 name: audiometric testing
 def: "Testing conducted utilizing a manual or microprocessor audiometer to test for hearing loss." [NCIT:C38036]
+comment: audiometry exam
+synonym: "audiometry test" EXACT []
 synonym: "hearing exam procedure" EXACT []
 synonym: "hearing testing procedure" EXACT []
 xref: NCIT:C38036
@@ -9766,18 +9768,15 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000896
-name: ureteroscopy
-def: "Examination of the ureter using a specialized video camera (ureteroscope)." []
-is_a: MAXO:0000131 ! location specific endoscopy
-property_value: http://purl.org/dc/elements/1.1/date 2021-08-09T18:21:21Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
+name: obsolete ureteroscopy
+replaced_by: MAXO:0001194
 
 [Term]
 id: MAXO:0000897
 name: ureteroscopic stone removal
 def: "A ureteroscope is inserted into the ureter and a wire basket inserted through the tube to remove the stone(s). In addition, a laser or other mechanical device can be used to break up the stone(s)." []
 is_a: MAXO:0000890 ! calculi removal
-is_a: MAXO:0000896 ! ureteroscopy
+is_a: MAXO:0000896 ! obsolete ureteroscopy
 property_value: http://purl.org/dc/elements/1.1/date 2021-08-09T18:26:36Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9922,11 +9921,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000916
-name: airway endoscopy
-def: "An instrument is inserted into the air passage of a patient while the patient is breathing spontaneously or is under controlled ventilation. The airway is illuminated, enabling the surgeon to look for any abnormality under magnification and to perform any procedure both in the upper and lower air passages." [PMID:26862286]
-is_a: MAXO:0000131 ! location specific endoscopy
-property_value: http://purl.org/dc/elements/1.1/date 2021-08-11T15:32:04Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
+name: obsolete airway endoscopy
+replaced_by: MAXO:0001183
 
 [Term]
 id: MAXO:0000917
@@ -10414,8 +10410,6 @@ name: medical action avoidance
 def: "A recommendation of abstaining or avoiding any medical action that might normally be clinically prescribed." []
 synonym: "avoid medical action recommendation" EXACT []
 synonym: "avoidance of a medical action" EXACT []
-intersection_of: MAXO:0000001 ! medical action
-intersection_of: MAXO:0001015 MAXO:0000001 ! avoided medical action medical action
 property_value: http://purl.org/dc/elements/1.1/date 2019-06-12T14:22:47Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -12030,6 +12024,204 @@ property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T15:25:01Z xsd:st
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0001182
+name: arthroscopy
+def: "Inspection of skeletal joint using an endoscope." []
+synonym: "endoscopy of skeletal joint" EXACT []
+synonym: "skeletal joint endoscope" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-16T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001183
+name: bronchoscopy
+def: "Inspection of lung using an endoscope." []
+synonym: "airway endoscopy" EXACT []
+synonym: "endoscopy of lung" EXACT []
+synonym: "lung endoscope" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-16T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001184
+name: colonoscopy
+def: "Inspection of colon using an endoscope." []
+synonym: "colon endoscope" EXACT []
+synonym: "endoscopy of colon" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-16T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001185
+name: cystoscopy
+def: "Inspection of urinary bladder using an endoscope." []
+synonym: "endoscopy of urinary bladder" EXACT []
+synonym: "urinary bladder endoscope" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-16T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001186
+name: enterosccopy
+def: "Inspection of small intestine using an endoscope." []
+synonym: "endoscopy of small intestine" EXACT []
+synonym: "small intestine endoscope" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-16T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001187
+name: hysteroscopy
+def: "Inspection of uterus using an endoscope." []
+synonym: "endoscopy of uterus" EXACT []
+synonym: "uterus endoscope" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-16T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001188
+name: laparoscopy
+def: "Inspection of abdomen using an endoscope." []
+synonym: "abdomen endoscope" EXACT []
+synonym: "endoscopy of abdomen" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-16T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001189
+name: laryngoscopy
+def: "Inspection of larynx using an endoscope." []
+synonym: "endoscopy of larynx" EXACT []
+synonym: "larynx endoscope" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-16T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001190
+name: mediastinoscopy
+def: "Inspection of mediastinum using an endoscope." []
+synonym: "endoscopy of mediastinum" EXACT []
+synonym: "mediastinum endoscope" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-16T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001191
+name: sigmoidoscopy
+def: "Inspection of sigmoid colon using an endoscope." []
+synonym: "endoscopy of sigmoid colon" EXACT []
+synonym: "sigmoid colon endoscope" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-16T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001192
+name: thoracoscopy
+def: "Inspection of pleural cavity using an endoscope." []
+synonym: "endoscopy of pleural cavity" EXACT []
+synonym: "pleural cavity endoscope" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-16T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001193
+name: esophagogastroduodenoscopy
+def: "Inspection of upper digestive tract using an endoscope." []
+synonym: "EGD" EXACT []
+synonym: "endoscopy of upper digestive tract" EXACT []
+synonym: "gastroscopy" EXACT []
+synonym: "oesophagogastroduodenoscopy" EXACT []
+synonym: "OGD" EXACT []
+synonym: "upper digestive tract endoscope" EXACT []
+synonym: "upper endoscopy" EXACT []
+synonym: "upper gastrointestinal endoscopy" EXACT []
+synonym: "upper GI endoscopy" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-16T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001194
+name: ureteroscopy
+def: "Inspection of ureter using an endoscope." []
+synonym: "endoscopy of ureter" EXACT []
+synonym: "ureter endoscope" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-16T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001195
+name: proctoscopy
+def: "Inspection of lower digestive tract using an endoscope." []
+synonym: "endoscopy of lower digestive tract" EXACT []
+synonym: "lower digestive tract endoscope" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-16T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001196
+name: rectoscopy
+def: "Inspection of rectum using an endoscope." []
+synonym: "endoscopy of rectum" EXACT []
+synonym: "rectum endoscope" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-16T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001197
+name: anoscopy
+def: "Inspection of anus using an endoscope." []
+synonym: "anus endoscope" EXACT []
+synonym: "endoscopy of anus" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-16T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001198
+name: otoscopy
+def: "Inspection of ear using an endoscope." []
+synonym: "ear endoscope" EXACT []
+synonym: "endoscopy of ear" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-16T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001199
+name: falloscopy
+def: "Inspection of fallopian tube using an endoscope." []
+synonym: "endoscopy of fallopian tube" EXACT []
+synonym: "fallopian tube endoscope" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-16T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001200
+name: esophagoscopy
+def: "Inspection of esophagus using an endoscope." []
+synonym: "endoscopy of esophagus" EXACT []
+synonym: "esophagus endoscope" EXACT []
+synonym: "oesophagoscopy" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-16T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001201
+name: neuroendoscopy
+def: "Inspection of brain using an endoscope." []
+synonym: "brain endoscope" EXACT []
+synonym: "endoscopy of brain" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-16T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001202
+name: tracheobronchoscopy
+def: "Inspection of tracheobronchial tree using an endoscope." []
+synonym: "endoscopy of tracheobronchial tree" EXACT []
+synonym: "tracheobronchial tree endoscope" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-16T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0002000
 name: cannabis consumption avoidance
 def: "A medical requirement or recommendation of avoiding cannabis consumption." []
@@ -12771,6 +12963,7 @@ def: "A medical requirement or recommendation of avoiding the consumption of bro
 synonym: "avoid broccoli food product intake" EXACT []
 synonym: "avoiding broccoli food product intake" EXACT []
 synonym: "broccoli food product consumption avoidance" EXACT []
+is_a: MAXO:0010069 ! brassicas intake avoidance
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
