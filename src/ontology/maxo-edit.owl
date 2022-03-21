@@ -842,6 +842,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0002654>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0002655>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0002656>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0002657>))
+Declaration(Class(<http://www.co-ode.org/ontologies/ont.owl#MAXO_0009003>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0000521>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0000864>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0001015>))
@@ -5351,8 +5352,7 @@ AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000532> "2020
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000532> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000532> "GeneReviews:NBK5191")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000532> "prenatal molecular genetic testing"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000532> <http://purl.obolibrary.org/obo/MAXO_0000529>)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000532> <http://purl.obolibrary.org/obo/MAXO_0000533>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000532> <http://www.co-ode.org/ontologies/ont.owl#MAXO_0009003>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000533> (molecular genetic testing)
 
@@ -9179,7 +9179,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <h
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000895> "percutaneous nephrolithotomy"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000895> <http://purl.obolibrary.org/obo/MAXO_0000889>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000896> (ureteroscopy)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000896> (obsolete ureteroscopy)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000896> "Examination of the ureter using a specialized video camera (ureteroscope).")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000896> "2021-08-09T18:21:21Z"^^xsd:dateTime)
@@ -9335,7 +9335,7 @@ AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#has
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000915> "polysomnography"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000915> <http://purl.obolibrary.org/obo/MAXO_0000912>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000916> (airway endoscopy)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000916> (obsolete airway endoscopy)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:26862286") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000916> "An instrument is inserted into the air passage of a patient while the patient is breathing spontaneously or is under controlled ventilation. The airway is illuminated, enabling the surgeon to look for any abnormality under magnification and to perform any procedure both in the upper and lower air passages.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000916> "2021-08-11T15:32:04Z"^^xsd:dateTime)
@@ -10046,6 +10046,20 @@ SubClassOf(<http://purl.obolibrary.org/obo/OBI_0002600> <http://purl.obolibrary.
 # Class: <http://purl.obolibrary.org/obo/OBI_0002650> (biopsy)
 
 SubClassOf(<http://purl.obolibrary.org/obo/OBI_0002650> <http://purl.obolibrary.org/obo/MAXO_0000003>)
+
+# Class: <http://www.co-ode.org/ontologies/ont.owl#MAXO_0009003> (preimplantation genetic testing)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GeneReviews:NBK5191") <http://purl.obolibrary.org/obo/IAO_0000115> <http://www.co-ode.org/ontologies/ont.owl#MAXO_0009003> "Genetic testing of one or more cells removed from early embryos conceived by in vitro fertilization and transferring to the mother's uterus only those embryos determined not to have the pathogenic variant(s)/chromosome anomaly(ies) of concern.")
+AnnotationAssertion(dce:date <http://www.co-ode.org/ontologies/ont.owl#MAXO_0009003> "2022-03-21T14:25:49Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://www.co-ode.org/ontologies/ont.owl#MAXO_0009003> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/maxo#ABBREVIATION>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://www.co-ode.org/ontologies/ont.owl#MAXO_0009003> "PGD")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/maxo#ABBREVIATION>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://www.co-ode.org/ontologies/ont.owl#MAXO_0009003> "PGS")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/maxo#ABBREVIATION>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://www.co-ode.org/ontologies/ont.owl#MAXO_0009003> "PGT")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://www.co-ode.org/ontologies/ont.owl#MAXO_0009003> "preimplantation genetic screening")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://www.co-ode.org/ontologies/ont.owl#MAXO_0009003> "preimplation genetic diagnosis")
+AnnotationAssertion(rdfs:label <http://www.co-ode.org/ontologies/ont.owl#MAXO_0009003> "preimplantation genetic testing"@en)
+SubClassOf(<http://www.co-ode.org/ontologies/ont.owl#MAXO_0009003> <http://purl.obolibrary.org/obo/MAXO_0000529>)
+SubClassOf(<http://www.co-ode.org/ontologies/ont.owl#MAXO_0009003> <http://purl.obolibrary.org/obo/MAXO_0000533>)
 
 
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0001028> "2019-07-12T14:23:27Z"^^xsd:dateTime)
