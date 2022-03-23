@@ -12,14 +12,14 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/maxo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2021-08-19/maxo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2022-03-23/maxo-base.owl"/>
         <dc:creator>Leigh Carmody</dc:creator>
         <dc:creator>Peter Robinson</dc:creator>
         <dc:description>An ontology to represent medically relevant actions, procedures, therapies, interventions, and recommendations.</dc:description>
         <dc:title>Medical Action Ontology</dc:title>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-08-19</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-03-23</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -3890,8 +3890,10 @@
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-20T00:42:26Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT:C38036</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>audiometry test</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>hearing exam procedure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>hearing testing procedure</oboInOwl:hasExactSynonym>
+        <rdfs:comment>audiometry exam</rdfs:comment>
         <rdfs:label xml:lang="en">audiometric testing</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -4277,7 +4279,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000145">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete clinical pathology procedure</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:deprecated>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -8133,7 +8135,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000273">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete gastrointestinal agents, other</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:deprecated>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -14269,20 +14271,9 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000532 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000532">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000529"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000533"/>
-        <obo:IAO_0000115>A diverse set of techniques used to identify the molecular basis of genetic disease prenatally. Examples of molecular genetic tests include: genotyping to detect specific pathogenic variants; sequencing of a gene to detect pathogenic variants; amplification or hybridization methods (e.g., qPCR, array CGH, MLPA) to detect copy number variants involving one or more genes; methylation-specific techniques to detect epigenetic changes that influence gene expression; and exome and genome sequencing.</obo:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-18T19:16:15Z</dc:date>
-        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasDbXref>GeneReviews:NBK5191</oboInOwl:hasDbXref>
-        <rdfs:label xml:lang="en">prenatal molecular genetic testing</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete prenatal molecular genetic testing</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000532"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A diverse set of techniques used to identify the molecular basis of genetic disease prenatally. Examples of molecular genetic tests include: genotyping to detect specific pathogenic variants; sequencing of a gene to detect pathogenic variants; amplification or hybridization methods (e.g., qPCR, array CGH, MLPA) to detect copy number variants involving one or more genes; methylation-specific techniques to detect epigenetic changes that influence gene expression; and exome and genome sequencing.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GeneReviews:NBK5191</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -20222,29 +20213,9 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000797 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000797">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000520"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000796"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A technique that utilizes a Doppler transducer to monitor fetal heart rate. The transducer is placed on the maternal abdomen and detects fetal cardiac motion using ultrasound.</obo:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-10T19:40:07Z</dc:date>
-        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT:C114081</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>EFM</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>external fetal heart rate monitoring</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>fetal Doppler ultrasound monitoring</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">fetal Doppler monitoring</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete fetal Doppler monitoring</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000797"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A technique that utilizes a Doppler transducer to monitor fetal heart rate. The transducer is placed on the maternal abdomen and detects fetal cardiac motion using ultrasound.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT:C114081</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000797"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>EFM</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/maxo#ABBREVIATION"/>
-    </owl:Axiom>
     
 
 
@@ -21423,20 +21394,9 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000862 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000862">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000520"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An antenatal ultrasonographic method that measures blood flow velocity through either maternal or fetal vessels.</obo:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-18T15:13:50Z</dc:date>
-        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT:C114080</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Doppler velocimetry</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">fetal Doppler velocimetry</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete fetal Doppler velocimetry</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000862"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An antenatal ultrasonographic method that measures blood flow velocity through either maternal or fetal vessels.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT:C114080</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -23136,7 +23096,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0001014 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001014">
-        <owl:equivalentClass>
+        <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000001"/>
@@ -23146,7 +23106,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>A recommendation of abstaining or avoiding any medical action that might normally be clinically prescribed.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-12T14:22:47Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -25912,7 +25872,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001112">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete kidney ct</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:deprecated>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -28180,6 +28140,91 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000529"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000533"/>
+        <obo:IAO_0000115>Genetic testing of one or more cells removed from early embryos conceived by in vitro fertilization and transferring to the mother&apos;s uterus only those embryos determined not to have the pathogenic variant(s)/chromosome anomaly(ies) of concern.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-03-21T14:25:49Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>PGD</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>PGS</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>PGT</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>preimplantation genetic screening</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>preimplation genetic diagnosis</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">preimplantation genetic testing</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009003"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Genetic testing of one or more cells removed from early embryos conceived by in vitro fertilization and transferring to the mother&apos;s uterus only those embryos determined not to have the pathogenic variant(s)/chromosome anomaly(ies) of concern.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GeneReviews:NBK5191</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009003"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>PGD</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/maxo#ABBREVIATION"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009003"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>PGS</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/maxo#ABBREVIATION"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009003"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>PGT</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/maxo#ABBREVIATION"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000533"/>
+        <obo:IAO_0000115>A procedure that can determine the DNA sequence for all of the exons (protein coding region) in an individual.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-03-21T18:25:01Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C101295</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>WES</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>WXS</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>exome sequencing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>whole exome sequencing</oboInOwl:hasExactSynonym>
+        <rdfs:comment>Clinical Exome Sequencing is a test for identifying disease-causing DNA variants within the 1% of the genome which codes for proteins (exons) or flanks the regions which code for proteins (splice junctions).</rdfs:comment>
+        <rdfs:comment>Sequence analysis of the exons of protein-coding genes in the genome typically performed by target enrichment or capture of exons followed by next-generation sequencing.</rdfs:comment>
+        <rdfs:label xml:lang="en">clinical whole-exome sequencing</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009004"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>WES</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/maxo#ABBREVIATION"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009004"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>WXS</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/maxo#ABBREVIATION"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009004"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>Clinical Exome Sequencing is a test for identifying disease-causing DNA variants within the 1% of the genome which codes for proteins (exons) or flanks the regions which code for proteins (splice junctions).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://www.uclahealth.org/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009004"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>Sequence analysis of the exons of protein-coding genes in the genome typically performed by target enrichment or capture of exons followed by next-generation sequencing.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GeneReviews:NBK5191</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/MAXO_0010000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0010000">
@@ -30017,6 +30062,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0010071 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0010071">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0010069"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -31434,6 +31480,9 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The use of ultrasound to produce images of structures in the heart.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-01-24T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym>cardiac echo procedure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>echo procedure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>echocardiogram procedure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heart diagnostic sonography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heart medical ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heart sonography</oboInOwl:hasExactSynonym>
@@ -34557,6 +34606,79 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/UBERON_0036068 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0036068"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/maxo.owl/MAXO_0009006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/maxo.owl/MAXO_0009006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000533"/>
+        <obo:IAO_0000115>A procedure that can determine the DNA sequence for coding and non-coding regions in an individual.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-03-22T17:16:58Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>WGS</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>genome sequencing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>whole genome sequncing</oboInOwl:hasExactSynonym>
+        <rdfs:comment>Sequence analysis of the genome including coding and noncoding regions typically performed by next-generation sequencing (NGS) of sheared genomic DNA.</rdfs:comment>
+        <rdfs:label xml:lang="en">clinical whole genome sequencing</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/maxo.owl/MAXO_0009006"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>WGS</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/maxo#ABBREVIATION"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/maxo.owl/MAXO_0009006"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>Sequence analysis of the genome including coding and noncoding regions typically performed by next-generation sequencing (NGS) of sheared genomic DNA.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GeneReviews:NBK5191</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/maxo.owl/MAXO_0009007 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/maxo.owl/MAXO_0009007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000520"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0010203"/>
+        <obo:IAO_0000115>Fetal echocardiography is a test that uses sound waves (ultrasound) to evaluate the structure and function of the fetus&apos;s heart.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-03-22T18:19:25Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>fetal echo procedure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>fetal echocardiogram procedure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>prenatal echo procedure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>prenatal echocardiagraphy</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">fetal echocardiography</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/maxo.owl/MAXO_0009008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/maxo.owl/MAXO_0009008">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000072"/>
+        <obo:IAO_0000115>An application of diagnostic ultrasound used to detect moving blood cells or other moving structures and measure their direction and speed of movement. The Doppler effect is used to evaluate movement by measuring changes in frequency of the echoes reflected from moving structures.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-03-23T15:43:36Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <rdfs:label xml:lang="en">Doppler ultrasonography</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/maxo.owl/MAXO_0009009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/maxo.owl/MAXO_0009009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0010217"/>
+        <obo:IAO_0000115>The use of ultrasound on a pregnant person to produce images of structures in the kidney of the fetus.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-03-23T16:10:42Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>fetal kidney ultrsonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>fetal renal ultrasonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>prenatal kidney ultrasonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>prenatal renal sonography</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">prenatal renal ultrasonography</rdfs:label>
+    </owl:Class>
     
 
 

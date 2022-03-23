@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2021-08-19/maxo-base.owl
+data-version: maxo/releases/2022-03-23/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
@@ -7,7 +7,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2021-08-19" xsd:string
+property_value: owl:versionInfo "2022-03-23" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -1021,6 +1021,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000125
 name: audiometric testing
 def: "Testing conducted utilizing a manual or microprocessor audiometer to test for hearing loss." [NCIT:C38036]
+comment: audiometry exam
+synonym: "audiometry test" EXACT []
 synonym: "hearing exam procedure" EXACT []
 synonym: "hearing testing procedure" EXACT []
 xref: NCIT:C38036
@@ -1206,6 +1208,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000145
 name: obsolete clinical pathology procedure
+is_obsolete: true
 
 [Term]
 id: MAXO:0000146
@@ -3156,6 +3159,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000273
 name: obsolete gastrointestinal agents, other
+is_obsolete: true
 
 [Term]
 id: MAXO:0000274
@@ -5707,13 +5711,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000532
-name: prenatal molecular genetic testing
-def: "A diverse set of techniques used to identify the molecular basis of genetic disease prenatally. Examples of molecular genetic tests include: genotyping to detect specific pathogenic variants; sequencing of a gene to detect pathogenic variants; amplification or hybridization methods (e.g., qPCR, array CGH, MLPA) to detect copy number variants involving one or more genes; methylation-specific techniques to detect epigenetic changes that influence gene expression; and exome and genome sequencing." [GeneReviews:NBK5191]
-xref: GeneReviews:NBK5191
-is_a: MAXO:0000529 ! prenatal genetic testing
-is_a: MAXO:0000533 ! molecular genetic testing
-property_value: http://purl.org/dc/elements/1.1/date 2020-03-18T19:16:15Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
+name: obsolete prenatal molecular genetic testing
+is_obsolete: true
 
 [Term]
 id: MAXO:0000533
@@ -8817,16 +8816,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000797
-name: fetal Doppler monitoring
-def: "A technique that utilizes a Doppler transducer to monitor fetal heart rate. The transducer is placed on the maternal abdomen and detects fetal cardiac motion using ultrasound." [NCIT:C114081]
-synonym: "EFM" EXACT ABBREVIATION []
-synonym: "external fetal heart rate monitoring" EXACT []
-synonym: "fetal Doppler ultrasound monitoring" EXACT []
-xref: NCIT:C114081
-is_a: MAXO:0000520 ! obstetric ultrasonography
-is_a: MAXO:0000796 ! fetal heart rate monitoring
-property_value: http://purl.org/dc/elements/1.1/date 2021-02-10T19:40:07Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
+name: obsolete fetal Doppler monitoring
+is_obsolete: true
 
 [Term]
 id: MAXO:0000798
@@ -9476,13 +9467,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000862
-name: fetal Doppler velocimetry
-def: "An antenatal ultrasonographic method that measures blood flow velocity through either maternal or fetal vessels." [NCIT:C114080]
-synonym: "Doppler velocimetry" EXACT []
-xref: NCIT:C114080
-is_a: MAXO:0000520 ! obstetric ultrasonography
-property_value: http://purl.org/dc/elements/1.1/date 2021-02-18T15:13:50Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
+name: obsolete fetal Doppler velocimetry
+is_obsolete: true
 
 [Term]
 id: MAXO:0000863
@@ -10414,8 +10400,6 @@ name: medical action avoidance
 def: "A recommendation of abstaining or avoiding any medical action that might normally be clinically prescribed." []
 synonym: "avoid medical action recommendation" EXACT []
 synonym: "avoidance of a medical action" EXACT []
-intersection_of: MAXO:0000001 ! medical action
-intersection_of: MAXO:0001015 MAXO:0000001 ! avoided medical action medical action
 property_value: http://purl.org/dc/elements/1.1/date 2019-06-12T14:22:47Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -11322,6 +11306,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001112
 name: obsolete kidney ct
+is_obsolete: true
 
 [Term]
 id: MAXO:0001113
@@ -12106,6 +12091,80 @@ property_value: http://purl.org/dc/elements/1.1/date 2020-01-28T11:00:00Z xsd:st
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0009003
+name: preimplantation genetic testing
+def: "Genetic testing of one or more cells removed from early embryos conceived by in vitro fertilization and transferring to the mother's uterus only those embryos determined not to have the pathogenic variant(s)/chromosome anomaly(ies) of concern." [GeneReviews:NBK5191]
+synonym: "PGD" EXACT ABBREVIATION []
+synonym: "PGS" EXACT ABBREVIATION []
+synonym: "PGT" EXACT ABBREVIATION []
+synonym: "preimplantation genetic screening" EXACT []
+synonym: "preimplation genetic diagnosis" EXACT []
+is_a: MAXO:0000529 ! prenatal genetic testing
+is_a: MAXO:0000533 ! molecular genetic testing
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-21T14:25:49Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009004
+name: clinical whole-exome sequencing
+def: "A procedure that can determine the DNA sequence for all of the exons (protein coding region) in an individual." []
+comment: Clinical Exome Sequencing is a test for identifying disease-causing DNA variants within the 1% of the genome which codes for proteins (exons) or flanks the regions which code for proteins (splice junctions). {xref="https://www.uclahealth.org/"}
+comment: Sequence analysis of the exons of protein-coding genes in the genome typically performed by target enrichment or capture of exons followed by next-generation sequencing. {xref="GeneReviews:NBK5191"}
+synonym: "exome sequencing" EXACT []
+synonym: "WES" EXACT ABBREVIATION []
+synonym: "whole exome sequencing" EXACT []
+synonym: "WXS" EXACT ABBREVIATION []
+xref: NCIT:C101295
+is_a: MAXO:0000533 ! molecular genetic testing
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-21T18:25:01Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009006
+name: clinical whole genome sequencing
+def: "A procedure that can determine the DNA sequence for coding and non-coding regions in an individual." []
+comment: Sequence analysis of the genome including coding and noncoding regions typically performed by next-generation sequencing (NGS) of sheared genomic DNA. {xref="GeneReviews:NBK5191"}
+synonym: "genome sequencing" EXACT []
+synonym: "WGS" EXACT ABBREVIATION []
+synonym: "whole genome sequncing" EXACT []
+is_a: MAXO:0000533 ! molecular genetic testing
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-22T17:16:58Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009007
+name: fetal echocardiography
+def: "Fetal echocardiography is a test that uses sound waves (ultrasound) to evaluate the structure and function of the fetus's heart." []
+synonym: "fetal echo procedure" EXACT []
+synonym: "fetal echocardiogram procedure" EXACT []
+synonym: "prenatal echo procedure" EXACT []
+synonym: "prenatal echocardiagraphy" EXACT []
+is_a: MAXO:0000520 ! obstetric ultrasonography
+is_a: MAXO:0010203 ! echocardiography
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-22T18:19:25Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009008
+name: Doppler ultrasonography
+def: "An application of diagnostic ultrasound used to detect moving blood cells or other moving structures and measure their direction and speed of movement. The Doppler effect is used to evaluate movement by measuring changes in frequency of the echoes reflected from moving structures." []
+is_a: MAXO:0000072 ! ultrasonography procedure
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-23T15:43:36Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009009
+name: prenatal renal ultrasonography
+def: "The use of ultrasound on a pregnant person to produce images of structures in the kidney of the fetus." []
+synonym: "fetal kidney ultrsonography" EXACT []
+synonym: "fetal renal ultrasonography" EXACT []
+synonym: "prenatal kidney ultrasonography" EXACT []
+synonym: "prenatal renal sonography" EXACT []
+is_a: MAXO:0010217 ! renal ultrasonography
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-23T16:10:42Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0010000
 name: gluten intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of gluten." []
@@ -12771,6 +12830,7 @@ def: "A medical requirement or recommendation of avoiding the consumption of bro
 synonym: "avoid broccoli food product intake" EXACT []
 synonym: "avoiding broccoli food product intake" EXACT []
 synonym: "broccoli food product consumption avoidance" EXACT []
+is_a: MAXO:0010069 ! brassicas intake avoidance
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -13380,6 +13440,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0010203
 name: echocardiography
 def: "The use of ultrasound to produce images of structures in the heart." []
+synonym: "cardiac echo procedure" EXACT []
+synonym: "echo procedure" EXACT []
+synonym: "echocardiogram procedure" EXACT []
 synonym: "heart diagnostic sonography" EXACT []
 synonym: "heart medical ultrasound" EXACT []
 synonym: "heart sonography" EXACT []
