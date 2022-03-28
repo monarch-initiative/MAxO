@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2022-03-25/maxo-base.owl
+data-version: maxo/releases/2022-03-28/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
@@ -7,7 +7,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2022-03-25" xsd:string
+property_value: owl:versionInfo "2022-03-28" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -12053,7 +12053,7 @@ def: "The determination of the amount of alkaline phosphatase present in blood s
 synonym: "alkaline phosphatase blood serum assessment" EXACT []
 synonym: "blood serum alkaline phosphatase test" EXACT []
 synonym: "serum Alk phos measurement" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T15:25:01Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-28T15:25:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -12329,7 +12329,7 @@ created_by: http://orcid.org/0000-0001-7941-2965
 [Term]
 id: MAXO:0001213
 name: colorectal polypectomy
-def: "The surgical removal (cutting out) of part or all of Colorectal polyposis." []
+def: "The surgical removal (cutting out) of part or all of colorectal polyps." []
 synonym: "colonic polypectomy" EXACT []
 synonym: "Colorectal polyposis surgical removal" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2022-03-24T20:39:14Z xsd:string
@@ -12397,6 +12397,15 @@ name: proctocolectomy
 def: "The surgical removal (cutting out) of part or all of colorectum." []
 synonym: "colorectum surgical removal" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001222
+name: serum alpha-fetoprotein measurement
+def: "The determination of the amount of http://purl.obolibrary.org/obo/PR_P02771 present in blood serum." []
+synonym: "blood serum http://purl.obolibrary.org/obo/PR_P02771 test" EXACT []
+synonym: "http://purl.obolibrary.org/obo/PR_P02771 blood serum assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T15:25:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -12505,6 +12514,17 @@ property_value: http://purl.org/dc/elements/1.1/date 2022-03-21T18:25:01Z xsd:da
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0009005
+name: proctocolectomy with ileal pouch anal anastomosis
+def: "The removal of the large intestine and rectum followed by making a pouch of the last part of the small intestine for solid material storage. The pouch is then sewn to the anus." []
+synonym: "proctocolectomy with IPAA" EXACT []
+synonym: "restorative proctocolectomy with ileal pouch-anal anastomosis" EXACT []
+synonym: "RPC-IPAA" EXACT ABBREVIATION []
+is_a: MAXO:0001221 ! proctocolectomy
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-28T15:44:07Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0009006
 name: clinical whole genome sequencing
 def: "A procedure that can determine the DNA sequence for coding and non-coding regions in an individual." []
@@ -12547,6 +12567,26 @@ synonym: "prenatal kidney ultrasonography" EXACT []
 synonym: "prenatal renal sonography" EXACT []
 is_a: MAXO:0010217 ! renal ultrasonography
 property_value: http://purl.org/dc/elements/1.1/date 2022-03-23T16:10:42Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009010
+name: colectomy with ileorectal anastomosis
+def: "A surgical procedure where the whole colon is removed and the ileum is joined directly to the rectum." []
+synonym: "colectomy with IRA" EXACT []
+is_a: MAXO:0001042 ! colectomy
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-28T17:29:48Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009011
+name: pancreaticoduodenectomy
+def: "Surgical removal of part of the pancreas, duodenum, and distal part of the bile duct. Sometimes, the lower portion of the stomach and the gallbladder are also removed. This procedure is performed for pancreatic, ampullary, duodenal and distal bile duct cancers." [NCIT:C15356]
+synonym: "Kausch-Whipple procedure" EXACT []
+synonym: "Whipple procedure" EXACT []
+xref: NCIT:C15356
+is_a: MAXO:0000447 ! surgical excision
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-28T17:35:35Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]

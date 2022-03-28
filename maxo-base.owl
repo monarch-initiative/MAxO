@@ -12,14 +12,14 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/maxo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2022-03-25/maxo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2022-03-28/maxo-base.owl"/>
         <dc:creator>Leigh Carmody</dc:creator>
         <dc:creator>Peter Robinson</dc:creator>
         <dc:description>An ontology to represent medically relevant actions, procedures, therapies, interventions, and recommendations.</dc:description>
         <dc:title>Medical Action Ontology</dc:title>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-03-25</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-03-28</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -27979,7 +27979,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The determination of the amount of alkaline phosphatase present in blood serum.</obo:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-08-12T15:25:01Z</dc:date>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-03-28T15:25:01Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alkaline phosphatase blood serum assessment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blood serum alkaline phosphatase test</oboInOwl:hasExactSynonym>
@@ -28878,7 +28878,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The surgical removal (cutting out) of part or all of Colorectal polyposis.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The surgical removal (cutting out) of part or all of colorectal polyps.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-03-24T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2965</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colorectal polyposis surgical removal</oboInOwl:hasExactSynonym>
@@ -29108,6 +29108,40 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">colorectum surgical removal</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proctocolectomy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001222 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001222">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000566"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PR_P02771"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001977"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The determination of the amount of http://purl.obolibrary.org/obo/PR_P02771 present in blood serum.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-08-12T15:25:01Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blood serum http://purl.obolibrary.org/obo/PR_P02771 test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/PR_P02771 blood serum assessment</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">serum alpha-fetoprotein measurement</rdfs:label>
     </owl:Class>
     
 
@@ -29408,6 +29442,27 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001221"/>
+        <obo:IAO_0000115>The removal of the large intestine and rectum followed by making a pouch of the last part of the small intestine for solid material storage. The pouch is then sewn to the anus.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-03-28T15:44:07Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>RPC-IPAA</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>proctocolectomy with IPAA</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>restorative proctocolectomy with ileal pouch-anal anastomosis</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">proctocolectomy with ileal pouch anal anastomosis</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009005"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>RPC-IPAA</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/maxo#ABBREVIATION"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/MAXO_0009006 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009006">
@@ -29478,6 +29533,40 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>prenatal renal sonography</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">prenatal renal ultrasonography</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009010">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001042"/>
+        <obo:IAO_0000115>A surgical procedure where the whole colon is removed and the ileum is joined directly to the rectum.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-03-28T17:29:48Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>colectomy with IRA</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">colectomy with ileorectal anastomosis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000447"/>
+        <obo:IAO_0000115>Surgical removal of part of the pancreas, duodenum, and distal part of the bile duct. Sometimes, the lower portion of the stomach and the gallbladder are also removed. This procedure is performed for pancreatic, ampullary, duodenal and distal bile duct cancers.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-03-28T17:35:35Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasDbXref>NCIT:C15356</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Kausch-Whipple procedure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Whipple procedure</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">pancreaticoduodenectomy</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009011"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Surgical removal of part of the pancreas, duodenum, and distal part of the bile duct. Sometimes, the lower portion of the stomach and the gallbladder are also removed. This procedure is performed for pancreatic, ampullary, duodenal and distal bile duct cancers.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C15356</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -34854,6 +34943,12 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/PR_P02768 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PR_P02768"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PR_P02771 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PR_P02771"/>
     
 
 
