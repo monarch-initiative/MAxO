@@ -37,6 +37,11 @@ imports/hp_import.owl: mirror/hp.owl imports/hp_terms_combined.txt tmp/remove.tx
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: imports/hp_import.owl
 
+imports/pr_import.owl: mirror/pr.owl imports/pr_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -T imports/pr_terms_combined.txt --force true --method BOT \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+.PRECIOUS: imports/pr_import.owl
+
 reports/maxo-edit.owl-obo-report.tsv: maxo-edit.owl
 	$(ROBOT) report -i $< --fail-on none --print 5 -o $@
 	
