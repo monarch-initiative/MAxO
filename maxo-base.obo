@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2022-03-31/maxo-base.owl
+data-version: maxo/releases/2022-04-08/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
@@ -7,7 +7,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2022-03-31" xsd:string
+property_value: owl:versionInfo "2022-04-08" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -534,7 +534,7 @@ synonym: "transplantation surgical procedure" EXACT []
 xref: NCIT:C15342
 xref: NCIT:C15431
 xref: OBI:0000105
-is_a: MAXO:0000004 ! surgical procedure
+is_a: MAXO:0009026 ! introduction procedure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T19:15:04Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1554,7 +1554,6 @@ def: "A therapy utilizing a substance which produces loss of feeling or sensatio
 synonym: "anaesthesia therapy" EXACT []
 synonym: "anaesthetic medication therapy" EXACT []
 synonym: "anaesthetic therapy" EXACT []
-synonym: "anaesthetics therapy" EXACT []
 synonym: "anesthesia therapy" EXACT []
 synonym: "anesthetic drug therapy" EXACT []
 synonym: "anesthetic medication therapy" EXACT []
@@ -4954,7 +4953,7 @@ id: MAXO:0000451
 name: implantation
 def: "A surgical procedure that places something in the human body." [NCIT:C51982]
 xref: NCIT:C51982
-is_a: MAXO:0000004 ! surgical procedure
+is_a: MAXO:0009026 ! introduction procedure
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-06T18:21:08Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -5164,8 +5163,11 @@ id: MAXO:0000473
 name: medical device implantation
 def: "The implantation of a piece of mechanical or electronic equipment that is useful for prevention, diagnosis, monitoring, or treatment of disease or other conditions." []
 synonym: "implantation of a medical device" EXACT []
+synonym: "insertion of a medical device" EXACT []
+synonym: "insertion of a therapeutic device" EXACT []
 synonym: "medical instrument implantation" NARROW []
 synonym: "medical machine implantation" NARROW []
+synonym: "therapeutic device implantation" EXACT []
 xref: ERO:0001092
 xref: NCIT:C16830
 is_a: MAXO:0000451 ! implantation
@@ -5181,7 +5183,7 @@ synonym: "ICD placement" EXACT ABBREVIATION []
 synonym: "implantable cardioverter-defibrillator implantation" EXACT []
 xref: NCIt:C93238
 xref: UMLS_CUI:C0162589
-is_a: MAXO:0000473 ! medical device implantation
+is_a: MAXO:0009033 ! cardiac device implantation
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T16:54:00Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -5686,7 +5688,6 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000526
 name: medical examination
-def: "An appraisal or evaluation of a patient's condition by a clinician that is based on a physical exam, medical history, and the patient's account of symptoms." [NCIT:C25305]
 def: "An appraisal or evaluation of a patient's condition by a clinician that is based on a physical exam, medical history, and the patient's account of symptoms." [NCIT:C25305, PMID:19567008]
 synonym: "clinical examination" EXACT []
 xref: NCIT:C25305
@@ -6674,7 +6675,7 @@ def: "A thin catheter inserted into an artery to monitor blood pressure directly
 synonym: "a-line insertion" EXACT []
 synonym: "art-line placement" EXACT []
 synonym: "arterial line placement" EXACT []
-is_a: MAXO:0000473 ! medical device implantation
+is_a: MAXO:0009033 ! cardiac device implantation
 property_value: http://purl.org/dc/elements/1.1/date 2020-04-08T20:20:40Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -12394,6 +12395,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001223
 name: chelator agent therapy
+def: "Use of a chemical compound that binds tightly to metal ions. Often used to remove toxic metals from the body." []
 synonym: "chelator therapy" EXACT []
 synonym: "treatment with chelator" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2022-3-30T11:00:00Z xsd:string
@@ -12410,6 +12412,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001225
 name: iron chelator agent therapy
+def: "Use of a compound which binds tightly to iron molecules." []
 synonym: "iron chelator therapy" EXACT []
 synonym: "treatment with iron chelator" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2022-3-30T11:00:00Z xsd:string
@@ -12717,6 +12720,238 @@ name: visuospatial skill assessment
 def: "Evaluation of a person’s ability to conceptualize and manipulate two- and three-dimensional objects." [PMID:32310509]
 is_a: MAXO:0009017 ! cognitive assessment
 property_value: http://purl.org/dc/elements/1.1/date 2022-03-30T14:20:27Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009025
+name: cochlear device implantation
+def: "Surgical implantation of a device for the treatment of severe to profound sensorineural hearing loss. It works by transducing acoustic energy into an electrical signal, which is used to stimulate surviving spiral ganglion cells of the auditory nerve." [PMID:30931225]
+synonym: "implantation of cochlear device" EXACT []
+synonym: "implantation of cochlear prosthesis" EXACT []
+synonym: "surgical introduction of cochlear implant" EXACT []
+is_a: MAXO:0000473 ! medical device implantation
+property_value: http://purl.org/dc/elements/1.1/date 2022-03-31T20:40:42Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009026
+name: introduction procedure
+def: "A procedure where a substance or object is inserted into the body." []
+is_a: MAXO:0000004 ! surgical procedure
+property_value: http://purl.org/dc/elements/1.1/date 2022-04-01T16:56:14Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009027
+name: electrode implantation
+def: "A procedure to place an electrode in some part of the body for therapeutic purposes." []
+synonym: "implantation of an electrode" EXACT []
+is_a: MAXO:0000473 ! medical device implantation
+property_value: http://purl.org/dc/elements/1.1/date 2022-04-01T17:01:07Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009028
+name: auditory brainstem implantation
+def: "The surgical implantation of a central neural auditory prosthesis for treatment of profound sensorinerual hearing loss in patients who are not cochlear implant candidates due to a lack of anatomically intact cochlear nerves or implantable cochleae." [PMID:30931229]
+synonym: "ABI" EXACT ABBREVIATION []
+is_a: MAXO:0000473 ! medical device implantation
+property_value: http://purl.org/dc/elements/1.1/date 2022-04-01T18:27:27Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009029
+name: hearing therapy
+def: "Treatment to improve hearing." []
+synonym: "auditory enhancement" EXACT []
+is_a: MAXO:0000002 ! therapeutic procedure
+property_value: http://purl.org/dc/elements/1.1/date 2022-04-01T18:42:23Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009030
+name: hearing aid usage
+def: "Use of hearing aids to improve hearing." []
+is_a: MAXO:0009029 ! hearing therapy
+property_value: http://purl.org/dc/elements/1.1/date 2022-04-01T18:54:14Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009031
+name: auditory rehabilitation
+def: "Assessment and management of hearing loss." []
+synonym: "adult audiologic rehabilitation" EXACT []
+synonym: "aural rehab" EXACT []
+synonym: "aural rehabilitation" EXACT []
+is_a: MAXO:0009029 ! hearing therapy
+property_value: http://purl.org/dc/elements/1.1/date 2022-04-01T18:57:13Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009032
+name: child audiologic habilitation
+def: "Hearing therapy to help children born with hearing loss that have not learned to listen and talk." []
+synonym: "child aural rehabilitation" EXACT []
+synonym: "child hearing habilitation" EXACT []
+is_a: MAXO:0009029 ! hearing therapy
+property_value: http://purl.org/dc/elements/1.1/date 2022-04-04T17:01:13Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009033
+name: cardiac device implantation
+def: "A medical device inserted into the body to help control or monitor the heart and/or cardiovascular system." []
+synonym: "cardiac implantable electronic device insertion" EXACT []
+synonym: "CIED implantation" EXACT []
+synonym: "implantation of a cardiac device" EXACT []
+is_a: MAXO:0000473 ! medical device implantation
+property_value: http://purl.org/dc/elements/1.1/date 2022-04-04T18:50:47Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009034
+name: pacemaker implantation
+def: "Surgical insertion of an adjustable artificial electrical pulse generators into the body to interrogate and control the he pacing rate, the pulse width, and the voltage in order to a person's heart function." [PMID:30252257]
+is_a: MAXO:0009033 ! cardiac device implantation
+property_value: http://purl.org/dc/elements/1.1/date 2022-04-04T18:56:11Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009035
+name: single chamber pacemaker implantation
+def: "Insertion of a pacemaker that attaches one lead to the upper or lower heart chamber." [PMID:32310471]
+synonym: "implantation of a single chamber pacemaker" EXACT []
+is_a: MAXO:0009034 ! pacemaker implantation
+property_value: http://purl.org/dc/elements/1.1/date 2022-04-04T19:14:01Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009036
+name: dual-chamber pacemaker implantation
+def: "The implantation of a pacemaker that uses two leads, one for the upper and one for lower chamber of the heart." [PMID:32310471]
+synonym: "implantation of a dual-chamber pacemaker" EXACT []
+is_a: MAXO:0009034 ! pacemaker implantation
+property_value: http://purl.org/dc/elements/1.1/date 2022-04-04T19:17:56Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009037
+name: biventricular pacemaker implantion
+def: "Surgical insertion of a pacemaker that is used in cardiac resynchronization therapy." [PMID:32310471]
+synonym: "implantation of biventricular pacemaker" EXACT []
+is_a: MAXO:0009034 ! pacemaker implantation
+property_value: http://purl.org/dc/elements/1.1/date 2022-04-04T19:23:18Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009038
+name: coronary stent insertion
+def: "Expandable tubular metallic devices inserted into coronary arteries." []
+synonym: "coronary angioplasty with stent placement" EXACT []
+synonym: "PCI" EXACT ABBREVIATION []
+synonym: "percutaneous coronary intervention" EXACT []
+is_a: MAXO:0000917 ! placement of a stent
+is_a: MAXO:0009033 ! cardiac device implantation
+property_value: http://purl.org/dc/elements/1.1/date 2022-04-04T19:41:08Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009039
+name: infusion pump implantation
+def: "Insertion of a medical device that delivers fluids, such as nutrients and medications, into a patient's body in controlled amounts." []
+synonym: "implantation of a fusion pump" EXACT []
+synonym: "insertion of an infusion pump" EXACT []
+is_a: MAXO:0000473 ! medical device implantation
+property_value: http://purl.org/dc/elements/1.1/date 2022-04-04T20:03:04Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009040
+name: insulin pump implantation
+def: "Insertion of a continuous subcutaneous insulin infusion to regulate insulin levels in a patient." []
+synonym: "continuous subcutaneous insulin infusion pump implantation" EXACT []
+is_a: MAXO:0009039 ! infusion pump implantation
+property_value: http://purl.org/dc/elements/1.1/date 2022-04-05T15:10:49Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009041
+name: continuous subcutaneous insulin infusion therapy
+def: "A therapy used in patients with type 1 diabetes mellitus (T1DM) to improve glucose control and/or reduce the risk of hypoglycaemia." [PMID:23760696]
+synonym: "CSII therapy" EXACT [] {hasSynonym="ABBREVIATION"}
+synonym: "insulin pump infusion therapy" EXACT []
+synonym: "insulin pump therapy" EXACT []
+is_a: MAXO:0009042 ! infusion pump therapy
+property_value: http://purl.org/dc/elements/1.1/date 2022-04-05T15:31:40Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009042
+name: infusion pump therapy
+def: "Use of a medical device that delivers fluids, such as nutrients and medications, into a patient's body in controlled amounts." []
+is_a: MAXO:0000757 ! infusion procedure
+property_value: http://purl.org/dc/elements/1.1/date 2022-04-05T16:48:06Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009043
+name: cataract extraction with intraocular lens insertion
+def: "Surgical removal of the opacified lens and implantation of an artificial intraocular lens (IOL)." []
+synonym: "cataract extraction with IOL implantation" EXACT []
+synonym: "cataract removal with intraocular lens insertion" EXACT []
+synonym: "cataract surgery with artificial intraocular lens insertion" EXACT []
+is_a: MAXO:0000473 ! medical device implantation
+property_value: http://purl.org/dc/elements/1.1/date 2022-04-05T18:10:41Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009044
+name: myringotomy and insertion of tympanic ventilation tube
+def: "Surgical incision into the eardrum to relieve pressure or drain fluid with placement of tympanostomy tubes to allow fluid to pass through the ear canal into the middle ear." []
+synonym: "insertion of ear tubes" BROAD []
+synonym: "myringotomy and insertion of tympanic ventilation tube" EXACT []
+synonym: "myringotomy and tube placement" BROAD []
+synonym: "myringotomy with placement of tympanostomy tube" EXACT []
+is_a: MAXO:0000473 ! medical device implantation
+property_value: http://purl.org/dc/elements/1.1/date 2022-04-05T18:39:00Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009045
+name: implantation of joint prosthesis
+def: "Surgical placement of a prosthetic device to replace a joint." []
+synonym: "prosthetic arthoplasty" EXACT []
+is_a: MAXO:0000473 ! medical device implantation
+property_value: http://purl.org/dc/elements/1.1/date 2022-04-05T19:13:44Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009046
+name: total knee replacement
+def: "Surgical procedure to replace the weight-bearing surfaces of the knee joint." []
+synonym: "total knee arthoplasty" EXACT []
+is_a: MAXO:0009045 ! implantation of joint prosthesis
+property_value: http://purl.org/dc/elements/1.1/date 2022-04-05T19:15:51Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009047
+name: hip replacement
+def: "A reconstructive proceder that surgically replaces the hip joint with an artificial prosthesis." [PMID:7725707]
+synonym: "hip arthroplasty" EXACT []
+synonym: "total hip replacement" EXACT []
+is_a: MAXO:0009045 ! implantation of joint prosthesis
+property_value: http://purl.org/dc/elements/1.1/date 2022-04-05T19:19:25Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009048
+name: insertion of intrauterine contraceptive device
+def: "Placement of a intrauterine contraceptive device that prevents pregnancy." []
+synonym: "insertion of IUD" EXACT ABBREVIATION []
+synonym: "IUD implantation" EXACT []
+is_a: MAXO:0000473 ! medical device implantation
+property_value: http://purl.org/dc/elements/1.1/date 2022-04-05T19:30:10Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
