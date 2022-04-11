@@ -12,14 +12,14 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/maxo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2022-04-08/maxo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2022-04-11/maxo-base.owl"/>
         <dc:creator>Leigh Carmody</dc:creator>
         <dc:creator>Peter Robinson</dc:creator>
         <dc:description>An ontology to represent medically relevant actions, procedures, therapies, interventions, and recommendations.</dc:description>
         <dc:title>Medical Action Ontology</dc:title>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-04-08</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-04-11</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -12914,19 +12914,10 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000450 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000450">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000447"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A surgical procedure by which tissue or an organ (usually containing a tumor) is removed without rupture from a specific anatomic site.</obo:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-06T16:44:59Z</dc:date>
-        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasExactSynonym>enucleation</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">surgical enucleation</rdfs:label>
+        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009049"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete surgical enucleation</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000450"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A surgical procedure by which tissue or an organ (usually containing a tumor) is removed without rupture from a specific anatomic site.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT:C48601</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -30353,6 +30344,46 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <owl:annotatedTarget>insertion of IUD</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/maxo#ABBREVIATION"/>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009049 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009049">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000447"/>
+        <obo:IAO_0000115>Surgical removal of a mass without cutting into or dissecting it.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-04-11T16:22:02Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>surgical enucleation</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">enucleation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009050 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009050">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009049"/>
+        <obo:IAO_0000115>Surgical procedure that involves removal of the entire globe and its intraocular contents, with preservation of all other periorbital and orbital structures.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-04-11T16:28:25Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasBroadSynonym>removal of the eye</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasExactSynonym>orbital enucleation</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">enucleation of the eye</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009051 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009051">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009049"/>
+        <obo:IAO_0000115>Surgical removal of tumor cells without removing surrounding tissue or organs.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-04-11T16:30:19Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>tumor enucleation</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">enucleation of a tumor</rdfs:label>
+    </owl:Class>
     
 
 
