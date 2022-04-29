@@ -5,13 +5,10 @@ prefix def: <http://purl.obolibrary.org/obo/IAO_0000115>
 SELECT ?cls ?xref ?def WHERE 
 {
   ?cls a owl:Class ;
-  def: ?def .
-       #the 'optional' bracket makes everything option, and therefore prints out everything even if they ar missing a field 
-       OPTIONAL {
+ # def: ?def .
        ?ano a owl:Axiom ;
          owl:annotatedSource ?cls ;
          owl:annotatedProperty  def: ;
          owl:annotatedTarget ?def ;
          oio:hasDbXref ?xref . 
-}
 }
