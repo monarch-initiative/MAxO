@@ -4,12 +4,9 @@ prefix owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT ?cls ?def (group_concat(?xref) as ?xrefs) WHERE 
 {
-  ?cls a owl:Class ;
-  oio:hasDbXref ?xref ;
+  ?cls a owl:Class .
   OPTIONAL { ?cls oio:hasDbXref ?xref } .
   OPTIONAL { ?cls def: ?def } .
-  FILTER (!isBlank(?cls))
-  FILTER (!isBlank(?def))
-  FILTER (!isBlank(?xref))
+  FILTER(isIRI(?term) && (STRSTARTS(str(?term), "http://purl.obolibrary.org/obo/MAXO_") || STRSTARTS(str(?term), "http://purl.obolibrary.org/obo/MAXO_")))
 }
 GROUP BY ?cls ?def
