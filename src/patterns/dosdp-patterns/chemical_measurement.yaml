@@ -1,0 +1,83 @@
+pattern_name: chemical_measurement
+pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns-dev/chemical_measurement.yaml
+description: "An assessment a chemical in a clinical sample."
+
+contributors:
+  - https://orcid.org/0000-0001-7941-2961
+  - https://orcid.org/0000-0002-7356-1779
+
+classes:
+  clinical chemistry assessment: MAXO:0000566
+  chemical entity: CHEBI:24431
+relations:
+  has_input: RO:0002233
+  part_of: BFO:0000050
+  
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym 
+  created_by: oio:created_by
+  date: dc:date
+  comment: rdfs:comment
+  xref: oio:hasDbXref
+  
+vars:
+    chemical: "'chemical entity'"
+
+data_vars:
+  date: "'date'"
+  created_by: "'created_by'"
+  comment: "'comment'"
+  xref: "'xref'"
+
+data_list_vars:
+  syns: xsd:string
+  
+name:
+  text: "%s measurement"
+  vars:
+   - chemical
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "%s assessment"
+    vars:
+     - chemical
+     
+  - annotationProperty: exact_synonym
+    text: "%s test" 
+    vars:
+     - chemical
+     
+  - annotationProperty: date
+    text: "%s"
+    vars:
+     - date
+     
+  - annotationProperty: created_by
+    text: "%s"
+    vars:
+     - created_by
+     
+  - annotationProperty: comment
+    text: "%s"
+    vars:
+     - comment
+     
+  - annotationProperty: xref
+    text: "%s"
+    vars:
+     - xref
+
+exact_synonym:
+  value: syns
+
+def:
+  text: "The determination of the amount of %s present in the sample."
+  vars:
+    - chemical
+
+equivalentTo:
+  text: "'clinical chemistry assessment' and 'has_input' some %s"
+  vars:
+    - chemical
+   
