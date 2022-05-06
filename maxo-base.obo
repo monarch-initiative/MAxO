@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2022-04-11/maxo-base.owl
+data-version: maxo/releases/2022-05-06/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
@@ -7,7 +7,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2022-04-11" xsd:string
+property_value: owl:versionInfo "2022-05-06" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -5215,7 +5215,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000478
 name: orthopedic surgeon evaluation
-def: "Evaluation with a surgeon who focuses on the preservation, investigation and restoration of the form and function of the extremities, spine and associated structures by medical, surgical and physical means. This specialist is involved with the care of patients whose musculoskeletal problems include congenital deformities, trauma, infections, tumors, metabolic disturbances of the musculoskeletal system, deformities, injuries and degenerative diseases of the spine, hands, feet, knee, hip, shoulder and elbow in children and adults. An orthopaedic surgeon is also concerned with primary and secondary muscular problems and the effects of central or peripheral nervous system lesions of the musculoskeletal system." [abms.org]
+def: "Assessment by a surgeon who focuses on the preservation, investigation and restoration of the form and function of the extremities, spine and associated structures by medical, surgical and physical means. This specialist is involved with the care of patients whose musculoskeletal problems include congenital deformities, trauma, infections, tumors, metabolic disturbances of the musculoskeletal system, deformities, injuries and degenerative diseases of the spine, hands, feet, knee, hip, shoulder and elbow in children and adults. An orthopaedic surgeon is also concerned with primary and secondary muscular problems and the effects of central or peripheral nervous system lesions of the musculoskeletal system." [abms.org]
 synonym: "consultation with orthopedic surgeon" EXACT []
 synonym: "orthopaedic consult" EXACT []
 synonym: "orthopedic consult" EXACT []
@@ -5267,11 +5267,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000483
 name: medical professional evaluation
-def: "A procedure where a healthcare provider reviews a patient's medical history, examines the patient, and makes recommendations as to care and treatment." []
+def: "A procedure where a healthcare provider, who was not previously involved in a patient's treatment, reviews a patient's medical history, examines the patient, and makes recommendations as to care and treatment." []
 comment: An appraisal or evaluation of a patient's condition by a clinician that is based on a physical exam, medical history, and the patient's account of symptoms. {comment="NCIT:C25305", xref="PMID:19567008"}
 synonym: "medical professional consultation" EXACT []
 synonym: "medical professional examination" EXACT []
-is_a: MAXO:0000002 ! therapeutic procedure
 is_a: MAXO:0000003 ! diagnostic procedure
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T18:30:15Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -5323,7 +5322,7 @@ id: MAXO:0000488
 name: body temperature measurement
 def: "An assessment of body temperature." []
 xref: CMO:0000015
-xref: GeneReviews:NBK331
+xref: NCBIBook:NBK331
 is_a: MAXO:0000487 ! clinical assessment
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-21T20:35:51Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -5355,7 +5354,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000491
 name: pulse assessment
 def: "Assessment and recording of arterial pulses in any of a number of locations. The observer should note its intensity, rate, rhythm, and if any blood vessel tenderness, tortuosity, or nodularity exists." []
-xref: GeneReveiws:NBK350
+xref: NCBIBook:NBK350
 is_a: MAXO:0000489 ! vital signs measurement
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-21T20:59:19Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -5388,7 +5387,7 @@ def: "Measurement of the pressure on the walls of the vessels as blood moves aro
 synonym: "blood pressure assessment" EXACT []
 synonym: "blood pressure monitoring" EXACT []
 xref: CMO:0000003
-xref: https://www.ncbi.nlm.nih.gov/books/NBK279251
+xref: NCBIBook:NBK279251
 is_a: MAXO:0000487 ! clinical assessment
 is_a: MAXO:0000493 ! cardiovascular diagnostic procedure
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-21T21:13:22Z xsd:dateTime
@@ -5684,11 +5683,13 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000526
-name: medical examination
-def: "An appraisal or evaluation of a patient's condition by a clinician that is based on a physical exam, medical history, and the patient's account of symptoms." [NCIT:C25305, PMID:19567008]
-synonym: "clinical examination" EXACT []
+name: clinical examination
+def: "A direct assessment of a patient's condition by a clinical health professional that is based on a physical exam, medical history, and the patient's account of symptoms." [PMID:19567008]
+synonym: "examination by physician" NARROW []
+synonym: "medical examination" EXACT []
 xref: NCIT:C25305
 is_a: MAXO:0000483 ! medical professional evaluation
+is_a: MAXO:0000487 ! clinical assessment
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-04T17:09:05Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -5696,7 +5697,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000527
 name: physical examination
 def: "A systemic evaluation of the body and its functions using visual inspection, palpation, percussion and auscultation. The purpose is to determine the presence or absence of physical signs of disease or abnormality for an individual's health assessment." [NCIT:C20989]
-is_a: MAXO:0000487 ! clinical assessment
+is_a: MAXO:0000526 ! clinical examination
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-04T17:45:04Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -6180,7 +6181,7 @@ def: "The process of gathering information regarding a person's medical history.
 synonym: "medical history collection" EXACT []
 synonym: "patient assessment" BROAD []
 xref: NCIT:C146918
-is_a: MAXO:0000526 ! medical examination
+is_a: MAXO:0000526 ! clinical examination
 property_value: http://purl.org/dc/elements/1.1/date 2020-03-31T00:59:49Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -7318,7 +7319,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000665
 name: medical specialist evaluation
-def: "An evaluation by healthcare provider who is a specialist in a particular medical area." []
+def: "A procedure where a medical specialtist healthcare provider, who was not previously involved in a patient's treatment, reviews a patient's medical history, examines the patient, and makes recommendations as to care and treatment." []
 synonym: "specialty medical professional consultation" EXACT []
 synonym: "specialty medical professional evaluation" EXACT []
 is_a: MAXO:0000483 ! medical professional evaluation
@@ -7328,7 +7329,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000666
 name: allergy and immunology specialist evaluation
-def: "An evaluation by an allergist-immunologist who diagnoses and manages disorders involving immune system conditions such as asthma, anaphylaxis, rhinitis and eczema as well as adverse reactions to drugs, foods and insect stings. An allergist-immunologist also manages immune deficiency diseases and problems related to autoimmune disease, organ transplantation or malignancies of the immune system." [ABMS.org]
+def: "An assessment by an allergist-immunologist who diagnoses and manages disorders involving immune system conditions such as asthma, anaphylaxis, rhinitis and eczema as well as adverse reactions to drugs, foods and insect stings. An allergist-immunologist also manages immune deficiency diseases and problems related to autoimmune disease, organ transplantation or malignancies of the immune system." [ABMS.org]
 synonym: "allergist consultation" NARROW []
 synonym: "allergist doctor consultation" NARROW []
 synonym: "allergist doctor evaluation" NARROW []
@@ -7348,7 +7349,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000667
 name: anesthesiology specialist evaluation
-def: "An evaluation by a physician who provides anesthesia for patients undergoing surgical, obstetric, diagnostic or therapeutic procedures while monitoring the patient's condition and supporting vital organ functions. The anesthesiologist also diagnoses and treats acute, chronic and/or cancer pain as well as provides resuscitation and medical management for patients with critical illnesses and severe injuries." [abms.org]
+def: "An assessment by a physician who provides anesthesia for patients undergoing surgical, obstetric, diagnostic or therapeutic procedures while monitoring the patient's condition and supporting vital organ functions. The anesthesiologist also diagnoses and treats acute, chronic and/or cancer pain as well as provides resuscitation and medical management for patients with critical illnesses and severe injuries." [abms.org]
 synonym: "anesthesiologist consultation" EXACT []
 synonym: "anesthesiologist evaluation" EXACT []
 synonym: "anesthesiology doctor consultation" EXACT []
@@ -7376,7 +7377,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000670
 name: colon and rectal surgery specialist evaluation
-def: "An evaluation by a colon and rectal surgeon who diagnoses and treats various diseases of the small intestine, colon, rectum, anal canal and perianal area including the organs and tissues related with primary intestinal diseases (liver, urinary and female reproductive system). This specialist treats conditions such as hemorrhoids, fissures (painful tears in the anal lining), abscesses and fistulas (infections located around the anus and rectum). A colon and rectal surgeon diagnoses and treats problems of the intestine and colon such as cancer, polyps (precancerous growths) and inflammatory conditions." [abms.org]
+def: "An assessment by a colon and rectal surgeon who diagnoses and treats various diseases of the small intestine, colon, rectum, anal canal and perianal area including the organs and tissues related with primary intestinal diseases (liver, urinary and female reproductive system). This specialist treats conditions such as hemorrhoids, fissures (painful tears in the anal lining), abscesses and fistulas (infections located around the anus and rectum). A colon and rectal surgeon diagnoses and treats problems of the intestine and colon such as cancer, polyps (precancerous growths) and inflammatory conditions." [abms.org]
 synonym: "colon and rectal surgeon consultation" EXACT []
 synonym: "colon and rectal surgeon evaluation" EXACT []
 synonym: "colon and rectal surgery specialist consultation" EXACT []
@@ -7394,7 +7395,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000671
 name: dermatology specialist evaluation
-def: "An evaluation by a physician with training and expertise in the diagnosis and medical/surgical management of diseases of the skin, hair and nails, and mucous membranes." [abms.org]
+def: "An assessment by a physician with training and expertise in the diagnosis and medical/surgical management of diseases of the skin, hair and nails, and mucous membranes." [abms.org]
 synonym: "consultation with a dermatologist" EXACT []
 synonym: "dermatologist consultation" EXACT []
 synonym: "dermatologist evaluation" EXACT []
@@ -7407,7 +7408,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000672
 name: emergency medicine specialist evaluation
-def: "An evaluation by a physician who specializes in immediate decision making and action necessary to prevent death or any further disability both in the pre-hospital setting by directing emergency medical technicians and in the emergency department. This specialist provides immediate recognition, evaluation, care, stabilization and disposition of a generally diversified population of adult and pediatric patients in response to acute illness and injury." [abms.org]
+def: "An assessment by a physician who specializes in immediate decision making and action necessary to prevent death or any further disability both in the pre-hospital setting by directing emergency medical technicians and in the emergency department. This specialist provides immediate recognition, evaluation, care, stabilization and disposition of a generally diversified population of adult and pediatric patients in response to acute illness and injury." [abms.org]
 synonym: "assessment by emergency medicine specialist" EXACT []
 synonym: "emergency medicine specialist assessment" EXACT []
 synonym: "emergency room doctor evaluation" EXACT []
@@ -7418,7 +7419,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000673
 name: family medicine specialist evaluation
-def: "An evaluation by a physician who provides front-line health care that is accessible, high quality, comprehensive and continuous over time for people of all ages, life stages, backgrounds and conditions. The specialists care for individuals and for entire families, from birth through the end of life, including a broad range of preventive care; healthy lifestyle counseling; mental health care; care of acute illnesses; management of chronic diseases, including patients with multi-morbidity. When needed, they also provide referral and coordination of care with other specialists." [abms.org]
+def: "An assessment by a physician who provides front-line health care that is accessible, high quality, comprehensive and continuous over time for people of all ages, life stages, backgrounds and conditions. The specialists care for individuals and for entire families, from birth through the end of life, including a broad range of preventive care; healthy lifestyle counseling; mental health care; care of acute illnesses; management of chronic diseases, including patients with multi-morbidity. When needed, they also provide referral and coordination of care with other specialists." [abms.org]
 synonym: "consultation with family medicine specialist" EXACT []
 synonym: "family medicine specialist consultation" EXACT []
 is_a: MAXO:0000665 ! medical specialist evaluation
@@ -7428,7 +7429,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000675
 name: geriatric medicine specialist evaluation
-def: "An evaluation by a physician with special knowledge of the aging process and special skills in the diagnostic, therapeutic, preventive and rehabilitative aspects of illness in the elderly. This specialist cares for geriatric patients in the patient’s home, the office, long-term care settings such as nursing homes, and the hospital." [abms.org]
+def: "An assessment by a physician with special knowledge of the aging process and special skills in the diagnostic, therapeutic, preventive and rehabilitative aspects of illness in the elderly. This specialist cares for geriatric patients in the patient’s home, the office, long-term care settings such as nursing homes, and the hospital." [abms.org]
 synonym: "assessment by geriatric medicine specialist" EXACT []
 synonym: "consultation with geriatric medicine specialist" EXACT []
 synonym: "evaluation by geriatric medicine specialist" EXACT []
@@ -7442,7 +7443,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000676
 name: hospice and palliative medicine specialist evaluation
-def: "An evaluation by a physician who specializes in Hospice and Palliative Medicine who provides care to prevent and relieve the suffering experienced by patients with life-limiting illnesses. This specialist works with an interdisciplinary hospice or palliative care team to optimize quality of life while addressing the physical, psychological, social and spiritual needs of both patient and family." []
+def: "An assessment by a physician who specializes in Hospice and Palliative Medicine who provides care to prevent and relieve the suffering experienced by patients with life-limiting illnesses. This specialist works with an interdisciplinary hospice or palliative care team to optimize quality of life while addressing the physical, psychological, social and spiritual needs of both patient and family." []
 synonym: "assessment by palliative care specialist" NARROW []
 synonym: "consultation with hospice and palliative medicine specialist" EXACT []
 synonym: "consultation with palliative care specialist" NARROW []
@@ -7461,7 +7462,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000677
 name: pain medicine specialist evaluation
-def: "An evaluation by a physician who diagnoses and treats patients experiencing problems with acute or chronic pain, or pain related to cancer, in both hospital and outpatient settings and coordinates care needs with other specialists." [abms.org]
+def: "An assessment by a physician who diagnoses and treats patients experiencing problems with acute or chronic pain, or pain related to cancer, in both hospital and outpatient settings and coordinates care needs with other specialists." [abms.org]
 synonym: "assessment by pain medicine specialist" EXACT []
 synonym: "consultation with pain medicine specialist" EXACT []
 synonym: "evaluation by pain medicine specialist" EXACT []
@@ -7478,7 +7479,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000678
 name: sports medicine specialist evaluation
-def: "An evaluation a specialist focuses on preventing, diagnosing, and treating injuries related to participating in sports and/or exercise. In addition to the study of those fields that focus on prevention, diagnosis, treatment, and management of injuries, Sports Medicine specialists also deal with illnesses and diseases that might have effects on health and physical performance." [abms.org]
+def: "An assesment  a specialist focuses on preventing, diagnosing, and treating injuries related to participating in sports and/or exercise. In addition to the study of those fields that focus on prevention, diagnosis, treatment, and management of injuries, Sports Medicine specialists also deal with illnesses and diseases that might have effects on health and physical performance." [abms.org]
 synonym: "consultation with sports medicine specialist" EXACT []
 synonym: "referral to a sports medicine specialist" EXACT []
 synonym: "sports medicine specialist consultation" EXACT []
@@ -7493,7 +7494,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000679
 name: sleep medicine specialist evaluation
-def: "An evaluation with a specialist who has expertise in the diagnosis and management of clinical conditions that occur during sleep, that disturb sleep, or that are affected by disturbances in the wake-sleep cycle. This specialist is skilled in the analysis and interpretation of comprehensive polysomnography, and well versed in emerging research and management of a sleep laboratory." [abms.org]
+def: "An assessment with a specialist who has expertise in the diagnosis and management of clinical conditions that occur during sleep, that disturb sleep, or that are affected by disturbances in the wake-sleep cycle. This specialist is skilled in the analysis and interpretation of comprehensive polysomnography, and well versed in emerging research and management of a sleep laboratory." [abms.org]
 synonym: "assessment by sleep medicine specialist" EXACT []
 synonym: "assessment by sleep specialist" EXACT []
 synonym: "consultation with sleep medicine specialist" EXACT []
@@ -7520,7 +7521,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000680
 name: internal medicine specialist evaluation
-def: "An evalutation by a personal physician who provides long-term, comprehensive care in the office and in the hospital, managing both common and complex illnesses of adolescents, adults and the elderly. Internists are trained in the diagnosis and treatment of cancer, infections and diseases affecting the heart, blood, kidneys, joints and the digestive, respiratory and vascular systems. Internists are also trained in the essentials of primary care internal medicine, which incorporates an understanding of disease prevention, wellness, substance abuse, mental health and effective treatment of common problems of the eyes, ears, skin, nervous system and reproductive organs." [abms.org]
+def: "An assessment by a personal physician who provides long-term, comprehensive care in the office and in the hospital, managing both common and complex illnesses of adolescents, adults and the elderly. Internists are trained in the diagnosis and treatment of cancer, infections and diseases affecting the heart, blood, kidneys, joints and the digestive, respiratory and vascular systems. Internists are also trained in the essentials of primary care internal medicine, which incorporates an understanding of disease prevention, wellness, substance abuse, mental health and effective treatment of common problems of the eyes, ears, skin, nervous system and reproductive organs." [abms.org]
 synonym: "consultation with internal medicine specialist" EXACT []
 synonym: "consultation with internist" EXACT []
 synonym: "internal medicine specialist consultation" EXACT []
@@ -7535,7 +7536,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000681
 name: adolescent medicine specialist evaluation
-def: "An evaluation with a multidisciplinary health care specialist trained in the unique physical, psychological and social characteristics of adolescents, their health care problems and needs." [abms.org]
+def: "An assessment with a multidisciplinary health care specialist trained in the unique physical, psychological and social characteristics of adolescents, their health care problems and needs." [abms.org]
 synonym: "adolescent medicine specialist consultation" EXACT []
 synonym: "adolescent medicine specialist evaluation" EXACT []
 synonym: "assessment by adolescent medicine specialist" EXACT []
@@ -7551,7 +7552,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000682
 name: cardiovascular disease internist evaluation
-def: "An evaluation by an internist who specializes in diseases of the heart and blood vessels and manages complex cardiac conditions, such as heart attacks and life-threatening, abnormal heartbeat rhythms." [abms.org]
+def: "An assessment by an internist who specializes in diseases of the heart and blood vessels and manages complex cardiac conditions, such as heart attacks and life-threatening, abnormal heartbeat rhythms." [abms.org]
 synonym: "assessment by cardiologist" EXACT []
 synonym: "cardiologist consultation" EXACT []
 synonym: "cardiologist evaluation" EXACT []
@@ -7572,7 +7573,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000683
 name: clinical cardiac electrophysiologist evaluation
-def: "An evaluation by a specialist who specializes in intricate technical procedures to evaluate heart rhythms and determine appropriate treatment." [abms.org]
+def: "An assessment by a specialist who specializes in intricate technical procedures to evaluate heart rhythms and determine appropriate treatment." [abms.org]
 synonym: "consultation with clinical cardiac electrophysiologist" EXACT []
 synonym: "consultation with clinical cardiac electrophysiology specialist" EXACT []
 synonym: "internal medicine clinical cardiac electrophysiologist consultation" EXACT []
@@ -7599,7 +7600,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000685
 name: endocrinologist evaluation
-def: "An evaluation with an internist who specializes in the diagnosis and management of disorders of hormones and their actions, metabolic disorders, and neoplasia of the endocrine glands. This specialist cares for patients with diabetes mellitus, thyroid disorders, disorders of calcium and bone, hyperlipidemia, obesity and nutritional disorders, pituitary disorders, reproductive and gonadal disorders, adrenal diseases, and endocrine hypertension." [abms.org]
+def: "An assessment with an internist who specializes in the diagnosis and management of disorders of hormones and their actions, metabolic disorders, and neoplasia of the endocrine glands. This specialist cares for patients with diabetes mellitus, thyroid disorders, disorders of calcium and bone, hyperlipidemia, obesity and nutritional disorders, pituitary disorders, reproductive and gonadal disorders, adrenal diseases, and endocrine hypertension." [abms.org]
 synonym: "consultation with endocrinologist" EXACT []
 synonym: "consultation with endocrinology, diabetes and metabolism specialist" EXACT []
 synonym: "endocrinologist consultation" EXACT []
@@ -7626,7 +7627,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000688
 name: hematologist evaluation
-def: "An evaluation by an internist with additional training who specializes in diseases of the blood, spleen and lymph. This specialist treats conditions such as anemia, clotting disorders, sickle cell disease, hemophilia, leukemia and lymphoma." [abms.org]
+def: "An assessment by an internist with additional training who specializes in diseases of the blood, spleen and lymph. This specialist treats conditions such as anemia, clotting disorders, sickle cell disease, hemophilia, leukemia and lymphoma." [abms.org]
 synonym: "consultation with hematologist" EXACT []
 synonym: "hematologist consultation" EXACT []
 synonym: "hematology specialist consultation" EXACT []
@@ -7639,7 +7640,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000690
 name: infectious disease internist evaluation
-def: "An evaluation by an internist who deals with infectious diseases of all types and in all organ systems. Infectious disease specialists may also have expertise in preventive medicine and travel medicine." [abms.org]
+def: "An assessment by an internist who deals with infectious diseases of all types and in all organ systems. Infectious disease specialists may also have expertise in preventive medicine and travel medicine." [abms.org]
 synonym: "consultation with infectious disease specialist" EXACT []
 synonym: "infectious disease specialist consultation" EXACT []
 synonym: "infectious disease specialist evaluation" EXACT []
@@ -7651,7 +7652,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000691
 name: medical oncologist evaluation
-def: "An evaluation by an internist who specializes in the diagnosis and treatment of all types of cancer and other benign and malignant tumors. This specialist decides on and administers therapy for these malignancies, as well as consults with surgeons and radiotherapists on other treatments for cancer." [abms.org]
+def: "An assessment by an internist who specializes in the diagnosis and treatment of all types of cancer and other benign and malignant tumors. This specialist decides on and administers therapy for these malignancies, as well as consults with surgeons and radiotherapists on other treatments for cancer." [abms.org]
 synonym: "consultation with medical oncologist" EXACT []
 synonym: "consultation with medical oncology internist" EXACT []
 synonym: "medical oncologist consultation" EXACT []
@@ -7665,7 +7666,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000692
 name: nephrologist evaluation
-def: "An evaluation by an internist who treats disorders of the kidney, high blood pressure, fluid and mineral balance, and dialysis of body wastes when the kidneys do not function. This specialist consults with surgeons about kidney transplantation." [abms.org]
+def: "An assessment by an internist who treats disorders of the kidney, high blood pressure, fluid and mineral balance, and dialysis of body wastes when the kidneys do not function. This specialist consults with surgeons about kidney transplantation." [abms.org]
 synonym: "consultation with nephrologist" EXACT []
 synonym: "consultation with nephrology internist" EXACT []
 synonym: "nephrologist consultation" EXACT []
@@ -7679,7 +7680,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000693
 name: pulmonologist evaluation
-def: "An evaluation by an internist who treats diseases of the lungs and airways. The specialist diagnoses and treats cancer, pneumonia, pleurisy, asthma, occupational and environmental diseases, bronchitis, sleep disorders, emphysema and other complex disorders of the lungs." [abms.org]
+def: "An assessment by an internist who treats diseases of the lungs and airways. The specialist diagnoses and treats cancer, pneumonia, pleurisy, asthma, occupational and environmental diseases, bronchitis, sleep disorders, emphysema and other complex disorders of the lungs." [abms.org]
 synonym: "consultation with pulmonary disease internist" EXACT []
 synonym: "consultation with pulmonary disease specialist" EXACT []
 synonym: "consultation with pulmonologist" EXACT []
@@ -7694,7 +7695,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000694
 name: rheumatologist evaluation
-def: "An evaluation by an internist who treats diseases of joints, muscle, bones and tendons. This specialist diagnoses and treats arthritis, back pain, muscle strains, common athletic injuries and collagen diseases." [abms.org]
+def: "An assessment by an internist who treats diseases of joints, muscle, bones and tendons. This specialist diagnoses and treats arthritis, back pain, muscle strains, common athletic injuries and collagen diseases." [abms.org]
 synonym: "consultation with rheumatologist" EXACT []
 synonym: "consultation with rheumatology internist" EXACT []
 synonym: "referral to rhematologist" EXACT []
@@ -7710,7 +7711,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000697
 name: clinical biochemical geneticist evaluation
-def: "An evaluation with a specialist who directs and interprets a wide range of specialized, laboratory biochemical genetic analyses relevant to the diagnosis and management of inherited metabolic disorders. The specialist acts as a consultant regarding laboratory diagnosis on a broad range of inborn errors of metabolism." [abms.org]
+def: "An assessment with a specialist who directs and interprets a wide range of specialized, laboratory biochemical genetic analyses relevant to the diagnosis and management of inherited metabolic disorders. The specialist acts as a consultant regarding laboratory diagnosis on a broad range of inborn errors of metabolism." [abms.org]
 synonym: "clinical biochemical geneticist consultation" EXACT []
 synonym: "consultation with clinical biochemical geneticist" EXACT []
 synonym: "referral to a clinical biochemical geneticist" EXACT []
@@ -7721,7 +7722,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000698
 name: clinical genetics and genomics specialist evaluation
-def: "An evaluation with a specialist who provides comprehensive diagnostic, management, therapeutic, and counseling services for individuals and families at risk for clinical disorders with a genetic basis. The specialist is trained to evaluate individuals of all ages for hereditary conditions." [abms.org]
+def: "An assessment with a specialist who provides comprehensive diagnostic, management, therapeutic, and counseling services for individuals and families at risk for clinical disorders with a genetic basis. The specialist is trained to evaluate individuals of all ages for hereditary conditions." [abms.org]
 synonym: "clinical geneticist consultation" EXACT []
 synonym: "clinical geneticist evaluation" EXACT []
 synonym: "clinical genetics and genomics specialist consultation" EXACT []
@@ -7735,7 +7736,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000699
 name: clinical laboratory geneticist evaluation
-def: "An evaluation or consultation by a diplomate certified in Laboratory Genetics and Genomics who directs and interprets both clinical cytogenetic and molecular genetic analyses relevant to the diagnosis and management of human genetic disease. This specialist acts as a consultant in laboratory diagnoses for a broad range of molecular and chromosomal-based disorders, including both inherited and acquired conditions." [abms.org]
+def: "An assessment or consultation by a diplomate certified in Laboratory Genetics and Genomics who directs and interprets both clinical cytogenetic and molecular genetic analyses relevant to the diagnosis and management of human genetic disease. This specialist acts as a consultant in laboratory diagnoses for a broad range of molecular and chromosomal-based disorders, including both inherited and acquired conditions." [abms.org]
 is_a: MAXO:0000665 ! medical specialist evaluation
 property_value: http://purl.org/dc/elements/1.1/date 2020-07-02T20:29:00Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -7743,7 +7744,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000700
 name: neurological surgery specialist evaluation
-def: "Evaluation by this specialist provides care for adult and pediatric patients in the treatment of pain or pathological processes that may modify the function or activity of the central nervous system (e.g., brain, hypophysis, and spinal cord), the peripheral nervous system (e.g., cranial, spinal, and peripheral nerves), the autonomic nervous system, the supporting structures of these systems (e.g., meninges, skull & skull base, and vertebral column), and their vascular supply (e.g., intracranial, extracranial, and spinal vasculature)." [abms.org]
+def: "An assessment by this specialist provides care for adult and pediatric patients in the treatment of pain or pathological processes that may modify the function or activity of the central nervous system (e.g., brain, hypophysis, and spinal cord), the peripheral nervous system (e.g., cranial, spinal, and peripheral nerves), the autonomic nervous system, the supporting structures of these systems (e.g., meninges, skull & skull base, and vertebral column), and their vascular supply (e.g., intracranial, extracranial, and spinal vasculature)." [abms.org]
 synonym: "consultation with neurological surgeon" EXACT []
 synonym: "consultation with neurological surgery specialist" EXACT []
 synonym: "consultation with neurosurgeon" EXACT []
@@ -7824,7 +7825,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000705
 name: hand surgeon evaluation
-def: "An evaluation by a specialist with expertise in the surgical, medical and rehabilitative care of patients with diseases, injuries, and disorders affecting the hand, wrist and forearm." [abms.org]
+def: "An assessment by a specialist with expertise in the surgical, medical and rehabilitative care of patients with diseases, injuries, and disorders affecting the hand, wrist and forearm." [abms.org]
 comment: Common conditions treated by a hand surgeon include carpal tunnel syndrome, trigger fingers, ganglia (lumps), sports injuries to the hand and wrist, and hand injuries involving cut tendons, nerves and arteries. Hand Surgeons may be General Surgeons, Orthopedic Surgeons or Plastic Surgeons who have received additional training in this area. {xref="abms.org"}
 synonym: "consultation with hand surgeon" EXACT []
 synonym: "consultation with orthopedic hand surgeon" EXACT []
@@ -7840,7 +7841,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000706
 name: otolaryngologist evaluation
-def: "An evaluation by a specialist who provides medical and/or surgical therapy or prevention of diseases, allergies, neoplasms, deformities, disorders and/or injuries of the ears, nose, sinuses, throat, respiratory and upper alimentary systems, face, jaws and the other head and neck systems." [abms.org]
+def: "An assessment by a specialist who provides medical and/or surgical therapy or prevention of diseases, allergies, neoplasms, deformities, disorders and/or injuries of the ears, nose, sinuses, throat, respiratory and upper alimentary systems, face, jaws and the other head and neck systems." [abms.org]
 comment: Head and neck oncology, facial plastic and reconstructive surgery and the treatment of disorders of hearing and voice are fundamental areas of expertise. {xref="abms.org"}
 synonym: "consultation by otolaryngology specialist" EXACT []
 synonym: "consultation with head and neck surgeon" EXACT []
@@ -7863,7 +7864,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000707
 name: pediatrician evaluation
-def: "An evaluation by a specialist concerned with the physical, emotional, and social health of children from birth to young adulthood." [abms.org]
+def: "An assessment by a specialist concerned with the physical, emotional, and social health of children from birth to young adulthood." [abms.org]
 comment: Pediatric care encompasses a broad spectrum of health services ranging from preventive health care to the diagnosis and treatment of acute and chronic diseases. Pediatricians understand the many factors that affect the growth and development of children. They understand that children are not simply small adults. Children change rapidly, and they must be approached with an appreciation for their stage of physical and mental development. {xref="abms.org"}
 synonym: "evaluation by pediatrician" EXACT []
 synonym: "pediatrician consultation" EXACT []
@@ -7914,7 +7915,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000712
 name: physiatrist evaluation
-def: "Evaluation by a specialist who treats patients with disorders or disabilities in the muscles, bones, and nervous system, including neck or back pain, sports and work injuries, stroke, brain injury, spinal cord injury, spasticity, and any other disability or disorder that affects function." [abms.org]
+def: "Assessment by a specialist who treats patients with disorders or disabilities in the muscles, bones, and nervous system, including neck or back pain, sports and work injuries, stroke, brain injury, spinal cord injury, spasticity, and any other disability or disorder that affects function." [abms.org]
 comment: Treatment modalities by a physiatrist may include medications, injections, therapeutic exercise, electrodiagnosis, and any equipment required for daily activities. {xref="abms.org"}
 synonym: "assessment by physiatrist" EXACT []
 synonym: "assessment by physical medicine and rehabilitation specialist" EXACT []
@@ -7936,7 +7937,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000713
 name: plastic surgeon evaluation
-def: "An evaluation with a specialist who focuses on the repair, reconstruction or replacement of physical defects of form or function involving the skin, musculoskeletal system, craniomaxillofacial structures, hand, extremities, breast and trunk and external genitalia or cosmetic enhancement of these areas of the body." [abms.org]
+def: "An assessment with a specialist who focuses on the repair, reconstruction or replacement of physical defects of form or function involving the skin, musculoskeletal system, craniomaxillofacial structures, hand, extremities, breast and trunk and external genitalia or cosmetic enhancement of these areas of the body." [abms.org]
 synonym: "consultation with plastic surgeon" EXACT []
 synonym: "evaluation by plastic surgeon" EXACT []
 synonym: "plastic surgeon assessment" EXACT []
@@ -8177,7 +8178,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000731
 name: allied health professional evaluation
-def: "An evaluation or treatment by a professional who provides a range of diagnostic, technical, therapeutic, and support services in connection with health care. This is care provided by health care practitioners who are distinct providers from dentistry, nursing, medicine, and pharmacy health care professionals." []
+def: "A procedure where a allied health care provider who was not previously involved in a patient's treatment, reviews a patient's medical history, examines the patient, and makes recommendations as to care and treatment. This is care provided by health care practitioners who are distinct providers from dentistry, nursing, medicine, and pharmacy health care professionals." []
 synonym: "allied health clnicians support" EXACT []
 synonym: "allied health practitioner consultation" EXACT []
 synonym: "allied health practitioner evaluation" EXACT []
@@ -8195,7 +8196,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000732
 name: occupational therapist evaluation
-def: "An evaluation or assessment by a health professional trained to help people who are ill or disabled learn to manage their daily activities." []
+def: "An initial evaluation or assessment by a health professional trained to help people who are ill or disabled learn to manage their daily activities." []
 synonym: "assessment by occupational therapist" EXACT []
 synonym: "evaluation by occupational therapist" EXACT []
 synonym: "managed by occupational therapist" EXACT []
@@ -8217,7 +8218,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000733
 name: speech-language pathologist evaluation
-def: "An assessment by a professional who works to prevent, assess, diagnose, and treat speech, language, social communication, congnitive-communication, and swallowing disorders." [asha.org]
+def: "An initial assessment by a professional who works to prevent, assess, diagnose, and treat speech, language, social communication, congnitive-communication, and swallowing disorders." [asha.org]
 synonym: "assessment with speech therapist" EXACT []
 synonym: "consult with speech therapist" EXACT []
 synonym: "evaluation by speech and language therapist" EXACT []
@@ -8237,7 +8238,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000734
 name: audiologist evaluation
-def: "An assessment by a trained non-medical health professional who specializes in the identification, testing, habilitation and rehabilitation of hearing loss and other auditory and balance disorders. Particularly, an audiologist may be involved in diagnostic and screening procedures to determine hearing deficits, as well as in assessment of amplification devices and instruction in their care, training in speechreading, and may serve as consultant to government and industry on issues concerning environmental, noise-induced hearing loss." []
+def: "A first assessment by a trained non-medical health professional who specializes in the identification, testing, habilitation and rehabilitation of hearing loss and other auditory and balance disorders. Particularly, an audiologist may be involved in diagnostic and screening procedures to determine hearing deficits, as well as in assessment of amplification devices and instruction in their care, training in speechreading, and may serve as consultant to government and industry on issues concerning environmental, noise-induced hearing loss." []
 synonym: "assessment by audiologist" EXACT []
 synonym: "audilogic assessment" EXACT []
 synonym: "audiologic evaluation" EXACT []
@@ -8558,7 +8559,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000766
 name: low fat diet intake
 def: "A recommendation to alter dietary intake where 30% or less of the calories come from fat." []
-xref: NCBI:NBK553097
+xref: NCBIBook:NBK553097
 is_a: MAXO:0000767 ! prescriptive dietary intake
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-30T17:13:24Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -8593,8 +8594,8 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000770
 name: carbohydrate controlled diet intake
 def: "Dietary recommendation to closely control the amount of carbohydrates consumed." []
-comment: Very low-carbohydrate (< 10% carbohydrates) or 20-50 gm/day\nLow-carbohydrate (<26% carbohydrates) or less than < 130 gm/day\nModerate-carbohydrate (26%-44%)\nHigh-carbohydrate (45% or greater) {xref="NCBI:NBK537084"}
-xref: NCBI:NBK537084
+comment: Very low-carbohydrate (< 10% carbohydrates) or 20-50 gm/day\nLow-carbohydrate (<26% carbohydrates) or less than < 130 gm/day\nModerate-carbohydrate (26%-44%)\nHigh-carbohydrate (45% or greater) {xref="NCBIBook:NBK537084"}
+xref: NCBIBook:NBK537084
 is_a: MAXO:0000767 ! prescriptive dietary intake
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-30T17:38:43Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -8623,7 +8624,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000773
 name: DASH diet intake
-def: "A recommendation to adhere to Dietary Approaches to Stop Hypertension (DASH) diet. The diet promotes consumption of vegetables and fruits, lean meat and dairy products, and the inclusion of micronutrients and the reduction of sodium in the diet to about 1500 mg/day." [NCBI:NBK482514]
+def: "A recommendation to adhere to Dietary Approaches to Stop Hypertension (DASH) diet. The diet promotes consumption of vegetables and fruits, lean meat and dairy products, and the inclusion of micronutrients and the reduction of sodium in the diet to about 1500 mg/day." [NCBIBook:NBK482514]
 synonym: "dietary approaches to stop hypertension diet intake" EXACT []
 is_a: MAXO:0000767 ! prescriptive dietary intake
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-30T18:26:25Z xsd:dateTime
@@ -9963,7 +9964,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000919
 name: dietician evaluation
-def: "An evaluation by a professional trained and qualified to provide nutritional services at individual, institutional and community levels in term of assessing nutritional needs." []
+def: "An initial evaluation by a professional trained and qualified to provide nutritional services at individual, institutional and community levels in term of assessing nutritional needs." []
 synonym: "nutritionist evaluation" NARROW []
 xref: NCIT:C28248
 is_a: MAXO:0000731 ! allied health professional evaluation
@@ -9973,7 +9974,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000920
 name: physical therapist evaluation
-def: "An evaluation by a trained and certified individual who applies knowledge of the concepts, principles, and practices of physical therapy for the treatment or prevention of physical disability or disease." []
+def: "An initial evaluation by a trained and certified individual who applies knowledge of the concepts, principles, and practices of physical therapy for the treatment or prevention of physical disability or disease." []
 synonym: "physiotherapist evaluation" EXACT []
 xref: NCIT:C53422
 is_a: MAXO:0000731 ! allied health professional evaluation
@@ -9983,7 +9984,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000921
 name: respiratory therapist evaluation
-def: "An evaluation by a professional  trained and qualified to perform technical work concerned with administering therapeutic and diagnostic respiratory care and life support to patients with cardiopulmonary deficiencies and abnormalities." []
+def: "An initial assessment by a professional  trained and qualified to perform technical work concerned with administering therapeutic and diagnostic respiratory care and life support to patients with cardiopulmonary deficiencies and abnormalities." []
 xref: NCIT:C53425
 is_a: MAXO:0000731 ! allied health professional evaluation
 property_value: http://purl.org/dc/elements/1.1/date 2021-08-11T17:34:31Z xsd:dateTime
@@ -9992,7 +9993,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000922
 name: social worker evaluation
-def: "Evaluation by a professionally trained person who is employed in the administration of charity, social service, and welfare. The assistance this professional provides helps disadvantaged individuals and families adjust themselves to the community." []
+def: "An initial assessment by a professionally trained person who is employed in the administration of charity, social service, and welfare. The assistance this professional provides helps disadvantaged individuals and families adjust themselves to the community." []
 xref: NCIT:C28190
 is_a: MAXO:0000731 ! allied health professional evaluation
 property_value: http://purl.org/dc/elements/1.1/date 2021-08-11T17:59:26Z xsd:dateTime
@@ -10075,7 +10076,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000931
 name: psychologist evaluation
-def: "An evaluation by a person who specializes in the study of mind and behavior or in the treatment of mental, emotional, and behavioral disorders." [NCIT:C28181]
+def: "An initial assessment by a person who specializes in the study of mind and behavior or in the treatment of mental, emotional, and behavioral disorders." []
 xref: NCIT:C28181
 is_a: MAXO:0000731 ! allied health professional evaluation
 property_value: http://purl.org/dc/elements/1.1/date 2021-08-12T13:32:47Z xsd:dateTime
@@ -10480,6 +10481,7 @@ synonym: "antenatal vitamin treatment" EXACT []
 synonym: "dietary supplementation of vitamin supplement, prenatal" EXACT []
 synonym: "prenatal vitamin supplement treatment" EXACT []
 synonym: "supplementation of vitamin supplement, prenatal" EXACT []
+synonym: "supplementation with prenatal vitamin" EXACT []
 synonym: "treatment with prenatal supplements" EXACT []
 synonym: "vitamin supplement, prenatal supplemental intake" EXACT []
 xref: NCIT:C92860
@@ -11489,11 +11491,11 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001129
 name: vitamin supplementation
-def: "Addition of vitamin to the diet for adequate and complete nutrition." []
-synonym: "dietary supplementation of vitamin" EXACT []
-synonym: "supplementation of vitamin" EXACT []
+def: "Addition of vitamin as food supplement food product to the diet for adequate and complete nutrition." []
+synonym: "dietary supplementation of vitamin as food supplement food product" EXACT []
+synonym: "supplementation of vitamin as food supplement food product" EXACT []
 synonym: "supplementation with vitamin" EXACT []
-synonym: "vitamin supplemental intake" EXACT []
+synonym: "vitamin as food supplement food product supplemental intake" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -12424,6 +12426,299 @@ property_value: http://purl.org/dc/elements/1.1/date 2022-3-30T11:00:00Z xsd:str
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0001227
+name: beta carotene measurement
+def: "The determination of the amount of beta-caroteneβ-carotene present in the sample." []
+synonym: "b-carotene measurement" EXACT []
+synonym: "beta carotene assessment" EXACT []
+synonym: "beta-carotene measurement" EXACT []
+synonym: "beta-carotene test" EXACT []
+synonym: "beta-caroteneβ-carotene assessment" EXACT []
+synonym: "beta-caroteneβ-carotene test" EXACT []
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 CHEBI:17579
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001228
+name: creatine measurement
+def: "The determination of the amount of creatine present in the sample." []
+synonym: "creatine assessment" EXACT []
+synonym: "creatine test" EXACT []
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 CHEBI:16919
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001229
+name: phosphocreatine measurement
+def: "The determination of the amount of N-phosphocreatine present in the sample." []
+synonym: "N-phosphocreatine assessment" EXACT []
+synonym: "N-phosphocreatine test" EXACT []
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 CHEBI:17287
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001230
+name: folic acid measurement
+def: "The determination of the amount of folic acid present in the sample." []
+synonym: "folic acid assessment" EXACT []
+synonym: "folic acid test" EXACT []
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 CHEBI:27470
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001231
+name: carnitine measurement
+def: "The determination of the amount of carnitine present in the sample." []
+synonym: "carnitine assessment" EXACT []
+synonym: "carnitine test" EXACT []
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 CHEBI:17126
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001232
+name: choline measurement
+def: "The determination of the amount of choline present in the sample." []
+synonym: "choline assessment" EXACT []
+synonym: "choline test" EXACT []
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 CHEBI:15354
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001233
+name: glycerylphosphorylcholine measurement
+def: "The determination of the amount of glycerylphosphorylcholine present in the sample." []
+synonym: "glycerylphosphorylcholine assessment" EXACT []
+synonym: "glycerylphosphorylcholine test" EXACT []
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 CHEBI:135063
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001234
+name: phosphocholine measurement
+def: "The determination of the amount of phosphocholines present in the sample." []
+synonym: "phosphocholines assessment" EXACT []
+synonym: "phosphocholines test" EXACT []
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 CHEBI:36700
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001235
+name: pyridoxal 5'-phosphate measurement
+def: "The determination of the amount of pyridoxal 5'-phosphate present in the sample." []
+synonym: "pyridoxal 5'-phosphate assessment" EXACT []
+synonym: "pyridoxal 5'-phosphate test" EXACT []
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 CHEBI:18405
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001236
+name: chemical measurement
+def: "The determination of the amount of chemical entity present in the sample." []
+synonym: "chemical entity assessment" EXACT []
+synonym: "chemical entity test" EXACT []
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 CHEBI:24431
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001237
+name: vitamin A measurement
+def: "The determination of the amount of vitamin A present in the sample." []
+synonym: "vitamin A assessment" EXACT []
+synonym: "vitamin A test" EXACT []
+intersection_of: MAXO:0009069 ! vitamin measurement
+intersection_of: RO:0002233 CHEBI:12777
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001238
+name: vitamin B measurement
+def: "The determination of the amount of B vitamin present in the sample." []
+synonym: "B vitamin assessment" EXACT []
+synonym: "B vitamin test" EXACT []
+intersection_of: MAXO:0009069 ! vitamin measurement
+intersection_of: RO:0002233 CHEBI:75769
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001239
+name: vitamin B complex measurement
+def: "The determination of the amount of vitamin B complex present in the sample." []
+synonym: "vitamin B complex assessment" EXACT []
+synonym: "vitamin B complex test" EXACT []
+intersection_of: MAXO:0009069 ! vitamin measurement
+intersection_of: RO:0002233 CHEBI:75782
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001240
+name: vitamin B1 measurement
+def: "The determination of the amount of vitamin B1 present in the sample." []
+synonym: "thiamin measurement" EXACT []
+synonym: "vitamin B1 assessment" EXACT []
+synonym: "vitamin B1 test" EXACT []
+intersection_of: MAXO:0009069 ! vitamin measurement
+intersection_of: RO:0002233 CHEBI:26948
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001241
+name: vitamin B2 measurement
+def: "The determination of the amount of vitamin B2 present in the sample." []
+synonym: "riboflavin measurement" EXACT []
+synonym: "vitamin B2 assessment" EXACT []
+synonym: "vitamin B2 test" EXACT []
+intersection_of: MAXO:0009069 ! vitamin measurement
+intersection_of: RO:0002233 CHEBI:176838
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001242
+name: vitamin B3 measurement
+def: "The determination of the amount of vitamin B3 present in the sample." []
+synonym: "niacin measurement" EXACT []
+synonym: "vitamin B3 assessment" EXACT []
+synonym: "vitamin B3 test" EXACT []
+intersection_of: MAXO:0009069 ! vitamin measurement
+intersection_of: RO:0002233 CHEBI:176839
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001243
+name: vitamin B5 measurement
+def: "The determination of the amount of vitamin B5 present in the sample." []
+synonym: "vitamin B5 assessment" EXACT []
+synonym: "vitamin B5 test" EXACT []
+intersection_of: MAXO:0009069 ! vitamin measurement
+intersection_of: RO:0002233 CHEBI:176840
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001244
+name: vitamin B6 measurement
+def: "The determination of the amount of vitamin B6 present in the sample." []
+synonym: "vitamin B6 assessment" EXACT []
+synonym: "vitamin B6 test" EXACT []
+intersection_of: MAXO:0009069 ! vitamin measurement
+intersection_of: RO:0002233 CHEBI:27306
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001245
+name: vitamin B7 measurement
+def: "The determination of the amount of vitamin B7 present in the sample." []
+synonym: "vitamin B7 assessment" EXACT []
+synonym: "vitamin B7 test" EXACT []
+intersection_of: MAXO:0009069 ! vitamin measurement
+intersection_of: RO:0002233 CHEBI:176841
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001246
+name: vitamin B9 measurement
+def: "The determination of the amount of vitamin B9 present in the sample." []
+synonym: "vitamin B9 assessment" EXACT []
+synonym: "vitamin B9 test" EXACT []
+intersection_of: MAXO:0009069 ! vitamin measurement
+intersection_of: RO:0002233 CHEBI:176842
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001247
+name: vitamin B12 measurement
+def: "The determination of the amount of vitamin B12 present in the sample." []
+synonym: "vitamin B12 assessment" EXACT []
+synonym: "vitamin B12 test" EXACT []
+intersection_of: MAXO:0009069 ! vitamin measurement
+intersection_of: RO:0002233 CHEBI:176843
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001248
+name: vitamin D measurement
+def: "The determination of the amount of vitamin D present in the sample." []
+synonym: "vitamin D assessment" EXACT []
+synonym: "vitamin D test" EXACT []
+intersection_of: MAXO:0009069 ! vitamin measurement
+intersection_of: RO:0002233 CHEBI:27300
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001249
+name: vitamin C measurement
+def: "The determination of the amount of vitamin C present in the sample." []
+synonym: "vitamin C assessment" EXACT []
+synonym: "vitamin C test" EXACT []
+intersection_of: MAXO:0009069 ! vitamin measurement
+intersection_of: RO:0002233 CHEBI:176783
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001250
+name: vitamin E measurement
+def: "The determination of the amount of vitamin E present in the sample." []
+synonym: "vitamin E assessment" EXACT []
+synonym: "vitamin E test" EXACT []
+intersection_of: MAXO:0009069 ! vitamin measurement
+intersection_of: RO:0002233 CHEBI:33234
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001251
+name: vitamin K measurement
+def: "The determination of the amount of vitamin K present in the sample." []
+synonym: "vitamin K assessment" EXACT []
+synonym: "vitamin K test" EXACT []
+intersection_of: MAXO:0009069 ! vitamin measurement
+intersection_of: RO:0002233 CHEBI:28384
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001252
+name: folate measurement
+def: "The determination of the amount of folates present in the sample." []
+synonym: "folates assessment" EXACT []
+synonym: "folates test" EXACT []
+intersection_of: MAXO:0009069 ! vitamin measurement
+intersection_of: RO:0002233 CHEBI:67011
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0002000
 name: cannabis consumption avoidance
 def: "A medical requirement or recommendation of avoiding cannabis consumption." []
@@ -12502,7 +12797,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0009003
 name: preimplantation genetic testing
-def: "Genetic testing of one or more cells removed from early embryos conceived by in vitro fertilization and transferring to the mother's uterus only those embryos determined not to have the pathogenic variant(s)/chromosome anomaly(ies) of concern." [GeneReviews:NBK5191]
+def: "Genetic testing of one or more cells removed from early embryos conceived by in vitro fertilization and transferring to the mother's uterus only those embryos determined not to have the pathogenic variant(s)/chromosome anomaly(ies) of concern." [NCBIBook:NBK5191]
 synonym: "PGD" EXACT ABBREVIATION []
 synonym: "PGS" EXACT ABBREVIATION []
 synonym: "PGT" EXACT ABBREVIATION []
@@ -12518,7 +12813,7 @@ id: MAXO:0009004
 name: clinical whole-exome sequencing
 def: "A procedure that can determine the DNA sequence for all of the exons (protein coding region) in an individual." []
 comment: Clinical Exome Sequencing is a test for identifying disease-causing DNA variants within the 1% of the genome which codes for proteins (exons) or flanks the regions which code for proteins (splice junctions). {xref="https://www.uclahealth.org/"}
-comment: Sequence analysis of the exons of protein-coding genes in the genome typically performed by target enrichment or capture of exons followed by next-generation sequencing. {xref="GeneReviews:NBK5191"}
+comment: Sequence analysis of the exons of protein-coding genes in the genome typically performed by target enrichment or capture of exons followed by next-generation sequencing. {xref="NCBIBook:NBK5191"}
 synonym: "exome sequencing" EXACT []
 synonym: "WES" EXACT ABBREVIATION []
 synonym: "whole exome sequencing" EXACT []
@@ -12543,7 +12838,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0009006
 name: clinical whole genome sequencing
 def: "A procedure that can determine the DNA sequence for coding and non-coding regions in an individual." []
-comment: Sequence analysis of the genome including coding and noncoding regions typically performed by next-generation sequencing (NGS) of sheared genomic DNA. {xref="GeneReviews:NBK5191"}
+comment: Sequence analysis of the genome including coding and noncoding regions typically performed by next-generation sequencing (NGS) of sheared genomic DNA. {xref="NCBIBook:NBK5191"}
 synonym: "genome sequencing" EXACT []
 synonym: "WGS" EXACT ABBREVIATION []
 synonym: "whole genome sequncing" EXACT []
@@ -12977,6 +13272,158 @@ def: "Surgical removal of tumor cells without removing surrounding tissue or org
 synonym: "tumor enucleation" EXACT []
 is_a: MAXO:0009049 ! enucleation
 property_value: http://purl.org/dc/elements/1.1/date 2022-04-11T16:30:19Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009053
+name: medical specialist examination
+def: "A direct appraisal of a patient's condition by a clinical specialist that is based on a physical exam, medical history, and the patient's account of symptoms." []
+is_a: MAXO:0000526 ! clinical examination
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-02T15:54:47Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009054
+name: examination by immunologist
+def: "A direct assessment of a patient's condition by an immunologist that is based on a physical exam, medical history, and the patient's account of symptoms." []
+xref: NCIT:C74803
+is_a: MAXO:0000566 ! clinical chemistry assessment
+is_a: MAXO:0009053 ! medical specialist examination
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-02T15:56:27Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009055
+name: examination by dermatologist
+def: "A direct assessment of a patient's condition by a dermatologist that is based on a physical exam, medical history, and the patient's account of symptoms." []
+synonym: "dermatologist examination" EXACT []
+is_a: MAXO:0009053 ! medical specialist examination
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-02T15:57:40Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009056
+name: examination by emergency medicine specialst
+def: "A direct assessment of a patient's condition by an emergency medicine specialist that is based on a physical exam, medical history, and the patient's account of symptoms." []
+synonym: "ED examination" EXACT []
+synonym: "emergency department physician examination" NARROW []
+synonym: "emergency medicine specialist examination" EXACT []
+synonym: "emergency room physician examination" NARROW []
+synonym: "ER examination" EXACT []
+is_a: MAXO:0009053 ! medical specialist examination
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-02T16:09:47Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009057
+name: examination by family medicine specialist
+def: "A direct assessment of a patient's condition by a family medicine specialist that is based on a physical exam, medical history, and the patient's account of symptoms." []
+is_a: MAXO:0009053 ! medical specialist examination
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-02T16:19:37Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009058
+name: examination by a neurologist
+def: "A direct assessment of a patient's condition by a neurologist that is based on a physical exam, medical history, and the patient's account of symptoms.neurologist." []
+is_a: MAXO:0009053 ! medical specialist examination
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-02T16:30:32Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009059
+name: examination by ob/gyn specialist
+def: "A direct assessment of a patient's condition by  an obstetrics and gynecologist specialist that is based on a physical exam, medical history, and the patient's account of symptoms." []
+synonym: "gynecologist examination" NARROW []
+synonym: "ob/gyn examination" EXACT []
+synonym: "obstetrics examination" NARROW []
+is_a: MAXO:0009053 ! medical specialist examination
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-02T17:30:59Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009060
+name: examination by ophthalmologist
+def: "A direct appraisal of a patient's condition by a ophthalmologist that is based on a physical exam, medical history, and the patient's account of symptoms." []
+synonym: "ophthalmologist examination" EXACT []
+is_a: MAXO:0009053 ! medical specialist examination
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-02T17:43:19Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009061
+name: examination by otolaryngologist
+def: "A direct appraisal of a patient's condition by an otolaryngologist that is based on a physical exam, medical history, and the patient's account of symptoms." []
+is_a: MAXO:0009053 ! medical specialist examination
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-03T13:58:22Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009062
+name: examination by orthopedist
+def: "A direct appraisal of a patient's condition by an orthopedic specialist that is based on a physical exam, medical history, and the patient's account of symptoms." []
+is_a: MAXO:0009053 ! medical specialist examination
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-03T15:44:47Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009063
+name: examination by pediatrician
+def: "A direct appraisal of a patient's condition by a pediatric specialist that is based on a physical exam, medical history, and the patient's account of symptoms." []
+synonym: "pediatric examination" EXACT []
+is_a: MAXO:0009053 ! medical specialist examination
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-03T15:45:49Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009064
+name: examination by physiatrist
+def: "A direct appraisal of a patient's condition by a physical medicine and rehabilition specialist that is based on a physical exam, medical history, and the patient's account of symptoms." []
+synonym: "examination by physical mediciane and rehabilitation specialist" EXACT []
+is_a: MAXO:0009053 ! medical specialist examination
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-03T15:50:43Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009066
+name: examination by psychiatrist
+def: "A direct appraisal of a patient's condition by a psychiatric specialist that is based on a physical exam, medical history, and the patient's account of symptoms." []
+synonym: "psychiatric examination" EXACT []
+is_a: MAXO:0009053 ! medical specialist examination
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-03T15:57:23Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009067
+name: examination by urologist
+def: "A direct appraisal of a patient's condition by a urology specialist that is based on a physical exam, medical history, and the patient's account of symptoms." []
+is_a: MAXO:0009053 ! medical specialist examination
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-03T15:57:55Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009068
+name: allied health professional examination
+def: "A direct appraisal of a patient's condition by an allied health professional specialist that is based on a physical exam, medical history, and the patient's account of symptoms." []
+synonym: "examination by allied health professional" EXACT []
+is_a: MAXO:0000526 ! clinical examination
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-03T16:13:07Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009069
+name: vitamin measurement
+def: "The determination of the type and/or amount of vitamins in a sample." []
+is_a: MAXO:0000566 ! clinical chemistry assessment
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T20:45:27Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009071
+name: fat soluble vitamin measurement
+def: "The determination of the type and/or amount of fat-soluble vitamins in a sample." []
+is_a: MAXO:0009069 ! vitamin measurement
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-06T16:35:37Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
