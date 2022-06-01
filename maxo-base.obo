@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2022-05-06/maxo-base.owl
+data-version: maxo/releases/2022-06-01/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
@@ -7,7 +7,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2022-05-06" xsd:string
+property_value: owl:versionInfo "2022-06-01" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -70,7 +70,6 @@ id: MAXO:0000005
 name: clinical imaging procedure
 def: "Any technology or method that aids in the visualization of any biological process, cell, tissue or organ for use in screening, diagnosis, surgical procedures or therapy." [NCIT:C17369]
 synonym: "imaging procedure" EXACT []
-synonym: "imaging technique" EXACT []
 synonym: "medical imaging" EXACT []
 synonym: "therapeutic imaging procedure" NARROW []
 synonym: "therapeutic imaging technique" NARROW []
@@ -78,7 +77,6 @@ xref: NCIT:C17369
 is_a: MAXO:0000002 ! therapeutic procedure
 is_a: MAXO:0000003 ! diagnostic procedure
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:10:50Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000006
@@ -1151,8 +1149,7 @@ def: "A technique for measuring the gamma radiation produced by collisions of el
 synonym: "PET scan" EXACT ABBREVIATION [NCIT:C17007]
 xref: NCIT:C17007
 is_a: MAXO:0000005 ! clinical imaging procedure
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-20T19:19:15Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
+is_a: MAXO:0009052 ! nuclear medicine procedure
 
 [Term]
 id: MAXO:0000138
@@ -2895,7 +2892,7 @@ synonym: "treatment with HIV fusion inhibitor drug" EXACT []
 synonym: "treatment with HIV fusion inhibitor medication" EXACT []
 synonym: "treatment with HIV fusion inhibitor therapy" EXACT []
 xref: CHEBI:59886
-is_a: MAXO:0000248 ! anti-human immunodeficiency virus agent therapy
+is_a: MAXO:0000248 ! anti-HIV agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:18:25Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2909,7 +2906,7 @@ synonym: "treatment with anti-HIV therapy, non-nucleoside reverse transcriptase 
 synonym: "treatment with anti-HIV therapy, non-nucleoside reverse transcriptase inhibitor drug" EXACT []
 synonym: "treatment with anti-HIV therapy, non-nucleoside reverse transcriptase inhibitor medication" EXACT []
 xref: NCIT:C97453
-is_a: MAXO:0000248 ! anti-human immunodeficiency virus agent therapy
+is_a: MAXO:0000248 ! anti-HIV agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:18:58Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2927,7 +2924,7 @@ synonym: "treatment with nucleoside-nucleotide reverse transcriptase inhibitor d
 synonym: "treatment with nucleoside-nucleotide reverse transcriptase inhibitor medication" EXACT []
 synonym: "treatment with nucleoside/nucleotide reverse transcriptase inhibitor drug" EXACT []
 synonym: "treatment with nucleoside/nucleotide reverse transcriptase inhibitor medication" EXACT []
-is_a: MAXO:0000248 ! anti-human immunodeficiency virus agent therapy
+is_a: MAXO:0000248 ! anti-HIV agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:20:58Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2944,7 +2941,7 @@ synonym: "treatment with HIV protease inhibitor drug" EXACT []
 synonym: "treatment with HIV protease inhibitor medication" EXACT []
 xref: CHEBI:35660
 xref: NCIT:C97366
-is_a: MAXO:0000248 ! anti-human immunodeficiency virus agent therapy
+is_a: MAXO:0000248 ! anti-HIV agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:21:25Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -12719,6 +12716,33 @@ property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:st
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0001253
+name: pelvic radiograph procedure
+def: "Use of an imaging test that uses small amounts of radiation to produce pictures of pelvic region of trunk." []
+synonym: "pelvic radiogram procedure" EXACT []
+synonym: "pelvic region of trunk radiogram procedure" EXACT []
+synonym: "pelvic region of trunk X-ray procedure" EXACT []
+synonym: "pelvis radiograph" EXACT []
+synonym: "radiograph of pelvic region of trunk" EXACT []
+synonym: "radiograph of pelvis" EXACT []
+synonym: "radiography of pelvic region of trunk" EXACT []
+synonym: "X-ray of the pelvis" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-09T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001254
+name: skull radiograph procedure
+def: "Use of an imaging test that uses small amounts of radiation to produce pictures of skull." []
+synonym: "radiograph of skull" EXACT []
+synonym: "radiography of skull" EXACT []
+synonym: "skull radiogram procedure" EXACT []
+synonym: "skull X-ray procedure" EXACT []
+synonym: "X-ray of the skull" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-09T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0002000
 name: cannabis consumption avoidance
 def: "A medical requirement or recommendation of avoiding cannabis consumption." []
@@ -13275,6 +13299,17 @@ property_value: http://purl.org/dc/elements/1.1/date 2022-04-11T16:30:19Z xsd:da
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0009052
+name: nuclear medicine procedure
+def: "A procedure that uses very small amounts of radioactive materials to examine organ function and structure." [https://www.hopkinsmedicine.org/health/treatment-tests-and-therapies/nuclear-medicine]
+synonym: "nuclear medicine" EXACT []
+synonym: "radiation biology procedure" EXACT []
+synonym: "radiology-nuclear medicine procedure" EXACT []
+is_a: MAXO:0000002 ! therapeutic procedure
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-10T17:12:49Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0009053
 name: medical specialist examination
 def: "A direct appraisal of a patient's condition by a clinical specialist that is based on a physical exam, medical history, and the patient's account of symptoms." []
@@ -13287,7 +13322,6 @@ id: MAXO:0009054
 name: examination by immunologist
 def: "A direct assessment of a patient's condition by an immunologist that is based on a physical exam, medical history, and the patient's account of symptoms." []
 xref: NCIT:C74803
-is_a: MAXO:0000566 ! clinical chemistry assessment
 is_a: MAXO:0009053 ! medical specialist examination
 property_value: http://purl.org/dc/elements/1.1/date 2022-05-02T15:56:27Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -13385,6 +13419,16 @@ property_value: http://purl.org/dc/elements/1.1/date 2022-05-03T15:50:43Z xsd:da
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0009065
+name: intravenous pyelogram
+def: "A test that involves the administration of intravenous contrast and X-ray imaging of the urinary tract. The iodinated contrast flows through the renal vasculature and filtered into the collecting system highlighting the anatomic structures on the X-ray image." [PMID:32644460]
+synonym: "intravenous urography" EXACT []
+synonym: "IVP" EXACT ABBREVIATION []
+is_a: MAXO:0000595
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-10T18:02:12Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0009066
 name: examination by psychiatrist
 def: "A direct appraisal of a patient's condition by a psychiatric specialist that is based on a physical exam, medical history, and the patient's account of symptoms." []
@@ -13416,6 +13460,16 @@ name: vitamin measurement
 def: "The determination of the type and/or amount of vitamins in a sample." []
 is_a: MAXO:0000566 ! clinical chemistry assessment
 property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T20:45:27Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009070
+name: single-photon emission computed tomography
+def: "Delivery of a gamma-emitting radioisotope (a radionuclide) into the patient, normally through injection into the bloodstream and detected by gamma camera The radioisotope could be is a simple soluble dissolved ion, such as an isotope of gallium(III), or a marker radioisotope is attached to a specific ligand to create a radioligand targeting a place of interest in the body." []
+synonym: "SPECT" EXACT []
+is_a: MAXO:0000005 ! clinical imaging procedure
+is_a: MAXO:0009052 ! nuclear medicine procedure
+property_value: http://purl.org/dc/elements/1.1/date 2022-05-10T18:09:15Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -15485,6 +15539,10 @@ is_a: MAXO:0000547 ! clinical biospecimen collection
 [Term]
 id: OBI:0002650
 is_a: MAXO:0000003 ! diagnostic procedure
+
+[Term]
+id: RO:0000052
+is_a: PATO:0001741
 
 [Typedef]
 id: MAXO:0000521

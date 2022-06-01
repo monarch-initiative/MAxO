@@ -12,14 +12,14 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/maxo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2022-05-06/maxo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2022-06-01/maxo-base.owl"/>
         <dc:creator>Leigh Carmody</dc:creator>
         <dc:creator>Peter Robinson</dc:creator>
         <dc:description>An ontology to represent medically relevant actions, procedures, therapies, interventions, and recommendations.</dc:description>
         <dc:title>Medical Action Ontology</dc:title>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-05-06</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-06-01</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -2192,10 +2192,8 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000003"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any technology or method that aids in the visualization of any biological process, cell, tissue or organ for use in screening, diagnosis, surgical procedures or therapy.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-16T20:10:50Z</dc:date>
-        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT:C17369</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>imaging procedure</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>imaging technique</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>medical imaging</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>therapeutic imaging procedure</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>therapeutic imaging technique</oboInOwl:hasNarrowSynonym>
@@ -4278,9 +4276,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000137">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000005"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009052"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A technique for measuring the gamma radiation produced by collisions of electrons and positrons (anti-electrons) within living tissue. In positron emission tomography (PET), a subject is given a dose of a positron-emitting radionuclide attached to a metabolically active substance (for example, 2-fluoro-2-deoxy-D-glucose (FDG), which is similar to a naturally occurring sugar, glucose, with the addition of a radioactive fluorine atom). When living tissue containing the positron emitter is bombarded by electrons, gamma radiation produced by collisions of electrons and positrons is detected by a scanner, revealing in fine detail the tissue location of the metabolically-active substance administered.</obo:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-20T19:19:15Z</dc:date>
-        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT:C17007</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>PET scan</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">positron emission tomography procedure</rdfs:label>
@@ -30018,6 +30015,73 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001253 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001253">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000595"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002355"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use of an imaging test that uses small amounts of radiation to produce pictures of pelvic region of trunk.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-05-09T20:39:14Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X-ray of the pelvis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pelvic radiogram procedure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pelvic region of trunk X-ray procedure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pelvic region of trunk radiogram procedure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pelvis radiograph</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiograph of pelvic region of trunk</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiograph of pelvis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiography of pelvic region of trunk</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pelvic radiograph procedure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001254 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001254">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000595"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0003129"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use of an imaging test that uses small amounts of radiation to produce pictures of skull.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-05-09T20:39:14Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X-ray of the skull</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiograph of skull</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiography of skull</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skull X-ray procedure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skull radiogram procedure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skull radiograph procedure</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/MAXO_0002000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0002000">
@@ -31103,6 +31167,27 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009052 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009052">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000002"/>
+        <obo:IAO_0000115>A procedure that uses very small amounts of radioactive materials to examine organ function and structure.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-10T17:12:49Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>nuclear medicine</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>radiation biology procedure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>radiology-nuclear medicine procedure</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">nuclear medicine procedure</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009052"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A procedure that uses very small amounts of radioactive materials to examine organ function and structure.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://www.hopkinsmedicine.org/health/treatment-tests-and-therapies/nuclear-medicine</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/MAXO_0009053 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009053">
@@ -31118,7 +31203,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0009054 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009054">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000566"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009053"/>
         <obo:IAO_0000115>A direct assessment of a patient&apos;s condition by an immunologist that is based on a physical exam, medical history, and the patient&apos;s account of symptoms.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-02T15:56:27Z</dc:date>
@@ -31261,6 +31345,32 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009065 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009065">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000595"/>
+        <obo:IAO_0000115>A test that involves the administration of intravenous contrast and X-ray imaging of the urinary tract. The iodinated contrast flows through the renal vasculature and filtered into the collecting system highlighting the anatomic structures on the X-ray image.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-10T18:02:12Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>IVP</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>intravenous urography</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">intravenous pyelogram</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009065"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A test that involves the administration of intravenous contrast and X-ray imaging of the urinary tract. The iodinated contrast flows through the renal vasculature and filtered into the collecting system highlighting the anatomic structures on the X-ray image.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:32644460</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009065"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>IVP</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/maxo#ABBREVIATION"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/MAXO_0009066 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009066">
@@ -31307,6 +31417,20 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-04T20:45:27Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <rdfs:label xml:lang="en">vitamin measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009070 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009070">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000005"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009052"/>
+        <obo:IAO_0000115>Delivery of a gamma-emitting radioisotope (a radionuclide) into the patient, normally through injection into the bloodstream and detected by gamma camera The radioisotope could be is a simple soluble dissolved ion, such as an isotope of gallium(III), or a marker radioisotope is attached to a specific ligand to create a radioligand targeting a place of interest in the body.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-10T18:09:15Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>SPECT</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">single-photon emission computed tomography</rdfs:label>
     </owl:Class>
     
 
@@ -36625,6 +36749,12 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PATO_0001741 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001741"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PR_000000001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PR_000000001"/>
@@ -36700,6 +36830,14 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/PR_P02771 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PR_P02771"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000052 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RO_0000052">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001741"/>
+    </owl:Class>
     
 
 
