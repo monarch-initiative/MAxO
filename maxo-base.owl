@@ -12,14 +12,14 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/maxo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2022-06-01/maxo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2022-06-21/maxo-base.owl"/>
         <dc:creator>Leigh Carmody</dc:creator>
         <dc:creator>Peter Robinson</dc:creator>
         <dc:description>An ontology to represent medically relevant actions, procedures, therapies, interventions, and recommendations.</dc:description>
         <dc:title>Medical Action Ontology</dc:title>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-06-01</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-06-21</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -646,6 +646,12 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_27306 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_27306"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_27363 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_27363"/>
     
 
 
@@ -12397,10 +12403,9 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000429">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000014"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radiation therapy in which high-energy beams are delivered to the tumor from outside of the body.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radiation therapy in which high-energy beams are delivered to a body part and/or tumor from outside of the body.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-26T19:28:21Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT:C15751</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>EBRT</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>external beam RT</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>external beam radiotherapeutics</oboInOwl:hasExactSynonym>
@@ -12409,12 +12414,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasNarrowSynonym>External radiation therapy</oboInOwl:hasNarrowSynonym>
         <rdfs:label xml:lang="en">external beam radiation therapy</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000429"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radiation therapy in which high-energy beams are delivered to the tumor from outside of the body.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT:C15751</oboInOwl:hasDbXref>
-    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000429"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
@@ -14007,6 +14006,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>Surgical formation of an opening into the trachea through the neck, or the opening so created.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-23T16:48:07Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>surgical lip repair</oboInOwl:hasExactSynonym>
         <rdfs:comment>Tracheostomy and tracheotomy are sometimes used interchangeably, but tracheotomy is simply a surgical incision of the trachea.</rdfs:comment>
         <rdfs:label xml:lang="en">tracheostomy</rdfs:label>
     </owl:Class>
@@ -31443,6 +31443,382 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-06T16:35:37Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <rdfs:label xml:lang="en">fat soluble vitamin measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009072 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009072">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000004"/>
+        <obo:IAO_0000115>Surgeical procedure to restore or replace physical defects of form or function. Physical defects could be a consequence of birth defects, trauma, or medical conditions.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-02T17:19:14Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>surgery to repair</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>surgical reconstruction</oboInOwl:hasNarrowSynonym>
+        <rdfs:label xml:lang="en">surgical repair</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009073 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009073">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009077"/>
+        <obo:IAO_0000115>Elective surgeries to improve or correct patients body imperfections or appearance. These surgeries can address imperfections due to preference, congenital, acquired, illness, or traumatic or para-physiological events such as aging.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-13T16:08:56Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <rdfs:label xml:lang="en">cosmetic plastic surgery</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009073"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Elective surgeries to improve or correct patients body imperfections or appearance. These surgeries can address imperfections due to preference, congenital, acquired, illness, or traumatic or para-physiological events such as aging.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:28194357</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009074 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009074">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009073"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-13T16:53:05Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>A procedure for increasing the size of the breast using a prosthetic implant.</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>augmentation mammoplasty</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>breast implantation surgery</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">breast augmentation surgery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009075 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009075">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009073"/>
+        <obo:IAO_0000115>A surgical procedure to remove excess skin and fat from the abdomen.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-13T17:23:10Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>tummy tuck</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">abdominoplasty</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009075"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A surgical procedure to remove excess skin and fat from the abdomen.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C158024</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009076 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009076">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009072"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009077"/>
+        <obo:IAO_0000115>A medically necessary surgery performed to restore function and conventional appearance of the body part. The surgery can correct deformities created by birth defects, trauma or medical conditions and is performed by a plastic surgeon.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-13T20:16:10Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <rdfs:label xml:lang="en">reconstructive plastic surgery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009077 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009077">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000004"/>
+        <obo:IAO_0000115>A surgical procedure that is performed for therapeutic or cosmetic reformation of tissue.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-13T20:26:49Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <rdfs:label xml:lang="en">plastic surgery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009078 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009078">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009076"/>
+        <obo:IAO_0000115>A procedure for surgical lip restoration, like cleft lip.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-15T17:44:45Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <rdfs:label xml:lang="en">cheiloplasty</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009079 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009079">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009076"/>
+        <obo:IAO_0000115>The surgical repair of a cleft palate by approximation of the intact tissues surrounding the defect.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-15T17:44:59Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>cleft palate repair</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">palatorrhaphy</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009079"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The surgical repair of a cleft palate by approximation of the intact tissues surrounding the defect.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C168380</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009080 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009080">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009076"/>
+        <obo:IAO_0000115>Surgery to rebuild the shape of the breast after a mastectomy.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-15T17:45:14Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>breast reconstruction surgery</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">mammoplasty</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009080"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Surgery to rebuild the shape of the breast after a mastectomy.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C15354</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009081 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009081">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009076"/>
+        <obo:IAO_0000115>Surgery using incisional, excisional, or use of local/regional flaps to repair burned areas.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-15T17:47:00Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>burn reconstructive surgery</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">reconstructive burn surgery</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009081"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Surgery using incisional, excisional, or use of local/regional flaps to repair burned areas.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:15284153</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009082 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009082">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009072"/>
+        <obo:IAO_0000115>Surgical reconstruction or replacement of all or part of a malformed, diseased, degenerated, or otherwise damaged joint.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-15T17:47:14Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>joint repair surgery</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">arthroplasty</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009082"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Surgical reconstruction or replacement of all or part of a malformed, diseased, degenerated, or otherwise damaged joint.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C51691</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009083 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009083">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009082"/>
+        <obo:IAO_0000115>Surgical reconstruction or replacement of all or part of a malformed, diseased, degenerated, or otherwise damaged knee joint.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-15T17:47:24Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>arthroplasty of knee</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>knee repair surgery</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">knee arthroplasty</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009084 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009084">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009082"/>
+        <obo:IAO_0000115>Surgical reconstruction or replacement of all or part of a malformed, diseased, degenerated, or otherwise damaged hip joint.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-15T17:47:36Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>arthroplasty of hip joint</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>hip joint repair</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">hip arthroplasty</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009085 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009085">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009083"/>
+        <obo:IAO_0000115>Surgical replacement of part or all of a damaged knee joint with an artificial joint.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-15T18:05:58Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <rdfs:label xml:lang="en">knee replacement surgery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009086 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009086">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009085"/>
+        <obo:IAO_0000115>Surgical replacement of all parts of a damaged knee joint with an artificial joint.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-15T18:06:11Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <rdfs:label xml:lang="en">total knee replacement surgery</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009086"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Surgical replacement of all parts of a damaged knee joint with an artificial joint.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C51565</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009087 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009087">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009083"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-15T18:16:25Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>knee joint ligament repair</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>repair of ligament of knee joint</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">repair of knee ligament</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009088 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009088">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000429"/>
+        <obo:IAO_0000115>A procedure that delivers a single, highly concentrated dose of ionizing radiation from an external source to a small, precise target using 3-D computerized imaging to focus beams. There is no incision, but this technique distorts and destroys the DNA of tumor cells in a highly directed fashion.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-17T19:33:11Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>SRS</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">stereotactic radiosurgery</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009088"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A procedure that delivers a single, highly concentrated dose of ionizing radiation from an external source to a small, precise target using 3-D computerized imaging to focus beams. There is no incision, but this technique distorts and destroys the DNA of tumor cells in a highly directed fashion.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://www.aans.org/en/Patients/Neurosurgical-Conditions-and-Treatments/Stereotactic-Radiosurgery</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009088"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>SRS</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/maxo#ABBREVIATION"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009089 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009089">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009088"/>
+        <obo:IAO_0000115>A type of stereotactic surgery that uses specialized equipment to focus approximately 200 beams of radiation on a tumor or other target with submillimeter accuracy.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-17T20:36:46Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>Gamma Knife surgery</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">sterotactic radiosurgery using Gamma Knife</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009090 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009090">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009088"/>
+        <obo:IAO_0000115>A type of sterotactic radiosurgery using photons to treat cancerous and noncancerous abnormalities via a linear accelerator (LINAC) machine.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-17T20:43:21Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>sterotactic radiosurgery using LINAC</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">sterotactic radiosurgery using Linear Accelerator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009091 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009091">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000429"/>
+        <obo:IAO_0000115>External radiation therapy that is directed at a specific body part/tumor over a fractionated treatment schedule.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-17T20:48:57Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>SRT</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">sterotactic radiation therapy</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009091"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>SRT</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/maxo#ABBREVIATION"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009092 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009092">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000429"/>
+        <obo:IAO_0000115>A method of external beam radiotherapy (EBRT) that accurately delivers a high irradiation dose to an extracranial target in one or few treatment fractions</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-20T18:56:35Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>SBRT</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">sterotactic body radiation therapy</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009092"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A method of external beam radiotherapy (EBRT) that accurately delivers a high irradiation dose to an extracranial target in one or few treatment fractions</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:24052011</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009092"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>SBRT</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/maxo#ABBREVIATION"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009093 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009093">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009088"/>
+        <obo:IAO_0000115>A type of sterotactic radiosurgery that uses prroton beams.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-20T19:49:50Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>Proton beam radiosurgery</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">sterotactic radiosurgery using proton beam therapy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0009095 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009095">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000864"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27363"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zinc therapy</rdfs:label>
     </owl:Class>
     
 
