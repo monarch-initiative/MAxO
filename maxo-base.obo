@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2022-06-01/maxo-base.owl
+data-version: maxo/releases/2022-06-22/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
@@ -7,7 +7,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2022-06-01" xsd:string
+property_value: owl:versionInfo "2022-06-22" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -4658,14 +4658,13 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000429
 name: external beam radiation therapy
-def: "Radiation therapy in which high-energy beams are delivered to the tumor from outside of the body." [NCIT:C15751]
+def: "Radiation therapy in which high-energy beams are delivered to a body part and/or tumor from outside of the body." []
 synonym: "EBRT" EXACT ABBREVIATION []
 synonym: "external beam radiotherapeutics" EXACT []
 synonym: "external beam radiotherapy" EXACT []
 synonym: "external beam RT" EXACT ABBREVIATION []
 synonym: "External radiation therapy" NARROW []
 synonym: "external-beam radiation" EXACT []
-xref: NCIT:C15751
 is_a: MAXO:0000014 ! radiation therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-04-26T19:28:21Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -5498,6 +5497,7 @@ id: MAXO:0000504
 name: tracheostomy
 def: "Surgical formation of an opening into the trachea through the neck, or the opening so created." [MeSH:D014139]
 comment: Tracheostomy and tracheotomy are sometimes used interchangeably, but tracheotomy is simply a surgical incision of the trachea. {xref="MeSH:D014140"}
+synonym: "surgical lip repair" EXACT []
 is_a: MAXO:0000004 ! surgical procedure
 is_a: MAXO:0000500 ! airway management
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-23T16:48:07Z xsd:dateTime
@@ -13478,6 +13478,214 @@ name: fat soluble vitamin measurement
 def: "The determination of the type and/or amount of fat-soluble vitamins in a sample." []
 is_a: MAXO:0009069 ! vitamin measurement
 property_value: http://purl.org/dc/elements/1.1/date 2022-05-06T16:35:37Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009072
+name: surgical repair
+def: "Surgeical procedure to restore or replace physical defects of form or function. Physical defects could be a consequence of birth defects, trauma, or medical conditions." []
+synonym: "surgery to repair" EXACT []
+synonym: "surgical reconstruction" NARROW []
+is_a: MAXO:0000004 ! surgical procedure
+property_value: http://purl.org/dc/elements/1.1/date 2022-06-02T17:19:14Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009073
+name: cosmetic plastic surgery
+def: "Elective surgeries to improve or correct patients body imperfections or appearance. These surgeries can address imperfections due to preference, congenital, acquired, illness, or traumatic or para-physiological events such as aging." [PMID:28194357]
+is_a: MAXO:0009077 ! plastic surgery
+property_value: http://purl.org/dc/elements/1.1/date 2022-06-13T16:08:56Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009074
+name: breast augmentation surgery
+synonym: "A procedure for increasing the size of the breast using a prosthetic implant." EXACT []
+synonym: "augmentation mammoplasty" EXACT []
+synonym: "breast implantation surgery" EXACT []
+is_a: MAXO:0009073 ! cosmetic plastic surgery
+property_value: http://purl.org/dc/elements/1.1/date 2022-06-13T16:53:05Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009075
+name: abdominoplasty
+def: "A surgical procedure to remove excess skin and fat from the abdomen." [NCIT:C158024]
+synonym: "tummy tuck" EXACT []
+is_a: MAXO:0009073 ! cosmetic plastic surgery
+property_value: http://purl.org/dc/elements/1.1/date 2022-06-13T17:23:10Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009076
+name: reconstructive plastic surgery
+def: "A medically necessary surgery performed to restore function and conventional appearance of the body part. The surgery can correct deformities created by birth defects, trauma or medical conditions and is performed by a plastic surgeon." []
+is_a: MAXO:0009072 ! surgical repair
+is_a: MAXO:0009077 ! plastic surgery
+property_value: http://purl.org/dc/elements/1.1/date 2022-06-13T20:16:10Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009077
+name: plastic surgery
+def: "A surgical procedure that is performed for therapeutic or cosmetic reformation of tissue." []
+is_a: MAXO:0000004 ! surgical procedure
+property_value: http://purl.org/dc/elements/1.1/date 2022-06-13T20:26:49Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009078
+name: cheiloplasty
+def: "A procedure for surgical lip restoration, like cleft lip." []
+is_a: MAXO:0009076 ! reconstructive plastic surgery
+property_value: http://purl.org/dc/elements/1.1/date 2022-06-15T17:44:45Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009079
+name: palatorrhaphy
+def: "The surgical repair of a cleft palate by approximation of the intact tissues surrounding the defect." [NCIT:C168380]
+synonym: "cleft palate repair" EXACT []
+is_a: MAXO:0009076 ! reconstructive plastic surgery
+property_value: http://purl.org/dc/elements/1.1/date 2022-06-15T17:44:59Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009080
+name: mammoplasty
+def: "Surgery to rebuild the shape of the breast after a mastectomy." [NCIT:C15354]
+synonym: "breast reconstruction surgery" EXACT []
+is_a: MAXO:0009076 ! reconstructive plastic surgery
+property_value: http://purl.org/dc/elements/1.1/date 2022-06-15T17:45:14Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009081
+name: reconstructive burn surgery
+def: "Surgery using incisional, excisional, or use of local/regional flaps to repair burned areas." [PMID:15284153]
+synonym: "burn reconstructive surgery" EXACT []
+is_a: MAXO:0009076 ! reconstructive plastic surgery
+property_value: http://purl.org/dc/elements/1.1/date 2022-06-15T17:47:00Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009082
+name: arthroplasty
+def: "Surgical reconstruction or replacement of all or part of a malformed, diseased, degenerated, or otherwise damaged joint." [NCIT:C51691]
+synonym: "joint repair surgery" EXACT []
+is_a: MAXO:0009072 ! surgical repair
+property_value: http://purl.org/dc/elements/1.1/date 2022-06-15T17:47:14Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009083
+name: knee arthroplasty
+def: "Surgical reconstruction or replacement of all or part of a malformed, diseased, degenerated, or otherwise damaged knee joint." []
+synonym: "arthroplasty of knee" EXACT []
+synonym: "knee repair surgery" EXACT []
+is_a: MAXO:0009082 ! arthroplasty
+property_value: http://purl.org/dc/elements/1.1/date 2022-06-15T17:47:24Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009084
+name: hip arthroplasty
+def: "Surgical reconstruction or replacement of all or part of a malformed, diseased, degenerated, or otherwise damaged hip joint." []
+synonym: "arthroplasty of hip joint" EXACT []
+synonym: "hip joint repair" EXACT []
+is_a: MAXO:0009082 ! arthroplasty
+property_value: http://purl.org/dc/elements/1.1/date 2022-06-15T17:47:36Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009085
+name: knee replacement surgery
+def: "Surgical replacement of part or all of a damaged knee joint with an artificial joint." []
+is_a: MAXO:0009083 ! knee arthroplasty
+property_value: http://purl.org/dc/elements/1.1/date 2022-06-15T18:05:58Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009086
+name: total knee replacement surgery
+def: "Surgical replacement of all parts of a damaged knee joint with an artificial joint." [NCIT:C51565]
+is_a: MAXO:0009085 ! knee replacement surgery
+property_value: http://purl.org/dc/elements/1.1/date 2022-06-15T18:06:11Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009087
+name: repair of knee ligament
+synonym: "knee joint ligament repair" EXACT []
+synonym: "repair of ligament of knee joint" EXACT []
+is_a: MAXO:0009083 ! knee arthroplasty
+property_value: http://purl.org/dc/elements/1.1/date 2022-06-15T18:16:25Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009088
+name: stereotactic radiosurgery
+def: "A procedure that delivers a single, highly concentrated dose of ionizing radiation from an external source to a small, precise target using 3-D computerized imaging to focus beams. There is no incision, but this technique distorts and destroys the DNA of tumor cells in a highly directed fashion." [https://www.aans.org/en/Patients/Neurosurgical-Conditions-and-Treatments/Stereotactic-Radiosurgery]
+synonym: "SRS" EXACT [http://purl.obolibrary.org/obo/maxo#ABBREVIATION]
+is_a: MAXO:0000429 ! external beam radiation therapy
+property_value: http://purl.org/dc/elements/1.1/date 2022-06-17T19:33:11Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009089
+name: sterotactic radiosurgery using Gamma Knife
+def: "A type of stereotactic surgery that uses specialized equipment to focus approximately 200 beams of radiation on a tumor or other target with submillimeter accuracy." []
+synonym: "Gamma Knife surgery" EXACT []
+is_a: MAXO:0009088 ! stereotactic radiosurgery
+property_value: http://purl.org/dc/elements/1.1/date 2022-06-17T20:36:46Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009090
+name: sterotactic radiosurgery using Linear Accelerator
+def: "A type of sterotactic radiosurgery using photons to treat cancerous and noncancerous abnormalities via a linear accelerator (LINAC) machine." []
+synonym: "sterotactic radiosurgery using LINAC" EXACT []
+is_a: MAXO:0009088 ! stereotactic radiosurgery
+property_value: http://purl.org/dc/elements/1.1/date 2022-06-17T20:43:21Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009091
+name: sterotactic radiation therapy
+def: "External radiation therapy that is directed at a specific body part/tumor over a fractionated treatment schedule." []
+synonym: "SRT" EXACT [http://purl.obolibrary.org/obo/maxo#ABBREVIATION]
+is_a: MAXO:0000429 ! external beam radiation therapy
+property_value: http://purl.org/dc/elements/1.1/date 2022-06-17T20:48:57Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009092
+name: sterotactic body radiation therapy
+def: "A method of external beam radiotherapy (EBRT) that accurately delivers a high irradiation dose to an extracranial target in one or few treatment fractions" [PMID:24052011]
+synonym: "SBRT" EXACT ABBREVIATION []
+is_a: MAXO:0000429 ! external beam radiation therapy
+property_value: http://purl.org/dc/elements/1.1/date 2022-06-20T18:56:35Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009093
+name: sterotactic radiosurgery using proton beam therapy
+def: "A type of sterotactic radiosurgery that uses prroton beams." []
+synonym: "Proton beam radiosurgery" EXACT []
+is_a: MAXO:0009088 ! stereotactic radiosurgery
+property_value: http://purl.org/dc/elements/1.1/date 2022-06-20T19:49:50Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009095
+name: zinc therapy
+def: "Treatment with zinc (typically a zinc salt, like zinc acetate or zinc sulfate) with an expected therapeutic benefit." []
+comment: Zinc therapy can induce metallothionein
+synonym: "zinc treatment" EXACT []
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: MAXO:0000864 CHEBI:27363 ! therapeutic uses
+property_value: http://purl.org/dc/elements/1.1/date 2022-06-22T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
