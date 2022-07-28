@@ -68,3 +68,13 @@ merge: tmp/merge_def.owl
 replace:
 	make unmerge
 	make merge
+
+MERGE_TEMPLATE=tmp/merge_template.tsv
+TEMPLATE_URL=NO_TEMPLATE_URL_PROVIDED
+
+tmp/merge_template.tsv:
+	wget "$(TEMPLATE_URL)" -O $@
+
+merge_template: $(MERGE_TEMPLATE)
+	$(ROBOT) template --merge-before --input $(SRC) \
+ --template $(MERGE_TEMPLATE) convert -f ofn -o $(SRC)
