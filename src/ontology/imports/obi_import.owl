@@ -11,9 +11,9 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/imports/obi_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2022-06-23/imports/obi_import.owl"/>
-        <dc:source rdf:resource="http://purl.obolibrary.org/obo/obi/2022-01-03/obi.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-06-23</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2022-08-18/imports/obi_import.owl"/>
+        <dc:source rdf:resource="http://purl.obolibrary.org/obo/obi/2022-07-11/obi.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-08-18</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1423,6 +1423,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
         <obo:BFO_0000179>material</obo:BFO_0000179>
         <obo:BFO_0000180>MaterialEntity</obo:BFO_0000180>
+        <obo:IAO_0000111>material entity</obo:IAO_0000111>
         <obo:IAO_0000111 xml:lang="en">material entity</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">a flame</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">a forest fire</obo:IAO_0000112>
@@ -1441,6 +1442,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <obo:IAO_0000116 xml:lang="en">BFO 2 Reference: Object, Fiat Object Part and Object Aggregate are not intended to be exhaustive of Material Entity. Users are invited to propose new subcategories of Material Entity.</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">BFO 2 Reference: ‘Matter’ is intended to encompass both mass and energy (we will address the ontological treatment of portions of energy in a later version of BFO). A portion of matter is anything that includes elementary particles among its proper or improper parts: quarks and leptons, including electrons, as the smallest particles thus far discovered; baryons (including protons and neutrons) at a higher level of granularity; atoms and molecules at still higher levels, forming the cells, organs, organisms and other material entities studied by biologists, the portions of rock studied by geologists, the fossils studied by paleontologists, and so on.Material entities are three-dimensional entities (entities extended in three spatial dimensions), as contrasted with the processes in which they participate, which are four-dimensional entities (entities extended also along the dimension of time).According to the FMA, material entities may have immaterial entities as parts – including the entities identified below as sites; for example the interior (or ‘lumen’) of your small intestine is a part of your body. BFO 2.0 embodies a decision to follow the FMA here.</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ido.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uberon.owl"/>
         <obo:IAO_0000600 xml:lang="en">A material entity is an independent continuant that has some portion of matter as proper or improper continuant part. (axiom label in BFO2 Reference: [019-002])</obo:IAO_0000600>
         <obo:IAO_0000601 xml:lang="en">Every entity which has a material entity as continuant part is a material entity. (axiom label in BFO2 Reference: [020-002])</obo:IAO_0000601>
         <obo:IAO_0000601 xml:lang="en">every entity of which a material entity is continuant part is also a material entity. (axiom label in BFO2 Reference: [021-002])</obo:IAO_0000601>
@@ -1448,6 +1450,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <obo:IAO_0000602>(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt x y t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [021-002] </obo:IAO_0000602>
         <obo:IAO_0000602>(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt y x t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [020-002] </obo:IAO_0000602>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label>material entity</rdfs:label>
         <rdfs:label xml:lang="en">material entity</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -2825,6 +2828,7 @@ something taken from study subject, leaves the study and becomes the specimen.</
 specimen can later be subject.</obo:IAO_0000116>
         <obo:IAO_0000117>GROUP:  Role Branch</obo:IAO_0000117>
         <obo:IAO_0000119>OBI</obo:IAO_0000119>
+        <obo:IAO_0000233 rdf:resource="https://github.com/obi-ontology/obi/issues/1013"/>
         <rdfs:label xml:lang="en">specimen role</rdfs:label>
     </owl:Class>
     
@@ -4556,25 +4560,21 @@ In regard to the statement that reagents are &apos;distinct&apos; from the speci
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100051"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
-                                <owl:someValuesFrom>
-                                    <owl:Class>
-                                        <owl:intersectionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002600"/>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
-                                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000310"/>
-                                            </owl:Restriction>
-                                        </owl:intersectionOf>
-                                    </owl:Class>
-                                </owl:someValuesFrom>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100051"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002600"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000310"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -4595,25 +4595,21 @@ In regard to the statement that reagents are &apos;distinct&apos; from the speci
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100051"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
-                                <owl:someValuesFrom>
-                                    <owl:Class>
-                                        <owl:intersectionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002600"/>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
-                                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001728"/>
-                                            </owl:Restriction>
-                                        </owl:intersectionOf>
-                                    </owl:Class>
-                                </owl:someValuesFrom>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100051"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002600"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001728"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -4634,25 +4630,21 @@ In regard to the statement that reagents are &apos;distinct&apos; from the speci
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100051"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
-                                <owl:someValuesFrom>
-                                    <owl:Class>
-                                        <owl:intersectionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002600"/>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
-                                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000165"/>
-                                            </owl:Restriction>
-                                        </owl:intersectionOf>
-                                    </owl:Class>
-                                </owl:someValuesFrom>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100051"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002600"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000165"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -4673,25 +4665,21 @@ In regard to the statement that reagents are &apos;distinct&apos; from the speci
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100051"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
-                                <owl:someValuesFrom>
-                                    <owl:Class>
-                                        <owl:intersectionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002600"/>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
-                                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001729"/>
-                                            </owl:Restriction>
-                                        </owl:intersectionOf>
-                                    </owl:Class>
-                                </owl:someValuesFrom>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100051"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002600"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001729"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -4712,25 +4700,21 @@ In regard to the statement that reagents are &apos;distinct&apos; from the speci
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100051"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
-                                <owl:someValuesFrom>
-                                    <owl:Class>
-                                        <owl:intersectionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002600"/>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
-                                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001052"/>
-                                            </owl:Restriction>
-                                        </owl:intersectionOf>
-                                    </owl:Class>
-                                </owl:someValuesFrom>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100051"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002600"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001052"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -4751,25 +4735,21 @@ In regard to the statement that reagents are &apos;distinct&apos; from the speci
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100051"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
-                                <owl:someValuesFrom>
-                                    <owl:Class>
-                                        <owl:intersectionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002600"/>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
-                                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001723"/>
-                                            </owl:Restriction>
-                                        </owl:intersectionOf>
-                                    </owl:Class>
-                                </owl:someValuesFrom>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100051"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002600"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001723"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -4790,25 +4770,21 @@ In regard to the statement that reagents are &apos;distinct&apos; from the speci
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100051"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
-                                <owl:someValuesFrom>
-                                    <owl:Class>
-                                        <owl:intersectionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002600"/>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
-                                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000996"/>
-                                            </owl:Restriction>
-                                        </owl:intersectionOf>
-                                    </owl:Class>
-                                </owl:someValuesFrom>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100051"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002600"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000996"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -4994,25 +4970,21 @@ In regard to the statement that reagents are &apos;distinct&apos; from the speci
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100051"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
-                                <owl:someValuesFrom>
-                                    <owl:Class>
-                                        <owl:intersectionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002600"/>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
-                                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001558"/>
-                                            </owl:Restriction>
-                                        </owl:intersectionOf>
-                                    </owl:Class>
-                                </owl:someValuesFrom>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100051"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002600"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001558"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -5034,25 +5006,21 @@ In regard to the statement that reagents are &apos;distinct&apos; from the speci
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100051"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
-                                <owl:someValuesFrom>
-                                    <owl:Class>
-                                        <owl:intersectionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002600"/>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
-                                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001557"/>
-                                            </owl:Restriction>
-                                        </owl:intersectionOf>
-                                    </owl:Class>
-                                </owl:someValuesFrom>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100051"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002600"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001557"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -5073,25 +5041,21 @@ In regard to the statement that reagents are &apos;distinct&apos; from the speci
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100051"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
-                                <owl:someValuesFrom>
-                                    <owl:Class>
-                                        <owl:intersectionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002600"/>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
-                                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001558"/>
-                                            </owl:Restriction>
-                                        </owl:intersectionOf>
-                                    </owl:Class>
-                                </owl:someValuesFrom>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100051"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002600"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001558"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -5191,6 +5155,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
         <obo:IAO_0000117>PERSON: James Malone</obo:IAO_0000117>
         <obo:IAO_0000117>PERSON: Philippe Rocca-Serra</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">GROUP: OBI Biomaterial Branch</obo:IAO_0000119>
+        <obo:IAO_0000233 rdf:resource="https://github.com/obi-ontology/obi/issues/1013"/>
         <rdfs:label xml:lang="en">specimen</rdfs:label>
     </owl:Class>
     
@@ -5886,7 +5851,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000057">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000465"/>
         <obo:IAO_0000111>urethra</obo:IAO_0000111>
-        <obo:IAO_0000115>the fibromuscular tubular canal through which urine is discharged from the bladder to the exterior via the external urinary meatus; in males, the urethra is joined by the ejaculatory ducts and serves as a passageway for semen during ejaculation, as well as a canal for urine during voiding; in females, the urethra is shorter and emerges above the vaginal opening</obo:IAO_0000115>
+        <obo:IAO_0000115>The fibromuscular tubular canal through which urine is discharged from the bladder to the exterior via the external urinary meatus; in males, the urethra is joined by the ejaculatory ducts and serves as a passageway for semen during ejaculation, as well as a canal for urine during voiding; in females, the urethra is shorter and emerges above the vaginal opening.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uberon.owl"/>
         <rdfs:label>urethra</rdfs:label>
     </owl:Class>
@@ -6042,7 +6007,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000947">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000465"/>
         <obo:IAO_0000111>aorta</obo:IAO_0000111>
-        <obo:IAO_0000115>The main trunk of the systemic arterial system that carries blood from the heart to all the organs and other structures of the body, bringing oxygenated blood to all parts of the body in the systemic circulation</obo:IAO_0000115>
+        <obo:IAO_0000115>The main trunk of the systemic arterial system that carries blood from the heart to all the organs and other structures of the body, bringing oxygenated blood to all parts of the body in the systemic circulation.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uberon.owl"/>
         <rdfs:label>aorta</rdfs:label>
     </owl:Class>
@@ -6102,7 +6067,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000992">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000465"/>
         <obo:IAO_0000111>ovary</obo:IAO_0000111>
-        <obo:IAO_0000115>the gonad of a female organism which contains germ cells</obo:IAO_0000115>
+        <obo:IAO_0000115>The gonad of a female organism which contains germ cells.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uberon.owl"/>
         <rdfs:label>ovary</rdfs:label>
     </owl:Class>
@@ -6114,7 +6079,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000995">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000465"/>
         <obo:IAO_0000111>uterus</obo:IAO_0000111>
-        <obo:IAO_0000115>the female muscular organ of gestation in which the developing embryo or fetus is nourished until birth</obo:IAO_0000115>
+        <obo:IAO_0000115>The female muscular organ of gestation in which the developing embryo or fetus is nourished until birth.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uberon.owl"/>
         <rdfs:label>uterus</rdfs:label>
     </owl:Class>
@@ -6138,7 +6103,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001013">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000479"/>
         <obo:IAO_0000111>adipose tissue</obo:IAO_0000111>
-        <obo:IAO_0000115>Portion of connective tissue composed of adipocytes enmeshed in areolar tissue</obo:IAO_0000115>
+        <obo:IAO_0000115>Portion of connective tissue composed of adipocytes enmeshed in areolar tissue.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uberon.owl"/>
         <rdfs:label>adipose tissue</rdfs:label>
     </owl:Class>
@@ -6150,7 +6115,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001052">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000465"/>
         <obo:IAO_0000111>rectum</obo:IAO_0000111>
-        <obo:IAO_0000115>the terminal portion of the intestinal tube, terminating with the anus</obo:IAO_0000115>
+        <obo:IAO_0000115>The terminal portion of the intestinal tube, terminating with the anus.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uberon.owl"/>
         <rdfs:label>rectum</rdfs:label>
     </owl:Class>
@@ -6162,7 +6127,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001088">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000463"/>
         <obo:IAO_0000111>urine</obo:IAO_0000111>
-        <obo:IAO_0000115>Excretion that is the output of a kidney</obo:IAO_0000115>
+        <obo:IAO_0000115>Excretion that is the output of a kidney.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uberon.owl"/>
         <rdfs:label>urine</rdfs:label>
     </owl:Class>
@@ -6174,7 +6139,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001155">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000465"/>
         <obo:IAO_0000111>colon</obo:IAO_0000111>
-        <obo:IAO_0000115>Last portion of the large intestine before it becomes the rectum.</obo:IAO_0000115>
+        <obo:IAO_0000115>A portion of the large intestine before it becomes the rectum. In mammals, the colon is the most part of the large intestine, excluding the vermiform appendix, the rectum and the anal canal.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uberon.owl"/>
         <rdfs:label>colon</rdfs:label>
     </owl:Class>
@@ -6198,7 +6163,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001255">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000465"/>
         <obo:IAO_0000111>urinary bladder</obo:IAO_0000111>
-        <obo:IAO_0000115>distensible musculomembranous organ situated in the anterior part of the pelvic cavity in which urine collects before excretion[MP].</obo:IAO_0000115>
+        <obo:IAO_0000115>Distensible musculomembranous organ situated in the anterior part of the pelvic cavity in which urine collects before excretion[MP].</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uberon.owl"/>
         <rdfs:label>urinary bladder</rdfs:label>
     </owl:Class>
@@ -6246,7 +6211,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001558">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000465"/>
         <obo:IAO_0000111>lower respiratory tract</obo:IAO_0000111>
-        <obo:IAO_0000115>The segment of the respiratory tract that starts proximally with the trachea and includes all distal structures including the lungs[WP,modified]</obo:IAO_0000115>
+        <obo:IAO_0000115>The segment of the respiratory tract that starts proximally with the trachea and includes all distal structures including the lungs[WP,modified].</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uberon.owl"/>
         <rdfs:label>lower respiratory tract</rdfs:label>
     </owl:Class>
@@ -6270,7 +6235,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001728">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000465"/>
         <obo:IAO_0000111>nasopharynx</obo:IAO_0000111>
-        <obo:IAO_0000115>the section of the pharynx that lies above the soft palate</obo:IAO_0000115>
+        <obo:IAO_0000115>The section of the pharynx that lies above the soft palate.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uberon.owl"/>
         <rdfs:label>nasopharynx</rdfs:label>
     </owl:Class>
@@ -6282,7 +6247,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001729">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000465"/>
         <obo:IAO_0000111>oropharynx</obo:IAO_0000111>
-        <obo:IAO_0000115>the portion of the pharynx that lies between the soft palate and the upper edge of the epiglottis</obo:IAO_0000115>
+        <obo:IAO_0000115>The portion of the pharynx that lies between the soft palate and the upper edge of the epiglottis.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uberon.owl"/>
         <rdfs:label>oropharynx</rdfs:label>
     </owl:Class>
@@ -6294,7 +6259,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001797">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000463"/>
         <obo:IAO_0000111>vitreous humor</obo:IAO_0000111>
-        <obo:IAO_0000115>A transparent, semigelatinous substance that fills the cavity behind the crystalline lens of the eye and in front of the retina</obo:IAO_0000115>
+        <obo:IAO_0000115>A transparent, semigelatinous substance that fills the cavity behind the crystalline lens of the eye and in front of the retina.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uberon.owl"/>
         <rdfs:label>vitreous humor</rdfs:label>
     </owl:Class>
@@ -6318,7 +6283,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001970">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0006314"/>
         <obo:IAO_0000111>bile</obo:IAO_0000111>
-        <obo:IAO_0000115>vital aqueous secretion of the liver that is formed by hepatocytes and modified down stream by absorptive and secretory properties of the bile duct epithelium.</obo:IAO_0000115>
+        <obo:IAO_0000115>Vital aqueous secretion of the liver that is formed by hepatocytes and modified down stream by absorptive and secretory properties of the bile duct epithelium.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uberon.owl"/>
         <rdfs:label>bile</rdfs:label>
     </owl:Class>
@@ -6378,7 +6343,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002106">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000465"/>
         <obo:IAO_0000111>spleen</obo:IAO_0000111>
-        <obo:IAO_0000115>the organ that functions to filter blood and to store red corpuscles and platelets</obo:IAO_0000115>
+        <obo:IAO_0000115>The organ that functions to filter blood and to store red corpuscles and platelets.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uberon.owl"/>
         <rdfs:label>spleen</rdfs:label>
     </owl:Class>
@@ -6438,7 +6403,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002371">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000479"/>
         <obo:IAO_0000111>bone marrow</obo:IAO_0000111>
-        <obo:IAO_0000115>the soft tissue that fills the cavities of bones</obo:IAO_0000115>
+        <obo:IAO_0000115>The soft tissue that fills the cavities of bones.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uberon.owl"/>
         <rdfs:label>bone marrow</rdfs:label>
     </owl:Class>
@@ -6508,11 +6473,23 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <!-- http://purl.obolibrary.org/obo/UBERON_0012168 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0012168">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000178"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0013755"/>
         <obo:IAO_0000111>umbilical cord blood</obo:IAO_0000111>
-        <obo:IAO_0000115>blood that remains in the placenta and in the attached umbilical cord after childbirth[WP].</obo:IAO_0000115>
+        <obo:IAO_0000115>Blood that remains in the placenta and in the attached umbilical cord after childbirth[WP].</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uberon.owl"/>
         <rdfs:label>umbilical cord blood</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0013755 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0013755">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000178"/>
+        <obo:IAO_0000111>arterial blood</obo:IAO_0000111>
+        <obo:IAO_0000115>A blood that is part of a artery.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uberon.owl"/>
+        <rdfs:label>arterial blood</rdfs:label>
     </owl:Class>
     
 
@@ -7493,8 +7470,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OBI_0001213">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0000835"/>
         <obo:IAO_0000111>eBioscience</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115>A supplier of flow cytometry analyzers</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000117>Karin Breuer</obo:IAO_0000117>
         <obo:IAO_0000119>WEB:http://www.ebioscience.com/@2011/04/11</obo:IAO_0000119>
         <rdfs:label>eBioscience</rdfs:label>
@@ -7507,8 +7483,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OBI_0001224">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0000835"/>
         <obo:IAO_0000111>Cytopeia</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115>A supplier of flow cytometry analyzers</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000117>Karin Breuer</obo:IAO_0000117>
         <obo:IAO_0000119>WEB:http://www.cytopeia.com/@2011/04/11</obo:IAO_0000119>
         <rdfs:label>Cytopeia</rdfs:label>
@@ -7521,8 +7496,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OBI_0001287">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0000835"/>
         <obo:IAO_0000111>Exalpha Biological</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115>A supplier of flow cytometry analyzers</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000117>Karin Breuer</obo:IAO_0000117>
         <obo:IAO_0000119>WEB:http://www.exalpha.com/@2011/04/11</obo:IAO_0000119>
         <rdfs:label>Exalpha Biological</rdfs:label>
@@ -7535,8 +7509,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OBI_0001312">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0000835"/>
         <obo:IAO_0000111>Apogee Flow Systems</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115>A supplier of flow cytometry analyzers</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000117>Karin Breuer</obo:IAO_0000117>
         <obo:IAO_0000119>WEB:http://www.apogeeflow.com/@2011/04/11</obo:IAO_0000119>
         <rdfs:label>Apogee Flow Systems</rdfs:label>
@@ -7549,8 +7522,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OBI_0001320">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0000835"/>
         <obo:IAO_0000111>Exbio Antibodies</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115>A supplier of flow cytometry analyzers</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000117>Karin Breuer</obo:IAO_0000117>
         <obo:IAO_0000119>WEB:http://www.exbio.cz/@2011/04/11</obo:IAO_0000119>
         <rdfs:label>Exbio Antibodies</rdfs:label>
@@ -7563,8 +7535,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OBI_0001321">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0000835"/>
         <obo:IAO_0000111>Becton Dickinson (BD Biosciences)</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115>A supplier of flow cytometry analyzers</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000117>Karin Breuer</obo:IAO_0000117>
         <obo:IAO_0000119>WEB:http://www.bdbiosciences.com/@2011/04/11</obo:IAO_0000119>
         <rdfs:label>Becton Dickinson (BD Biosciences)</rdfs:label>
@@ -7577,8 +7548,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OBI_0001338">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0000835"/>
         <obo:IAO_0000111>Dako Cytomation</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115>A supplier of flow cytometry analyzers</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000117>Karin Breuer</obo:IAO_0000117>
         <obo:IAO_0000119>WEB:http://www.dakousa.com/@2011/04/11</obo:IAO_0000119>
         <rdfs:label>Dako Cytomation</rdfs:label>
@@ -7591,8 +7561,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OBI_0001340">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0000835"/>
         <obo:IAO_0000111>Millipore</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115>A supplier of flow cytometry analyzers</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000117>Karin Breuer</obo:IAO_0000117>
         <obo:IAO_0000119>WEB:http://www.guavatechnologies.com/@2011/04/11</obo:IAO_0000119>
         <rdfs:label>Millipore</rdfs:label>
@@ -7605,8 +7574,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OBI_0001347">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0000835"/>
         <obo:IAO_0000111>Antigenix</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115>A supplier of flow cytometry analyzers</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000117>Karin Breuer</obo:IAO_0000117>
         <obo:IAO_0000119>WEB:http://www.antigenix.com/@2011/04/11</obo:IAO_0000119>
         <rdfs:label>Antigenix</rdfs:label>
@@ -7619,8 +7587,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OBI_0001355">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0000835"/>
         <obo:IAO_0000111>Partec</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115>A supplier of flow cytometry analyzers</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000117>Karin Breuer</obo:IAO_0000117>
         <obo:IAO_0000119>WEB:http://www.partec.de/@2011/04/11</obo:IAO_0000119>
         <rdfs:label>Partec</rdfs:label>
@@ -7633,8 +7600,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OBI_0001372">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0000835"/>
         <obo:IAO_0000111>Beckman Coulter</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115>A supplier of flow cytometry analyzers</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000117>Karin Breuer</obo:IAO_0000117>
         <obo:IAO_0000119>WEB:http://www.beckmancoulter.com/@2011/04/11</obo:IAO_0000119>
         <rdfs:label>Beckman Coulter</rdfs:label>
@@ -7647,8 +7613,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OBI_0001375">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0000835"/>
         <obo:IAO_0000111>Advanced Instruments Inc. (AI Companies)</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115>A supplier of flow cytometry analyzers</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000117>Karin Breuer</obo:IAO_0000117>
         <obo:IAO_0000119>WEB:http://www.aicompanies.com/@2011/04/11</obo:IAO_0000119>
         <rdfs:label>Advanced Instruments Inc. (AI Companies)</rdfs:label>
@@ -7661,8 +7626,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OBI_0001424">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0000835"/>
         <obo:IAO_0000111>Miltenyi Biotec</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115>A supplier of flow cytometry analyzers</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000117>Karin Breuer</obo:IAO_0000117>
         <obo:IAO_0000119>WEB:http://www.miltenyibiotec.com/@2011/04/11</obo:IAO_0000119>
         <rdfs:label>Miltenyi Biotec</rdfs:label>
@@ -7675,8 +7639,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OBI_0001428">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0000835"/>
         <obo:IAO_0000111>AES Chemunex</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115>A supplier of flow cytometry analyzers</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000117>Karin Breuer</obo:IAO_0000117>
         <obo:IAO_0000119>WEB:http://www.aeschemunex.com/@2011/04/11</obo:IAO_0000119>
         <rdfs:label>AES Chemunex</rdfs:label>
@@ -7689,8 +7652,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OBI_0001431">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0000835"/>
         <obo:IAO_0000111>Bentley Instruments</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115>A supplier of flow cytometry analyzers</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000117>Karin Breuer</obo:IAO_0000117>
         <obo:IAO_0000119>WEB:http://bentleyinstruments.com/@2011/04/11</obo:IAO_0000119>
         <rdfs:label>Bentley Instruments</rdfs:label>
@@ -7703,8 +7665,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OBI_0001434">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0000835"/>
         <obo:IAO_0000111>Invitrogen</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115>A supplier of flow cytometry analyzers</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000117>Karin Breuer</obo:IAO_0000117>
         <obo:IAO_0000119>WEB:http://www.invitrogen.com/@2011/04/11</obo:IAO_0000119>
         <rdfs:label>Invitrogen</rdfs:label>
@@ -7717,8 +7678,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OBI_0001443">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0000835"/>
         <obo:IAO_0000111>Luminex</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115>A supplier of flow cytometry analyzers</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000117>Karin Breuer</obo:IAO_0000117>
         <obo:IAO_0000119>WEB:http://www.luminexcorp.com/@2011/04/11</obo:IAO_0000119>
         <rdfs:label>Luminex</rdfs:label>
@@ -7731,8 +7691,7 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OBI_0001458">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0000835"/>
         <obo:IAO_0000111>CytoBuoy</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115>A supplier of flow cytometry analyzers</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000117>Karin Breuer</obo:IAO_0000117>
         <obo:IAO_0000119>WEB:http://www.cytobuoy.com/@2011/04/11</obo:IAO_0000119>
         <rdfs:label>CytoBuoy</rdfs:label>

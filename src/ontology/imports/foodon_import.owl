@@ -13,9 +13,9 @@
      xmlns:schema="http://schema.org/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/imports/foodon_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2022-06-23/imports/foodon_import.owl"/>
-        <dc:source rdf:resource="http://purl.obolibrary.org/obo/foodon/releases/2022-02-01/foodon.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-06-23</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2022-08-18/imports/foodon_import.owl"/>
+        <dc:source rdf:resource="http://purl.obolibrary.org/obo/foodon/releases/2022-08-12/foodon.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-08-18</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -353,10 +353,6 @@
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
-        <rdfs:label>part of</rdfs:label>
-        <rdfs:label xml:lang="en">part of</rdfs:label>
-        <rdfs:label>part_of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -369,6 +365,7 @@
         <obo:IAO_0000115 xml:lang="en">a core relation that holds between a whole and its part</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
+        <rdfs:label>has part</rdfs:label>
         <rdfs:label xml:lang="en">has part</rdfs:label>
         <rdfs:label>has_part</rdfs:label>
     </owl:ObjectProperty>
@@ -405,6 +402,18 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000136">
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115 xml:lang="en">A (currently) primitive relation that relates an information artifact to an entity.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">Smith, Ceusters, Ruttenberg, 2000 years of philosophy</obo:IAO_0000119>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+        <rdfs:label xml:lang="en">is about</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBI_0000293 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000293">
@@ -437,6 +446,9 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000052">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <obo:IAO_0000111 xml:lang="en">inheres in</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
         <rdfs:label xml:lang="en">characteristic of</rdfs:label>
         <rdfs:label xml:lang="en">inheres in</rdfs:label>
     </owl:ObjectProperty>
@@ -449,6 +461,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <obo:IAO_0000111 xml:lang="en">participates in</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">a relation between a continuant and a process, in which the continuant is somehow involved in the process</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
         <rdfs:label xml:lang="en">participates in</rdfs:label>
         <rdfs:label>participates_in</rdfs:label>
     </owl:ObjectProperty>
@@ -470,6 +483,8 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     <!-- http://purl.obolibrary.org/obo/RO_0000086 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000086">
+        <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
         <rdfs:label xml:lang="en">has quality</rdfs:label>
     </owl:ObjectProperty>
     
@@ -488,6 +503,9 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     <!-- http://purl.obolibrary.org/obo/RO_0001000 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001000">
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115 xml:lang="en">a relation between two distinct material entities, the new entity and the old entity, in which the new entity begins to exist when the old entity ceases to exist, and the new entity inherits the significant portion of the matter of the old entity</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
         <rdfs:label xml:lang="en">derives from</rdfs:label>
     </owl:ObjectProperty>
     
@@ -497,6 +515,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002162">
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115>x is in taxon y if an only if y is an organism, and the relationship between x and y is one of: part of (reflexive), developmentally preceded by, derives from, secreted by, expressed.</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/17921072"/>
         <obo:IAO_0000119 rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/20973947"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
@@ -510,6 +529,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002202">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:label>develops from</rdfs:label>
+        <rdfs:label xml:lang="en">develops from</rdfs:label>
         <rdfs:label>develops_from</rdfs:label>
     </owl:ObjectProperty>
     
@@ -519,6 +539,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002233">
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115>p has input c iff: p is a process, c is a material entity, c is a participant in p, c is present at the start of p, and the state of c is modified during p.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
         <rdfs:label xml:lang="en">has input</rdfs:label>
     </owl:ObjectProperty>
@@ -544,7 +565,10 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     <!-- http://purl.obolibrary.org/obo/RO_0002351 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002351">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <obo:IAO_0000115>has member is a mereological relation between a collection and an item.</obo:IAO_0000115>
+        <obo:IAO_0000119>SIO</obo:IAO_0000119>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
         <rdfs:label xml:lang="en">has member</rdfs:label>
     </owl:ObjectProperty>
     
@@ -553,6 +577,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     <!-- http://purl.obolibrary.org/obo/RO_0002353 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002353">
+        <obo:IAO_0000115>inverse of has output</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
         <rdfs:label xml:lang="en">output of</rdfs:label>
     </owl:ObjectProperty>
@@ -563,6 +588,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0003001">
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115>a produced_by b iff some process that occurs_in b has_output a.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
         <rdfs:label xml:lang="en">produced by</rdfs:label>
     </owl:ObjectProperty>
@@ -574,6 +600,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0009001">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000115 xml:lang="en">&quot;has substance added&quot; is a relation existing between a (physical) entity and a substance in which the entity has had the substance added to it at some point in time.</obo:IAO_0000115>
         <obo:IAO_0000117>Damion Dooley</obo:IAO_0000117>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
         <rdfs:label xml:lang="en">has substance added</rdfs:label>
@@ -610,6 +637,8 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ecocore.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/envo.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ons.owl"/>
         <obo:IAO_0000600 xml:lang="en">An entity is anything that exists or has existed or will exist. (axiom label in BFO2 Reference: [001-001])</obo:IAO_0000600>
@@ -657,6 +686,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/dron.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/envo.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ons.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/pato.owl"/>
@@ -998,8 +1028,15 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000020">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:BFO_0000179>sdc</obo:BFO_0000179>
         <obo:BFO_0000180>SpecificallyDependentContinuant</obo:BFO_0000180>
+        <obo:IAO_0000111 xml:lang="en">specifically dependent continuant</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">Reciprocal specifically dependent continuants: the function of this key to open this lock and the mutually dependent disposition of this lock: to be opened by this key</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">of one-sided specifically dependent continuants: the mass of this tomato</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">of relational dependent continuants (multiple bearers): John’s love for Mary, the ownership relation between John and this statue, the relation of authority between John and his subordinates.</obo:IAO_0000112>
@@ -1011,9 +1048,14 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <obo:IAO_0000112 xml:lang="en">the role of being a doctor</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">the shape of this hole.</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">the smell of this portion of mozzarella</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">b is a relational specifically dependent continuant = Def. b is a specifically dependent continuant and there are n &amp;gt; 1 independent continuants c1, … cn which are not spatial regions are such that for all 1  i &amp;lt; j  n, ci  and cj share no common parts, are such that for each 1  i  n, b s-depends_on ci at every time t during the course of b’s existence (axiom label in BFO2 Reference: [131-004])</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">b is a specifically dependent continuant = Def. b is a continuant &amp; there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">Specifically dependent continuant doesn&apos;t have a closure axiom because the subclasses don&apos;t necessarily exhaust all possibilites. We&apos;re not sure what else will develop here, but for example there are questions such as what are promises, obligation, etc.</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ons.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/pato.owl"/>
+        <obo:IAO_0000602>(iff (RelationalSpecificallyDependentContinuant a) (and (SpecificallyDependentContinuant a) (forall (t) (exists (b c) (and (not (SpatialRegion b)) (not (SpatialRegion c)) (not (= b c)) (not (exists (d) (and (continuantPartOfAt d b t) (continuantPartOfAt d c t)))) (specificallyDependsOnAt a b t) (specificallyDependsOnAt a c t)))))) // axiom label in BFO2 CLIF: [131-004] </obo:IAO_0000602>
         <obo:IAO_0000602>(iff (SpecificallyDependentContinuant a) (and (Continuant a) (forall (t) (if (existsAt a t) (exists (b) (and (IndependentContinuant b) (not (SpatialRegion b)) (specificallyDependsOnAt a b t))))))) // axiom label in BFO2 CLIF: [050-003] </obo:IAO_0000602>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
         <rdfs:label xml:lang="en">specifically dependent continuant</rdfs:label>
@@ -1083,13 +1125,16 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <obo:BFO_0000179>gdc</obo:BFO_0000179>
         <obo:BFO_0000180>GenericallyDependentContinuant</obo:BFO_0000180>
+        <obo:IAO_0000111 xml:lang="en">generically dependent continuant</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">The entries in your database are patterns instantiated as quality instances in your hard drive. The database itself is an aggregate of such patterns. When you create the database you create a particular instance of the generically dependent continuant type database. Each entry in the database is an instance of the generically dependent continuant type IAO: information content entity.</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">the pdf file on your laptop, the pdf file that is a copy thereof on my laptop</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">the sequence of this protein molecule; the sequence that is a copy thereof in that protein molecule.</obo:IAO_0000112>
         <obo:IAO_0000115 xml:lang="en">A continuant that is dependent on one or other independent continuant bearers. For every instance of A requires some instance of (an independent continuant type) B but which instance of B serves can change from time to time.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">b is a generically dependent continuant = Def. b is a continuant that g-depends_on one or more other entities. (axiom label in BFO2 Reference: [074-001])</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ons.owl"/>
         <obo:IAO_0000602>(iff (GenericallyDependentContinuant a) (and (Continuant a) (exists (b t) (genericallyDependsOnAt a b t)))) // axiom label in BFO2 CLIF: [074-001] </obo:IAO_0000602>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
         <rdfs:label xml:lang="en">generically dependent continuant</rdfs:label>
@@ -1144,6 +1189,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
         <obo:BFO_0000179>material</obo:BFO_0000179>
         <obo:BFO_0000180>MaterialEntity</obo:BFO_0000180>
+        <obo:IAO_0000111>material entity</obo:IAO_0000111>
         <obo:IAO_0000111 xml:lang="en">material entity</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">a flame</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">a forest fire</obo:IAO_0000112>
@@ -1224,7 +1270,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411041"/>
         <obo:IAO_0000115 xml:lang="en">A material entity that is ingested and contributes to survival, growth and development</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
-        <rdfs:label xml:lang="en">dietary nutritional component</rdfs:label>
+        <rdfs:label xml:lang="en">dietary chemical component</rdfs:label>
     </owl:Class>
     
 
@@ -1268,7 +1314,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDNO_0000012">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_167164"/>
-        <obo:IAO_0000115 xml:lang="en">A mineral nutrient that is present in a very low concentration within the diet</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Mineral nutrient that is present in a very low concentration within the diet</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
         <oboInOwl:hasExactSynonym xml:lang="en">micromineral</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">trace element</rdfs:label>
@@ -1296,6 +1342,39 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
         <rdfs:comment xml:lang="en">This term can be assigned to CHEBI or any other ontology that claims it</rdfs:comment>
         <rdfs:label xml:lang="en">vitamin (molecular entity)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDNO_0000015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDNO_0000015">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDNO_0000011"/>
+        <obo:IAO_0000115 xml:lang="en">Calcium ingested by an organism that contributes to the survival, growth, development, or other biological function of itself, its bionts, or its holobionts</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
+        <rdfs:label xml:lang="en">dietary calcium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDNO_0000021 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDNO_0000021">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDNO_0000011"/>
+        <obo:IAO_0000115 xml:lang="en">Sulfur ingested by an organism that contributes to the survival, growth, development, or other biological function of itself, its bionts, or its holobionts</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
+        <rdfs:label xml:lang="en">dietary sulfur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDNO_0000024 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDNO_0000024">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDNO_0000012"/>
+        <obo:IAO_0000115 xml:lang="en">Fluorine ingested by an organism that contributes to the survival, growth, development, or other biological function of itself, its bionts, or its holobionts</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
+        <rdfs:label xml:lang="en">dietary fluorine</rdfs:label>
     </owl:Class>
     
 
@@ -1903,6 +1982,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>Kohlenhydrat</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>Kohlenhydrate</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>a carbohydrate</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>carbohidrato</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>carbohidratos</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>glucide</oboInOwl:hasRelatedSynonym>
@@ -2015,9 +2095,11 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_167164">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDNO_0000001"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_46662"/>
         <obo:IAO_0000115 xml:lang="en">A mineral that is an inorganic nutrient which must be ingested and absorbed in adequate amounts to satisfy a wide range of essential metabolic and/or structural functions in the human body</obo:IAO_0000115>
         <obo:IAO_0000115>A mineral that is an inorganic nutrient which must be ingested and absorbed in adequate amounts to satisfy a wide range of essential metabolic and/or structural functions in the human body.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
         <oboInOwl:hasDbXref>Wikipedia:Mineral_(nutrient)</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">essential mineral, element</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>mineral nutrient</oboInOwl:hasExactSynonym>
@@ -2048,6 +2130,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_16811">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_26834"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33261"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33704"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33709"/>
         <obo:IAO_0000115>A sulfur-containing amino acid that is butyric acid bearing an amino substituent at position 2 and a methylthio substituent at position 4.</obo:IAO_0000115>
@@ -2231,7 +2314,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     <!-- http://purl.obolibrary.org/obo/CHEBI_17051 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_17051">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDNO_0000012"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDNO_0000024"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
         <chebi:charge>-1</chebi:charge>
         <chebi:formula>F</chebi:formula>
@@ -2476,7 +2559,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_176783">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDNO_0000014"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50523"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03413764"/>
         <obo:IAO_0000115>Any member of a group of vitamers that belong to the chemical structural class called butenolides that exhibit biological activity against vitamin C deficiency in animals. The vitamers include L-ascorbic acid and its salt, ionized and oxidized forms.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
@@ -2634,16 +2716,86 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     <!-- http://purl.obolibrary.org/obo/CHEBI_17716 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_17716">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDNO_0000004"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24405"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36233"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03420108"/>
         <obo:IAO_0000115>A  glycosylglucose disaccharide, found most notably in milk, that consists of D-galactose and D-glucose fragments bonded through a beta-1-&gt;4 glycosidic linkage. The glucose fragment can be in either the alpha- or beta-pyranose form, whereas the galactose fragment can only have the beta-pyranose form.</obo:IAO_0000115>
         <obo:IAO_0000115>A glycosylglucose disaccharide, found most notably in milk, that consists of D-galactose and D-glucose fragments bonded through a beta-1-&gt;4 glycosidic linkage. The glucose fragment can be in either the alpha- or beta-pyranose form, whereas the galactose fragment can only have the beta-pyranose form.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">lactose</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <chebi:charge>0</chebi:charge>
+        <chebi:formula>C12H22O11</chebi:formula>
+        <chebi:inchi>InChI=1S/C12H22O11/c13-1-3-5(15)6(16)9(19)12(22-3)23-10-4(2-14)21-11(20)8(18)7(10)17/h3-20H,1-2H2/t3-,4-,5+,6+,7-,8-,9-,10-,11?,12+/m1/s1</chebi:inchi>
+        <chebi:inchikey>GUBGYTABKSRVRQ-QKKXKWKRSA-N</chebi:inchikey>
+        <chebi:mass>342.297</chebi:mass>
+        <chebi:monoisotopicmass>342.11621</chebi:monoisotopicmass>
+        <chebi:smiles>OC[C@H]1O[C@@H](O[C@H]2[C@H](O)[C@@H](O)C(O)O[C@@H]2CO)[C@H](O)[C@@H](O)[C@H]1O</chebi:smiles>
+        <oboInOwl:hasAlternativeId>CHEBI:10296</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>CHEBI:10380</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>CHEBI:14497</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>CHEBI:22460</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>CHEBI:22760</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>CHEBI:25005</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>CHEBI:27755</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>CHEBI:613009</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>Beilstein:1292745</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CAS:63-42-3</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GlyGen:G74621DY</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GlyTouCan:G74621DY</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Gmelin:882872</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>KEGG:C00243</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>KEGG:D00046</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>KEGG:G10504</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>KNApSAcK:C00001136</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:1292745</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:17329833</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:18300214</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:19053747</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:19846069</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:19913595</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:20094999</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:20503067</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:20699559</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:20873837</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:20961532</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:21403918</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:2432147</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:2456994</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:28690131</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:28807538</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:6194884</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:7574700</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reaxys:1292745</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=C0209</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>beta-D-galactopyranosyl-(1-&gt;4)-D-glucopyranose</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>lactose</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>(+)-lactose</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>(Gal)1 (Glc)1</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>1-beta-D-Galactopyranosyl-4-D-glucopyranose</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>4-(beta-D-galactosido)-D-glucose</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>4-O-beta-D-galactopyranosyl-D-glucose</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>D-lactose</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Galbeta1-4Glc</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Lac</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Laktobiose</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Laktose</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Milchzucker</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Milk sugar</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>WURCS=2.0/2,2,1/[a2122h-1x_1-5][a2112h-1b_1-5]/1-2/a4-b1</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>beta-D-Gal-(1-&gt;4)-D-Glc</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>beta-D-Galp-(1-&gt;4)-D-Glcp</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>beta-Gal1,4-Glc</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>lactobiose</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>milk sugar</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>CHEBI:17716</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:comment xml:lang="en">LanguaL term definition: Used when lactose or a high lactose sweetener is the major ingredient.</rdfs:comment>
         <rdfs:label>lactose</rdfs:label>
+        <rdfs:label xml:lang="en">lactose</rdfs:label>
     </owl:Class>
     
 
@@ -2861,41 +3013,29 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     <!-- http://purl.obolibrary.org/obo/CHEBI_18248 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_18248">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDNO_0000012"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33356"/>
         <obo:IAO_0000115>An iron group element atom that has atomic number 26.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
+        <rdfs:label>iron atom</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_190295 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_190295">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDNO_0000015"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_167164"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24839"/>
+        <obo:IAO_0000115>A calcium salt that lacks C-H bonds</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
-        <chebi:charge>0</chebi:charge>
-        <chebi:formula>Fe</chebi:formula>
-        <chebi:inchi>InChI=1S/Fe</chebi:inchi>
-        <chebi:inchikey>XEEYBQQBJWHFJM-UHFFFAOYSA-N</chebi:inchikey>
-        <chebi:mass>55.84500</chebi:mass>
-        <chebi:monoisotopicmass>55.93494</chebi:monoisotopicmass>
-        <chebi:smiles>[Fe]</chebi:smiles>
-        <oboInOwl:hasAlternativeId>CHEBI:13322</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>CHEBI:24872</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>CHEBI:5974</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>CAS:7439-89-6</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>DrugBank:DB01592</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>HMDB:HMDB0015531</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>KEGG:C00023</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reaxys:4122945</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>WebElements:Fe</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>iron</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDbXref>PMID:28457049</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>26Fe</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Eisen</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Fe</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Iron</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>fer</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>ferrum</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>hierro</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>iron</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>CHEBI:18248</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
-        <rdfs:label>iron atom</rdfs:label>
-        <rdfs:label xml:lang="en">iron atom</rdfs:label>
+        <oboInOwl:id>CHEBI:190295</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#2_STAR"/>
+        <rdfs:label>inorganic calcium salt</rdfs:label>
+        <rdfs:label xml:lang="en">inorganic calcium salt</rdfs:label>
     </owl:Class>
     
 
@@ -3010,33 +3150,9 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     <!-- http://purl.obolibrary.org/obo/CHEBI_22984 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_22984">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDNO_0000011"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22313"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
-        <chebi:charge>0</chebi:charge>
-        <chebi:formula>Ca</chebi:formula>
-        <chebi:inchi>InChI=1S/Ca</chebi:inchi>
-        <chebi:inchikey>OYPRJOBELJOOCE-UHFFFAOYSA-N</chebi:inchikey>
-        <chebi:mass>40.07800</chebi:mass>
-        <chebi:monoisotopicmass>39.96259</chebi:monoisotopicmass>
-        <chebi:smiles>[Ca]</chebi:smiles>
-        <oboInOwl:hasDbXref>CAS:7440-70-2</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>DrugBank:DB01373</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>KEGG:C00076</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>WebElements:Ca</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>calcium</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>20Ca</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Ca</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Calcium</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Kalzium</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>calcio</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>calcium</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>CHEBI:22984</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>calcium atom</rdfs:label>
-        <rdfs:label xml:lang="en">calcium atom</rdfs:label>
     </owl:Class>
     
 
@@ -3329,6 +3445,28 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_24835 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_24835">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
+        <obo:IAO_0000115>A molecular entity that contains no carbon.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
+        <rdfs:label>inorganic molecular entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_24839 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_24839">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24835"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24866"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
+        <rdfs:label>inorganic salt</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_24866 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_24866">
@@ -3435,8 +3573,15 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_18133"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24978"/>
         <obo:IAO_0000115>Any hexose containing a single ketone group.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
+        <oboInOwl:hasExactSynonym>ketohexose</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>ketohexoses</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>CHEBI:24973</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>ketohexose</rdfs:label>
+        <rdfs:label xml:lang="en">ketohexose</rdfs:label>
     </owl:Class>
     
 
@@ -3446,8 +3591,16 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_24978">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35381"/>
         <obo:IAO_0000115>Ketonic parent sugars (polyhydroxy ketones H[CH(OH)]nC(=O)[CH(OH)]mH) and their intramolecular hemiketals.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
+        <oboInOwl:hasAlternativeId>CHEBI:6131</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasExactSynonym>ketose</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>ketoses</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>CHEBI:24978</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>ketose</rdfs:label>
+        <rdfs:label xml:lang="en">ketose</rdfs:label>
     </owl:Class>
     
 
@@ -3547,36 +3700,35 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_25105 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_25105">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25106"/>
+        <obo:IAO_0000115>A macrocyclic lactone with a ring of twelve or more members which exhibits antibiotic activity.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
+        <rdfs:label>macrolide antibiotic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_25106 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_25106">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_26188"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_63944"/>
+        <obo:IAO_0000115>A macrocyclic lactone with a ring of twelve or more members derived from a polyketide.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
+        <rdfs:label>macrolide</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_25107 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_25107">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDNO_0000011"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22313"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
-        <chebi:charge>0</chebi:charge>
-        <chebi:formula>Mg</chebi:formula>
-        <chebi:inchi>InChI=1S/Mg</chebi:inchi>
-        <chebi:inchikey>FYYHWMGAXLPEAU-UHFFFAOYSA-N</chebi:inchikey>
-        <chebi:mass>24.30500</chebi:mass>
-        <chebi:monoisotopicmass>23.98504</chebi:monoisotopicmass>
-        <chebi:smiles>[Mg]</chebi:smiles>
-        <oboInOwl:hasDbXref>CAS:7439-95-4</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>DrugBank:DB01378</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Gmelin:16207</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>KEGG:C00305</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>WebElements:Mg</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>magnesium</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>12Mg</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Magnesium</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Mg</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>magnesio</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>magnesium</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>CHEBI:25107</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>magnesium atom</rdfs:label>
-        <rdfs:label xml:lang="en">magnesium atom</rdfs:label>
     </owl:Class>
     
 
@@ -3760,6 +3912,17 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_26188 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_26188">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36963"/>
+        <obo:IAO_0000115>Natural and synthetic compounds containing alternating carbonyl and methylene groups (&apos;beta-polyketones&apos;), biogenetically derived from repeated condensation of acetyl coenzyme A (via malonyl coenzyme A), and usually the compounds derived from them by further condensations, etc. Considered by many to be synonymous with the less frequently used terms acetogenins and ketides.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
+        <rdfs:label>polyketide</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_26208 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_26208">
@@ -3786,33 +3949,9 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     <!-- http://purl.obolibrary.org/obo/CHEBI_26216 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_26216">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDNO_0000011"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22314"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
-        <chebi:charge>0</chebi:charge>
-        <chebi:formula>K</chebi:formula>
-        <chebi:inchi>InChI=1S/K</chebi:inchi>
-        <chebi:inchikey>ZLMJMSJWJFRBEC-UHFFFAOYSA-N</chebi:inchikey>
-        <chebi:mass>39.09830</chebi:mass>
-        <chebi:monoisotopicmass>38.96371</chebi:monoisotopicmass>
-        <chebi:smiles>[K]</chebi:smiles>
-        <oboInOwl:hasDbXref>CAS:7440-09-7</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>DrugBank:DB01345</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>KEGG:C00238</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>WebElements:K</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>potassium</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>19K</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>K</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Kalium</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>kalium</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>potasio</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>potassium</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>CHEBI:26216</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>potassium atom</rdfs:label>
-        <rdfs:label xml:lang="en">potassium atom</rdfs:label>
     </owl:Class>
     
 
@@ -3924,33 +4063,9 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     <!-- http://purl.obolibrary.org/obo/CHEBI_26708 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_26708">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDNO_0000011"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22314"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
-        <chebi:charge>0</chebi:charge>
-        <chebi:formula>Na</chebi:formula>
-        <chebi:inchi>InChI=1S/Na</chebi:inchi>
-        <chebi:inchikey>KEAYESYHFKHZAL-UHFFFAOYSA-N</chebi:inchikey>
-        <chebi:mass>22.98977</chebi:mass>
-        <chebi:monoisotopicmass>22.98977</chebi:monoisotopicmass>
-        <chebi:smiles>[Na]</chebi:smiles>
-        <oboInOwl:hasDbXref>CAS:7440-23-5</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Gmelin:16221</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>KEGG:C01330</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>WebElements:Na</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>sodium</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>11Na</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Na</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Natrium</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>natrium</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>sodio</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>sodium</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>CHEBI:26708</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>sodium atom</rdfs:label>
-        <rdfs:label xml:lang="en">sodium atom</rdfs:label>
     </owl:Class>
     
 
@@ -4222,36 +4337,9 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     <!-- http://purl.obolibrary.org/obo/CHEBI_27363 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_27363">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDNO_0000012"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33340"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
-        <chebi:charge>0</chebi:charge>
-        <chebi:formula>Zn</chebi:formula>
-        <chebi:inchi>InChI=1S/Zn</chebi:inchi>
-        <chebi:inchikey>HCHKCACWOHOZIP-UHFFFAOYSA-N</chebi:inchikey>
-        <chebi:mass>65.39000</chebi:mass>
-        <chebi:monoisotopicmass>63.92914</chebi:monoisotopicmass>
-        <chebi:smiles>[Zn]</chebi:smiles>
-        <oboInOwl:hasDbXref>CAS:7440-66-6</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Gmelin:16321</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>KEGG:C00038</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PDBeChem:ZN</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>WebElements:Zn</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>zinc</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>30Zn</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Zink</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Zn</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Zn(II)</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Zn2+</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>cinc</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>zinc</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>zincum</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>CHEBI:27363</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>zinc atom</rdfs:label>
-        <rdfs:label xml:lang="en">zinc atom</rdfs:label>
     </owl:Class>
     
 
@@ -4427,6 +4515,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     <!-- http://purl.obolibrary.org/obo/CHEBI_28260 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_28260">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDNO_0000004"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33917"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35381"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03420108"/>
@@ -4660,20 +4749,55 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     <!-- http://purl.obolibrary.org/obo/CHEBI_3311 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_3311">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_190295"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35156"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_46721"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64708"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03412972"/>
         <obo:IAO_0000115>A calcium salt with formula CCaO3.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">calcium carbonate</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <chebi:charge>0</chebi:charge>
+        <chebi:formula>CCaO3</chebi:formula>
+        <chebi:formula>CO3.Ca</chebi:formula>
+        <chebi:inchi>InChI=1S/CH2O3.Ca/c2-1(3)4;/h(H2,2,3,4);/q;+2/p-2</chebi:inchi>
+        <chebi:inchikey>VTYYLEPIZMXCLO-UHFFFAOYSA-L</chebi:inchikey>
+        <chebi:mass>100.087</chebi:mass>
+        <chebi:monoisotopicmass>99.94733</chebi:monoisotopicmass>
+        <chebi:smiles>[Ca+2].C(=O)([O-])[O-]</chebi:smiles>
+        <oboInOwl:hasDbXref>BPDB:108</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CAS:471-34-1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Codex::170(i)</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>DrugBank:DB06724</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Europe::170</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>KEGG:C08129</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>KEGG:D00932</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PPDB:108</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reaxys:8008338</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Wikipedia:Calcium_carbonate</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B3031</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Calcium carbonate</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>calcium carbonate</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>calcium trioxidocarbonate</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>CaCO3</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Calciumcarbonat</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>E 170</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Kalziumkarbonat</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Precipitated calcium carbonate</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>calcium carbonate (1:1)</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>carbonate de calcium</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>carbonato de calcio</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>carbonic acid calcium salt (1:1)</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>kohlensaurer Kalk</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>CHEBI:3311</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:comment xml:lang="en">LanguaL curation note: See &quot;food additive&quot; comments.</rdfs:comment>
         <rdfs:comment xml:lang="en">LanguaL term definition: Food additive; technological purpose(s): acidity regulator, anticaking agent, stabilizer, surface colourant.</rdfs:comment>
         <rdfs:label>calcium carbonate</rdfs:label>
+        <rdfs:label xml:lang="en">calcium carbonate</rdfs:label>
     </owl:Class>
     
 
@@ -4773,11 +4897,22 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     <!-- http://purl.obolibrary.org/obo/CHEBI_33261 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33261">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDNO_0000021"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_26835"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36962"/>
         <obo:IAO_0000115>An organosulfur compound is a compound containing at least one carbon-sulfur bond.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
+        <oboInOwl:hasAlternativeId>CHEBI:23010</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>CHEBI:25714</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>Wikipedia:Organosulfur_compounds</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>organosulfur compound</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>organosulfur compounds</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>CHEBI:33261</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>organosulfur compound</rdfs:label>
+        <rdfs:label xml:lang="en">organosulfur compound</rdfs:label>
     </owl:Class>
     
 
@@ -5493,7 +5628,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_18059"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25384"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03412972"/>
-        <obo:IAO_0000115>Any aliphatic monocarboxylic acid derived from or contained in esterified form in an animal or vegetable fat, oil or wax.</obo:IAO_0000115>
+        <obo:IAO_0000115>Any aliphatic monocarboxylic acid derived from or contained in esterified form in an animal or vegetable fat, oil or wax. Natural fatty acids commonly have a chain of 4 to 28 carbons (usually unbranched and even-numbered), which may be saturated or unsaturated. By extension, the term is sometimes used to embrace all acyclic aliphatic carboxylic acids.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">fatty acids</obo:IAO_0000118>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
@@ -6052,6 +6187,17 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_46662 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_46662">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
+        <obo:IAO_0000115>In general, a mineral is a chemical substance that is normally crystalline formed and has been formed as a result of geological processes. The term also includes metamict substances (naturally occurring, formerly crystalline substances whose crystallinity has been destroyed by ionising radiation) and can include naturally occurring amorphous substances that have never been crystalline (&apos;mineraloids&apos;) such as georgite and calciouranoite as well as substances formed by the action of geological processes on bigenic compounds (&apos;biogenic minerals&apos;).</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
+        <rdfs:label>mineral</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_46721 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_46721">
@@ -6168,6 +6314,17 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <obo:IAO_0000115>A role is particular behaviour which a material entity may exhibit.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
         <rdfs:label>role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_51026 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_51026">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33595"/>
+        <obo:IAO_0000115>A cyclic compound containing nine or more atoms as part of the cyclic system.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
+        <rdfs:label>macrocycle</rdfs:label>
     </owl:Class>
     
 
@@ -6320,6 +6477,18 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_63944 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_63944">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25000"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_51026"/>
+        <obo:IAO_0000115>Any lactone in which the cyclic carboxylic ester group forms a part of a cyclic macromolecule.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
+        <rdfs:label>macrocyclic lactone</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_64708 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_64708">
@@ -6379,7 +6548,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDNO_0000014"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35352"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36963"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03413764"/>
         <obo:IAO_0000115>Any member of the group of eight water-soluble vitamins originally thought to be a single compound (vitamin B) that play important roles in cell metabolism. The group comprises of vitamin B1, B2, B3, B5, B6, B7, B9, and B12 (Around 20 other compounds were once thought to be B vitamins but are no longer classified as such).</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
@@ -8721,6 +8889,9 @@ https://www.politico.com/agenda/story/2016/03/crazy-us-chicken-egg-regulation-gr
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002470">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">A physical object quality which can describe an attribute of a food item or related to a food product.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0001-8008-8249</obo:IAO_0000117>
         <rdfs:label xml:lang="en">food object quality</rdfs:label>
     </owl:Class>
     
@@ -10341,6 +10512,7 @@ Namely, how to characterize the threshold of ingredients that make for multi-com
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03310306">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002232"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000115 xml:lang="en">A seed of a sesame plant (Sesamum indicum).</obo:IAO_0000115>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
         <oboInOwl:hasDbXref>SUBSET_SIREN:F10306</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">sesame</oboInOwl:hasExactSynonym>
@@ -10350,7 +10522,7 @@ Namely, how to characterize the threshold of ingredients that make for multi-com
 * has quality &apos;not heat-treated&apos; (http://purl.obolibrary.org/obo/FOODON_03440003)
 * derives from &apos;seed, skin present, germ present&apos; (http://purl.obolibrary.org/obo/FOODON_03420133)
         </rdfs:comment>
-        <rdfs:label xml:lang="en">sesame seed</rdfs:label>
+        <rdfs:label xml:lang="en">sesame seed (whole)</rdfs:label>
     </owl:Class>
     
 
@@ -11529,12 +11701,6 @@ However, this disjunction appears to be a burden on reasoners, and so this is cu
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411041">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002403"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002403"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
         <obo:IAO_0000115 xml:lang="en">Any chemical or chemical mixture that exists in a food material or was added to a food material.</obo:IAO_0000115>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
@@ -11607,6 +11773,7 @@ Note however that the LanguaL category includes additives which may be naturally
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Mammal</obo:IAO_0000119>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1134</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">animal (mammal) as food source</rdfs:label>
         <rdfs:label xml:lang="en">mammal</rdfs:label>
     </owl:Class>
     
@@ -12654,19 +12821,6 @@ DIRECTIVE 2002/46/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 10 June 20
     
 
 
-    <!-- http://purl.obolibrary.org/obo/FOODON_03413764 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03413764">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03413749"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000119>DIRECTIVE 2002/46/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 10 June 2002 on the approximation of the laws of the Member States relating to food supplements [http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2002:183:0051:0057:EN:PDF].</obo:IAO_0000119>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B3764</oboInOwl:hasDbXref>
-        <rdfs:label xml:lang="en">food supplements, mineral substances (ec)</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/FOODON_03414168 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03414168">
@@ -13484,6 +13638,7 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
         <obo:IAO_0000115>A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.</obo:IAO_0000115>
         <obo:IAO_0000115>A process that emerges from two or more causally-connected macromolecular activities and has evolved to achieve a biological objective.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cob.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ecocore.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/envo.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/go.owl"/>
         <rdfs:label xml:lang="en">biological process</rdfs:label>
@@ -13497,9 +13652,28 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000027">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <obo:IAO_0000111 xml:lang="en">data item</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">Data items include counts of things, analyte concentrations, and statistical summaries.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115 xml:lang="en">An information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">a data item is an information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">2/2/2009 Alan and Bjoern discussing FACS run output data. This is a data item because it is about the cell population. Each element records an event and is typically further composed a set of measurment data items that record the fluorescent intensity stimulated by one of the lasers.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">2009-03-16: data item deliberatly ambiguous: we merged data set and datum to be one entity, not knowing how to define singular versus plural. So data item is more general than datum.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">2009-03-16: removed datum as alternative term as datum specifically refers to singular form, and is thus not an exact synonym.</obo:IAO_0000116>
+        <obo:IAO_0000116>2014-03-31: See discussion at http://odontomachus.wordpress.com/2014/03/30/aboutness-objects-propositions/</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">JAR: datum     -- well, this will be very tricky to define, but maybe some
+information-like stuff that might be put into a computer and that is
+meant, by someone, to denote and/or to be interpreted by some
+process... I would include lists, tables, sentences... I think I might
+defer to Barry, or to Brian Cantwell Smith
+
+JAR: A data item is an approximately justified approximately true approximate belief</obo:IAO_0000116>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Chris Stoeckert</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Jonathan Rees</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">data</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ons.owl"/>
         <rdfs:label xml:lang="en">data item</rdfs:label>
     </owl:Class>
     
@@ -13509,12 +13683,25 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000030">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000111 xml:lang="en">information content entity</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">Examples of information content entites include journal articles, data, graphical layouts, and graphs.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
         <obo:IAO_0000115 xml:lang="en">A generically dependent continuant that is about some thing.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">2014-03-10: The use of &quot;thing&quot; is intended to be general enough to include universals and configurations (see https://groups.google.com/d/msg/information-ontology/GBxvYZCk1oc/-L6B5fSBBTQJ).</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">information_content_entity &apos;is_encoded_in&apos; some digital_entity in obi before split (040907). information_content_entity &apos;is_encoded_in&apos; some physical_document in obi before split (040907).
+
+Previous. An information content entity is a non-realizable information entity that &apos;is encoded in&apos; some digital or physical entity.</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">PERSON: Chris Stoeckert</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">OBI_0000142</obo:IAO_0000119>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ons.owl"/>
         <rdfs:label xml:lang="en">information content entity</rdfs:label>
     </owl:Class>
     
@@ -13661,7 +13848,7 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_147429 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_147429">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_147369"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1648033"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
         <rdfs:label>Andropogoneae</rdfs:label>
     </owl:Class>
@@ -13694,6 +13881,16 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_2233839"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
         <rdfs:label>Fabeae</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_1648033 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_1648033">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_147369"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <rdfs:label>Andropogonodae</rdfs:label>
     </owl:Class>
     
 
@@ -13953,6 +14150,7 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
         <oboInOwl:hasExactSynonym>angiosperms</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>flowering plants</oboInOwl:hasExactSynonym>
+        <rdfs:label>Magnoliophyta</rdfs:label>
         <rdfs:label>Magnoliopsida</rdfs:label>
     </owl:Class>
     
@@ -14755,6 +14953,8 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
         <oboInOwl:hasExactSynonym>dairy cow</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>domestic cattle</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>domestic cow</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>ox</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>oxen</oboInOwl:hasExactSynonym>
         <rdfs:label>Bos taurus</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/List_of_cattle_breeds"/>
     </owl:Class>
@@ -16512,6 +16712,12 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000002 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000002">
@@ -16665,6 +16871,25 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://www.w3.org/TR/owl-time/#time:unitYear">
         <rdf:type rdf:resource="https://www.w3.org/TR/owl-time/#time:TemporalUnit"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
+        <rdfs:label xml:lang="en">part of</rdfs:label>
+        <rdfs:label>part of</rdfs:label>
+        <rdfs:label>part_of</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">a core relation that holds between a part and its whole</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
+        <obo:IAO_0000111 xml:lang="en">is part of</obo:IAO_0000111>
+    </rdf:Description>
     
 
 
