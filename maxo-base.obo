@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2022-06-23/maxo-base.owl
+data-version: maxo/releases/2022-08-22/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
@@ -7,7 +7,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2022-06-23" xsd:string
+property_value: owl:versionInfo "2022-08-22" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -11633,11 +11633,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0001143
 name: omega-3 fatty acid supplementation
 def: "Addition of omega-3 fatty acid to the diet for complete nutrition." []
-synonym: "dietary supplementation of omega-3 fatty acidω−3 fatty acid" EXACT []
+synonym: "dietary supplementation of omega-3 fatty acid" EXACT []
 synonym: "eicosapentaenoic acid supplementation" EXACT []
 synonym: "omega-3 fatty acid supplemental intake" EXACT []
-synonym: "omega-3 fatty acidω−3 fatty acid supplemental intake" EXACT []
-synonym: "supplementation of omega-3 fatty acidω−3 fatty acid" EXACT []
+synonym: "supplementation of omega-3 fatty acid" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -12427,13 +12426,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001227
 name: beta carotene measurement
-def: "The determination of the amount of beta-caroteneβ-carotene present in the sample." []
+def: "The determination of the amount of beta-carotene present in the sample." []
 synonym: "b-carotene measurement" EXACT []
 synonym: "beta carotene assessment" EXACT []
+synonym: "beta-carotene assessment" EXACT []
 synonym: "beta-carotene measurement" EXACT []
 synonym: "beta-carotene test" EXACT []
-synonym: "beta-caroteneβ-carotene assessment" EXACT []
-synonym: "beta-caroteneβ-carotene test" EXACT []
 intersection_of: MAXO:0000566 ! clinical chemistry assessment
 intersection_of: RO:0002233 CHEBI:17579
 property_value: http://purl.org/dc/elements/1.1/date 2022-05-04T13:40:00Z xsd:string
@@ -13684,10 +13682,32 @@ id: MAXO:0009095
 name: zinc therapy
 def: "Treatment with zinc (typically a zinc salt, like zinc acetate or zinc sulfate) with an expected therapeutic benefit." []
 comment: Zinc therapy can induce metallothionein
+synonym: "treatment with zinc" EXACT []
 synonym: "zinc treatment" EXACT []
+is_a: MAXO:0000058 ! pharmacotherapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
 intersection_of: MAXO:0000864 CHEBI:27363 ! therapeutic uses
-property_value: http://purl.org/dc/elements/1.1/date 2022-06-22T11:00:00Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2022-08-18T18:20:16Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009096
+name: Janus kinase inhibitor therapy
+def: "Use of a drug that inhibits Janus kinases." []
+comment: Janus kinase (JAK) Inhibitors are the latest drug class of disease-modifying medication to emerge for the treatment of rheumatoid arthritis (RA). They are a small molecule-targeted treatment and are the first oral option to compare favourably to existing biologic disease-modifying anti-rheumatic drugs (DMARDs). {xref="PMID:32982367"}
+synonym: "JAK inhibitor therapy" EXACT []
+is_a: MAXO:0000058 ! pharmacotherapy
+property_value: http://purl.org/dc/elements/1.1/date 2022-08-17T19:11:56Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009097
+name: GABA transaminase inhibitor agent therapy
+synonym: "EC 2.6.1.19 (4-aminobutyrate--2-oxoglutarate transaminase) inhibitor therapy" EXACT []
+synonym: "GABA transaminase inhibitor" EXACT []
+synonym: "treatment with EC 2.6.1.19 (4-aminobutyrate--2-oxoglutarate transaminase) inhibitor" EXACT []
+is_a: MAXO:0000058 ! pharmacotherapy
+property_value: http://purl.org/dc/elements/1.1/date 2022-8-18T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -14242,11 +14262,11 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010060
-name: sesame seed intake avoidance
-def: "A medical requirement or recommendation of avoiding the consumption of sesame seed." []
-synonym: "avoid sesame seed intake" EXACT []
-synonym: "avoiding sesame seed intake" EXACT []
-synonym: "sesame seed consumption avoidance" EXACT []
+name: sesame seed (whole) intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of sesame seed (whole)." []
+synonym: "avoid sesame seed (whole) intake" EXACT []
+synonym: "avoiding sesame seed (whole) intake" EXACT []
+synonym: "sesame seed (whole) consumption avoidance" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-13T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -15693,6 +15713,45 @@ synonym: "vaginography" EXACT []
 xref: NCIT:C38096
 property_value: http://purl.org/dc/elements/1.1/date 2020-04-27T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0025001
+name: cardiac surgery
+def: "A surgical procedure on the heart." [NCIT:C157806]
+synonym: "heart surgery" EXACT []
+is_a: MAXO:0000004 ! surgical procedure
+
+[Term]
+id: MAXO:0025002
+name: heart repair
+def: "Surgical procedure to repair a heart defect." []
+is_a: MAXO:0025001 ! cardiac surgery
+
+[Term]
+id: MAXO:0025003
+name: vision treatment
+def: "Treatment to correct or improve vision." []
+is_a: MAXO:0000002 ! therapeutic procedure
+
+[Term]
+id: MAXO:0025004
+name: glasses usage
+def: "Use of glasses to correct vision." []
+is_a: MAXO:0025003 ! vision treatment
+
+[Term]
+id: MAXO:0025005
+name: nasolacrimal duct surgery
+def: "A surgical procedure on the nasolacrimal duct." [NCIT:C157999]
+synonym: "dacryocystorhinostomy" EXACT []
+synonym: "tear duct surgery" EXACT []
+is_a: MAXO:0000004 ! surgical procedure
+
+[Term]
+id: MAXO:0025006
+name: strabismus surgery
+def: "A surgical procedure to correct strabismus in the eye." []
+is_a: MAXO:0000004 ! surgical procedure
 
 [Term]
 id: MAXO:0030010
