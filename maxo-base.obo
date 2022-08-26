@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2022-08-22/maxo-base.owl
+data-version: maxo/releases/2022-08-26/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
@@ -7,7 +7,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2022-08-22" xsd:string
+property_value: owl:versionInfo "2022-08-26" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -505,6 +505,7 @@ name: supplemental oxygen therapy
 def: "The administration of oxygen to an individual, usually to aid in respiration." [NCIT:C94624]
 comment: Inhalation of oxygen aimed at restoring toward normal any pathophysiologic alterations of gas exchange in the cardiopulmonary system, as by the use of a respirator, nasal catheter, tent, chamber, or mask. (From Dorland, 27th ed & Stedman, 25th ed) {xref="MeSH:D010102"}
 synonym: "oxygen inhalation therapy" EXACT []
+synonym: "oxygen supplementation" EXACT []
 synonym: "oxygen support therapy" EXACT []
 xref: MeSH:D010102
 xref: NCIT:C94624
@@ -883,6 +884,7 @@ synonym: "iron replacement therapy" NARROW []
 synonym: "oral iron supplementation" EXACT []
 synonym: "supplementation of iron atom" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:09:25Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-30T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -903,6 +905,7 @@ synonym: "dietary supplementation of vitamin D" EXACT []
 synonym: "supplementation of vitamin D" EXACT []
 synonym: "vitamin D supplemental intake" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:09:59Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-30T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -922,6 +925,7 @@ synonym: "food antioxidant supplemental intake" EXACT []
 synonym: "supplementation of food antioxidant" EXACT []
 xref: NCIT:C67025
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:12:19Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date 2020-11-30T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -2892,7 +2896,7 @@ synonym: "treatment with HIV fusion inhibitor drug" EXACT []
 synonym: "treatment with HIV fusion inhibitor medication" EXACT []
 synonym: "treatment with HIV fusion inhibitor therapy" EXACT []
 xref: CHEBI:59886
-is_a: MAXO:0000248 ! anti-HIV agent therapy
+is_a: MAXO:0000248 ! anti-human immunodeficiency virus agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:18:25Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2906,7 +2910,7 @@ synonym: "treatment with anti-HIV therapy, non-nucleoside reverse transcriptase 
 synonym: "treatment with anti-HIV therapy, non-nucleoside reverse transcriptase inhibitor drug" EXACT []
 synonym: "treatment with anti-HIV therapy, non-nucleoside reverse transcriptase inhibitor medication" EXACT []
 xref: NCIT:C97453
-is_a: MAXO:0000248 ! anti-HIV agent therapy
+is_a: MAXO:0000248 ! anti-human immunodeficiency virus agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:18:58Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2924,7 +2928,7 @@ synonym: "treatment with nucleoside-nucleotide reverse transcriptase inhibitor d
 synonym: "treatment with nucleoside-nucleotide reverse transcriptase inhibitor medication" EXACT []
 synonym: "treatment with nucleoside/nucleotide reverse transcriptase inhibitor drug" EXACT []
 synonym: "treatment with nucleoside/nucleotide reverse transcriptase inhibitor medication" EXACT []
-is_a: MAXO:0000248 ! anti-HIV agent therapy
+is_a: MAXO:0000248 ! anti-human immunodeficiency virus agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:20:58Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2941,7 +2945,7 @@ synonym: "treatment with HIV protease inhibitor drug" EXACT []
 synonym: "treatment with HIV protease inhibitor medication" EXACT []
 xref: CHEBI:35660
 xref: NCIT:C97366
-is_a: MAXO:0000248 ! anti-HIV agent therapy
+is_a: MAXO:0000248 ! anti-human immunodeficiency virus agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:21:25Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -11307,9 +11311,11 @@ id: MAXO:0001110
 name: tumorectomy
 def: "The surgical removal (cutting out) of part or all of Neoplasm." []
 synonym: "cancer removal" EXACT []
+synonym: "cancer surgery" BROAD []
 synonym: "Neoplasm surgical removal" EXACT []
 synonym: "removal of tumor" EXACT []
 synonym: "tumor removal" EXACT []
+xref: NCIT:C157740
 property_value: http://purl.org/dc/elements/1.1/date 2020-06-23T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2965
 
@@ -11545,15 +11551,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001135
-name: fat soluble vitamin supplementation
-def: "Addition of fat-soluble vitamin (role) to a the diet for complete nutrition support." []
-synonym: "dietary supplementation of fat-soluble vitamin (role)" EXACT []
-synonym: "essential fat soluble vitamin supplementation" EXACT []
-synonym: "fat-soluble vitamin (role) supplemental intake" EXACT []
-synonym: "supplementation of essential fat soluble vitamin" EXACT []
-synonym: "supplementation of fat-soluble vitamin (role)" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
-created_by: http://orcid.org/0000-0001-7941-2961
+is_a: MAXO:0001129 ! vitamin supplementation
 
 [Term]
 id: MAXO:0001136
@@ -12743,6 +12741,26 @@ property_value: http://purl.org/dc/elements/1.1/date 2022-05-09T20:39:14Z xsd:st
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0001255
+name: http://purl.obolibrary.org/obo/CHEBI_16359 supplementation
+def: "Addition of http://purl.obolibrary.org/obo/CHEBI_16359 to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of http://purl.obolibrary.org/obo/CHEBI_16359" EXACT []
+synonym: "http://purl.obolibrary.org/obo/CHEBI_16359 supplemental intake" EXACT []
+synonym: "supplementation of http://purl.obolibrary.org/obo/CHEBI_16359" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-08-25T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001256
+name: vitamin K supplementation
+def: "Addition of vitamin K to a the diet for complete nutrition support." []
+synonym: "dietary supplementation of vitamin K" EXACT []
+synonym: "supplementation of vitamin K" EXACT []
+synonym: "vitamin K supplemental intake" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-08-25T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0002000
 name: cannabis consumption avoidance
 def: "A medical requirement or recommendation of avoiding cannabis consumption." []
@@ -13473,14 +13491,6 @@ property_value: http://purl.org/dc/elements/1.1/date 2022-05-10T18:09:15Z xsd:da
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
-id: MAXO:0009071
-name: fat soluble vitamin measurement
-def: "The determination of the type and/or amount of fat-soluble vitamins in a sample." []
-is_a: MAXO:0009069 ! vitamin measurement
-property_value: http://purl.org/dc/elements/1.1/date 2022-05-06T16:35:37Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
-
-[Term]
 id: MAXO:0009072
 name: surgical repair
 def: "Surgeical procedure to restore or replace physical defects of form or function. Physical defects could be a consequence of birth defects, trauma, or medical conditions." []
@@ -13708,6 +13718,16 @@ synonym: "GABA transaminase inhibitor" EXACT []
 synonym: "treatment with EC 2.6.1.19 (4-aminobutyrate--2-oxoglutarate transaminase) inhibitor" EXACT []
 is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date 2022-8-18T11:00:00Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009098
+name: fat-soluble vitamin supplementation
+def: "Addition of a fat-soluble vitamin to the diet for adequate and complete nutrition." []
+synonym: "fat soluble vitamin supplementation" EXACT []
+synonym: "supplementation with fat-soluble vitamin" EXACT []
+is_a: MAXO:0001129 ! vitamin supplementation
+property_value: http://purl.org/dc/elements/1.1/date 2022-08-25T20:47:53Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
