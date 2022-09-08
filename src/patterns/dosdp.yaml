@@ -1,0 +1,28 @@
+name: Update DOSDP pattern files
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [ master ]
+    paths:
+      - 'src/patterns/**'
+jobs:
+  dosdp:
+    runs-on: ubuntu-latest
+    container: obolibrary/odkfull:v1.3.1
+    strategy:
+      max-parallel: 1
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+      - name: work around permission issue
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+        
+      - name: Refreshing DOSDP patterns files
+        run: cd src/ontology/ && make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' GITHUB_ACTION=true IMP=false MIR=false ../patterns/definitions.owl
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: 'Update dosdp patterns file'
+          add: 'src/patterns/definitions.owl'
