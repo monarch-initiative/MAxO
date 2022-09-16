@@ -9,9 +9,9 @@ contributors:
 
 classes:
   nutritional supplementation: MAXO:0000106
-  chemical entity: CHEBI:24431
+  material entity: BFO:0000040
 relations:
-  has_input: RO:0002233
+  has_input: RO:0000087
   part_of: BFO:0000050
   
 annotationProperties:
@@ -22,7 +22,7 @@ annotationProperties:
   xref: oio:hasDbXref
   
 vars:
-  chemical_entity: "'chemical entity'"
+  supplement: "'material entity'"
 
 data_vars:
   date: "'date'"
@@ -36,22 +36,22 @@ data_list_vars:
 name:
   text: "%s supplementation"
   vars:
-   - chemical_entity
+   - supplement
 
 annotations:
   - annotationProperty: exact_synonym
     text: "%s supplemental intake"
     vars:
-     - chemical_entity
+     - supplement
   - annotationProperty: exact_synonym
     text: "supplementation of %s" 
     vars:
-     - chemical_entity
+     - supplement
 
   - annotationProperty: exact_synonym
     text: "dietary supplementation of %s"
     vars:
-     - chemical_entity
+     - supplement
      
   - annotationProperty: date
     text: "%s"
@@ -79,10 +79,10 @@ exact_synonym:
 def:
   text: "Addition of %s to a the diet for complete nutrition support."
   vars:
-    - chemical_entity
+    - supplement
 
 equivalentTo:
-  text: "'nutritional supplementation' and 'has_input' some ('part_of' some %s)"
+  text: "'nutritional supplementation' and 'has_input' some %s"
   vars:
-    - chemical_entity
+    - supplement
    

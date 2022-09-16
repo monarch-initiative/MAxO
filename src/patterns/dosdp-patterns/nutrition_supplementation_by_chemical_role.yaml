@@ -1,6 +1,6 @@
-pattern_name: nutrition_supplementation_foodon
-pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns-dev/nutrition_supplementation_foodon.yaml
-description: "Medical recommendation to supplement the diet with a particular food, vitamin, or nutrition item."
+pattern_name: nutrition_supplementation_by_chemical_role
+pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns-dev/nutrition_supplementation_by_chemical_role.yaml
+description: "Medical recommendation to supplement with a particular food, vitamin, or nutrition item that has this particular role."
 
 contributors:
   - https://orcid.org/0000-0001-7941-2961
@@ -9,10 +9,10 @@ contributors:
 
 classes:
   nutritional supplementation: MAXO:0000106
-  food material: FOODON:00002403
+  material entity: BFO:0000040
 relations:
   has_input: RO:0002233
-  part_of: BFO:0000050
+  has_role: RO:0000087
   
 annotationProperties:
   exact_synonym: oio:hasExactSynonym 
@@ -22,7 +22,7 @@ annotationProperties:
   xref: oio:hasDbXref
   
 vars:
-  food_material: "'food material'"
+  supplement: "'material entity'"
 
 data_vars:
   date: "'date'"
@@ -36,23 +36,22 @@ data_list_vars:
 name:
   text: "%s supplementation"
   vars:
-   - food_material
+   - supplement
 
 annotations:
   - annotationProperty: exact_synonym
     text: "%s supplemental intake"
     vars:
-     - food_material
+     - supplement
      
   - annotationProperty: exact_synonym
     text: "supplementation of %s" 
     vars:
-     - food_material
-
+     - supplement
   - annotationProperty: exact_synonym
     text: "dietary supplementation of %s"
     vars:
-     - food_material
+     - supplement
      
   - annotationProperty: date
     text: "%s"
@@ -80,10 +79,10 @@ exact_synonym:
 def:
   text: "Addition of %s to the diet for adequate and complete nutrition."
   vars:
-    - food_material
+    - supplement
 
 equivalentTo:
-  text: "'nutritional supplementation' and 'has_input' some ('part_of' some %s)"
+  text: "'nutritional supplementation' and 'has_input' some ('has_role' some %s)"
   vars:
-    - food_material
+    - supplement
    
