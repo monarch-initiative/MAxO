@@ -22,7 +22,7 @@ annotationProperties:
   xref: oio:hasDbXref
   
 vars:
-  supplement: "'material entity'"
+  supplement_role: "'material entity'"
 
 data_vars:
   date: "'date'"
@@ -36,7 +36,7 @@ data_list_vars:
 name:
   text: "%s supplementation"
   vars:
-   - supplement
+   - supplement_role
 
 annotations:
   - annotationProperty: exact_synonym
@@ -79,10 +79,10 @@ exact_synonym:
 def:
   text: "Addition of %s to the diet for adequate and complete nutrition."
   vars:
-    - supplement
+    - supplement_role
 
 equivalentTo:
   text: "'nutritional supplementation' and 'has_input' some ('has_role' some %s)"
   vars:
-    - supplement
+    - supplement_role
    
