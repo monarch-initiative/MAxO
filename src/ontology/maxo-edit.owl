@@ -828,6 +828,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001022>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001023>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001025>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001026>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001135>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001190>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001192>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0009003>))
@@ -898,7 +899,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0009067>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0009068>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0009069>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0009070>))
-Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0009071>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0009072>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0009073>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0009074>))
@@ -1426,6 +1426,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <h
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000066> "MeSH:D010102")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000066> "NCIT:C94624")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000066> "oxygen inhalation therapy")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000066> "oxygen supplementation")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000066> "oxygen support therapy")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "MeSH:D010102") rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0000066> "Inhalation of oxygen aimed at restoring toward normal any pathophysiologic alterations of gas exchange in the cardiopulmonary system, as by the use of a respirator, nasal catheter, tent, chamber, or mask. (From Dorland, 27th ed & Stedman, 25th ed)")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000066> "supplemental oxygen therapy"@en)
@@ -1710,26 +1711,21 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000106> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000107> (multivitamin supplementation)
 
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000107> "2019-01-19T21:08:59Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000107> "NCIT:C1654")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NCIT:C1654") rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0000107> "A dietary supplement containing all or most of the vitamins that may not be readily available in the diet. Vitamins may be classified according to their solubility either in lipids (vitamins A, D, E, K, F) or in water (vitamins C, B-complex). Present in minute amounts in various foods, vitamins are essential to maintaining normal metabolism and biochemical functions.")
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000108> (iron supplementation)
 
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000108> "2019-01-19T21:09:25Z"^^xsd:dateTime)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000108> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000108> "oral iron supplementation")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/MAXO_0000108> "iron replacement therapy")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:28328083") rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0000108> "Oral iron supplementation is an effective and well‐studied option to replenish iron stores.")
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000110> (vitamin D supplementation)
 
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000110> "2019-01-19T21:09:59Z"^^xsd:dateTime)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000110> <http://purl.obolibrary.org/obo/MAXO_0001135>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000112> (food antioxidant supplementation)
 
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000112> "2019-01-19T21:12:19Z"^^xsd:dateTime)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000112> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000112> "NCIT:C67025")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000112> "antioxidant therapy"@en)
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NCIT:C67025") rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0000112> "Treatment with antioxidants in order to protect cells against damage caused by oxygen-free radicals.")
@@ -2106,7 +2102,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000157> "antiparkisonian drug treatment")
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000157> <http://purl.obolibrary.org/obo/MAXO_0000260>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000158> (antiparasitic agent therapy)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000158> (antiparasititic agent therapy)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000158> "Use of a substance used to treat or prevent parasitic infections.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000158> "2019-01-22T17:53:06Z"^^xsd:dateTime)
@@ -2339,7 +2335,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000173> "medication for nausea treatment")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000173> "medication for treatment of nausea")
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000174> (antifungal agent therapy)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000174> (anti-fungal agent therapy)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000174> "Use of a drug to prevent or treat fungal infections in humans or animals.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000174> "2019-01-22T18:02:00Z"^^xsd:dateTime)
@@ -2645,7 +2641,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000191> "vasodilator agent therapy"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000191> <http://purl.obolibrary.org/obo/MAXO_0000181>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000193> (non-opioid analgesics agent therapy)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000193> (non-opioid analgesic therapy)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000193> "Use of a drug that has principally analgesic, antipyretic and anti-inflammatory actions. Non-narcotic analgesics do not bind to opioid receptors.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000193> "2019-01-22T18:22:25Z"^^xsd:dateTime)
@@ -2663,7 +2659,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000193> "non-opioid analgesics agent therapy"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000193> <http://purl.obolibrary.org/obo/MAXO_0000159>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000194> (opioid analgesics agent therapy)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000194> (opioid analgesic therapy)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000194> "Use of a narcotic or opioid substance, synthetic or semisynthetic agent producing profound analgesia, drowsiness, and changes in mood.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000194> "2019-01-22T18:22:42Z"^^xsd:dateTime)
@@ -2681,7 +2677,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000194> "opioid analgesics agent therapy"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000194> <http://purl.obolibrary.org/obo/MAXO_0000159>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000195> (local anesthetic agent therapy)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000195> (local anesthesia treatment)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000195> "Treatment with any member of a group of drugs that reversibly inhibit the propagation of signals along nerves. Wide variations in potency, stability, toxicity, water-solubility and duration of action determine the route used for administration, e.g. topical, intravenous, epidural or spinal block.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000195> "2019-01-22T18:24:45Z"^^xsd:dateTime)
@@ -3005,7 +3001,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000220> <http://purl.obolibrary
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000220> <http://purl.obolibrary.org/obo/MAXO_0000634>)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000220> <http://purl.obolibrary.org/obo/MAXO_0000640>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000221> (nonsteroidal anti-inflammatory agent therapy)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000221> (NSAID therapy)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000221> "Treatment with an anti-inflammatory drug that is not a steroid. In addition to anti-inflammatory actions, non-steroidal anti-inflammatory drugs have analgesic, antipyretic, and platelet-inhibitory actions. They act by blocking the synthesis of prostaglandins by inhibiting cyclooxygenase, which converts arachidonic acid to cyclic endoperoxides, precursors of prostaglandins.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000221> "2019-01-22T18:44:26Z"^^xsd:dateTime)
@@ -3446,7 +3442,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000247> "antiherpetic agent therapy"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000247> <http://purl.obolibrary.org/obo/MAXO_0000168>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000248> (anti-human immunodeficiency virus agent therapy)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000248> (anti-HIV agent therapy)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000248> "Treatment with an antiviral agent that destroys or inhibits the replication of the human immunodeficiency virus.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000248> "2019-01-22T20:16:07Z"^^xsd:dateTime)
@@ -3463,7 +3459,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000248> "anti-human immunodeficiency virus agent therapy"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000248> <http://purl.obolibrary.org/obo/MAXO_0000168>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000249> (HIV fusion inhibitor therapy)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000249> (anti-HIV therapy, fusion inhibitor)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000249> "Treatment with a drug which interferes with the binding, fusion and entry of an HIV virion to a human cell. By blocking this step in HIV's replication cycle, such agents slow the progression from HIV infection to AIDS.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000249> "2019-01-22T20:18:25Z"^^xsd:dateTime)
@@ -4496,7 +4492,7 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000443> "er
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000443> <http://purl.obolibrary.org/obo/MAXO_0000015>)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000443> <http://purl.obolibrary.org/obo/MAXO_0000442>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000444> (erythropoietin inhibitor agent therapy)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000444> (erythropoietin inhibitor therapy)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000444> "Use of a drug that inhibits erythropoietin, a glycoprotein hormone that controls erythropoiesis (red blood cell production).")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000444> "2019-10-08T18:49:31Z"^^xsd:dateTime)
@@ -6270,7 +6266,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000625> "inhalation anesthetic therapy"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000625> <http://purl.obolibrary.org/obo/MAXO_0001020>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000626> (intravenous anesthetic agent therapy)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000626> (intravenous anesthetic therapy)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000626> "A therapy utilizing an intravenous substance that produces loss of consciousness.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000626> "2020-05-26T18:19:32Z"^^xsd:dateTime)
@@ -6288,7 +6284,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000626> "intravenous anesthetic agent therapy"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000626> <http://purl.obolibrary.org/obo/MAXO_0001020>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000627> (topical anesthetic agent therapy)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000627> (topical anesthetic therapy)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:26702198") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000627> "A superficial loss of sensation in conjunctiva, mucous membranes, or skin, produced by direct application of local anesthetic solutions, ointments, gels or sprays.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000627> "2020-05-26T18:25:03Z"^^xsd:dateTime)
@@ -9866,6 +9862,11 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0001113> "prevention of abnormal physiologic state")
 EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0001113> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000017> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/MAXO_0000521> <http://purl.obolibrary.org/obo/HP_0001944>)))
 
+# Class: <http://purl.obolibrary.org/obo/MAXO_0001135> (fat-soluble vitamin supplementation)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0001135> "supplementation with fat-soluble vitamin")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0001135> "fat-soluble vitamin supplementation"@en)
+
 # Class: <http://purl.obolibrary.org/obo/MAXO_0001153> (uterus examination)
 
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001153> <http://purl.obolibrary.org/obo/MAXO_0000782>)
@@ -9889,6 +9890,18 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0001192> "pleural cavity endoscope")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0001192> "thoracoscopy"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001192> <http://purl.obolibrary.org/obo/MAXO_0000131>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0001256> (vitamin K supplementation)
+
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001256> <http://purl.obolibrary.org/obo/MAXO_0001135>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0001257> (vitamin E supplementation)
+
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001257> <http://purl.obolibrary.org/obo/MAXO_0001135>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0001258> (vitamin A supplementation)
+
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001258> <http://purl.obolibrary.org/obo/MAXO_0001135>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0009003> (preimplantation genetic testing)
 
@@ -10543,14 +10556,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0009070> "single-photon emission computed tomography"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0009070> <http://purl.obolibrary.org/obo/MAXO_0000005>)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0009070> <http://purl.obolibrary.org/obo/MAXO_0009052>)
-
-# Class: <http://purl.obolibrary.org/obo/MAXO_0009071> (fat soluble vitamin measurement)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0009071> "The determination of the type and/or amount of fat-soluble vitamins in a sample.")
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0009071> "2022-05-06T16:35:37Z"^^xsd:dateTime)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0009071> <http://orcid.org/0000-0001-7941-2961>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0009071> "fat soluble vitamin measurement"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0009071> <http://purl.obolibrary.org/obo/MAXO_0009069>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0009072> (surgical repair)
 

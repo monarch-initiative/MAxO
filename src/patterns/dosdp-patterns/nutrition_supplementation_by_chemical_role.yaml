@@ -1,0 +1,88 @@
+pattern_name: nutrition_supplementation_by_chemical_role
+pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns-dev/nutrition_supplementation_by_chemical_role.yaml
+description: "Medical recommendation to supplement with a particular food, vitamin, or nutrition item that has this particular role."
+
+contributors:
+  - https://orcid.org/0000-0001-7941-2961
+  - https://orcid.org/0000-0002-7356-1779
+  - https://orcid.org/0000-0002-7463-6306
+
+classes:
+  nutritional supplementation: MAXO:0000106
+  chebi role: CHEBI:50906
+relations:
+  has_input: RO:0002233
+  has_role: RO:0000087
+  
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym 
+  created_by: oio:created_by
+  date: dc:date
+  comment: rdfs:comment
+  xref: oio:hasDbXref
+  
+vars:
+  supplement_role: "'chebi role'"
+
+data_vars:
+  date: "'date'"
+  created_by: "'created_by'"
+  comment: "'comment'"
+  xref: "'xref'"
+
+data_list_vars:
+  syns: xsd:string
+  
+name:
+  text: "%s supplementation"
+  vars:
+   - supplement_role
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "%s supplemental intake"
+    vars:
+     - supplement_role
+     
+  - annotationProperty: exact_synonym
+    text: "supplementation of %s" 
+    vars:
+     - supplement_role
+  - annotationProperty: exact_synonym
+    text: "dietary supplementation of %s"
+    vars:
+     - supplement_role
+     
+  - annotationProperty: date
+    text: "%s"
+    vars:
+     - date
+     
+  - annotationProperty: created_by
+    text: "%s"
+    vars:
+     - created_by
+     
+  - annotationProperty: comment
+    text: "%s"
+    vars:
+     - comment
+     
+  - annotationProperty: xref
+    text: "%s"
+    vars:
+     - xref
+
+exact_synonym:
+  value: syns
+
+def:
+  text: "Addition of %s to a diet for adequate and complete nutrition."
+  vars:
+    - supplement_role
+
+equivalentTo:
+  text: "'nutritional supplementation' and 'has_input' some ('has_role' some %s)"
+  vars:
+    - supplement_role
+   
