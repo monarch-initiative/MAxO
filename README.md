@@ -1,5 +1,6 @@
 # Medical Action Ontology (MAXO)
 
+
 The Medical Action Ontology (MAxO) provides a broad view of medical actions and includes terms for medical procedures, interventions, therapies, treatments, and recommendations.
 
 # Top-level: 
@@ -109,19 +110,22 @@ MAxO is available under [CC-BY 4.0](LICENSE)
 
 # Project Homepage
 
- Future home: https://hpo.jax.org/app/
+ Future home: https://hpo.jax.org/
  
-# Questions/Requests/Tickets
+# CONTACT
 
- Please post issues at our github tracker. https://github.com/monarch-initiative/MAxO/issues
+### Tickets/Questions/Requests
+
+Please post issues at our [github tracker.](https://github.com/monarch-initiative/MAxO/issues)
 
 ### Direct
 
- If you have questions, please contact leigh.carmody@jax.org or peter.robinson@jax.org
+ If you have questions, please contact leigh.carmody *at* jax.org or peter.robinson *at* jax.org
 
 ### Mailing list
 
 If you would like email updates for releases medical-action-ontology-mailing-list@googlegroups.com
+
 
 # Annotations
 
@@ -142,3 +146,4 @@ The goal is to focus on the computational representation of rare disease treatme
 3. Mining terms/identifying terms from [GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1116/)–we have built text mining code to identify MAxO terms in Gene Reviews.
 
 4. [Treatabolome](https://treatabolome.cnag.crg.eu/#/): A gene and variant-centric database of treatments for rare disease. Currently, team uses HPO terms for annotation.
+
