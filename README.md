@@ -1,8 +1,11 @@
 # Medical Action Ontology (MAXO)
 
- The Medical Action Ontology (MAxO) provides a <span style="text-decoration:underline;">broad</span> view of medical actions and includes terms for medical procedures, interventions, therapies, treatments, and recommendations.
+The Medical Action Ontology (MAxO) provides a broad view of medical actions and includes terms for medical procedures, interventions, therapies, treatments, and recommendations.
 
-### Top-level: 
+# Top-level: 
+
+Below are the top-level classes in MAxO and examples of each class. 
+
     **Palliative care**: 
         - end-of-life care
         - pain management
@@ -35,19 +38,24 @@
         - radiograph imaging avoidance
         - Etc.
 
-### Term inclusion: 
+## Term inclusion: 
 
     - Process and not information entities are included. 
-		Examples: clinical tests (yes), clinical results (no) 
+	Examples: clinical tests (yes), clinical results (no) 
+		
     - Recommendations for diagnostics, therapy, treatment, or prevention or avoidance. Life skills would not be included, but it will be decided on a case by case basis.
-		Examples: hearing aid usage and speech therapy (yes), sign language (no)
+	Examples: hearing aid usage and speech therapy (yes), sign language (no)
+		
     - Clinical tests, examinations, and clinically relevant biomarker assessments will be included, but developmental research will not. Think CLIA certified tests.
-		Examples: Clinical tests (yes), purely research lab tests (no)
+	Examples: Clinical tests (yes), purely research lab tests (no)
+		
     - Supplementation or alternative therapies are only included if there are studies indicating their utility and have been recommended in the clinical literature. This section will be kept minimal and decided on a case by case basis.
-		Examples: chiropractic therapy, amino acid/vitamin supplementation(yes), herbal supplementation(no)-* 
+	Examples: chiropractic therapy, amino acid/vitamin supplementation(yes), herbal supplementation(no)-* 
 
 
-### OBO ontologies are used for constructing logical definitions including:
+## OBO ontologies imported
+Below are the imported ontologies used for logical definitions
+
         - [NBO ](https://github.com/obo-behavior/behavior-ontology)
         - [FOODON](https://github.com/FoodOntology/foodon)
         - [CHEBI](https://github.com/ebi-chebi/ChEBI)
@@ -61,17 +69,16 @@
         - [OBI](https://github.com/obi-ontology/obi)
         
         
-### MAxO Curation[¶](https://oboacademy.github.io/obook/howto/ontology-overview/#ontology-curation)
+### MAxO Curation
+
+- DOSDP templates are the prefered method to add terms to MAxO as it coordinates term labels, textual definitions, and logical definitions. Manual and or Robot templates may be used, but please look first to see if DOSDP templates are in use. To learn more about how to develop and use DOSDP templates, see  [MAxOs DOSDP templates](https://github.com/monarch-initiative/MAxO/tree/master/src/patterns) wiki or [OBO DOSDP tutorials ](https://oboacademy.github.io/obook/tutorial/dosdp-overview/) for how to construct these).
+
+- Manual additions via Protege
+    
+- ROBOT templates (see [MAxO ROBOT templates ](https://github.com/monarch-initiative/MAxO/tree/master/src/templates
 
 
-#### PREFERRED METHOD:  DOSDP templates are the prefered method to add terms to MAxO as it coordinates term labels, textual definitions, and logical definitions. Manual and or Robot templates may be used, but please look first to see if DOSDP templates are in use.
-To learn more about how to develop and use DOSDP templates, see  [MAxOs DOSDP templates](https://github.com/monarch-initiative/MAxO/tree/master/src/patterns) wiki or [OBO DOSDP tutorials ](https://oboacademy.github.io/obook/tutorial/dosdp-overview/) for how to construct these)
-    - DOSDP Pattern found [HERE](https://github.com/monarch-initiative/MAxO/tree/master/src/patterns/dosdp-patterns) in MAxO repo: 
-    - Manual additions via Protege (see [OBO tutorial](https://oboacademy.github.io/obook/howto/set-up-protege/#:~:text=General-,Protege,-ODK)<span style="text-decoration:underline;">)</span>
-	- ROBOT templates (see [MAxO ROBOT templates ](https://github.com/monarch-initiative/MAxO/tree/master/src/templates)and [OBO ROBOT tutorials](https://oboacademy.github.io/obook/reference/troublehooting-robot/#:~:text=Ontology-,Pipelines,-%2D%20ODK%2C%20ROBOT%2C%20etc))
-
-
-### MAxO Governance [¶](https://oboacademy.github.io/obook/howto/ontology-overview/#governance)
+### MAxO Governance
 
 Request terms:
 
@@ -116,7 +123,6 @@ MAxO is available under [CC-BY 4.0](LICENSE)
 
 If you would like email updates for releases medical-action-ontology-mailing-list@googlegroups.com
 
-
 # Annotations
 
 MAxO will provide a vocabulary to annotate diseases and phenotypes with recommended treatments and interventions. To make requests for annotations, please make a ticket here: https://github.com/monarch-initiative/maxo-annotations
@@ -127,9 +133,7 @@ If you would like to help making annotations or obtain a tsv file of annotations
 
 The goal is to focus on the computational representation of rare disease treatments and interventions. 
 
-
 1. MAxO terms are currently being used to annotate disease and disease phenotypes using POET. [https://poet.jax.org/](https://poet.jax.org/-)
-
 
 2. Clinical Centre of Expertise for Rare and Undiagnosed Diseases (Rare Care Centre) is using MAxO to annotate their work.
 
