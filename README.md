@@ -16,7 +16,7 @@ Below are the top-level classes in MAxO and examples of each class.
         - Clinical imaging procedure
         - Clinical laboratory procedure
         - Etc.
-    **reventative therapeutics**: 
+    **Preventative therapeutics**: 
         - smoking prevention
         - preventative immunization
         - prevention of abnormal physiologic state, i.e., hypertension prevention
