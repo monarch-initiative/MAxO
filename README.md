@@ -55,19 +55,20 @@ Below are the top-level classes in MAxO and examples of each class.
 
 
 ## OBO ontologies imported
+
 Below are the imported ontologies used for logical definitions
 
-        - [NBO ](https://github.com/obo-behavior/behavior-ontology)
-        - [FOODON](https://github.com/FoodOntology/foodon)
-        - [CHEBI](https://github.com/ebi-chebi/ChEBI)
-        - [MAXO](https://github.com/monarch-initiative/MAxO)
-        - [HP](https://github.com/obophenotype/human-phenotype-ontology/issues)
-        - [UBERON](https://github.com/obophenotype/uberon)
-        - PR
-        - RO
-        - IAO
-        - [GO](https://github.com/geneontology/)
-        - [OBI](https://github.com/obi-ontology/obi)
+- [NBO](https://github.com/obo-behavior/behavior-ontology)
+- [FOODON](https://github.com/FoodOntology/foodon)
+- [CHEBI](https://github.com/ebi-chebi/ChEBI)
+- [MAXO](https://github.com/monarch-initiative/MAxO)
+- [HP](https://github.com/obophenotype/human-phenotype-ontology/issues)
+- [UBERON](https://github.com/obophenotype/uberon)
+- PR
+- RO
+- IAO
+- [GO](https://github.com/geneontology/)
+- [OBI](https://github.com/obi-ontology/obi)
         
         
 ### MAxO Curation
