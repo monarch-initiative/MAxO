@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2022-09-07/maxo-base.owl
+data-version: maxo/releases/2022-11-21/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
@@ -7,7 +7,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2022-09-07" xsd:string
+property_value: owl:versionInfo "2022-11-21" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -862,51 +862,56 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000107
 name: multivitamin supplementation
-def: "Addition of multivitamin preparation to the diet for adequate and complete nutrition." []
+def: "Addition of multivitamin preparation to a diet for complete nutrition support." []
 comment: A dietary supplement containing all or most of the vitamins that may not be readily available in the diet. Vitamins may be classified according to their solubility either in lipids (vitamins A, D, E, K, F) or in water (vitamins C, B-complex). Present in minute amounts in various foods, vitamins are essential to maintaining normal metabolism and biochemical functions. {xref="NCIT:C1654"}
 synonym: "dietary supplementation of multivitamin preparation" EXACT []
 synonym: "multivitamin preparation supplemental intake" EXACT []
 synonym: "supplementation of multivitamin preparation" EXACT []
 synonym: "supplementation with multivitamin" EXACT []
 xref: NCIT:C1654
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:08:59Z xsd:dateTime
-property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 FOODON:03315171
+property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000108
 name: iron supplementation
-def: "Addition of iron atom to a the diet for complete nutrition support." []
+def: "Addition of iron atom to a diet for complete nutrition support." []
 comment: Oral iron supplementation is an effective and well‐studied option to replenish iron stores. {xref="PMID:28328083"}
 synonym: "dietary supplementation of iron atom" EXACT []
 synonym: "iron atom supplemental intake" EXACT []
 synonym: "iron replacement therapy" NARROW []
 synonym: "oral iron supplementation" EXACT []
 synonym: "supplementation of iron atom" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:09:25Z xsd:dateTime
-property_value: http://purl.org/dc/elements/1.1/date 2020-11-30T09:00:01Z xsd:string
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:18248
+property_value: http://purl.org/dc/elements/1.1/date 2019-01-30T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000109
 name: vitamin C supplementation
-def: "Addition of vitamin C to the diet for adequate and complete nutrition." []
+def: "Addition of vitamin C to a diet for complete nutrition support." []
 synonym: "dietary supplementation of vitamin C" EXACT []
 synonym: "supplementation of vitamin C" EXACT []
 synonym: "vitamin C supplemental intake" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:176783
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000110
 name: vitamin D supplementation
-def: "Addition of vitamin D to a the diet for complete nutrition support." []
+def: "Addition of vitamin D to a diet for complete nutrition support." []
 synonym: "dietary supplementation of vitamin D" EXACT []
 synonym: "supplementation of vitamin D" EXACT []
 synonym: "vitamin D supplemental intake" EXACT []
 is_a: MAXO:0001135 ! fat-soluble vitamin supplementation
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:09:59Z xsd:dateTime
-property_value: http://purl.org/dc/elements/1.1/date 2020-11-30T09:00:01Z xsd:string
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:27300
+property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -918,15 +923,14 @@ replaced_by: MAXO:0010020
 [Term]
 id: MAXO:0000112
 name: food antioxidant supplementation
-def: "Addition of food antioxidant to a the diet for complete nutrition support." []
+def: "Addition of food antioxidant to a diet for adequate and complete nutrition." []
 comment: Treatment with antioxidants in order to protect cells against damage caused by oxygen-free radicals. {xref="NCIT:C67025"}
 synonym: "antioxidant therapy" EXACT []
 synonym: "dietary supplementation of food antioxidant" EXACT []
 synonym: "food antioxidant supplemental intake" EXACT []
 synonym: "supplementation of food antioxidant" EXACT []
 xref: NCIT:C67025
-property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:12:19Z xsd:dateTime
-property_value: http://purl.org/dc/elements/1.1/date 2020-11-30T09:00:01Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-01-19T21:12:19Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -2897,7 +2901,7 @@ synonym: "treatment with HIV fusion inhibitor drug" EXACT []
 synonym: "treatment with HIV fusion inhibitor medication" EXACT []
 synonym: "treatment with HIV fusion inhibitor therapy" EXACT []
 xref: CHEBI:59886
-is_a: MAXO:0000248 ! anti-human immunodeficiency virus agent therapy
+is_a: MAXO:0000248 ! anti-HIV agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:18:25Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2911,7 +2915,7 @@ synonym: "treatment with anti-HIV therapy, non-nucleoside reverse transcriptase 
 synonym: "treatment with anti-HIV therapy, non-nucleoside reverse transcriptase inhibitor drug" EXACT []
 synonym: "treatment with anti-HIV therapy, non-nucleoside reverse transcriptase inhibitor medication" EXACT []
 xref: NCIT:C97453
-is_a: MAXO:0000248 ! anti-human immunodeficiency virus agent therapy
+is_a: MAXO:0000248 ! anti-HIV agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:18:58Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2929,7 +2933,7 @@ synonym: "treatment with nucleoside-nucleotide reverse transcriptase inhibitor d
 synonym: "treatment with nucleoside-nucleotide reverse transcriptase inhibitor medication" EXACT []
 synonym: "treatment with nucleoside/nucleotide reverse transcriptase inhibitor drug" EXACT []
 synonym: "treatment with nucleoside/nucleotide reverse transcriptase inhibitor medication" EXACT []
-is_a: MAXO:0000248 ! anti-human immunodeficiency virus agent therapy
+is_a: MAXO:0000248 ! anti-HIV agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:20:58Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2946,7 +2950,7 @@ synonym: "treatment with HIV protease inhibitor drug" EXACT []
 synonym: "treatment with HIV protease inhibitor medication" EXACT []
 xref: CHEBI:35660
 xref: NCIT:C97366
-is_a: MAXO:0000248 ! anti-human immunodeficiency virus agent therapy
+is_a: MAXO:0000248 ! anti-HIV agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:21:25Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -8506,21 +8510,25 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000760
 name: vitamin B12 supplementation
-def: "Addition of vitamin B12 to the diet for adequate and complete nutrition." []
+def: "Addition of vitamin B12 to a diet for complete nutrition support." []
 synonym: "dietary supplementation of vitamin B12" EXACT []
 synonym: "supplementation of vitamin B12" EXACT []
 synonym: "vitamin B12 supplemental intake" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:176843
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000761
 name: B vitamin supplementation
-def: "Addition of B vitamin to the diet for adequate and complete nutrition." []
+def: "Addition of B vitamin to a diet for complete nutrition support." []
 synonym: "B vitamin supplemental intake" EXACT []
 synonym: "dietary supplementation of B vitamin" EXACT []
 synonym: "supplementation of B vitamin" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:75769
+property_value: http://purl.org/dc/elements/1.1/date 2022-08-25T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -10475,7 +10483,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001019
 name: prenatal vitamin supplementation
-def: "Addition of vitamin supplement, prenatal to the diet for adequate and complete nutrition." []
+def: "Addition of vitamin supplement, prenatal to a diet for complete nutrition support." []
 comment: A vitamin enriched supplement containing higher doses for specific nutrients such as folic acid, intended for women before, during and after pregnancy and also during their lactating phase. {xref="NCIT:C92860"}
 synonym: "antenatal supplementation" EXACT []
 synonym: "antenatal vitamin supplement treatment" EXACT []
@@ -10488,6 +10496,8 @@ synonym: "treatment with prenatal supplements" EXACT []
 synonym: "vitamin supplement, prenatal supplemental intake" EXACT []
 xref: NCIT:C92860
 is_a: MAXO:0000107 ! multivitamin supplementation
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 FOODON:03310664
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -11434,12 +11444,14 @@ created_by: http://orcid.org/0000-0001-7941-3010
 [Term]
 id: MAXO:0001123
 name: potassium supplementation
-def: "Addition of potassium atom to a the diet for complete nutrition support." []
+def: "Addition of potassium atom to a diet for complete nutrition support." []
 synonym: "dietary supplementation of potassium" EXACT []
 synonym: "dietary supplementation of potassium atom" EXACT []
 synonym: "potassium atom supplemental intake" EXACT []
 synonym: "supplementation of potassium" EXACT []
 synonym: "supplementation of potassium atom" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:26216
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-17T02:36:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -11485,42 +11497,48 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001128
 name: folic acid supplementation
-def: "Addition of folic acid to a the diet for complete nutrition support." []
+def: "Addition of folic acid to a diet for complete nutrition support." []
 synonym: "dietary supplementation of folic acid" EXACT []
 synonym: "folic acid supplemental intake" EXACT []
 synonym: "supplementation of folic acid" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:27470
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001129
 name: vitamin supplementation
-def: "Addition of vitamin as food supplement food product to the diet for adequate and complete nutrition." []
-synonym: "dietary supplementation of vitamin as food supplement food product" EXACT []
-synonym: "supplementation of vitamin as food supplement food product" EXACT []
-synonym: "supplementation with vitamin" EXACT []
-synonym: "vitamin as food supplement food product supplemental intake" EXACT []
+def: "Addition of vitamin (role) to a diet for adequate and complete nutrition." []
+synonym: "dietary supplementation of vitamin (role)" EXACT []
+synonym: "supplementation of vitamin (role)" EXACT []
+synonym: "supplementation with a vitamin" EXACT []
+synonym: "vitamin (role) supplemental intake" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001130
 name: nicotinic acid supplementation
-def: "Addition of nicotinic acid to a the diet for complete nutrition support." []
+def: "Addition of nicotinic acid to a diet for complete nutrition support." []
 synonym: "dietary supplementation of nicotinic acid" EXACT []
 synonym: "niacin supplementation" EXACT []
 synonym: "nicotinic acid supplemental intake" EXACT []
 synonym: "supplementation of nicotinic acid" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:15940
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001131
 name: pyridoxine supplementation
-def: "Addition of pyridoxine to a the diet for complete nutrition support." []
+def: "Addition of pyridoxine to a diet for complete nutrition support." []
 synonym: "dietary supplementation of pyridoxine" EXACT []
 synonym: "pyridoxine supplemental intake" EXACT []
 synonym: "supplementation of pyridoxine" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:16709
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -11533,104 +11551,124 @@ replaced_by: MAXO:0010108
 [Term]
 id: MAXO:0001133
 name: ascorbic acid supplementation
-def: "Addition of ascorbic acid to a the diet for complete nutrition support." []
+def: "Addition of ascorbic acid to a diet for complete nutrition support." []
 synonym: "ascorbic acid supplemental intake" EXACT []
 synonym: "dietary supplementation of ascorbic acid" EXACT []
 synonym: "supplementation of ascorbic acid" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:22652
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001134
 name: sodium pyruvate supplementation
-def: "Addition of sodium pyruvate to a the diet for complete nutrition support." []
+def: "Addition of sodium pyruvate to a diet for complete nutrition support." []
 synonym: "dietary supplementation of sodium pyruvate" EXACT []
 synonym: "sodium pyruvate supplemental intake" EXACT []
 synonym: "supplementation of sodium pyruvate" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:50144
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001135
 name: fat-soluble vitamin supplementation
-def: "Addition of a fat-soluble vitamin to the diet for adequate and complete nutrition." []
+def: "Addition of fat-soluble vitamin (role) to a diet for adequate and complete nutrition." []
+synonym: "dietary supplementation of fat-soluble vitamin (role)" EXACT []
 synonym: "fat soluble vitamin supplementation" EXACT []
+synonym: "fat-soluble vitamin (role) supplemental intake" EXACT []
+synonym: "supplementation of fat-soluble vitamin (role)" EXACT []
 synonym: "supplementation with fat-soluble vitamin" EXACT []
-is_a: MAXO:0001129 ! vitamin supplementation
-property_value: http://purl.org/dc/elements/1.1/date 2022-08-25T20:47:53Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date 2022-09-07T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001136
 name: S-adenosyl methionine supplementation
-def: "Addition of S-adenosyl-L-methionine to a the diet for complete nutrition support." []
+def: "Addition of S-adenosyl-L-methionine to a diet for complete nutrition support." []
 synonym: "dietary supplementation of S-adenosyl-L-methionine" EXACT []
 synonym: "S-adenosyl-L-methionine supplemental intake" EXACT []
 synonym: "SAM-e supplementation" EXACT []
 synonym: "supplementation of S-adenosyl-L-methionine" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:15414
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001137
 name: isoleucine supplementation
-def: "Addition of isoleucine to a the diet for complete nutrition support." []
+def: "Addition of isoleucine to a diet for complete nutrition support." []
 synonym: "dietary supplementation of isoleucine" EXACT []
 synonym: "isoleucine supplemental intake" EXACT []
 synonym: "supplementation of isoleucine" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:24898
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001138
 name: valine supplementation
-def: "Addition of valine to a the diet for complete nutrition support." []
+def: "Addition of valine to a diet for complete nutrition support." []
 synonym: "dietary supplementation of valine" EXACT []
 synonym: "supplementation of valine" EXACT []
 synonym: "valine supplemental intake" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:27266
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001139
 name: calcium supplementation
-def: "Addition of calcium atom to a the diet for complete nutrition support." []
+def: "Addition of calcium atom to a diet for complete nutrition support." []
 synonym: "calcium atom supplemental intake" EXACT []
 synonym: "dietary supplementation of calcium atom" EXACT []
 synonym: "supplementation of calcium atom" EXACT []
 synonym: "supplementation with calcium" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:22984
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001140
 name: calcium carbonate supplementation
-def: "Addition of calcium carbonate to a the diet for complete nutrition support." []
+def: "Addition of calcium carbonate to a diet for complete nutrition support." []
 synonym: "calcium carbonate supplemental intake" EXACT []
 synonym: "dietary supplementation of calcium carbonate" EXACT []
 synonym: "supplementation of calcium carbonate" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:3311
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001141
 name: glucose supplementation
-def: "Addition of glucose to a the diet for complete nutrition support." []
+def: "Addition of glucose to a diet for complete nutrition support." []
 synonym: "dietary supplementation of glucose" EXACT []
 synonym: "glucose supplemental intake" EXACT []
 synonym: "supplementation of glucose" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:17234
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001142
 name: docosahexaenoic acid supplementation
-def: "Addition of docosahexaenoic acid to a the diet for complete nutrition support." []
+def: "Addition of docosahexaenoic acid to a diet for complete nutrition support." []
 synonym: "DHA supplementtion" EXACT []
 synonym: "dietary supplementation of docosahexaenoic acid" EXACT []
 synonym: "docosahexaenoic acid supplemental intake" EXACT []
 synonym: "supplementation of docosahexaenoic acid" EXACT []
 synonym: "supplementation with DHA" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:36005
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -11642,69 +11680,83 @@ synonym: "dietary supplementation of omega-3 fatty acid" EXACT []
 synonym: "eicosapentaenoic acid supplementation" EXACT []
 synonym: "omega-3 fatty acid supplemental intake" EXACT []
 synonym: "supplementation of omega-3 fatty acid" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:25681
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001144
 name: lutein supplementation
-def: "Addition of lutein to a the diet for complete nutrition support." []
+def: "Addition of lutein to a diet for complete nutrition support." []
 synonym: "dietary supplementation of lutein" EXACT []
 synonym: "lutein supplemental intake" EXACT []
 synonym: "supplementation of lutein" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:28838
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001145
 name: ribose supplementation
-def: "Addition of ribose to a the diet for complete nutrition support." []
+def: "Addition of ribose to a diet for complete nutrition support." []
 synonym: "dietary supplementation of ribose" EXACT []
 synonym: "ribose supplemental intake" EXACT []
 synonym: "supplementation of ribose" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:33942
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001146
 name: fluoride supplementation
-def: "Addition of fluoride to a the diet for complete nutrition support." []
+def: "Addition of fluoride to a diet for complete nutrition support." []
 synonym: "dietary supplementation of fluoride" EXACT []
 synonym: "fluoride supplemental intake" EXACT []
 synonym: "supplementation of fluoride" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:17051
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001147
 name: soluble fiber supplementation
-def: "Addition of dietary supplement, fibre to the diet for adequate and complete nutrition." []
+def: "Addition of dietary supplement, fibre to a diet for complete nutrition support." []
 synonym: "dietary supplement, fibre supplemental intake" EXACT []
 synonym: "dietary supplementation of dietary supplement, fibre" EXACT []
 synonym: "supplementation of dietary supplement, fibre" EXACT []
 synonym: "supplementation with soluble fiber" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 FOODON:03401328
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001148
 name: fish oil supplementation
-def: "Addition of fish oil to the diet for adequate and complete nutrition." []
+def: "Addition of fish oil to a diet for complete nutrition support." []
 synonym: "dietary supplementation of fish oil" EXACT []
 synonym: "fish oil supplemental intake" EXACT []
 synonym: "supplementation of fish oil" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 FOODON:03306123
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-23T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001149
 name: magnesium supplementation
-def: "Addition of magnesium atom to a the diet for complete nutrition support." []
+def: "Addition of magnesium atom to a diet for complete nutrition support." []
 synonym: "dietary supplementation of magnesium atom" EXACT []
 synonym: "magnesium atom supplemental intake" EXACT []
 synonym: "magnesium supplemental intake" EXACT []
 synonym: "supplementation of magnesium" EXACT []
 synonym: "supplementation of magnesium atom" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:25107
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-30T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -11787,8 +11839,10 @@ id: MAXO:0001157
 name: raw fish intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of fish steak (raw)." []
 synonym: "avoid fish steak (raw) intake" EXACT []
-synonym: "avoiding fish steak (raw) intake" EXACT []
+synonym: "avoiding dietary fish steak (raw) intake" EXACT []
 synonym: "fish steak (raw) consumption avoidance" EXACT []
+synonym: "fish steak (raw) restricted diet intake" EXACT []
+synonym: "fish steak (raw) restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-10T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -11797,8 +11851,10 @@ id: MAXO:0001158
 name: unpasturized milk intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of cow milk (raw)." []
 synonym: "avoid cow milk (raw) intake" EXACT []
-synonym: "avoiding cow milk (raw) intake" EXACT []
+synonym: "avoiding dietary cow milk (raw) intake" EXACT []
 synonym: "cow milk (raw) consumption avoidance" EXACT []
+synonym: "cow milk (raw) restricted diet intake" EXACT []
+synonym: "cow milk (raw) restriction" EXACT []
 synonym: "raw milk intake avoidance" EXACT []
 synonym: "unpasturised milk intake avoidance" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2021-02-10T11:00:00Z xsd:string
@@ -11969,11 +12025,11 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001175
 name: liver transplantation
-def: "The surgical transfer of a healthy liver to a patient." []
+def: "The surgical transfer of some or all of a(n) liver from a donor to a patient." []
 synonym: "liver transplantation surgical procedure" EXACT []
 synonym: "transplantation of liver" EXACT []
 xref: NCIT:C15271
-property_value: http://purl.org/dc/elements/1.1/date 2020-06-24T20:39:14Z xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2022-10-06T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -12750,43 +12806,145 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001255
 name: cholic acid supplementation
-def: "Addition of cholic acid to a the diet for complete nutrition support." []
+def: "Addition of cholic acid to a diet for complete nutrition support." []
 synonym: "cholic acid supplemental intake" EXACT []
 synonym: "dietary supplementation of cholic acid" EXACT []
 synonym: "supplementation of cholic acid" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:16359
 property_value: http://purl.org/dc/elements/1.1/date 2022-08-25T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001256
 name: vitamin K supplementation
-def: "Addition of vitamin K to a the diet for complete nutrition support." []
+def: "Addition of vitamin K to a diet for complete nutrition support." []
 synonym: "dietary supplementation of vitamin K" EXACT []
 synonym: "supplementation of vitamin K" EXACT []
 synonym: "vitamin K supplemental intake" EXACT []
 is_a: MAXO:0001135 ! fat-soluble vitamin supplementation
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:28384
 property_value: http://purl.org/dc/elements/1.1/date 2022-08-25T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001257
 name: vitamin E supplementation
-def: "Addition of vitamin E to the diet for adequate and complete nutrition." []
+def: "Addition of vitamin E to a diet for complete nutrition support." []
 synonym: "dietary supplementation of vitamin E" EXACT []
 synonym: "supplementation of vitamin E" EXACT []
 synonym: "vitamin E supplemental intake" EXACT []
 is_a: MAXO:0001135 ! fat-soluble vitamin supplementation
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:33234
 property_value: http://purl.org/dc/elements/1.1/date 2022-08-25T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001258
 name: vitamin A supplementation
-def: "Addition of vitamin A to the diet for adequate and complete nutrition." []
+def: "Addition of vitamin A to a diet for complete nutrition support." []
 synonym: "dietary supplementation of vitamin A" EXACT []
 synonym: "supplementation of vitamin A" EXACT []
 synonym: "vitamin A supplemental intake" EXACT []
+is_a: MAXO:0001135 ! fat-soluble vitamin supplementation
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:12777
 property_value: http://purl.org/dc/elements/1.1/date 2022-09-07T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001260
+name: water-soluble supplementation
+def: "Addition of water-soluble vitamin (role) to a diet for adequate and complete nutrition." []
+synonym: "dietary supplementation of water-soluble vitamin (role)" EXACT []
+synonym: "supplementation of water-soluble vitamin (role)" EXACT []
+synonym: "water soluble vitamin supplementation" EXACT []
+synonym: "water-soluble vitamin (role) supplemental intake" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-09-07T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001261
+name: macronutrient supplementation
+def: "Addition of macronutrient to a diet for adequate and complete nutrition." []
+synonym: "dietary supplementation of macronutrient" EXACT []
+synonym: "macronutrient supplemental intake" EXACT []
+synonym: "supplementation of macronutrient" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-09-07T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001262
+name: micronutrient supplementation
+def: "Addition of micronutrient to a diet for adequate and complete nutrition." []
+synonym: "dietary supplementation of micronutrient" EXACT []
+synonym: "micronutrient supplemental intake" EXACT []
+synonym: "supplementation of micronutrient" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-09-07T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001263
+name: face transplantation
+def: "The surgical transfer of some or all of a(n) face from a donor to a patient." []
+synonym: "transplantation of face" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-10-06T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001264
+name: double lung transplant
+def: "The surgical transfer of a(n) pair of lungs from a donor to a patient." []
+synonym: "transplantation of pair of lungs" EXACT []
+intersection_of: MAXO:0000068 ! transplantation procedure
+intersection_of: RO:0002233 UBERON:0000170
+property_value: http://purl.org/dc/elements/1.1/date 2022-10-06T10:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001265
+name: partial lung transplantation
+def: "The surgical transfer of some or all of a(n) lobe of lung from a donor to a patient." []
+synonym: "transplantation of lobe of lung" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-10-06T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001266
+name: multivisceral transplantation
+def: "Transplantation of some or all of the liver, small intestine, and other abdominal organs (for example, the stomach and pancreas) at the same time." []
+synonym: "transplantation of digestive system" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date 2022-10-06T20:39:14Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001267
+name: selenium supplementation
+def: "Addition of http://purl.obolibrary.org/obo/CHEBI_27568 to a diet for complete nutrition support." []
+comment: Food supplementation with selenium should be carried out in a careful and controlled way, to avoid causing the opposite effect than intended, because selenium is one of the most toxic elements in relatively small quantities being at the same time an essential micronutrient with an important biological role. The range between the necessary quantity of selenium and toxic dose is very narrow. PMID:27171069
+synonym: "dietary supplementation of http://purl.obolibrary.org/obo/CHEBI_27568" EXACT []
+synonym: "http://purl.obolibrary.org/obo/CHEBI_27568 supplemental intake" EXACT []
+synonym: "supplementation of http://purl.obolibrary.org/obo/CHEBI_27568" EXACT []
+xref: PMID:27171069
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:27568
+property_value: http://purl.org/dc/elements/1.1/date 2022-11-01T09:00:01Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001268
+name: dietary selenium intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of selenium." []
+comment: Food supplementation with selenium should be carried out in a careful and controlled way, to avoid causing the opposite effect than intended, because selenium is one of the most toxic elements in relatively small quantities being at the same time an essential micronutrient with an important biological role. The range between the necessary quantity of selenium and toxic dose is very narrow. PMID:27171069
+synonym: "avoid selenium intake" EXACT []
+synonym: "avoiding dietary selenium intake" EXACT []
+synonym: "selenium consumption avoidance" EXACT []
+synonym: "selenium restricted diet intake" EXACT []
+synonym: "selenium restriction" EXACT []
+xref: PMID:27171069
+property_value: http://purl.org/dc/elements/1.1/date 2022-11-01T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -13750,25 +13908,36 @@ property_value: http://purl.org/dc/elements/1.1/date 2022-8-18T11:00:00Z xsd:str
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0009098
+name: new term
+is_a: MAXO:0000058 ! pharmacotherapy
+property_value: http://purl.org/dc/elements/1.1/date 2022-10-07T16:17:31Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0010000
-name: gluten intake avoidance
+name: dietary gluten intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of gluten." []
 comment: Intake may interfere with disease treatment, prolong the recovery phase, or cause complications.
 synonym: "avoid gluten intake" EXACT []
-synonym: "avoiding gluten intake" EXACT []
+synonym: "avoiding dietary gluten intake" EXACT []
 synonym: "celiac dietary intake" EXACT []
 synonym: "gluten consumption avoidance" EXACT []
+synonym: "gluten restricted diet intake" EXACT []
+synonym: "gluten restriction" EXACT []
 synonym: "gluten-free dietary intake" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-07-11T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010001
-name: liquid chemical food component intake avoidance
+name: dietary liquid chemical food component intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of liquid chemical food component." []
 synonym: "avoid liquid chemical food component intake" EXACT []
-synonym: "avoiding liquid chemical food component intake" EXACT []
+synonym: "avoiding dietary liquid chemical food component intake" EXACT []
 synonym: "liquid chemical food component consumption avoidance" EXACT []
+synonym: "liquid chemical food component restricted diet intake" EXACT []
+synonym: "liquid chemical food component restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-07-11T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -13777,18 +13946,22 @@ id: MAXO:0010002
 name: protein intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of protein extract, concentrate or isolate." []
 synonym: "avoid protein extract, concentrate or isolate intake" EXACT []
-synonym: "avoiding protein extract, concentrate or isolate intake" EXACT []
+synonym: "avoiding dietary protein extract, concentrate or isolate intake" EXACT []
 synonym: "protein extract, concentrate or isolate consumption avoidance" EXACT []
+synonym: "protein extract, concentrate or isolate restricted diet intake" EXACT []
+synonym: "protein extract, concentrate or isolate restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T02:36:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010003
-name: fat or oil intake avoidance
+name: dietary fat or oil intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of fat or oil." []
 synonym: "avoid fat or oil intake" EXACT []
-synonym: "avoiding fat or oil intake" EXACT []
+synonym: "avoiding dietary fat or oil intake" EXACT []
 synonym: "fat or oil consumption avoidance" EXACT []
+synonym: "fat or oil restricted diet intake" EXACT []
+synonym: "fat or oil restriction" EXACT []
 synonym: "limited fat dietary intake" EXACT []
 synonym: "low fat dietary intake" EXACT []
 synonym: "non-fat dietary intake" EXACT []
@@ -13798,231 +13971,275 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0010004
 name: betaine supplementation
-def: "Addition of amino-acid betaine to a the diet for complete nutrition support." []
+def: "Addition of amino-acid betaine to a diet for complete nutrition support." []
 synonym: "amino-acid betaine supplemental intake" EXACT []
 synonym: "dietary supplementation of amino-acid betaine" EXACT []
 synonym: "supplementation of amino-acid betaine" EXACT []
 synonym: "supplementation with betaine" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:22860
 property_value: http://purl.org/dc/elements/1.1/date 2019-07-11T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010005
 name: folate supplementation
-def: "Addition of folates to a the diet for complete nutrition support." []
+def: "Addition of folates to a diet for complete nutrition support." []
 synonym: "dietary supplementation of folates" EXACT []
 synonym: "folates supplemental intake" EXACT []
 synonym: "supplementation of folates" EXACT []
 synonym: "supplementation with folate" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:67011
 property_value: http://purl.org/dc/elements/1.1/date 2019-07-11T09:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010006
 name: carnitine supplementation
-def: "Addition of carnitine to a the diet for complete nutrition support." []
+def: "Addition of carnitine to a diet for complete nutrition support." []
 synonym: "carnitine supplemental intake" EXACT []
 synonym: "dietary supplementation of carnitine" EXACT []
 synonym: "supplementation of carnitine" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:17126
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T02:36:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010007
 name: methionine supplementation
-def: "Addition of methionine to a the diet for complete nutrition support." []
+def: "Addition of methionine to a diet for complete nutrition support." []
 synonym: "dietary supplementation of methionine" EXACT []
 synonym: "methionine supplemental intake" EXACT []
 synonym: "supplementation of methionine" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:16811
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T02:36:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010008
 name: creatine supplementation
-def: "Addition of creatine to a the diet for complete nutrition support." []
+def: "Addition of creatine to a diet for complete nutrition support." []
 synonym: "creatine supplemental intake" EXACT []
 synonym: "dietary supplementation of creatine" EXACT []
 synonym: "supplementation of creatine" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:16919
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010009
 name: arginine supplementation
-def: "Addition of arginine to a the diet for complete nutrition support." []
+def: "Addition of arginine to a diet for complete nutrition support." []
 synonym: "arginine supplemental intake" EXACT []
 synonym: "dietary supplementation of arginine" EXACT []
 synonym: "supplementation of arginine" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:29016
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010010
 name: biotin supplementation
-def: "Addition of biotins to a the diet for complete nutrition support." []
+def: "Addition of biotins to a diet for complete nutrition support." []
 synonym: "biotins supplemental intake" EXACT []
 synonym: "dietary supplementation of biotins" EXACT []
 synonym: "supplementation of biotins" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:51570
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010011
 name: chenodeoxycholic acid supplementation
-def: "Addition of chenodeoxycholic acid to a the diet for complete nutrition support." []
+def: "Addition of chenodeoxycholic acid to a diet for complete nutrition support." []
 synonym: "chenodeoxycholic acid supplemental intake" EXACT []
 synonym: "dietary supplementation of chenodeoxycholic acid" EXACT []
 synonym: "supplementation of chenodeoxycholic acid" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:16755
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010012
 name: coenzyme Q10 supplementation
-def: "Addition of coenzyme Q10 to a the diet for complete nutrition support." []
+def: "Addition of coenzyme Q10 to a diet for complete nutrition support." []
 synonym: "coenzyme Q10 supplemental intake" EXACT []
 synonym: "dietary supplementation of coenzyme Q10" EXACT []
 synonym: "supplementation of coenzyme Q10" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:46245
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010013
 name: glycine supplementation
-def: "Addition of glycine to a the diet for complete nutrition support." []
+def: "Addition of glycine to a diet for complete nutrition support." []
 synonym: "dietary supplementation of glycine" EXACT []
 synonym: "glycine supplemental intake" EXACT []
 synonym: "supplementation of glycine" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:15428
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010014
 name: N-acetyl-L-cysteine supplementation
-def: "Addition of N-acetyl-L-cysteine to a the diet for complete nutrition support." []
+def: "Addition of N-acetyl-L-cysteine to a diet for complete nutrition support." []
 synonym: "dietary supplementation of N-acetyl-L-cysteine" EXACT []
 synonym: "N-acetyl-L-cysteine supplemental intake" EXACT []
 synonym: "supplementation of N-acetyl-L-cysteine" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:28939
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010015
 name: ornithine supplementation
-def: "Addition of ornithine to a the diet for complete nutrition support." []
+def: "Addition of ornithine to a diet for complete nutrition support." []
 synonym: "dietary supplementation of ornithine" EXACT []
 synonym: "ornithine supplemental intake" EXACT []
 synonym: "supplementation of ornithine" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:18257
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010016
 name: riboflavin supplementation
-def: "Addition of riboflavin to a the diet for complete nutrition support." []
+def: "Addition of riboflavin to a diet for complete nutrition support." []
 synonym: "dietary supplementation of riboflavin" EXACT []
 synonym: "riboflavin supplemental intake" EXACT []
 synonym: "supplementation of riboflavin" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:17015
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010017
 name: vitamin B6 supplementation
-def: "Addition of vitamin B6 to a the diet for complete nutrition support." []
+def: "Addition of vitamin B6 to a diet for complete nutrition support." []
 synonym: "dietary supplementation of vitamin B6" EXACT []
 synonym: "supplementation of vitamin B6" EXACT []
 synonym: "vitamin B6 supplemental intake" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:27306
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010018
 name: citrulline supplementation
-def: "Addition of citrulline to a the diet for complete nutrition support." []
+def: "Addition of citrulline to a diet for complete nutrition support." []
 synonym: "citrulline supplemental intake" EXACT []
 synonym: "dietary supplementation of citrulline" EXACT []
 synonym: "supplementation of citrulline" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:18211
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010019
 name: vitamin B1 supplementation
-def: "Addition of vitamin B1 to a the diet for complete nutrition support." []
+def: "Addition of vitamin B1 to a diet for complete nutrition support." []
 synonym: "dietary supplementation of vitamin B1" EXACT []
 synonym: "supplementation of vitamin B1" EXACT []
 synonym: "vitamin B1 supplemental intake" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:26948
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010020
 name: amino acid supplementation
-def: "Addition of amino acid to a the diet for complete nutrition support." []
+def: "Addition of amino acid to a diet for complete nutrition support." []
 comment: A concentrated dietary supplement for injection containing the essential amino acids leucine, isoleucine, lysine, valine, phenylalanine, histidine, threonine, methionine and tryptophan as well as the non-essential amino acids alanine, arginine, glycine, proline, serine and tyrosine, with potential anabolic and anti-catabolic activities. Upon dilution and intravenous infusion of the amino acid nutritional supplement, the amino acids serve as protein building blocks, promote protein synthesis in muscle cells and prevent protein breakdown. NCIT:C15509
 synonym: "amino acid supplemental intake" EXACT []
 synonym: "dietary supplementation of amino acid" EXACT []
 synonym: "supplementation of amino acid" EXACT []
 xref: NCIT:C15509
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:33709
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010021
 name: serine supplementation
-def: "Addition of L-serine to a the diet for complete nutrition support." []
+def: "Addition of L-serine to a diet for complete nutrition support." []
 synonym: "dietary supplementation of L-serine" EXACT []
 synonym: "L-serine supplemental intake" EXACT []
 synonym: "supplementation of L-serine" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:17115
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010022
 name: uridine supplementation
-def: "Addition of uridine to a the diet for complete nutrition support." []
+def: "Addition of uridine to a diet for complete nutrition support." []
 synonym: "dietary supplementation of uridine" EXACT []
 synonym: "supplementation of uridine" EXACT []
 synonym: "uridine supplemental intake" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:16704
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010023
 name: medium-chain fatty acid supplementation
-def: "Addition of medium-chain fatty acid to a the diet for complete nutrition support." []
+def: "Addition of medium-chain fatty acid to a diet for complete nutrition support." []
 synonym: "dietary supplementation of medium-chain fatty acid" EXACT []
 synonym: "medium-chain fatty acid supplemental intake" EXACT []
 synonym: "supplementation of medium-chain fatty acid" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:59554
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010024
 name: essential fatty acid supplementation
-def: "Addition of essential fatty acid to a the diet for complete nutrition support." []
+def: "Addition of essential fatty acid to a diet for complete nutrition support." []
 synonym: "dietary supplementation of essential fatty acid" EXACT []
 synonym: "essential fatty acid supplemental intake" EXACT []
 synonym: "supplementation of essential fatty acid" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:59549
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010025
 name: cholesterol supplementation
-def: "Addition of cholesterol to a the diet for complete nutrition support." []
+def: "Addition of cholesterol to a diet for complete nutrition support." []
 synonym: "cholesterol supplemental intake" EXACT []
 synonym: "dietary supplementation of cholesterol" EXACT []
 synonym: "supplementation of cholesterol" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:16113
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010026
 name: zinc supplementation
-def: "Addition of elemental zinc to a the diet for complete nutrition support." []
+def: "Addition of elemental zinc to a diet for complete nutrition support." []
 comment: Addition of zinc to a the diet for complete nutrition support.
 synonym: "dietary supplementation of elemental zinc" EXACT []
 synonym: "dietary supplementation of zin" EXACT []
@@ -14030,44 +14247,52 @@ synonym: "elemental zinc supplemental intake" EXACT []
 synonym: "supplementation of elemental zinc" EXACT []
 synonym: "supplementation of zinc" EXACT []
 synonym: "zinc supplemental intake" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:37253
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010027
 name: hydroxocobalamin supplementation
-def: "Addition of hydroxocobalamin to a the diet for complete nutrition support." []
+def: "Addition of hydroxocobalamin to a diet for complete nutrition support." []
 synonym: "dietary supplementation of hydroxocobalamin" EXACT []
 synonym: "hydroxocobalamin supplemental intake" EXACT []
 synonym: "supplementation of hydroxocobalamin" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:27786
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010028
 name: cyanocobalamin supplementation
-def: "Addition of cyanocob(III)alamin to a the diet for complete nutrition support." []
+def: "Addition of cyanocob(III)alamin to a diet for complete nutrition support." []
 synonym: "cyanocob(III)alamin supplemental intake" EXACT []
 synonym: "dietary supplementation of cyanocob(III)alamin" EXACT []
 synonym: "supplementation of cyanocob(III)alamin" EXACT []
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:17439
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010029
 name: methylcobalamin supplementation
-def: "Addition of methylcobalamin to a the diet for complete nutrition support." []
+def: "Addition of methylcobalamin to a diet for complete nutrition support." []
 synonym: "dietary supplementation of methylcobalamin" EXACT []
 synonym: "methylcobalamin supplemental intake" EXACT []
 synonym: "supplementation of methylcobalamin" EXACT []
 is_a: MAXO:0000760 ! vitamin B12 supplementation
+intersection_of: MAXO:0000106 ! nutritional supplementation
+intersection_of: RO:0002233 CHEBI:28115
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-13T04:45:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010030
 name: bone marrow transplantation
-def: "The surgical transfer of a healthy bone marrow to a patient." []
+def: "The surgical transfer of some or all of a(n) bone marrow from a donor to a patient." []
 synonym: "bone marrow grafting" EXACT []
 synonym: "transplantation of bone marrow" EXACT []
 xref: NCIT:C15194
@@ -14077,7 +14302,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0010031
 name: bone grafting
-def: "The surgical transfer of a healthy bone tissue to a patient." []
+def: "The surgical transfer of some or all of a(n) bone tissue from a donor to a patient." []
 synonym: "transplantation of bone tissue" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T10:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -14085,17 +14310,19 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0010032
 name: cardiac transplantation
-def: "The surgical transfer of a healthy heart to a patient." []
+def: "The surgical transfer of a(n) heart from a donor to a patient." []
 synonym: "heart transplantation" EXACT []
 synonym: "transplantation of heart" EXACT []
 xref: NCIT:C15246
+intersection_of: MAXO:0000068 ! transplantation procedure
+intersection_of: RO:0002233 UBERON:0000948
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T10:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010033
 name: umbilical cord blood transplantation
-def: "The surgical transfer of a healthy umbilical cord blood to a patient." []
+def: "The surgical transfer of some or all of a(n) umbilical cord blood from a donor to a patient." []
 synonym: "cord blood transplantation" EXACT []
 synonym: "transplantation of umbilical cord blood" EXACT []
 synonym: "UCBT" EXACT []
@@ -14105,17 +14332,19 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0010034
 name: corneal transplantation
-def: "The surgical transfer of a healthy cornea to a patient." []
+def: "The surgical transfer of a(n) cornea from a donor to a patient." []
 synonym: "keratoplasty" EXACT []
 synonym: "transplantation of cornea" EXACT []
 xref: NCIT:C50514
+intersection_of: MAXO:0000068 ! transplantation procedure
+intersection_of: RO:0002233 UBERON:0000964
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T10:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010035
 name: dura mater graft
-def: "The surgical transfer of a healthy dura mater to a patient." []
+def: "The surgical transfer of some or all of a(n) dura mater from a donor to a patient." []
 synonym: "dura mater transplantation" EXACT []
 synonym: "transplantation of dura mater" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T10:00:01Z xsd:string
@@ -14124,7 +14353,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0010036
 name: intestinal transplantation
-def: "The surgical transfer of a healthy intestine to a patient." []
+def: "The surgical transfer of some or all of a(n) intestine from a donor to a patient." []
 synonym: "transplantation of intestine" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T10:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -14132,7 +14361,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0010037
 name: small intestine transplantation
-def: "The surgical transfer of a healthy small intestine to a patient." []
+def: "The surgical transfer of some or all of a(n) small intestine from a donor to a patient." []
 synonym: "small bowel transplantation" EXACT []
 synonym: "transplantation of small intestine" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T10:00:01Z xsd:string
@@ -14141,36 +14370,45 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0010038
 name: lung transplantation
-def: "The surgical transfer of a healthy lung to a patient." []
+def: "The surgical transfer of a(n) lung from a donor to a patient." []
 synonym: "lung transplantation surgical procedure" EXACT []
 synonym: "transplantation of lung" EXACT []
 xref: NCIT:C15274
+intersection_of: MAXO:0000068 ! transplantation procedure
+intersection_of: RO:0002233 UBERON:0002048
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T10:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010039
 name: organ transplantation
+name: whole organ transplantation
+def: "The transfer of a whole organ from one body to another." []
 def: "The transfer of an organ, or organ subpart, from one body to another." []
 synonym: "organ graft" EXACT []
 synonym: "transplantation of organ" EXACT []
 xref: NCIT:C122934
+intersection_of: MAXO:0000068 ! transplantation procedure
+intersection_of: MAXO:0000068 ! transplantation procedure
+intersection_of: RO:0002233 UBERON:0000062
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T10:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010040
 name: ovarian transplantation
-def: "The surgical transfer of a healthy ovary to a patient." []
+def: "The surgical transfer of a(n) ovary from a donor to a patient." []
 synonym: "ovary transplantation" EXACT []
 synonym: "transplantation of ovary" EXACT []
+intersection_of: MAXO:0000068 ! transplantation procedure
+intersection_of: RO:0002233 UBERON:0000992
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T10:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010041
 name: skin grafting
-def: "The surgical transfer of a healthy zone of skin to a patient." []
+def: "The surgical transfer of some or all of a(n) zone of skin from a donor to a patient." []
 synonym: "skin transplantation" EXACT []
 synonym: "transplantation of zone of skin" EXACT []
 xref: NCIT:C15325
@@ -14180,19 +14418,23 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0010042
 name: thymic transplantation
-def: "The surgical transfer of a healthy thymus to a patient." []
+def: "The surgical transfer of a(n) thymus from a donor to a patient." []
 synonym: "transplantation of thymus" EXACT []
+intersection_of: MAXO:0000068 ! transplantation procedure
+intersection_of: RO:0002233 UBERON:0002370
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-20T10:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010043
 name: kidney transplantation
-def: "The surgical transfer of a healthy kidney to a patient." []
+def: "The surgical transfer of a(n) kidney from a donor to a patient." []
 synonym: "kidney grafting" EXACT []
 synonym: "renal transplantation" EXACT []
 synonym: "transplantation of kidney" EXACT []
 xref: NCIT:C15265
+intersection_of: MAXO:0000068 ! transplantation procedure
+intersection_of: RO:0002233 UBERON:0002113
 property_value: http://purl.org/dc/elements/1.1/date 2020-04-07T10:00:01Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -14201,8 +14443,10 @@ id: MAXO:0010050
 name: alcohol intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of alcoholic beverage." []
 synonym: "alcoholic beverage consumption avoidance" EXACT []
+synonym: "alcoholic beverage restricted diet intake" EXACT []
+synonym: "alcoholic beverage restriction" EXACT []
 synonym: "avoid alcoholic beverage intake" EXACT []
-synonym: "avoiding alcoholic beverage intake" EXACT []
+synonym: "avoiding dietary alcoholic beverage intake" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2019-11-18T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -14211,8 +14455,10 @@ id: MAXO:0010051
 name: fava bean intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of broad bean (whole)." []
 synonym: "avoid broad bean (whole) intake" EXACT []
-synonym: "avoiding broad bean (whole) intake" EXACT []
+synonym: "avoiding dietary broad bean (whole) intake" EXACT []
 synonym: "broad bean (whole) consumption avoidance" EXACT []
+synonym: "broad bean (whole) restricted diet intake" EXACT []
+synonym: "broad bean (whole) restriction" EXACT []
 synonym: "fava bean avoidance" EXACT []
 synonym: "fava bean consumption avoidance" EXACT []
 synonym: "windsor bean intake avoidance" EXACT []
@@ -14221,71 +14467,85 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010052
-name: meat food product intake avoidance
+name: dietary meat food product intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of meat food product." []
 synonym: "avoid meat food product intake" EXACT []
-synonym: "avoiding meat food product intake" EXACT []
+synonym: "avoiding dietary meat food product intake" EXACT []
 synonym: "meat food product consumption avoidance" EXACT []
+synonym: "meat food product restricted diet intake" EXACT []
+synonym: "meat food product restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-13T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010053
-name: nut food product intake avoidance
+name: dietary nut food product intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of nut food product." []
 synonym: "avoid nut food product intake" EXACT []
-synonym: "avoiding nut food product intake" EXACT []
+synonym: "avoiding dietary nut food product intake" EXACT []
 synonym: "nut food product consumption avoidance" EXACT []
+synonym: "nut food product restricted diet intake" EXACT []
+synonym: "nut food product restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-13T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010054
-name: saffron food product intake avoidance
+name: dietary saffron food product intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of saffron food product." []
 synonym: "avoid saffron food product intake" EXACT []
-synonym: "avoiding saffron food product intake" EXACT []
+synonym: "avoiding dietary saffron food product intake" EXACT []
 synonym: "saffron food product consumption avoidance" EXACT []
+synonym: "saffron food product restricted diet intake" EXACT []
+synonym: "saffron food product restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-13T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010055
-name: seafood product intake avoidance
+name: dietary seafood product intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of seafood product." []
 synonym: "avoid seafood product intake" EXACT []
-synonym: "avoiding seafood product intake" EXACT []
+synonym: "avoiding dietary seafood product intake" EXACT []
 synonym: "seafood product consumption avoidance" EXACT []
+synonym: "seafood product restricted diet intake" EXACT []
+synonym: "seafood product restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-13T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010056
-name: mussel food product intake avoidance
+name: dietary mussel food product intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of mussel food product." []
 synonym: "avoid mussel food product intake" EXACT []
-synonym: "avoiding mussel food product intake" EXACT []
+synonym: "avoiding dietary mussel food product intake" EXACT []
 synonym: "mussel food product consumption avoidance" EXACT []
+synonym: "mussel food product restricted diet intake" EXACT []
+synonym: "mussel food product restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-13T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010057
-name: clove food product intake avoidance
+name: dietary clove food product intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of clove food product." []
 synonym: "avoid clove food product intake" EXACT []
-synonym: "avoiding clove food product intake" EXACT []
+synonym: "avoiding dietary clove food product intake" EXACT []
 synonym: "clove food product consumption avoidance" EXACT []
+synonym: "clove food product restricted diet intake" EXACT []
+synonym: "clove food product restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-13T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010058
-name: dark chocolate intake avoidance
+name: dietary dark chocolate intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of dark chocolate." []
 synonym: "avoid dark chocolate intake" EXACT []
-synonym: "avoiding dark chocolate intake" EXACT []
+synonym: "avoiding dietary dark chocolate intake" EXACT []
 synonym: "dark chocolate consumption avoidance" EXACT []
+synonym: "dark chocolate restricted diet intake" EXACT []
+synonym: "dark chocolate restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-13T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -14294,18 +14554,22 @@ id: MAXO:0010059
 name: pumpkin seed intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of pumpkin seed (shell off)." []
 synonym: "avoid pumpkin seed (shell off) intake" EXACT []
-synonym: "avoiding pumpkin seed (shell off) intake" EXACT []
+synonym: "avoiding dietary pumpkin seed (shell off) intake" EXACT []
 synonym: "pumpkin seed (shell off) consumption avoidance" EXACT []
+synonym: "pumpkin seed (shell off) restricted diet intake" EXACT []
+synonym: "pumpkin seed (shell off) restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-13T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010060
-name: sesame seed (whole) intake avoidance
+name: dietary sesame seed (whole) intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of sesame seed (whole)." []
 synonym: "avoid sesame seed (whole) intake" EXACT []
-synonym: "avoiding sesame seed (whole) intake" EXACT []
+synonym: "avoiding dietary sesame seed (whole) intake" EXACT []
 synonym: "sesame seed (whole) consumption avoidance" EXACT []
+synonym: "sesame seed (whole) restricted diet intake" EXACT []
+synonym: "sesame seed (whole) restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-13T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -14314,8 +14578,10 @@ id: MAXO:0010061
 name: sunflower seed intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of sunflower seed (whole kernel, raw)." []
 synonym: "avoid sunflower seed (whole kernel, raw) intake" EXACT []
-synonym: "avoiding sunflower seed (whole kernel, raw) intake" EXACT []
+synonym: "avoiding dietary sunflower seed (whole kernel, raw) intake" EXACT []
 synonym: "sunflower seed (whole kernel, raw) consumption avoidance" EXACT []
+synonym: "sunflower seed (whole kernel, raw) restricted diet intake" EXACT []
+synonym: "sunflower seed (whole kernel, raw) restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-01-13T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -14324,8 +14590,10 @@ id: MAXO:0010062
 name: liver intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of liver (whole, raw)." []
 synonym: "avoid liver (whole, raw) intake" EXACT []
-synonym: "avoiding liver (whole, raw) intake" EXACT []
+synonym: "avoiding dietary liver (whole, raw) intake" EXACT []
 synonym: "liver (whole, raw) consumption avoidance" EXACT []
+synonym: "liver (whole, raw) restricted diet intake" EXACT []
+synonym: "liver (whole, raw) restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -14334,8 +14602,10 @@ id: MAXO:0010063
 name: egg intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of egg or egg component." []
 synonym: "avoid egg or egg component intake" EXACT []
-synonym: "avoiding egg or egg component intake" EXACT []
+synonym: "avoiding dietary egg or egg component intake" EXACT []
 synonym: "egg or egg component consumption avoidance" EXACT []
+synonym: "egg or egg component restricted diet intake" EXACT []
+synonym: "egg or egg component restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -14344,8 +14614,10 @@ id: MAXO:0010064
 name: kidney intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of kidney (whole, raw)." []
 synonym: "avoid kidney (whole, raw) intake" EXACT []
-synonym: "avoiding kidney (whole, raw) intake" EXACT []
+synonym: "avoiding dietary kidney (whole, raw) intake" EXACT []
 synonym: "kidney (whole, raw) consumption avoidance" EXACT []
+synonym: "kidney (whole, raw) restricted diet intake" EXACT []
+synonym: "kidney (whole, raw) restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -14354,8 +14626,10 @@ id: MAXO:0010065
 name: pea intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of peas (whole, rehydrated, canned)." []
 synonym: "avoid peas (whole, rehydrated, canned) intake" EXACT []
-synonym: "avoiding peas (whole, rehydrated, canned) intake" EXACT []
+synonym: "avoiding dietary peas (whole, rehydrated, canned) intake" EXACT []
 synonym: "peas (whole, rehydrated, canned) consumption avoidance" EXACT []
+synonym: "peas (whole, rehydrated, canned) restricted diet intake" EXACT []
+synonym: "peas (whole, rehydrated, canned) restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -14364,8 +14638,10 @@ id: MAXO:0010066
 name: bean intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of bean food product." []
 synonym: "avoid bean food product intake" EXACT []
-synonym: "avoiding bean food product intake" EXACT []
+synonym: "avoiding dietary bean food product intake" EXACT []
 synonym: "bean food product consumption avoidance" EXACT []
+synonym: "bean food product restricted diet intake" EXACT []
+synonym: "bean food product restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -14374,8 +14650,10 @@ id: MAXO:0010067
 name: peanut intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of peanut (whole)." []
 synonym: "avoid peanut (whole) intake" EXACT []
-synonym: "avoiding peanut (whole) intake" EXACT []
+synonym: "avoiding dietary peanut (whole) intake" EXACT []
 synonym: "peanut (whole) consumption avoidance" EXACT []
+synonym: "peanut (whole) restricted diet intake" EXACT []
+synonym: "peanut (whole) restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -14384,9 +14662,11 @@ id: MAXO:0010068
 name: soy intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of soybean refined food product." []
 synonym: "avoid soybean refined food product intake" EXACT []
-synonym: "avoiding soybean refined food product intake" EXACT []
+synonym: "avoiding dietary soybean refined food product intake" EXACT []
 synonym: "soya intake avoiance" EXACT []
 synonym: "soybean refined food product consumption avoidance" EXACT []
+synonym: "soybean refined food product restricted diet intake" EXACT []
+synonym: "soybean refined food product restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -14395,9 +14675,11 @@ id: MAXO:0010069
 name: brassicas intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of 010  brassica (cole or cabbage) vegetables, head cabbage, flowerhead brassicas (vb) (ccpr)." []
 synonym: "010  brassica (cole or cabbage) vegetables, head cabbage, flowerhead brassicas (vb) (ccpr) consumption avoidance" EXACT []
+synonym: "010  brassica (cole or cabbage) vegetables, head cabbage, flowerhead brassicas (vb) (ccpr) restricted diet intake" EXACT []
+synonym: "010  brassica (cole or cabbage) vegetables, head cabbage, flowerhead brassicas (vb) (ccpr) restriction" EXACT []
 synonym: "avoid 010  brassica (cole or cabbage) vegetables, head cabbage, flowerhead brassicas (vb) (ccpr) intake" EXACT []
 synonym: "avoid brassicas intake" EXACT []
-synonym: "avoiding 010  brassica (cole or cabbage) vegetables, head cabbage, flowerhead brassicas (vb) (ccpr) intake" EXACT []
+synonym: "avoiding dietary 010  brassica (cole or cabbage) vegetables, head cabbage, flowerhead brassicas (vb) (ccpr) intake" EXACT []
 synonym: "brassicas vegetable intake avoidance" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -14407,8 +14689,10 @@ id: MAXO:0010070
 name: brussels sprout intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of brussels sprout food product." []
 synonym: "avoid brussels sprout food product intake" EXACT []
-synonym: "avoiding brussels sprout food product intake" EXACT []
+synonym: "avoiding dietary brussels sprout food product intake" EXACT []
 synonym: "brussels sprout food product consumption avoidance" EXACT []
+synonym: "brussels sprout food product restricted diet intake" EXACT []
+synonym: "brussels sprout food product restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -14417,8 +14701,10 @@ id: MAXO:0010071
 name: broccoli intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of broccoli food product." []
 synonym: "avoid broccoli food product intake" EXACT []
-synonym: "avoiding broccoli food product intake" EXACT []
+synonym: "avoiding dietary broccoli food product intake" EXACT []
 synonym: "broccoli food product consumption avoidance" EXACT []
+synonym: "broccoli food product restricted diet intake" EXACT []
+synonym: "broccoli food product restriction" EXACT []
 is_a: MAXO:0010069 ! brassicas intake avoidance
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -14428,8 +14714,10 @@ id: MAXO:0010072
 name: cabbage intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of cabbage head food product." []
 synonym: "avoid cabbage head food product intake" EXACT []
-synonym: "avoiding cabbage head food product intake" EXACT []
+synonym: "avoiding dietary cabbage head food product intake" EXACT []
 synonym: "cabbage head food product consumption avoidance" EXACT []
+synonym: "cabbage head food product restricted diet intake" EXACT []
+synonym: "cabbage head food product restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -14438,8 +14726,10 @@ id: MAXO:0010073
 name: cauliflower intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of cauliflower food product." []
 synonym: "avoid cauliflower food product intake" EXACT []
-synonym: "avoiding cauliflower food product intake" EXACT []
+synonym: "avoiding dietary cauliflower food product intake" EXACT []
 synonym: "cauliflower food product consumption avoidance" EXACT []
+synonym: "cauliflower food product restricted diet intake" EXACT []
+synonym: "cauliflower food product restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -14448,18 +14738,22 @@ id: MAXO:0010074
 name: rapeseed intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of rapeseed food product." []
 synonym: "avoid rapeseed food product intake" EXACT []
-synonym: "avoiding rapeseed food product intake" EXACT []
+synonym: "avoiding dietary rapeseed food product intake" EXACT []
 synonym: "rapeseed food product consumption avoidance" EXACT []
+synonym: "rapeseed food product restricted diet intake" EXACT []
+synonym: "rapeseed food product restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010075
-name: rapeseed oil intake avoidance
+name: dietary rapeseed oil intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of rapeseed oil." []
 synonym: "avoid rapeseed oil intake" EXACT []
-synonym: "avoiding rapeseed oil intake" EXACT []
+synonym: "avoiding dietary rapeseed oil intake" EXACT []
 synonym: "rapeseed oil consumption avoidance" EXACT []
+synonym: "rapeseed oil restricted diet intake" EXACT []
+synonym: "rapeseed oil restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -14468,60 +14762,72 @@ id: MAXO:0010076
 name: rapeseed flour intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of rapeseed meal." []
 synonym: "avoid rapeseed meal intake" EXACT []
-synonym: "avoiding rapeseed meal intake" EXACT []
+synonym: "avoiding dietary rapeseed meal intake" EXACT []
 synonym: "rapeseed meal consumption avoidance" EXACT []
+synonym: "rapeseed meal restricted diet intake" EXACT []
+synonym: "rapeseed meal restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010077
-name: cephalopod intake avoidance
+name: dietary cephalopod intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of cephalopod." []
 synonym: "avoid cephalopod intake" EXACT []
-synonym: "avoiding cephalopod intake" EXACT []
+synonym: "avoiding dietary cephalopod intake" EXACT []
 synonym: "cephalopod consumption avoidance" EXACT []
+synonym: "cephalopod restricted diet intake" EXACT []
+synonym: "cephalopod restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010078
-name: crustacean intake avoidance
+name: dietary crustacean intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of crustacean." []
 synonym: "avoid crustacean intake" EXACT []
-synonym: "avoiding crustacean intake" EXACT []
+synonym: "avoiding dietary crustacean intake" EXACT []
 synonym: "crustacean consumption avoidance" EXACT []
+synonym: "crustacean restricted diet intake" EXACT []
+synonym: "crustacean restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010079
-name: barley malt beer beverage intake avoidance
+name: dietary barley malt beer beverage intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of barley malt beer beverage." []
 synonym: "avoid barley malt beer beverage intake" EXACT []
-synonym: "avoiding barley malt beer beverage intake" EXACT []
+synonym: "avoiding dietary barley malt beer beverage intake" EXACT []
 synonym: "barley malt beer beverage consumption avoidance" EXACT []
+synonym: "barley malt beer beverage restricted diet intake" EXACT []
+synonym: "barley malt beer beverage restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010080
-name: corn syrup (high fructose) intake avoidance
+name: dietary corn syrup (high fructose) intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of corn syrup (high fructose)." []
 synonym: "avoid corn syrup (high fructose) intake" EXACT []
-synonym: "avoiding corn syrup (high fructose) intake" EXACT []
+synonym: "avoiding dietary corn syrup (high fructose) intake" EXACT []
 synonym: "corn syrup (high fructose) consumption avoidance" EXACT []
+synonym: "corn syrup (high fructose) restricted diet intake" EXACT []
+synonym: "corn syrup (high fructose) restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010081
-name: sorbitol syrup intake avoidance
+name: dietary sorbitol syrup intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of sorbitol syrup." []
 synonym: "avoid sorbitol syrup intake" EXACT []
-synonym: "avoiding sorbitol syrup intake" EXACT []
+synonym: "avoiding dietary sorbitol syrup intake" EXACT []
 synonym: "dietary sorbitol intake avoidance" EXACT []
 synonym: "sorbitol intake avoidance" EXACT []
 synonym: "sorbitol syrup consumption avoidance" EXACT []
+synonym: "sorbitol syrup restricted diet intake" EXACT []
+synonym: "sorbitol syrup restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -14530,8 +14836,10 @@ id: MAXO:0010082
 name: human milk intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of human milk based food product." []
 synonym: "avoid human milk based food product intake" EXACT []
-synonym: "avoiding human milk based food product intake" EXACT []
+synonym: "avoiding dietary human milk based food product intake" EXACT []
 synonym: "human milk based food product consumption avoidance" EXACT []
+synonym: "human milk based food product restricted diet intake" EXACT []
+synonym: "human milk based food product restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -14540,9 +14848,11 @@ id: MAXO:0010083
 name: cow milk intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of cow milk based food product." []
 synonym: "avoid cow milk based food product intake" EXACT []
-synonym: "avoiding cow milk based food product intake" EXACT []
+synonym: "avoiding dietary cow milk based food product intake" EXACT []
 synonym: "bovine milk intake avoidance" EXACT []
 synonym: "cow milk based food product consumption avoidance" EXACT []
+synonym: "cow milk based food product restricted diet intake" EXACT []
+synonym: "cow milk based food product restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -14551,8 +14861,10 @@ id: MAXO:0010084
 name: fruit intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of fruit (whole, raw)." []
 synonym: "avoid fruit (whole, raw) intake" EXACT []
-synonym: "avoiding fruit (whole, raw) intake" EXACT []
+synonym: "avoiding dietary fruit (whole, raw) intake" EXACT []
 synonym: "fruit (whole, raw) consumption avoidance" EXACT []
+synonym: "fruit (whole, raw) restricted diet intake" EXACT []
+synonym: "fruit (whole, raw) restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -14561,8 +14873,10 @@ id: MAXO:0010085
 name: raw egg intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of hen egg (whole, shell off, raw)." []
 synonym: "avoid hen egg (whole, shell off, raw) intake" EXACT []
-synonym: "avoiding hen egg (whole, shell off, raw) intake" EXACT []
+synonym: "avoiding dietary hen egg (whole, shell off, raw) intake" EXACT []
 synonym: "hen egg (whole, shell off, raw) consumption avoidance" EXACT []
+synonym: "hen egg (whole, shell off, raw) restricted diet intake" EXACT []
+synonym: "hen egg (whole, shell off, raw) restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -14571,8 +14885,10 @@ id: MAXO:0010086
 name: fruit juice intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of fruit juice food product." []
 synonym: "avoid fruit juice food product intake" EXACT []
-synonym: "avoiding fruit juice food product intake" EXACT []
+synonym: "avoiding dietary fruit juice food product intake" EXACT []
 synonym: "fruit juice food product consumption avoidance" EXACT []
+synonym: "fruit juice food product restricted diet intake" EXACT []
+synonym: "fruit juice food product restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -14581,18 +14897,22 @@ id: MAXO:0010087
 name: cane juice intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of sugar cane juice (pure)." []
 synonym: "avoid sugar cane juice (pure) intake" EXACT []
-synonym: "avoiding sugar cane juice (pure) intake" EXACT []
+synonym: "avoiding dietary sugar cane juice (pure) intake" EXACT []
 synonym: "sugar cane juice (pure) consumption avoidance" EXACT []
+synonym: "sugar cane juice (pure) restricted diet intake" EXACT []
+synonym: "sugar cane juice (pure) restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010088
-name: organ meat intake avoidance
+name: dietary organ meat intake avoidance
 def: "A medical requirement or recommendation of avoiding the consumption of organ meat." []
 synonym: "avoid organ meat intake" EXACT []
-synonym: "avoiding organ meat intake" EXACT []
+synonym: "avoiding dietary organ meat intake" EXACT []
 synonym: "organ meat consumption avoidance" EXACT []
+synonym: "organ meat restricted diet intake" EXACT []
+synonym: "organ meat restriction" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date 2020-05-12T11:00:00Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
