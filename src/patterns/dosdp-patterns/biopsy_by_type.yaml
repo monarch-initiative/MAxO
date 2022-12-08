@@ -1,0 +1,72 @@
+pattern_name: biopsy_by_type
+pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/biopsy_by_type.yaml
+description: "Different types of clinical biopsy procedure"
+
+contributors:
+  - https://orcid.org/0000-0001-7941-2961
+  - https://orcid.org/0000-0002-7356-1779
+
+classes:
+  biopsy: OBI:0002650
+  diagnostic procedure: MAXO:0000003
+
+relations:
+  has_input: RO:0002233
+  has_part: BFO:0000051
+  
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym 
+  created_by: oio:created_by
+  date: dc:date
+  comment: rdfs:comment
+  xref: oio:hasDbXref
+ 
+vars:
+  biopsy: "'biopsy'"
+  
+data_vars:
+  date: "'date'"
+  created_by: "'created_by'"
+  comment: "'comment'"
+  xref: "database cross reference"
+data_list_vars:
+  syns: xsd:string
+name:
+  text: "clinical %s"
+  vars:
+   - biopsy
+
+annotations:   
+  - annotationProperty: date
+    text: "%s"
+    vars:
+     - date
+     
+  - annotationProperty: created_by
+    text: "%s"
+    vars:
+     - created_by
+
+  - annotationProperty: comment
+    text: "%s"
+    vars:
+     - comment
+    
+  - annotationProperty: xref
+    text: "%s"
+    vars:
+     - xref
+
+exact_synonym:
+  value: syns
+
+def:
+  text: "Use of %s to obtain a clinical specimen."
+  vars:
+    - biopsy
+
+equivalentTo:
+  text: "'diagnostic procedure' and 'has_part' some %s"
+  vars:
+    - biopsy
+   
