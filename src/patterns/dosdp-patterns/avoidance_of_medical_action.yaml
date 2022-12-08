@@ -68,9 +68,12 @@ def:
   text: "Avoid the administration or use of %s."
   vars:
     - medical_action
+    
+logical_axioms:
+  - axiom_type: subClassOf
+    text: "'avoidance'"
 
-subClassOf:
-  text: "'avoidance' and ('avoided_medical_action' some %s)"
-  vars:
-    - medical_action
-   
+  - axiom_type: subClassOf
+    text: "'avoided_medical_action' some %s"
+    vars:
+      - medical_action

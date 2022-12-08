@@ -90,7 +90,11 @@ def:
   vars:
     - avoid_food
 
-subClassOf:
-  text: "'nutrition intake avoidance' and ('avoided_food' some %s)"
-  vars:
-    - avoid_food
+logical_axioms:
+  - axiom_type: subClassOf
+    text: "'nutrition intake avoidance'"
+
+  - axiom_type: subClassOf
+    text: "'avoided_food' some %s"
+    vars:
+      - avoid_food

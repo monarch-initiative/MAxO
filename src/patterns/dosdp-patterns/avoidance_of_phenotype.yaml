@@ -72,9 +72,12 @@ def:
   text: "A medical requirement or recommendation of avoiding or preventing %s."
   vars:
     - phenotypic_ab
+    
+logical_axioms:
+  - axiom_type: subClassOf
+    text: "'physiologic state'"
 
-subClassOf:
-  text: "'physiologic state' and 'avoided_behavior' some %s"
-  vars:
-    - phenotypic_ab
-   
+  - axiom_type: subClassOf
+    text: "'avoided_behavior' some %s"
+    vars:
+      - phenotypic_ab

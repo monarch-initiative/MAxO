@@ -69,8 +69,11 @@ def:
   vars:
     - behavior_process
 
-subClassOf:
-  text: "'cognitive and behavioral intervention' and ('avoided_behavior' some %s)"
-  vars:
-    - behavior_process
-   
+logical_axioms:
+  - axiom_type: subClassOf
+    text: "'cognitive and behavioral intervention'"
+
+  - axiom_type: subClassOf
+    text: "'avoided_behavior' some %s"
+    vars:
+      - behavior_process
