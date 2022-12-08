@@ -1,18 +1,18 @@
-pattern_name: swab_by_location
-pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/swab_by_location.yaml
-description: "Collection of biological material using a swab"
+pattern_name: biopsy_by_type
+pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/biopsy_by_location.yaml
+description: "Different types of clinical biopsy procedure"
 
 contributors:
   - https://orcid.org/0000-0001-7941-2961
   - https://orcid.org/0000-0002-7356-1779
 
 classes:
-  swab: MAXO:0009099
-  location: owl:Thing
+  biopsy: OBI:0002650
+  diagnostic procedure: MAXO:0000003
 
 relations:
   has_input: RO:0002233
-  part_of: BFO:0000050
+  has_part: RO:0002584
   
 annotationProperties:
   exact_synonym: oio:hasExactSynonym 
@@ -22,7 +22,7 @@ annotationProperties:
   xref: oio:hasDbXref
  
 vars:
-  location: "'location'"
+  biopsy: "'biopsy'"
   
 data_vars:
   date: "'date'"
@@ -32,16 +32,11 @@ data_vars:
 data_list_vars:
   syns: xsd:string
 name:
-  text: "%s swab collection"
+  text: "clinical %s"
   vars:
-   - location
+   - biopsy
 
-annotations:
-  - annotationProperty: exact_synonym
-    text: "swab collection of %s"
-    vars:
-     - location
-     
+annotations:   
   - annotationProperty: date
     text: "%s"
     vars:
@@ -66,12 +61,12 @@ exact_synonym:
   value: syns
 
 def:
-  text: "Collection biological material from within the %s with a cotton swab for use in clinical tests."
+  text: "Use of %s to obtain a clinical specimen."
   vars:
-    - location
+    - biopsy
 
 equivalentTo:
-  text: "'swab' and 'has_input' some ('part_of' some %s)"
+  text: "'diagnostic procedure' and 'has_part' some %s"
   vars:
-    - location
+    - biopsy
    
