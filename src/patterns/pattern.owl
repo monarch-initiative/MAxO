@@ -14,6 +14,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_50906>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_52210>))
 Declaration(Class(<http://purl.obolibrary.org/obo/HP_0000118>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000003>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000056>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000058>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000068>))
@@ -31,10 +32,11 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000571>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000595>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001014>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001113>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001269>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0009069>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0009072>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0009099>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NBO_0000313>))
-Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0002600>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0002650>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PR_000000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0000463>))
@@ -53,6 +55,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_foo
 Declaration(Class(<http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_medical_action.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_phenotype.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/maxo/patterns/biopsy_by_location.yaml>))
+Declaration(Class(<http://purl.obolibrary.org/obo/maxo/patterns/biopsy_by_type.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/maxo/patterns/ct_by_location.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/maxo/patterns/endoscopy_by_location.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/maxo/patterns/examination_by_location.yaml>))
@@ -67,6 +70,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/maxo/patterns/swab_by_location
 Declaration(Class(<http://purl.obolibrary.org/obo/maxo/patterns/ultrasonography_by_location.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/mri_by_location.yaml>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0000521>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0000864>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0001015>))
@@ -237,7 +241,8 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_behavior_process.yaml> "xsd:string"^^xsd:string)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_behavior_process.yaml> "'comment'"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_behavior_process.yaml> "'behavior process' avoidance"^^xsd:string)
-SubClassOf(<http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_behavior_process.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000525> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/MAXO_0000521> <http://purl.obolibrary.org/obo/NBO_0000313>)))
+SubClassOf(<http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_behavior_process.yaml> <http://purl.obolibrary.org/obo/MAXO_0000525>)
+SubClassOf(<http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_behavior_process.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/MAXO_0000521> <http://purl.obolibrary.org/obo/NBO_0000313>))
 
 # Class: <http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_food_intake.yaml> (dietary 'material entity' intake avoidance)
 
@@ -254,7 +259,8 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_food_intake.yaml> "xsd:string"^^xsd:string)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_food_intake.yaml> "'comment'"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_food_intake.yaml> "dietary 'material entity' intake avoidance"^^xsd:string)
-SubClassOf(<http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_food_intake.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000056> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/MAXO_0001027> <http://purl.obolibrary.org/obo/BFO_0000040>)))
+SubClassOf(<http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_food_intake.yaml> <http://purl.obolibrary.org/obo/MAXO_0000056>)
+SubClassOf(<http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_food_intake.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/MAXO_0001027> <http://purl.obolibrary.org/obo/BFO_0000040>))
 
 # Class: <http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_medical_action.yaml> ('medical_action' avoidance)
 
@@ -267,7 +273,8 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_medical_action.yaml> "avoiding 'medical_action'"^^xsd:string)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_medical_action.yaml> "'comment'"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_medical_action.yaml> "'medical_action' avoidance"^^xsd:string)
-SubClassOf(<http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_medical_action.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0001014> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/MAXO_0001015> <http://purl.obolibrary.org/obo/MAXO_0000001>)))
+SubClassOf(<http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_medical_action.yaml> <http://purl.obolibrary.org/obo/MAXO_0001014>)
+SubClassOf(<http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_medical_action.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/MAXO_0001015> <http://purl.obolibrary.org/obo/MAXO_0000001>))
 
 # Class: <http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_phenotype.yaml> ('phenotypic abnormality' prevention recommendation)
 
@@ -281,7 +288,8 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_phenotype.yaml> "xsd:string"^^xsd:string)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_phenotype.yaml> "'comment'"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_phenotype.yaml> "'phenotypic abnormality' prevention recommendation"^^xsd:string)
-SubClassOf(<http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_phenotype.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0001113> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/MAXO_0000521> <http://purl.obolibrary.org/obo/HP_0000118>)))
+SubClassOf(<http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_phenotype.yaml> <http://purl.obolibrary.org/obo/MAXO_0001113>)
+SubClassOf(<http://purl.obolibrary.org/obo/maxo/patterns/avoidance_of_phenotype.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/MAXO_0000521> <http://purl.obolibrary.org/obo/HP_0000118>))
 
 # Class: <http://purl.obolibrary.org/obo/maxo/patterns/biopsy_by_location.yaml> (biopsy of 'location')
 
@@ -294,7 +302,19 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/maxo/patterns/biopsy_by_location.yaml> "xsd:string"^^xsd:string)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/maxo/patterns/biopsy_by_location.yaml> "'comment'"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/maxo/patterns/biopsy_by_location.yaml> "biopsy of 'location'"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/maxo/patterns/biopsy_by_location.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0002650> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> owl:Thing))))
+EquivalentClasses(<http://purl.obolibrary.org/obo/maxo/patterns/biopsy_by_location.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0001269> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> owl:Thing))))
+
+# Class: <http://purl.obolibrary.org/obo/maxo/patterns/biopsy_by_type.yaml> (clinical 'biopsy')
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/maxo/patterns/biopsy_by_type.yaml> "Use of 'biopsy' to obtain a clinical specimen."^^xsd:string)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/date> <http://purl.obolibrary.org/obo/maxo/patterns/biopsy_by_type.yaml> "'date'"^^xsd:string)
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/maxo/patterns/biopsy_by_type.yaml> "biopsy_by_type"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/maxo/patterns/biopsy_by_type.yaml> "'created_by'"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/maxo/patterns/biopsy_by_type.yaml> "database cross reference"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/maxo/patterns/biopsy_by_type.yaml> "xsd:string"^^xsd:string)
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/maxo/patterns/biopsy_by_type.yaml> "'comment'"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/maxo/patterns/biopsy_by_type.yaml> "clinical 'biopsy'"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/maxo/patterns/biopsy_by_type.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000003> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/OBI_0002650>)))
 
 # Class: <http://purl.obolibrary.org/obo/maxo/patterns/ct_by_location.yaml> ('location' CT)
 
@@ -443,7 +463,7 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/maxo/patterns/surgical_repair_
 
 # Class: <http://purl.obolibrary.org/obo/maxo/patterns/swab_by_location.yaml> ('location' swab collection)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/maxo/patterns/swab_by_location.yaml> "Collection biological material from within the 'location' with a cotton swab."^^xsd:string)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/maxo/patterns/swab_by_location.yaml> "Collection biological material from within the 'location' with a cotton swab for use in clinical tests."^^xsd:string)
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/date> <http://purl.obolibrary.org/obo/maxo/patterns/swab_by_location.yaml> "'date'"^^xsd:string)
 AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/maxo/patterns/swab_by_location.yaml> "swab_by_location"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/maxo/patterns/swab_by_location.yaml> "'created_by'"^^xsd:string)
@@ -452,7 +472,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/maxo/patterns/swab_by_location.yaml> "xsd:string"^^xsd:string)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/maxo/patterns/swab_by_location.yaml> "'comment'"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/maxo/patterns/swab_by_location.yaml> "'location' swab collection"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/maxo/patterns/swab_by_location.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0002600> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> owl:Thing))))
+EquivalentClasses(<http://purl.obolibrary.org/obo/maxo/patterns/swab_by_location.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0009099> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> owl:Thing))))
 
 # Class: <http://purl.obolibrary.org/obo/maxo/patterns/ultrasonography_by_location.yaml> ('location' ultrasonography)
 
