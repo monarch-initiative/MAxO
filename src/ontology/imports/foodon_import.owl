@@ -13,9 +13,9 @@
      xmlns:schema="http://schema.org/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/imports/foodon_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2022-11-21/imports/foodon_import.owl"/>
-        <dc:source rdf:resource="http://purl.obolibrary.org/obo/foodon/releases/2022-10-22/foodon.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-11-21</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2022-12-09/imports/foodon_import.owl"/>
+        <dc:source rdf:resource="http://purl.obolibrary.org/obo/foodon/releases/2022-12-01/foodon.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-12-09</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -225,6 +225,12 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
@@ -234,6 +240,12 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.org/dc/elements/1.1/date -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
     
 
 
@@ -291,7 +303,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref">
-        <rdfs:label xml:lang="en">database cross reference</rdfs:label>
         <rdfs:label>database_cross_reference</rdfs:label>
     </owl:AnnotationProperty>
     
@@ -374,6 +385,12 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://www.w3.org/2000/01/rdf-schema#anyURI -->
 
     <rdfs:Datatype rdf:about="http://www.w3.org/2000/01/rdf-schema#anyURI"/>
+    
+
+
+    <!-- http://www.w3.org/XML/1998/namespacestring -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/XML/1998/namespacestring"/>
     
 
 
@@ -472,19 +489,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <obo:IAO_0000115 xml:lang="en">The inverse property of is_specified_output_of</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
         <rdfs:label xml:lang="en">has_specified_output</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0000052 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000052">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <obo:IAO_0000111 xml:lang="en">inheres in</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
-        <rdfs:label xml:lang="en">characteristic of</rdfs:label>
-        <rdfs:label xml:lang="en">inheres in</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -658,7 +662,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000001">
         <obo:BFO_0000179>entity</obo:BFO_0000179>
         <obo:BFO_0000180>Entity</obo:BFO_0000180>
-        <obo:IAO_0000111 xml:lang="en">entity</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">Julius Caesar</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">Verdi’s Requiem</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">the Second World War</obo:IAO_0000112>
@@ -666,13 +669,10 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <obo:IAO_0000116 xml:lang="en">BFO 2 Reference: In all areas of empirical inquiry we encounter general terms of two sorts. First are general terms which refer to universals or types:animaltuberculosissurgical procedurediseaseSecond, are general terms used to refer to groups of entities which instantiate a given universal but do not correspond to the extension of any subuniversal of that universal because there is nothing intrinsic to the entities in question by virtue of which they – and only they – are counted as belonging to the given group. Examples are: animal purchased by the Emperortuberculosis diagnosed on a Wednesdaysurgical procedure performed on a patient from Stockholmperson identified as candidate for clinical trial #2056-555person who is signatory of Form 656-PPVpainting by Leonardo da VinciSuch terms, which represent what are called ‘specializations’ in [81</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">Entity doesn&apos;t have a closure axiom because the subclasses don&apos;t necessarily exhaust all possibilites. For example Werner Ceusters &apos;portions of reality&apos; include 4 sorts, entities (as BFO construes them), universals, configurations, and relations. It is an open question as to whether entities as construed in BFO will at some point also include these other portions of reality. See, for example, &apos;How to track absolutely everything&apos; at http://www.referent-tracking.com/_RTU/papers/CeustersICbookRevised.pdf</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/agro.owl"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/dron.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ecocore.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/envo.owl"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ons.owl"/>
         <obo:IAO_0000600 xml:lang="en">An entity is anything that exists or has existed or will exist. (axiom label in BFO2 Reference: [001-001])</obo:IAO_0000600>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
         <rdfs:label>entity</rdfs:label>
@@ -714,15 +714,9 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <obo:IAO_0000116 xml:lang="en">BFO 2 Reference: Continuant entities are entities which can be sliced to yield parts only along the spatial dimension, yielding for example the parts of your table which we call its legs, its top, its nails. ‘My desk stretches from the window to the door. It has spatial parts, and can be sliced (in space) in two. With respect to time, however, a thing is a continuant.’ [60, p. 240</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">Continuant doesn&apos;t have a closure axiom because the subclasses don&apos;t necessarily exhaust all possibilites. For example, in an expansion involving bringing in some of Ceuster&apos;s other portions of reality, questions are raised as to whether universals are continuants</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/agro.owl"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/dron.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/envo.owl"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ons.owl"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/pato.owl"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/po.owl"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
         <obo:IAO_0000600 xml:lang="en">A continuant is an entity that persists, endures, or continues to exist through time while maintaining its identity. (axiom label in BFO2 Reference: [008-002])</obo:IAO_0000600>
         <obo:IAO_0000601 xml:lang="en">if b is a continuant and if, for some t, c has_continuant_part b at t, then c is a continuant. (axiom label in BFO2 Reference: [126-001])</obo:IAO_0000601>
         <obo:IAO_0000601 xml:lang="en">if b is a continuant and if, for some t, cis continuant_part of b at t, then c is a continuant. (axiom label in BFO2 Reference: [009-002])</obo:IAO_0000601>
@@ -892,12 +886,9 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <obo:IAO_0000115>b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/agro.owl"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/dron.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/envo.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/po.owl"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
         <obo:IAO_0000601 xml:lang="en">For any independent continuant b and any time t there is some spatial region r such that b is located_in r at t. (axiom label in BFO2 Reference: [134-001])</obo:IAO_0000601>
         <obo:IAO_0000601 xml:lang="en">For every independent continuant b and time t during the region of time spanned by its life, there are entities which s-depends_on b during t. (axiom label in BFO2 Reference: [018-002])</obo:IAO_0000601>
         <obo:IAO_0000602>(forall (x t) (if (IndependentContinuant x) (exists (r) (and (SpatialRegion r) (locatedInAt x r t))))) // axiom label in BFO2 CLIF: [134-001] </obo:IAO_0000602>
@@ -1058,7 +1049,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <obo:BFO_0000179>sdc</obo:BFO_0000179>
         <obo:BFO_0000180>SpecificallyDependentContinuant</obo:BFO_0000180>
-        <obo:IAO_0000111 xml:lang="en">specifically dependent continuant</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">Reciprocal specifically dependent continuants: the function of this key to open this lock and the mutually dependent disposition of this lock: to be opened by this key</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">of one-sided specifically dependent continuants: the mass of this tomato</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">of relational dependent continuants (multiple bearers): John’s love for Mary, the ownership relation between John and this statue, the relation of authority between John and his subordinates.</obo:IAO_0000112>
@@ -1070,11 +1060,8 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <obo:IAO_0000112 xml:lang="en">the role of being a doctor</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">the shape of this hole.</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">the smell of this portion of mozzarella</obo:IAO_0000112>
-        <obo:IAO_0000115 xml:lang="en">A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="en">b is a relational specifically dependent continuant = Def. b is a specifically dependent continuant and there are n &amp;gt; 1 independent continuants c1, … cn which are not spatial regions are such that for all 1  i &amp;lt; j  n, ci  and cj share no common parts, are such that for each 1  i  n, b s-depends_on ci at every time t during the course of b’s existence (axiom label in BFO2 Reference: [131-004])</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">b is a specifically dependent continuant = Def. b is a continuant &amp; there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">Specifically dependent continuant doesn&apos;t have a closure axiom because the subclasses don&apos;t necessarily exhaust all possibilites. We&apos;re not sure what else will develop here, but for example there are questions such as what are promises, obligation, etc.</obo:IAO_0000116>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ons.owl"/>
         <obo:IAO_0000602>(iff (SpecificallyDependentContinuant a) (and (Continuant a) (forall (t) (if (existsAt a t) (exists (b) (and (IndependentContinuant b) (not (SpatialRegion b)) (specificallyDependsOnAt a b t))))))) // axiom label in BFO2 CLIF: [050-003] </obo:IAO_0000602>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
         <rdfs:label xml:lang="en">specifically dependent continuant</rdfs:label>
@@ -1143,14 +1130,11 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <obo:BFO_0000179>gdc</obo:BFO_0000179>
         <obo:BFO_0000180>GenericallyDependentContinuant</obo:BFO_0000180>
-        <obo:IAO_0000111 xml:lang="en">generically dependent continuant</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">The entries in your database are patterns instantiated as quality instances in your hard drive. The database itself is an aggregate of such patterns. When you create the database you create a particular instance of the generically dependent continuant type database. Each entry in the database is an instance of the generically dependent continuant type IAO: information content entity.</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">the pdf file on your laptop, the pdf file that is a copy thereof on my laptop</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">the sequence of this protein molecule; the sequence that is a copy thereof in that protein molecule.</obo:IAO_0000112>
-        <obo:IAO_0000115 xml:lang="en">A continuant that is dependent on one or other independent continuant bearers. For every instance of A requires some instance of (an independent continuant type) B but which instance of B serves can change from time to time.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">b is a generically dependent continuant = Def. b is a continuant that g-depends_on one or more other entities. (axiom label in BFO2 Reference: [074-001])</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ons.owl"/>
         <obo:IAO_0000602>(iff (GenericallyDependentContinuant a) (and (Continuant a) (exists (b t) (genericallyDependsOnAt a b t)))) // axiom label in BFO2 CLIF: [074-001] </obo:IAO_0000602>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
         <rdfs:label xml:lang="en">generically dependent continuant</rdfs:label>
@@ -1283,7 +1267,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411041"/>
         <obo:IAO_0000115 xml:lang="en">A material entity that is ingested and contributes to survival, growth and development</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
-        <rdfs:label xml:lang="en">dietary chemical component</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">dietary chemical component</rdfs:label>
     </owl:Class>
     
 
@@ -1295,7 +1279,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <obo:IAO_0000115 xml:lang="en">Carbohydrates that are absorbed in the small intestine and provide carbohydrate for metabolism in monogastric animals.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
         <oboInOwl:hasExactSynonym xml:lang="en">digestible carbohydrate</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">available carbohydrate</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">available carbohydrate</rdfs:label>
     </owl:Class>
     
 
@@ -1306,7 +1290,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDNO_0000003"/>
         <obo:IAO_0000115 xml:lang="en">Available carbohydrate in monosaccharide and disaccharide form</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
-        <rdfs:label xml:lang="en">free sugar</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">free sugar</rdfs:label>
     </owl:Class>
     
 
@@ -1318,7 +1302,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <obo:IAO_0000115 xml:lang="en">A mineral nutrient that represents a major proportion of the minerals required in the diet</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
         <oboInOwl:hasExactSynonym xml:lang="en">macromineral</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">macro element</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">macro element</rdfs:label>
     </owl:Class>
     
 
@@ -1330,7 +1314,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <obo:IAO_0000115 xml:lang="en">Mineral nutrient that is present in a very low concentration within the diet</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
         <oboInOwl:hasExactSynonym xml:lang="en">micromineral</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">trace element</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">trace element</rdfs:label>
     </owl:Class>
     
 
@@ -1342,7 +1326,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <obo:IAO_0000115 xml:lang="en">A plant metabolite that is not essential for growth or division of plant cells.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
         <oboInOwl:hasExactSynonym xml:lang="en">secondary metabolite</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">plant secondary metabolite</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">plant secondary metabolite</rdfs:label>
     </owl:Class>
     
 
@@ -1354,7 +1338,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <obo:IAO_0000115 xml:lang="en">An organic molecule that has a vitamin(role)</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
         <rdfs:comment xml:lang="en">This term can be assigned to CHEBI or any other ontology that claims it</rdfs:comment>
-        <rdfs:label xml:lang="en">vitamin (molecular entity)</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">vitamin (molecular entity)</rdfs:label>
     </owl:Class>
     
 
@@ -1365,7 +1349,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDNO_0000011"/>
         <obo:IAO_0000115 xml:lang="en">Calcium ingested by an organism that contributes to the survival, growth, development, or other biological function of itself, its bionts, or its holobionts</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
-        <rdfs:label xml:lang="en">dietary calcium</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">dietary calcium</rdfs:label>
     </owl:Class>
     
 
@@ -1376,7 +1360,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDNO_0000011"/>
         <obo:IAO_0000115 xml:lang="en">Sulfur ingested by an organism that contributes to the survival, growth, development, or other biological function of itself, its bionts, or its holobionts</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
-        <rdfs:label xml:lang="en">dietary sulfur</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">dietary sulfur</rdfs:label>
     </owl:Class>
     
 
@@ -1387,7 +1371,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDNO_0000012"/>
         <obo:IAO_0000115 xml:lang="en">Fluorine ingested by an organism that contributes to the survival, growth, development, or other biological function of itself, its bionts, or its holobionts</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
-        <rdfs:label xml:lang="en">dietary fluorine</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">dietary fluorine</rdfs:label>
     </owl:Class>
     
 
@@ -1468,7 +1452,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:12777</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>vitamin A</rdfs:label>
-        <rdfs:label xml:lang="en">vitamin A</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">vitamin A</rdfs:label>
     </owl:Class>
     
 
@@ -1497,7 +1481,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:132142</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>1,4-naphthoquinones</rdfs:label>
-        <rdfs:label xml:lang="en">1,4-napthoquinone</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">1,4-naphthoquinones</rdfs:label>
     </owl:Class>
     
 
@@ -1593,7 +1577,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:15354</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>choline</rdfs:label>
-        <rdfs:label xml:lang="en">choline</rdfs:label>
     </owl:Class>
     
 
@@ -1704,10 +1687,9 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:hasRelatedSynonym>aminoethanoic acid</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>CHEBI:15428</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
-        <rdfs:comment xml:lang="en">LanguaL curation note: See &quot;food additive&quot; comments.</rdfs:comment>
         <rdfs:comment xml:lang="en">LanguaL term definition: Food additive; technological purpose(s): flavour enhancer.</rdfs:comment>
         <rdfs:label>glycine</rdfs:label>
-        <rdfs:label xml:lang="en">glycine</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">glycine</rdfs:label>
     </owl:Class>
     
 
@@ -1762,7 +1744,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:15889</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>sterol</rdfs:label>
-        <rdfs:label xml:lang="en">sterol</rdfs:label>
     </owl:Class>
     
 
@@ -1900,7 +1881,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:15940</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>nicotinic acid</rdfs:label>
-        <rdfs:label xml:lang="en">nicotinic acid</rdfs:label>
     </owl:Class>
     
 
@@ -1957,7 +1937,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:16113</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>cholesterol</rdfs:label>
-        <rdfs:label xml:lang="en">cholesterol</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">cholesterol</rdfs:label>
     </owl:Class>
     
 
@@ -2006,7 +1986,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:16646</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>carbohydrate</rdfs:label>
-        <rdfs:label xml:lang="en">carbohydrate</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">carbohydrate</rdfs:label>
     </owl:Class>
     
 
@@ -2096,7 +2076,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:16709</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>pyridoxine</rdfs:label>
-        <rdfs:label xml:lang="en">pyridoxine</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">pyridoxine</rdfs:label>
     </owl:Class>
     
 
@@ -2120,7 +2100,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:167164</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>mineral nutrient</rdfs:label>
-        <rdfs:label xml:lang="en">mineral nutrient</rdfs:label>
     </owl:Class>
     
 
@@ -2182,7 +2161,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:16811</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>methionine</rdfs:label>
-        <rdfs:label xml:lang="en">methionine</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">methionine</rdfs:label>
     </owl:Class>
     
 
@@ -2310,10 +2289,9 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:hasSynonym xml:lang="en">riboflavin, synthetic</oboInOwl:hasSynonym>
         <oboInOwl:id>CHEBI:17015</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
-        <rdfs:comment xml:lang="en">LanguaL curation note: See &quot;food additive&quot; comments.</rdfs:comment>
         <rdfs:comment xml:lang="en">LanguaL term definition: Food additive; technological purpose(s): colour.</rdfs:comment>
         <rdfs:label>riboflavin</rdfs:label>
-        <rdfs:label xml:lang="en">riboflavin</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">riboflavin</rdfs:label>
     </owl:Class>
     
 
@@ -2349,7 +2327,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:17051</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>fluoride</rdfs:label>
-        <rdfs:label xml:lang="en">fluoride</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">fluoride</rdfs:label>
     </owl:Class>
     
 
@@ -2394,7 +2372,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:17234</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>glucose</rdfs:label>
-        <rdfs:label xml:lang="en">glucose</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">glucose</rdfs:label>
     </owl:Class>
     
 
@@ -2444,7 +2422,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:17439</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>cyanocob(III)alamin</rdfs:label>
-        <rdfs:label xml:lang="en">cyanocob(III)alamin</rdfs:label>
     </owl:Class>
     
 
@@ -2549,10 +2526,9 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:hasSynonym xml:lang="en">carotenes</oboInOwl:hasSynonym>
         <oboInOwl:id>CHEBI:17579</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
-        <rdfs:comment xml:lang="en">LanguaL curation note: See &quot;food additive&quot; comments.</rdfs:comment>
         <rdfs:comment xml:lang="en">LanguaL term definition: Food additive.</rdfs:comment>
         <rdfs:label>beta-carotene</rdfs:label>
-        <rdfs:label xml:lang="en">β-carotene</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">β-carotene</rdfs:label>
     </owl:Class>
     
 
@@ -2583,7 +2559,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:comment xml:lang="en">Langual document note: DIRECTIVE 2002/46/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 10 June 2002 on the approximation of the laws of the Member States relating to food supplements [http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2002:183:0051:0057:EN:PDF].</rdfs:comment>
         <rdfs:label>vitamin C</rdfs:label>
-        <rdfs:label xml:lang="en">vitamin C</rdfs:label>
     </owl:Class>
     
 
@@ -2604,7 +2579,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:176838</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>vitamin B2</rdfs:label>
-        <rdfs:label xml:lang="en">vitamin B2</rdfs:label>
     </owl:Class>
     
 
@@ -2625,7 +2599,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:176839</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>vitamin B3</rdfs:label>
-        <rdfs:label xml:lang="en">vitamin B3</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">vitamin B3</rdfs:label>
     </owl:Class>
     
 
@@ -2645,7 +2619,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:176840</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>vitamin B5</rdfs:label>
-        <rdfs:label xml:lang="en">vitamin B5</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">vitamin B5</rdfs:label>
     </owl:Class>
     
 
@@ -2665,7 +2639,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:176841</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>vitamin B7</rdfs:label>
-        <rdfs:label xml:lang="en">vitamin B7</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">vitamin B7</rdfs:label>
     </owl:Class>
     
 
@@ -2688,7 +2662,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:176842</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>vitamin B9</rdfs:label>
-        <rdfs:label xml:lang="en">vitamin B9</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">vitamin B9</rdfs:label>
     </owl:Class>
     
 
@@ -2711,7 +2685,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:comment xml:lang="en">Langual documentation note: DIRECTIVE 2002/46/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 10 June 2002 on the approximation of the laws of the Member States relating to food supplements [http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2002:183:0051:0057:EN:PDF].</rdfs:comment>
         <rdfs:label>vitamin B12</rdfs:label>
-        <rdfs:label xml:lang="en">vitamin B12</rdfs:label>
     </owl:Class>
     
 
@@ -2722,7 +2695,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDNO_0000004"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24405"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03420108"/>
-        <obo:IAO_0000115>A  glycosylglucose disaccharide, found most notably in milk, that consists of D-galactose and D-glucose fragments bonded through a beta-1-&gt;4 glycosidic linkage. The glucose fragment can be in either the alpha- or beta-pyranose form, whereas the galactose fragment can only have the beta-pyranose form.</obo:IAO_0000115>
         <obo:IAO_0000115>A glycosylglucose disaccharide, found most notably in milk, that consists of D-galactose and D-glucose fragments bonded through a beta-1-&gt;4 glycosidic linkage. The glucose fragment can be in either the alpha- or beta-pyranose form, whereas the galactose fragment can only have the beta-pyranose form.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">lactose</obo:IAO_0000118>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cdno.owl"/>
@@ -2797,7 +2769,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:comment xml:lang="en">LanguaL term definition: Used when lactose or a high lactose sweetener is the major ingredient.</rdfs:comment>
         <rdfs:label>lactose</rdfs:label>
-        <rdfs:label xml:lang="en">lactose</rdfs:label>
     </owl:Class>
     
 
@@ -2833,7 +2804,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:17855</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>triglyceride</rdfs:label>
-        <rdfs:label xml:lang="en">triglyceride</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">triglyceride</rdfs:label>
     </owl:Class>
     
 
@@ -2925,7 +2896,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:inSubset>subset_siren</oboInOwl:inSubset>
         <rdfs:comment xml:lang="en">LanguaL term definition: Used when sucrose (e.g., cane sugar or beet sugar) is the major ingredient. Note: on a product label or in a recipe, &apos;sugar&apos; means sucrose.</rdfs:comment>
         <rdfs:label>sucrose</rdfs:label>
-        <rdfs:label xml:lang="en">sucrose</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">sucrose</rdfs:label>
     </owl:Class>
     
 
@@ -2948,7 +2919,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:18059</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>lipid</rdfs:label>
-        <rdfs:label xml:lang="en">lipid</rdfs:label>
     </owl:Class>
     
 
@@ -3004,7 +2974,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:18186</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>tyrosine</rdfs:label>
-        <rdfs:label xml:lang="en">tyrosine</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">tyrosine</rdfs:label>
     </owl:Class>
     
 
@@ -3062,7 +3032,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:18211</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>citrulline</rdfs:label>
-        <rdfs:label xml:lang="en">citrulline</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">citrulline </rdfs:label>
     </owl:Class>
     
 
@@ -3112,7 +3082,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:18257</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>ornithine</rdfs:label>
-        <rdfs:label xml:lang="en">ornithine</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">ornithine </rdfs:label>
     </owl:Class>
     
 
@@ -3130,7 +3100,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:190295</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#2_STAR"/>
         <rdfs:label>inorganic calcium salt</rdfs:label>
-        <rdfs:label xml:lang="en">inorganic calcium salt</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">inorganic calcium salt</rdfs:label>
     </owl:Class>
     
 
@@ -3177,7 +3147,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:22315</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>alkaloid</rdfs:label>
-        <rdfs:label xml:lang="en">alkaloid</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">alkaloid</rdfs:label>
     </owl:Class>
     
 
@@ -3200,10 +3170,9 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:hasSynonym xml:lang="en">l-ascorbic acid</oboInOwl:hasSynonym>
         <oboInOwl:id>CHEBI:22652</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
-        <rdfs:comment xml:lang="en">LanguaL curation note: See &quot;food additive&quot; comments.</rdfs:comment>
         <rdfs:comment xml:lang="en">LanguaL term definition: Food additive; technological purpose(s): acidity regulator, antioxidant, flour treatment agent.</rdfs:comment>
         <rdfs:label>ascorbic acid</rdfs:label>
-        <rdfs:label xml:lang="en">ascorbic acid</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">ascorbic acid</rdfs:label>
     </owl:Class>
     
 
@@ -3292,10 +3261,9 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:hasRelatedSynonym>carotenes</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>CHEBI:23042</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
-        <rdfs:comment xml:lang="en">LanguaL curation note: See &quot;food additive&quot; comments.</rdfs:comment>
         <rdfs:comment xml:lang="en">LanguaL term definition: Food additive.</rdfs:comment>
         <rdfs:label>carotene</rdfs:label>
-        <rdfs:label xml:lang="en">carotene</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">carotene </rdfs:label>
     </owl:Class>
     
 
@@ -3315,7 +3283,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:23044</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>carotenoid</rdfs:label>
-        <rdfs:label xml:lang="en">carotenoid</rdfs:label>
     </owl:Class>
     
 
@@ -3584,7 +3551,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:24866</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>salt</rdfs:label>
-        <rdfs:label xml:lang="en">salt</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">salt</rdfs:label>
     </owl:Class>
     
 
@@ -3622,7 +3589,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:24898</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>isoleucine</rdfs:label>
-        <rdfs:label xml:lang="en">isoleucine</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">isoleucine</rdfs:label>
     </owl:Class>
     
 
@@ -3644,7 +3611,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:24913</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>isoprenoid</rdfs:label>
-        <rdfs:label xml:lang="en">isoprenoid</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">isoprenoid</rdfs:label>
     </owl:Class>
     
 
@@ -3675,7 +3642,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:24973</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>ketohexose</rdfs:label>
-        <rdfs:label xml:lang="en">ketohexose</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">ketohexose</rdfs:label>
     </owl:Class>
     
 
@@ -3694,7 +3661,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:24978</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>ketose</rdfs:label>
-        <rdfs:label xml:lang="en">ketose</rdfs:label>
     </owl:Class>
     
 
@@ -3748,7 +3714,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:25017</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>leucine</rdfs:label>
-        <rdfs:label xml:lang="en">leucine</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">leucine</rdfs:label>
     </owl:Class>
     
 
@@ -3787,7 +3753,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:25094</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>lysine</rdfs:label>
-        <rdfs:label xml:lang="en">lysine</rdfs:label>
     </owl:Class>
     
 
@@ -3860,7 +3825,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:25481</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>naphthoquinone</rdfs:label>
-        <rdfs:label xml:lang="en">napthoquinone</rdfs:label>
     </owl:Class>
     
 
@@ -3911,7 +3875,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:25681</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>omega-3 fatty acid</rdfs:label>
-        <rdfs:label xml:lang="en">ω−3 fatty acid</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">ω−3 fatty acid</rdfs:label>
     </owl:Class>
     
 
@@ -4041,7 +4005,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:26208</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>polyunsaturated fatty acid</rdfs:label>
-        <rdfs:label xml:lang="en">polyunsaturated fatty acid</rdfs:label>
     </owl:Class>
     
 
@@ -4143,7 +4106,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:26607</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>saturated fatty acid</rdfs:label>
-        <rdfs:label xml:lang="en">saturated fatty acid</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">saturated fatty acid</rdfs:label>
     </owl:Class>
     
 
@@ -4208,7 +4171,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:26873</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>terpenoid</rdfs:label>
-        <rdfs:label xml:lang="en">terpenoid</rdfs:label>
     </owl:Class>
     
 
@@ -4240,7 +4202,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:26935</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>tetraterpenoid</rdfs:label>
-        <rdfs:label xml:lang="en">tetraterpenoid</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">tetraterpenoid</rdfs:label>
     </owl:Class>
     
 
@@ -4270,7 +4232,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:26948</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>vitamin B1</rdfs:label>
-        <rdfs:label xml:lang="en">vitamin B1</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">vitamin B1</rdfs:label>
     </owl:Class>
     
 
@@ -4354,7 +4316,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:27266</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>valine</rdfs:label>
-        <rdfs:label xml:lang="en">valine</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">valine</rdfs:label>
     </owl:Class>
     
 
@@ -4382,7 +4344,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:27300</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>vitamin D</rdfs:label>
-        <rdfs:label xml:lang="en">vitamin D</rdfs:label>
     </owl:Class>
     
 
@@ -4409,7 +4370,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:27306</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>vitamin B6</rdfs:label>
-        <rdfs:label xml:lang="en">vitamin B6</rdfs:label>
     </owl:Class>
     
 
@@ -4428,7 +4388,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:27325</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>xanthophyll</rdfs:label>
-        <rdfs:label xml:lang="en">xanthophyll</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">xanthophyll</rdfs:label>
     </owl:Class>
     
 
@@ -4548,7 +4508,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:comment xml:lang="en">LanguaL curation note: Used when folic acid  is added at any level. Always use this term for enriched flour or rice, enriched bakery products, and enriched macaroni or noodle products. (21 CFR 137. 610(a), 21 CFR 136.115(a)(1), and others).</rdfs:comment>
         <rdfs:label>folic acid</rdfs:label>
-        <rdfs:label xml:lang="en">folic acid</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">folic acid</rdfs:label>
     </owl:Class>
     
 
@@ -4615,7 +4575,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:28044</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>phenylalanine</rdfs:label>
-        <rdfs:label xml:lang="en">phenylalanine</rdfs:label>
     </owl:Class>
     
 
@@ -4652,7 +4611,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:28260</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>galactose</rdfs:label>
-        <rdfs:label xml:lang="en">galactose</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">galactose</rdfs:label>
     </owl:Class>
     
 
@@ -4688,7 +4647,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:28384</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>vitamin K</rdfs:label>
-        <rdfs:label xml:lang="en">vitamin K</rdfs:label>
     </owl:Class>
     
 
@@ -4726,7 +4684,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:comment xml:lang="en">LanguaL curation note: Used when pure fructose is the major ingredient. If *HIGH FRUCTOSE SYRUP* is the major ingredient, use that term for indexing.</rdfs:comment>
         <rdfs:label>fructose</rdfs:label>
-        <rdfs:label xml:lang="en">fructose</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">fructose</rdfs:label>
     </owl:Class>
     
 
@@ -4780,10 +4738,9 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:hasSynonym xml:lang="en">luteins</oboInOwl:hasSynonym>
         <oboInOwl:id>CHEBI:28838</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
-        <rdfs:comment xml:lang="en">LanguaL curation note: See &quot;food additive&quot; comments.</rdfs:comment>
         <rdfs:comment xml:lang="en">LanguaL term definition: Food additive.</rdfs:comment>
         <rdfs:label>lutein</rdfs:label>
-        <rdfs:label xml:lang="en">lutein</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">lutein</rdfs:label>
     </owl:Class>
     
 
@@ -4823,7 +4780,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:29016</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>arginine</rdfs:label>
-        <rdfs:label xml:lang="en">arginine</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">arginine</rdfs:label>
     </owl:Class>
     
 
@@ -4898,10 +4855,8 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:hasRelatedSynonym>kohlensaurer Kalk</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>CHEBI:3311</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
-        <rdfs:comment xml:lang="en">LanguaL curation note: See &quot;food additive&quot; comments.</rdfs:comment>
         <rdfs:comment xml:lang="en">LanguaL term definition: Food additive; technological purpose(s): acidity regulator, anticaking agent, stabilizer, surface colourant.</rdfs:comment>
         <rdfs:label>calcium carbonate</rdfs:label>
-        <rdfs:label xml:lang="en">calcium carbonate</rdfs:label>
     </owl:Class>
     
 
@@ -4938,7 +4893,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:33234</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>vitamin E</rdfs:label>
-        <rdfs:label xml:lang="en">vitamin E</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">vitamin E</rdfs:label>
     </owl:Class>
     
 
@@ -5016,7 +4971,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:33261</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>organosulfur compound</rdfs:label>
-        <rdfs:label xml:lang="en">organosulfur compound</rdfs:label>
     </owl:Class>
     
 
@@ -5426,7 +5380,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:33709</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>amino acid</rdfs:label>
-        <rdfs:label xml:lang="en">amino acid</rdfs:label>
     </owl:Class>
     
 
@@ -5619,7 +5572,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:33942</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>ribose</rdfs:label>
-        <rdfs:label xml:lang="en">ribose</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">ribose</rdfs:label>
     </owl:Class>
     
 
@@ -5663,7 +5616,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:35186</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>terpene</rdfs:label>
-        <rdfs:label xml:lang="en">terpene</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">terpene</rdfs:label>
     </owl:Class>
     
 
@@ -5683,7 +5636,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:35193</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>tetraterpene</rdfs:label>
-        <rdfs:label xml:lang="en">tetraterpene</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">tetraterpene</rdfs:label>
     </owl:Class>
     
 
@@ -5786,10 +5739,8 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:hasRelatedSynonym>fatty acids</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>CHEBI:35366</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
-        <rdfs:comment xml:lang="en">LanguaL curation note: See &quot;food additive&quot; comments.</rdfs:comment>
         <rdfs:comment xml:lang="en">LanguaL term definition: Food additive; technological purpose(s): antifoaming agent. foam stabilizer, glazing agent.</rdfs:comment>
         <rdfs:label>fatty acid</rdfs:label>
-        <rdfs:label xml:lang="en">fatty acid</rdfs:label>
     </owl:Class>
     
 
@@ -5814,7 +5765,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:35381</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>monosaccharide</rdfs:label>
-        <rdfs:label xml:lang="en">monosaccharide</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">monosaccharide</rdfs:label>
     </owl:Class>
     
 
@@ -5890,7 +5841,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:36005</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>docosahexaenoic acid</rdfs:label>
-        <rdfs:label xml:lang="en">docosahexaenoic acid</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">docosahexaenoic acid</rdfs:label>
     </owl:Class>
     
 
@@ -5926,7 +5877,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:36233</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>disaccharide</rdfs:label>
-        <rdfs:label xml:lang="en">disaccharide</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">disaccharide</rdfs:label>
     </owl:Class>
     
 
@@ -6415,7 +6366,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:comment xml:lang="en">LanguaL term definition: Complex carbohydrate with molecules composed of three to ten saccharide units (specifically dextrin). May be slightly sweet to the taste.</rdfs:comment>
         <rdfs:label>oligosaccharide</rdfs:label>
-        <rdfs:label xml:lang="en">oligosaccharide</rdfs:label>
     </owl:Class>
     
 
@@ -6464,7 +6414,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:hasDbXref>Codex::941</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Europe::941</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B3173</oboInOwl:hasDbXref>
-        <rdfs:comment xml:lang="en">LanguaL curation note: See &quot;food additive&quot; comments.</rdfs:comment>
         <rdfs:comment xml:lang="en">LanguaL term definition: Food additive; technological purpose(s): packaging gas, propellant.</rdfs:comment>
         <rdfs:label>nitrogen molecular entity</rdfs:label>
     </owl:Class>
@@ -6582,7 +6531,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:hasDbXref>Codex::322</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Europe::322</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B3130</oboInOwl:hasDbXref>
-        <rdfs:comment xml:lang="en">LanguaL curation note: See &quot;food additive&quot; comments.</rdfs:comment>
         <rdfs:comment xml:lang="en">LanguaL term definition: Food additive.</rdfs:comment>
         <rdfs:label>lecithin</rdfs:label>
     </owl:Class>
@@ -6636,7 +6584,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:64709</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>organic acid</rdfs:label>
-        <rdfs:label xml:lang="en">organic acid</rdfs:label>
     </owl:Class>
     
 
@@ -6668,7 +6615,7 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:72544</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>flavonoids</rdfs:label>
-        <rdfs:label xml:lang="en">flavonoids</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">flavonoids</rdfs:label>
     </owl:Class>
     
 
@@ -6710,7 +6657,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:75769</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>B vitamin</rdfs:label>
-        <rdfs:label xml:lang="en">B vitamin</rdfs:label>
     </owl:Class>
     
 
@@ -6781,8 +6727,8 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:hasRelatedSynonym>non-proteinogenic amino-acids</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>CHEBI:83820</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
-        <rdfs:label xml:lang="en">amino acid derived from non-proteinacious</rdfs:label>
         <rdfs:label>non-proteinogenic amino acid</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">non-proteinogenic amino acid</rdfs:label>
     </owl:Class>
     
 
@@ -9876,18 +9822,19 @@ Namely, how to characterize the threshold of ingredients that make for multi-com
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_03411563"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00004298"/>
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UBERON_0003100"/>
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UBERON_0007023"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411563"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00004298"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0003100"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0007023"/>
         <obo:IAO_0000115 xml:lang="en">An adult female chicken.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0002-8844-9165"/>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-8844-9165"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-11-15T20:12:48Z</dc:date>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-9578-0788"/>
         <rdfs:label xml:lang="en">hen</rdfs:label>
     </owl:Class>
     
@@ -10217,6 +10164,20 @@ Namely, how to characterize the threshold of ingredients that make for multi-com
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0002-8844-9165"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-09-01T16:31:09Z</dc:date>
         <rdfs:label xml:lang="en">animal food product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00004298 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00004298">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411563"/>
+        <obo:IAO_0000112 xml:lang="en">Chickens, turkeys, quail, ducks, and geese are only called poultry if they aren&apos;t reared in the wild.</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">A domesticated bird that is kept by humans for its eggs, meat or feathers.</obo:IAO_0000115>
+        <dc:contributor rdf:resource="https://orcid.org/0000-0001-5275-8866"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-25T10:01:00Z</dc:date>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-9578-0788"/>
+        <rdfs:label xml:lang="en">poultry</rdfs:label>
     </owl:Class>
     
 
@@ -11718,10 +11679,10 @@ Namely, how to characterize the threshold of ingredients that make for multi-com
         <oboInOwl:hasExactSynonym xml:lang="en">chicken egg</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">hen egg</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset>subset_siren</oboInOwl:inSubset>
-        <rdfs:comment xml:lang="en">SIREN DB annotation:
-* derives from &apos;whole egg&apos; (http://purl.obolibrary.org/obo/FOODON_03420274)
-        </rdfs:comment>
-        <rdfs:comment xml:lang="en">This term is ambiguous about whether shell remains on egg or not, i.e. this encompasses both an uncooked egg in shell, or a boiled peeled egg, or a fried egg.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This term is ambiguous about whether shell remains on egg or not, i.e. this encompasses both an uncooked egg in shell, or a boiled peeled egg, or a fried egg.
+
+SIREN DB annotation:
+* derives from &apos;whole egg&apos; (http://purl.obolibrary.org/obo/FOODON_03420274)</rdfs:comment>
         <rdfs:label xml:lang="en">hen egg (whole)</rdfs:label>
     </owl:Class>
     
@@ -12428,8 +12389,9 @@ The entire vegetable after discarding obviously decomposed or withered leaves ma
         <oboInOwl:hasSynonym xml:lang="en">food supplement</oboInOwl:hasSynonym>
         <oboInOwl:hasSynonym xml:lang="en">nutritional supplement</oboInOwl:hasSynonym>
         <oboInOwl:inSubset>subset_siren</oboInOwl:inSubset>
-        <rdfs:comment xml:lang="en">LanguaL curation note: This term is for CLASSIFICATION ONLY; DO NOT USE term in indexing. Use a more precise narrower term.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The United States defines dietary supplements in the Dietary Supplement Health and Education Act of 1994 (DSHEA). Pub L 103-417, 108 STAT. 4235, (Oct. 25, 1994): A dietary supplement is a product taken by mouth that contains a &quot;dietary ingredient&quot; intended to supplement the diet. The &quot;dietary ingredients&quot; in these products may include: vitamins, minerals, herbs or other botanicals, amino acids, and substances such as enzymes, organ tissues, glandulars, and metabolites. Dietary supplements can also be extracts or concentrates, and may be found in many forms such as tablets, capsules, softgels, gelcaps, liquids, or powders.
+        <rdfs:comment xml:lang="en">LanguaL curation note: This term is for CLASSIFICATION ONLY; DO NOT USE term in indexing. Use a more precise narrower term.
+
+The United States defines dietary supplements in the Dietary Supplement Health and Education Act of 1994 (DSHEA). Pub L 103-417, 108 STAT. 4235, (Oct. 25, 1994): A dietary supplement is a product taken by mouth that contains a &quot;dietary ingredient&quot; intended to supplement the diet. The &quot;dietary ingredients&quot; in these products may include: vitamins, minerals, herbs or other botanicals, amino acids, and substances such as enzymes, organ tissues, glandulars, and metabolites. Dietary supplements can also be extracts or concentrates, and may be found in many forms such as tablets, capsules, softgels, gelcaps, liquids, or powders.
 
 In the European Union, food supplements are framed by two kinds of regulations: 
 - the EU vertical regulation relating to food supplements, composed with the directive 2002/46/CE  (essentially for the definition of food supplements) and the regulation 1170/2009 (which lists the vitamins and minerals, and the chemical forms of the substances allowed in food supplements); 
@@ -12909,7 +12871,6 @@ Note however that the LanguaL category includes additives which may be naturally
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411174"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>DPNL 2003:13063</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GRIN:33749</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ITIS:505186</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MANSFELD:10138</oboInOwl:hasDbXref>
@@ -12940,7 +12901,6 @@ Note however that the LanguaL category includes additives which may be naturally
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
         <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4577"/>
-        <oboInOwl:hasDbXref>DPNL 2003:13973</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GRIN:311987</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ITIS:42269</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MANSFELD:36372</oboInOwl:hasDbXref>
@@ -13030,7 +12990,6 @@ Note however that the LanguaL category includes additives which may be naturally
         <obo:IAO_0000119>WIKIPEDIA:Kale)</obo:IAO_0000119>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
         <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3712"/>
-        <oboInOwl:hasDbXref>DPNL 2003:8115</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GRIN:319629</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ITIS:23062</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MANSFELD:23870</oboInOwl:hasDbXref>
@@ -13128,7 +13087,6 @@ Note however that the LanguaL category includes additives which may be naturally
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
         <oboInOwl:hasBroadSynonym xml:lang="en">vicia faba</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3906"/>
-        <oboInOwl:hasDbXref>DPNL 2003:13823</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GRIN:300661</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ITIS:26339</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MANSFELD:30416</oboInOwl:hasDbXref>
@@ -13202,8 +13160,9 @@ Note however that the LanguaL category includes additives which may be naturally
         <oboInOwl:hasSynonym xml:lang="en">podcorn</oboInOwl:hasSynonym>
         <oboInOwl:hasSynonym xml:lang="en">zea mays var. indentata (not acc.)</oboInOwl:hasSynonym>
         <oboInOwl:hasSynonym xml:lang="en">zea mays var. indurata (not acc.)</oboInOwl:hasSynonym>
-        <rdfs:comment xml:lang="en">Field corn is a general term used in North America for corn varieties other than sweet corn, popcorn, yellow food grade corn used for yellow corn meal or flour and corn starch, and white food-grade corn used for white meal or flour and corn starch. Source: https://en.wikipedia.org/wiki/Field_corn</rdfs:comment>
-        <rdfs:comment xml:lang="en">LanguaL curation note: Searching note--use &apos;field corn&apos; for any breakfast cereal or snack food having &apos;corn&apos; as the first ingredient.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Field corn is a general term used in North America for corn varieties other than sweet corn, popcorn, yellow food grade corn used for yellow corn meal or flour and corn starch, and white food-grade corn used for white meal or flour and corn starch. Source: https://en.wikipedia.org/wiki/Field_corn
+
+LanguaL curation note: Searching note--use &apos;field corn&apos; for any breakfast cereal or snack food having &apos;corn&apos; as the first ingredient.</rdfs:comment>
         <rdfs:label xml:lang="en">field corn plant</rdfs:label>
     </owl:Class>
     
@@ -13219,7 +13178,6 @@ Note however that the LanguaL category includes additives which may be naturally
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Cabbage</obo:IAO_0000119>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
         <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3712"/>
-        <oboInOwl:hasDbXref>DPNL 2003:8101</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GRIN:7668</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ITIS:23062</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ITIS:526963</oboInOwl:hasDbXref>
@@ -13262,7 +13220,6 @@ Note however that the LanguaL category includes additives which may be naturally
 Broccoli is classified in the *Italica* cultivar group of the species *Brassica oleracea*. Broccoli has large flower heads, usually green in color, arranged in a tree-like fashion on branches sprouting from a thick, edible stalk. The mass of flower heads is surrounded by leaves. Broccoli most closely resembles cauliflower, which is a different cultivar group of the same species.</obo:IAO_0000115>
         <obo:IAO_0000119>WIKIPEDIA:Broccoli</obo:IAO_0000119>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>DPNL 2003:8104</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GRIN:105447</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ITIS:530957</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MANSFELD:37506</oboInOwl:hasDbXref>
@@ -13311,9 +13268,19 @@ Broccoli is classified in the *Italica* cultivar group of the species *Brassica 
     <!-- http://purl.obolibrary.org/obo/FOODON_03411563 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411563">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00004298"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/foodon.owl/FOODON_03602002"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002616"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000116 xml:lang="en">This &quot;or&quot; class is just to represent an equivalency with a commonly used classification outside of FoodOn. It should not have subclasses under it. (2022-11-30)</obo:IAO_0000116>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <dc:contributor>https://orcid.org/0000-0002-9578-0788</dc:contributor>
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1563</oboInOwl:hasDbXref>
         <oboInOwl:hasNarrowSynonym xml:lang="da">fjerkrae</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym xml:lang="en">gamebird</oboInOwl:hasNarrowSynonym>
@@ -13399,7 +13366,6 @@ Broccoli is classified in the *Italica* cultivar group of the species *Brassica 
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03413372"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>DPNL 2003:8107</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GRIN:7675</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ITIS:530959</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MANSFELD:23884</oboInOwl:hasDbXref>
@@ -13680,7 +13646,6 @@ If used for food supplement substances, thissection and its narrover terms refer
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
         <oboInOwl:hasDbXref>CCPR:</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>DPNL 2003:8093</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GRIN:30008</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GRIN:300085</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PLANTS:BRASS2</oboInOwl:hasDbXref>
@@ -14540,12 +14505,9 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0008150">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
         <obo:IAO_0000115>A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.</obo:IAO_0000115>
-        <obo:IAO_0000115>A process that emerges from two or more causally-connected macromolecular activities and has evolved to achieve a biological objective.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cob.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ecocore.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/envo.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/go.owl"/>
-        <rdfs:label xml:lang="en">biological process</rdfs:label>
         <rdfs:label>biological_process</rdfs:label>
     </owl:Class>
     
@@ -14558,9 +14520,7 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
         <obo:IAO_0000111 xml:lang="en">data item</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115 xml:lang="en">An information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="en">a data item is an information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ons.owl"/>
         <rdfs:label xml:lang="en">data item</rdfs:label>
     </owl:Class>
     
@@ -14576,7 +14536,6 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
         <obo:IAO_0000117 xml:lang="en">PERSON: Chris Stoeckert</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">OBI_0000142</obo:IAO_0000119>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ons.owl"/>
         <rdfs:label xml:lang="en">information content entity</rdfs:label>
     </owl:Class>
     
@@ -15025,7 +14984,6 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
         <oboInOwl:hasExactSynonym>angiosperms</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>flowering plants</oboInOwl:hasExactSynonym>
-        <rdfs:label>Magnoliophyta</rdfs:label>
         <rdfs:label>Magnoliopsida</rdfs:label>
     </owl:Class>
     
@@ -15076,7 +15034,6 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>DPNL 2003:9052</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GRIN:12606</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ITIS:22373</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PLANTS:CUPE</oboInOwl:hasDbXref>
@@ -15131,12 +15088,6 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
         <obo:IAO_0000117 xml:lang="en">Damion Dooley</obo:IAO_0000117>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>DPNL 2003:8103</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>DPNL 2003:8105</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>DPNL 2003:8110</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>DPNL 2003:8113</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>DPNL 2003:8114</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>DPNL 2003:8115</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GRIN:311416</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GRIN:319629</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GRIN:319632</oboInOwl:hasDbXref>
@@ -15215,7 +15166,6 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
         <obo:IAO_0000118 xml:lang="en">peanut plant</obo:IAO_0000118>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>DPNL 2003:7636</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GRIN:3785</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ITIS:26463</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MANSFELD:29861</oboInOwl:hasDbXref>
@@ -15251,7 +15201,6 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
         <oboInOwl:hasBroadSynonym xml:lang="en">soya bean</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym xml:lang="en">soybean</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasDbXref>DPNL 2003:10065</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GRIN:17711</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ITIS:26716</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MANSFELD:27017</oboInOwl:hasDbXref>
@@ -15344,7 +15293,6 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
         <obo:IAO_0000118 xml:lang="en">sunflower plant</obo:IAO_0000118>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>DPNL 2003:10207</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GRIN:27923</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ITIS:36616</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MANSFELD:32888</oboInOwl:hasDbXref>
@@ -17566,7 +17514,6 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
         <oboInOwl:hasExactSynonym xml:lang="en">mammal milk</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>mammary gland milk</oboInOwl:hasExactSynonym>
         <rdfs:comment xml:lang="en">LanguaL curation note: See scope note for *MILK OR MILK COMPONENT*. for lowfat milk use *FAT PARTIALLY REMOVED*; for skim milk, use *FAT FULLY REMOVED* (both found in D3. TREATMENT APPLIED).</rdfs:comment>
-        <rdfs:comment xml:lang="en">LanguaL term definition: Milk is a secretion from the mammary glands of female mammals.</rdfs:comment>
         <rdfs:label>milk</rdfs:label>
     </owl:Class>
     
@@ -17855,6 +17802,20 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
         <obo:IAO_0000115>An organism containing a developing embryo, fetus, or unborn offspring within the body.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uberon.owl"/>
         <rdfs:label>gravid organism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/foodon.owl/FOODON_03602002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/foodon.owl/FOODON_03602002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411563"/>
+        <obo:IAO_0000114 xml:lang="en">requires discussion</obo:IAO_0000114>
+        <obo:IAO_0000115 xml:lang="en">An avian animal which is any of a number of species of wild birds which are hunted, killed and eaten by humans.</obo:IAO_0000115>
+        <obo:IAO_0000119>https://simple.wikipedia.org/wiki/Game_bird#:~:text=A%20game%20bird%20is%20any,so%20there%20are%20gun%20laws.</obo:IAO_0000119>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-9578-0788"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-11-03T01:40:18.746Z</oboInOwl:creation_date>
+        <rdfs:label xml:lang="en">game bird</rdfs:label>
     </owl:Class>
     
 
