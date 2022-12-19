@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2022-12-09/maxo-base.owl
+data-version: maxo/releases/2022-12-19/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
@@ -7,7 +7,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2022-12-09" xsd:string
+property_value: owl:versionInfo "2022-12-19" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -87,7 +87,6 @@ synonym: "clinical laboratory testing" EXACT []
 synonym: "clinical testing" EXACT []
 synonym: "lab testing" EXACT []
 xref: NCIT:C25294
-is_a: MAXO:0000002 ! therapeutic procedure
 is_a: MAXO:0000003 ! diagnostic procedure
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T20:11:26Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -440,15 +439,12 @@ id: MAXO:0000058
 name: pharmacotherapy
 def: "Use of a substance introduced into a living organism with therapeutic or diagnostic purpose." []
 comment: Medical treatment by means of drugs. {xref="http://orcid.org/0000-0001-7941-2961"}
-synonym: "drug therapy" EXACT []
 synonym: "drug treatment" EXACT []
 synonym: "medication therapy" EXACT []
 synonym: "pharmaceutical drug" EXACT []
 synonym: "pharmaceutical treatment" EXACT []
 synonym: "pharmacological treatment" EXACT []
-synonym: "treatment with drug" EXACT []
 xref: CHEBI:52217
-is_a: MAXO:0000002 ! therapeutic procedure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-15T18:20:06Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1046,7 +1042,6 @@ id: MAXO:0000124
 name: disease screening
 def: "The use of any device, marker, or other means for the purpose of detecting the presence of disease, usually in asymptomatic individuals." [NCIT:C15419]
 xref: NCIT:C15419
-is_a: MAXO:0000002 ! therapeutic procedure
 is_a: MAXO:0000003 ! diagnostic procedure
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-20T00:39:19Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -2909,7 +2904,7 @@ synonym: "treatment with HIV fusion inhibitor drug" EXACT []
 synonym: "treatment with HIV fusion inhibitor medication" EXACT []
 synonym: "treatment with HIV fusion inhibitor therapy" EXACT []
 xref: CHEBI:59886
-is_a: MAXO:0000248 ! anti-human immunodeficiency virus agent therapy
+is_a: MAXO:0000248 ! anti-HIV agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:18:25Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2923,7 +2918,7 @@ synonym: "treatment with anti-HIV therapy, non-nucleoside reverse transcriptase 
 synonym: "treatment with anti-HIV therapy, non-nucleoside reverse transcriptase inhibitor drug" EXACT []
 synonym: "treatment with anti-HIV therapy, non-nucleoside reverse transcriptase inhibitor medication" EXACT []
 xref: NCIT:C97453
-is_a: MAXO:0000248 ! anti-human immunodeficiency virus agent therapy
+is_a: MAXO:0000248 ! anti-HIV agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:18:58Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2941,7 +2936,7 @@ synonym: "treatment with nucleoside-nucleotide reverse transcriptase inhibitor d
 synonym: "treatment with nucleoside-nucleotide reverse transcriptase inhibitor medication" EXACT []
 synonym: "treatment with nucleoside/nucleotide reverse transcriptase inhibitor drug" EXACT []
 synonym: "treatment with nucleoside/nucleotide reverse transcriptase inhibitor medication" EXACT []
-is_a: MAXO:0000248 ! anti-human immunodeficiency virus agent therapy
+is_a: MAXO:0000248 ! anti-HIV agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:20:58Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2958,7 +2953,7 @@ synonym: "treatment with HIV protease inhibitor drug" EXACT []
 synonym: "treatment with HIV protease inhibitor medication" EXACT []
 xref: CHEBI:35660
 xref: NCIT:C97366
-is_a: MAXO:0000248 ! anti-human immunodeficiency virus agent therapy
+is_a: MAXO:0000248 ! anti-HIV agent therapy
 property_value: http://purl.org/dc/elements/1.1/date 2019-01-22T20:21:25Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -6413,7 +6408,19 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000595
+name: radiograph imaging procedure
+def: "A procedure producing an image on a radiosensitive surface by x-ray radiation that has penetrated and passed through a structure in order to diagnose or treat a patient." []
+synonym: "radiogram imaging procedure" EXACT []
+synonym: "radiographic imaging procedure" EXACT []
+synonym: "radiographic procedure" EXACT []
+synonym: "radiography" EXACT []
+synonym: "radiography imaging procedure" EXACT []
+synonym: "X-ray imaging procedure" EXACT []
+xref: NCIT:C38101
+xref: NCIT:C60727
 is_a: MAXO:0000005 ! clinical imaging procedure
+property_value: http://purl.org/dc/elements/1.1/date 2020-04-07T15:49:43Z xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000596
@@ -8475,7 +8482,7 @@ name: liquid biopsy
 def: "The sampling and analysis of non-solid biological tissue often through rapid and non-invasive methods, which allows the assessment in real-time of the evolving landscape of cancer." [PMID:32580740]
 synonym: "solid tumor monitoring" RELATED []
 is_a: MAXO:0000126 ! cancer screening
-is_a: OBI:0002650
+is_a: MAXO:0001269 ! clinical biopsy
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-19T20:45:40Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -11526,7 +11533,7 @@ def: "Avoid the administration or use of radiograph imaging procedure." []
 synonym: "avoid radiograph imaging procedure" EXACT []
 synonym: "avoiding radiograph imaging procedure" EXACT []
 is_a: MAXO:0001014 ! medical action avoidance
-relationship: MAXO:0001015 MAXO:0000595 ! avoided medical action
+relationship: MAXO:0001015 MAXO:0000595 ! avoided medical action radiograph imaging procedure
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-19T20:39:14Z xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -12995,6 +13002,7 @@ name: clinical biopsy
 def: "Use of biopsy to obtain a clinical specimen." []
 comment: A specimen collection that obtains a sample of tissue or cell from a living multicellular organism body for diagnostic purposes by means intended to be minimally invasive. OBI:0002650
 xref: OBI:0002650
+is_a: MAXO:0000003 ! diagnostic procedure
 intersection_of: MAXO:0000003 ! diagnostic procedure
 intersection_of: BFO:0000051 OBI:0002650
 property_value: http://purl.org/dc/elements/1.1/date 2022-12-08T20:39:14Z xsd:string
@@ -13777,7 +13785,7 @@ name: intravenous pyelogram
 def: "A test that involves the administration of intravenous contrast and X-ray imaging of the urinary tract. The iodinated contrast flows through the renal vasculature and filtered into the collecting system highlighting the anatomic structures on the X-ray image." [PMID:32644460]
 synonym: "intravenous urography" EXACT []
 synonym: "IVP" EXACT ABBREVIATION []
-is_a: MAXO:0000595
+is_a: MAXO:0000595 ! radiograph imaging procedure
 property_value: http://purl.org/dc/elements/1.1/date 2022-05-10T18:02:12Z xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 

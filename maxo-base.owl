@@ -12,14 +12,14 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/maxo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2022-12-09/maxo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2022-12-19/maxo-base.owl"/>
         <dc:creator>Leigh Carmody</dc:creator>
         <dc:creator>Peter Robinson</dc:creator>
         <dc:description>An ontology to represent medically relevant actions, procedures, therapies, interventions, and recommendations.</dc:description>
         <dc:title>Medical Action Ontology</dc:title>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-12-09</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-12-19</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -2259,7 +2259,6 @@
     <!-- http://purl.obolibrary.org/obo/MAXO_0000006 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000006">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000002"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000003"/>
         <obo:IAO_0000115>Any procedure that involves testing or manipulating a sample of blood, urine, or other body substance in a laboratory setting for diagnosis, treatment, or therapy.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-16T20:11:26Z</dc:date>
@@ -2866,7 +2865,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000002"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000864"/>
                         <owl:someValuesFrom>
@@ -2884,20 +2883,17 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000002"/>
         <obo:IAO_0000115>Use of a substance introduced into a living organism with therapeutic or diagnostic purpose.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-15T18:20:06Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>CHEBI:52217</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drug therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>drug treatment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>medication therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>pharmaceutical drug</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>pharmaceutical treatment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>pharmacological treatment</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment with drug</oboInOwl:hasExactSynonym>
         <rdfs:comment>Medical treatment by means of drugs.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pharmacotherapy</rdfs:label>
+        <rdfs:label>pharmacotherapy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000058"/>
@@ -4045,7 +4041,6 @@
     <!-- http://purl.obolibrary.org/obo/MAXO_0000124 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000124">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000002"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000003"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The use of any device, marker, or other means for the purpose of detecting the presence of disease, usually in asymptomatic individuals.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-20T00:39:19Z</dc:date>
@@ -15630,6 +15625,18 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000595">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000005"/>
+        <obo:IAO_0000115>A procedure producing an image on a radiosensitive surface by x-ray radiation that has penetrated and passed through a structure in order to diagnose or treat a patient.</obo:IAO_0000115>
+        <dc:date>2020-04-07T15:49:43Z</dc:date>
+        <oboInOwl:created_by>http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <oboInOwl:hasDbXref>NCIT:C38101</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCIT:C60727</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>X-ray imaging procedure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>radiogram imaging procedure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>radiographic imaging procedure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>radiographic procedure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>radiography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>radiography imaging procedure</oboInOwl:hasExactSynonym>
+        <rdfs:label>radiograph imaging procedure</rdfs:label>
     </owl:Class>
     
 
@@ -19645,7 +19652,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000755">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000126"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0002650"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001269"/>
         <obo:IAO_0000115>The sampling and analysis of non-solid biological tissue often through rapid and non-invasive methods, which allows the assessment in real-time of the evolving landscape of cancer.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T20:45:40Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -30252,6 +30259,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000003"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use of biopsy to obtain a clinical specimen.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-12-08T20:39:14Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
