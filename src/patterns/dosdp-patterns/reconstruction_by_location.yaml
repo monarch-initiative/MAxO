@@ -1,0 +1,76 @@
+pattern_name: plasticreconstruction_by_location
+pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/plasticreconstruction_by_location.yaml
+description: "Surgical reconstruction of a particular organ"
+
+contributors:
+  - https://orcid.org/0000-0001-7941-2961
+
+classes:
+  reconstruction: MAXO:0009076
+  location: UBERON:0001062
+
+relations:
+  has_input: RO:0002233
+  part_of: BFO:0000050
+  
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym 
+  created_by: oio:created_by
+  date: dc:date
+  comment: rdfs:comment
+  xref: oio:hasDbXref
+ 
+vars:
+  location: "'location'"
+  
+data_vars:
+  date: "'date'"
+  created_by: "'created_by'"
+  comment: "'comment'"
+  xref: "database cross reference"
+data_list_vars:
+  syns: xsd:string
+name:
+  text: "surgical plastic reconstruction of %s"
+  vars:
+   - location
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "%s surgical plastic reconstruction"
+    vars:
+     - location
+     
+  - annotationProperty: date
+    text: "%s"
+    vars:
+     - date
+     
+  - annotationProperty: created_by
+    text: "%s"
+    vars:
+     - created_by
+
+  - annotationProperty: comment
+    text: "%s"
+    vars:
+     - comment
+    
+  - annotationProperty: xref
+    text: "%s"
+    vars:
+     - xref
+
+exact_synonym:
+  value: syns
+
+def:
+  text: "A medically necessary surgery performed to restore function and conventional appearance of %s. The surgery can correct deformities created by birth defects, trauma or medical conditions and is performed by a plastic surgeon."
+  vars:
+    - location
+
+equivalentTo:
+  text: "'reconstruction' and 'has_input' some ('part_of' some %s)"
+  vars:
+    - location
+   
