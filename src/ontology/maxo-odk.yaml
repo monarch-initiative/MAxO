@@ -24,7 +24,7 @@ import_group:
     - id: foodon
     - id: nbo
     - id: hp
-   module_type: minimal
+      module_type: minimal
     - id: chebi
       use_gzipped: TRUE
       is_large: TRUE
@@ -44,3 +44,20 @@ components:
     - filename: replaced.owl
     - filename: xrefs.owl 
 allow_equivalents: all
+robot_report:
+  use_base_iris: True
+  fail_on : ERROR
+  use_labels : False
+  custom_profile : True
+  report_on :
+    - maxo-base.owl
+    - edit
+  sparql_test_on:
+    - edit
+    - maxo-base.owl
+  custom_sparql_checks :
+    - equivalent-classes
+    - owldef-self-reference
+    - iri-range
+  custom_sparql_exports : 
+    - basic-report
