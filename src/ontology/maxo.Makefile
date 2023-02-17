@@ -81,7 +81,7 @@ merge_template: $(MERGE_TEMPLATE)
 	$(ROBOT) template --merge-before --input $(SRC) \
  --template $(MERGE_TEMPLATE) convert -f ofn -o $(SRC)
 
-tests_fast:
+test_fast:
 	$(MAKE_FAST) test
 
 
