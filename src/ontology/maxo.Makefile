@@ -30,23 +30,18 @@ tmp/remove.txt:
 	echo "HP:0000843" >> $@
 	echo "HP:0000829" >> $@
 
-imports/pr_import.owl: mirror/pr.owl imports/pr_terms_combined.txt
-	if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -T imports/pr_terms_combined.txt --force true --method BOT \
-		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
-.PRECIOUS: imports/pr_import.owl
+# Workaround for https://github.com/geneontology/obographs/issues/93. Basically removing all object properties since
+# We cannot handle complex expressions in obographs in ODK 1.4
 
-$(IMPORTDIR)/hp_import.owl: $(MIRRORDIR)/hp.owl $(IMPORTDIR)/hp_terms_combined.txt
-	if [ $(IMP) = true ]; then $(ROBOT) extract  -i $< -T $(IMPORTDIR)/hp_terms_combined.txt --copy-ontology-annotations true --force true --method BOT \
-		remove --base-iri $(URIBASE)/HP --axioms external --preserve-structure false --trim false \
-		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru \
-		remove $(patsubst %, --term %, $(ANNOTATION_PROPERTIES)) -T $(IMPORTDIR)/hp_terms_combined.txt --select complement --select "classes individuals annotation-properties" \
-		remove --axioms Declaration \
-		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
-	
+$(MIRRORDIR)/obi.owl: 
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(OBOBASE)/obi.owl --create-dirs -o $(MIRRORDIR)/obi.owl --retry 4 --max-time 200 &&\
+		$(ROBOT) convert -i $(MIRRORDIR)/obi.owl -o $@.tmp.owl &&\
+		$(ROBOT) remove -i $@.tmp.owl --base-iri $(URIBASE)/OBI --axioms external --preserve-structure false --trim false \
+			remove --select object-properties -o $@.tmp.owl &&\
+		mv $@.tmp.owl $@; fi
 
 reports/maxo-edit.owl-obo-report.tsv: maxo-edit.owl
 	$(ROBOT) report -i $< --fail-on none --print 5 -o $@
-	
 
 sssom.csv:
 	robot query -f csv -i $(SRC) --query ../sparql/sssom.sparql $@
