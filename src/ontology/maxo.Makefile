@@ -4,6 +4,15 @@
 ## changes here rather than in the main Makefile
 
 #########################################
+### Custom pipelines ####################
+#########################################
+
+# Will be available in ODK 1.5 (https://github.com/INCATools/ontology-development-kit/pull/803)
+.PHONY: test
+test_fast:
+	$(MAKE_FAST) test
+
+#########################################
 ### Generating all ROBOT templates ######
 #########################################
 
