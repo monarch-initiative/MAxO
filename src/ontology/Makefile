@@ -114,7 +114,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  omo go ro cob so bfo uberon foodon nbo pato hp cl chebi obi ncbitaxon pr
+IMPORTS =  omo go ro so bfo uberon foodon nbo pato hp cl chebi obi ncbitaxon pr
 
 IMPORT_ROOTS =  $(IMPORTDIR)/merged_import
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -425,15 +425,6 @@ mirror-ro: | $(TMPDIR)
 		$(ROBOT) convert -i $(MIRRORDIR)/ro.owl -o $@.tmp.owl && mv $@.tmp.owl $(TMPDIR)/$@.owl; fi
 
 
-## ONTOLOGY: cob
-.PHONY: mirror-cob
-.PRECIOUS: $(MIRRORDIR)/cob.owl
-mirror-cob: | $(TMPDIR)
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(OBOBASE)/cob.owl --create-dirs -o $(MIRRORDIR)/cob.owl --retry 4 --max-time 200 &&\
-		$(ROBOT) convert -i $(MIRRORDIR)/cob.owl -o $@.tmp.owl &&\
-		mv $@.tmp.owl $(TMPDIR)/$@.owl; fi
-
-
 ## ONTOLOGY: so
 .PHONY: mirror-so
 .PRECIOUS: $(MIRRORDIR)/so.owl
@@ -518,11 +509,8 @@ mirror-chebi: | $(TMPDIR)
 ## ONTOLOGY: obi
 .PHONY: mirror-obi
 .PRECIOUS: $(MIRRORDIR)/obi.owl
-mirror-obi: | $(TMPDIR)
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(OBOBASE)/obi.owl --create-dirs -o $(MIRRORDIR)/obi.owl --retry 4 --max-time 200 &&\
-		$(ROBOT) convert -i $(MIRRORDIR)/obi.owl -o $@.tmp.owl && \
-		$(ROBOT) remove -i $@.tmp.owl --base-iri $(URIBASE)/OBI --axioms external --preserve-structure false --trim false -o $@.tmp.owl &&\
-		mv $@.tmp.owl $(TMPDIR)/$@.owl; fi
+$(MIRRORDIR)/obi.owl: 
+	echo "ERROR: You have configured your default mirror type to be custom; this behavior needs to be overwritten in maxo.Makefile!" && false
 
 
 ## ONTOLOGY: ncbitaxon
