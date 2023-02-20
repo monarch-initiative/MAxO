@@ -16,22 +16,57 @@ export_formats:
   - obo
   - json
 import_group:
+  use_base_merging: TRUE
+  exclude_iri_patterns:
+    - <http://purl.obolibrary.org/obo/GOCHE_*>
+    - <http://purl.obolibrary.org/obo/NCBITaxon_Union_*>
+    - <http://www.informatics.jax.org/marker/MGI:*>
+    - <http://purl.obolibrary.org/obo/OBA_*>
+    - <http://purl.obolibrary.org/obo/ENVO_*>
+    - <http://purl.obolibrary.org/obo/MPATH_*>
+    - <http://purl.obolibrary.org/obo/CARO_*>
+    - <http://www.genenames.org/cgi-bin/gene_symbol_report*>
+    - <http://birdgenenames.org/cgnc/GeneReport*>
+    - <http://www.ncbi.nlm.nih.gov/gene/*>
+    - <http://purl.obolibrary.org/obo/foodon.owl/FOODON_*>
+    - <http://purl.obolibrary.org/obo/IAO_0000109*>
+    - <http://purl.obolibrary.org/obo/IAO_0000101*>
+  slme_individuals: exclude
   products:
-    - id: iao
+    - id: omo
     - id: go
+      make_base: True
     - id: ro
+      use_base: True
+    - id: so
+      make_base: True
+    - id: bfo
+      make_base: True
     - id: uberon
+      use_base: True
     - id: foodon
+      make_base: True
+      base_iris:
+        - http://purl.obolibrary.org/obo/PO_
+        - http://purl.obolibrary.org/obo/FOODON_
     - id: nbo
+      make_base: True
+    - id: pato
+      use_base: True
     - id: hp
-   module_type: minimal
+      use_base: True
+    - id: cl
+      use_base: True
     - id: chebi
-      use_gzipped: TRUE
-      is_large: TRUE
+      make_base: TRUE
+      mirror_from: https://raw.githubusercontent.com/obophenotype/chebi_obo_slim/main/chebi_slim.owl
     - id: obi
+      mirror_type: custom
+    - id: ncbitaxon
+      mirror_from: http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl
     - id: pr
-      use_gzipped: TRUE
-      is_large: TRUE
+      make_base: TRUE
+      mirror_from: https://raw.githubusercontent.com/obophenotype/pro_obo_slim/master/pr_slim.owl
 pattern_pipelines_group:
   products:
     - id: manual
@@ -44,3 +79,19 @@ components:
     - filename: replaced.owl
     - filename: xrefs.owl 
 allow_equivalents: all
+robot_report:
+  use_base_iris: True
+  fail_on : ERROR
+  use_labels : False
+  custom_profile : True
+  report_on :
+    - maxo-base.owl
+    - edit
+  sparql_test_on:
+    - maxo-base.owl
+  custom_sparql_checks :
+    - equivalent-classes
+    - owldef-self-reference
+    - iri-range
+  custom_sparql_exports : 
+    - basic-report
