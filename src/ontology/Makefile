@@ -186,10 +186,9 @@ validate_profile_%: $(REPORTDIR)/validate_profile_owl2dl_%.txt
 
 SPARQL_VALIDATION_QUERIES = $(foreach V,$(SPARQL_VALIDATION_CHECKS),$(SPARQLDIR)/$(V)-violation.sparql)
 
-sparql_test:  $(EDIT_PREPROCESSED) maxo-base.owl catalog-v001.xml | $(REPORTDIR)
+sparql_test:  maxo-base.owl catalog-v001.xml | $(REPORTDIR)
 ifneq ($(SPARQL_VALIDATION_QUERIES),)
   
-	$(ROBOT) verify  --catalog catalog-v001.xml -i $(EDIT_PREPROCESSED) --queries $(SPARQL_VALIDATION_QUERIES) -O $(REPORTDIR)
   
 	$(ROBOT) verify  --catalog catalog-v001.xml -i maxo-base.owl --queries $(SPARQL_VALIDATION_QUERIES) -O $(REPORTDIR)
 endif

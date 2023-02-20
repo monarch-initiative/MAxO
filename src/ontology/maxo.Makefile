@@ -7,28 +7,13 @@
 ### Generating all ROBOT templates ######
 #########################################
 
-TEMPLATESDIR=../templates
-
-TEMPLATES=$(patsubst %.tsv, $(TEMPLATESDIR)/%.owl, $(notdir $(wildcard $(TEMPLATESDIR)/*.tsv)))
-
-$(TEMPLATESDIR)/%.owl: $(TEMPLATESDIR)/%.tsv $(SRC)
+$(TEMPLATEDIR)/%.owl: $(TEMPLATEDIR)/%.tsv $(SRC)
 	$(ROBOT) merge -i $(SRC) template --template $< --output $@ && \
 	$(ROBOT) annotate --input $@ --ontology-iri $(ONTBASE)/components/$*.owl -o $@
 
-templates: $(TEMPLATES)
-	echo $(TEMPLATES)
-
-tmp/remove.txt:
-	echo "HP:0025454" > $@
-	echo "HP:0012029" >> $@
-	echo "HP:0004360" >> $@
-	echo "HP:0032368" >> $@
-	echo "HP:0001941" >> $@
-	echo "HP:0032369" >> $@
-	echo "HP:0001948" >> $@
-	echo "HP:0040145" >> $@
-	echo "HP:0000843" >> $@
-	echo "HP:0000829" >> $@
+#########################################
+### Custom import or mirror configs #####
+#########################################
 
 # Workaround for https://github.com/geneontology/obographs/issues/93. Basically removing all object properties since
 # We cannot handle complex expressions in obographs in ODK 1.4
@@ -40,11 +25,9 @@ $(MIRRORDIR)/obi.owl:
 			remove --select object-properties -o $@.tmp.owl &&\
 		mv $@.tmp.owl $@; fi
 
-reports/maxo-edit.owl-obo-report.tsv: maxo-edit.owl
-	$(ROBOT) report -i $< --fail-on none --print 5 -o $@
-
-sssom.csv:
-	robot query -f csv -i $(SRC) --query ../sparql/sssom.sparql $@
+#########################################
+### Custom Merge-Replace Pipeline  ######
+#########################################
 
 tmp/unmerge_def.owl: ../scripts/unmerge_ncit_def.tsv
 	$(ROBOT) template --template $< \
@@ -66,6 +49,10 @@ replace:
 	make unmerge
 	make merge
 
+#########################################
+### Merge template pipeline        ######
+#########################################
+
 MERGE_TEMPLATE=tmp/merge_template.tsv
 TEMPLATE_URL=NO_TEMPLATE_URL_PROVIDED
 
@@ -76,7 +63,20 @@ merge_template: $(MERGE_TEMPLATE)
 	$(ROBOT) template --merge-before --input $(SRC) \
  --template $(MERGE_TEMPLATE) convert -f ofn -o $(SRC)
 
-test_fast:
-	$(MAKE_FAST) test
 
+#########################################
+### Graveyard        ####################
+#########################################
 
+# Delete this when you see this next time.
+# tmp/remove.txt:
+#	echo "HP:0025454" > $@
+#	echo "HP:0012029" >> $@
+#	echo "HP:0004360" >> $@
+#	echo "HP:0032368" >> $@
+#	echo "HP:0001941" >> $@
+#	echo "HP:0032369" >> $@
+#	echo "HP:0001948" >> $@
+#	echo "HP:0040145" >> $@
+#	echo "HP:0000843" >> $@
+#	echo "HP:0000829" >> $@
