@@ -16,9 +16,14 @@ test_fast:
 ### Generating all ROBOT templates ######
 #########################################
 
+TEMPLATES=$(patsubst %.tsv, $(TEMPLATESDIR)/%.owl, $(notdir $(wildcard $(TEMPLATESDIR)/*.tsv)))
+
 $(TEMPLATEDIR)/%.owl: $(TEMPLATEDIR)/%.tsv $(SRC)
 	$(ROBOT) merge -i $(SRC) template --template $< --output $@ && \
 	$(ROBOT) annotate --input $@ --ontology-iri $(ONTBASE)/components/$*.owl -o $@
+
+templates: $(TEMPLATES)
+	echo $(TEMPLATES)
 
 #########################################
 ### Custom import or mirror configs #####
