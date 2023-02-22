@@ -20,6 +20,8 @@ Annotation(dce:description "An ontology to represent medically relevant actions,
 Annotation(dce:title "Medical Action Ontology")
 Annotation(dcterms:license <https://creativecommons.org/licenses/by/4.0/>)
 
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_133326>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_37334>))
 Declaration(Class(<http://purl.obolibrary.org/obo/COB_0000082>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000002>))
@@ -27,6 +29,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000003>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000004>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000005>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000006>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000007>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000008>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000009>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000010>))
@@ -1092,6 +1095,16 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000006> "lab testing")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000006> "clinical laboratory procedure"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000006> <http://purl.obolibrary.org/obo/MAXO_0000003>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000007> (radiograph imaging with contrast dye)
+
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000007> "2023-02-22T20:05:27Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000007> <https://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000007> "radiographic imaging with contrast dye")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000007> "radiography with contrast dye")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000007> "radiograph imaging with contrast dye"@en)
+EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0000007> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000595> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/MAXO_0000864> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_24431> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> <http://purl.obolibrary.org/obo/CHEBI_37334>)))))
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000007> <http://purl.obolibrary.org/obo/MAXO_0000595>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000009> (nutrition intervention)
 
@@ -9890,7 +9903,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0001313> "X-ray of pulmonary vasculature")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0001313> "contrast pulmonary angiography")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0001313> "X-ray pulmonary angiography procedure"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0001313> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000595> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0008886>))))
+EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0001313> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000007> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0008886>))))
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001313> <http://purl.obolibrary.org/obo/MAXO_0001259>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0001314> (X-ray cerebral angiography procedure)
@@ -9901,7 +9914,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <h
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0001314> "X-ray of the blood vessel in the brain")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0001314> "contrast cerebral angiography")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0001314> "X-ray cerebral angiography procedure"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0001314> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000595> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0003499>))))
+EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0001314> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000007> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0003499>))))
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001314> <http://purl.obolibrary.org/obo/MAXO_0001259>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0001316> (microangiography)
@@ -9918,7 +9931,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0001317> "2023-02-21T18:59:46Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0001317> <https://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0001317> "X-ray microangiography"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001317> <http://purl.obolibrary.org/obo/MAXO_0000595>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001317> <http://purl.obolibrary.org/obo/MAXO_0000007>)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001317> <http://purl.obolibrary.org/obo/MAXO_0001316>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0001318> (fluorescent microangiography)
@@ -9938,7 +9951,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <h
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0001319> "X-ray of the blood vessels")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0001319> "contrast coronary angiography")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0001319> "X-ray coronary angiography procedure"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0001319> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000595> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0013768>))))
+EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0001319> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000007> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0013768>))))
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001319> <http://purl.obolibrary.org/obo/MAXO_0001259>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0001321> (nuclear medicine imaging procedure)
@@ -10564,7 +10577,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <h
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/maxo#ABBREVIATION>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0009065> "IVP")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0009065> "intravenous urography")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0009065> "intravenous pyelogram"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0009065> <http://purl.obolibrary.org/obo/MAXO_0000595>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0009065> <http://purl.obolibrary.org/obo/MAXO_0000007>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0009066> (examination by psychiatrist)
 
@@ -10968,7 +10981,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0035038> "CT angiography")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0035038> "X-ray angiography")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0035038> "contrast angiography procedure"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0035038> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000595> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0004537>))))
+EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0035038> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000007> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0004537>))))
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0035038> <http://purl.obolibrary.org/obo/MAXO_0001259>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0035049> (endoscopic retrograde cholangiopancreatography)
@@ -10978,8 +10991,8 @@ AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0035049> "2023
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0035049> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0035049> "ERCP")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0035049> "endoscopic retrograde cholangiopancreatography"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0035049> <http://purl.obolibrary.org/obo/MAXO_0000007>)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0035049> <http://purl.obolibrary.org/obo/MAXO_0000130>)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0035049> <http://purl.obolibrary.org/obo/MAXO_0000595>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0035082> (barium swallow radiograph procedure)
 
@@ -10991,7 +11004,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0035082> "barium esophagography")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0035082> "barium swallow study")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0035082> "barium swallow radiograph procedure"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0035082> <http://purl.obolibrary.org/obo/MAXO_0000595>)
+EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0035082> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000007> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/MAXO_0000864> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_133326> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> <http://purl.obolibrary.org/obo/CHEBI_37334>)))))
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0035088> (magnetic resonance angiography procedure)
 
