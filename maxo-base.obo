@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2023-02-19/maxo-base.owl
+data-version: maxo/releases/2023-02-23/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
@@ -7,7 +7,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2023-02-19" xsd:string
+property_value: owl:versionInfo "2023-02-23" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -90,6 +90,16 @@ xref: NCIT:C25294
 is_a: MAXO:0000003 ! diagnostic procedure
 property_value: http://purl.org/dc/elements/1.1/date "2018-11-16T20:11:26Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000007
+name: radiograph imaging with contrast dye
+def: "A test that involves the administration of contrast dye  and X-ray imaging in order to be able to see soft tissue within the body. Dye can be added intravenously, ingested, or other methods." []
+synonym: "radiographic imaging with contrast dye" EXACT []
+synonym: "radiography with contrast dye" EXACT []
+is_a: MAXO:0000595 ! radiograph imaging procedure
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-22T20:05:27Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000008
@@ -224,6 +234,16 @@ property_value: http://purl.org/dc/elements/1.1/date "2018-11-16T20:22:04Z" xsd:
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0000019
+name: esophography with contrast
+def: "A radiographic examination of the esophagus in which the esophagusis made visible by barium or a water-soluble contrast administered orally prior to the examination." []
+synonym: "barrium swallow test of the esophagus" NARROW []
+synonym: "contrast examination of the esophagus" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-22T20:53:16Z" xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-22T21:08:46Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0000020
 name: behavioral preventative care
 def: "A behavioral modification or implementation of a behavior designed to prevent disease or ailment." []
@@ -258,6 +278,15 @@ xref: NCIT:C15252
 is_a: MAXO:0000025 ! end-of life care
 property_value: http://purl.org/dc/elements/1.1/date "2018-11-16T20:23:10Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000023
+name: mood and behavior-altering agent therapy
+def: "Treatment with an agent that can alter brain chemistry leading to mood and/or behaviorial changes." []
+synonym: "mood altering drug therapy" NARROW []
+is_a: MAXO:0000058 ! pharmacotherapy
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T18:26:42Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000025
@@ -1425,7 +1454,7 @@ synonym: "minor tranquilizing drug therapy" EXACT []
 synonym: "treatment with anxiolytic" EXACT []
 synonym: "treatment with anxiolytic drug" EXACT []
 xref: CHEBI:35474
-is_a: MAXO:0001023 ! tranquilizing agent therapy
+is_a: MAXO:0000023 ! mood and behavior-altering agent therapy
 property_value: http://purl.org/dc/elements/1.1/date "2019-01-22T17:54:43Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1489,7 +1518,7 @@ synonym: "treatment with antipsychotic agent" EXACT []
 synonym: "treatment with antipsychotic drug" EXACT []
 synonym: "treatment with antipsychotic medication" EXACT []
 xref: CHEBI:35476
-is_a: MAXO:0001023 ! tranquilizing agent therapy
+is_a: MAXO:0000023 ! mood and behavior-altering agent therapy
 property_value: http://purl.org/dc/elements/1.1/date "2019-01-22T17:57:29Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -2934,7 +2963,7 @@ synonym: "treatment with antimanic agent" EXACT []
 synonym: "treatment with antimanic drug" EXACT []
 synonym: "treatment with antimanic medication" EXACT []
 xref: CHEBI:35477
-is_a: MAXO:0001023 ! tranquilizing agent therapy
+is_a: MAXO:0000023 ! mood and behavior-altering agent therapy
 property_value: http://purl.org/dc/elements/1.1/date "2019-01-22T20:33:05Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9725,6 +9754,7 @@ name: electrocardiography
 def: "A procedure that displays the electrical activity of the heart." [NCIT:C38053]
 synonym: "ECG" EXACT ABBREVIATION []
 synonym: "EKG" EXACT ABBREVIATION []
+synonym: "electrocardiogram procedure" EXACT []
 xref: NCIT:C38053
 is_a: MAXO:0000493 ! cardiovascular diagnostic procedure
 property_value: http://purl.org/dc/elements/1.1/date "2021-08-09T19:19:35Z" xsd:dateTime
@@ -10461,13 +10491,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001023
-name: tranquilizing agent therapy
-def: "Treatment with a traditional grouping of drugs said to have a soothing or calming effect on mood, thought or behavior." []
-synonym: "treatment with tranquilizing drug" EXACT []
-xref: CHEBI:35473
-is_a: MAXO:0001022 ! psychotropic agent therapy
-property_value: http://purl.org/dc/elements/1.1/date "2019-07-24T19:39:15Z" xsd:dateTime
-created_by: http://orcid.org/0000-0001-7941-2961
+name: obsolete tranquilizing agent therapy
+is_obsolete: true
+replaced_by: MAXO:0000023
 
 [Term]
 id: MAXO:0001025
@@ -12274,6 +12300,14 @@ property_value: http://purl.org/dc/elements/1.1/date "2022-03-24T20:39:14Z" xsd:
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0001212
+name: clinical imaging procedure by system
+def: "Visualization of a particular body system, organ, or cell type using a variety of imaging techniques for use in screening, diagnosis, surgical procedures or therapy." []
+is_a: MAXO:0000005 ! clinical imaging procedure
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-21T18:01:42Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0001213
 name: colorectal polypectomy
 def: "The surgical removal (cutting out) of part or all of colorectal polyps." []
@@ -12362,7 +12396,7 @@ id: MAXO:0001223
 name: chelator agent therapy
 def: "Use of a chemical compound that binds tightly to metal ions. Often used to remove toxic metals from the body." []
 synonym: "treatment with chelator" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "2022-3-30T11:00:00Z" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2022-03-30T11:00:00Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -12370,7 +12404,7 @@ id: MAXO:0001224
 name: copper chelator agent therapy
 def: "Treatrment with an agent that binds excess amounts of copper to keep it from accumulating in some parts of the body, particularly the liver." []
 synonym: "treatment with copper chelator" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "2022-3-30T11:00:00Z" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2022-03-30T11:00:00Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -12378,7 +12412,7 @@ id: MAXO:0001225
 name: iron chelator agent therapy
 def: "Use of a compound which binds tightly to iron molecules." []
 synonym: "treatment with iron chelator" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "2022-3-30T11:00:00Z" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2022-03-30T11:00:00Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -12386,7 +12420,7 @@ id: MAXO:0001226
 name: sequestrant agent therapy
 def: "Treatment with a sequestering agent that can envelop multiple ions at a time." []
 synonym: "treatment with sequestrant" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "2022-3-30T11:00:00Z" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2022-03-30T11:00:00Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -12758,6 +12792,15 @@ intersection_of: MAXO:0000106 ! nutritional supplementation
 intersection_of: RO:0002233 CHEBI:12777
 property_value: http://purl.org/dc/elements/1.1/date "2022-09-07T09:00:01Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001259
+name: angiography
+def: "A medical imaging technique used to visualize the inside, or lumen, of blood vessels and organs of the body, with particular interest in the arteries, veins, and the heart chambers." [https://en.wikipedia.org/wiki/Angiography]
+synonym: "arteriography" EXACT []
+is_a: MAXO:0001212 ! clinical imaging procedure by system
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-21T18:03:45Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001260
@@ -13193,11 +13236,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001307
 name: total body MRI
-def: "A medical examination performed using of magnetic resonance imaging to image the multicellular organism." []
-synonym: "MRI of total body" EXACT []
-synonym: "multicellular organism magnetic resonance imaging" EXACT []
-synonym: "multicellular organism MRI" EXACT []
-synonym: "Nuclear magnetic resonance imaging of the multicellular organism" EXACT []
+def: "A medical examination performed using of magnetic resonance imaging to image the whole body." []
+synonym: "MRI of whole body" EXACT []
+synonym: "total body magnetic resonance imaging" EXACT []
+is_a: MAXO:0000424 ! medical magnetic resonance imaging procedure
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-10T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -13251,6 +13293,248 @@ xref: NCIT:C122934
 intersection_of: MAXO:0000068 ! transplantation procedure
 intersection_of: RO:0002233 UBERON:0000062
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-20T10:00:01Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001313
+name: X-ray pulmonary angiography procedure
+def: "An X-ray imaging technique that involves visualization of the pulmonary vasculature after fluoroscopy-guided catheter placement and injection of an iodinated contrast medium into the pulmonary circulation." [NCIT:C154789]
+synonym: "contrast pulmonary angiography" EXACT []
+synonym: "X-ray of pulmonary vasculature" EXACT []
+xref: NCIT:C154789
+is_a: MAXO:0001259 ! angiography
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-21T18:31:55Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001314
+name: X-ray cerebral angiography procedure
+def: "The X-ray examination of the blood vessels in and around the brain." []
+synonym: "contrast cerebral angiography" EXACT []
+synonym: "X-ray of brain blood vessels" EXACT []
+is_a: MAXO:0001259 ! angiography
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-21T18:40:16Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001315
+name: dental radiography
+def: "Use of an imaging test that uses small amounts of radiation to produce pictures of teeth." []
+synonym: "calcareous tooth radiogram procedure" EXACT []
+synonym: "calcareous tooth X-ray procedure" EXACT []
+synonym: "radiograph of calcareous tooth" EXACT []
+synonym: "radiography of calcareous tooth" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-10T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001316
+name: microangiography
+def: "Imaging of small blood or lymphatic vessels less than 200 micrometers in diameter." []
+is_a: MAXO:0001259 ! angiography
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-21T18:58:06Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001317
+name: X-ray microangiography
+def: "Radiography of small blood or lymphatic vessels of an organ less than 200 micrometers in diameter." []
+is_a: MAXO:0000007 ! radiograph imaging with contrast dye
+is_a: MAXO:0001316 ! microangiography
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-21T18:59:46Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001318
+name: fluorescent microangiography
+def: "This test consists of injecting indocyanine green dye (ICG) through a peripheral intravenous line. The ICG subsequently binds to blood lipoproteins and travels to where there is blood flow. Using a near-infrared laser coupled with a camera, one can then visualize blood flow within 3–5 millimeters of the skin surface." [PMID:36409932]
+comment: This technique can be used as a bedside diagnosis for frostbite
+is_a: MAXO:0001316 ! microangiography
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-21T19:02:21Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001319
+name: X-ray coronary angiography procedure
+def: "The X-ray examination of the blood vessels of the heart." []
+synonym: "contrast coronary angiography" EXACT []
+synonym: "X-ray of the blood vessel in the heart" EXACT []
+is_a: MAXO:0001259 ! angiography
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-21T19:09:18Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001320
+name: GABA antagonist therapy
+def: "Use of a drug or agent that inhibits GABA signaling." []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_65259" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001321
+name: nuclear medicine imaging procedure
+def: "Use of a small amount of radioactive chemical called a tracer that can aid in imaging a target organ. The tracer emits gamma rays which are detected by a gamma radiation camera and analyzed by a computer to form the image of the desired region." []
+synonym: "nuclear medicine scan" EXACT []
+synonym: "radioimaging" EXACT []
+synonym: "radionuclide imaging" EXACT []
+synonym: "radionuclide scanning" EXACT []
+synonym: "scintigraphy" EXACT []
+xref: NCIT:C62667
+is_a: MAXO:0000005 ! clinical imaging procedure
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-21T19:50:18Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001322
+name: GABA modulater therapy
+def: "Use of a drug or agent that does not act as agonist or antagonist but does affect GABA-ionophore complex signaling." []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_50268" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001323
+name: cholinergic agent therapy
+def: "Treatment with a drug or agent that modifies cholinergic signaling." []
+synonym: "treatment with cholinergic drug" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001324
+name: cholinergic agonist therapy
+def: "Treatment with drug or agent that activates cholinergic signaling." []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_38324" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001325
+name: muscarinic agonist therapy
+def: "Treatment with drug or agent to activate muscarinic signaling." []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_38325" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001326
+name: nicotinic acetylcholine receptor agonist therapy
+def: "Use of a drug or agent that activates nicotinic acetylcholine receptor signaling." []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_47958" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001327
+name: cholinergic antagonist therapy
+def: "Treatment with a drug or agent that inhibits cholinergic signaling." []
+synonym: "treatment with cholinergic antagonist" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001328
+name: muscarinic antagonist therapy
+def: "Treatment with a drug or agent to inhibit muscarinic signaling." []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_48876" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001329
+name: nicotinic antagonist therapy
+def: "Use of a drug or agent that inhibits nicotinic signaling." []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_48878" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001330
+name: parasympatholytic therapy
+def: "Use of a drug or agent that modulates parasympatholytic signaling." []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_50370" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001331
+name: dopaminergic modifying agent therapy
+def: "Use of a drug or agent that modulates dopamine signaling." []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_48560" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001332
+name: dopamine agonist therapy
+def: "Use of a drug or agent that activates dopamine signaling." []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_51065" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001333
+name: dopamine receptor D1 agonist therapy
+def: "Use of a drug or agent that activates dopamine D1 receptor signaling." []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_131795" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001334
+name: dopamine uptake inhibitor therapy
+def: "Use of a drug or agent that inhibits dopamine neurotransmitter reuptake." []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_51039" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001335
+name: dopaminergic antagonist agent therapy
+def: "Use of a drug or agent that inhibits dopamine signaling." []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_48561" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001336
+name: neurotransmitter agent therapy
+def: "Use of a drug or agent that modulates neurotransmitter signaling." []
+synonym: "treatment with neurotransmitter agent" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001337
+name: GABA agonist agent therapy
+def: "Use of a drug or agent that activates GABA signaling." []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_51373" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001338
+name: GABAA receptor agonist therapy
+def: "Treatment with a drug or agent that activates GABAA receptor signaling." []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_91016" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001339
+name: GABAB receptor agonist therapy
+def: "Treatment with a drug or agent that activates GABAB receptor signaling." []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_143001" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001340
+name: GABAA receptor antagonist therapy
+def: "Treatment with a drug or agent that inhibits GABAA receptor signaling." []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_145515" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -13954,7 +14238,7 @@ name: intravenous pyelogram
 def: "A test that involves the administration of intravenous contrast and X-ray imaging of the urinary tract. The iodinated contrast flows through the renal vasculature and filtered into the collecting system highlighting the anatomic structures on the X-ray image." [PMID:32644460]
 synonym: "intravenous urography" EXACT []
 synonym: "IVP" EXACT ABBREVIATION []
-is_a: MAXO:0000595 ! radiograph imaging procedure
+is_a: MAXO:0000007 ! radiograph imaging with contrast dye
 property_value: http://purl.org/dc/elements/1.1/date "2022-05-10T18:02:12Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -14235,7 +14519,17 @@ def: "Treatment with a substance that inhibits GABA trasaminase." []
 synonym: "GABA transaminase inhibitor" EXACT []
 synonym: "treatment with EC 2.6.1.19 (4-aminobutyrate--2-oxoglutarate transaminase) inhibitor" EXACT []
 is_a: MAXO:0000058 ! pharmacotherapy
-property_value: http://purl.org/dc/elements/1.1/date "2022-8-18T11:00:00Z" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2022-08-18T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0009098
+name: intraoral radiography
+def: "A procedure whre the radiographic film or sensor is placed inside the mouth and uses small amounts of radiation to produce pictures of teeth and other oral structures." []
+synonym: "intraoral x-ray procedure" EXACT []
+synonym: "radiograph inside the mouth" EXACT []
+is_a: MAXO:0000595 ! radiograph imaging procedure
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-20T17:13:55Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -16459,28 +16753,15 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010358
-name: angiography procedure
-def: "The X-ray examination of the blood vessels or chambers of the heart." []
-synonym: "angiography" EXACT []
-synonym: "blood vasculature radiogram procedure" EXACT []
-synonym: "blood vasculature X-ray procedure" EXACT []
-synonym: "radiograph of blood vasculature" EXACT []
-synonym: "radiography of blood vasculature" EXACT []
-xref: NCIT:C20080
-property_value: http://purl.org/dc/elements/1.1/date "2020-04-07T20:39:14Z" xsd:string
-created_by: http://orcid.org/0000-0001-7941-2961
+name: obsolete angiography procedure
+is_obsolete: true
+replaced_by: MAXO:0001298
 
 [Term]
 id: MAXO:0010359
-name: pulmonary angiography procedure
-def: "An x-ray imaging technique that involves visualization of the pulmonary vasculature after fluoroscopy-guided catheter placement and injection of an iodinated contrast medium into the pulmonary circulation." []
-synonym: "pulmonary vascular system radiogram procedure" EXACT []
-synonym: "pulmonary vascular system X-ray procedure" EXACT []
-synonym: "radiograph of pulmonary vascular system" EXACT []
-synonym: "radiography of pulmonary vascular system" EXACT []
-xref: NCIT:C154789
-property_value: http://purl.org/dc/elements/1.1/date "2020-04-07T20:39:14Z" xsd:string
-created_by: http://orcid.org/0000-0001-7941-2961
+name: obsolete pulmonary angiography procedure
+is_obsolete: true
+replaced_by: MAXO:0001313
 
 [Term]
 id: MAXO:0010360
@@ -16554,15 +16835,12 @@ created_by: http://orcid.org/0000-0001-7941-29610
 id: MAXO:0010365
 name: total body radiography procedure
 def: "A radiologic test that involves the examination of the entire body in a single procedure." []
-synonym: "multicellular organism radiogram procedure" EXACT []
-synonym: "multicellular organism X-ray procedure" EXACT []
-synonym: "radiograph of multicellular organism" EXACT []
-synonym: "radiography of multicellular organism" EXACT []
-synonym: "total body radiography" EXACT []
+synonym: "total body X-ray" EXACT []
 synonym: "whole body radiography" EXACT []
 xref: NCIT:C96640
+is_a: MAXO:0000595 ! radiograph imaging procedure
 property_value: http://purl.org/dc/elements/1.1/date "2020-04-27T20:39:14Z" xsd:string
-created_by: http://orcid.org/0000-0001-7941-2961
+created_by: https://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010366
@@ -16660,6 +16938,49 @@ property_value: http://purl.org/dc/elements/1.1/date "2019-09-05T20:57:49Z" xsd:
 created_by: http://orcid.org/0000-0002-7463-6306
 
 [Term]
+id: MAXO:0035001
+name: hand radiography
+def: "Use of an imaging test that uses small amounts of radiation to produce pictures of manus." []
+synonym: "manus radiogram procedure" EXACT []
+synonym: "manus X-ray procedure" EXACT []
+synonym: "radiograph of manus" EXACT []
+synonym: "radiograph of the hand" EXACT []
+synonym: "radiography of manus" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-10T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035003
+name: fluorescein angiography
+def: "A technique to visualize the blood vessels in the back of the eye by injecting fluorescent dye and then imaging it." []
+is_a: MAXO:0001259 ! angiography
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-21T18:55:59Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035006
+name: foot radiography
+def: "Use of an imaging test that uses small amounts of radiation to produce pictures of pes." []
+synonym: "pes radiogram procedure" EXACT []
+synonym: "pes X-ray procedure" EXACT []
+synonym: "radiograph of foot" EXACT []
+synonym: "radiograph of pes" EXACT []
+synonym: "radiography of pes" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-10T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035008
+name: shoulder radiograph procedure
+def: "Use of an imaging test that uses small amounts of radiation to produce pictures of shoulder." []
+synonym: "radiograph of shoulder" EXACT []
+synonym: "radiography of shoulder" EXACT []
+synonym: "shoulder radiogram procedure" EXACT []
+synonym: "shoulder X-ray procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-10T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0035014
 name: MRI of the spinal cord
 def: "A medical examination performed using of magnetic resonance imaging to image the spinal cord." []
@@ -16681,6 +17002,80 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-02-10T20:39:14Z" xsd:
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0035035
+name: lymphography
+def: "Use of an imaging test that uses small amounts of radiation to produce pictures of lymphatic part of lymphoid system." []
+synonym: "lymphatic part of lymphoid system radiogram procedure" EXACT []
+synonym: "lymphatic part of lymphoid system X-ray procedure" EXACT []
+synonym: "radiograph of lymphatic part of lymphoid system" EXACT []
+synonym: "radiograph of lymphatic system" EXACT []
+synonym: "radiography of lymphatic part of lymphoid system" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-10T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035038
+name: contrast angiography procedure
+def: "An x-ray of blood vessels after a contrast dye is added intraveniously." []
+synonym: "CT angiography" EXACT []
+synonym: "X-ray angiography" EXACT []
+synonym: "X-ray of the blood vessels" EXACT []
+xref: NCIT:C20080
+is_a: MAXO:0001259 ! angiography
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-21T18:18:48Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035039
+name: defecography
+def: "Is an imaging procedure often using a specific contrast dye for evaluation of pelvic floor, anorectal muscle contractions and relaxation (sphincters), and certain structural abnormalities." []
+is_a: MAXO:0001212 ! clinical imaging procedure by system
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T16:22:32Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035043
+name: upper limb radiography
+def: "Use of an imaging test that uses small amounts of radiation to produce pictures of forelimb." []
+synonym: "forelimb radiogram procedure" EXACT []
+synonym: "forelimb X-ray procedure" EXACT []
+synonym: "radiograph of forelimb" EXACT []
+synonym: "radiograph of upper limb" EXACT []
+synonym: "radiography of forelimb" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-10T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035048
+name: upper GI radiography with contrast
+def: "A radiographic examination of the upper gastrointestinal tract in which the esophagus, stomach, and duodenum are made visible by barium or a water-soluble contrast administered orally prior to the examination." []
+synonym: "barrium swallow test of the upper GI" NARROW []
+synonym: "contrast examination of the upper gastrointestinal tract" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-22T20:53:16Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035049
+name: endoscopic retrograde cholangiopancreatography
+def: "A combined endoscopic and fluoroscopic procedure in which an upper endoscope is led into a second part of the duodenum, making it possible for passage of other tools via the major duodenal papilla into the biliary and pancreatic ducts. Contrast material may be injected in these ducts, allowing for radiologic visualization and therapeutic interventions when indicated." [PMID:29630212]
+synonym: "ERCP" EXACT []
+is_a: MAXO:0000007 ! radiograph imaging with contrast dye
+is_a: MAXO:0000130 ! endoscopic procedure
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-20T17:37:27Z" xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035050
+name: spine radiography
+def: "Use of an imaging test that uses small amounts of radiation to produce pictures of vertebral column." []
+synonym: "radiograph of vertebral column" EXACT []
+synonym: "radiography of vertebral column" EXACT []
+synonym: "vertebral column radiogram procedure" EXACT []
+synonym: "vertebral column X-ray procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-21T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0035051
 name: MRI of the muscle organ
 def: "A medical examination performed using of magnetic resonance imaging to image the muscle organ." []
@@ -16690,6 +17085,50 @@ synonym: "muscle organ MRI" EXACT []
 synonym: "Nuclear magnetic resonance imaging of the muscle organ" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-10T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035074
+name: ankle radiography
+def: "Use of an imaging test that uses small amounts of radiation to produce pictures of ankle joint." []
+synonym: "ankle joint radiogram procedure" EXACT []
+synonym: "ankle joint X-ray procedure" EXACT []
+synonym: "radiograph of ankle joint" EXACT []
+synonym: "radiography of ankle joint" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-10T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035082
+name: barium swallow radiograph procedure
+def: "A contrast-enhanced radiographic study commonly used to assess structural characteristics of the entire esophagus." [PMID:29630228]
+synonym: "barium esophagogram procedure" EXACT []
+synonym: "barium esophagography" EXACT []
+synonym: "barium swallow study" EXACT []
+synonym: "X-ray of upper GI" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-20T17:57:19Z" xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035085
+name: cervical spine radiogrphy
+def: "Use of an imaging test that uses small amounts of radiation to produce pictures of cervical region of vertebral column." []
+synonym: "cervical region of vertebral column radiogram procedure" EXACT []
+synonym: "cervical region of vertebral column X-ray procedure" EXACT []
+synonym: "radiograph of cervical region of vertebral column" EXACT []
+synonym: "radiograph of cervical spine" EXACT []
+synonym: "radiography of cervical region of vertebral column" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-10T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035088
+name: magnetic resonance angiography procedure
+def: "A procedure that uses radio waves and a powerful magnet linked to a computer to create detailed pictures of the blood vessels and blood flow inside the body. A dye may be injected into a vein to make the blood vessels and blood flow easier to see. (NCI)" []
+synonym: "MR angiography" EXACT []
+synonym: "MRA" EXACT []
+is_a: MAXO:0001259 ! angiography
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-21T19:27:13Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
 
 [Typedef]
 id: MAXO:0000521
