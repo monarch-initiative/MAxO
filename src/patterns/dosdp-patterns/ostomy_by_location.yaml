@@ -19,10 +19,10 @@ annotationProperties:
   date: dc:date
   comment: rdfs:comment
   xref: oio:hasDbXref
- 
+
 vars:
   location: "'location'"
-  
+
 data_vars:
   date: "'date'"
   created_by: "'created_by'"
@@ -30,16 +30,17 @@ data_vars:
   xref: "database cross reference"
 data_list_vars:
   syns: xsd:string
+
 name:
   text: "surgical construction of %s stoma"
   vars:
    - location
-     
+
+annotations:
   - annotationProperty: date
     text: "%s"
     vars:
      - date
-     
   - annotationProperty: created_by
     text: "%s"
     vars:
@@ -49,7 +50,6 @@ name:
     text: "%s"
     vars:
      - comment
-    
   - annotationProperty: xref
     text: "%s"
     vars:
@@ -64,7 +64,7 @@ def:
     - location
 
 equivalentTo:
-  text: 'ostomy' and 'has_input' some ('part_of' some %s)"
+  text: "'ostomy' and 'has_input' some ('part_of' some %s)"
   vars:
     - location
    
