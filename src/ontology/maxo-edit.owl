@@ -823,6 +823,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000974>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000975>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000976>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000977>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000978>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000979>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001001>))
@@ -967,7 +968,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0030011>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0030012>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0030018>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0035003>))
-Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0035038>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0035039>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0035048>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0035049>))
@@ -9791,6 +9791,14 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000977> "pull-through procedure"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000977> <http://purl.obolibrary.org/obo/MAXO_0001354>)
 
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000978> (vascular imaging)
+
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000978> "2023-03-01T18:36:36Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000978> <https://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000978> "imaging of the vascular system")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000978> "vascular imaging"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000978> <http://purl.obolibrary.org/obo/MAXO_0001212>)
+
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000979> (laparoscopic-assisted anorectoplasty)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000979> "A techniqhe which positions the neorectum accurately inside the sphincter complex without dividing any of these muscles.")
@@ -10114,13 +10122,15 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001258> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0001259> (angiography)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/Angiography") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0001259> "A medical imaging technique used to visualize the inside, or lumen, of blood vessels and organs of the body, with particular interest in the arteries, veins, and the heart chambers.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0001259> "An x-ray of blood vessels after a contrast dye is added intraveniously.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0001259> "2023-02-21T18:03:45Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0001259> <https://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0001259> "NCIT:C20080")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0001259> "arteriography")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0001259> "X-ray angiography")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/Angiography") rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0001259> "A medical imaging technique used to visualize the inside, or lumen, of blood vessels and organs of the body, with particular interest in the arteries, veins, and the heart chambers.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0001259> "angiography"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0001259> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0001212> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0004537>))))
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001259> <http://purl.obolibrary.org/obo/MAXO_0001212>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001259> <http://purl.obolibrary.org/obo/MAXO_0000978>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0001269> (clinical biopsy)
 
@@ -10165,7 +10175,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0001316> "2023-02-21T18:58:06Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0001316> <https://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0001316> "microangiography"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001316> <http://purl.obolibrary.org/obo/MAXO_0001259>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001316> <http://purl.obolibrary.org/obo/MAXO_0000978>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0001317> (X-ray microangiography)
 
@@ -10173,7 +10183,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0001317> "2023-02-21T18:59:46Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0001317> <https://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0001317> "X-ray microangiography"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001317> <http://purl.obolibrary.org/obo/MAXO_0000007>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001317> <http://purl.obolibrary.org/obo/MAXO_0001259>)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001317> <http://purl.obolibrary.org/obo/MAXO_0001316>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0001318> (fluorescent microangiography)
@@ -11215,20 +11225,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0035003> "2023-02-21T18:55:59Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0035003> <https://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0035003> "fluorescein angiography"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0035003> <http://purl.obolibrary.org/obo/MAXO_0035038>)
-
-# Class: <http://purl.obolibrary.org/obo/MAXO_0035038> (contrast angiography procedure)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0035038> "An x-ray of blood vessels after a contrast dye is added intraveniously.")
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0035038> "2023-02-21T18:18:48Z"^^xsd:dateTime)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0035038> <https://orcid.org/0000-0001-7941-2961>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0035038> "NCIT:C20080")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0035038> "CT angiography")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0035038> "X-ray angiography")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0035038> "X-ray of the blood vessels")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0035038> "contrast angiography procedure"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0035038> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000007> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/MAXO_0000864> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_24431> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> <http://purl.obolibrary.org/obo/CHEBI_37334>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> <http://purl.obolibrary.org/obo/UBERON_0001981>)))
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0035038> <http://purl.obolibrary.org/obo/MAXO_0001259>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0035003> <http://purl.obolibrary.org/obo/MAXO_0000978>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0035039> (defecography)
 
@@ -11279,7 +11276,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0035088> "MRA")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0035088> "magnetic resonance angiography procedure"@en)
 EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0035088> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000424> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0004537>))))
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0035088> <http://purl.obolibrary.org/obo/MAXO_0001259>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0035088> <http://purl.obolibrary.org/obo/MAXO_0000978>)
 
 
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> <http://purl.obolibrary.org/obo/MAXO_0001110> "cancer surgery")
