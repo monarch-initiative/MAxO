@@ -1,19 +1,19 @@
-pattern_name: cellcount
-pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/cellcount.yaml
-description: "Measurement of the number of cells"
+pattern_name: cellmorphology
+pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/cellmorphology.yaml
+description: "Assessment of the cell morphology"
 
 contributors:
   - https://orcid.org/0000-0001-7941-2961
   - https://orcid.org/0000-0002-7356-1779
 
 classes:
-  cell_count: MAXO:0000146
+  cell_morph: MAXO:0000033
   native_cell: CL:0000003
 
 relations:
   has_input: RO:0002233
   part_of: BFO:0000050
-  amount: PATO:0000070
+  morphology: PATO_0000051
 annotationProperties:
   exact_synonym: oio:hasExactSynonym 
   created_by: oio:created_by
@@ -34,21 +34,13 @@ data_list_vars:
   syns: xsd:string
 
 name:
-  text: "%s count"
+  text: "%s morphology measurement"
   vars:
    - cell
 
 annotations:
   - annotationProperty: exact_synonym
-    text: "%s cell count"
-    vars:
-     - cell
-  - annotationProperty: exact_synonym
-    text: "%s cell count measurement"
-    vars:
-     - cell
-  - annotationProperty: exact_synonym
-    text: "%s count test"
+    text: "%s morphology assessment"
     vars:
      - cell
   - annotationProperty: date
@@ -72,12 +64,12 @@ exact_synonym:
   value: syns
 
 def:
-  text: "A determination of the number of %s in a blood sample."
+  text: "A determination of the structure of %s."
   vars:
     - cell
 
 equivalentTo:
-  text: "'cell_count' and 'has_input' some ('amount' some %s)"
+  text: "'cell_morph' and 'has_input' some ('morphology' some %s)"
   vars:
     - cell
 
