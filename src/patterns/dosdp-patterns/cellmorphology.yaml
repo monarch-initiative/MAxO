@@ -1,57 +1,60 @@
-pattern_name: biopsy_by_type
-pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/biopsy_by_type.yaml
-description: "Different types of clinical biopsy procedure"
+pattern_name: cellmorphology
+pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/cellmorphology.yaml
+description: "Assessment of the cell morphology"
 
 contributors:
   - https://orcid.org/0000-0001-7941-2961
   - https://orcid.org/0000-0002-7356-1779
 
 classes:
-  biopsy: OBI:0002650
-  clinical biopsy: MAXO:0001269
+  cell_morph: MAXO:0000033
+  native_cell: CL:0000003
 
 relations:
   has_input: RO:0002233
-  has_part: BFO:0000051
-  
+  part_of: BFO:0000050
+  morphology: PATO:0000051
 annotationProperties:
   exact_synonym: oio:hasExactSynonym 
   created_by: oio:created_by
   date: dc:date
   comment: rdfs:comment
   xref: oio:hasDbXref
- 
+
 vars:
-  biopsy: "'biopsy'"
+  cell: "'native_cell'"
   
 data_vars:
   date: "'date'"
   created_by: "'created_by'"
   comment: "'comment'"
   xref: "database cross reference"
+
 data_list_vars:
   syns: xsd:string
-name:
-  text: "clinical %s"
-  vars:
-   - biopsy
 
-annotations:   
+name:
+  text: "%s morphology measurement"
+  vars:
+   - cell
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "%s morphology assessment"
+    vars:
+     - cell
   - annotationProperty: date
     text: "%s"
     vars:
      - date
-     
   - annotationProperty: created_by
     text: "%s"
     vars:
      - created_by
-
   - annotationProperty: comment
     text: "%s"
     vars:
      - comment
-    
   - annotationProperty: xref
     text: "%s"
     vars:
@@ -61,12 +64,12 @@ exact_synonym:
   value: syns
 
 def:
-  text: "Use of %s to removal and examination of tissue, cells, or fluids from a patient purpose of detecting or characterizing disease."
+  text: "A determination of the structure of %s."
   vars:
-    - biopsy
+    - cell
 
 equivalentTo:
-  text: "'clinical biopsy' and 'has_part' some %s"
+  text: "'cell_morph' and 'has_input' some ('morphology' some %s)"
   vars:
-    - biopsy
-   
+    - cell
+
