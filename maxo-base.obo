@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2023-02-23/maxo-base.owl
+data-version: maxo/releases/2023-03-09/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
@@ -7,7 +7,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2023-02-23" xsd:string
+property_value: owl:versionInfo "2023-03-09" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -152,6 +152,14 @@ property_value: http://purl.org/dc/elements/1.1/date "2018-11-16T20:12:31Z" xsd:
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0000012
+name: surgical procedure on body region
+def: "A surgery performed on specific region of the body." []
+is_a: MAXO:0000004 ! surgical procedure
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T15:24:21Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0000013
 name: complementary and alternative medical therapy
 def: "Complementary and alternative medicine (CAM) or “complementary health approaches” are a group of diverse medical and health care practices and products that are not presently considered to be part of conventional medicine." [NCCIH]
@@ -289,6 +297,16 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T18:26:42Z" xsd:
 created_by: https://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0000024
+name: surgical procedure on the eye
+def: "Any surgical procedure performed on the eye." []
+synonym: "eye surgery" EXACT []
+synonym: "surgery of the eye" EXACT []
+is_a: MAXO:0000012 ! surgical procedure on body region
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T15:25:58Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0000025
 name: end-of life care
 def: "Care for patients with a progressive life-limiting disease with a prognosis of months or less." [PMID:23796586]
@@ -297,6 +315,57 @@ xref: NCIT:C67359
 is_a: MAXO:0000021 ! palliative care
 property_value: http://purl.org/dc/elements/1.1/date "2019-01-09T20:15:05Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000026
+name: diathermy
+def: "The production of heat in a body part by high-frequency electrical currents to stimulate circulation, relieve pain, cauterization, or destroy tissue." []
+is_a: MAXO:0000002 ! therapeutic procedure
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-02T20:01:36Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000027
+name: microwave diathermy
+def: "A therapy using microwaves to focus on and heat up tissue with high water content, such as muscle." []
+is_a: MAXO:0000026 ! diathermy
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-02T20:08:03Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000028
+name: ultrasound therapy
+def: "A deep heating modality that uses high-frequency acoustic vibrations within body tissues for the treatment of certain medical conditions, such as the alleviation of pain, muscle spasms, and joint contractures." []
+synonym: "therapeutic ultrasound" EXACT []
+synonym: "therapeutic ultrasound diathermy" EXACT []
+synonym: "ultrasound diathermy therapy" EXACT []
+is_a: MAXO:0000026 ! diathermy
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-02T20:08:31Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000029
+name: cell measurement
+def: "Quantification of cell characteristics, including morphological or physiological parameter of one or more cells in order to determine the health of the patient and/or detect disease." []
+synonym: "clinical cell assessment" EXACT []
+synonym: "clinical cell measurement" EXACT []
+synonym: "clinical cell test" EXACT []
+is_a: MAXO:0000006 ! clinical laboratory procedure
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T21:22:53Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000030
+name: short wave diathermy
+def: "A form of deep heat therapy can induce vasodilatation, elevation of pain threshold, reduction in muscle spasm, acceleration of cellular metabolism, increased soft tissue extensibility, increase blood flow, decrease joint pain and stiffness, reduce inflammation, faster resolution of edema, and accelerate wound healing." [PMID:31748973]
+synonym: "radio frequency heating" NARROW []
+synonym: "radio-frequency diathermy" EXACT []
+synonym: "short-wave diathermy" EXACT []
+synonym: "shortwave diathermy" EXACT []
+synonym: "SWD" EXACT []
+is_a: MAXO:0000026 ! diathermy
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-02T20:15:39Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000031
@@ -313,6 +382,15 @@ id: MAXO:0000032
 name: obsolete therapeutic avoidance of behavior
 is_obsolete: true
 replaced_by: MAXO:0000525
+
+[Term]
+id: MAXO:0000033
+name: cell morphology assessment
+def: "A measurement of the shape, structure, form, and size of cells from a patient to determine if there is disease and/or infection." []
+synonym: "morphology evaluation" EXACT []
+is_a: MAXO:0000029 ! cell measurement
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T21:25:21Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000038
@@ -551,7 +629,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000067
 name: lung volume reduction surgery
 def: "A procedure designed to help you breathe easier when your lungs have been damaged by disease. The goal of the surgery is to remove the area of the lung most affected by disease, allowing the remaining lung to function more efficiently, and improve your breathing ability and quality of life." []
-is_a: MAXO:0000004 ! surgical procedure
+is_a: MAXO:0000012 ! surgical procedure on body region
 property_value: http://purl.org/dc/elements/1.1/date "2019-01-15T19:14:42Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1188,8 +1266,7 @@ name: positron emission tomography procedure
 def: "A technique for measuring the gamma radiation produced by collisions of electrons and positrons (anti-electrons) within living tissue. In positron emission tomography (PET), a subject is given a dose of a positron-emitting radionuclide attached to a metabolically active substance (for example, 2-fluoro-2-deoxy-D-glucose (FDG), which is similar to a naturally occurring sugar, glucose, with the addition of a radioactive fluorine atom). When living tissue containing the positron emitter is bombarded by electrons, gamma radiation produced by collisions of electrons and positrons is detected by a scanner, revealing in fine detail the tissue location of the metabolically-active substance administered." [NCIT:C17007]
 synonym: "PET scan" EXACT ABBREVIATION [NCIT:C17007]
 xref: NCIT:C17007
-is_a: MAXO:0000005 ! clinical imaging procedure
-is_a: MAXO:0009052 ! nuclear medicine procedure
+is_a: MAXO:0001321 ! nuclear medicine imaging procedure
 
 [Term]
 id: MAXO:0000138
@@ -1279,7 +1356,7 @@ def: "A procedure to determine the number of cells in a clinical sample." [NCIT:
 synonym: "cell count" EXACT []
 synonym: "clinical pathology cell count" NARROW []
 xref: NCIT:C48938
-is_a: MAXO:0000006 ! clinical laboratory procedure
+is_a: MAXO:0000029 ! cell measurement
 property_value: http://purl.org/dc/elements/1.1/date "2019-01-21T21:16:16Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -3774,7 +3851,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000326
 name: biopsy of head
-def: "Removal of tissue from the head." []
+def: "Removal and examination of tissue, cells, or fluids from head for the purpose of detecting or characterizing disease." []
 synonym: "head biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3782,7 +3859,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000327
 name: biopsy of abdomen
-def: "Removal of tissue from the abdomen." []
+def: "Removal and examination of tissue, cells, or fluids from abdomen for the purpose of detecting or characterizing disease." []
 synonym: "abdomen biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3790,7 +3867,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000328
 name: biopsy of adipose tissue
-def: "Removal of tissue from the adipose tissue." []
+def: "Removal and examination of tissue, cells, or fluids from adipose for the purpose of detecting or characterizing disease." []
 synonym: "adipose tissue biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3798,7 +3875,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000329
 name: biopsy of adrenal cortex
-def: "Removal of tissue from the adrenal cortex." []
+def: "Removal and examination of tissue, cells, or fluids from adrenal cortex for the purpose of detecting or characterizing disease." []
 synonym: "adrenal cortex biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3806,7 +3883,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000330
 name: biopsy of adrenal gland
-def: "Removal of tissue from the adrenal gland." []
+def: "Removal and examination of tissue, cells, or fluids from adrenal gland for the purpose of detecting or characterizing disease." []
 synonym: "adrenal gland biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3814,15 +3891,15 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000331
 name: biopsy of anal canal
-def: "Removal of tissue from the anal canal." []
+def: "Removal and examination of tissue, cells, or fluids from anal canal for the purpose of detecting or characterizing disease." []
 synonym: "anal canal biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000332
-name: biopsy of anus
-def: "Removal of tissue from the anus." []
+name: anal biopsy
+def: "Removal and examination of tissue, cells, or fluids from anus for the purpose of detecting or characterizing disease." []
 synonym: "anus biopsy" EXACT []
 xref: NCIT:C51586
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
@@ -3831,23 +3908,24 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000333
 name: biopsy of aorta
-def: "Removal of tissue from the aorta." []
+def: "Removal and examination of tissue, cells, or fluids from aorta for the purpose of detecting or characterizing disease." []
 synonym: "aorta biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000334
-name: biopsy of body of uterus
-def: "Removal of tissue from the body of uterus." []
+name: uterine biopsy
+def: "Removal and examination of tissue, cells, or fluids from the uterus for the purpose of detecting or characterizing disease." []
 synonym: "body of uterus biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000335
-name: biopsy of bone element
-def: "Removal of tissue from the bone element." []
+name: calcified bone biopsy
+def: "Removal and examination of tissue, cells, or fluids from the calcified bone for the purpose of detecting or characterizing disease." []
+synonym: "biopsy of the bone" EXACT []
 synonym: "bone element biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3855,7 +3933,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000336
 name: biopsy of bone marrow
-def: "Removal of tissue from the bone marrow." []
+def: "Removal and examination of tissue, cells, or fluids from bone marrow for the purpose of detecting or characterizing disease." []
 synonym: "bone marrow biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3863,7 +3941,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000337
 name: biopsy of bone tissue
-def: "Removal of tissue from the bone tissue." []
+def: "Removal and examination of tissue, cells, or fluids from bone tissue for the purpose of detecting or characterizing disease." []
 synonym: "bone tissue biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3871,7 +3949,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000338
 name: biopsy of brain
-def: "Removal of tissue from the brain." []
+def: "Removal and examination of tissue, cells, or fluids from brain for the purpose of detecting or characterizing disease." []
 synonym: "brain biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3879,7 +3957,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000339
 name: biopsy of brainstem
-def: "Removal of tissue from the brainstem." []
+def: "Removal and examination of tissue, cells, or fluids from brainstem for the purpose of detecting or characterizing disease." []
 synonym: "brainstem biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3887,15 +3965,15 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000340
 name: biopsy of breast
-def: "Removal of tissue from the breast." []
+def: "Removal and examination of tissue, cells, or fluids from breast for the purpose of detecting or characterizing disease." []
 synonym: "breast biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000341
-name: biopsy of bronchus
-def: "Removal of tissue from the bronchus." []
+name: bronchial biopsy
+def: "Removal and examination of tissue, cells, or fluids from bronchus for the purpose of detecting or characterizing disease." []
 synonym: "bronchus biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3903,7 +3981,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000342
 name: biopsy of caecum
-def: "Removal of tissue from the caecum." []
+def: "Removal and examination of tissue, cells, or fluids from caecum for the purpose of detecting or characterizing disease." []
 synonym: "caecum biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3911,7 +3989,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000343
 name: biopsy of cardiac ventricle
-def: "Removal of tissue from the cardiac ventricle." []
+def: "Removal and examination of tissue, cells, or fluids from cardiac ventricle for the purpose of detecting or characterizing disease." []
 synonym: "cardiac ventricle biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3919,7 +3997,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000344
 name: biopsy of cerebellum
-def: "Removal of tissue from the cerebellum." []
+def: "Removal and examination of tissue, cells, or fluids from cerebellum for the purpose of detecting or characterizing disease." []
 synonym: "cerebellum biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3927,7 +4005,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000345
 name: biopsy of cerebral cortex
-def: "Removal of tissue from the cerebral cortex." []
+def: "Removal and examination of tissue, cells, or fluids from cerebral cortex for the purpose of detecting or characterizing disease." []
 synonym: "cerebral cortex biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3935,7 +4013,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000346
 name: biopsy of chest wall
-def: "Removal of tissue from the chest wall." []
+def: "Removal and examination of tissue, cells, or fluids from chest wall for the purpose of detecting or characterizing disease." []
 synonym: "chest wall biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3943,7 +4021,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000347
 name: biopsy of chordate pharynx
-def: "Removal of tissue from the chordate pharynx." []
+def: "Removal and examination of tissue, cells, or fluids from chordate pharynx for the purpose of detecting or characterizing disease." []
 synonym: "chordate pharynx biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3951,7 +4029,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000348
 name: biopsy of choroid plexus
-def: "Removal of tissue from the choroid plexus." []
+def: "Removal and examination of tissue, cells, or fluids from choroid plexus for the purpose of detecting or characterizing disease." []
 synonym: "choroid plexus biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3959,7 +4037,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000349
 name: biopsy of cochlea
-def: "Removal of tissue from the cochlea." []
+def: "Removal and examination of tissue, cells, or fluids from cochlea for the purpose of detecting or characterizing disease." []
 synonym: "cochlea biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3967,7 +4045,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000350
 name: biopsy of colon
-def: "Removal of tissue from the colon." []
+def: "Removal and examination of tissue, cells, or fluids from colon for the purpose of detecting or characterizing disease." []
 synonym: "colon biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3975,7 +4053,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000351
 name: biopsy of colorectum
-def: "Removal of tissue from the colorectum." []
+def: "Removal and examination of tissue, cells, or fluids from colorectum for the purpose of detecting or characterizing disease." []
 synonym: "colorectum biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3983,7 +4061,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000352
 name: biopsy of dermis
-def: "Removal of tissue from the dermis." []
+def: "Removal and examination of tissue, cells, or fluids from dermis for the purpose of detecting or characterizing disease." []
 synonym: "dermis biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -3991,15 +4069,15 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000353
 name: biopsy of diaphragm
-def: "Removal of tissue from the diaphragm." []
+def: "Removal and examination of tissue, cells, or fluids from diaphragm for the purpose of detecting or characterizing disease." []
 synonym: "diaphragm biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000354
-name: biopsy of dorsal plus ventral thalamus
-def: "Removal of tissue from the dorsal plus ventral thalamus." []
+name: biopsy of thalamus
+def: "Removal and examination of tissue, cells, or fluids from the thalamus for the purpose of detecting or characterizing disease." []
 synonym: "dorsal plus ventral thalamus biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4007,7 +4085,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000355
 name: biopsy of duodenum
-def: "Removal of tissue from the duodenum." []
+def: "Removal and examination of tissue, cells, or fluids from duodenum for the purpose of detecting or characterizing disease." []
 synonym: "duodenum biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4015,7 +4093,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000356
 name: biopsy of endocardium
-def: "Removal of tissue from the endocardium." []
+def: "Removal and examination of tissue, cells, or fluids from endocardium for the purpose of detecting or characterizing disease." []
 synonym: "endocardium biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4023,7 +4101,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000357
 name: biopsy of endocrine pancreas
-def: "Removal of tissue from the endocrine pancreas." []
+def: "Removal and examination of tissue, cells, or fluids from endocrine pancreas for the purpose of detecting or characterizing disease." []
 synonym: "endocrine pancreas biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4031,7 +4109,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000358
 name: biopsy of endometrium
-def: "Removal of tissue from the endometrium." []
+def: "Removal and examination of tissue, cells, or fluids from endometrium for the purpose of detecting or characterizing disease." []
 synonym: "endometrium biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4039,7 +4117,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000359
 name: biopsy of esophagus
-def: "Removal of tissue from the esophagus." []
+def: "Removal and examination of tissue, cells, or fluids from esophagus for the purpose of detecting or characterizing disease." []
 synonym: "esophagus biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4047,7 +4125,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000360
 name: biopsy of eye
-def: "Removal of tissue from the eye." []
+def: "Removal and examination of tissue, cells, or fluids from eye for the purpose of detecting or characterizing disease." []
 synonym: "eye biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4055,7 +4133,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000361
 name: biopsy of fallopian tube
-def: "Removal of tissue from the fallopian tube." []
+def: "Removal and examination of tissue, cells, or fluids from fallopian tube for the purpose of detecting or characterizing disease." []
 synonym: "fallopian tube biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4063,7 +4141,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000362
 name: biopsy of frontal lobe
-def: "Removal of tissue from the frontal lobe." []
+def: "Removal and examination of tissue, cells, or fluids from frontal lobe for the purpose of detecting or characterizing disease." []
 synonym: "frontal lobe biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4071,7 +4149,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000363
 name: biopsy of gallbladder
-def: "Removal of tissue from the gallbladder." []
+def: "Removal and examination of tissue, cells, or fluids from gallbladder for the purpose of detecting or characterizing disease." []
 synonym: "gallbladder biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4079,7 +4157,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000364
 name: biopsy of genitourinary system
-def: "Removal of tissue from the genitourinary system." []
+def: "Removal and examination of tissue, cells, or fluids from genitourinary system for the purpose of detecting or characterizing disease." []
 synonym: "genitourinary system biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4087,7 +4165,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000365
 name: biopsy of gonad
-def: "Removal of tissue from the gonad." []
+def: "Removal and examination of tissue, cells, or fluids from gonad for the purpose of detecting or characterizing disease." []
 synonym: "gonad biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4095,7 +4173,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000366
 name: biopsy of heart
-def: "Removal of tissue from the heart." []
+def: "Removal and examination of tissue, cells, or fluids from heart for the purpose of detecting or characterizing disease." []
 synonym: "heart biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4103,7 +4181,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000367
 name: biopsy of hypopharynx
-def: "Removal of tissue from the hypopharynx." []
+def: "Removal and examination of tissue, cells, or fluids from hypopharynx for the purpose of detecting or characterizing disease." []
 synonym: "hypopharynx biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4111,7 +4189,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000368
 name: biopsy of hypothalamus
-def: "Removal of tissue from the hypothalamus." []
+def: "Removal and examination of tissue, cells, or fluids from hypothalamus for the purpose of detecting or characterizing disease." []
 synonym: "hypothalamus biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4119,15 +4197,15 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000369
 name: biopsy of intestine
-def: "Removal of tissue from the intestine." []
+def: "Removal and examination of tissue, cells, or fluids from intestine for the purpose of detecting or characterizing disease." []
 synonym: "intestine biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000370
-name: biopsy of jaw skeleton
-def: "Removal of tissue from the jaw skeleton." []
+name: biopsy of jaw bone
+def: "Removal and examination of tissue, cells, or fluids from the jaw bone for the purpose of detecting or characterizing disease." []
 synonym: "jaw skeleton biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4135,7 +4213,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000371
 name: biopsy of lacrimal apparatus
-def: "Removal of tissue from the lacrimal apparatus." []
+def: "Removal and examination of tissue, cells, or fluids from lacrimal apparatus for the purpose of detecting or characterizing disease." []
 synonym: "lacrimal apparatus biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4143,7 +4221,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000372
 name: biopsy of large intestine
-def: "Removal of tissue from the large intestine." []
+def: "Removal and examination of tissue, cells, or fluids from large intestine for the purpose of detecting or characterizing disease." []
 synonym: "large intestine biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4151,7 +4229,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000373
 name: biopsy of larynx
-def: "Removal of tissue from the larynx." []
+def: "Removal and examination of tissue, cells, or fluids from larynx for the purpose of detecting or characterizing disease." []
 synonym: "larynx biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4159,7 +4237,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000374
 name: biopsy of limb
-def: "Removal of tissue from the limb." []
+def: "Removal and examination of tissue, cells, or fluids from limb for the purpose of detecting or characterizing disease." []
 synonym: "limb biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4167,7 +4245,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000375
 name: biopsy of lip
-def: "Removal of tissue from the lip." []
+def: "Removal and examination of tissue, cells, or fluids from lip for the purpose of detecting or characterizing disease." []
 synonym: "lip biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4175,7 +4253,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000376
 name: biopsy of liver
-def: "Removal of tissue from the liver." []
+def: "Removal and examination of tissue, cells, or fluids from liver for the purpose of detecting or characterizing disease." []
 synonym: "liver biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4183,7 +4261,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000377
 name: biopsy of lower respiratory tract
-def: "Removal of tissue from the lower respiratory tract." []
+def: "Removal and examination of tissue, cells, or fluids from lower respiratory tract for the purpose of detecting or characterizing disease." []
 synonym: "lower respiratory tract biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4191,23 +4269,24 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000378
 name: biopsy of lower urinary tract
-def: "Removal of tissue from the lower urinary tract." []
+def: "Removal and examination of tissue, cells, or fluids from lower urinary tract for the purpose of detecting or characterizing disease." []
 synonym: "lower urinary tract biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000379
-name: biopsy of lumbar region of vertebral column
-def: "Removal of tissue from the lumbar region of vertebral column." []
+name: biopsy of lumbar spine
+def: "Removal and examination of tissue, cells, or fluids from the lumbar spine for the purpose of detecting or characterizing disease." []
 synonym: "lumbar region of vertebral column biopsy" EXACT []
+synonym: "lumbar spine biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000380
 name: biopsy of lung
-def: "Removal of tissue from the lung." []
+def: "Removal and examination of tissue, cells, or fluids from lung for the purpose of detecting or characterizing disease." []
 synonym: "lung biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4215,15 +4294,15 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000381
 name: biopsy of lymph node
-def: "Removal of tissue from the lymph node." []
+def: "Removal and examination of tissue, cells, or fluids from lymph node for the purpose of detecting or characterizing disease." []
 synonym: "lymph node biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000382
-name: biopsy of lymphatic part of lymphoid system
-def: "Removal of tissue from the lymphatic part of lymphoid system." []
+name: biopsy of lymphatic system
+def: "Removal and examination of tissue, cells, or fluids from the lymphatic system for the purpose of detecting or characterizing disease." []
 synonym: "lymphatic part of lymphoid system biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4231,7 +4310,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000383
 name: biopsy of vulva
-def: "Removal of tissue from the mammalian vulva." []
+def: "Removal and examination of tissue, cells, or fluids from the vulva for the purpose of detecting or characterizing disease." []
 synonym: "mammalian vulva biopsy" EXACT []
 synonym: "vulva biopsy" EXACT []
 synonym: "vulval biopsy" EXACT []
@@ -4241,7 +4320,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000384
 name: biopsy of medulla oblongata
-def: "Removal of tissue from the medulla oblongata." []
+def: "Removal and examination of tissue, cells, or fluids from medulla oblongata for the purpose of detecting or characterizing disease." []
 synonym: "medulla oblongata biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4249,24 +4328,23 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000385
 name: biopsy of mouth
-def: "Removal of tissue from the mouth." []
+def: "Removal and examination of tissue, cells, or fluids from mouth for the purpose of detecting or characterizing disease." []
+synonym: "biopsy of oral cavity" EXACT []
 synonym: "mouth biopsy" EXACT []
-synonym: "muscle biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000386
-name: biopsy of muscle
-def: "Removal of tissue from the muscle organ." []
-synonym: "muscle organ biopsy" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
-created_by: http://orcid.org/0000-0001-7941-2961
+name: obsolete biopsy of muscle
+is_obsolete: true
+replaced_by: MAXO:0000387
 
 [Term]
 id: MAXO:0000387
 name: biopsy of muscle tissue
-def: "Removal of tissue from the muscle tissue." []
+def: "Removal and examination of tissue, cells, or fluids from muscle tissue for the purpose of detecting or characterizing disease." []
+synonym: "muscle biopsy" EXACT []
 synonym: "muscle tissue biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4274,7 +4352,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000388
 name: biopsy of nasolacrimal duct
-def: "Removal of tissue from the nasolacrimal duct." []
+def: "Removal and examination of tissue, cells, or fluids from nasolacrimal duct for the purpose of detecting or characterizing disease." []
 synonym: "nasolacrimal duct biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4282,7 +4360,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000389
 name: biopsy of nasopharynx
-def: "Removal of tissue from the nasopharynx." []
+def: "Removal and examination of tissue, cells, or fluids from nasopharynx for the purpose of detecting or characterizing disease." []
 synonym: "nasopharynx biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4290,7 +4368,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000390
 name: biopsy of neck
-def: "Removal of tissue from the neck." []
+def: "Removal and examination of tissue, cells, or fluids from neck for the purpose of detecting or characterizing disease." []
 synonym: "neck biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4298,7 +4376,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000391
 name: biopsy of ovary
-def: "Removal of tissue from the ovary." []
+def: "Removal and examination of tissue, cells, or fluids from ovary for the purpose of detecting or characterizing disease." []
 synonym: "ovary biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4306,7 +4384,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000392
 name: biopsy of pancreas
-def: "Removal of tissue from the pancreas." []
+def: "Removal and examination of tissue, cells, or fluids from pancreas for the purpose of detecting or characterizing disease." []
 synonym: "pancreas biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4314,7 +4392,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000393
 name: biopsy of penis
-def: "Removal of tissue from the penis." []
+def: "Removal and examination of tissue, cells, or fluids from penis for the purpose of detecting or characterizing disease." []
 synonym: "penis biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4322,7 +4400,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000394
 name: biopsy of perianal skin
-def: "Removal of tissue from the perianal skin." []
+def: "Removal and examination of tissue, cells, or fluids from perianal skin for the purpose of detecting or characterizing disease." []
 synonym: "perianal skin biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4330,7 +4408,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000395
 name: biopsy of peritoneum
-def: "Removal of tissue from the peritoneum." []
+def: "Removal and examination of tissue, cells, or fluids from peritoneum for the purpose of detecting or characterizing disease." []
 synonym: "peritoneum biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4338,7 +4416,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000396
 name: biopsy of pituitary gland
-def: "Removal of tissue from the pituitary gland." []
+def: "Removal and examination of tissue, cells, or fluids from pituitary gland for the purpose of detecting or characterizing disease." []
 synonym: "pituitary gland biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4346,7 +4424,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000397
 name: biopsy of pleura
-def: "Removal of tissue from the pleura." []
+def: "Removal and examination of tissue, cells, or fluids from pleura for the purpose of detecting or characterizing disease." []
 synonym: "pleura biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4354,7 +4432,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000398
 name: biopsy of rectum
-def: "Removal of tissue from the rectum." []
+def: "Removal and examination of tissue, cells, or fluids from rectum for the purpose of detecting or characterizing disease." []
 synonym: "rectum biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4362,23 +4440,24 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000399
 name: biopsy of retina
-def: "Removal of tissue from the retina." []
+def: "Removal and examination of tissue, cells, or fluids from retina for the purpose of detecting or characterizing disease." []
 synonym: "retina biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000400
-name: biopsy of saliva-secreting gland
-def: "Removal of tissue from the saliva-secreting gland." []
+name: biopsy of salivary gland
+def: "Removal and examination of tissue, cells, or fluids from the salivary gland for the purpose of detecting or characterizing disease." []
 synonym: "saliva-secreting gland biopsy" EXACT []
+synonym: "salivary gland biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000401
 name: biopsy of scrotum
-def: "Removal of tissue from the scrotum." []
+def: "Removal and examination of tissue, cells, or fluids from scrotum for the purpose of detecting or characterizing disease." []
 synonym: "scrotum biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4386,7 +4465,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000402
 name: biopsy of sebaceous gland
-def: "Removal of tissue from the sebaceous gland." []
+def: "Removal and examination of tissue, cells, or fluids from sebaceous gland for the purpose of detecting or characterizing disease." []
 synonym: "sebaceous gland biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4394,7 +4473,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000403
 name: biopsy of small intestine
-def: "Removal of tissue from the small intestine." []
+def: "Removal and examination of tissue, cells, or fluids from small intestine for the purpose of detecting or characterizing disease." []
 synonym: "small intestine biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4402,7 +4481,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000404
 name: biopsy of spinal cord
-def: "Removal of tissue from the spinal cord." []
+def: "Removal and examination of tissue, cells, or fluids from spinal cord for the purpose of detecting or characterizing disease." []
 synonym: "spinal cord biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4410,7 +4489,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000405
 name: biopsy of spleen
-def: "Removal of tissue from the spleen." []
+def: "Removal and examination of tissue, cells, or fluids from spleen for the purpose of detecting or characterizing disease." []
 synonym: "spleen biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4418,7 +4497,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000406
 name: biopsy of stomach
-def: "Removal of tissue from the stomach." []
+def: "Removal and examination of tissue, cells, or fluids from stomach for the purpose of detecting or characterizing disease." []
 synonym: "stomach biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4426,7 +4505,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000407
 name: biopsy of subglottis
-def: "Removal of tissue from the subglottis." []
+def: "Removal and examination of tissue, cells, or fluids from subglottis for the purpose of detecting or characterizing disease." []
 synonym: "subglottis biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4434,7 +4513,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000408
 name: biopsy of submandibular gland
-def: "Removal of tissue from the submandibular gland." []
+def: "Removal and examination of tissue, cells, or fluids from submandibular gland for the purpose of detecting or characterizing disease." []
 synonym: "submandibular gland biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4442,7 +4521,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000409
 name: biopsy of testis
-def: "Removal of tissue from the testis." []
+def: "Removal and examination of tissue, cells, or fluids from testis for the purpose of detecting or characterizing disease." []
 synonym: "testis biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4450,7 +4529,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000410
 name: biopsy of thymus
-def: "Removal of tissue from the thymus." []
+def: "Removal and examination of tissue, cells, or fluids from thymus for the purpose of detecting or characterizing disease." []
 synonym: "thymus biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4458,7 +4537,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000411
 name: biopsy of thyroid gland
-def: "Removal of tissue from the thyroid gland." []
+def: "Removal and examination of tissue, cells, or fluids from thyroid gland for the purpose of detecting or characterizing disease." []
 synonym: "thyroid gland biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4466,7 +4545,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000412
 name: biopsy of tongue
-def: "Removal of tissue from the tongue." []
+def: "Removal and examination of tissue, cells, or fluids from tongue for the purpose of detecting or characterizing disease." []
 synonym: "tongue biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4474,7 +4553,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000413
 name: biopsy of tonsil
-def: "Removal of tissue from the tonsil." []
+def: "Removal and examination of tissue, cells, or fluids from tonsil for the purpose of detecting or characterizing disease." []
 synonym: "tonsil biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4482,7 +4561,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000414
 name: biopsy of trachea
-def: "Removal of tissue from the trachea." []
+def: "Removal and examination of tissue, cells, or fluids from trachea for the purpose of detecting or characterizing disease." []
 synonym: "trachea biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4490,7 +4569,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000415
 name: biopsy of upper digestive tract
-def: "Removal of tissue from the upper digestive tract." []
+def: "Removal and examination of tissue, cells, or fluids from upper digestive tract for the purpose of detecting or characterizing disease." []
 synonym: "upper digestive tract biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4498,7 +4577,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000416
 name: biopsy of upper respiratory tract
-def: "Removal of tissue from the upper respiratory tract." []
+def: "Removal and examination of tissue, cells, or fluids from upper respiratory tract for the purpose of detecting or characterizing disease." []
 synonym: "upper respiratory tract biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4506,7 +4585,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000417
 name: biopsy of ureter
-def: "Removal of tissue from the ureter." []
+def: "Removal and examination of tissue, cells, or fluids from ureter for the purpose of detecting or characterizing disease." []
 synonym: "ureter biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4514,23 +4593,23 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000418
 name: biopsy of urethra
-def: "Removal of tissue from the urethra." []
+def: "Removal and examination of tissue, cells, or fluids from urethra for the purpose of detecting or characterizing disease." []
 synonym: "urethra biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000419
-name: biopsy of urinary bladder
-def: "Removal of tissue from the urinary bladder." []
+name: biopsy of bladder
+def: "Removal and examination of tissue, cells, or fluids from the bladder for the purpose of detecting or characterizing disease." []
 synonym: "urinary bladder biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000420
-name: biopsy of uterine cervix
-def: "Removal of tissue from the uterine cervix." []
+name: biopsy of cervix
+def: "Removal and examination of tissue, cells, or fluids from uterine cervix for the purpose of detecting or characterizing disease." []
 synonym: "uterine cervix biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4538,15 +4617,15 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000421
 name: biopsy of vagina
-def: "Removal of tissue from the vagina." []
+def: "Removal and examination of tissue, cells, or fluids from vagina for the purpose of detecting or characterizing disease." []
 synonym: "vagina biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000422
-name: biopsy of vermiform appendix
-def: "Removal of tissue from the vermiform appendix." []
+name: biopsy of appendix
+def: "Removal and examination of tissue, cells, or fluids from the appendix for the purpose of detecting or characterizing disease." []
 synonym: "vermiform appendix biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -4554,7 +4633,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000423
 name: biopsy of skin
-def: "Removal of tissue from the zone of skin." []
+def: "Removal and examination of tissue, cells, or fluids from the skin for the purpose of detecting or characterizing disease." []
 synonym: "skin biopsy" EXACT []
 synonym: "zone of skin biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:string
@@ -5192,7 +5271,7 @@ name: orthopedic surgery
 def: "A surgical procedure to treat and correct deformities, diseases, and injuries to the skeletal system, its articulations, and associated structures." [NCIT:C16186]
 synonym: "orthopedic surgical procedure" EXACT []
 xref: NCIT:C16186
-is_a: MAXO:0000004 ! surgical procedure
+is_a: MAXO:0000012 ! surgical procedure on body region
 is_a: MAXO:0000477 ! orthopedic procedure
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-20T17:51:02Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -5456,12 +5535,14 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000504
 name: tracheostomy
-def: "Surgical formation of an opening into the trachea through the neck, or the opening so created." [MeSH:D014139]
-comment: Tracheostomy and tracheotomy are sometimes used interchangeably, but tracheotomy is simply a surgical incision of the trachea. {xref="MeSH:D014140"}
-synonym: "surgical lip repair" EXACT []
-is_a: MAXO:0000004 ! surgical procedure
+def: "Surgical formation of an opening into the trachea through the neck, or the opening so created." []
+comment: Tracheostomy and tracheotomy are sometimes used interchangeably, but tracheotomy is simply a surgical incision of the trachea.
+synonym: "trach" EXACT []
+synonym: "tracheotomy" EXACT []
+xref: MeSH:D014140
+xref: PMID:32644550
 is_a: MAXO:0000500 ! airway management
-property_value: http://purl.org/dc/elements/1.1/date "2020-01-23T16:48:07Z" xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2020-01-23T16:48:07Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -5622,9 +5703,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000520
-name: obstetric ultrasonography
+name: fetal ultrasonography
 def: "Use of medical ultrasonography in pregnancy where sound waves are used to create a real-time visual image of the developing fetus in the uterus. Imaging can include the mother's ovaries and uterus as well." []
+synonym: "fetal ultrasound" EXACT []
 synonym: "obstetric sonography" EXACT []
+synonym: "obstetric ultrasonography" EXACT []
+synonym: "obstetric ultrasound" EXACT []
 synonym: "prenatal ultrasound procedure" EXACT []
 is_a: MAXO:0000072 ! ultrasonography procedure
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-24T19:29:52Z" xsd:dateTime
@@ -5743,6 +5827,7 @@ synonym: "CVS" EXACT ABBREVIATION []
 xref: NCIT:C92755
 is_a: MAXO:0000529 ! prenatal genetic testing
 property_value: http://purl.org/dc/elements/1.1/date "2020-03-19T19:51:26Z" xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2022-06-23T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -5808,41 +5893,48 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000543
 name: eosinophil count
-def: "The determination of the number of eosinophils in a blood sample." [NCIT:C64550]
+def: "A determination of the number of eosinophil in a blood sample." []
 synonym: "EOS cell count" EXACT ABBREVIATION []
+synonym: "eosinophil cell count" EXACT []
+synonym: "eosinophil cell count measurement" EXACT []
+synonym: "eosinophil count test" EXACT []
 xref: NCIT:C64550
-is_a: MAXO:0000544 ! granulocyte count
-property_value: http://purl.org/dc/elements/1.1/date "2020-03-26T19:53:41Z" xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2019-05-16T18:20:55Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000544
 name: granulocyte count
-def: "The determination of the amount of granulocytes present in a sample." [NCIT:C96654]
+def: "A determination of the number of granulocyte in a blood sample." []
+synonym: "granulocyte cell count" EXACT []
+synonym: "granulocyte cell count measurement" EXACT []
+synonym: "granulocyte count test" EXACT []
 synonym: "polymorphonuclear leukocyte count" EXACT []
 xref: NCIT:C96654
-is_a: MAXO:0001010 ! leukocyte count
-property_value: http://purl.org/dc/elements/1.1/date "2020-03-26T19:56:24Z" xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2019-05-16T18:20:55Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000545
 name: basophil count
-def: "The determination of the absolute number of basophils in a blood sample." [NCIT:C64470]
+def: "A determination of the number of basophil in a blood sample." []
 synonym: "basophil cell count" EXACT []
+synonym: "basophil cell count measurement" EXACT []
+synonym: "basophil count test" EXACT []
 synonym: "total basophil count" EXACT []
 xref: NCIT:C64470
-is_a: MAXO:0000544 ! granulocyte count
-property_value: http://purl.org/dc/elements/1.1/date "2020-03-26T20:00:33Z" xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2019-05-16T18:20:55Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000546
 name: lymphocyte count
-def: "The determination of the number of lymphocytes in a blood sample." [NCIT:C51949]
+def: "A determination of the number of lymphocyte in a blood sample." []
+synonym: "lymphocyte cell count" EXACT []
+synonym: "lymphocyte cell count measurement" EXACT []
+synonym: "lymphocyte count test" EXACT []
 xref: NCIT:C51949
-is_a: MAXO:0001010 ! leukocyte count
-property_value: http://purl.org/dc/elements/1.1/date "2020-03-26T20:07:56Z" xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2019-05-16T18:20:55Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -7740,6 +7832,7 @@ synonym: "referral to ophthalmologist" EXACT []
 synonym: "referral to ophthalmology specialist" EXACT []
 synonym: "referral to optometrist" RELATED []
 is_a: MAXO:0000665 ! medical specialist evaluation
+is_a: MAXO:0000967 ! ophthalmic diagnostic procedure
 property_value: http://purl.org/dc/elements/1.1/date "2020-07-08T20:14:31Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -8379,8 +8472,8 @@ def: "The determination of the amount of degree, quality or condition of cells p
 synonym: "cellularity grade measurement" EXACT []
 synonym: "cellularity indexing" EXACT []
 xref: NCIT:C111153
+is_a: MAXO:0000029 ! cell measurement
 is_a: MAXO:0000140 ! clinical cytological testing
-is_a: MAXO:0000146 ! clinical cell count
 property_value: http://purl.org/dc/elements/1.1/date "2020-11-19T20:39:47Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -9024,11 +9117,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000825
 name: reticulocyte count
-def: "The determination of the number of reticulocytes in a blood sample." [NCIT:C51947]
+def: "A determination of the number of reticulocyte in a blood sample." []
+synonym: "reticulocyte cell count" EXACT []
+synonym: "reticulocyte cell count measurement" EXACT []
+synonym: "reticulocyte count test" EXACT []
 xref: NCIT:C51947
-xref: PMID:29763080
-is_a: MAXO:0001007 ! erythrocyte count
-property_value: http://purl.org/dc/elements/1.1/date "2021-02-16T20:15:55Z" xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2019-05-16T18:20:55Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -9064,19 +9158,21 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000829
 name: blood cell measurement
 def: "A measurement of size, shape, number, or other parameter of blood cells in order to diagnose or treat a patient." []
+is_a: MAXO:0000029 ! cell measurement
 is_a: MAXO:0000147 ! hematology testing
 property_value: http://purl.org/dc/elements/1.1/date "2021-02-16T20:40:24Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000830
-name: erythrocyte cell morphology measurement
-def: "An examination or assessment of the form and structure of red blood cells." [NCIT:C92296]
+name: erythrocyte morphology measurement
+def: "A determination of the structure of erythrocyte." []
+synonym: "erythrocyte morphology assessment" EXACT []
 synonym: "RBC morphology measurement" EXACT []
 synonym: "red blood cell morphology measurement" EXACT []
 xref: NCIT:C92296
 is_a: MAXO:0000829 ! blood cell measurement
-property_value: http://purl.org/dc/elements/1.1/date "2021-02-16T20:41:08Z" xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -10153,7 +10249,7 @@ id: MAXO:0000946
 name: neurosurgical procedure
 def: "Any surgical procedure performed on nervous system tissue." []
 synonym: "neurosurgery" EXACT []
-is_a: MAXO:0000004 ! surgical procedure
+is_a: MAXO:0000012 ! surgical procedure on body region
 property_value: http://purl.org/dc/elements/1.1/date "2021-08-12T19:44:10Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -10246,6 +10342,186 @@ property_value: http://purl.org/dc/elements/1.1/date "2021-08-13T20:22:51Z" xsd:
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0000958
+name: deep sclerectomy
+def: "A procedure where filtering membrane is created for fluid to move out of the front chamber of the eye to underneath the superficial tissues around it (conjunctiva) and thus lowering the presure of the eye." []
+synonym: "non-penetrating deep sclerectomy" EXACT []
+synonym: "NPDS" EXACT []
+is_a: MAXO:0000961 ! non-penetrating glaucoma surgery
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T17:30:45Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000959
+name: canaloplasty
+def: "Canaloplasty is a modification of viscocanalostomy, in which an additional intracanalicular stent is inserted to maintain canal patency and enhance the circumferential flow." []
+is_a: MAXO:0000960 ! viscocanalostomy
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T17:31:07Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000960
+name: viscocanalostomy
+def: "A procedure that is a variation of a deep sclerectomy procedure. This procedure involves unroofing and dilation of the Schlemm’s canal without penetrating the trabecular meshwork or anterior chamber. A high-viscosity viscoelastic solution is injected to dilate the canal and create a passage from the canal to a scleral reservoir, thereby reducing intraocular pressure." []
+is_a: MAXO:0000958 ! deep sclerectomy
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T17:34:27Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000961
+name: non-penetrating glaucoma surgery
+def: "A procedure to reduce intraocular pressure by enhancing the natural aqueous outflow channels, while reducing outflow resistance located in the inner wall of the Schlemm's canal and the juxtacanalicular trabecular meshwork." []
+synonym: "non-penetrating filtrating surgery" EXACT []
+synonym: "NPGS" EXACT []
+is_a: MAXO:0000962 ! glaucoma filtration surgery
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T17:51:12Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000962
+name: glaucoma filtration surgery
+def: "The surgery creates an alternative pathway for fluid to leave the eye. A small channel, or 'bleb' is created to allow fluid to drain from the eye." []
+synonym: "filtering sugery" EXACT []
+synonym: "filtrating glaucoma surgery" EXACT []
+synonym: "incisional glaucoma surgery" EXACT []
+is_a: MAXO:0000024 ! surgical procedure on the eye
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T17:54:23Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000965
+name: ostomy surgical procedure
+def: "The construction of a passage between a cavity or hollow organ to the surface of the body often to help drain bodily fluid." []
+synonym: "construction of a stoma" NARROW []
+xref: NCIT:C15290
+is_a: MAXO:0000004 ! surgical procedure
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-27T18:00:04Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000966
+name: posterior sagittal anorectoplasty
+def: "This technique surgically creates the patient’s anus within the sphincter muscle." []
+is_a: MAXO:0000977 ! pull-through procedure
+is_a: MAXO:0001352 ! surgical repair of anorectum
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-27T21:28:55Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000967
+name: ophthalmic diagnostic procedure
+def: "A diagnostic procedure to evaluate the structure and/or function of the eye and visual system." []
+is_a: MAXO:0000003 ! diagnostic procedure
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T19:03:34Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000968
+name: fundoscopy
+def: "A visualization of the fundus of the eye including the retina and optic nerve with a fundoscope, a device that projects light through the pupil of the eye and visualizes the fundus with magnification." []
+synonym: "fundoscopic exam" EXACT []
+is_a: MAXO:0000967 ! ophthalmic diagnostic procedure
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T19:06:03Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000969
+name: optical coherence tomography
+def: "A noninvasive imaging technique that provides high-resolution, cross-sectional images of the retina, retinal nerve fiber layer and the optic nerve head." [PMID:23429598]
+synonym: "OCT" EXACT []
+is_a: MAXO:0000005 ! clinical imaging procedure
+is_a: MAXO:0000967 ! ophthalmic diagnostic procedure
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T19:20:56Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000970
+name: gonioscopy
+def: "An examination of the anterior chamber of the eye with a lens that is placed against the eye as a part of a slit-lamp examination." []
+synonym: "slit-lamp gonioscopy" EXACT []
+is_a: MAXO:0000967 ! ophthalmic diagnostic procedure
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T19:25:28Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000971
+name: vision assessment
+def: "A test to assess the ability to focus on and discern objects, colors, depth, etc." []
+synonym: "vision screening" EXACT []
+synonym: "vision test" EXACT []
+xref: NCIT:C156778
+is_a: MAXO:0001155 ! eye examination
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T19:28:40Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000972
+name: eye movement measurement
+def: "Assessment of the parameters of eye movement, including horizontal and vertical rotations of the eye, opening or closing of the eyes in response to stimuli, pupil response to light, and blink reflex." []
+synonym: "eye movement assessment" EXACT []
+xref: NCIT:C162707
+is_a: MAXO:0001155 ! eye examination
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T19:31:14Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000973
+name: slit-lamp examination
+def: "A test performed by an ophthalmologist or optometrist assessing vision and ability to focus on and discern objects, as well as other tests and examinations pertaining to the eyes." []
+xref: NCIT:C38060
+is_a: MAXO:0001155 ! eye examination
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T19:35:05Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000974
+name: tonometry
+def: "A method in which pressure is applied to the surface of the cornea in order to flatten a prespecified area of the membrane, which is used to calculate intraocular pressure." []
+synonym: "intraocular pressure measurement" EXACT []
+synonym: "IOP measurement" EXACT []
+is_a: MAXO:0001155 ! eye examination
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T19:38:54Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000975
+name: applanation tonometry
+def: "A method in which a constant pressure is applied to the surface of the cornea in order to flatten a prespecified area of the membrane, which is used to calculate intraocular pressure." []
+xref: NCIT:C120682
+is_a: MAXO:0000974 ! tonometry
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T19:40:23Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000976
+name: rebound tonometry
+def: "A method in which a probe is bounced off of the surface of the cornea, creating an induction current that is used to calculate intraocular pressure." []
+xref: NCIT:C120703
+is_a: MAXO:0000974 ! tonometry
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T19:41:43Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000977
+name: pull-through procedure
+def: "The surgeon makes small incisions in the abdomen in order to insert an endoscope into the body. The endoscope can either clear the blockage, or remove the portion of intestines without nerves. The healthy portions of intestines are then reconnected in order to allow stool to pass through." []
+synonym: "TERPT" EXACT []
+synonym: "transanal endorectal pull-through procedure" EXACT []
+is_a: MAXO:0001354 ! surgical repair of intestine
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-27T21:33:53Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000979
+name: laparoscopic-assisted anorectoplasty
+def: "A techniqhe which positions the neorectum accurately inside the sphincter complex without dividing any of these muscles." []
+synonym: "LAARP" EXACT []
+is_a: MAXO:0000977 ! pull-through procedure
+is_a: MAXO:0001352 ! surgical repair of anorectum
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-27T21:48:16Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0001000
 name: functional magnetic resonance imaging procedure
 def: "The principle of functional MRI imaging is to take a series of images of an organ in quick succession and to statistically analyze the images for differences among them.  Most commonly used in studies of brain function." [NCIT:C17958]
@@ -10314,56 +10590,64 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001006
-name: blood cell count
-def: "The determination of the number of red blood cells, white blood cells, and platelets in a blood sample." [NCIT:C28133]
+name: hematopoietic cell count
+def: "A determination of the number of hematopoietic cell in a blood sample." []
 synonym: "CBC" EXACT ABBREVIATION []
 synonym: "complete blood count" EXACT []
 synonym: "full blood count" EXACT []
-xref: NCIT:C28133
-is_a: MAXO:0000146 ! clinical cell count
+synonym: "hematopoietic cell cell count" EXACT []
+synonym: "hematopoietic cell cell count measurement" EXACT []
+synonym: "hematopoietic cell count test" EXACT []
 is_a: MAXO:0000829 ! blood cell measurement
-property_value: http://purl.org/dc/elements/1.1/date "2019-05-16T18:09:14Z" xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2019-05-16T18:20:55Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001007
 name: erythrocyte count
-def: "The determination of the number of erythrocytes in a blood sample." [NCIT:C51946]
-synonym: "RBC" EXACT ABBREVIATION []
+def: "A determination of the number of erythrocyte in a blood sample." []
+synonym: "erythrocyte cell count" EXACT []
+synonym: "erythrocyte cell count measurement" EXACT []
+synonym: "erythrocyte count test" EXACT []
 synonym: "red blood cell count" EXACT []
 synonym: "red cell count" EXACT []
 xref: NCIT:C51946
-is_a: MAXO:0001006 ! blood cell count
-property_value: http://purl.org/dc/elements/1.1/date "2019-05-16T18:18:55Z" xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2019-05-16T18:20:55Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001008
 name: platelet count
-def: "The determination of the number of platelets in a blood sample, usually expressed as platelets per cubic millimeter (cmm) of whole blood." [NCIT:C51951]
+def: "A determination of the number of platelet in a blood sample." []
+synonym: "platelet cell count" EXACT []
+synonym: "platelet cell count measurement" EXACT []
+synonym: "platelet count test" EXACT []
 synonym: "thrombocyte count" EXACT []
 xref: NCIT:C51951
-is_a: MAXO:0001006 ! blood cell count
-property_value: http://purl.org/dc/elements/1.1/date "2019-05-16T18:20:55Z" xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2019-05-16T18:20:55Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001009
 name: neutrophil count
-def: "A test to determine the number of neutrophils in a sample of blood." []
-is_a: MAXO:0000544 ! granulocyte count
-property_value: http://purl.org/dc/elements/1.1/date "2019-05-16T18:24:56Z" xsd:dateTime
+def: "A determination of the number of neutrophil in a blood sample." []
+synonym: "neutrophil cell count" EXACT []
+synonym: "neutrophil cell count measurement" EXACT []
+synonym: "neutrophil count test" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2019-05-16T18:20:55Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001010
 name: leukocyte count
-def: "A test to determine the number of leukocytes in a sample of blood." [NCIT:C51948]
+def: "A determination of the number of leukocyte in a blood sample." []
+synonym: "leukocyte cell count" EXACT []
+synonym: "leukocyte cell count measurement" EXACT []
+synonym: "leukocyte count test" EXACT []
 synonym: "WBC" EXACT ABBREVIATION []
 synonym: "white blood cell count" EXACT []
 xref: NCIT:C51948
-is_a: MAXO:0001006 ! blood cell count
-property_value: http://purl.org/dc/elements/1.1/date "2019-05-16T18:25:40Z" xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2019-05-16T18:20:55Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -11006,9 +11290,11 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001082
 name: trabeculectomy
-def: "The surgical removal (cutting out) of part or all of eye trabecular meshwork." []
+def: "A surgical procedure aimed at lowering the intraocular pressure by producing an outflow of aqueous humour through a drainage passage created in the sclera between the anterior chamber and the subconjunctival space." []
+comment: The filtering procedure involves full thickness penetration of sclera to remove a small portion of the trabecular meshwork or surrounding tissue; it bypasses the natural outflow system by diverting aqueous humor from the anterior chamber into a subconjunctival reservoir with a filtering bleb on the eye. Antifibrotic agents, such as mitomycin-C and 5-fluorouracil, may be used intraoperatively and postoperatively to reduce scarring and prevent closure of the new channel.
 synonym: "eye trabecular meshwork surgical removal" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "2020-06-23T20:39:14Z" xsd:string
+is_a: MAXO:0000962 ! glaucoma filtration surgery
+property_value: http://purl.org/dc/elements/1.1/date "2020-06-23T20:12:12Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -11353,7 +11639,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001121
 name: biopsy of kidney
-def: "Removal of tissue from the kidney." []
+def: "Removal and examination of tissue, cells, or fluids from kidney for the purpose of detecting or characterizing disease." []
 synonym: "kidney biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2020-06-23T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -11753,6 +12039,7 @@ def: "A systemic evaluation of the eye using visual inspection, palpation, and p
 synonym: "examination of eye" EXACT []
 synonym: "eye exam" EXACT []
 synonym: "physical examination of eye" EXACT []
+is_a: MAXO:0000967 ! ophthalmic diagnostic procedure
 property_value: http://purl.org/dc/elements/1.1/date "2021-02-10T14:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -11913,7 +12200,7 @@ synonym: "venous blood vessel ultrasound imaging procedure" EXACT []
 synonym: "venous blood vessel ultrasound procedure" EXACT []
 synonym: "venous sonography" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-24T20:39:14Z" xsd:string
-created_by: http://orcid.org/0000-0001-7941-3010
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001171
@@ -11928,7 +12215,7 @@ synonym: "testis ultrasound imaging procedure" EXACT []
 synonym: "testis ultrasound procedure" EXACT []
 synonym: "ultrasonography of testis" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-24T20:39:14Z" xsd:string
-created_by: http://orcid.org/0000-0001-7941-3010
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001172
@@ -12369,6 +12656,7 @@ id: MAXO:0001220
 name: removal of lens
 def: "The surgical removal (cutting out) of part or all of lens of camera-type eye." []
 synonym: "lens of camera-type eye surgical removal" EXACT []
+is_a: MAXO:0000024 ! surgical procedure on the eye
 property_value: http://purl.org/dc/elements/1.1/date "2020-06-23T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -12900,22 +13188,20 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001269
 name: clinical biopsy
-def: "Use of biopsy to obtain a clinical specimen." []
-comment: A specimen collection that obtains a sample of tissue or cell from a living multicellular organism body for diagnostic purposes by means intended to be minimally invasive. OBI:0002650
+def: "A specimen collection from a patient that is used for diagnostic purposes." []
+synonym: "diagnostic biopsy" EXACT []
 xref: OBI:0002650
 is_a: MAXO:0000003 ! diagnostic procedure
-intersection_of: MAXO:0000003 ! diagnostic procedure
-intersection_of: BFO:0000051 OBI:0002650
 property_value: http://purl.org/dc/elements/1.1/date "2022-12-08T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001270
 name: clinical computed tomography assisted biopsy
-def: "Use of computed tomography assisted biopsy to obtain a clinical specimen." []
+def: "Use of computed tomography assisted biopsy to removal and examination of tissue, cells, or fluids from a patient purpose of detecting or characterizing disease." []
 comment: A needle biopsy guided by real-time computed tomography (CT) scan images. OBI:0002652
 xref: OBI:0002652
-intersection_of: MAXO:0000003 ! diagnostic procedure
+intersection_of: MAXO:0001269 ! clinical biopsy
 intersection_of: BFO:0000051 OBI:0002652
 property_value: http://purl.org/dc/elements/1.1/date "2022-12-08T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -12923,10 +13209,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001271
 name: clinical core needle biopsy
-def: "Use of core needle biopsy to obtain a clinical specimen." []
+def: "Use of core needle biopsy to removal and examination of tissue, cells, or fluids from a patient purpose of detecting or characterizing disease." []
 comment: A biopsy that uses a hollow tube to collect a core of tissue. OBI:0002656
 xref: OBI:0002656
-intersection_of: MAXO:0000003 ! diagnostic procedure
+intersection_of: MAXO:0001269 ! clinical biopsy
 intersection_of: BFO:0000051 OBI:0002656
 property_value: http://purl.org/dc/elements/1.1/date "2022-12-08T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -12934,10 +13220,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001272
 name: clinical fine needle aspiration biopsy
-def: "Use of fine needle aspiration biopsy to obtain a clinical specimen." []
+def: "Use of fine needle aspiration biopsy to removal and examination of tissue, cells, or fluids from a patient purpose of detecting or characterizing disease." []
 comment: A biopsy that uses a thin needle to extract cells. OBI:0002655
 xref: OBI:0002655
-intersection_of: MAXO:0000003 ! diagnostic procedure
+intersection_of: MAXO:0001269 ! clinical biopsy
 intersection_of: BFO:0000051 OBI:0002655
 property_value: http://purl.org/dc/elements/1.1/date "2022-12-08T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -12945,10 +13231,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001273
 name: clinical image guided biopsy
-def: "Use of image guided biopsy to obtain a clinical specimen." []
+def: "Use of image guided biopsy to removal and examination of tissue, cells, or fluids from a patient purpose of detecting or characterizing disease." []
 comment: A biopsy which uses an imaging procedure to guide a needle biopsy. OBI:0002651
 xref: OBI:0002651
-intersection_of: MAXO:0000003 ! diagnostic procedure
+intersection_of: MAXO:0001269 ! clinical biopsy
 intersection_of: BFO:0000051 OBI:0002651
 property_value: http://purl.org/dc/elements/1.1/date "2022-12-08T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -12956,10 +13242,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001274
 name: clinical needle biopsy
-def: "Use of needle biopsy to obtain a clinical specimen." []
+def: "Use of needle biopsy to removal and examination of tissue, cells, or fluids from a patient purpose of detecting or characterizing disease." []
 comment: A biopsy that uses a hollow needle to extract cells. OBI:0002654
 xref: OBI:0002654
-intersection_of: MAXO:0000003 ! diagnostic procedure
+intersection_of: MAXO:0001269 ! clinical biopsy
 intersection_of: BFO:0000051 OBI:0002654
 property_value: http://purl.org/dc/elements/1.1/date "2022-12-08T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -12967,10 +13253,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001275
 name: clinical surgical biopsy
-def: "Use of surgical biopsy to obtain a clinical specimen." []
+def: "Use of surgical biopsy to removal and examination of tissue, cells, or fluids from a patient purpose of detecting or characterizing disease." []
 comment: A biopsy involving a surgical incision into an organism to access the biopsy material. OBI:0002657
 xref: OBI:0002657
-intersection_of: MAXO:0000003 ! diagnostic procedure
+intersection_of: MAXO:0001269 ! clinical biopsy
 intersection_of: BFO:0000051 OBI:0002657
 property_value: http://purl.org/dc/elements/1.1/date "2022-12-08T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -12978,10 +13264,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001276
 name: clinical ultrasound-guided needle biopsy
-def: "Use of ultrasound-guided needle biopsy to obtain a clinical specimen." []
+def: "Use of ultrasound-guided needle biopsy to removal and examination of tissue, cells, or fluids from a patient purpose of detecting or characterizing disease." []
 comment: An ultrasound-guided needle biopsy uses sound waves to help locate a nodule or abnormality within the thyroid. OBI:0002653
 xref: OBI:0002653
-intersection_of: MAXO:0000003 ! diagnostic procedure
+intersection_of: MAXO:0001269 ! clinical biopsy
 intersection_of: BFO:0000051 OBI:0002653
 property_value: http://purl.org/dc/elements/1.1/date "2022-12-08T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -13387,7 +13673,7 @@ created_by: https://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001322
-name: GABA modulater therapy
+name: GABA modulator therapy
 def: "Use of a drug or agent that does not act as agonist or antagonist but does affect GABA-ionophore complex signaling." []
 synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_50268" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
@@ -13535,6 +13821,387 @@ name: GABAA receptor antagonist therapy
 def: "Treatment with a drug or agent that inhibits GABAA receptor signaling." []
 synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_145515" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001341
+name: sclerectomy
+def: "The surgical removal (cutting out) of part or all of sclera." []
+synonym: "sclera surgical removal" EXACT []
+is_a: MAXO:0000024 ! surgical procedure on the eye
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001342
+name: colostomy
+def: "The surgical formation of an external opening from the colon through the abdominal wall." []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-27T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001343
+name: cystostomy procedure
+def: "Surgical creation of an external opening into the anterior bladder wall. [ NCI ]" []
+xref: NCIT:C15218
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-27T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001344
+name: enterostomy
+def: "The surgical formation of an external opening from the small intestines through the abdominal wall." []
+xref: NCIT:C52005
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-27T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001345
+name: ureterostomy
+def: "A surgically created connection between the ureter and the skin, which drains urine from the ureter in individuals with urinary obstruction or other issues that prevent normal urination." []
+xref: NCIT:C15345
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-27T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001346
+name: gastrostomy
+def: "The creation of an artificial external opening into the stomach for nutritional support or gastric decompression." []
+synonym: "placement of g-tube" EXACT []
+synonym: "placement of gastrostomy-tube" EXACT []
+xref: https://en.wikipedia.org/wiki/Gastrostomy
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-27T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001347
+name: duodenostomy
+def: "The surgical formation of an external opening from the duodenum through the abdominal wall." []
+xref: NCIT:C122593
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-27T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001348
+name: ileostomy
+def: "The surgical formation of an external opening from the ileum through the abdominal wall." []
+xref: NCIT:C15257
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-27T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001349
+name: jejunostomy
+def: "The surgical formation of an external opening from the jejunum through the abdominal wall." []
+synonym: "placement of j-tube" EXACT []
+xref: NCIT:C79978
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-27T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001350
+name: nephrostomy
+def: "The surgical formation of an external opening from the kidney through the abdominal wall." []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-27T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001352
+name: surgical repair of anorectum
+def: "A surgery that fixes or mends anorectum." []
+synonym: "anorectum surgical repair" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-27T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001353
+name: surgical repair of large intestine
+def: "A surgery that fixes or mends large intestine." []
+synonym: "large intestine surgical repair" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-27T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001354
+name: surgical repair of intestine
+def: "A surgery that fixes or mends intestine." []
+synonym: "intestine surgical repair" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-27T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001355
+name: surgical repair of small intestine
+def: "A surgery that fixes or mends small intestine." []
+synonym: "small intestine surgical repair" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-27T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001356
+name: hematopoietic cell morphology measurement
+def: "A determination of the structure of hematopoietic cell." []
+synonym: "hematopoietic cell morphology assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001357
+name: lymphocyte morphology measurement
+def: "A determination of the structure of lymphocyte." []
+synonym: "lymphocyte morphology assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001358
+name: reticulocyte morphology measurement
+def: "A determination of the structure of reticulocyte." []
+synonym: "reticulocyte morphology assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001360
+name: granulocyte morphology measurement
+def: "A determination of the structure of granulocyte." []
+synonym: "granulocyte morphology assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001361
+name: basophil morphology measurement
+def: "A determination of the structure of basophil." []
+synonym: "basophil morphology assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001362
+name: neutrophil morphology measurement
+def: "A determination of the structure of neutrophil." []
+synonym: "neutrophil morphology assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001363
+name: platelet morphology measurement
+def: "A determination of the structure of platelet." []
+synonym: "platelet morphology assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001364
+name: sperm morphology measurement
+def: "A determination of the structure of sperm." []
+synonym: "sperm morphology assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001365
+name: T cell morphology measurement
+def: "A determination of the structure of T cell." []
+synonym: "T cell morphology assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001366
+name: B cell morphology measurement
+def: "A determination of the structure of B cell." []
+synonym: "B cell morphology assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001367
+name: sperm count
+def: "A determination of the number of sperm in a blood sample." []
+synonym: "sperm cell count" EXACT []
+synonym: "sperm cell count measurement" EXACT []
+synonym: "sperm count test" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001368
+name: helper T cell count
+def: "A determination of the number of helper T cell in a blood sample." []
+synonym: "helper T cell cell count" EXACT []
+synonym: "helper T cell cell count measurement" EXACT []
+synonym: "helper T cell count test" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001369
+name: T cell count
+def: "A determination of the number of T cell in a blood sample." []
+synonym: "T cell cell count" EXACT []
+synonym: "T cell cell count measurement" EXACT []
+synonym: "T cell count test" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001370
+name: B cell count
+def: "A determination of the number of B cell in a blood sample." []
+synonym: "B cell cell count" EXACT []
+synonym: "B cell cell count measurement" EXACT []
+synonym: "B cell count test" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001371
+name: natural killer cell count
+def: "A determination of the number of natural killer cell in a blood sample." []
+synonym: "natural killer cell cell count" EXACT []
+synonym: "natural killer cell cell count measurement" EXACT []
+synonym: "natural killer cell count test" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001372
+name: burr cell count
+def: "A determination of the number of echynocyte in a blood sample." []
+synonym: "echynocyte cell count" EXACT []
+synonym: "echynocyte cell count measurement" EXACT []
+synonym: "echynocyte count test" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001373
+name: plasma cell count
+def: "A determination of the number of plasma cell in a blood sample." []
+synonym: "plasma cell cell count" EXACT []
+synonym: "plasma cell cell count measurement" EXACT []
+synonym: "plasma cell count test" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001374
+name: dendritic cell count
+def: "A determination of the number of dendritic cell in a blood sample." []
+synonym: "dendritic cell cell count" EXACT []
+synonym: "dendritic cell cell count measurement" EXACT []
+synonym: "dendritic cell count test" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001375
+name: regulatory T cell count
+def: "A determination of the number of regulatory T cell in a blood sample." []
+synonym: "regulatory T cell cell count" EXACT []
+synonym: "regulatory T cell cell count measurement" EXACT []
+synonym: "regulatory T cell count test" EXACT []
+synonym: "T reg cell count" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001376
+name: natural killer cell morphology measurement
+def: "A determination of the structure of natural killer cell." []
+synonym: "natural killer cell morphology assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001377
+name: echynocyte morphology measurement
+def: "A determination of the structure of echynocyte." []
+synonym: "echynocyte morphology assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001378
+name: langerhans cell morphology measurement
+def: "A determination of the structure of langerhans cell." []
+synonym: "langerhans cell morphology assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001379
+name: mast cell morphology measurement
+def: "A determination of the structure of mast cell." []
+synonym: "mast cell morphology assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001380
+name: Schwann cell morphology measurement
+def: "A determination of the structure of Schwann cell." []
+synonym: "Schwann cell morphology assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001381
+name: myeloid cell morphology measurement
+def: "A determination of the structure of myeloid cell." []
+synonym: "myeloid cell morphology assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001382
+name: germ cell morphology measurement
+def: "A determination of the structure of germ cell." []
+synonym: "germ cell morphology assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001383
+name: glial cell morphology measurement
+def: "A determination of the structure of glial cell." []
+synonym: "glial cell morphology assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001384
+name: kidney glomerular epithelial cell morphology measurement
+def: "A determination of the structure of kidney glomerular epithelial cell." []
+synonym: "kidney glomerular epithelial cell morphology assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001385
+name: oocyte morphology measurement
+def: "A determination of the structure of oocyte." []
+synonym: "oocyte morphology assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001386
+name: myeloid leukocyte morphology measurement
+def: "A determination of the structure of myeloid leukocyte." []
+synonym: "myeloid leukocyte morphology assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001387
+name: bone marrow cell morphology measurement
+def: "A determination of the structure of bone marrow cell." []
+synonym: "bone marrow cell morphology assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -13691,7 +14358,7 @@ synonym: "fetal echo procedure" EXACT []
 synonym: "fetal echocardiogram procedure" EXACT []
 synonym: "prenatal echo procedure" EXACT []
 synonym: "prenatal echocardiagraphy" EXACT []
-is_a: MAXO:0000520 ! obstetric ultrasonography
+is_a: MAXO:0000520 ! fetal ultrasonography
 is_a: MAXO:0010203 ! echocardiography
 property_value: http://purl.org/dc/elements/1.1/date "2022-03-22T18:19:25Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -16091,7 +16758,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010200
-name: transabdominal ultrasonography
+name: abdominal ultrasonography
 def: "A method of ultrasound imaging in which the ultrasound probe is pressed against the skin of the abdomen in order to create an image of the abdominal organs." []
 synonym: "abdomen diagnostic sonography" EXACT []
 synonym: "abdomen medical ultrasound" EXACT []
@@ -16099,6 +16766,9 @@ synonym: "abdomen sonography" EXACT []
 synonym: "abdomen ultrasound examination" EXACT []
 synonym: "abdomen ultrasound imaging procedure" EXACT []
 synonym: "abdomen ultrasound procedure" EXACT []
+synonym: "abdominal sonography" EXACT []
+synonym: "abdominal ultrasound" EXACT []
+synonym: "diagnostic abdominal ultrasound" EXACT []
 synonym: "diagnostic transabdominal ultrasound" EXACT []
 synonym: "medical transabdominal ultrasound" EXACT []
 synonym: "sonography of abdomen" EXACT []
@@ -16172,7 +16842,7 @@ synonym: "liver ultrasound procedure" EXACT []
 synonym: "sonography of liver" EXACT []
 synonym: "ultrasonography of liver" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-24T20:39:14Z" xsd:string
-created_by: http://orcid.org/0000-0001-7941-2965
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010205
@@ -16187,7 +16857,7 @@ synonym: "lung ultrasound procedure" EXACT []
 synonym: "sonography of lung" EXACT []
 synonym: "ultrasonography of lung" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-24T20:39:14Z" xsd:string
-created_by: http://orcid.org/0000-0001-7941-2969
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010206
@@ -16202,7 +16872,7 @@ synonym: "lymph node ultrasound procedure" EXACT []
 synonym: "sonography of lymph node" EXACT []
 synonym: "ultrasonography of lymph node" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-24T20:39:14Z" xsd:string
-created_by: http://orcid.org/0000-0001-7941-2970
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010207
@@ -16217,7 +16887,7 @@ synonym: "musculoskeletal system ultrasound procedure" EXACT []
 synonym: "sonography of musculoskeletal system" EXACT []
 synonym: "ultrasonography of musculoskeletal system" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-24T20:39:14Z" xsd:string
-created_by: http://orcid.org/0000-0001-7941-2975
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010208
@@ -16232,7 +16902,7 @@ synonym: "neck ultrasound procedure" EXACT []
 synonym: "sonography of neck" EXACT []
 synonym: "ultrasonography of neck" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-24T20:39:14Z" xsd:string
-created_by: http://orcid.org/0000-0001-7941-2979
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010209
@@ -16247,7 +16917,7 @@ synonym: "pancreas ultrasound procedure" EXACT []
 synonym: "sonography of pancreas" EXACT []
 synonym: "ultrasonography of pancreas" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-24T20:39:14Z" xsd:string
-created_by: http://orcid.org/0000-0001-7941-2981
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010210
@@ -16262,7 +16932,7 @@ synonym: "rectum ultrasound procedure" EXACT []
 synonym: "sonography of rectum" EXACT []
 synonym: "ultrasonography of rectum" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-24T20:39:14Z" xsd:string
-created_by: http://orcid.org/0000-0001-7941-2987
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010211
@@ -16277,7 +16947,7 @@ synonym: "scrotum ultrasound procedure" EXACT []
 synonym: "sonography of scrotum" EXACT []
 synonym: "ultrasonography of scrotum" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-24T20:39:14Z" xsd:string
-created_by: http://orcid.org/0000-0001-7941-2990
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010212
@@ -16292,7 +16962,7 @@ synonym: "spleen ultrasound imaging procedure" EXACT []
 synonym: "spleen ultrasound procedure" EXACT []
 synonym: "ultrasonography of spleen" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-24T20:39:14Z" xsd:string
-created_by: http://orcid.org/0000-0001-7941-2994
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010213
@@ -16307,7 +16977,7 @@ synonym: "stomach ultrasound imaging procedure" EXACT []
 synonym: "stomach ultrasound procedure" EXACT []
 synonym: "ultrasonography of stomach" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-24T20:39:14Z" xsd:string
-created_by: http://orcid.org/0000-0001-7941-2995
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010214
@@ -16322,7 +16992,7 @@ synonym: "thyroid gland ultrasound imaging procedure" EXACT []
 synonym: "thyroid gland ultrasound procedure" EXACT []
 synonym: "ultrasonography of thyroid gland" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-24T20:39:14Z" xsd:string
-created_by: http://orcid.org/0000-0001-7941-3000
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010215
@@ -16337,7 +17007,7 @@ synonym: "urinary bladder ultrasound examination" EXACT []
 synonym: "urinary bladder ultrasound imaging procedure" EXACT []
 synonym: "urinary bladder ultrasound procedure" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-24T20:39:14Z" xsd:string
-created_by: http://orcid.org/0000-0001-7941-3008
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010216
@@ -16352,7 +17022,7 @@ synonym: "vagina ultrasound examination" EXACT []
 synonym: "vagina ultrasound imaging procedure" EXACT []
 synonym: "vagina ultrasound procedure" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-24T20:39:14Z" xsd:string
-created_by: http://orcid.org/0000-0001-7941-3010
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010217
@@ -16367,7 +17037,7 @@ synonym: "kidney ultrasound procedure" EXACT []
 synonym: "sonography of kidney" EXACT []
 synonym: "ultrasonography of kidney" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-24T20:39:14Z" xsd:string
-created_by: http://orcid.org/0000-0001-7941-3010
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010218
@@ -16383,7 +17053,7 @@ synonym: "carotid ultrasound imaging" EXACT []
 synonym: "sonography of carotid artery segment" EXACT []
 synonym: "ultrasonography of carotid artery segment" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-24T20:39:14Z" xsd:string
-created_by: http://orcid.org/0000-0001-7941-3010
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010219
@@ -16400,7 +17070,7 @@ synonym: "pelvis sonography" EXACT []
 synonym: "sonography of pelvic region of trunk" EXACT []
 synonym: "ultrasonography of pelvic region of trunk" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-24T20:39:14Z" xsd:string
-created_by: http://orcid.org/0000-0001-7941-3010
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010220
@@ -16415,7 +17085,7 @@ synonym: "prostate gland ultrasound procedure" EXACT []
 synonym: "sonography of prostate gland" EXACT []
 synonym: "ultrasonography of prostate gland" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-24T20:39:14Z" xsd:string
-created_by: http://orcid.org/0000-0001-7941-3010
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010221
@@ -16436,7 +17106,7 @@ synonym: "brain ultrasound procedure" EXACT []
 synonym: "sonography of brain" EXACT []
 synonym: "ultrasonography of brain" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-24T20:39:14Z" xsd:string
-created_by: http://orcid.org/0000-0001-7941-3010
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0010301
@@ -16860,7 +17530,7 @@ id: MAXO:0025001
 name: cardiac surgery
 def: "A surgical procedure on the heart." [NCIT:C157806]
 synonym: "heart surgery" EXACT []
-is_a: MAXO:0000004 ! surgical procedure
+is_a: MAXO:0000012 ! surgical procedure on body region
 
 [Term]
 id: MAXO:0025002
@@ -16889,13 +17559,13 @@ name: nasolacrimal duct surgery
 def: "A surgical procedure on the nasolacrimal duct." [NCIT:C157999]
 synonym: "dacryocystorhinostomy" EXACT []
 synonym: "tear duct surgery" EXACT []
-is_a: MAXO:0000004 ! surgical procedure
+is_a: MAXO:0000012 ! surgical procedure on body region
 
 [Term]
 id: MAXO:0025006
 name: strabismus surgery
 def: "A surgical procedure to correct strabismus in the eye." []
-is_a: MAXO:0000004 ! surgical procedure
+is_a: MAXO:0000024 ! surgical procedure on the eye
 
 [Term]
 id: MAXO:0030010
@@ -16953,7 +17623,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0035003
 name: fluorescein angiography
 def: "A technique to visualize the blood vessels in the back of the eye by injecting fluorescent dye and then imaging it." []
-is_a: MAXO:0001259 ! angiography
+is_a: MAXO:0035038 ! contrast angiography procedure
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-21T18:55:59Z" xsd:dateTime
 created_by: https://orcid.org/0000-0001-7941-2961
 
@@ -17087,6 +17757,38 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-02-10T20:39:14Z" xsd:
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0035053
+name: ovary ultrasonography
+def: "The use of ultrasound to produce images of structures in the ovary." []
+synonym: "ovarian ultrasound" EXACT []
+synonym: "ovary diagnostic sonography" EXACT []
+synonym: "ovary medical ultrasound" EXACT []
+synonym: "ovary sonography" EXACT []
+synonym: "ovary ultrasound examination" EXACT []
+synonym: "ovary ultrasound imaging procedure" EXACT []
+synonym: "ovary ultrasound procedure" EXACT []
+synonym: "sonography of ovary" EXACT []
+synonym: "ultrasonography of ovary" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-02T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035072
+name: leukocyte morphology measurement
+def: "A determination of the structure of leukocyte." []
+synonym: "leukocyte morphology assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035073
+name: megakaryocyte morphology measurement
+def: "A determination of the structure of megakaryocyte." []
+synonym: "megakaryocyte morphology assessment" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-06T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0035074
 name: ankle radiography
 def: "Use of an imaging test that uses small amounts of radiation to produce pictures of ankle joint." []
@@ -17121,6 +17823,31 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-02-10T20:39:14Z" xsd:
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0035086
+name: arterial ultrasonograpy
+def: "The use of ultrasound to produce images of structures in the artery." []
+synonym: "arterial ultrasound" EXACT []
+synonym: "artery diagnostic sonography" EXACT []
+synonym: "artery medical ultrasound" EXACT []
+synonym: "artery sonography" EXACT []
+synonym: "artery ultrasound examination" EXACT []
+synonym: "artery ultrasound imaging procedure" EXACT []
+synonym: "artery ultrasound procedure" EXACT []
+synonym: "sonography of artery" EXACT []
+synonym: "ultrasonography of artery" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-02T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035087
+name: biopsy of peripheral nerve
+def: "Removal and examination of tissue, cells, or fluids from the peripheral nerve for the purpose of detecting or characterizing disease." []
+synonym: "ganglion of peripheral nervous system biopsy" EXACT []
+synonym: "peripheral nerve biopsy" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0035088
 name: magnetic resonance angiography procedure
 def: "A procedure that uses radio waves and a powerful magnet linked to a computer to create detailed pictures of the blood vessels and blood flow inside the body. A dye may be injected into a vein to make the blood vessels and blood flow easier to see. (NCI)" []
@@ -17129,6 +17856,14 @@ synonym: "MRA" EXACT []
 is_a: MAXO:0001259 ! angiography
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-21T19:27:13Z" xsd:dateTime
 created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035098
+name: biopsy of artery
+def: "Removal and examination of tissue, cells, or fluids from artery for the purpose of detecting or characterizing disease." []
+synonym: "artery biopsy" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Typedef]
 id: MAXO:0000521
