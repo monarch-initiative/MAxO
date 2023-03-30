@@ -1,13 +1,12 @@
-pattern_name: ct_by_location
-pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/ct_by_location.yaml
-description: "computed tomography of a particular part of the body"
+pattern_name: therapeuticprocedure_by_location
+pattern_iri: http://purl.obolibrary.org/obo/maxo/patterns/therapeuticprocedure_by_location.yaml
+description: "Biopsy or examination of tissue, cells, or fluid removed to investigate presenence/existance of disease."
 
 contributors:
   - https://orcid.org/0000-0001-7941-2961
-  - https://orcid.org/0000-0002-7356-1779
 
 classes:
-  ct: MAXO:0000989
+  therapeutic procedure by site: MAXO:0000034
   location: UBERON:0001062
 
 relations:
@@ -20,7 +19,7 @@ annotationProperties:
   date: dc:date
   comment: rdfs:comment
   xref: oio:hasDbXref
-
+ 
 vars:
   location: "'location'"
   
@@ -29,52 +28,34 @@ data_vars:
   created_by: "'created_by'"
   comment: "'comment'"
   xref: "database cross reference"
-
 data_list_vars:
   syns: xsd:string
-
 name:
-  text: "%s CT"
+  text: "therapeutic procedure of %s"
   vars:
    - location
 
 annotations:
   - annotationProperty: exact_synonym
-    text: "CT of %s"
+    text: "%s therapeutic procedure"
     vars:
      - location
-  - annotationProperty: exact_synonym
-    text: "CAT scan of %s"
-    vars:
-     - location
-  - annotationProperty: exact_synonym
-    text: "%s CAT scan"
-    vars:
-     - location
-  - annotationProperty: exact_synonym
-    text: "%s computed tomography"
-    vars:
-     - location
-  - annotationProperty: exact_synonym
-    text: "%s computerized axial tomography"
-    vars:
-     - location
-  - annotationProperty: exact_synonym
-    text: "%s CT examination"
-    vars:
-     - location
+     
   - annotationProperty: date
     text: "%s"
     vars:
      - date
+     
   - annotationProperty: created_by
     text: "%s"
     vars:
      - created_by
+
   - annotationProperty: comment
     text: "%s"
     vars:
      - comment
+    
   - annotationProperty: xref
     text: "%s"
     vars:
@@ -84,12 +65,13 @@ exact_synonym:
   value: syns
 
 def:
-  text: "The use of computed tomography to produce images of structures of the %s."
+  text: "All manners of treatment to bring %s back to its normal state."
   vars:
     - location
 
 equivalentTo:
-  text: "'ct' and 'has_input' some ('part_of' some %s)"
+  text: "'therapeutic procedure by site' and 'has_input' some ('part_of' some %s)"
   vars:
     - location
+   
 
