@@ -833,6 +833,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000977>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000979>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000988>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000989>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000990>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001002>))
@@ -982,6 +983,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0035048>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0035049>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0035082>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0035088>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0001088>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0000521>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0000864>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0001015>))
@@ -1658,11 +1660,10 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000074> <http://purl.obolibrary
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000075> (digestive system testing)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000075> "The quantitative measurement of digestive system tests to diagnose or treat a digestive disorder using clinical laboratory procedures, imaging tests, endoscopic or other procedures.")
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000075> "2019-01-15T19:35:36Z"^^xsd:dateTime)
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000075> "2019-01-15T19:35:36Z")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000075> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000075> "digestive system testing"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000075> <http://purl.obolibrary.org/obo/MAXO_0000003>)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000075> <http://purl.obolibrary.org/obo/MAXO_0000566>)
+EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0000075> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000566> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0001007>))))
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000077> (behavioral counseling)
 
@@ -8269,6 +8270,7 @@ AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000789> "2021
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000789> <http://orcid.org/0000-0001-7941-2961>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000789> "NCIT:C61044")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000789> "urine chemistry measurement"@en)
+EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0000789> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000566> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0001088>))))
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000789> <http://purl.obolibrary.org/obo/MAXO_0000566>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000790> (clinical breast examination)
@@ -9862,6 +9864,16 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000989> "CT by site"@en)
 EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0000989> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0000571> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0001062>))))
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000989> <http://purl.obolibrary.org/obo/MAXO_0000571>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000990> (clinical biopsy by site)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000990> "A specimen collection from a particular body site used for diagnostic purposes.")
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000990> "2023-03-30T17:56:49Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/MAXO_0000990> <https://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000990> "biopsy by body location")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000990> "clinical biopsy by site"@en)
+EquivalentClasses(<http://purl.obolibrary.org/obo/MAXO_0000990> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MAXO_0001269> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0001062>))))
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000990> <http://purl.obolibrary.org/obo/MAXO_0001269>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0001000> (functional magnetic resonance imaging procedure)
 
