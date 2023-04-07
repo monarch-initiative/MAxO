@@ -74,11 +74,16 @@ pattern_pipelines_group:
       dosdp_tools_options: "--obo-prefixes=true"
 robot_java_args: '-Xmx8G'
 components:
-  directory: ../templates
   products:
-    - filename: obsolete.owl
-    - filename: replaced.owl
-    - filename: xrefs.owl
+    - filename: maxo-deprecated.owl
+      use_template: TRUE
+      templates:
+        - obsolete.tsv
+        - replaced.tsv
+    - filename: maxo-xrefs.owl
+      use_template: TRUE
+      templates:
+        - xrefs.tsv
     - filename: maxo-template.owl
       use_template: TRUE
       templates:

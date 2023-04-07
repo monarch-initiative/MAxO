@@ -1,14 +1,37 @@
-<?xml version="1.0"?>
-<rdf:RDF 
-     xml:base="http://purl.obolibrary.org/obo/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:obo="http://purl.obolibrary.org/obo/">
-    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/components/maxo-template.owl"/>
+Prefix(:=<http://purl.obolibrary.org/obo/maxo/components/maxo-template.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
-    <!-- This is a placeholder, it will be regenerated when makefile is first executed -->
-</rdf:RDF>
+
+Ontology(<http://purl.obolibrary.org/obo/maxo/components/maxo-template.owl>
+<http://purl.obolibrary.org/obo/maxo/releases/2023-04-07/components/maxo-template.owl>
+Annotation(owl:versionInfo "2023-04-07")
+
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000003>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000487>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0035120>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0035121>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0035120> (cardiac auscultation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0035120> "Investigation of heart sounds with a stethoscope.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0035120> "cardiac auscultation")
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0035120> <http://purl.obolibrary.org/obo/MAXO_0000487>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0035121> (electrooculogram procedure)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0035121> "An electrophysiologic test that measures the existing resting electrical potential between the cornea and Bruch's membrane. The most common use of the electrooculogram is to confirm Best disease.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0035121> "electrooculogram procedure")
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0035121> <http://purl.obolibrary.org/obo/MAXO_0000003>)
+
+
+)

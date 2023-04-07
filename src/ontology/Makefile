@@ -36,7 +36,7 @@ SUBSETDIR=                  subsets
 SCRIPTSDIR=                 ../scripts
 UPDATEREPODIR=              target
 SPARQLDIR =                 ../sparql
-COMPONENTSDIR =             ../templates
+COMPONENTSDIR =             components
 ROBOT_PROFILE =             profile.txt
 REPORT_FAIL_ON =            ERROR
 REPORT_LABEL =              
@@ -51,7 +51,7 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 ANNOTATE_CONVERT_FILE =     annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
-OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/obsolete.owl $(COMPONENTSDIR)/replaced.owl $(COMPONENTSDIR)/xrefs.owl $(COMPONENTSDIR)/maxo-template.owl 
+OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/maxo-deprecated.owl $(COMPONENTSDIR)/maxo-xrefs.owl $(COMPONENTSDIR)/maxo-template.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 EDIT_PREPROCESSED =         $(TMPDIR)/$(ONT)-preprocess.owl
 PATTERNDIR=                 ../patterns
@@ -386,7 +386,20 @@ $(COMPONENTSDIR)/%: | $(COMPONENTSDIR)
 
 
 
+$(COMPONENTSDIR)/maxo-deprecated.owl: $(TEMPLATEDIR)/obsolete.tsv $(TEMPLATEDIR)/replaced.tsv
+	if [ $(COMP) = true ] ; then $(ROBOT) template  \
+		$(patsubst %, --template %, $^) \
+		$(ANNOTATE_CONVERT_FILE); fi
 
+.PRECIOUS: $(COMPONENTSDIR)/maxo-deprecated.owl
+
+
+$(COMPONENTSDIR)/maxo-xrefs.owl: $(TEMPLATEDIR)/xrefs.tsv
+	if [ $(COMP) = true ] ; then $(ROBOT) template  \
+		$(patsubst %, --template %, $^) \
+		$(ANNOTATE_CONVERT_FILE); fi
+
+.PRECIOUS: $(COMPONENTSDIR)/maxo-xrefs.owl
 
 
 $(COMPONENTSDIR)/maxo-template.owl: $(TEMPLATEDIR)/maxo-in-progress.tsv

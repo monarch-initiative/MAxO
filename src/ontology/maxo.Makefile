@@ -18,17 +18,8 @@ test_fast:
 
 TEMPLATE_URL_MAXO=https://docs.google.com/spreadsheets/d/e/2PACX-1vTcCsupbjr3kEke__ymYi-JkAYoHhliC79FKBYALcQAcJNAwikJlNN5DcwzdAVqBFnj2-ix1cixKyv-/pub?gid=0&single=true&output=tsv
 
-TEMPLATES=$(patsubst %.tsv, $(TEMPLATESDIR)/%.owl, $(notdir $(wildcard $(TEMPLATESDIR)/*.tsv)))
-
-$(TEMPLATEDIR)/%.owl: $(TEMPLATEDIR)/%.tsv $(SRC)
-	$(ROBOT) merge -i $(SRC) template --template $< --output $@ && \
-	$(ROBOT) annotate --input $@ --ontology-iri $(ONTBASE)/components/$*.owl -o $@
-
 $(TEMPLATEDIR)/maxo-in-progress.tsv:
 	wget "$(TEMPLATE_URL_MAXO)" -O $@
-
-templates: $(TEMPLATES)
-	echo $(TEMPLATES)
 
 #########################################
 ### Custom import or mirror configs #####
