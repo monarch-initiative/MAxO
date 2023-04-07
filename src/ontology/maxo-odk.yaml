@@ -3,6 +3,7 @@ title: "Medical Action Ontology"
 github_org: monarch-initiative
 repo: MAxO
 report_fail_on: ERROR
+use_templates: TRUE
 use_dosdps: TRUE
 dosdp_tools_options: "--obo-prefixes=true"
 namespaces: 
@@ -77,7 +78,11 @@ components:
   products:
     - filename: obsolete.owl
     - filename: replaced.owl
-    - filename: xrefs.owl 
+    - filename: xrefs.owl
+    - filename: maxo-template.owl
+      use_template: TRUE
+      templates:
+        - maxo-in-progress.tsv
 allow_equivalents: all
 robot_report:
   use_base_iris: True

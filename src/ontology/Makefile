@@ -51,7 +51,7 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 ANNOTATE_CONVERT_FILE =     annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
-OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/obsolete.owl $(COMPONENTSDIR)/replaced.owl $(COMPONENTSDIR)/xrefs.owl 
+OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/obsolete.owl $(COMPONENTSDIR)/replaced.owl $(COMPONENTSDIR)/xrefs.owl $(COMPONENTSDIR)/maxo-template.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 EDIT_PREPROCESSED =         $(TMPDIR)/$(ONT)-preprocess.owl
 PATTERNDIR=                 ../patterns
@@ -387,6 +387,14 @@ $(COMPONENTSDIR)/%: | $(COMPONENTSDIR)
 
 
 
+
+
+$(COMPONENTSDIR)/maxo-template.owl: $(TEMPLATEDIR)/maxo-in-progress.tsv
+	if [ $(COMP) = true ] ; then $(ROBOT) template  \
+		$(patsubst %, --template %, $^) \
+		$(ANNOTATE_CONVERT_FILE); fi
+
+.PRECIOUS: $(COMPONENTSDIR)/maxo-template.owl
 # ----------------------------------------
 # Mirroring upstream ontologies
 # ----------------------------------------
