@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2023-03-09/maxo-base.owl
+data-version: maxo/releases/2023-04-13/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
@@ -7,7 +7,8 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology to repr
 property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2023-03-09" xsd:string
+property_value: IAO:0000700 MAXO:0000001
+property_value: owl:versionInfo "2023-04-13" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -24,14 +25,10 @@ id: MAXO:0000002
 name: therapeutic procedure
 def: "All manners of treatment, be they pharmaceuticals, invasive procedures, etc. to relieve illness and injury in attempts to bring the body back to its normal state." [ISBN-10:0124105165]
 comment: An action or administration of therapeutic agents to produce an effect that is intended to alter or stop a pathologic process. {xref="NCIT:C49236"}
-synonym: "clinical procedure" NARROW []
-synonym: "medical procedure" BROAD []
-synonym: "treatment" NARROW []
 xref: NCIT:C25218
 xref: NCIT:C49236
 xref: OAE:0000094
 xref: OGMS:0000112
-xref: SIO:001024
 is_a: MAXO:0000001 ! medical action
 property_value: http://purl.org/dc/elements/1.1/date "2018-11-16T20:08:29Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -130,7 +127,7 @@ synonym: "cognitive behavioural therapy" EXACT []
 xref: NCIT:C116519
 xref: NCIT:C15184
 xref: NCIT:C64345
-is_a: MAXO:0000002 ! therapeutic procedure
+is_a: MAXO:0001298 ! therapy
 property_value: http://purl.org/dc/elements/1.1/date "2018-11-16T20:12:16Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -147,7 +144,7 @@ synonym: "physiotherapy procedure" EXACT []
 synonym: "PT" EXACT ABBREVIATION []
 xref: NCIT:C15302
 xref: OGMS:0000115
-is_a: MAXO:0000002 ! therapeutic procedure
+is_a: MAXO:0001298 ! therapy
 property_value: http://purl.org/dc/elements/1.1/date "2018-11-16T20:12:31Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -393,6 +390,13 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T21:25:21Z" xsd:
 created_by: https://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0000034
+name: therapeutic procedure by site
+def: "All manners of treatment to relieve illness and injury of a particular body site or system." []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-20T19:58:58Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0000038
 name: obsolete therapeutic mental or psychological behavior avoidance
 is_obsolete: true
@@ -621,7 +625,7 @@ synonym: "oxygen supplementation" EXACT []
 synonym: "oxygen support therapy" EXACT []
 xref: MeSH:D010102
 xref: NCIT:C94624
-is_a: MAXO:0000499 ! respiratory therapy
+is_a: MAXO:0000499 ! therapeutic procedure of respiratory system
 property_value: http://purl.org/dc/elements/1.1/date "2019-01-15T19:14:17Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -710,9 +714,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000075
 name: digestive system testing
 def: "The quantitative measurement of digestive system tests to diagnose or treat a digestive disorder using clinical laboratory procedures, imaging tests, endoscopic or other procedures." []
-is_a: MAXO:0000003 ! diagnostic procedure
-is_a: MAXO:0000566 ! clinical chemistry assessment
-property_value: http://purl.org/dc/elements/1.1/date "2019-01-15T19:35:36Z" xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2019-01-15T19:35:36Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -1214,10 +1216,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000131
-name: location specific endoscopy
+name: endoscopy by site
 def: "A diagnostic or therapeutic procedure in which an endoscope is inserted in a tubular portion of a specific body part or body location." []
-synonym: "endoscopy by site" EXACT []
-is_a: MAXO:0000130 ! endoscopic procedure
+synonym: "endoscopy by body location" EXACT []
+synonym: "location specific endoscopy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2019-01-20T01:03:18Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -1336,8 +1338,9 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000144
-name: histological procedure
+name: histological examination
 def: "Technique or procedure used for the study of the microanatomy of tissues and their cellular structure; usually involves microscopic examination of tissue slices." [NCIT:C16680]
+synonym: "histological procedure" EXACT []
 synonym: "histological testing" EXACT []
 xref: NCIT:C16680
 is_a: MAXO:0000006 ! clinical laboratory procedure
@@ -5407,13 +5410,13 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000493
-name: cardiovascular diagnostic procedure
+name: diagnostic procedure of cardiovascular system
 def: "Procedure to evaluate the structure and/or function of the cardiovascular system." []
-synonym: "cardiovascular measurement" EXACT []
+synonym: "cardiovascular diagnostic procedure" EXACT []
+synonym: "cardiovascular system diagnostic procedure" EXACT []
 xref: CMO:0000001
 xref: NCIT:C100084
-is_a: MAXO:0000003 ! diagnostic procedure
-property_value: http://purl.org/dc/elements/1.1/date "2020-01-21T21:09:50Z" xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2020-01-21T21:09:50Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -5425,7 +5428,7 @@ synonym: "blood pressure monitoring" EXACT []
 xref: CMO:0000003
 xref: NCBIBook:NBK279251
 is_a: MAXO:0000487 ! clinical assessment
-is_a: MAXO:0000493 ! cardiovascular diagnostic procedure
+is_a: MAXO:0000493 ! diagnostic procedure of cardiovascular system
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-21T21:13:22Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -5479,11 +5482,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000499
-name: respiratory therapy
-def: "Any form of treatment that acts to improve or assist with respiratory function." [NCIT:C15322]
+name: therapeutic procedure of respiratory system
+def: "All manners of treatment to bring respiratory system back to its normal state." []
+synonym: "respiratory system therapeutic procedure" EXACT []
+synonym: "respiratory therapy" EXACT []
 xref: NCIT:C15322
-is_a: MAXO:0000002 ! therapeutic procedure
-property_value: http://purl.org/dc/elements/1.1/date "2020-01-23T15:55:17Z" xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2020-01-23T15:55:17Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -5491,7 +5495,7 @@ id: MAXO:0000500
 name: airway management
 def: "A set of maneuvers or medical procedures performed to prevent and relieve airway obstruction. This ensures an open pathway for gas exchange between a patient's lungs and the atmosphere." [PMID:18675024]
 xref: MeSH:D058109
-is_a: MAXO:0000499 ! respiratory therapy
+is_a: MAXO:0000499 ! therapeutic procedure of respiratory system
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-23T15:56:57Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -5665,7 +5669,7 @@ synonym: "ECLS treatment" EXACT ABBREVIATION []
 synonym: "ECMO treatment" EXACT ABBREVIATION []
 synonym: "extracorporeal life support" EXACT []
 xref: MeSH:D015199
-is_a: MAXO:0000499 ! respiratory therapy
+is_a: MAXO:0000499 ! therapeutic procedure of respiratory system
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-23T20:23:16Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -5677,7 +5681,7 @@ synonym: "chest physical therapy" EXACT []
 synonym: "Chest PT" EXACT []
 synonym: "CPT" EXACT []
 is_a: MAXO:0000011 ! physical therapy
-is_a: MAXO:0000499 ! respiratory therapy
+is_a: MAXO:0000499 ! therapeutic procedure of respiratory system
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-23T20:32:18Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -7369,6 +7373,8 @@ synonym: "allergy and immunologist evaluation" EXACT []
 synonym: "allergy and immunology specialist consultation" EXACT []
 synonym: "consultation with allergist" NARROW []
 synonym: "consultation with allergy and immunologist" EXACT []
+synonym: "evaluation by an immunologist" NARROW []
+synonym: "immunologist evaluation" NARROW []
 synonym: "referral to allergist and immunologist" EXACT []
 is_a: MAXO:0000665 ! medical specialist evaluation
 property_value: http://purl.org/dc/elements/1.1/date "2020-07-01T18:29:08Z" xsd:dateTime
@@ -7884,6 +7890,7 @@ synonym: "otolaryngologist referral" EXACT []
 synonym: "otolaryngology specialist consultation" EXACT []
 synonym: "otolaryngology specialist evaluation" EXACT []
 synonym: "otolaryngology specialist referral" EXACT []
+synonym: "otorhinolaryngologist evaluation" EXACT []
 synonym: "referral to head and neck surgeon" EXACT []
 synonym: "referral to otolaryngologist" EXACT []
 is_a: MAXO:0000665 ! medical specialist evaluation
@@ -9147,6 +9154,7 @@ id: MAXO:0000828
 name: total iron binding capacity measurement
 def: "The determination of the saturation of iron binding sites on serum transferrin proteins." [NCIT:C74718]
 synonym: "IBCT" EXACT ABBREVIATION []
+synonym: "iron-binding capacity assessment" BROAD []
 synonym: "TIBC" EXACT ABBREVIATION []
 synonym: "total iron binding content measurement" EXACT []
 xref: NCIT:C74718
@@ -9852,7 +9860,7 @@ synonym: "ECG" EXACT ABBREVIATION []
 synonym: "EKG" EXACT ABBREVIATION []
 synonym: "electrocardiogram procedure" EXACT []
 xref: NCIT:C38053
-is_a: MAXO:0000493 ! cardiovascular diagnostic procedure
+is_a: MAXO:0000493 ! diagnostic procedure of cardiovascular system
 property_value: http://purl.org/dc/elements/1.1/date "2021-08-09T19:19:35Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -10107,7 +10115,7 @@ name: speech therapy
 def: "The treatment of communication disorders (speech disorders and language disorders), cognitive-communication disorders, voice disorders, and swallowing disorders." [NCIT:C159273]
 synonym: "speech language therapy" EXACT []
 xref: NCIT:C159273
-is_a: MAXO:0000002 ! therapeutic procedure
+is_a: MAXO:0001298 ! therapy
 property_value: http://purl.org/dc/elements/1.1/date "2021-08-12T13:17:16Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -10411,7 +10419,6 @@ created_by: https://orcid.org/0000-0001-7941-2961
 id: MAXO:0000967
 name: ophthalmic diagnostic procedure
 def: "A diagnostic procedure to evaluate the structure and/or function of the eye and visual system." []
-is_a: MAXO:0000003 ! diagnostic procedure
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T19:03:34Z" xsd:dateTime
 created_by: https://orcid.org/0000-0001-7941-2961
 
@@ -10519,6 +10526,111 @@ synonym: "LAARP" EXACT []
 is_a: MAXO:0000977 ! pull-through procedure
 is_a: MAXO:0001352 ! surgical repair of anorectum
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-27T21:48:16Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000988
+name: diagnostic procedure by site
+def: "Procedure to evaluate the structure and/or function of a particular by part or system." []
+synonym: "diagnostic procedure by body location" EXACT []
+is_a: MAXO:0000003 ! diagnostic procedure
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-29T20:10:49Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000989
+name: CT by site
+def: "The use of computed tomography to produce images of structures of a particular body site." []
+synonym: "computed tomography procedure by body location" EXACT []
+is_a: MAXO:0000571 ! computed tomography procedure
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T17:40:25Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000990
+name: clinical biopsy by site
+def: "A specimen collection from a particular body site used for diagnostic purposes." []
+synonym: "biopsy by body location" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T17:56:49Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000991
+name: removal of nail
+def: "A procedure to take off or remove part or entire nail." []
+synonym: "nail removal" EXACT []
+is_a: MAXO:0001416 ! therapeutic procedure of integumental system
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-31T14:53:59Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000992
+name: debridement of nail
+def: "Reduction in the thickness and length of the nail. Often used to remove thickened nails due to fungal infection." []
+comment: Debridement can be done by filing or drilling or other methods.
+synonym: "nail debridement" EXACT []
+is_a: MAXO:0000991 ! removal of nail
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-31T14:54:13Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000993
+name: removal of skin
+def: "Removal or elimination of a portion of skin for therapeutic use." []
+is_a: MAXO:0001417 ! therapeutic procedure of skin of body
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-31T15:11:49Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000994
+name: debridement of skin
+def: "Removal of dead (necrotic) or infected skin to help a wound heal." []
+is_a: MAXO:0000993 ! removal of skin
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-31T18:20:39Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000995
+name: desloughing of skin
+def: "Removing slough from a wound." []
+synonym: "removal of slough from skin" EXACT []
+is_a: MAXO:0000993 ! removal of skin
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-31T18:20:54Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000996
+name: application of emollient to skin
+def: "Addition of a softening or soothing agent to the skin." []
+synonym: "emollient application to skin" EXACT []
+synonym: "use of emollient" BROAD []
+synonym: "use of skin emollients" EXACT []
+is_a: MAXO:0001417 ! therapeutic procedure of skin of body
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-31T19:02:52Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000997
+name: body shape assessment
+def: "Determination of shape of body or body parts. This may be used to assess symmetry, number, size, and shape of a patient's body or body parts." []
+is_a: MAXO:0001011 ! body measurement
+property_value: http://purl.org/dc/elements/1.1/date "2023-04-13T16:06:37Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000998
+name: facial morphology assessment
+def: "Determination of shape, symmetry, and/or size of face." []
+is_a: MAXO:0000999 ! head morphology assessment
+property_value: http://purl.org/dc/elements/1.1/date "2023-04-13T16:10:13Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0000999
+name: head morphology assessment
+def: "Determination of shape, symmetry, and/or size of head." []
+is_a: MAXO:0000997 ! body shape assessment
+property_value: http://purl.org/dc/elements/1.1/date "2023-04-13T16:11:14Z" xsd:dateTime
 created_by: https://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -10651,6 +10763,30 @@ property_value: http://purl.org/dc/elements/1.1/date "2019-05-16T18:20:55Z" xsd:
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0001011
+name: body measurement
+def: "Measuring the body or its parts." []
+is_a: MAXO:0000487 ! clinical assessment
+property_value: http://purl.org/dc/elements/1.1/date "2023-04-13T16:22:35Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001012
+name: waist measurement
+def: "Measuring the distance around (circumference) a patient's waist." []
+is_a: MAXO:0001011 ! body measurement
+property_value: http://purl.org/dc/elements/1.1/date "2023-04-13T16:49:17Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001013
+name: hip measurement
+def: "A measurement of circumference around the hip." []
+is_a: MAXO:0001011 ! body measurement
+property_value: http://purl.org/dc/elements/1.1/date "2023-04-13T16:49:27Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0001014
 name: medical action avoidance
 def: "A recommendation of abstaining or avoiding any medical action that might normally be clinically prescribed." []
@@ -10780,6 +10916,15 @@ is_obsolete: true
 replaced_by: MAXO:0000023
 
 [Term]
+id: MAXO:0001024
+name: waist to hip ratio calculation
+def: "A ratio determined by waist measurement divided by hip measurement." []
+synonym: "waist to hip ratio measurement" EXACT []
+is_a: MAXO:0001011 ! body measurement
+property_value: http://purl.org/dc/elements/1.1/date "2023-04-13T16:50:13Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0001025
 name: adrenergic drug therapy
 def: "Therapy using any agent that acts on an adrenergic receptor or affects adrenergic signal transduction." []
@@ -10805,6 +10950,14 @@ xref: CHEBI:35522
 is_a: MAXO:0000186 ! beta adrenergic agent therapy
 property_value: http://purl.org/dc/elements/1.1/date "2019-07-25T14:42:00Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001028
+name: facial morphology assessment by type
+def: "Determination of shape, symmetry, and/or size of face using a particular method." []
+is_a: MAXO:0000998 ! facial morphology assessment
+property_value: http://purl.org/dc/elements/1.1/date "2023-04-13T16:53:56Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001029
@@ -11357,6 +11510,18 @@ property_value: http://purl.org/dc/elements/1.1/date "2020-06-23T20:39:14Z" xsd:
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0001090
+name: 3D facial analysis
+def: "Computer aided analysis of 3D facial images to detect abnormal facial phenotypes that assist in diagnosis, treatment monitoring and surgical planning." [PMID:34108542]
+synonym: "'3D facial assessment'" EXACT []
+synonym: "three dimensional facial analysis" EXACT []
+synonym: "three dimensional facial assessment" EXACT []
+is_a: MAXO:0000005 ! clinical imaging procedure
+is_a: MAXO:0001028 ! facial morphology assessment by type
+property_value: http://purl.org/dc/elements/1.1/date "2023-04-13T16:54:13Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0001091
 name: Meckel's diverticulectomy
 def: "Surgical removal of an abnormal pouch of the lining of the small intestine (bowel)." []
@@ -11656,7 +11821,7 @@ synonym: "kidney computerized axial tomography" EXACT []
 synonym: "kidney CT examination" EXACT []
 synonym: "renal CAT scan" EXACT []
 synonym: "renal CT" EXACT []
-property_value: http://purl.org/dc/elements/1.1/date "2020-06-9T20:39:14Z" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2020-06-09T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-3010
 
 [Term]
@@ -12393,7 +12558,7 @@ name: mediastinoscopy
 def: "Inspection of mediastinum using an endoscope." []
 synonym: "endoscopy of mediastinum" EXACT []
 synonym: "mediastinum endoscope" EXACT []
-is_a: MAXO:0000131 ! location specific endoscopy
+is_a: MAXO:0000131 ! endoscopy by site
 property_value: http://purl.org/dc/elements/1.1/date "2022-03-16T20:39:14Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -12412,7 +12577,7 @@ name: thoracoscopy
 def: "Inspection of pleural cavity using an endoscope." []
 synonym: "endoscopy of pleural cavity" EXACT []
 synonym: "pleural cavity endoscope" EXACT []
-is_a: MAXO:0000131 ! location specific endoscopy
+is_a: MAXO:0000131 ! endoscopy by site
 property_value: http://purl.org/dc/elements/1.1/date "2022-03-16T13:39:34Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -12590,7 +12755,6 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0001212
 name: clinical imaging procedure by system
 def: "Visualization of a particular body system, organ, or cell type using a variety of imaging techniques for use in screening, diagnosis, surgical procedures or therapy." []
-is_a: MAXO:0000005 ! clinical imaging procedure
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-21T18:01:42Z" xsd:dateTime
 created_by: https://orcid.org/0000-0001-7941-2961
 
@@ -13086,7 +13250,6 @@ id: MAXO:0001259
 name: angiography
 def: "A medical imaging technique used to visualize the inside, or lumen, of blood vessels and organs of the body, with particular interest in the arteries, veins, and the heart chambers." [https://en.wikipedia.org/wiki/Angiography]
 synonym: "arteriography" EXACT []
-is_a: MAXO:0001212 ! clinical imaging procedure by system
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-21T18:03:45Z" xsd:dateTime
 created_by: https://orcid.org/0000-0001-7941-2961
 
@@ -13444,6 +13607,14 @@ property_value: http://purl.org/dc/elements/1.1/date "2022-07-25T20:39:14Z" xsd:
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0001298
+name: therapy
+def: "A treatment that helps someone feel better, grow stronger, etc., especially after an illness." []
+is_a: MAXO:0000002 ! therapeutic procedure
+property_value: http://purl.org/dc/elements/1.1/date "2023-04-13T17:54:15Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0001299
 name: surgical repair of pericardium
 def: "A surgery that fixes or mends pericardium." []
@@ -13653,7 +13824,7 @@ created_by: https://orcid.org/0000-0001-7941-2961
 id: MAXO:0001320
 name: GABA antagonist therapy
 def: "Use of a drug or agent that inhibits GABA signaling." []
-synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_65259" EXACT []
+synonym: "treatment with GABA antagonist" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -13675,7 +13846,7 @@ created_by: https://orcid.org/0000-0001-7941-2961
 id: MAXO:0001322
 name: GABA modulator therapy
 def: "Use of a drug or agent that does not act as agonist or antagonist but does affect GABA-ionophore complex signaling." []
-synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_50268" EXACT []
+synonym: "treatment with GABA modulator" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -13691,7 +13862,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0001324
 name: cholinergic agonist therapy
 def: "Treatment with drug or agent that activates cholinergic signaling." []
-synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_38324" EXACT []
+synonym: "treatment with cholinergic agonist" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -13699,7 +13870,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0001325
 name: muscarinic agonist therapy
 def: "Treatment with drug or agent to activate muscarinic signaling." []
-synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_38325" EXACT []
+synonym: "treatment with muscarinic agonist" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -13707,7 +13878,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0001326
 name: nicotinic acetylcholine receptor agonist therapy
 def: "Use of a drug or agent that activates nicotinic acetylcholine receptor signaling." []
-synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_47958" EXACT []
+synonym: "treatment with nicotinic acetylcholine receptor agonist" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -13715,6 +13886,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0001327
 name: cholinergic antagonist therapy
 def: "Treatment with a drug or agent that inhibits cholinergic signaling." []
+synonym: "anticholinergic agent therapy" EXACT []
 synonym: "treatment with cholinergic antagonist" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -13723,7 +13895,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0001328
 name: muscarinic antagonist therapy
 def: "Treatment with a drug or agent to inhibit muscarinic signaling." []
-synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_48876" EXACT []
+synonym: "treatment with muscarinic antagonist" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -13731,7 +13903,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0001329
 name: nicotinic antagonist therapy
 def: "Use of a drug or agent that inhibits nicotinic signaling." []
-synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_48878" EXACT []
+synonym: "treatment with nicotinic antagonist" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -13739,7 +13911,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0001330
 name: parasympatholytic therapy
 def: "Use of a drug or agent that modulates parasympatholytic signaling." []
-synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_50370" EXACT []
+synonym: "treatment with parasympatholytic" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -13747,7 +13919,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0001331
 name: dopaminergic modifying agent therapy
 def: "Use of a drug or agent that modulates dopamine signaling." []
-synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_48560" EXACT []
+synonym: "treatment with dopaminergic agent" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -13771,7 +13943,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0001334
 name: dopamine uptake inhibitor therapy
 def: "Use of a drug or agent that inhibits dopamine neurotransmitter reuptake." []
-synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_51039" EXACT []
+synonym: "treatment with dopamine uptake inhibitor" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -13779,7 +13951,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0001335
 name: dopaminergic antagonist agent therapy
 def: "Use of a drug or agent that inhibits dopamine signaling." []
-synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_48561" EXACT []
+synonym: "treatment with dopaminergic antagonist" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -13795,7 +13967,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0001337
 name: GABA agonist agent therapy
 def: "Use of a drug or agent that activates GABA signaling." []
-synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_51373" EXACT []
+synonym: "treatment with GABA agonist" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -13906,6 +14078,14 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-02-27T20:39:14Z" xsd:
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0001351
+name: occupational therapy
+def: "An assessment and intervention to develop, recover, or maintain life activies or occupations." []
+is_a: MAXO:0001298 ! therapy
+property_value: http://purl.org/dc/elements/1.1/date "2023-04-13T17:56:56Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0001352
 name: surgical repair of anorectum
 def: "A surgery that fixes or mends anorectum." []
@@ -13960,6 +14140,16 @@ def: "A determination of the structure of reticulocyte." []
 synonym: "reticulocyte morphology assessment" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001359
+name: applied behavior analysis therapy
+def: "A psychological intervention that applies empirical approaches based upon the principles of respondent and operant conditioning to change behavior of social significance." []
+synonym: "ABA therapy" EXACT []
+synonym: "behavioral engineering" EXACT []
+is_a: MAXO:0000010 ! cognitive and behavioral intervention
+property_value: http://purl.org/dc/elements/1.1/date "2023-04-13T18:07:09Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001360
@@ -14070,10 +14260,10 @@ created_by: http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0001372
 name: burr cell count
-def: "A determination of the number of echynocyte in a blood sample." []
-synonym: "echynocyte cell count" EXACT []
-synonym: "echynocyte cell count measurement" EXACT []
-synonym: "echynocyte count test" EXACT []
+def: "A determination of the number of echinocyte in a blood sample." []
+synonym: "echinocyte cell count" EXACT []
+synonym: "echinocyte cell count measurement" EXACT []
+synonym: "echinocyte count test" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -14118,17 +14308,17 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001377
-name: echynocyte morphology measurement
-def: "A determination of the structure of echynocyte." []
-synonym: "echynocyte morphology assessment" EXACT []
+name: echinocyte morphology measurement
+def: "A determination of the structure of echinocyte." []
+synonym: "echinocyte morphology assessment" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001378
-name: langerhans cell morphology measurement
-def: "A determination of the structure of langerhans cell." []
-synonym: "langerhans cell morphology assessment" EXACT []
+name: Langerhans cell morphology measurement
+def: "A determination of the structure of Langerhans cell." []
+synonym: "Langerhans cell morphology assessment" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -14202,6 +14392,606 @@ name: bone marrow cell morphology measurement
 def: "A determination of the structure of bone marrow cell." []
 synonym: "bone marrow cell morphology assessment" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001388
+name: feeding therapy
+def: "Assessing and providing skills to eat better. Therapy is focused on tongue movements, chewing, swallowing, as well as other behaviors." []
+is_a: MAXO:0001351 ! occupational therapy
+property_value: http://purl.org/dc/elements/1.1/date "2023-04-13T18:37:03Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001396
+name: diagnostic procedure of digestive system
+def: "Procedure to evaluate the structure and/or function of the digestive system." []
+synonym: "digestive system diagnostic procedure" EXACT []
+synonym: "digestive system testing" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2019-01-15T19:35:36Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001397
+name: therapeutic procedure of visual system
+def: "All manners of treatment to bring visual system back to its normal state." []
+synonym: "visual system therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001398
+name: diagnostic procedure of circulatory system
+def: "Procedure to evaluate the structure and/or function of the circulatory system." []
+synonym: "circulatory system diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001399
+name: diagnostic procedure of excretory system
+def: "Procedure to evaluate the structure and/or function of the excretory system." []
+synonym: "excretory system diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001400
+name: diagnostic procedure of exocrine system
+def: "Procedure to evaluate the structure and/or function of the exocrine system." []
+synonym: "exocrine system diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001401
+name: diagnostic procedure of genitourinary system
+def: "Procedure to evaluate the structure and/or function of the genitourinary system." []
+synonym: "genitourinary system diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001402
+name: diagnostic procedure of hematopoietic system
+def: "Procedure to evaluate the structure and/or function of the hematopoietic system." []
+synonym: "hematopoietic system diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001403
+name: diagnostic procedure of integumental system
+def: "Procedure to evaluate the structure and/or function of the integumental system." []
+synonym: "integumental system diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001404
+name: diagnostic procedure of skin
+def: "Procedure to evaluate the structure and/or function of the skin of body." []
+synonym: "skin diagnostic procedure" EXACT []
+synonym: "skin of body diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001405
+name: diagnostic procedure of musculoskeletal system
+def: "Procedure to evaluate the structure and/or function of the musculoskeletal system." []
+synonym: "musculoskeletal system diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001406
+name: diagnostic procedure of nervous system
+def: "Procedure to evaluate the structure and/or function of the nervous system." []
+synonym: "nervous system diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001407
+name: diagnostic procedure of reproductive system
+def: "Procedure to evaluate the structure and/or function of the reproductive system." []
+synonym: "reproductive system diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001408
+name: diagnostic procedure of respiratory system
+def: "Procedure to evaluate the structure and/or function of the respiratory system." []
+synonym: "respiratory system diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001409
+name: therapeutic procedure of digestive system
+def: "All manners of treatment to bring digestive system back to its normal state." []
+synonym: "digestive system therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001410
+name: therapeutic procedure of cardiovascular system
+def: "All manners of treatment to bring cardiovascular system back to its normal state." []
+synonym: "cardiovascular system therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001411
+name: therapeutic procedure of circulatory system
+def: "All manners of treatment to bring circulatory system back to its normal state." []
+synonym: "circulatory system therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001412
+name: therapeutic procedure of excretory system
+def: "All manners of treatment to bring excretory system back to its normal state." []
+synonym: "excretory system therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001413
+name: therapeutic procedure of exocrine system
+def: "All manners of treatment to bring exocrine system back to its normal state." []
+synonym: "exocrine system therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001414
+name: therapeutic procedure of genitourinary system
+def: "All manners of treatment to bring genitourinary system back to its normal state." []
+synonym: "genitourinary system therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001415
+name: therapeutic procedure of hematopoietic system
+def: "All manners of treatment to bring hematopoietic system back to its normal state." []
+synonym: "hematopoietic system therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001416
+name: therapeutic procedure of integumental system
+def: "All manners of treatment to bring integumental system back to its normal state." []
+synonym: "integumental system therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001417
+name: therapeutic procedure of skin of body
+def: "All manners of treatment to bring skin of body back to its normal state." []
+synonym: "skin of body therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001418
+name: therapeutic procedure of musculoskeletal system
+def: "All manners of treatment to bring musculoskeletal system back to its normal state." []
+synonym: "musculoskeletal system therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001419
+name: therapeutic procedure of nervous system
+def: "All manners of treatment to bring nervous system back to its normal state." []
+synonym: "nervous system therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001420
+name: therapeutic procedure of reproductive system
+def: "All manners of treatment to bring reproductive system back to its normal state." []
+synonym: "reproductive system therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001421
+name: keratolytic agent therapy
+def: "Treatment with a drug that softens, separates, and causes desquamation of the cornified epithelium or horny layer of skin." []
+comment: Keratolytic drugs are used to expose mycelia of infecting fungi or to treat corns, warts, and certain other skin diseases.
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_50176" EXACT []
+is_a: MAXO:0001417 ! therapeutic procedure of skin of body
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-31T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001422
+name: therapeutic procedure of vestibulo-auditory system
+def: "All manners of treatment to bring vestibulo-auditory system back to its normal state." []
+synonym: "vestibulo-auditory system therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001423
+name: therapeutic procedure of immune system
+def: "All manners of treatment to bring immune system back to its normal state." []
+synonym: "immune system therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001424
+name: therapeutic procedure of organism substance
+def: "All manners of treatment to bring organism substance back to its normal state." []
+synonym: "organism substance therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001425
+name: therapeutic procedure of amniotic fluid
+def: "All manners of treatment to bring amniotic fluid back to its normal state." []
+synonym: "amniotic fluid therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001426
+name: therapeutic procedure of blood clot
+def: "All manners of treatment to bring blood clot back to its normal state." []
+synonym: "blood clot therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001427
+name: therapeutic procedure of excreta
+def: "All manners of treatment to bring excreta back to its normal state." []
+synonym: "excreta therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001428
+name: therapeutic procedure of feces
+def: "All manners of treatment to bring feces back to its normal state." []
+synonym: "feces therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001429
+name: therapeutic procedure of urine
+def: "All manners of treatment to bring urine back to its normal state." []
+synonym: "urine therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001430
+name: therapeutic procedure of interstitial fluid
+def: "All manners of treatment to bring interstitial fluid back to its normal state." []
+synonym: "interstitial fluid therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001431
+name: therapeutic procedure of ocular refractive media
+def: "All manners of treatment to bring ocular refractive media back to its normal state." []
+synonym: "ocular refractive media therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001432
+name: therapeutic procedure of aqueous humor of eyeball
+def: "All manners of treatment to bring aqueous humor of eyeball back to its normal state." []
+synonym: "aqueous humor of eyeball therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001433
+name: therapeutic procedure of vitreous humor
+def: "All manners of treatment to bring vitreous humor back to its normal state." []
+synonym: "vitreous humor therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001434
+name: therapeutic procedure of pus
+def: "All manners of treatment to bring pus back to its normal state." []
+synonym: "pus therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001435
+name: therapeutic procedure of reproductive gland secretion
+def: "All manners of treatment to bring reproductive gland secretion back to its normal state." []
+synonym: "reproductive gland secretion therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001436
+name: therapeutic procedure of female reproductive gland secretion
+def: "All manners of treatment to bring female reproductive gland secretion back to its normal state." []
+synonym: "female reproductive gland secretion therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001437
+name: therapeutic procedure of male reproductive gland secretion
+def: "All manners of treatment to bring male reproductive gland secretion back to its normal state." []
+synonym: "male reproductive gland secretion therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001438
+name: therapeutic procedure of respiratory system fluid/secretion
+def: "All manners of treatment to bring respiratory system fluid/secretion back to its normal state." []
+synonym: "respiratory system fluid/secretion therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001439
+name: therapeutic procedure of sputum
+def: "All manners of treatment to bring sputum back to its normal state." []
+synonym: "sputum therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001440
+name: therapeutic procedure of secretion of exocrine gland
+def: "All manners of treatment to bring secretion of exocrine gland back to its normal state." []
+synonym: "secretion of exocrine gland therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001441
+name: therapeutic procedure of bile
+def: "All manners of treatment to bring bile back to its normal state." []
+synonym: "bile therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001442
+name: therapeutic procedure of gastric juice
+def: "All manners of treatment to bring gastric juice back to its normal state." []
+synonym: "gastric juice therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001443
+name: therapeutic procedure of organ
+def: "All manners of treatment to bring organ back to its normal state." []
+synonym: "organ therapeutic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001444
+name: diagnostic procedure of visual system
+def: "Procedure to evaluate the structure and/or function of the visual system." []
+synonym: "visual system diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001445
+name: diagnostic procedure of auditory system
+def: "Procedure to evaluate the structure and/or function of the vestibulo-auditory system." []
+synonym: "auditory diagnostic procedure" EXACT []
+synonym: "vestibulo-auditory system diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001446
+name: diagnostic procedure of immune system
+def: "Procedure to evaluate the structure and/or function of the immune system." []
+synonym: "immune system diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001447
+name: diagnostic procedure of body substance
+def: "Procedure to evaluate the structure and/or function of the organism substance." []
+synonym: "body substance diagnostic procedure" EXACT []
+synonym: "organism substance diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001448
+name: diagnostic procedure of amniotic fluid
+def: "Procedure to evaluate the structure and/or function of the amniotic fluid." []
+synonym: "amniotic fluid diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001449
+name: diagnostic procedure of blood clot
+def: "Procedure to evaluate the structure and/or function of the blood clot." []
+synonym: "blood clot diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001450
+name: diagnostic procedure of excreted substance
+def: "Procedure to evaluate the structure and/or function of the excreta." []
+synonym: "excreta diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001451
+name: diagnostic procedure of feces
+def: "Procedure to evaluate the structure and/or function of the feces." []
+synonym: "feces diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001452
+name: diagnostic procedure of urine
+def: "Procedure to evaluate the structure and/or function of the urine." []
+synonym: "urine diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001453
+name: diagnostic procedure of interstitial fluid
+def: "Procedure to evaluate the structure and/or function of the interstitial fluid." []
+synonym: "interstitial fluid diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001454
+name: diagnostic procedure of ocular refractive media
+def: "Procedure to evaluate the structure and/or function of the ocular refractive media." []
+synonym: "ocular refractive media diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001455
+name: diagnostic procedure of aqueous humor of eyeball
+def: "Procedure to evaluate the structure and/or function of the aqueous humor of eyeball." []
+synonym: "aqueous humor of eyeball diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001456
+name: diagnostic procedure of vitreous humor
+def: "Procedure to evaluate the structure and/or function of the vitreous humor." []
+synonym: "vitreous humor diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001457
+name: diagnostic procedure of pus
+def: "Procedure to evaluate the structure and/or function of the pus." []
+synonym: "pus diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001458
+name: diagnostic procedure of reproductive gland secretion
+def: "Procedure to evaluate the structure and/or function of the reproductive gland secretion." []
+synonym: "reproductive gland secretion diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001459
+name: diagnostic procedure of female reproductive gland secretion
+def: "Procedure to evaluate the structure and/or function of the female reproductive gland secretion." []
+synonym: "female reproductive gland secretion diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001460
+name: diagnostic procedure of male reproductive gland secretion
+def: "Procedure to evaluate the structure and/or function of the male reproductive gland secretion." []
+synonym: "male reproductive gland secretion diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001461
+name: diagnostic procedure of respiratory system fluid/secretion
+def: "Procedure to evaluate the structure and/or function of the respiratory system fluid/secretion." []
+synonym: "respiratory system fluid/secretion diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001462
+name: diagnostic procedure of sputum
+def: "Procedure to evaluate the structure and/or function of the sputum." []
+synonym: "sputum diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001463
+name: diagnostic procedure of exocrine gland secretion
+def: "Procedure to evaluate the structure and/or function of the secretion of exocrine gland." []
+synonym: "secretion of exocrine gland diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001464
+name: diagnostic procedure of bile
+def: "Procedure to evaluate the structure and/or function of the bile." []
+synonym: "bile diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001465
+name: diagnostic procedure of gastric juice
+def: "Procedure to evaluate the structure and/or function of the gastric juice." []
+synonym: "gastric juice diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001466
+name: diagnostic procedure of semen
+def: "Procedure to evaluate the structure and/or function of the semen." []
+synonym: "semen diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001467
+name: diagnostic procedure of organ
+def: "Procedure to evaluate the structure and/or function of the organ." []
+synonym: "organ diagnostic procedure" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-30T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001468
+name: surgical skin removal
+def: "The surgical removal (cutting out) of part or all of zone of skin." []
+synonym: "skin excision" EXACT []
+synonym: "zone of skin surgical removal" EXACT []
+is_a: MAXO:0000993 ! removal of skin
+property_value: http://purl.org/dc/elements/1.1/date "2023-03-31T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -14562,7 +15352,7 @@ id: MAXO:0009029
 name: hearing therapy
 def: "Treatment to improve hearing." []
 synonym: "auditory enhancement" EXACT []
-is_a: MAXO:0000002 ! therapeutic procedure
+is_a: MAXO:0001298 ! therapy
 property_value: http://purl.org/dc/elements/1.1/date "2022-04-01T18:42:23Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -16825,7 +17615,6 @@ synonym: "heart ultrasound imaging procedure" EXACT []
 synonym: "heart ultrasound procedure" EXACT []
 synonym: "sonography of heart" EXACT []
 synonym: "ultrasonography of heart" EXACT []
-is_a: MAXO:0000493 ! cardiovascular diagnostic procedure
 property_value: http://purl.org/dc/elements/1.1/date "2020-01-24T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -17545,13 +18334,15 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0025003
 name: vision treatment
 def: "Treatment to correct or improve vision." []
-is_a: MAXO:0000002 ! therapeutic procedure
+is_a: MAXO:0001397 ! therapeutic procedure of visual system
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0025004
 name: glasses usage
 def: "Use of glasses to correct vision." []
 is_a: MAXO:0025003 ! vision treatment
+created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0025005
@@ -17628,6 +18419,12 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-02-21T18:55:59Z" xsd:
 created_by: https://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0035005
+name: circulating hormone measurement
+def: "A quantitative measurement of a particular hormone present in a blood sample." []
+is_a: MAXO:0035058 ! hormone measurement
+
+[Term]
 id: MAXO:0035006
 name: foot radiography
 def: "Use of an imaging test that uses small amounts of radiation to produce pictures of pes." []
@@ -17651,6 +18448,12 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-02-10T20:39:14Z" xsd:
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0035011
+name: enzyme activity assessment
+def: "Measurement of the functionality of an enzyme." []
+is_a: MAXO:0000605 ! protein measurement
+
+[Term]
 id: MAXO:0035014
 name: MRI of the spinal cord
 def: "A medical examination performed using of magnetic resonance imaging to image the spinal cord." []
@@ -17659,6 +18462,84 @@ synonym: "spinal cord magnetic resonance imaging" EXACT []
 synonym: "spinal cord MRI" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-10T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035017
+name: hair microscopy
+def: "Microscopic examination of the hair (also called hair microscopy) is an inexpensive tool that may aid in the diagnosis of systemic disorders as the appearance, structure, and/or growth of hair are modified in various congenital and acquired diseases. (PMID:34843009)" []
+is_a: MAXO:0000005 ! clinical imaging procedure
+
+[Term]
+id: MAXO:0035018
+name: leukocyte enzyme activity assessment
+def: "Measurement of the functionality of an enzyme derived from leukocytes." []
+is_a: MAXO:0035011 ! enzyme activity assessment
+
+[Term]
+id: MAXO:0035019
+name: erythrocyte enzyme activity assessment
+def: "Measurement of the functionality of an enzyme derived from erythrocytes." []
+is_a: MAXO:0035011 ! enzyme activity assessment
+
+[Term]
+id: MAXO:0035020
+name: tissue enzyme activity assessment
+def: "Measurement of the functionality of an enzyme derived from a particular tissue" []
+is_a: MAXO:0035011 ! enzyme activity assessment
+
+[Term]
+id: MAXO:0035023
+name: tissue metabolite measurement
+def: "A quantitative measurement of metabolites present in a particular tissue." []
+is_a: MAXO:0000566 ! clinical chemistry assessment
+
+[Term]
+id: MAXO:0035025
+name: in vitro DNA repair study
+def: "A test that measures DNA damage/breakage in patient cells.  DNA damage repair plays an important role in cancer's initiation and progression, and in therapeutic resistance." []
+is_a: MAXO:0000006 ! clinical laboratory procedure
+
+[Term]
+id: MAXO:0035026
+name: circulating immunoglobulin measurement
+def: "A quantitative measurement of immunoglobulins present in a blood sample." []
+is_a: MAXO:0000865 ! protein measurement in blood
+
+[Term]
+id: MAXO:0035027
+name: blood gas assessment in umbilical cord blood
+def: "A test that measures the amount of oxygen, carbon dioxide, and pH in the blood of the umbilical cord." []
+is_a: MAXO:0000579 ! blood gas assessment
+
+[Term]
+id: MAXO:0035028
+name: L-selectin shedding study
+def: "This test is used to measure the amount of L-Selectin (CD62L) shed from the surface of neutrophils before and after stimulation of the TLR pathway. The test can help identify patients with defects in their toll-like receptor signalling pathway and can be used to diagnose IRAK-4, MyD88 and UNC93B deficiency. (NHS)" []
+is_a: MAXO:0000605 ! protein measurement
+
+[Term]
+id: MAXO:0035029
+name: cerebrospinal fluid metabolite measurement
+def: "A quantitative measurement of metabolites present in a cerebrospinal fluid sample." []
+is_a: MAXO:0000566 ! clinical chemistry assessment
+
+[Term]
+id: MAXO:0035031
+name: stool xenobiotic measurement
+def: "A quantitative measurement of xenobiotics (a chemical foreign to the body) present in a stool sample." []
+is_a: MAXO:0000566 ! clinical chemistry assessment
+
+[Term]
+id: MAXO:0035032
+name: gastric fluid xenobiotic measurement
+def: "A quantitative measurement of xenobiotics (a chemical foreign to the body) present in gastric fluid." []
+is_a: MAXO:0000566 ! clinical chemistry assessment
+
+[Term]
+id: MAXO:0035033
+name: hair xenobiotic measurement
+def: "A quantitative measurement of xenobiotics (a chemical foreign to the body) present in a hair sample." []
+is_a: MAXO:0000566 ! clinical chemistry assessment
 
 [Term]
 id: MAXO:0035034
@@ -17684,6 +18565,12 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-02-10T20:39:14Z" xsd:
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0035036
+name: blood culture procedure
+def: "A laboratory test in which blood, taken from the patient, is inoculated into bottles containing culture media to determine whether infection-causing microorganisms (bacteria or fungi) are present in the patient's bloodstream." []
+is_a: MAXO:0000147 ! hematology testing
+
+[Term]
 id: MAXO:0035038
 name: contrast angiography procedure
 def: "An x-ray of blood vessels after a contrast dye is added intraveniously." []
@@ -17704,6 +18591,12 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T16:22:32Z" xsd:
 created_by: https://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0035040
+name: abdominal paracentesis
+def: "A procedure where fluid is removed from the abdomen using a needle." []
+is_a: MAXO:0035106 ! paracentesis
+
+[Term]
 id: MAXO:0035043
 name: upper limb radiography
 def: "Use of an imaging test that uses small amounts of radiation to produce pictures of forelimb." []
@@ -17714,6 +18607,12 @@ synonym: "radiograph of upper limb" EXACT []
 synonym: "radiography of forelimb" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-10T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035047
+name: stool metabolite measurement
+def: "A quantitative measurement of metabolites present in a stool sample." []
+is_a: MAXO:0000566 ! clinical chemistry assessment
 
 [Term]
 id: MAXO:0035048
@@ -17773,6 +18672,109 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-03-02T20:39:14Z" xsd:
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0035054
+name: protein glycosylation assay
+def: "Assessment of the degree or kind of protein glycosylation (covalent attachment of a carbohydrate moiety to a protein)." []
+is_a: MAXO:0000605 ! protein measurement
+
+[Term]
+id: MAXO:0035055
+name: flow cytometry procedure
+def: "A technique for counting, examining and sorting microscopic particles suspended in a stream of fluid. NCIT:C16585" []
+is_a: MAXO:0000006 ! clinical laboratory procedure
+
+[Term]
+id: MAXO:0035057
+name: reproductive endocrinologist assessment
+def: "Reproductive endocrinology and infertility is a surgical subspecialty of obstetrics and gynecology that trains physicians in reproductive medicine addressing hormonal functioning as it pertains to reproduction as well as the issue of infertility." []
+is_a: MAXO:0000702 ! obstetrics and gynecology specialist evaluation
+
+[Term]
+id: MAXO:0035058
+name: hormone measurement
+def: "A quantitative measurement of a particular hormone present in a sample." []
+is_a: MAXO:0000566 ! clinical chemistry assessment
+
+[Term]
+id: MAXO:0035059
+name: nerve conduction study
+def: "A test to determine the electrical conduction of the motor and sensory nerves of the human body." []
+is_a: MAXO:0001406 ! diagnostic procedure of nervous system
+
+[Term]
+id: MAXO:0035061
+name: pelvic CT
+def: "The use of computed tomography to produce images of structures of the bony pelvis." []
+synonym: "bony pelvis CAT scan" EXACT []
+synonym: "bony pelvis computed tomography" EXACT []
+synonym: "bony pelvis computerized axial tomography" EXACT []
+synonym: "bony pelvis CT examination" EXACT []
+synonym: "CAT scan of bony pelvis" EXACT []
+synonym: "CT of bony pelvis" EXACT []
+synonym: "CT of pelvis" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-04-12T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-3010
+
+[Term]
+id: MAXO:0035062
+name: urine hormone measurement
+def: "A quantitative measurement of a particular hormone present in a sample of urine." []
+is_a: MAXO:0035058 ! hormone measurement
+
+[Term]
+id: MAXO:0035063
+name: jerk-locked averaging
+def: "A technique that combines EEG and EMG to assess myoclonus; it use electromyography (EMG) electrodes for the arms or legs, and correlates averaged EEG responses with EMG bursts used as a trigger. PMID: 1464676" []
+is_a: MAXO:0001406 ! diagnostic procedure of nervous system
+
+[Term]
+id: MAXO:0035064
+name: electron microscopic study
+def: "The transmission electron microscope (TEM) is a diagnostic tool to screen human tissues at high magnification to visualize the ultrastructural level." []
+is_a: MAXO:0000005 ! clinical imaging procedure
+
+[Term]
+id: MAXO:0035065
+name: dentist evaluation
+def: "A procedure where a dental professional who was not previously involved in a patient's treatment, reviews a patient's medical history, examines the patient, and makes recommendations as to care and treatment." []
+is_a: MAXO:0000731 ! allied health professional evaluation
+
+[Term]
+id: MAXO:0035066
+name: somatosensory evoked potential assessment
+def: "Measurement of somatosensory evoked potentials (SEPs), which reflect the electrical activity of the brain that results from the stimulation of touch. SEP monitoring may be employed intraoperatively to identify, and ideally, avoid impending permanent damage to neurologic structures. PMID: 31335078" []
+is_a: MAXO:0000939 ! stimulation procedure
+
+[Term]
+id: MAXO:0035067
+name: perchlorate discharge test
+def: "In the perchlorate discharge test, first radioactive iodine is administered, sufficient time is allowed to pass so that the radioactive iodine is captured by the thyroid, and then, perchlorate is administered orally. The perchlorate displaces non-organified iodide from the thyroid. The perchlorate discharge test is considered positive (abnormal) if there is an abnormally rapid loss of radioactive iodine from the thyroid." []
+is_a: MAXO:0000003 ! diagnostic procedure
+
+[Term]
+id: MAXO:0035068
+name: natural killer cell function test
+def: "An assay of the physiology of natural killer (NK) cells." []
+is_a: MAXO:0000006 ! clinical laboratory procedure
+
+[Term]
+id: MAXO:0035069
+name: dysmorphology assessment
+def: "Dysmorphology refers to the study of human congenital malformations and syndromes. A dysmorphology evaluation includes an assessment of facial features and also features of the entire body especially with respect to manifestations of hereditary (Mendelian) disease)." []
+is_a: MAXO:0000997 ! body shape assessment
+
+[Term]
+id: MAXO:0035071
+name: http://purl.obolibrary.org/obo/CHEBI_26523 measurement
+def: "The determination of the amount of http://purl.obolibrary.org/obo/CHEBI_26523 present in the sample." []
+synonym: "http://purl.obolibrary.org/obo/CHEBI_26523 assessment" EXACT []
+synonym: "http://purl.obolibrary.org/obo/CHEBI_26523 test" EXACT []
+intersection_of: MAXO:0000566 ! clinical chemistry assessment
+intersection_of: RO:0002233 CHEBI:26523
+property_value: http://purl.org/dc/elements/1.1/date "2022-04-12T13:40:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0035072
 name: leukocyte morphology measurement
 def: "A determination of the structure of leukocyte." []
@@ -17800,6 +18802,42 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-02-10T20:39:14Z" xsd:
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0035075
+name: sperm analysis
+def: "Quantification of sperm cell characteristics, including morphology, motility, and number." []
+is_a: MAXO:0000029 ! cell measurement
+
+[Term]
+id: MAXO:0035076
+name: complement assay
+def: "A complement test is a blood test that measures the activity of one or more proteins that make up the complement system in blood circulation." []
+is_a: MAXO:0000147 ! hematology testing
+
+[Term]
+id: MAXO:0035077
+name: functional T cell assessment
+def: "The test measures the T cell responses to antigens of common infections as well as to mitogens, allowing detection of deficiencies in this arm of the immune response." []
+is_a: MAXO:0000006 ! clinical laboratory procedure
+
+[Term]
+id: MAXO:0035078
+name: pulmonary function testing
+def: "A complete evaluation of the respiratory system including patient history, physical examinations, and tests of pulmonary function. The primary purpose of pulmonary function testing is to identify the severity of pulmonary impairment." []
+is_a: MAXO:0001408 ! diagnostic procedure of respiratory system
+
+[Term]
+id: MAXO:0035079
+name: neonatologist evaluation
+def: "Examination by a doctor who specializes in the care of newborn babies." []
+is_a: MAXO:0000707 ! pediatrician evaluation
+
+[Term]
+id: MAXO:0035080
+name: apoptosis assay
+def: "A test to determine if cells are undergoing programmed cell death." []
+is_a: MAXO:0000006 ! clinical laboratory procedure
+
+[Term]
 id: MAXO:0035082
 name: barium swallow radiograph procedure
 def: "A contrast-enhanced radiographic study commonly used to assess structural characteristics of the entire esophagus." [PMID:29630228]
@@ -17809,6 +18847,18 @@ synonym: "barium swallow study" EXACT []
 synonym: "X-ray of upper GI" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-20T17:57:19Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035083
+name: CT urogram
+def: "Computed tomography (CT) examination of the kidneys, ureters and bladder following administration of intravenous contrast material." []
+is_a: MAXO:0000989 ! CT by site
+
+[Term]
+id: MAXO:0035084
+name: fructose tolerance test
+def: "Determination of serum uric acid following the administration of an oral bolus of fructose to assess the ability of an individual to digest fructose." []
+is_a: MAXO:0000487 ! clinical assessment
 
 [Term]
 id: MAXO:0035085
@@ -17858,12 +18908,190 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-02-21T19:27:13Z" xsd:
 created_by: https://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0035089
+name: nasal endoscopy
+def: "Inspection of nasal vestibule using an endoscope." []
+synonym: "endoscopy of nasal vestibule" EXACT []
+synonym: "nasal vestibule endoscope" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-04-12T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035090
+name: hepatobiliary iminodiacetic acid scan
+def: "An imaging procedure in which a radioactive tracer is injected intravenously. The tracer is taken up by bile producing cells and subsequently travels with the bile into the gallbladder and through the bile ducts to the small intestine. THe hepatobiliary iminodiacetic acid (HIDA) scan can be used to visualize the liver, gallbladder and bile ducts." []
+is_a: MAXO:0000595 ! radiograph imaging procedure
+
+[Term]
+id: MAXO:0035091
+name: electromyography procedure
+def: "Electromyography (EMG) is a diagnostic procedure that evaluates the muscle response to electrical impulses from the nerves that control them, called motor neurons. The test is used to help detect neuromuscular abnormalities. It is usually performed after a nerve conduction study." []
+is_a: MAXO:0001406 ! diagnostic procedure of nervous system
+
+[Term]
+id: MAXO:0035092
+name: fractional excretion assessment
+def: "A kind of renal function test that assesses the proportion of electrolytes that are retained (or excreted) by the kidney (primarily the renal tubule)." []
+is_a: MAXO:0000886 ! kidney function testing
+
+[Term]
+id: MAXO:0035093
+name: erythrocyte sedimentation rate measurement
+def: "A measurement of the speed at which red blood cells in anticoagulated whole blood descend in a standardized tube in one hour. Increased erythrocyte sedimentation rate is a nonspecific sign of inflammation." []
+is_a: MAXO:0000006 ! clinical laboratory procedure
+
+[Term]
+id: MAXO:0035094
+name: platelet aggregation assay
+def: "An assessment of how well platelets aggregate (clump together) in the process of blood clotting." []
+is_a: MAXO:0000006 ! clinical laboratory procedure
+
+[Term]
+id: MAXO:0035095
+name: venography procedure
+def: "Radiographic examination of veins following injection of contrast material." []
+synonym: "vein radiograph" EXACT []
+is_a: MAXO:0000007 ! radiograph imaging with contrast dye
+property_value: http://purl.org/dc/elements/1.1/contributor "https://orcid.org/0000-0002-0736-9199" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2023-04-12T17:56:44Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035096
+name: breath hydrogen test
+def: "The hydrogen breath test is a noninvasive procedure to diagnose dietary intolerance (e.g., lactose or galactose intolerance) and related conditions by measuring the amount of hydrogen exhaled in the breath following ingestion of the relevant sugar." []
+is_a: MAXO:0000003 ! diagnostic procedure
+
+[Term]
+id: MAXO:0035097
+name: visual evoked potential procedure
+def: "An evaluation of the visual pathway of the nervous system by means of analysis of electrical waves measured by electrodes that are applied to the head." []
+is_a: MAXO:0001406 ! diagnostic procedure of nervous system
+
+[Term]
 id: MAXO:0035098
 name: biopsy of artery
 def: "Removal and examination of tissue, cells, or fluids from artery for the purpose of detecting or characterizing disease." []
 synonym: "artery biopsy" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035099
+name: electroretinogram procedure
+def: "The electroretinogram (ERG) is a diagnostic test that measures the electrical activity of the retina in response to a light stimulus." []
+is_a: MAXO:0001155 ! eye examination
+
+[Term]
+id: MAXO:0035101
+name: phrenic nerve stimulation test
+def: "A test that applied electric or magnetic stimulation to the neck to measure the response of the phrenic nerve." []
+is_a: MAXO:0000939 ! stimulation procedure
+
+[Term]
+id: MAXO:0035102
+name: water deprivation test
+def: "The water deprivation test, also known as the indirect water deprivation test should potentially be able to distinguish the various forms of DI. Deprivation of water intake should allow patients with primary polydipsia to concentrate their urine while those with central or nephrogenic DI continue to excrete dilute urine. Administration of desmopressin (Deamino-8-D-arginine vasopressin), the synthetic analog of AVP, after water deprivation should help with differentiating patients with central DI from those with nephrogenic DI as the former should be able to concentrate the urine once the deficient action of AVP is replaced with desmopressin, while the latter should not show a significant response due to end-organ resistance to the action of AVP or its analogs. PMID:30779536" []
+is_a: MAXO:0000886 ! kidney function testing
+
+[Term]
+id: MAXO:0035103
+name: refraction test
+def: "A vision test that determines the presence of myopia, hyperopia, or astigmatism." []
+is_a: MAXO:0000971 ! vision assessment
+
+[Term]
+id: MAXO:0035104
+name: motor evoked potential evaluation
+def: "A neurophysiological examination that monitors the corticospinal tract beginning with a stimulus at the motor cortex, which travels along the corticospinal tract of the spinal cord to the nerve root, and then the peripheral nerve before terminating in a muscle belly. PMID:35593855" []
+is_a: MAXO:0000527 ! physical examination
+
+[Term]
+id: MAXO:0035105
+name: salivary cortisol test
+def: "A determination of the amount of protein present in blood" []
+is_a: MAXO:0000605 ! protein measurement
+
+[Term]
+id: MAXO:0035106
+name: paracentesis
+def: "A procedure that removes peritoneal fluid from the abdomen (peritoneal cavity) through a needle or catheter to obtain ascitic fluid for diagnostic or therapeutic purposes." []
+is_a: MAXO:0000003 ! diagnostic procedure
+
+[Term]
+id: MAXO:0035107
+name: biopsy of carotid artery
+def: "Removal and examination of tissue, cells, or fluids from carotid artery segment for the purpose of detecting or characterizing disease." []
+synonym: "carotid artery biopsy" EXACT []
+synonym: "carotid artery segment biopsy" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-04-12T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035108
+name: sweat electrolyte test
+def: "A quantitative measurement of the amount of an electrolyte present in sweat." []
+is_a: MAXO:0000582 ! electrolyte assessment
+
+[Term]
+id: MAXO:0035109
+name: immune complex assay
+def: "An assay to assess the presence of immune complexes in the blood circulation." []
+is_a: MAXO:0000605 ! protein measurement
+
+[Term]
+id: MAXO:0035110
+name: gustatory testing
+def: "A medical test that evaluates the ability to taste. The tests are either chemical or electrical in nature. Chemical testing uses the natural stimuli and chemical tastants (sweet, sour, salty, bitter, and umami) to assess taste, whereas electrical testing adopts electrical currents applied directly to the surface of the tongue. Other investigations are employed in the assessment of gustatory dysfunction, such as certain imaging techniques, though these are not as useful in quantifying taste disorders. PMID:33620811" []
+is_a: MAXO:0000003 ! diagnostic procedure
+
+[Term]
+id: MAXO:0035113
+name: platelet transmission electron microscopy
+def: "A type of electron microscopy in which a beam of electrons is transmitted through a thin section in order to visualize the internal structures of platelets." []
+is_a: MAXO:0035064 ! electron microscopic study
+
+[Term]
+id: MAXO:0035114
+name: immune cell function assay
+def: "Measurement of peripheral blood lymphocyte response following stimulation to assess the degree of functionality of the cell-mediated immune response. A variety of tests exist to measure intracellular ATP levels, proliferation, and other functional responses." []
+is_a: MAXO:0000006 ! clinical laboratory procedure
+
+[Term]
+id: MAXO:0035115
+name: diffusion weighted cerebral MRI
+def: "A type of cerebral magnetic resonance (MR) imaging that measures random Brownian motion of water molecules within each voxel of imaged brain tissue." []
+is_a: MAXO:0000427 ! MRI of the brain
+
+[Term]
+id: MAXO:0035117
+name: cardiac exercise stress test
+def: "A type of cardiac test in which the patient walks on a treadmill or rides a stationary bike, while cardiovascular parameters such as heart rhythm, blood pressure and breathing are measured." []
+is_a: MAXO:0000487 ! clinical assessment
+
+[Term]
+id: MAXO:0035118 
+name: cardiac catheterization
+def: "A procedure in which a catheter (thin hollow tube) is threaded into the heart via a large blood vessel, generally with contrast dye being injected through the catheter to visualize the heart chambers and coronary arteries." []
+is_a: MAXO:0009033 ! cardiac device implantation
+
+[Term]
+id: MAXO:0035119
+name: duplex ultrasound with color flow imaging
+def: "A form of Doppler ultrasound examination that examines blood vessels and blood flow." []
+is_a: MAXO:0009008 ! Doppler ultrasonography
+
+[Term]
+id: MAXO:0035120
+name: cardiac auscultation
+def: "Investigation of heart sounds with a stethoscope." []
+is_a: MAXO:0000487 ! clinical assessment
+
+[Term]
+id: MAXO:0035121
+name: electrooculogram procedure
+def: "An electrophysiologic test that measures the existing resting electrical potential between the cornea and Bruch's membrane. The most common use of the electrooculogram is to confirm disease." []
+is_a: MAXO:0000003 ! diagnostic procedure
 
 [Typedef]
 id: MAXO:0000521
