@@ -3,6 +3,9 @@
     "id" : "http://purl.obolibrary.org/obo/maxo/maxo-base.json",
     "meta" : {
       "basicPropertyValues" : [ {
+        "pred" : "http://purl.obolibrary.org/obo/IAO_0000700",
+        "val" : "http://purl.obolibrary.org/obo/MAXO_0000001"
+      }, {
         "pred" : "http://purl.org/dc/elements/1.1/creator",
         "val" : "Leigh Carmody"
       }, {
@@ -22,9 +25,9 @@
         "val" : "https://creativecommons.org/licenses/by/4.0/"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2023-03-09"
+        "val" : "2023-04-13"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/maxo/releases/2023-03-09/maxo-base.json"
+      "version" : "http://purl.obolibrary.org/obo/maxo/releases/2023-04-13/maxo-base.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0000001",
@@ -60,16 +63,6 @@
           "xrefs" : [ "ISBN-10:0124105165" ]
         },
         "comments" : [ "An action or administration of therapeutic agents to produce an effect that is intended to alter or stop a pathologic process." ],
-        "synonyms" : [ {
-          "pred" : "hasBroadSynonym",
-          "val" : "medical procedure"
-        }, {
-          "pred" : "hasNarrowSynonym",
-          "val" : "clinical procedure"
-        }, {
-          "pred" : "hasNarrowSynonym",
-          "val" : "treatment"
-        } ],
         "xrefs" : [ {
           "val" : "NCIT:C25218"
         }, {
@@ -78,8 +71,6 @@
           "val" : "OAE:0000094"
         }, {
           "val" : "OGMS:0000112"
-        }, {
-          "val" : "SIO:001024"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/elements/1.1/date",
@@ -939,6 +930,22 @@
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/elements/1.1/date",
           "val" : "2023-03-03T21:25:21Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0000034",
+      "lbl" : "therapeutic procedure by site",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to relieve illness and injury of a particular body site or system."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-20T19:58:58Z"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "https://orcid.org/0000-0001-7941-2961"
@@ -2791,7 +2798,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0000131",
-      "lbl" : "location specific endoscopy",
+      "lbl" : "endoscopy by site",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -2799,7 +2806,10 @@
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "endoscopy by site"
+          "val" : "endoscopy by body location"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "location specific endoscopy"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/elements/1.1/date",
@@ -3081,7 +3091,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0000144",
-      "lbl" : "histological procedure",
+      "lbl" : "histological examination",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -3089,6 +3099,9 @@
           "xrefs" : [ "NCIT:C16680" ]
         },
         "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "histological procedure"
+        }, {
           "pred" : "hasExactSynonym",
           "val" : "histological testing"
         } ],
@@ -13064,7 +13077,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0000493",
-      "lbl" : "cardiovascular diagnostic procedure",
+      "lbl" : "diagnostic procedure of cardiovascular system",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -13072,7 +13085,10 @@
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "cardiovascular measurement"
+          "val" : "cardiovascular diagnostic procedure"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "cardiovascular system diagnostic procedure"
         } ],
         "xrefs" : [ {
           "val" : "CMO:0000001"
@@ -13222,13 +13238,19 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0000499",
-      "lbl" : "respiratory therapy",
+      "lbl" : "therapeutic procedure of respiratory system",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "Any form of treatment that acts to improve or assist with respiratory function.",
-          "xrefs" : [ "NCIT:C15322" ]
+          "val" : "All manners of treatment to bring respiratory system back to its normal state."
         },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "respiratory system therapeutic procedure"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "respiratory therapy"
+        } ],
         "xrefs" : [ {
           "val" : "NCIT:C15322"
         } ],
@@ -17742,6 +17764,12 @@
         }, {
           "pred" : "hasNarrowSynonym",
           "val" : "consultation with allergist"
+        }, {
+          "pred" : "hasNarrowSynonym",
+          "val" : "evaluation by an immunologist"
+        }, {
+          "pred" : "hasNarrowSynonym",
+          "val" : "immunologist evaluation"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/elements/1.1/date",
@@ -19007,6 +19035,9 @@
         }, {
           "pred" : "hasExactSynonym",
           "val" : "otolaryngology specialist referral"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "otorhinolaryngologist evaluation"
         }, {
           "pred" : "hasExactSynonym",
           "val" : "referral to head and neck surgeon"
@@ -22004,6 +22035,9 @@
           "xrefs" : [ "NCIT:C74718" ]
         },
         "synonyms" : [ {
+          "pred" : "hasBroadSynonym",
+          "val" : "iron-binding capacity assessment"
+        }, {
           "synonymType" : "http://purl.obolibrary.org/obo/maxo#ABBREVIATION",
           "pred" : "hasExactSynonym",
           "val" : "IBCT"
@@ -25061,6 +25095,233 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0000988",
+      "lbl" : "diagnostic procedure by site",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of a particular by part or system."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "diagnostic procedure by body location"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-29T20:10:49Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0000989",
+      "lbl" : "CT by site",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The use of computed tomography to produce images of structures of a particular body site."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "computed tomography procedure by body location"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T17:40:25Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0000990",
+      "lbl" : "clinical biopsy by site",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A specimen collection from a particular body site used for diagnostic purposes."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "biopsy by body location"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T17:56:49Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0000991",
+      "lbl" : "removal of nail",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A procedure to take off or remove part or entire nail."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "nail removal"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-31T14:53:59Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0000992",
+      "lbl" : "debridement of nail",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Reduction in the thickness and length of the nail. Often used to remove thickened nails due to fungal infection."
+        },
+        "comments" : [ "Debridement can be done by filing or drilling or other methods." ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "nail debridement"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-31T14:54:13Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0000993",
+      "lbl" : "removal of skin",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Removal or elimination of a portion of skin for therapeutic use."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-31T15:11:49Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0000994",
+      "lbl" : "debridement of skin",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Removal of dead (necrotic) or infected skin to help a wound heal."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-31T18:20:39Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0000995",
+      "lbl" : "desloughing of skin",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Removing slough from a wound."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "removal of slough from skin"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-31T18:20:54Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0000996",
+      "lbl" : "application of emollient to skin",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Addition of a softening or soothing agent to the skin."
+        },
+        "synonyms" : [ {
+          "pred" : "hasBroadSynonym",
+          "val" : "use of emollient"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "emollient application to skin"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "use of skin emollients"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-31T19:02:52Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0000997",
+      "lbl" : "body shape assessment",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Determination of shape of body or body parts. This may be used to assess symmetry, number, size, and shape of a patient's body or body parts."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-04-13T16:06:37Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0000998",
+      "lbl" : "facial morphology assessment",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Determination of shape, symmetry, and/or size of face."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-04-13T16:10:13Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0000999",
+      "lbl" : "head morphology assessment",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Determination of shape, symmetry, and/or size of head."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-04-13T16:11:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0001000",
       "lbl" : "functional magnetic resonance imaging procedure",
       "type" : "CLASS",
@@ -25388,6 +25649,54 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001011",
+      "lbl" : "body measurement",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Measuring the body or its parts."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-04-13T16:22:35Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001012",
+      "lbl" : "waist measurement",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Measuring the distance around (circumference) a patient's waist."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-04-13T16:49:17Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001013",
+      "lbl" : "hip measurement",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A measurement of circumference around the hip."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-04-13T16:49:27Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0001014",
       "lbl" : "medical action avoidance",
       "type" : "CLASS",
@@ -25712,6 +26021,26 @@
         "deprecated" : true
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001024",
+      "lbl" : "waist to hip ratio calculation",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A ratio determined by waist measurement divided by hip measurement."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "waist to hip ratio measurement"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-04-13T16:50:13Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0001025",
       "lbl" : "adrenergic drug therapy",
       "type" : "CLASS",
@@ -25791,6 +26120,22 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001028",
+      "lbl" : "facial morphology assessment by type",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Determination of shape, symmetry, and/or size of face using a particular method."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-04-13T16:53:56Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
         } ]
       }
     }, {
@@ -27193,6 +27538,33 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001090",
+      "lbl" : "3D facial analysis",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Computer aided analysis of 3D facial images to detect abnormal facial phenotypes that assist in diagnosis, treatment monitoring and surgical planning.",
+          "xrefs" : [ "PMID:34108542" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "'3D facial assessment'"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "three dimensional facial analysis"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "three dimensional facial assessment"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-04-13T16:54:13Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0001091",
       "lbl" : "Meckel's diverticulectomy",
       "type" : "CLASS",
@@ -27913,7 +28285,7 @@
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/elements/1.1/date",
-          "val" : "2020-06-9T20:39:14Z"
+          "val" : "2020-06-09T20:39:14Z"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "http://orcid.org/0000-0001-7941-3010"
@@ -32119,6 +32491,22 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001298",
+      "lbl" : "therapy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A treatment that helps someone feel better, grow stronger, etc., especially after an illness."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-04-13T17:54:15Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0001299",
       "lbl" : "surgical repair of pericardium",
       "type" : "CLASS",
@@ -32629,7 +33017,7 @@
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "treatment with http://purl.obolibrary.org/obo/CHEBI_65259"
+          "val" : "treatment with GABA antagonist"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/elements/1.1/date",
@@ -32684,7 +33072,7 @@
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "treatment with http://purl.obolibrary.org/obo/CHEBI_50268"
+          "val" : "treatment with GABA modulator"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/elements/1.1/date",
@@ -32724,7 +33112,7 @@
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "treatment with http://purl.obolibrary.org/obo/CHEBI_38324"
+          "val" : "treatment with cholinergic agonist"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/elements/1.1/date",
@@ -32744,7 +33132,7 @@
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "treatment with http://purl.obolibrary.org/obo/CHEBI_38325"
+          "val" : "treatment with muscarinic agonist"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/elements/1.1/date",
@@ -32764,7 +33152,7 @@
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "treatment with http://purl.obolibrary.org/obo/CHEBI_47958"
+          "val" : "treatment with nicotinic acetylcholine receptor agonist"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/elements/1.1/date",
@@ -32783,6 +33171,9 @@
           "val" : "Treatment with a drug or agent that inhibits cholinergic signaling."
         },
         "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "anticholinergic agent therapy"
+        }, {
           "pred" : "hasExactSynonym",
           "val" : "treatment with cholinergic antagonist"
         } ],
@@ -32804,7 +33195,7 @@
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "treatment with http://purl.obolibrary.org/obo/CHEBI_48876"
+          "val" : "treatment with muscarinic antagonist"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/elements/1.1/date",
@@ -32824,7 +33215,7 @@
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "treatment with http://purl.obolibrary.org/obo/CHEBI_48878"
+          "val" : "treatment with nicotinic antagonist"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/elements/1.1/date",
@@ -32844,7 +33235,7 @@
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "treatment with http://purl.obolibrary.org/obo/CHEBI_50370"
+          "val" : "treatment with parasympatholytic"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/elements/1.1/date",
@@ -32864,7 +33255,7 @@
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "treatment with http://purl.obolibrary.org/obo/CHEBI_48560"
+          "val" : "treatment with dopaminergic agent"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/elements/1.1/date",
@@ -32924,7 +33315,7 @@
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "treatment with http://purl.obolibrary.org/obo/CHEBI_51039"
+          "val" : "treatment with dopamine uptake inhibitor"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/elements/1.1/date",
@@ -32944,7 +33335,7 @@
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "treatment with http://purl.obolibrary.org/obo/CHEBI_48561"
+          "val" : "treatment with dopaminergic antagonist"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/elements/1.1/date",
@@ -32984,7 +33375,7 @@
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "treatment with http://purl.obolibrary.org/obo/CHEBI_51373"
+          "val" : "treatment with GABA agonist"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/elements/1.1/date",
@@ -33251,6 +33642,22 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001351",
+      "lbl" : "occupational therapy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An assessment and intervention to develop, recover, or maintain life activies or occupations."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-04-13T17:56:56Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0001352",
       "lbl" : "surgical repair of anorectum",
       "type" : "CLASS",
@@ -33388,6 +33795,29 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001359",
+      "lbl" : "applied behavior analysis therapy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A psychological intervention that applies empirical approaches based upon the principles of respondent and operant conditioning to change behavior of social significance."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "ABA therapy"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "behavioral engineering"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-04-13T18:07:09Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
         } ]
       }
     }, {
@@ -33666,17 +34096,17 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A determination of the number of echynocyte in a blood sample."
+          "val" : "A determination of the number of echinocyte in a blood sample."
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "echynocyte cell count"
+          "val" : "echinocyte cell count"
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "echynocyte cell count measurement"
+          "val" : "echinocyte cell count measurement"
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "echynocyte count test"
+          "val" : "echinocyte count test"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/elements/1.1/date",
@@ -33789,15 +34219,15 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0001377",
-      "lbl" : "echynocyte morphology measurement",
+      "lbl" : "echinocyte morphology measurement",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A determination of the structure of echynocyte."
+          "val" : "A determination of the structure of echinocyte."
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "echynocyte morphology assessment"
+          "val" : "echinocyte morphology assessment"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/elements/1.1/date",
@@ -33809,15 +34239,15 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0001378",
-      "lbl" : "langerhans cell morphology measurement",
+      "lbl" : "Langerhans cell morphology measurement",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A determination of the structure of langerhans cell."
+          "val" : "A determination of the structure of Langerhans cell."
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "langerhans cell morphology assessment"
+          "val" : "Langerhans cell morphology assessment"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/elements/1.1/date",
@@ -34002,6 +34432,1498 @@
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/elements/1.1/date",
           "val" : "2023-03-03T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001388",
+      "lbl" : "feeding therapy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Assessing and providing skills to eat better. Therapy is focused on tongue movements, chewing, swallowing, as well as other behaviors."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-04-13T18:37:03Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001396",
+      "lbl" : "diagnostic procedure of digestive system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the digestive system."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "digestive system diagnostic procedure"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "digestive system testing"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2019-01-15T19:35:36Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001397",
+      "lbl" : "therapeutic procedure of visual system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring visual system back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "visual system therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001398",
+      "lbl" : "diagnostic procedure of circulatory system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the circulatory system."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "circulatory system diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001399",
+      "lbl" : "diagnostic procedure of excretory system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the excretory system."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "excretory system diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001400",
+      "lbl" : "diagnostic procedure of exocrine system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the exocrine system."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "exocrine system diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001401",
+      "lbl" : "diagnostic procedure of genitourinary system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the genitourinary system."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "genitourinary system diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001402",
+      "lbl" : "diagnostic procedure of hematopoietic system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the hematopoietic system."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "hematopoietic system diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001403",
+      "lbl" : "diagnostic procedure of integumental system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the integumental system."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "integumental system diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001404",
+      "lbl" : "diagnostic procedure of skin",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the skin of body."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "skin diagnostic procedure"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "skin of body diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001405",
+      "lbl" : "diagnostic procedure of musculoskeletal system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the musculoskeletal system."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "musculoskeletal system diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001406",
+      "lbl" : "diagnostic procedure of nervous system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the nervous system."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "nervous system diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001407",
+      "lbl" : "diagnostic procedure of reproductive system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the reproductive system."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "reproductive system diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001408",
+      "lbl" : "diagnostic procedure of respiratory system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the respiratory system."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "respiratory system diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001409",
+      "lbl" : "therapeutic procedure of digestive system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring digestive system back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "digestive system therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001410",
+      "lbl" : "therapeutic procedure of cardiovascular system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring cardiovascular system back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "cardiovascular system therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001411",
+      "lbl" : "therapeutic procedure of circulatory system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring circulatory system back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "circulatory system therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001412",
+      "lbl" : "therapeutic procedure of excretory system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring excretory system back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "excretory system therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001413",
+      "lbl" : "therapeutic procedure of exocrine system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring exocrine system back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "exocrine system therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001414",
+      "lbl" : "therapeutic procedure of genitourinary system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring genitourinary system back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "genitourinary system therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001415",
+      "lbl" : "therapeutic procedure of hematopoietic system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring hematopoietic system back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "hematopoietic system therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001416",
+      "lbl" : "therapeutic procedure of integumental system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring integumental system back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "integumental system therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001417",
+      "lbl" : "therapeutic procedure of skin of body",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring skin of body back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "skin of body therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001418",
+      "lbl" : "therapeutic procedure of musculoskeletal system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring musculoskeletal system back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "musculoskeletal system therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001419",
+      "lbl" : "therapeutic procedure of nervous system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring nervous system back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "nervous system therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001420",
+      "lbl" : "therapeutic procedure of reproductive system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring reproductive system back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "reproductive system therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001421",
+      "lbl" : "keratolytic agent therapy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Treatment with a drug that softens, separates, and causes desquamation of the cornified epithelium or horny layer of skin."
+        },
+        "comments" : [ "Keratolytic drugs are used to expose mycelia of infecting fungi or to treat corns, warts, and certain other skin diseases." ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "treatment with http://purl.obolibrary.org/obo/CHEBI_50176"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-31T11:00:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001422",
+      "lbl" : "therapeutic procedure of vestibulo-auditory system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring vestibulo-auditory system back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "vestibulo-auditory system therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001423",
+      "lbl" : "therapeutic procedure of immune system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring immune system back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "immune system therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001424",
+      "lbl" : "therapeutic procedure of organism substance",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring organism substance back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "organism substance therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001425",
+      "lbl" : "therapeutic procedure of amniotic fluid",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring amniotic fluid back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "amniotic fluid therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001426",
+      "lbl" : "therapeutic procedure of blood clot",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring blood clot back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "blood clot therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001427",
+      "lbl" : "therapeutic procedure of excreta",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring excreta back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "excreta therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001428",
+      "lbl" : "therapeutic procedure of feces",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring feces back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "feces therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001429",
+      "lbl" : "therapeutic procedure of urine",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring urine back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "urine therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001430",
+      "lbl" : "therapeutic procedure of interstitial fluid",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring interstitial fluid back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "interstitial fluid therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001431",
+      "lbl" : "therapeutic procedure of ocular refractive media",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring ocular refractive media back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "ocular refractive media therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001432",
+      "lbl" : "therapeutic procedure of aqueous humor of eyeball",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring aqueous humor of eyeball back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "aqueous humor of eyeball therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001433",
+      "lbl" : "therapeutic procedure of vitreous humor",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring vitreous humor back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "vitreous humor therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001434",
+      "lbl" : "therapeutic procedure of pus",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring pus back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "pus therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001435",
+      "lbl" : "therapeutic procedure of reproductive gland secretion",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring reproductive gland secretion back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "reproductive gland secretion therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001436",
+      "lbl" : "therapeutic procedure of female reproductive gland secretion",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring female reproductive gland secretion back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "female reproductive gland secretion therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001437",
+      "lbl" : "therapeutic procedure of male reproductive gland secretion",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring male reproductive gland secretion back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "male reproductive gland secretion therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001438",
+      "lbl" : "therapeutic procedure of respiratory system fluid/secretion",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring respiratory system fluid/secretion back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "respiratory system fluid/secretion therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001439",
+      "lbl" : "therapeutic procedure of sputum",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring sputum back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "sputum therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001440",
+      "lbl" : "therapeutic procedure of secretion of exocrine gland",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring secretion of exocrine gland back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "secretion of exocrine gland therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001441",
+      "lbl" : "therapeutic procedure of bile",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring bile back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "bile therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001442",
+      "lbl" : "therapeutic procedure of gastric juice",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring gastric juice back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "gastric juice therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001443",
+      "lbl" : "therapeutic procedure of organ",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "All manners of treatment to bring organ back to its normal state."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "organ therapeutic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001444",
+      "lbl" : "diagnostic procedure of visual system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the visual system."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "visual system diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001445",
+      "lbl" : "diagnostic procedure of auditory system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the vestibulo-auditory system."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "auditory diagnostic procedure"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "vestibulo-auditory system diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001446",
+      "lbl" : "diagnostic procedure of immune system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the immune system."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "immune system diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001447",
+      "lbl" : "diagnostic procedure of body substance",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the organism substance."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "body substance diagnostic procedure"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "organism substance diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001448",
+      "lbl" : "diagnostic procedure of amniotic fluid",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the amniotic fluid."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "amniotic fluid diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001449",
+      "lbl" : "diagnostic procedure of blood clot",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the blood clot."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "blood clot diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001450",
+      "lbl" : "diagnostic procedure of excreted substance",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the excreta."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "excreta diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001451",
+      "lbl" : "diagnostic procedure of feces",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the feces."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "feces diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001452",
+      "lbl" : "diagnostic procedure of urine",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the urine."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "urine diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001453",
+      "lbl" : "diagnostic procedure of interstitial fluid",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the interstitial fluid."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "interstitial fluid diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001454",
+      "lbl" : "diagnostic procedure of ocular refractive media",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the ocular refractive media."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "ocular refractive media diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001455",
+      "lbl" : "diagnostic procedure of aqueous humor of eyeball",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the aqueous humor of eyeball."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "aqueous humor of eyeball diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001456",
+      "lbl" : "diagnostic procedure of vitreous humor",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the vitreous humor."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "vitreous humor diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001457",
+      "lbl" : "diagnostic procedure of pus",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the pus."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "pus diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001458",
+      "lbl" : "diagnostic procedure of reproductive gland secretion",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the reproductive gland secretion."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "reproductive gland secretion diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001459",
+      "lbl" : "diagnostic procedure of female reproductive gland secretion",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the female reproductive gland secretion."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "female reproductive gland secretion diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001460",
+      "lbl" : "diagnostic procedure of male reproductive gland secretion",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the male reproductive gland secretion."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "male reproductive gland secretion diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001461",
+      "lbl" : "diagnostic procedure of respiratory system fluid/secretion",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the respiratory system fluid/secretion."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "respiratory system fluid/secretion diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001462",
+      "lbl" : "diagnostic procedure of sputum",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the sputum."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "sputum diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001463",
+      "lbl" : "diagnostic procedure of exocrine gland secretion",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the secretion of exocrine gland."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "secretion of exocrine gland diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001464",
+      "lbl" : "diagnostic procedure of bile",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the bile."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "bile diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001465",
+      "lbl" : "diagnostic procedure of gastric juice",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the gastric juice."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "gastric juice diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001466",
+      "lbl" : "diagnostic procedure of semen",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the semen."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "semen diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001467",
+      "lbl" : "diagnostic procedure of organ",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Procedure to evaluate the structure and/or function of the organ."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "organ diagnostic procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-30T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001468",
+      "lbl" : "surgical skin removal",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The surgical removal (cutting out) of part or all of zone of skin."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "skin excision"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "zone of skin surgical removal"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-03-31T20:39:14Z"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "http://orcid.org/0000-0001-7941-2961"
@@ -41847,7 +43769,11 @@
       "meta" : {
         "definition" : {
           "val" : "Treatment to correct or improve vision."
-        }
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0025004",
@@ -41856,7 +43782,11 @@
       "meta" : {
         "definition" : {
           "val" : "Use of glasses to correct vision."
-        }
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0025005",
@@ -42028,6 +43958,15 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035005",
+      "lbl" : "circulating hormone measurement",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A quantitative measurement of a particular hormone present in a blood sample."
+        }
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0035006",
       "lbl" : "foot radiography",
       "type" : "CLASS",
@@ -42089,6 +44028,15 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035011",
+      "lbl" : "enzyme activity assessment",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Measurement of the functionality of an enzyme."
+        }
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0035014",
       "lbl" : "MRI of the spinal cord",
       "type" : "CLASS",
@@ -42113,6 +44061,123 @@
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "http://orcid.org/0000-0001-7941-2961"
         } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035017",
+      "lbl" : "hair microscopy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Microscopic examination of the hair (also called hair microscopy) is an inexpensive tool that may aid in the diagnosis of systemic disorders as the appearance, structure, and/or growth of hair are modified in various congenital and acquired diseases. (PMID:34843009)"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035018",
+      "lbl" : "leukocyte enzyme activity assessment",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Measurement of the functionality of an enzyme derived from leukocytes."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035019",
+      "lbl" : "erythrocyte enzyme activity assessment",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Measurement of the functionality of an enzyme derived from erythrocytes."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035020",
+      "lbl" : "tissue enzyme activity assessment",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Measurement of the functionality of an enzyme derived from a particular tissue"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035023",
+      "lbl" : "tissue metabolite measurement",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A quantitative measurement of metabolites present in a particular tissue."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035025",
+      "lbl" : "in vitro DNA repair study",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A test that measures DNA damage/breakage in patient cells.  DNA damage repair plays an important role in cancer's initiation and progression, and in therapeutic resistance."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035026",
+      "lbl" : "circulating immunoglobulin measurement",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A quantitative measurement of immunoglobulins present in a blood sample."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035027",
+      "lbl" : "blood gas assessment in umbilical cord blood",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A test that measures the amount of oxygen, carbon dioxide, and pH in the blood of the umbilical cord."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035028",
+      "lbl" : "L-selectin shedding study",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "This test is used to measure the amount of L-Selectin (CD62L) shed from the surface of neutrophils before and after stimulation of the TLR pathway. The test can help identify patients with defects in their toll-like receptor signalling pathway and can be used to diagnose IRAK-4, MyD88 and UNC93B deficiency. (NHS)"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035029",
+      "lbl" : "cerebrospinal fluid metabolite measurement",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A quantitative measurement of metabolites present in a cerebrospinal fluid sample."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035031",
+      "lbl" : "stool xenobiotic measurement",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A quantitative measurement of xenobiotics (a chemical foreign to the body) present in a stool sample."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035032",
+      "lbl" : "gastric fluid xenobiotic measurement",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A quantitative measurement of xenobiotics (a chemical foreign to the body) present in gastric fluid."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035033",
+      "lbl" : "hair xenobiotic measurement",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A quantitative measurement of xenobiotics (a chemical foreign to the body) present in a hair sample."
+        }
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0035034",
@@ -42176,6 +44241,15 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035036",
+      "lbl" : "blood culture procedure",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A laboratory test in which blood, taken from the patient, is inoculated into bottles containing culture media to determine whether infection-causing microorganisms (bacteria or fungi) are present in the patient's bloodstream."
+        }
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0035038",
       "lbl" : "contrast angiography procedure",
       "type" : "CLASS",
@@ -42221,6 +44295,15 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035040",
+      "lbl" : "abdominal paracentesis",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A procedure where fluid is removed from the abdomen using a needle."
+        }
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0035043",
       "lbl" : "upper limb radiography",
       "type" : "CLASS",
@@ -42251,6 +44334,15 @@
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "http://orcid.org/0000-0001-7941-2961"
         } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035047",
+      "lbl" : "stool metabolite measurement",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A quantitative measurement of metabolites present in a stool sample."
+        }
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0035048",
@@ -42399,6 +44491,184 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035054",
+      "lbl" : "protein glycosylation assay",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Assessment of the degree or kind of protein glycosylation (covalent attachment of a carbohydrate moiety to a protein)."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035055",
+      "lbl" : "flow cytometry procedure",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A technique for counting, examining and sorting microscopic particles suspended in a stream of fluid. NCIT:C16585"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035057",
+      "lbl" : "reproductive endocrinologist assessment",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Reproductive endocrinology and infertility is a surgical subspecialty of obstetrics and gynecology that trains physicians in reproductive medicine addressing hormonal functioning as it pertains to reproduction as well as the issue of infertility."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035058",
+      "lbl" : "hormone measurement",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A quantitative measurement of a particular hormone present in a sample."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035059",
+      "lbl" : "nerve conduction study",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A test to determine the electrical conduction of the motor and sensory nerves of the human body."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035061",
+      "lbl" : "pelvic CT",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The use of computed tomography to produce images of structures of the bony pelvis."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "CAT scan of bony pelvis"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "CT of bony pelvis"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "CT of pelvis"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "bony pelvis CAT scan"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "bony pelvis CT examination"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "bony pelvis computed tomography"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "bony pelvis computerized axial tomography"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-04-12T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-3010"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035062",
+      "lbl" : "urine hormone measurement",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A quantitative measurement of a particular hormone present in a sample of urine."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035063",
+      "lbl" : "jerk-locked averaging",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A technique that combines EEG and EMG to assess myoclonus; it use electromyography (EMG) electrodes for the arms or legs, and correlates averaged EEG responses with EMG bursts used as a trigger. PMID: 1464676"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035064",
+      "lbl" : "electron microscopic study",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The transmission electron microscope (TEM) is a diagnostic tool to screen human tissues at high magnification to visualize the ultrastructural level."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035065",
+      "lbl" : "dentist evaluation",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A procedure where a dental professional who was not previously involved in a patient's treatment, reviews a patient's medical history, examines the patient, and makes recommendations as to care and treatment."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035066",
+      "lbl" : "somatosensory evoked potential assessment",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Measurement of somatosensory evoked potentials (SEPs), which reflect the electrical activity of the brain that results from the stimulation of touch. SEP monitoring may be employed intraoperatively to identify, and ideally, avoid impending permanent damage to neurologic structures. PMID: 31335078"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035067",
+      "lbl" : "perchlorate discharge test",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "In the perchlorate discharge test, first radioactive iodine is administered, sufficient time is allowed to pass so that the radioactive iodine is captured by the thyroid, and then, perchlorate is administered orally. The perchlorate displaces non-organified iodide from the thyroid. The perchlorate discharge test is considered positive (abnormal) if there is an abnormally rapid loss of radioactive iodine from the thyroid."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035068",
+      "lbl" : "natural killer cell function test",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An assay of the physiology of natural killer (NK) cells."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035069",
+      "lbl" : "dysmorphology assessment",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Dysmorphology refers to the study of human congenital malformations and syndromes. A dysmorphology evaluation includes an assessment of facial features and also features of the entire body especially with respect to manifestations of hereditary (Mendelian) disease)."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035071",
+      "lbl" : "http://purl.obolibrary.org/obo/CHEBI_26523 measurement",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The determination of the amount of http://purl.obolibrary.org/obo/CHEBI_26523 present in the sample."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "http://purl.obolibrary.org/obo/CHEBI_26523 assessment"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "http://purl.obolibrary.org/obo/CHEBI_26523 test"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2022-04-12T13:40:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0035072",
       "lbl" : "leukocyte morphology measurement",
       "type" : "CLASS",
@@ -42468,6 +44738,60 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035075",
+      "lbl" : "sperm analysis",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Quantification of sperm cell characteristics, including morphology, motility, and number."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035076",
+      "lbl" : "complement assay",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A complement test is a blood test that measures the activity of one or more proteins that make up the complement system in blood circulation."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035077",
+      "lbl" : "functional T cell assessment",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The test measures the T cell responses to antigens of common infections as well as to mitogens, allowing detection of deficiencies in this arm of the immune response."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035078",
+      "lbl" : "pulmonary function testing",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A complete evaluation of the respiratory system including patient history, physical examinations, and tests of pulmonary function. The primary purpose of pulmonary function testing is to identify the severity of pulmonary impairment."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035079",
+      "lbl" : "neonatologist evaluation",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Examination by a doctor who specializes in the care of newborn babies."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035080",
+      "lbl" : "apoptosis assay",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A test to determine if cells are undergoing programmed cell death."
+        }
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0035082",
       "lbl" : "barium swallow radiograph procedure",
       "type" : "CLASS",
@@ -42496,6 +44820,24 @@
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "http://orcid.org/0000-0001-7941-2961"
         } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035083",
+      "lbl" : "CT urogram",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Computed tomography (CT) examination of the kidneys, ureters and bladder following administration of intravenous contrast material."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035084",
+      "lbl" : "fructose tolerance test",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Determination of serum uric acid following the administration of an oral bolus of fructose to assess the ability of an individual to digest fructose."
+        }
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0035085",
@@ -42620,6 +44962,115 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035089",
+      "lbl" : "nasal endoscopy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Inspection of nasal vestibule using an endoscope."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "endoscopy of nasal vestibule"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "nasal vestibule endoscope"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-04-12T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035090",
+      "lbl" : "hepatobiliary iminodiacetic acid scan",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An imaging procedure in which a radioactive tracer is injected intravenously. The tracer is taken up by bile producing cells and subsequently travels with the bile into the gallbladder and through the bile ducts to the small intestine. THe hepatobiliary iminodiacetic acid (HIDA) scan can be used to visualize the liver, gallbladder and bile ducts."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035091",
+      "lbl" : "electromyography procedure",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Electromyography (EMG) is a diagnostic procedure that evaluates the muscle response to electrical impulses from the nerves that control them, called motor neurons. The test is used to help detect neuromuscular abnormalities. It is usually performed after a nerve conduction study."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035092",
+      "lbl" : "fractional excretion assessment",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A kind of renal function test that assesses the proportion of electrolytes that are retained (or excreted) by the kidney (primarily the renal tubule)."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035093",
+      "lbl" : "erythrocyte sedimentation rate measurement",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A measurement of the speed at which red blood cells in anticoagulated whole blood descend in a standardized tube in one hour. Increased erythrocyte sedimentation rate is a nonspecific sign of inflammation."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035094",
+      "lbl" : "platelet aggregation assay",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An assessment of how well platelets aggregate (clump together) in the process of blood clotting."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035095",
+      "lbl" : "venography procedure",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Radiographic examination of veins following injection of contrast material."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "vein radiograph"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/contributor",
+          "val" : "https://orcid.org/0000-0002-0736-9199"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-04-12T17:56:44Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035096",
+      "lbl" : "breath hydrogen test",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The hydrogen breath test is a noninvasive procedure to diagnose dietary intolerance (e.g., lactose or galactose intolerance) and related conditions by measuring the amount of hydrogen exhaled in the breath following ingestion of the relevant sugar."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035097",
+      "lbl" : "visual evoked potential procedure",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An evaluation of the visual pathway of the nervous system by means of analysis of electrical waves measured by electrodes that are applied to the head."
+        }
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0035098",
       "lbl" : "biopsy of artery",
       "type" : "CLASS",
@@ -42638,6 +45089,191 @@
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "http://orcid.org/0000-0001-7941-2961"
         } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035099",
+      "lbl" : "electroretinogram procedure",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The electroretinogram (ERG) is a diagnostic test that measures the electrical activity of the retina in response to a light stimulus."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035101",
+      "lbl" : "phrenic nerve stimulation test",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A test that applied electric or magnetic stimulation to the neck to measure the response of the phrenic nerve."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035102",
+      "lbl" : "water deprivation test",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The water deprivation test, also known as the indirect water deprivation test should potentially be able to distinguish the various forms of DI. Deprivation of water intake should allow patients with primary polydipsia to concentrate their urine while those with central or nephrogenic DI continue to excrete dilute urine. Administration of desmopressin (Deamino-8-D-arginine vasopressin), the synthetic analog of AVP, after water deprivation should help with differentiating patients with central DI from those with nephrogenic DI as the former should be able to concentrate the urine once the deficient action of AVP is replaced with desmopressin, while the latter should not show a significant response due to end-organ resistance to the action of AVP or its analogs. PMID:30779536"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035103",
+      "lbl" : "refraction test",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A vision test that determines the presence of myopia, hyperopia, or astigmatism."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035104",
+      "lbl" : "motor evoked potential evaluation",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A neurophysiological examination that monitors the corticospinal tract beginning with a stimulus at the motor cortex, which travels along the corticospinal tract of the spinal cord to the nerve root, and then the peripheral nerve before terminating in a muscle belly. PMID:35593855"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035105",
+      "lbl" : "salivary cortisol test",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A determination of the amount of protein present in blood"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035106",
+      "lbl" : "paracentesis",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A procedure that removes peritoneal fluid from the abdomen (peritoneal cavity) through a needle or catheter to obtain ascitic fluid for diagnostic or therapeutic purposes."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035107",
+      "lbl" : "biopsy of carotid artery",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Removal and examination of tissue, cells, or fluids from carotid artery segment for the purpose of detecting or characterizing disease."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "carotid artery biopsy"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "carotid artery segment biopsy"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-04-12T20:39:14Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035108",
+      "lbl" : "sweat electrolyte test",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A quantitative measurement of the amount of an electrolyte present in sweat."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035109",
+      "lbl" : "immune complex assay",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An assay to assess the presence of immune complexes in the blood circulation."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035110",
+      "lbl" : "gustatory testing",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A medical test that evaluates the ability to taste. The tests are either chemical or electrical in nature. Chemical testing uses the natural stimuli and chemical tastants (sweet, sour, salty, bitter, and umami) to assess taste, whereas electrical testing adopts electrical currents applied directly to the surface of the tongue. Other investigations are employed in the assessment of gustatory dysfunction, such as certain imaging techniques, though these are not as useful in quantifying taste disorders. PMID:33620811"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035113",
+      "lbl" : "platelet transmission electron microscopy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A type of electron microscopy in which a beam of electrons is transmitted through a thin section in order to visualize the internal structures of platelets."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035114",
+      "lbl" : "immune cell function assay",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Measurement of peripheral blood lymphocyte response following stimulation to assess the degree of functionality of the cell-mediated immune response. A variety of tests exist to measure intracellular ATP levels, proliferation, and other functional responses."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035115",
+      "lbl" : "diffusion weighted cerebral MRI",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A type of cerebral magnetic resonance (MR) imaging that measures random Brownian motion of water molecules within each voxel of imaged brain tissue."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035117",
+      "lbl" : "cardiac exercise stress test",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A type of cardiac test in which the patient walks on a treadmill or rides a stationary bike, while cardiovascular parameters such as heart rhythm, blood pressure and breathing are measured."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035119",
+      "lbl" : "duplex ultrasound with color flow imaging",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A form of Doppler ultrasound examination that examines blood vessels and blood flow."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035120",
+      "lbl" : "cardiac auscultation",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Investigation of heart sounds with a stethoscope."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035121",
+      "lbl" : "electrooculogram procedure",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An electrophysiologic test that measures the existing resting electrical potential between the cornea and Bruch's membrane. The most common use of the electrooculogram is to confirm disease."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0035118%20",
+      "lbl" : "cardiac catheterization",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A procedure in which a catheter (thin hollow tube) is threaded into the heart via a large blood vessel, generally with contrast dye being injected through the catheter to visualize the heart chambers and coronary arteries."
+        }
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/maxo#ABBREVIATION",
@@ -42679,11 +45315,11 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0000010",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000002"
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001298"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0000011",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000002"
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001298"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0000012",
       "pred" : "is_a",
@@ -42873,14 +45509,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0000075"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/MAXO_0000075",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000003"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MAXO_0000075",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000566"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0000077",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0000010"
@@ -43024,10 +45652,6 @@
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0000130",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0000002"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MAXO_0000131",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000130"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0000132",
       "pred" : "is_a",
@@ -44081,10 +46705,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0000489"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/MAXO_0000493",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000003"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0000494",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0000487"
@@ -44108,10 +46728,6 @@
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0000498",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0000494"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MAXO_0000499",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000002"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0000500",
       "pred" : "is_a",
@@ -45883,7 +48499,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0000930",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000002"
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001298"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0000931",
       "pred" : "is_a",
@@ -46021,10 +48637,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0001352"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/MAXO_0000967",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000003"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0000968",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0000967"
@@ -46077,6 +48689,50 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0001352"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0000988",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000003"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0000989",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000571"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0000991",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001416"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0000992",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000991"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0000993",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001417"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0000994",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000993"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0000995",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000993"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0000996",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001417"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0000997",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001011"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0000998",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000999"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0000999",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000997"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0001000",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0000424"
@@ -46104,6 +48760,18 @@
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0001006",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0000829"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0001011",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000487"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0001012",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001011"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0001013",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001011"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0001014",
       "pred" : "is_a",
@@ -46145,6 +48813,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0000260"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0001024",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001011"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0001025",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0000181"
@@ -46153,9 +48825,21 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0000186"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0001028",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000998"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0001082",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0000962"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0001090",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000005"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0001090",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001028"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0001114",
       "pred" : "is_a",
@@ -46261,10 +48945,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0000131"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/MAXO_0001212",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000005"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0001220",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0000024"
@@ -46281,10 +48961,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0001135"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/MAXO_0001259",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001212"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0001268",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0000056"
@@ -46296,6 +48972,10 @@
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0001269",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0000003"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0001298",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000002"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0001307",
       "pred" : "is_a",
@@ -46336,6 +49016,26 @@
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0001341",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0000024"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0001351",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001298"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0001359",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000010"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0001388",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001351"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0001421",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001417"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0001468",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000993"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0002000",
       "pred" : "is_a",
@@ -46527,7 +49227,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0009029",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000002"
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001298"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0009030",
       "pred" : "is_a",
@@ -47417,10 +50117,6 @@
       "pred" : "http://purl.obolibrary.org/obo/MAXO_0001027",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_16285"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/MAXO_0010203",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000493"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0010321",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0001014"
@@ -47451,7 +50147,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0025003",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000002"
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001397"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0025004",
       "pred" : "is_a",
@@ -47481,6 +50177,70 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0035038"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035005",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0035058"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035011",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000605"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035017",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000005"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035018",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0035011"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035019",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0035011"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035020",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0035011"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035023",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000566"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035025",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000006"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035026",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000865"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035027",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000579"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035028",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000605"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035029",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000566"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035031",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000566"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035032",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000566"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035033",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000566"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035036",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000147"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0035038",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0001259"
@@ -47488,6 +50248,14 @@
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0035039",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0001212"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035040",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0035106"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035047",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000566"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0035049",
       "pred" : "is_a",
@@ -47497,9 +50265,197 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0000130"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035054",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000605"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035055",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000006"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035057",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000702"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035058",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000566"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035059",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001406"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035062",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0035058"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035063",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001406"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035064",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000005"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035065",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000731"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035066",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000939"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035067",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000003"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035068",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000006"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035069",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000997"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035075",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000029"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035076",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000147"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035077",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000006"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035078",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001408"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035079",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000707"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035080",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000006"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035083",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000989"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035084",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000487"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0035088",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0001259"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035090",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000595"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035091",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001406"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035092",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000886"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035093",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000006"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035094",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000006"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035095",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000007"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035096",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000003"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035097",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001406"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035099",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001155"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035101",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000939"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035102",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000886"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035103",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000971"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035104",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000527"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035105",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000605"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035106",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000003"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035108",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000582"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035109",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000605"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035110",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000003"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035113",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0035064"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035114",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000006"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035115",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000427"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035117",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000487"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035119",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0009008"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035120",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000487"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035121",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000003"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0035118%20",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0009033"
     } ],
     "logicalDefinitionAxioms" : [ {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000007",
@@ -47512,6 +50468,9 @@
         "fillerId" : "http://purl.obolibrary.org/obo/UBERON_0001043"
       } ]
     }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000034",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000002" ]
+    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000058",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000002" ]
     }, {
@@ -47520,6 +50479,9 @@
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000062",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000058" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000075",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000566" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000107",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000106" ],
@@ -47554,6 +50516,9 @@
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000126",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000124" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000131",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000130" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000157",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000058" ]
@@ -47807,295 +50772,295 @@
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000058" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000326",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000327",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000328",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000329",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000330",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000331",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000332",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000333",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000334",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000335",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000336",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000337",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000338",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000339",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000340",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000341",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000342",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000343",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000344",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000345",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000346",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000347",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000348",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000349",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000350",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000351",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000352",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000353",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000354",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000355",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000356",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000357",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000358",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000359",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000360",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000361",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000362",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000363",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000364",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000365",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000366",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000367",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000368",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000369",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000370",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000371",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000372",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000373",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000374",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000375",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000376",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000377",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000378",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000379",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000380",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000381",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000382",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000383",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000384",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000385",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000387",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000388",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000389",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000390",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000391",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000392",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000393",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000394",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000395",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000396",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000397",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000398",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000399",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000400",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000401",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000402",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000403",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000404",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000405",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000406",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000407",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000408",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000409",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000410",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000411",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000412",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000413",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000414",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000415",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000416",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000417",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000418",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000419",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000420",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000421",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000422",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000423",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000425",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000424" ]
@@ -48131,11 +51096,17 @@
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000444",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000058" ]
     }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000493",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000499",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000504",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000965" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000536",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000543",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000146" ]
@@ -48286,6 +51257,9 @@
         "fillerId" : "http://purl.obolibrary.org/obo/CHEBI_75769"
       } ]
     }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000789",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000566" ]
+    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000790",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000527" ]
     }, {
@@ -48370,6 +51344,18 @@
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000871",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000527" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000967",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000988",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000003" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000989",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000571" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000990",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001006",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000146" ]
@@ -48662,10 +51648,10 @@
       } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001121",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001122",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000571" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000989" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001123",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000106" ],
@@ -48996,6 +51982,9 @@
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001211",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000124" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001212",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000005" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001213",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000447" ]
@@ -49664,6 +52653,225 @@
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001387",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000033" ]
     }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001396",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001397",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001398",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001399",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001400",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001401",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001402",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001403",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001404",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001405",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001406",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001407",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001408",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001409",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001410",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001411",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001412",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001413",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001414",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001415",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001416",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001417",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001418",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001419",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001420",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001421",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000058" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001422",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001423",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001424",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001425",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001426",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001427",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001428",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001429",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001430",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001431",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001432",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001433",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001434",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001435",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001436",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001437",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001438",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001439",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001440",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001441",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001442",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001443",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000034" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001444",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001445",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001446",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001447",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001448",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001449",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001450",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001451",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001452",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001453",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001454",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001455",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001456",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001457",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001458",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001459",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001460",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001461",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001462",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001463",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001464",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001465",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001466",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001467",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001468",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000447" ]
+    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0009078",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0009076" ]
     }, {
@@ -50034,34 +53242,34 @@
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0009099" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0010311",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000571" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000989" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0010312",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000571" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000989" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0010313",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000571" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000989" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0010314",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000571" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000989" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0010315",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000571" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000989" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0010316",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000571" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000989" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0010317",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000571" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000989" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0010318",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000571" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000989" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0010319",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000571" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000989" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0010320",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000571" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000989" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0010351",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000595" ]
@@ -50149,6 +53357,16 @@
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0035053",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000072" ]
     }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0035061",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000989" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0035071",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000566" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002233",
+        "fillerId" : "http://purl.obolibrary.org/obo/CHEBI_26523"
+      } ]
+    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0035072",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000033" ]
     }, {
@@ -50168,13 +53386,26 @@
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000072" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0035087",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0035088",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000424" ]
     }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0035089",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000131" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0035095",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000007" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002233",
+        "fillerId" : "http://purl.obolibrary.org/obo/UBERON_0001638"
+      } ]
+    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0035098",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0035107",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000990" ]
     } ]
   } ]
 }
