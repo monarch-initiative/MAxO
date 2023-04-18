@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2023-04-13/maxo-base.owl
+data-version: maxo/releases/2023-04-18/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
@@ -8,7 +8,7 @@ property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" 
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
 property_value: IAO:0000700 MAXO:0000001
-property_value: owl:versionInfo "2023-04-13" xsd:string
+property_value: owl:versionInfo "2023-04-18" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -7585,7 +7585,7 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000682
-name: cardiovascular disease internist evaluation
+name: cardiologist evaluation
 def: "An assessment by an internist who specializes in diseases of the heart and blood vessels and manages complex cardiac conditions, such as heart attacks and life-threatening, abnormal heartbeat rhythms." [abms.org]
 synonym: "assessment by cardiologist" EXACT []
 synonym: "cardiologist consultation" EXACT []
@@ -10423,15 +10423,6 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T19:03:34Z" xsd:
 created_by: https://orcid.org/0000-0001-7941-2961
 
 [Term]
-id: MAXO:0000968
-name: fundoscopy
-def: "A visualization of the fundus of the eye including the retina and optic nerve with a fundoscope, a device that projects light through the pupil of the eye and visualizes the fundus with magnification." []
-synonym: "fundoscopic exam" EXACT []
-is_a: MAXO:0000967 ! ophthalmic diagnostic procedure
-property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T19:06:03Z" xsd:dateTime
-created_by: https://orcid.org/0000-0001-7941-2961
-
-[Term]
 id: MAXO:0000969
 name: optical coherence tomography
 def: "A noninvasive imaging technique that provides high-resolution, cross-sectional images of the retina, retinal nerve fiber layer and the optic nerve head." [PMID:23429598]
@@ -12587,7 +12578,6 @@ name: esophagogastroduodenoscopy
 def: "Inspection of upper digestive tract using an endoscope." []
 synonym: "EGD" EXACT []
 synonym: "endoscopy of upper digestive tract" EXACT []
-synonym: "gastroscopy" EXACT []
 synonym: "oesophagogastroduodenoscopy" EXACT []
 synonym: "OGD" EXACT []
 synonym: "upper digestive tract endoscope" EXACT []
@@ -14609,7 +14599,7 @@ id: MAXO:0001421
 name: keratolytic agent therapy
 def: "Treatment with a drug that softens, separates, and causes desquamation of the cornified epithelium or horny layer of skin." []
 comment: Keratolytic drugs are used to expose mycelia of infecting fungi or to treat corns, warts, and certain other skin diseases.
-synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_50176" EXACT []
+synonym: "treatment with keratolytic drug" EXACT []
 is_a: MAXO:0001417 ! therapeutic procedure of skin of body
 property_value: http://purl.org/dc/elements/1.1/date "2023-03-31T11:00:00Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
@@ -15977,16 +15967,6 @@ synonym: "GABA transaminase inhibitor" EXACT []
 synonym: "treatment with EC 2.6.1.19 (4-aminobutyrate--2-oxoglutarate transaminase) inhibitor" EXACT []
 is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date "2022-08-18T11:00:00Z" xsd:string
-created_by: http://orcid.org/0000-0001-7941-2961
-
-[Term]
-id: MAXO:0009098
-name: intraoral radiography
-def: "A procedure whre the radiographic film or sensor is placed inside the mouth and uses small amounts of radiation to produce pictures of teeth and other oral structures." []
-synonym: "intraoral x-ray procedure" EXACT []
-synonym: "radiograph inside the mouth" EXACT []
-is_a: MAXO:0000595 ! radiograph imaging procedure
-property_value: http://purl.org/dc/elements/1.1/date "2023-02-20T17:13:55Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -18411,11 +18391,30 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-02-10T20:39:14Z" xsd:
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0035002
+name: intraoral radiography
+def: "A procedure whre the radiographic film or sensor is placed inside the mouth and uses small amounts of radiation to produce pictures of teeth and other oral structures." []
+synonym: "intraoral x-ray procedure" EXACT []
+synonym: "radiograph inside the mouth" EXACT []
+is_a: MAXO:0000595 ! radiograph imaging procedure
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-20T17:13:55Z" xsd:dateTime
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0035003
 name: fluorescein angiography
 def: "A technique to visualize the blood vessels in the back of the eye by injecting fluorescent dye and then imaging it." []
 is_a: MAXO:0035038 ! contrast angiography procedure
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-21T18:55:59Z" xsd:dateTime
+created_by: https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035004
+name: fundoscopy
+def: "A visualization of the fundus of the eye including the retina and optic nerve with a fundoscope, a device that projects light through the pupil of the eye and visualizes the fundus with magnification." []
+synonym: "fundoscopic exam" EXACT []
+is_a: MAXO:0000967 ! ophthalmic diagnostic procedure
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T19:06:03Z" xsd:dateTime
 created_by: https://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -18437,6 +18436,12 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-02-10T20:39:14Z" xsd:
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0035007
+name: cerebrospinal fluid analysis
+def: "Analysis of a cerebrospinal fluid sample." []
+is_a: MAXO:0000566 ! clinical chemistry assessment
+
+[Term]
 id: MAXO:0035008
 name: shoulder radiograph procedure
 def: "Use of an imaging test that uses small amounts of radiation to produce pictures of shoulder." []
@@ -18448,10 +18453,28 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-02-10T20:39:14Z" xsd:
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0035009
+name: examination by dentist
+def: "A direct appraisal of a patient's condition by a dentist that is based on an oral exam, medical history, and the patient's account of symptoms." []
+is_a: MAXO:0009053 ! medical specialist examination
+
+[Term]
+id: MAXO:0035010
+name: examination by neonatologist
+def: "A direct appraisal by a professional who is an expert in premature babies or newborns with high-risk or complex health conditions. The physician performs a physical exam and takes medical history." []
+is_a: MAXO:0009053 ! medical specialist examination
+
+[Term]
 id: MAXO:0035011
 name: enzyme activity assessment
 def: "Measurement of the functionality of an enzyme." []
 is_a: MAXO:0000605 ! protein measurement
+
+[Term]
+id: MAXO:0035012
+name: perimetry examination
+def: "A test that measures all areas of your eyesight including peripheral vision." []
+is_a: MAXO:0000971 ! vision assessment
 
 [Term]
 id: MAXO:0035014
@@ -18462,6 +18485,18 @@ synonym: "spinal cord magnetic resonance imaging" EXACT []
 synonym: "spinal cord MRI" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-10T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035015
+name: visual acuity assessment
+def: "A test to determine the smallest letters a patient can clearly see." []
+is_a: MAXO:0000971 ! vision assessment
+
+[Term]
+id: MAXO:0035016 
+name: optical coherence tomography
+def: "A noninvasive imaging method that uses reflected light to create pictures of the back of your eye." []
+is_a: MAXO:0001155 ! eye examination
 
 [Term]
 id: MAXO:0035017
@@ -18494,6 +18529,12 @@ def: "A quantitative measurement of metabolites present in a particular tissue."
 is_a: MAXO:0000566 ! clinical chemistry assessment
 
 [Term]
+id: MAXO:0035024
+name: high-resolution pulmonary computed tomography
+def: "A type of CT where the image resolution is enhanced to look at lung disease." []
+is_a: MAXO:0000571 ! computed tomography procedure
+
+[Term]
 id: MAXO:0035025
 name: in vitro DNA repair study
 def: "A test that measures DNA damage/breakage in patient cells.  DNA damage repair plays an important role in cancer's initiation and progression, and in therapeutic resistance." []
@@ -18521,7 +18562,13 @@ is_a: MAXO:0000605 ! protein measurement
 id: MAXO:0035029
 name: cerebrospinal fluid metabolite measurement
 def: "A quantitative measurement of metabolites present in a cerebrospinal fluid sample." []
-is_a: MAXO:0000566 ! clinical chemistry assessment
+is_a: MAXO:0035007 ! cerebrospinal fluid analysis
+
+[Term]
+id: MAXO:0035030
+name: gastrointestinal transit measurement
+def: "The time an indigestible, non-absorbable markers takes to be excreted." []
+is_a: MAXO:0001451 ! diagnostic procedure of feces
 
 [Term]
 id: MAXO:0035031
@@ -18571,6 +18618,15 @@ def: "A laboratory test in which blood, taken from the patient, is inoculated in
 is_a: MAXO:0000147 ! hematology testing
 
 [Term]
+id: MAXO:0035037
+name: gastroscopy
+def: "Inspection of stomach using an endoscope." []
+synonym: "endoscopy of stomach" EXACT []
+synonym: "stomach endoscope" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-04-19T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0035038
 name: contrast angiography procedure
 def: "An x-ray of blood vessels after a contrast dye is added intraveniously." []
@@ -18597,6 +18653,21 @@ def: "A procedure where fluid is removed from the abdomen using a needle." []
 is_a: MAXO:0035106 ! paracentesis
 
 [Term]
+id: MAXO:0035041
+name: neurodevelopmental assessment
+def: "A comprehensive set of tests designed to assess all aspects of a child's development, including cognition, language, motor, and social skills." []
+is_a: MAXO:0001406 ! diagnostic procedure of nervous system
+
+[Term]
+id: MAXO:0035042
+name: duodenoscopy
+def: "Inspection of duodenum using an endoscope." []
+synonym: "duodenum endoscope" EXACT []
+synonym: "endoscopy of duodenum" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-04-19T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0035043
 name: upper limb radiography
 def: "Use of an imaging test that uses small amounts of radiation to produce pictures of forelimb." []
@@ -18607,6 +18678,25 @@ synonym: "radiograph of upper limb" EXACT []
 synonym: "radiography of forelimb" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-10T20:39:14Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0035044
+name: cardiac CT
+def: "The use of computed tomography to produce images of structures of the heart." []
+synonym: "CAT scan of heart" EXACT []
+synonym: "CT of heart" EXACT []
+synonym: "heart CAT scan" EXACT []
+synonym: "heart computed tomography" EXACT []
+synonym: "heart computerized axial tomography" EXACT []
+synonym: "heart CT examination" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-04-19T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-3010
+
+[Term]
+id: MAXO:0035046
+name: esophageal manometry
+def: "A motility study to assess motor function of the upper esophageal sphincter, esophageal body and lower esophageal sphincter." []
+is_a: MAXO:0001396 ! diagnostic procedure of digestive system
 
 [Term]
 id: MAXO:0035047
@@ -18656,6 +18746,18 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-02-10T20:39:14Z" xsd:
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
+id: MAXO:0035052
+name: hip radiography
+def: "Use of an imaging test that uses small amounts of radiation to produce pictures of hip." []
+comment: .
+synonym: "hip radiogram procedure" EXACT []
+synonym: "hip X-ray procedure" EXACT []
+synonym: "radiograph of hip" EXACT []
+synonym: "radiography of hip" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-04-19T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0035053
 name: ovary ultrasonography
 def: "The use of ultrasound to produce images of structures in the ovary." []
@@ -18700,6 +18802,12 @@ id: MAXO:0035059
 name: nerve conduction study
 def: "A test to determine the electrical conduction of the motor and sensory nerves of the human body." []
 is_a: MAXO:0001406 ! diagnostic procedure of nervous system
+
+[Term]
+id: MAXO:0035060
+name: central motor conduction time study
+def: "The time taken for neural impulses to travel through the central nervous system on their way to the target muscles. PMID: 24112910" []
+is_a: MAXO:0035059 ! nerve conduction study
 
 [Term]
 id: MAXO:0035061
@@ -18755,7 +18863,7 @@ is_a: MAXO:0000003 ! diagnostic procedure
 id: MAXO:0035068
 name: natural killer cell function test
 def: "An assay of the physiology of natural killer (NK) cells." []
-is_a: MAXO:0000006 ! clinical laboratory procedure
+is_a: MAXO:0035122 ! cell function assay
 
 [Term]
 id: MAXO:0035069
@@ -18765,10 +18873,10 @@ is_a: MAXO:0000997 ! body shape assessment
 
 [Term]
 id: MAXO:0035071
-name: http://purl.obolibrary.org/obo/CHEBI_26523 measurement
-def: "The determination of the amount of http://purl.obolibrary.org/obo/CHEBI_26523 present in the sample." []
-synonym: "http://purl.obolibrary.org/obo/CHEBI_26523 assessment" EXACT []
-synonym: "http://purl.obolibrary.org/obo/CHEBI_26523 test" EXACT []
+name: reactive oxygen species measurement
+def: "The determination of the amount of reactive oxygen species present in the sample." []
+synonym: "reactive oxygen species assessment" EXACT []
+synonym: "reactive oxygen species test" EXACT []
 intersection_of: MAXO:0000566 ! clinical chemistry assessment
 intersection_of: RO:0002233 CHEBI:26523
 property_value: http://purl.org/dc/elements/1.1/date "2022-04-12T13:40:00Z" xsd:string
@@ -18817,7 +18925,7 @@ is_a: MAXO:0000147 ! hematology testing
 id: MAXO:0035077
 name: functional T cell assessment
 def: "The test measures the T cell responses to antigens of common infections as well as to mitogens, allowing detection of deficiencies in this arm of the immune response." []
-is_a: MAXO:0000006 ! clinical laboratory procedure
+is_a: MAXO:0035122 ! cell function assay
 
 [Term]
 id: MAXO:0035078
@@ -18835,7 +18943,7 @@ is_a: MAXO:0000707 ! pediatrician evaluation
 id: MAXO:0035080
 name: apoptosis assay
 def: "A test to determine if cells are undergoing programmed cell death." []
-is_a: MAXO:0000006 ! clinical laboratory procedure
+is_a: MAXO:0035122 ! cell function assay
 
 [Term]
 id: MAXO:0035082
@@ -18938,13 +19046,13 @@ is_a: MAXO:0000886 ! kidney function testing
 id: MAXO:0035093
 name: erythrocyte sedimentation rate measurement
 def: "A measurement of the speed at which red blood cells in anticoagulated whole blood descend in a standardized tube in one hour. Increased erythrocyte sedimentation rate is a nonspecific sign of inflammation." []
-is_a: MAXO:0000006 ! clinical laboratory procedure
+is_a: MAXO:0035122 ! cell function assay
 
 [Term]
 id: MAXO:0035094
 name: platelet aggregation assay
 def: "An assessment of how well platelets aggregate (clump together) in the process of blood clotting." []
-is_a: MAXO:0000006 ! clinical laboratory procedure
+is_a: MAXO:0035122 ! cell function assay
 
 [Term]
 id: MAXO:0035095
@@ -18980,6 +19088,12 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0035099
 name: electroretinogram procedure
 def: "The electroretinogram (ERG) is a diagnostic test that measures the electrical activity of the retina in response to a light stimulus." []
+is_a: MAXO:0001155 ! eye examination
+
+[Term]
+id: MAXO:0035100
+name: applanation tonometry
+def: "A test used to measure interocular pressure." []
 is_a: MAXO:0001155 ! eye examination
 
 [Term]
@@ -19055,7 +19169,7 @@ is_a: MAXO:0035064 ! electron microscopic study
 id: MAXO:0035114
 name: immune cell function assay
 def: "Measurement of peripheral blood lymphocyte response following stimulation to assess the degree of functionality of the cell-mediated immune response. A variety of tests exist to measure intracellular ATP levels, proliferation, and other functional responses." []
-is_a: MAXO:0000006 ! clinical laboratory procedure
+is_a: MAXO:0035122 ! cell function assay
 
 [Term]
 id: MAXO:0035115
@@ -19092,6 +19206,12 @@ id: MAXO:0035121
 name: electrooculogram procedure
 def: "An electrophysiologic test that measures the existing resting electrical potential between the cornea and Bruch's membrane. The most common use of the electrooculogram is to confirm disease." []
 is_a: MAXO:0000003 ! diagnostic procedure
+
+[Term]
+id: MAXO:0035122
+name: cell function assay
+def: "An assessment of cell function." []
+is_a: MAXO:0000006 ! clinical laboratory procedure
 
 [Typedef]
 id: MAXO:0000521
