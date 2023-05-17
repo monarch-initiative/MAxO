@@ -12,7 +12,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/maxo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2023-05-02/maxo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2023-05-17/maxo-base.owl"/>
         <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000001"/>
         <dc:creator>Leigh Carmody</dc:creator>
         <dc:creator>Peter Robinson</dc:creator>
@@ -20,7 +20,7 @@
         <dc:title>Medical Action Ontology</dc:title>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <owl:versionInfo>2023-05-02</owl:versionInfo>
+        <owl:versionInfo>2023-05-17</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -305,6 +305,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_145810 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_145810"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_145947 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_145947"/>
@@ -506,6 +512,12 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_176843 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_176843"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_177023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_177023"/>
     
 
 
@@ -818,6 +830,12 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_29016 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_29016"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_32184 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_32184"/>
     
 
 
@@ -1385,6 +1403,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_50265 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_50265"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_50268 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_50268"/>
@@ -1412,6 +1436,12 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_50510 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_50510"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_50664 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_50664"/>
     
 
 
@@ -1559,6 +1589,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_60311 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_60311"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_60643 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_60643"/>
@@ -1592,6 +1628,12 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_64102 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_64102"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_64133 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_64133"/>
     
 
 
@@ -1682,6 +1724,12 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_72571 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_72571"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_73273 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_73273"/>
     
 
 
@@ -8489,6 +8537,17 @@
     <!-- http://purl.obolibrary.org/obo/MAXO_0000259 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000259">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000864"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_145810"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000572"/>
         <obo:IAO_0000115>A synthetic or animal-derived form of insulin used in the treatment of diabetes mellitus. Therapeutic insulin is formulated to be short-, intermediate- and long-acting in order to individualize an insulin regimen according to individual differences in glucose and insulin metabolism. Therapeutic insulin may be derived from porcine, bovine or recombinant sources. Endogenous human insulin, a pancreatic hormone composed of two polypeptide chains, is important for the normal metabolism of carbohydrates, proteins and fats and has anabolic effects on many types of tissues.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T20:33:51Z</dc:date>
@@ -8497,7 +8556,8 @@
         <oboInOwl:hasExactSynonym>insulin drug treatment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>insulin therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>therapeutic insulin preparations treatment</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">therapeutic insulin treatment</rdfs:label>
+        <oboInOwl:hasExactSynonym>therapeutic insulin therapy</oboInOwl:hasExactSynonym>
+        <rdfs:label>insulin treatment</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000259"/>
@@ -33147,6 +33207,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <obo:IAO_0000115>Use of a drug or agent that modulates parasympatholytic signaling.</obo:IAO_0000115>
         <dc:date>2023-02-23T11:00:00Z</dc:date>
         <oboInOwl:created_by>http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym>dopaminergic modifying agent therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with parasympatholytic</oboInOwl:hasExactSynonym>
         <rdfs:label>parasympatholytic therapy</rdfs:label>
     </owl:Class>
@@ -33181,7 +33242,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <dc:date>2023-02-23T11:00:00Z</dc:date>
         <oboInOwl:created_by>http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym>treatment with dopaminergic agent</oboInOwl:hasExactSynonym>
-        <rdfs:label>dopaminergic modifying agent therapy</rdfs:label>
+        <rdfs:label>dopaminergic agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -36855,6 +36916,216 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>skin excision</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>zone of skin surgical removal</oboInOwl:hasExactSynonym>
         <rdfs:label>surgical skin removal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001469 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001469">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000864"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64133"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Use of a drug or agent that inhibits farnesyltransferase.</obo:IAO_0000115>
+        <dc:date>2023-05-15T11:00:00Z</dc:date>
+        <oboInOwl:created_by>http://orcid.org/0000-0003-4830-7530</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym>farnesyltransferase inhibitor treatment</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>treatment with http://purl.obolibrary.org/obo/CHEBI_64133</oboInOwl:hasExactSynonym>
+        <rdfs:label>farnesyltransferase inhibitor agent therapy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001470 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001470">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000864"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50664"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Use of a drug or agent that inhibits matrix metalloprotease inhibitor.</obo:IAO_0000115>
+        <dc:date>2023-05-15T11:00:00Z</dc:date>
+        <oboInOwl:created_by>http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym>treatment with http://purl.obolibrary.org/obo/CHEBI_50664</oboInOwl:hasExactSynonym>
+        <rdfs:label>MMP inhibitor agent therapy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001471 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001471">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000864"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_32184"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Treatment with a topical cream that is used to treat psoriasis.</obo:IAO_0000115>
+        <dc:date>2023-05-15T11:00:00Z</dc:date>
+        <oboInOwl:created_by>http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <rdfs:label>tazarotene agent therapy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001473 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001473">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000864"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50265"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Treatment with a diuretic to treat hypertension or edema.</obo:IAO_0000115>
+        <dc:date>2023-05-15T11:00:00Z</dc:date>
+        <oboInOwl:created_by>http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <rdfs:label>benzothiadiazine derivative therapy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001474 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001474">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000864"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_60311"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Treatment with thyroid hormone or drugs replicating thyroid hormone to maintain a normally functioning thyroid.</obo:IAO_0000115>
+        <dc:date>2023-05-15T11:00:00Z</dc:date>
+        <oboInOwl:created_by>http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym>treatment with http://purl.obolibrary.org/obo/CHEBI_60311</oboInOwl:hasExactSynonym>
+        <rdfs:label>thyroid hormone therapy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001475 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001475">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000864"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_73273"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Treatment with a class of medicines inhibit sodium-glucose cotransporter-2. Drugs are used with diet and exercise to lower blood sugar in adults with type 2 diabetes.</obo:IAO_0000115>
+        <dc:date>2023-05-15T11:00:00Z</dc:date>
+        <oboInOwl:created_by>http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym>treatment with http://purl.obolibrary.org/obo/CHEBI_73273</oboInOwl:hasExactSynonym>
+        <rdfs:label>sodium-glucose cotransporter-2 inhibitor therapy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001476 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001476">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000864"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_177023"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Treatment with an activator to the somatostatin receptor.</obo:IAO_0000115>
+        <dc:date>2023-05-15T11:00:00Z</dc:date>
+        <oboInOwl:created_by>http://orcid.org/0000-0001-7941-2961</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym>treatment with http://purl.obolibrary.org/obo/CHEBI_177023</oboInOwl:hasExactSynonym>
+        <rdfs:label>somatostatin recepter agonist therapy</rdfs:label>
     </owl:Class>
     
 
