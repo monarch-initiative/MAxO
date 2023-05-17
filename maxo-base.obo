@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2023-05-02/maxo-base.owl
+data-version: maxo/releases/2023-05-17/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
@@ -8,7 +8,7 @@ property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" 
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
 property_value: IAO:0000700 MAXO:0000001
-property_value: owl:versionInfo "2023-05-02" xsd:string
+property_value: owl:versionInfo "2023-05-17" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -3072,13 +3072,16 @@ created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000259
-name: therapeutic insulin treatment
+name: insulin treatment
 def: "A synthetic or animal-derived form of insulin used in the treatment of diabetes mellitus. Therapeutic insulin is formulated to be short-, intermediate- and long-acting in order to individualize an insulin regimen according to individual differences in glucose and insulin metabolism. Therapeutic insulin may be derived from porcine, bovine or recombinant sources. Endogenous human insulin, a pancreatic hormone composed of two polypeptide chains, is important for the normal metabolism of carbohydrates, proteins and fats and has anabolic effects on many types of tissues." [NCIT:C581]
 synonym: "insulin drug treatment" EXACT []
 synonym: "insulin therapy" EXACT []
 synonym: "therapeutic insulin preparations treatment" EXACT []
+synonym: "therapeutic insulin therapy" EXACT []
 xref: NCIT:C581
 is_a: MAXO:0000572 ! hypoglycemic drug therapy
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: MAXO:0000864 CHEBI:145810 ! therapeutic uses
 property_value: http://purl.org/dc/elements/1.1/date "2019-01-22T20:33:51Z" xsd:dateTime
 created_by: http://orcid.org/0000-0001-7941-2961
 
@@ -13901,13 +13904,14 @@ created_by: http://orcid.org/0000-0001-7941-2961
 id: MAXO:0001330
 name: parasympatholytic therapy
 def: "Use of a drug or agent that modulates parasympatholytic signaling." []
+synonym: "dopaminergic modifying agent therapy" EXACT []
 synonym: "treatment with parasympatholytic" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001331
-name: dopaminergic modifying agent therapy
+name: dopaminergic agent therapy
 def: "Use of a drug or agent that modulates dopamine signaling." []
 synonym: "treatment with dopaminergic agent" EXACT []
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
@@ -14982,6 +14986,65 @@ synonym: "skin excision" EXACT []
 synonym: "zone of skin surgical removal" EXACT []
 is_a: MAXO:0000993 ! removal of skin
 property_value: http://purl.org/dc/elements/1.1/date "2023-03-31T20:39:14Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001469
+name: farnesyltransferase inhibitor agent therapy
+def: "Use of a drug or agent that inhibits farnesyltransferase." []
+synonym: "farnesyltransferase inhibitor treatment" EXACT []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_64133" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-05-15T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0003-4830-7530
+
+[Term]
+id: MAXO:0001470
+name: MMP inhibitor agent therapy
+def: "Use of a drug or agent that inhibits matrix metalloprotease inhibitor." []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_50664" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-05-15T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001471
+name: tazarotene agent therapy
+def: "Treatment with a topical cream that is used to treat psoriasis." []
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: MAXO:0000864 CHEBI:32184 ! therapeutic uses
+property_value: http://purl.org/dc/elements/1.1/date "2023-05-15T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001473
+name: benzothiadiazine derivative therapy
+def: "Treatment with a diuretic to treat hypertension or edema." []
+intersection_of: MAXO:0000058 ! pharmacotherapy
+intersection_of: MAXO:0000864 CHEBI:50265 ! therapeutic uses
+property_value: http://purl.org/dc/elements/1.1/date "2023-05-15T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001474
+name: thyroid hormone therapy
+def: "Treatment with thyroid hormone or drugs replicating thyroid hormone to maintain a normally functioning thyroid." []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_60311" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-05-15T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001475
+name: sodium-glucose cotransporter-2 inhibitor therapy
+def: "Treatment with a class of medicines inhibit sodium-glucose cotransporter-2. Drugs are used with diet and exercise to lower blood sugar in adults with type 2 diabetes." []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_73273" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-05-15T11:00:00Z" xsd:string
+created_by: http://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001476
+name: somatostatin recepter agonist therapy
+def: "Treatment with an activator to the somatostatin receptor." []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_177023" EXACT []
+property_value: http://purl.org/dc/elements/1.1/date "2023-05-15T11:00:00Z" xsd:string
 created_by: http://orcid.org/0000-0001-7941-2961
 
 [Term]
