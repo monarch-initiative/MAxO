@@ -52,24 +52,6 @@ Below are the top-level classes in MAxO and examples of each class.
 		
     - Supplementation or alternative therapies are only included if there are studies indicating their utility and have been recommended in the clinical literature. This section will be kept minimal and decided on a case by case basis.
 	Examples: chiropractic therapy, amino acid/vitamin supplementation(yes), herbal supplementation(no)-* 
-
-
-## OBO ontologies imported
-
-Below are the imported ontologies used for logical definitions
-
-- [NBO](https://github.com/obo-behavior/behavior-ontology)
-- [FOODON](https://github.com/FoodOntology/foodon)
-- [CHEBI](https://github.com/ebi-chebi/ChEBI)
-- [MAXO](https://github.com/monarch-initiative/MAxO)
-- [HP](https://github.com/obophenotype/human-phenotype-ontology/issues)
-- [UBERON](https://github.com/obophenotype/uberon)
-- PR
-- RO
-- IAO
-- [GO](https://github.com/geneontology/)
-- [OBI](https://github.com/obi-ontology/obi)
-        
         
 ### MAxO Curation
 
@@ -130,21 +112,6 @@ If you would like email updates for releases medical-action-ontology-mailing-lis
 
 # Annotations
 
-MAxO will provide a vocabulary to annotate diseases and phenotypes with recommended treatments and interventions. To make requests for annotations, please make a ticket here: https://github.com/monarch-initiative/maxo-annotations
-If you would like to help making annotations or obtain a tsv file of annotations, request a login at https://poet.jax.org/
-
-
-### Ontology use in practice
-
-The goal is to focus on the computational representation of rare disease treatments and interventions. 
-
-1. MAxO terms are currently being used to annotate disease and disease phenotypes using POET. [https://poet.jax.org/](https://poet.jax.org/-)
-
-2. Clinical Centre of Expertise for Rare and Undiagnosed Diseases (Rare Care Centre) is using MAxO to annotate their work.
-
-    FUTURE USE
-
-3. Mining terms/identifying terms from [GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1116/)–we have built text mining code to identify MAxO terms in Gene Reviews.
-
-4. [Treatabolome](https://treatabolome.cnag.crg.eu/#/): A gene and variant-centric database of treatments for rare disease. Currently, team uses HPO terms for annotation.
-
+Suggestions for MAxO annotations can be made with the [POET]() tool.
+Annotations can be downloaded on the [maxo-annotations](https://github.com/monarch-initiative/maxo-annotations) repository.
+Documentation ais available [here](https://monarch-initiative.github.io/maxo-annotations/index.html#)
