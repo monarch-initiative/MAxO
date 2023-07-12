@@ -1,58 +1,38 @@
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 # Medical Action Ontology (MAXO)
 
 
 The Medical Action Ontology (MAxO) provides a broad view of medical actions and includes terms for medical procedures, interventions, therapies, treatments, and recommendations.
 
-# Top-level: 
+![M png-1](https://github.com/monarch-initiative/MAxO/assets/4943420/36ce7e46-76ef-48e6-af2d-7a0a2f548d63)
 
-Below are the top-level classes in MAxO and examples of each class. 
 
-    **Palliative care**: 
-        - end-of-life care
-        - pain management
-        - Etc.
-    **Diagnostic procedure**: 
-        - Biomarker analysis
-        - Clinical imaging procedure
-        - Clinical laboratory procedure
-        - Etc.
-    **Preventative therapeutics**: 
-        - smoking prevention
-        - preventative immunization
-        - prevention of abnormal physiologic state, i.e., hypertension prevention
-        - ketosis prevention
-        - Etc.
-    **Complementary and alternative therapies**: 
-        - Acupuncture therapy
-        - Chiropractic therapy
-        - Etc.
-    **Therapeutic procedure**: 
-        - Biologic therapy
-        - Pharmacotherapy
-        - Physical therapy
-        - Radiation therapy
-        - Surgical procedure
-        - Etc.
-    **Medical action avoidance**:
-        - ketogenic diet intake avoidance
-        - avoid CT scan
-        - radiograph imaging avoidance
-        - Etc.
 
-## Term inclusion: 
+# Download
 
-    - Process and not information entities are included. 
-	Examples: clinical tests (yes), clinical results (no) 
-		
-    - Recommendations for diagnostics, therapy, treatment, or prevention or avoidance. Life skills would not be included, but it will be decided on a case by case basis.
-	Examples: hearing aid usage and speech therapy (yes), sign language (no)
-		
-    - Clinical tests, examinations, and clinically relevant biomarker assessments will be included, but developmental research will not. Think CLIA certified tests.
-	Examples: Clinical tests (yes), purely research lab tests (no)
-		
-    - Supplementation or alternative therapies are only included if there are studies indicating their utility and have been recommended in the clinical literature. This section will be kept minimal and decided on a case by case basis.
-	Examples: chiropractic therapy, amino acid/vitamin supplementation(yes), herbal supplementation(no)-* 
-        
+ * You should download MAxO using the URLs
+ 
+- http://purl.obolibrary.org/obo/maxo.obo
+- http://purl.obolibrary.org/obo/maxo.json
+- http://purl.obolibrary.org/obo/maxo.owl
+
+# Questions/Requests/Tickets
+
+ * Please post issues at our [github tracker](https://github.com/monarch-initiative/MAxO/issues)
+
+# Contact
+
+### Direct
+
+ If you have questions, please contact leigh.carmody@jax.org or peter.robinson@jax.org
+
+### Mailing list
+
+Consider signing up the HPO mailing list at https://groups.io/g/human-phenotype-ontology
+
+
+
+
 ### MAxO Curation
 
 - DOSDP templates are the prefered method to add terms to MAxO as it coordinates term labels, textual definitions, and logical definitions. Manual and or Robot templates may be used, but please look first to see if DOSDP templates are in use. To learn more about how to develop and use DOSDP templates, see  [MAxOs DOSDP templates](https://github.com/monarch-initiative/MAxO/tree/master/src/patterns) wiki or [OBO DOSDP tutorials ](https://oboacademy.github.io/obook/tutorial/dosdp-overview/) for how to construct these).
