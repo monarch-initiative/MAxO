@@ -9,11 +9,11 @@ contributors:
 classes:
   cell_count: MAXO:0000146
   native_cell: CL:0000003
-
+  amount: PATO:0000070
 relations:
   has_input: RO:0002233
   part_of: BFO:0000050
-  amount: PATO:0000070
+  characteristic_of: RO:0000052
 annotationProperties:
   exact_synonym: oio:hasExactSynonym 
   created_by: dcterms:creator
@@ -77,7 +77,7 @@ def:
     - cell
 
 equivalentTo:
-  text: "'cell_count' and 'has_input' some ('amount' some %s)"
+  text: "'cell_count' and 'has_input' some ('amount' and 'characteristic_of' some %s)"
   vars:
     - cell
 

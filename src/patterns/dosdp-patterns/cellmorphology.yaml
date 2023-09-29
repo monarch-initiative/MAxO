@@ -9,11 +9,12 @@ contributors:
 classes:
   cell_morph: MAXO:0000033
   native_cell: CL:0000003
+  morphology: PATO:0000051
 
 relations:
   has_input: RO:0002233
   part_of: BFO:0000050
-  morphology: PATO:0000051
+  characteristic_of: RO:0000052
 annotationProperties:
   exact_synonym: oio:hasExactSynonym 
   created_by: dcterms:creator
@@ -69,7 +70,7 @@ def:
     - cell
 
 equivalentTo:
-  text: "'cell_morph' and 'has_input' some ('morphology' some %s)"
+  text: "'cell_morph' and 'has_input' some ('morphology' and 'characteristic_of' some %s)"
   vars:
     - cell
 
