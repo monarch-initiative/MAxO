@@ -90,3 +90,19 @@ merge_template: $(MERGE_TEMPLATE)
 #	echo "HP:0040145" >> $@
 #	echo "HP:0000843" >> $@
 #	echo "HP:0000829" >> $@
+
+############################
+### Temporary Overwrites ###
+############################
+
+## REMOVE THE FOLLOWING IF THIS IS RESOLVED: https://github.com/FoodOntology/foodon/pull/283
+## ONTOLOGY: foodon
+.PHONY: mirror-foodon
+.PRECIOUS: $(MIRRORDIR)/foodon.owl
+mirror-foodon: | $(TMPDIR)
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(OBOBASE)/foodon.owl --create-dirs -o $(MIRRORDIR)/foodon.owl --retry 4 --max-time 200 &&\
+		$(ROBOT) convert -i $(MIRRORDIR)/foodon.owl -o $@.tmp.owl && \
+		$(ROBOT) remove -i $@.tmp.owl --base-iri http://purl.obolibrary.org/obo/PO_ --base-iri http://purl.obolibrary.org/obo/FOODON_ --axioms external --preserve-structure false --trim false \
+			remove --term rdf:type \
+			rename --mapping rdfs:anyURI xsd:anyURI -o $@.tmp.owl &&\
+		mv $@.tmp.owl $(TMPDIR)/$@.owl; fi
