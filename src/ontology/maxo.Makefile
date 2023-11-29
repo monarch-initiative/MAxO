@@ -82,14 +82,10 @@ merge_template: $(MERGE_TEMPLATE)
 MAXOA_DIRECTORY=tmp/maxoa
 MAXOA_FILENAME=maxo-annotations.tsv
 maxoa:
-	# not log the line
-	# @test $(MAXOA_RELEASE_PASSWORD) || "ENV MAXOA_RELEASE_PASSWORD"
-	# @curl -f https://poet.jax.org/api/v1/export/release?key=$(MAXOA_RELEASE_PASSWORD) && echo "POET Release Success!" || echo "POET Release Failure"
-	# Get the MAXO annotation file
-	#echo $$(cat /etc/ssl/certs/ca-certificates.crt)
-	#curl -L http://purl.obolibrary.org/obo/hp/translations/hp-all.babelon.tsv
-	curl -Lk https://poet.jax.org/api/v1/export/maxo?unstable=false >> $(MAXOA_DIRECTORY)/$(MAXOA_FILENAME)
-    # Move or rename file with release date.
+	mkdir -p $(MAXOA_DIRECTORY)
+	@test $(MAXOA_RELEASE_PASSWORD) || "ENV MAXOA_RELEASE_PASSWORD"
+	@curl -Lk https://poet.jax.org/api/v1/export/release?key=$(MAXOA_RELEASE_PASSWORD) && echo "POET Release Success!" || echo "POET Release Failure."
+	@curl -Lk https://poet.jax.org/api/v1/export/maxo >> $(MAXOA_DIRECTORY)/$(MAXOA_FILENAME)
 
 #########################################
 ### Graveyard        ####################
