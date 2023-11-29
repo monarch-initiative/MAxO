@@ -74,6 +74,19 @@ merge_template: $(MERGE_TEMPLATE)
  --template $(MERGE_TEMPLATE) convert -f ofn -o $(SRC)
 
 
+
+ #########################################
+### Get maxo annotations            ######
+##########################################
+# YOU MUST SET THE MAXOA_RELEASE_PASSWORD ENVRIONMENTAL VARIABLE WHEN RELEASING
+MAXOA_DIRECTORY=tmp/maxoa
+MAXOA_FILENAME=maxo-annotations.tsv
+maxoa:
+	mkdir -p $(MAXOA_DIRECTORY)
+	@test $(MAXOA_RELEASE_PASSWORD) || "ENV MAXOA_RELEASE_PASSWORD"
+	@curl -Lk https://poet.jax.org/api/v1/export/release?key=$(MAXOA_RELEASE_PASSWORD) && echo "POET Release Success!" || echo "POET Release Failure."
+	@curl -Lk https://poet.jax.org/api/v1/export/maxo >> $(MAXOA_DIRECTORY)/$(MAXOA_FILENAME)
+
 #########################################
 ### Graveyard        ####################
 #########################################
