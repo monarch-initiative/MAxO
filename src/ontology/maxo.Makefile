@@ -8,6 +8,9 @@
 #########################################
 
 # Will be available in ODK 1.5 (https://github.com/INCATools/ontology-development-kit/pull/803)
+
+test: maxo-base.json
+
 .PHONY: test
 test_fast:
 	$(MAKE_FAST) test
