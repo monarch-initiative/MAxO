@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2023-10-03/maxo-base.owl
+data-version: maxo/releases/2023-12-01/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
@@ -8,7 +8,7 @@ property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" 
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
 property_value: IAO:0000700 MAXO:0000001
-property_value: owl:versionInfo "2023-10-03" xsd:string
+property_value: owl:versionInfo "2023-12-01" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -150,11 +150,12 @@ property_value: http://purl.org/dc/terms/creator http://orcid.org/0000-0001-7941
 
 [Term]
 id: MAXO:0000012
-name: surgical procedure on body region
+name: surgery by body site
 def: "A surgery performed on specific region of the body." []
+synonym: "surgical procedure on body region" EXACT []
 is_a: MAXO:0000004 ! surgical procedure
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T15:24:21Z" xsd:dateTime
-property_value: http://purl.org/dc/terms/creator https://orcid.org/0000-0001-7941-2961
+property_value: http://purl.org/dc/terms/creator http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000013
@@ -294,11 +295,13 @@ property_value: http://purl.org/dc/terms/creator https://orcid.org/0000-0001-794
 [Term]
 id: MAXO:0000024
 name: surgical procedure on the eye
-def: "Any surgical procedure performed on the eye." []
+def: "Any surgical procedure conducted on the camera-type eye." []
+synonym: "camera-type eye surgical procedure" EXACT []
+synonym: "eye procedure" EXACT []
 synonym: "eye surgery" EXACT []
 synonym: "surgery of the eye" EXACT []
-is_a: MAXO:0000012 ! surgical procedure on body region
-property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T15:25:58Z" xsd:dateTime
+is_a: MAXO:0000012 ! surgery by body site
+property_value: http://purl.org/dc/elements/1.1/date "2023-02-24T15:25:58Z" xsd:string
 property_value: http://purl.org/dc/terms/creator https://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -631,7 +634,7 @@ property_value: http://purl.org/dc/terms/creator http://orcid.org/0000-0001-7941
 id: MAXO:0000067
 name: lung volume reduction surgery
 def: "A procedure designed to help you breathe easier when your lungs have been damaged by disease. The goal of the surgery is to remove the area of the lung most affected by disease, allowing the remaining lung to function more efficiently, and improve your breathing ability and quality of life." []
-is_a: MAXO:0000012 ! surgical procedure on body region
+is_a: MAXO:0001514 ! surgical procedure on respiratory system
 property_value: http://purl.org/dc/elements/1.1/date "2019-01-15T19:14:42Z" xsd:dateTime
 property_value: http://purl.org/dc/terms/creator http://orcid.org/0000-0001-7941-2961
 
@@ -4647,8 +4650,10 @@ property_value: http://purl.org/dc/elements/1.1/date "2019-05-19T20:39:14Z" xsd:
 
 [Term]
 id: MAXO:0000424
-name: medical magnetic resonance imaging procedure
+name: magnetic resonance imaging procedure
 def: "Imaging that uses radiofrequency waves and a strong magnetic field rather than x-rays to provide amazingly clear and detailed pictures of internal organs and tissues. The technique is valuable for the diagnosis of many pathologic conditions, including cancer, heart and vascular disease, stroke, and joint and musculoskeletal disorders." [NCIT:C16809]
+synonym: "clinical magnetic resonance imaging procedure" EXACT []
+synonym: "medical magnetic resonance imaging procedure" EXACT []
 synonym: "MRI scan for therapeutics" EXACT hasSynonymType []
 synonym: "NMRI" EXACT ABBREVIATION []
 synonym: "nuclear magnetic resonance imaging for medical therapy" EXACT []
@@ -5274,12 +5279,14 @@ property_value: http://purl.org/dc/terms/creator http://orcid.org/0000-0001-7941
 [Term]
 id: MAXO:0000479
 name: orthopedic surgery
-def: "A surgical procedure to treat and correct deformities, diseases, and injuries to the skeletal system, its articulations, and associated structures." [NCIT:C16186]
+def: "Any surgical procedure conducted on the skeletal system." []
 synonym: "orthopedic surgical procedure" EXACT []
+synonym: "orthopedics surgery" EXACT []
+synonym: "skeletal system surgical procedure" EXACT []
 xref: NCIT:C16186
-is_a: MAXO:0000012 ! surgical procedure on body region
+is_a: MAXO:0000012 ! surgery by body site
 is_a: MAXO:0000477 ! orthopedic procedure
-property_value: http://purl.org/dc/elements/1.1/date "2020-01-20T17:51:02Z" xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2020-01-20T17:51:02Z" xsd:string
 property_value: http://purl.org/dc/terms/creator http://orcid.org/0000-0001-7941-2961
 
 [Term]
@@ -5904,8 +5911,6 @@ id: MAXO:0000543
 name: eosinophil count
 def: "A determination of the number of eosinophil in a blood sample." []
 synonym: "EOS cell count" EXACT ABBREVIATION []
-synonym: "eosinophil cell count" EXACT []
-synonym: "eosinophil cell count measurement" EXACT []
 synonym: "eosinophil count test" EXACT []
 xref: NCIT:C64550
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
@@ -5915,8 +5920,6 @@ property_value: http://purl.org/dc/elements/1.1/date "2019-05-16T18:20:55Z" xsd:
 id: MAXO:0000544
 name: granulocyte count
 def: "A determination of the number of granulocyte in a blood sample." []
-synonym: "granulocyte cell count" EXACT []
-synonym: "granulocyte cell count measurement" EXACT []
 synonym: "granulocyte count test" EXACT []
 synonym: "polymorphonuclear leukocyte count" EXACT []
 xref: NCIT:C96654
@@ -5928,7 +5931,6 @@ id: MAXO:0000545
 name: basophil count
 def: "A determination of the number of basophil in a blood sample." []
 synonym: "basophil cell count" EXACT []
-synonym: "basophil cell count measurement" EXACT []
 synonym: "basophil count test" EXACT []
 synonym: "total basophil count" EXACT []
 xref: NCIT:C64470
@@ -5939,8 +5941,6 @@ property_value: http://purl.org/dc/elements/1.1/date "2019-05-16T18:20:55Z" xsd:
 id: MAXO:0000546
 name: lymphocyte count
 def: "A determination of the number of lymphocyte in a blood sample." []
-synonym: "lymphocyte cell count" EXACT []
-synonym: "lymphocyte cell count measurement" EXACT []
 synonym: "lymphocyte count test" EXACT []
 xref: NCIT:C51949
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
@@ -9131,8 +9131,6 @@ property_value: http://purl.org/dc/terms/creator http://orcid.org/0000-0001-7941
 id: MAXO:0000825
 name: reticulocyte count
 def: "A determination of the number of reticulocyte in a blood sample." []
-synonym: "reticulocyte cell count" EXACT []
-synonym: "reticulocyte cell count measurement" EXACT []
 synonym: "reticulocyte count test" EXACT []
 xref: NCIT:C51947
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
@@ -9744,7 +9742,7 @@ property_value: http://purl.org/dc/terms/creator http://orcid.org/0000-0001-7941
 id: MAXO:0000886
 name: kidney function testing
 def: "A laboratory procedure that evaluates the kidney function." [NCIT:C74972]
-synonym: "rental function test" EXACT []
+synonym: "renal function test" EXACT []
 xref: NCIT:C74972
 is_a: MAXO:0000003 ! diagnostic procedure
 property_value: http://purl.org/dc/elements/1.1/date "2021-08-06T18:59:22Z" xsd:dateTime
@@ -10260,19 +10258,21 @@ property_value: http://purl.org/dc/terms/creator http://orcid.org/0000-0001-7941
 
 [Term]
 id: MAXO:0000946
-name: neurosurgical procedure
-def: "Any surgical procedure performed on nervous system tissue." []
+name: surgical procedure on nervous system
+def: "Any surgical procedure conducted on the nervous system." []
+synonym: "nervous system surgical procedure" EXACT []
 synonym: "neurosurgery" EXACT []
-is_a: MAXO:0000012 ! surgical procedure on body region
-property_value: http://purl.org/dc/elements/1.1/date "2021-08-12T19:44:10Z" xsd:dateTime
-property_value: http://purl.org/dc/terms/creator http://orcid.org/0000-0001-7941-2961
+synonym: "neurosurgical procedure" EXACT []
+is_a: MAXO:0000012 ! surgery by body site
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2021-08-12T19:44:10Z" xsd:string
 
 [Term]
 id: MAXO:0000947
 name: brain surgery
 def: "Surgery performed on any part of the brain." [NCIT:C154268]
 xref: NCIT:C154268
-is_a: MAXO:0000946 ! neurosurgical procedure
+is_a: MAXO:0000946 ! surgical procedure on nervous system
 property_value: http://purl.org/dc/elements/1.1/date "2021-08-12T19:45:31Z" xsd:dateTime
 property_value: http://purl.org/dc/terms/creator http://orcid.org/0000-0001-7941-2961
 
@@ -10282,7 +10282,7 @@ name: craniotomy
 def: "Surgical creation of an opening of the skull." [NCIT:C15214]
 synonym: "cranial surgery" BROAD []
 xref: NCIT:C15214
-is_a: MAXO:0000946 ! neurosurgical procedure
+is_a: MAXO:0000946 ! surgical procedure on nervous system
 property_value: http://purl.org/dc/elements/1.1/date "2021-08-12T19:47:17Z" xsd:dateTime
 property_value: http://purl.org/dc/terms/creator http://orcid.org/0000-0001-7941-2961
 
@@ -10636,7 +10636,7 @@ def: "The principle of functional MRI imaging is to take a series of images of a
 synonym: "fMRI" EXACT ABBREVIATION []
 synonym: "Functional MRI" EXACT ABBREVIATION []
 xref: NCIT:C17958
-is_a: MAXO:0000424 ! medical magnetic resonance imaging procedure
+is_a: MAXO:0000424 ! magnetic resonance imaging procedure
 property_value: http://purl.org/dc/elements/1.1/date "2019-04-26T20:04:29Z" xsd:dateTime
 property_value: http://purl.org/dc/terms/creator http://orcid.org/0000-0001-7941-2961
 
@@ -10698,24 +10698,14 @@ property_value: http://purl.org/dc/terms/creator http://orcid.org/0000-0001-7941
 
 [Term]
 id: MAXO:0001006
-name: hematopoietic cell count
-def: "A determination of the number of hematopoietic cell in a blood sample." []
-synonym: "CBC" EXACT ABBREVIATION []
-synonym: "complete blood count" EXACT []
-synonym: "full blood count" EXACT []
-synonym: "hematopoietic cell cell count" EXACT []
-synonym: "hematopoietic cell cell count measurement" EXACT []
-synonym: "hematopoietic cell count test" EXACT []
-is_a: MAXO:0000829 ! blood cell measurement
-property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
-property_value: http://purl.org/dc/elements/1.1/date "2019-05-16T18:20:55Z" xsd:string
+name: obsolete hematopoeitic cell count
+is_obsolete: true
+replaced_by: MAXO:0001509
 
 [Term]
 id: MAXO:0001007
 name: erythrocyte count
 def: "A determination of the number of erythrocyte in a blood sample." []
-synonym: "erythrocyte cell count" EXACT []
-synonym: "erythrocyte cell count measurement" EXACT []
 synonym: "erythrocyte count test" EXACT []
 synonym: "red blood cell count" EXACT []
 synonym: "red cell count" EXACT []
@@ -10727,8 +10717,6 @@ property_value: http://purl.org/dc/elements/1.1/date "2019-05-16T18:20:55Z" xsd:
 id: MAXO:0001008
 name: platelet count
 def: "A determination of the number of platelet in a blood sample." []
-synonym: "platelet cell count" EXACT []
-synonym: "platelet cell count measurement" EXACT []
 synonym: "platelet count test" EXACT []
 synonym: "thrombocyte count" EXACT []
 xref: NCIT:C51951
@@ -10739,8 +10727,6 @@ property_value: http://purl.org/dc/elements/1.1/date "2019-05-16T18:20:55Z" xsd:
 id: MAXO:0001009
 name: neutrophil count
 def: "A determination of the number of neutrophil in a blood sample." []
-synonym: "neutrophil cell count" EXACT []
-synonym: "neutrophil cell count measurement" EXACT []
 synonym: "neutrophil count test" EXACT []
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-16T18:20:55Z" xsd:string
@@ -10749,8 +10735,6 @@ property_value: http://purl.org/dc/elements/1.1/date "2019-05-16T18:20:55Z" xsd:
 id: MAXO:0001010
 name: leukocyte count
 def: "A determination of the number of leukocyte in a blood sample." []
-synonym: "leukocyte cell count" EXACT []
-synonym: "leukocyte cell count measurement" EXACT []
 synonym: "leukocyte count test" EXACT []
 synonym: "WBC" EXACT ABBREVIATION []
 synonym: "white blood cell count" EXACT []
@@ -11661,7 +11645,7 @@ id: MAXO:0001107
 name: arterial thrombosis
 def: "The surgical removal (cutting out) of part or all of Arterial thrombosis." []
 synonym: "Arterial thrombosis surgical removal" EXACT []
-property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2962" xsd:string
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2020-06-23T20:39:14Z" xsd:string
 
 [Term]
@@ -11669,7 +11653,7 @@ id: MAXO:0001108
 name: venous thrombosis
 def: "The surgical removal (cutting out) of part or all of Venous thrombosis." []
 synonym: "Venous thrombosis surgical removal" EXACT []
-property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2963" xsd:string
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2020-06-23T20:39:14Z" xsd:string
 
 [Term]
@@ -11679,7 +11663,7 @@ def: "The surgical removal (cutting out) of part or all of Abnormal thrombosis."
 synonym: "Abnormal thrombosis surgical removal" EXACT []
 synonym: "removal of thrombosis" EXACT []
 synonym: "thrombosis removal" EXACT []
-property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2964" xsd:string
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2020-06-23T20:39:14Z" xsd:string
 
 [Term]
@@ -11692,7 +11676,7 @@ synonym: "Neoplasm surgical removal" EXACT []
 synonym: "removal of tumor" EXACT []
 synonym: "tumor removal" EXACT []
 xref: NCIT:C157740
-property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2965" xsd:string
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2020-06-23T20:39:14Z" xsd:string
 
 [Term]
@@ -12759,7 +12743,7 @@ name: colorectal polypectomy
 def: "The surgical removal (cutting out) of part or all of colorectal polyps." []
 synonym: "colonic polypectomy" EXACT []
 synonym: "Colorectal polyposis surgical removal" EXACT []
-property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2965" xsd:string
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2022-03-24T20:39:14Z" xsd:string
 
 [Term]
@@ -12767,7 +12751,7 @@ id: MAXO:0001214
 name: intestinal polypectomy
 def: "The surgical removal (cutting out) of part or all of Intestinal polyp." []
 synonym: "Intestinal polyp surgical removal" EXACT []
-property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2965" xsd:string
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2022-03-24T20:39:14Z" xsd:string
 
 [Term]
@@ -12775,7 +12759,7 @@ id: MAXO:0001215
 name: ureterine polypectomy
 def: "The surgical removal (cutting out) of part or all of Ureteral polyp." []
 synonym: "Ureteral polyp surgical removal" EXACT []
-property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2965" xsd:string
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2022-03-24T20:39:14Z" xsd:string
 
 [Term]
@@ -12783,7 +12767,7 @@ id: MAXO:0001216
 name: cervical polypectomy
 def: "The surgical removal (cutting out) of part or all of Cervical polyp." []
 synonym: "Cervical polyp surgical removal" EXACT []
-property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2965" xsd:string
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2022-03-24T20:39:14Z" xsd:string
 
 [Term]
@@ -12791,7 +12775,7 @@ id: MAXO:0001217
 name: small intestinal polypectomy
 def: "The surgical removal (cutting out) of part or all of Small intestinal polyp." []
 synonym: "Small intestinal polyp surgical removal" EXACT []
-property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2965" xsd:string
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2022-03-24T20:39:14Z" xsd:string
 
 [Term]
@@ -12799,7 +12783,7 @@ id: MAXO:0001218
 name: surgical removal of Osteoma
 def: "The surgical removal (cutting out) of part or all of Osteoma." []
 synonym: "Osteoma surgical removal" EXACT []
-property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2965" xsd:string
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2022-03-24T20:39:14Z" xsd:string
 
 [Term]
@@ -12807,7 +12791,7 @@ id: MAXO:0001219
 name: gastric polypectomy
 def: "The surgical removal (cutting out) of part or all of Multiple gastric polyps." []
 synonym: "Multiple gastric polyps surgical removal" EXACT []
-property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2965" xsd:string
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2022-03-24T20:39:14Z" xsd:string
 
 [Term]
@@ -13691,7 +13675,7 @@ name: total body MRI
 def: "A medical examination performed using of magnetic resonance imaging to image the whole body." []
 synonym: "MRI of whole body" EXACT []
 synonym: "total body magnetic resonance imaging" EXACT []
-is_a: MAXO:0000424 ! medical magnetic resonance imaging procedure
+is_a: MAXO:0000424 ! magnetic resonance imaging procedure
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-10T20:39:14Z" xsd:string
 property_value: http://purl.org/dc/terms/creator https://orcid.org/0000-0001-7941-2961
 
@@ -14207,8 +14191,6 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:
 id: MAXO:0001367
 name: sperm count
 def: "A determination of the number of sperm in a blood sample." []
-synonym: "sperm cell count" EXACT []
-synonym: "sperm cell count measurement" EXACT []
 synonym: "sperm count test" EXACT []
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
@@ -14217,8 +14199,6 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:
 id: MAXO:0001368
 name: helper T cell count
 def: "A determination of the number of helper T cell in a blood sample." []
-synonym: "helper T cell cell count" EXACT []
-synonym: "helper T cell cell count measurement" EXACT []
 synonym: "helper T cell count test" EXACT []
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
@@ -14227,8 +14207,6 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:
 id: MAXO:0001369
 name: T cell count
 def: "A determination of the number of T cell in a blood sample." []
-synonym: "T cell cell count" EXACT []
-synonym: "T cell cell count measurement" EXACT []
 synonym: "T cell count test" EXACT []
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
@@ -14237,8 +14215,6 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:
 id: MAXO:0001370
 name: B cell count
 def: "A determination of the number of B cell in a blood sample." []
-synonym: "B cell cell count" EXACT []
-synonym: "B cell cell count measurement" EXACT []
 synonym: "B cell count test" EXACT []
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
@@ -14247,8 +14223,6 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:
 id: MAXO:0001371
 name: natural killer cell count
 def: "A determination of the number of natural killer cell in a blood sample." []
-synonym: "natural killer cell cell count" EXACT []
-synonym: "natural killer cell cell count measurement" EXACT []
 synonym: "natural killer cell count test" EXACT []
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
@@ -14257,8 +14231,6 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:
 id: MAXO:0001372
 name: burr cell count
 def: "A determination of the number of echinocyte in a blood sample." []
-synonym: "echinocyte cell count" EXACT []
-synonym: "echinocyte cell count measurement" EXACT []
 synonym: "echinocyte count test" EXACT []
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
@@ -14267,8 +14239,6 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:
 id: MAXO:0001373
 name: plasma cell count
 def: "A determination of the number of plasma cell in a blood sample." []
-synonym: "plasma cell cell count" EXACT []
-synonym: "plasma cell cell count measurement" EXACT []
 synonym: "plasma cell count test" EXACT []
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
@@ -14277,8 +14247,6 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:
 id: MAXO:0001374
 name: dendritic cell count
 def: "A determination of the number of dendritic cell in a blood sample." []
-synonym: "dendritic cell cell count" EXACT []
-synonym: "dendritic cell cell count measurement" EXACT []
 synonym: "dendritic cell count test" EXACT []
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
@@ -14287,8 +14255,6 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:
 id: MAXO:0001375
 name: regulatory T cell count
 def: "A determination of the number of regulatory T cell in a blood sample." []
-synonym: "regulatory T cell cell count" EXACT []
-synonym: "regulatory T cell cell count measurement" EXACT []
 synonym: "regulatory T cell count test" EXACT []
 synonym: "T reg cell count" EXACT []
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
@@ -14433,6 +14399,16 @@ synonym: "bladder catheterization" EXACT []
 is_a: MAXO:0001389 ! catheterization
 property_value: http://purl.org/dc/elements/1.1/date "2023-08-29T20:03:15Z" xsd:dateTime
 property_value: http://purl.org/dc/terms/creator https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001395
+name: radiofrequency ablation therapy
+def: "A procedure that uses radio waves to create heat to destroy tissue." []
+synonym: "radiofrequency neurotomy" EXACT []
+synonym: "RFA" EXACT ABBREVIATION []
+is_a: MAXO:0000456 ! thermal ablation therapy
+property_value: http://purl.org/dc/elements/1.1/creator https://orcid.org/0000-0001-7941-2961
+property_value: http://purl.org/dc/elements/1.1/date "2023-11-28T20:44:56Z" xsd:dateTime
 
 [Term]
 id: MAXO:0001396
@@ -15053,6 +15029,16 @@ property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:strin
 property_value: http://purl.org/dc/elements/1.1/date "2023-05-15T11:00:00Z" xsd:string
 
 [Term]
+id: MAXO:0001472
+name: fundoplication
+def: "A therapeutic surgical procedure to treat gastroesophageal reflux disease and hiatus hernia. It involves the wrapping of the fundus of the stomach around the lower esophagus to strengthen the lower esophageal sphincter." [NCIT:C91834]
+synonym: "Nissen fundoplication" EXACT []
+xref: NCIT:C91834
+is_a: MAXO:0001503 ! surgical procedure on digestive system
+property_value: http://purl.org/dc/elements/1.1/creator https://orcid.org/0000-0001-7941-2961
+property_value: http://purl.org/dc/elements/1.1/date "2023-11-28T21:09:28Z" xsd:dateTime
+
+[Term]
 id: MAXO:0001473
 name: benzothiadiazine derivative therapy
 def: "Treatment with a diuretic to treat hypertension or edema." []
@@ -15086,10 +15072,26 @@ property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:strin
 property_value: http://purl.org/dc/elements/1.1/date "2023-05-15T11:00:00Z" xsd:string
 
 [Term]
+id: MAXO:0001477
+name: orchiopexy
+def: "A surgery to move a testical from growin to scrotum. The procedure permanently fixes the testical to the scrotum." []
+comment: Orchiopexy corrects undescended testicles that have not dropped into the scrotum or testicular torsion where testicular blood supply twists and cuts off blood flow to the testicle.
+synonym: "fixation of testes" EXACT []
+synonym: "scrotal fixation of testes" EXACT []
+synonym: "scrotal orchiopexy" EXACT []
+synonym: "testicular fixation" EXACT []
+xref: NCIT:C111066
+xref: PMID:32809739
+xref: SNOMEDCT_US:85419002
+is_a: MAXO:0001507 ! surgical procedure on genitourinary system
+property_value: http://purl.org/dc/elements/1.1/creator https://orcid.org/0000-0001-7941-2961
+property_value: http://purl.org/dc/elements/1.1/date "2023-11-28T21:42:56Z" xsd:dateTime
+
+[Term]
 id: MAXO:0001478
 name: fetal MRI
 def: "Magnetic resonance imaging of the developing fetus in utero." []
-is_a: MAXO:0000424 ! medical magnetic resonance imaging procedure
+is_a: MAXO:0000424 ! magnetic resonance imaging procedure
 property_value: http://purl.org/dc/elements/1.1/date "2023-04-11T12:00:00Z" xsd:string
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-0736-9199
 property_value: http://purl.org/dc/terms/creator https://orcid.org/0000-0001-7941-2961
@@ -15170,6 +15172,7 @@ property_value: http://purl.org/dc/terms/creator https://orcid.org/0000-0001-794
 id: MAXO:0001487
 name: interferon-gamma therapy
 def: "Therapeutic administration of interferon gamma" []
+is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date "2023-04-11T12:00:00Z" xsd:string
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-0736-9199
 property_value: http://purl.org/dc/terms/creator https://orcid.org/0000-0001-7941-2961
@@ -15291,7 +15294,7 @@ def: "A drug or substance used as therapy to inhibit 4-hydroxyphenylpyruvate hyd
 synonym: "4-hydroxyphenylpyruvate hydroxylase inhibitor therapy" EXACT []
 synonym: "treatment with EC 1.13.11.27 (4-hydroxyphenylpyruvate dioxygenase) inhibitor" EXACT []
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
-property_value: http://purl.org/dc/elements/1.1/date "2023-08-18T11:00:00Z" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2023-11-109T11:00:00Z" xsd:string
 
 [Term]
 id: MAXO:0001502
@@ -15300,6 +15303,125 @@ def: "A drug or substance that inhibits the metabolism of tyrosine." []
 is_a: MAXO:0000058 ! pharmacotherapy
 property_value: http://purl.org/dc/elements/1.1/date "2023-08-21T16:57:48Z" xsd:dateTime
 property_value: http://purl.org/dc/terms/creator https://orcid.org/0000-0001-7941-2961
+
+[Term]
+id: MAXO:0001503
+name: surgical procedure on digestive system
+def: "Any surgical procedure conducted on the digestive system." []
+synonym: "digestive system surgical procedure" EXACT []
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2023-10-19T20:39:14Z" xsd:string
+
+[Term]
+id: MAXO:0001504
+name: surgical procedure on alimentary part of gastrointestinal system
+def: "Any surgical procedure conducted on the alimentary part of gastrointestinal system." []
+synonym: "alimentary part of gastrointestinal system surgical procedure" EXACT []
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2023-10-19T20:39:14Z" xsd:string
+
+[Term]
+id: MAXO:0001505
+name: gross motor therapy
+def: "Gross motor therapy is designed to help individuals improve their use of large muscles and the coordination of the arms, legs, and the entire body." []
+synonym: "gross motor skills therapy" EXACT []
+is_a: MAXO:0000011 ! physical therapy
+property_value: http://purl.org/dc/elements/1.1/creator https://orcid.org/0000-0001-7941-2961
+property_value: http://purl.org/dc/elements/1.1/date "2023-11-30T17:16:03Z" xsd:dateTime
+
+[Term]
+id: MAXO:0001506
+name: surgical procedure on circulatory system
+def: "Any surgical procedure conducted on the circulatory system." []
+synonym: "circulatory system surgical procedure" EXACT []
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2023-10-19T20:39:14Z" xsd:string
+
+[Term]
+id: MAXO:0001507
+name: surgical procedure on genitourinary system
+def: "Any surgical procedure conducted on the genitourinary system." []
+synonym: "genitourinary system surgical procedure" EXACT []
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2023-10-19T20:39:14Z" xsd:string
+
+[Term]
+id: MAXO:0001508
+name: surgical procedure on musculoskeletal system
+def: "Any surgical procedure conducted on the musculoskeletal system." []
+synonym: "musculoskeletal system surgical procedure" EXACT []
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2023-10-19T20:39:14Z" xsd:string
+
+[Term]
+id: MAXO:0001509
+name: blood cell count
+def: "A determination of the number of blood cell in a blood sample." []
+synonym: "blood cell count test" EXACT []
+synonym: "CBC" EXACT []
+synonym: "complete blood cell count" EXACT []
+synonym: "complete blood count" EXACT []
+synonym: "full blood count" EXACT []
+is_a: MAXO:0000829 ! blood cell measurement
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2023-11-01T20:39:14Z" xsd:string
+
+[Term]
+id: MAXO:0001510
+name: surgical procedure on pancreatic system
+def: "Any surgical procedure conducted on the pancreatic system." []
+synonym: "pancreatic system surgical procedure" EXACT []
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2023-10-19T20:39:14Z" xsd:string
+
+[Term]
+id: MAXO:0001511
+name: surgical procedure on renal collecting system
+def: "Any surgical procedure conducted on the renal collecting system." []
+synonym: "renal collecting system surgical procedure" EXACT []
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2023-10-19T20:39:14Z" xsd:string
+
+[Term]
+id: MAXO:0001512
+name: surgical procedure on reproductive system
+def: "Any surgical procedure conducted on the reproductive system." []
+synonym: "reproductive system surgical procedure" EXACT []
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2023-10-19T20:39:14Z" xsd:string
+
+[Term]
+id: MAXO:0001513
+name: skin surgery
+def: "Any surgical procedure conducted on the zone of skin." []
+synonym: "zone of skin surgical procedure" EXACT []
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2023-10-19T20:39:14Z" xsd:string
+
+[Term]
+id: MAXO:0001514
+name: surgical procedure on respiratory system
+def: "Any surgical procedure conducted on the respiratory system." []
+synonym: "respiratory system surgical procedure" EXACT []
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2023-10-19T20:39:14Z" xsd:string
+
+[Term]
+id: MAXO:0001515
+name: surgical procedure on vascular system
+def: "Any surgical procedure conducted on the vascular system." []
+synonym: "vascular system surgical procedure" EXACT []
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2023-10-19T20:39:14Z" xsd:string
+
+[Term]
+id: MAXO:0001516
+name: fine motor therapy
+def: "Therapy aids in the development and use of the small muscles of the hands for tasks such as grasping objects, writing, cutting with scissors, shoe-tying, and fastening buttons." []
+synonym: "fine motor skills therapy" EXACT []
+is_a: MAXO:0001351 ! occupational therapy
+property_value: http://purl.org/dc/elements/1.1/creator https://orcid.org/0000-0001-7941-2961
+property_value: http://purl.org/dc/elements/1.1/date "2023-11-30T17:19:07Z" xsd:dateTime
 
 [Term]
 id: MAXO:0002000
@@ -16377,9 +16499,6 @@ synonym: "avoiding dietary fat or oil intake" EXACT []
 synonym: "fat or oil consumption avoidance" EXACT []
 synonym: "fat or oil restricted diet intake" EXACT []
 synonym: "fat or oil restriction" EXACT []
-synonym: "limited fat dietary intake" EXACT []
-synonym: "low fat dietary intake" EXACT []
-synonym: "non-fat dietary intake" EXACT []
 is_a: MAXO:0000056 ! nutrition intake avoidance
 relationship: MAXO:0001027 FOODON:03420190 ! avoided food
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
@@ -17847,6 +17966,64 @@ property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:strin
 property_value: http://purl.org/dc/elements/1.1/date "2020-05-12T11:00:00Z" xsd:string
 
 [Term]
+id: MAXO:0010125
+name: reproductive control agent therapy
+def: "Use of agent or drug to regulate reproduction." []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_50689" EXACT []
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2023-11-109T11:00:00Z" xsd:string
+
+[Term]
+id: MAXO:0010126
+name: aborifacient agent therapy
+def: "The use of an agent or drug to interupt pregnancy after implantation." []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_50691" EXACT []
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2023-11-109T11:00:00Z" xsd:string
+
+[Term]
+id: MAXO:0010127
+name: tocolytic agent therapy
+def: "Use of drug or agent to suppress uterine contractions thereby suppressing premature labor and birth." []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_66993" EXACT []
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2023-11-109T11:00:00Z" xsd:string
+
+[Term]
+id: MAXO:0010128
+name: contraceptive agent therapy
+def: "Use of a drug or agent to prevent or reduce probability of contraception." []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_49323" EXACT []
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2023-11-109T11:00:00Z" xsd:string
+
+[Term]
+id: MAXO:0010129
+name: female contraceptive agent therapy
+def: "Use of drug or agent with contraceptive activity in females." []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_49324" EXACT []
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2023-11-109T11:00:00Z" xsd:string
+
+[Term]
+id: MAXO:0010130
+name: oral contraceptive agent therapy
+def: "Use of a compound or agent to block ovulation and prevent occurance of pregnancy." []
+comment: The use of these drugs or agents have many other uses beyond pregnancy control.
+synonym: "birth control therapy" EXACT []
+synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_49325" EXACT []
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2023-11-109T11:00:00Z" xsd:string
+
+[Term]
+id: MAXO:0010131
+name: tongue swab collection
+def: "Collection biological material from within the tongue with a cotton swab for use in clinical tests." []
+synonym: "swab collection of tongue" EXACT []
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2978" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2023-11-30T20:39:14Z" xsd:string
+
+[Term]
 id: MAXO:0010200
 name: abdominal ultrasonography
 def: "A method of ultrasound imaging in which the ultrasound probe is pressed against the skin of the abdomen in order to create an image of the abdominal organs." []
@@ -18587,7 +18764,7 @@ synonym: "radiography of spinal cord" EXACT []
 synonym: "spinal cord radiogram procedure" EXACT []
 synonym: "spinal cord X-ray procedure" EXACT []
 xref: NCIT:C20175
-property_value: dcterms:creator "http://orcid.org/0000-0001-7941-29610" xsd:string
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2020-04-27T20:39:14Z" xsd:string
 
 [Term]
@@ -18616,17 +18793,21 @@ property_value: http://purl.org/dc/elements/1.1/date "2020-04-27T20:39:14Z" xsd:
 
 [Term]
 id: MAXO:0025001
-name: cardiac surgery
-def: "A surgical procedure on the heart." [NCIT:C157806]
+name: surgical procedure on cardiovascular system
+def: "Any surgical procedure conducted on the cardiovascular system." []
+synonym: "cardiac surgery" EXACT []
+synonym: "cardiovascular system surgical procedure" EXACT []
 synonym: "heart surgery" EXACT []
-is_a: MAXO:0000012 ! surgical procedure on body region
+is_a: MAXO:0000012 ! surgery by body site
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "2023-10-19T20:39:14Z" xsd:string
 
 [Term]
 id: MAXO:0025002
 name: heart repair
 def: "A surgery that fixes or mends heart." []
 synonym: "heart surgical repair" EXACT []
-is_a: MAXO:0025001 ! cardiac surgery
+is_a: MAXO:0025001 ! surgical procedure on cardiovascular system
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2022-07-25T20:39:14Z" xsd:string
 
@@ -18646,11 +18827,12 @@ property_value: http://purl.org/dc/terms/creator https://orcid.org/0000-0001-794
 
 [Term]
 id: MAXO:0025005
-name: nasolacrimal duct surgery
-def: "A surgical procedure on the nasolacrimal duct." [NCIT:C157999]
+name: surgical procedure on nasolacrimal duct
+def: "Any surgical procedure conducted on the nasolacrimal duct." []
 synonym: "dacryocystorhinostomy" EXACT []
+synonym: "nasolacrimal duct surgical procedure" EXACT []
 synonym: "tear duct surgery" EXACT []
-is_a: MAXO:0000012 ! surgical procedure on body region
+is_a: MAXO:0000012 ! surgery by body site
 
 [Term]
 id: MAXO:0025006

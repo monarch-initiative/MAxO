@@ -13,7 +13,7 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/maxo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2023-10-03/maxo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2023-12-01/maxo-base.owl"/>
         <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000001"/>
         <dce:creator>Leigh Carmody</dce:creator>
         <dce:creator>Peter Robinson</dce:creator>
@@ -21,7 +21,7 @@
         <dce:title>Medical Action Ontology</dce:title>
         <dce:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <owl:versionInfo>2023-10-03</owl:versionInfo>
+        <owl:versionInfo>2023-12-01</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1392,6 +1392,24 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_49323 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_49323"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_49324 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_49324"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_49325 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_49325"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_50144 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_50144"/>
@@ -1467,6 +1485,18 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_50664 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_50664"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_50689 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_50689"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_50691 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_50691"/>
     
 
 
@@ -1734,6 +1764,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_66993 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_66993"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_67011 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_67011"/>
@@ -1851,6 +1887,12 @@
     <!-- http://purl.obolibrary.org/obo/CL_0000023 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000023"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CL_0000081 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000081"/>
     
 
 
@@ -2835,11 +2877,28 @@
     <!-- http://purl.obolibrary.org/obo/MAXO_0000012 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000012">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000004"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000467"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000004"/>
         <obo:IAO_0000115>A surgery performed on specific region of the body.</obo:IAO_0000115>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-02-24T15:24:21Z</dce:date>
-        <dcterms:creator rdf:resource="https://orcid.org/0000-0001-7941-2961"/>
-        <rdfs:label xml:lang="en">surgical procedure on body region</rdfs:label>
+        <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>surgical procedure on body region</oboInOwl:hasExactSynonym>
+        <rdfs:label>surgery by body site</rdfs:label>
     </owl:Class>
     
 
@@ -3105,13 +3164,31 @@
     <!-- http://purl.obolibrary.org/obo/MAXO_0000024 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000024">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000012"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000019"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000012"/>
-        <obo:IAO_0000115>Any surgical procedure performed on the eye.</obo:IAO_0000115>
-        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-02-24T15:25:58Z</dce:date>
+        <obo:IAO_0000115>Any surgical procedure conducted on the camera-type eye.</obo:IAO_0000115>
+        <dce:date>2023-02-24T15:25:58Z</dce:date>
         <dcterms:creator rdf:resource="https://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>camera-type eye surgical procedure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>eye procedure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>eye surgery</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>surgery of the eye</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">surgical procedure on the eye</rdfs:label>
+        <rdfs:label>surgical procedure on the eye</rdfs:label>
     </owl:Class>
     
 
@@ -3721,7 +3798,7 @@
     <!-- http://purl.obolibrary.org/obo/MAXO_0000067 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000067">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000012"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001514"/>
         <obo:IAO_0000115>A procedure designed to help you breathe easier when your lungs have been damaged by disease. The goal of the surgery is to remove the area of the lung most affected by disease, allowing the remaining lung to function more efficiently, and improve your breathing ability and quality of life.</obo:IAO_0000115>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-15T19:14:42Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -3965,15 +4042,15 @@
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000081"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A process by which a health professional provides education, recommendations, or interventions to help clients stop using tobacco products. (ACC)</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCIT:C101244</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000081"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>smoking cessation</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/maxo.owl/https//orcid.org/0000-0001-7941-2961"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000081"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A process by which a health professional provides education, recommendations, or interventions to help clients stop using tobacco products. (ACC)</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C101244</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -4145,15 +4222,15 @@
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000090"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>EN intake</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/maxo#ABBREVIATION"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000090"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Delivery of enteral nutrition via a tube placed into the stomach, duodenum, or jejunum.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>NCIT:C93322</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000090"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>EN intake</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/maxo#ABBREVIATION"/>
     </owl:Axiom>
     
 
@@ -12822,9 +12899,11 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>NCIT:C16809</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>MRI scan for therapeutics</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>NMRI</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>clinical magnetic resonance imaging procedure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>medical magnetic resonance imaging procedure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>nuclear magnetic resonance imaging for medical therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>therapeutic MRI</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">medical magnetic resonance imaging procedure</rdfs:label>
+        <rdfs:label xml:lang="en">magnetic resonance imaging procedure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000424"/>
@@ -14095,21 +14174,33 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000479 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000479">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000012"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001434"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000012"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000477"/>
-        <obo:IAO_0000115>A surgical procedure to treat and correct deformities, diseases, and injuries to the skeletal system, its articulations, and associated structures.</obo:IAO_0000115>
-        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-20T17:51:02Z</dce:date>
+        <obo:IAO_0000115>Any surgical procedure conducted on the skeletal system.</obo:IAO_0000115>
+        <dce:date>2020-01-20T17:51:02Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C16186</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>orthopedic surgical procedure</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">orthopedic surgery</rdfs:label>
+        <oboInOwl:hasExactSynonym>orthopedics surgery</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>skeletal system surgical procedure</oboInOwl:hasExactSynonym>
+        <rdfs:label>orthopedic surgery</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000479"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A surgical procedure to treat and correct deformities, diseases, and injuries to the skeletal system, its articulations, and associated structures.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCIT:C16186</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -15310,8 +15401,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dce:date>2019-05-16T18:20:55Z</dce:date>
         <oboInOwl:hasDbXref>NCIT:C64550</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>EOS cell count</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>eosinophil cell count</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>eosinophil cell count measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>eosinophil count test</oboInOwl:hasExactSynonym>
         <rdfs:label>eosinophil count</rdfs:label>
     </owl:Class>
@@ -15352,8 +15441,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2019-05-16T18:20:55Z</dce:date>
         <oboInOwl:hasDbXref>NCIT:C96654</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>granulocyte cell count</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>granulocyte cell count measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>granulocyte count test</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>polymorphonuclear leukocyte count</oboInOwl:hasExactSynonym>
         <rdfs:label>granulocyte count</rdfs:label>
@@ -15390,7 +15477,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dce:date>2019-05-16T18:20:55Z</dce:date>
         <oboInOwl:hasDbXref>NCIT:C64470</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>basophil cell count</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>basophil cell count measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>basophil count test</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>total basophil count</oboInOwl:hasExactSynonym>
         <rdfs:label>basophil count</rdfs:label>
@@ -15426,8 +15512,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2019-05-16T18:20:55Z</dce:date>
         <oboInOwl:hasDbXref>NCIT:C51949</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>lymphocyte cell count</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>lymphocyte cell count measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>lymphocyte count test</oboInOwl:hasExactSynonym>
         <rdfs:label>lymphocyte count</rdfs:label>
     </owl:Class>
@@ -21466,8 +21550,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2019-05-16T18:20:55Z</dce:date>
         <oboInOwl:hasDbXref>NCIT:C51947</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>reticulocyte cell count</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>reticulocyte cell count measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>reticulocyte count test</oboInOwl:hasExactSynonym>
         <rdfs:label>reticulocyte count</rdfs:label>
     </owl:Class>
@@ -22615,7 +22697,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-06T18:59:22Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C74972</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>rental function test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>renal function test</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">kidney function testing</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -23506,12 +23588,30 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000946 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000946">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000012"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001016"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000012"/>
-        <obo:IAO_0000115>Any surgical procedure performed on nervous system tissue.</obo:IAO_0000115>
-        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-12T19:44:10Z</dce:date>
-        <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <obo:IAO_0000115>Any surgical procedure conducted on the nervous system.</obo:IAO_0000115>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
+        <dce:date>2021-08-12T19:44:10Z</dce:date>
+        <oboInOwl:hasExactSynonym>nervous system surgical procedure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>neurosurgery</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">neurosurgical procedure</rdfs:label>
+        <oboInOwl:hasExactSynonym>neurosurgical procedure</oboInOwl:hasExactSynonym>
+        <rdfs:label>surgical procedure on nervous system</rdfs:label>
     </owl:Class>
     
 
@@ -24292,45 +24392,10 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0001006 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001006">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000146"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000070"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
-                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CL_0000988"/>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000829"/>
-        <obo:IAO_0000115>A determination of the number of hematopoietic cell in a blood sample.</obo:IAO_0000115>
-        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
-        <dce:date>2019-05-16T18:20:55Z</dce:date>
-        <oboInOwl:hasExactSynonym>CBC</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>complete blood count</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>full blood count</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>hematopoietic cell cell count</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>hematopoietic cell cell count measurement</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>hematopoietic cell count test</oboInOwl:hasExactSynonym>
-        <rdfs:label>hematopoietic cell count</rdfs:label>
+        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001509"/>
+        <rdfs:label>obsolete hematopoeitic cell count</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001006"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>CBC</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/maxo#ABBREVIATION"/>
-    </owl:Axiom>
     
 
 
@@ -24362,8 +24427,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2019-05-16T18:20:55Z</dce:date>
         <oboInOwl:hasDbXref>NCIT:C51946</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>erythrocyte cell count</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>erythrocyte cell count measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>erythrocyte count test</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>red blood cell count</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>red cell count</oboInOwl:hasExactSynonym>
@@ -24400,8 +24463,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2019-05-16T18:20:55Z</dce:date>
         <oboInOwl:hasDbXref>NCIT:C51951</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>platelet cell count</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>platelet cell count measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>platelet count test</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>thrombocyte count</oboInOwl:hasExactSynonym>
         <rdfs:label>platelet count</rdfs:label>
@@ -24436,8 +24497,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <obo:IAO_0000115>A determination of the number of neutrophil in a blood sample.</obo:IAO_0000115>
         <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2019-05-16T18:20:55Z</dce:date>
-        <oboInOwl:hasExactSynonym>neutrophil cell count</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>neutrophil cell count measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>neutrophil count test</oboInOwl:hasExactSynonym>
         <rdfs:label>neutrophil count</rdfs:label>
     </owl:Class>
@@ -24473,8 +24532,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <dce:date>2019-05-16T18:20:55Z</dce:date>
         <oboInOwl:hasDbXref>NCIT:C51948</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>WBC</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>leukocyte cell count</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>leukocyte cell count measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>leukocyte count test</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>white blood cell count</oboInOwl:hasExactSynonym>
         <rdfs:label>leukocyte count</rdfs:label>
@@ -27162,7 +27219,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <obo:IAO_0000115>The surgical removal (cutting out) of part or all of Arterial thrombosis.</obo:IAO_0000115>
-        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2962</obo:dcterms_creator>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2020-06-23T20:39:14Z</dce:date>
         <oboInOwl:hasExactSynonym>Arterial thrombosis surgical removal</oboInOwl:hasExactSynonym>
         <rdfs:label>arterial thrombosis</rdfs:label>
@@ -27190,7 +27247,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <obo:IAO_0000115>The surgical removal (cutting out) of part or all of Venous thrombosis.</obo:IAO_0000115>
-        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2963</obo:dcterms_creator>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2020-06-23T20:39:14Z</dce:date>
         <oboInOwl:hasExactSynonym>Venous thrombosis surgical removal</oboInOwl:hasExactSynonym>
         <rdfs:label>venous thrombosis</rdfs:label>
@@ -27218,7 +27275,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <obo:IAO_0000115>The surgical removal (cutting out) of part or all of Abnormal thrombosis.</obo:IAO_0000115>
-        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2964</obo:dcterms_creator>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2020-06-23T20:39:14Z</dce:date>
         <oboInOwl:hasExactSynonym>Abnormal thrombosis surgical removal</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>removal of thrombosis</oboInOwl:hasExactSynonym>
@@ -27248,7 +27305,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <obo:IAO_0000115>The surgical removal (cutting out) of part or all of Neoplasm.</obo:IAO_0000115>
-        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2965</obo:dcterms_creator>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2020-06-23T20:39:14Z</dce:date>
         <oboInOwl:hasBroadSynonym>cancer surgery</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>NCIT:C157740</oboInOwl:hasDbXref>
@@ -30090,7 +30147,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <obo:IAO_0000115>The surgical removal (cutting out) of part or all of colorectal polyps.</obo:IAO_0000115>
-        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2965</obo:dcterms_creator>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2022-03-24T20:39:14Z</dce:date>
         <oboInOwl:hasExactSynonym>Colorectal polyposis surgical removal</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>colonic polypectomy</oboInOwl:hasExactSynonym>
@@ -30119,7 +30176,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <obo:IAO_0000115>The surgical removal (cutting out) of part or all of Intestinal polyp.</obo:IAO_0000115>
-        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2965</obo:dcterms_creator>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2022-03-24T20:39:14Z</dce:date>
         <oboInOwl:hasExactSynonym>Intestinal polyp surgical removal</oboInOwl:hasExactSynonym>
         <rdfs:label>intestinal polypectomy</rdfs:label>
@@ -30147,7 +30204,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <obo:IAO_0000115>The surgical removal (cutting out) of part or all of Ureteral polyp.</obo:IAO_0000115>
-        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2965</obo:dcterms_creator>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2022-03-24T20:39:14Z</dce:date>
         <oboInOwl:hasExactSynonym>Ureteral polyp surgical removal</oboInOwl:hasExactSynonym>
         <rdfs:label>ureterine polypectomy</rdfs:label>
@@ -30175,7 +30232,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <obo:IAO_0000115>The surgical removal (cutting out) of part or all of Cervical polyp.</obo:IAO_0000115>
-        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2965</obo:dcterms_creator>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2022-03-24T20:39:14Z</dce:date>
         <oboInOwl:hasExactSynonym>Cervical polyp surgical removal</oboInOwl:hasExactSynonym>
         <rdfs:label>cervical polypectomy</rdfs:label>
@@ -30203,7 +30260,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <obo:IAO_0000115>The surgical removal (cutting out) of part or all of Small intestinal polyp.</obo:IAO_0000115>
-        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2965</obo:dcterms_creator>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2022-03-24T20:39:14Z</dce:date>
         <oboInOwl:hasExactSynonym>Small intestinal polyp surgical removal</oboInOwl:hasExactSynonym>
         <rdfs:label>small intestinal polypectomy</rdfs:label>
@@ -30231,7 +30288,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <obo:IAO_0000115>The surgical removal (cutting out) of part or all of Osteoma.</obo:IAO_0000115>
-        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2965</obo:dcterms_creator>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2022-03-24T20:39:14Z</dce:date>
         <oboInOwl:hasExactSynonym>Osteoma surgical removal</oboInOwl:hasExactSynonym>
         <rdfs:label>surgical removal of Osteoma</rdfs:label>
@@ -30259,7 +30316,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <obo:IAO_0000115>The surgical removal (cutting out) of part or all of Multiple gastric polyps.</obo:IAO_0000115>
-        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2965</obo:dcterms_creator>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2022-03-24T20:39:14Z</dce:date>
         <oboInOwl:hasExactSynonym>Multiple gastric polyps surgical removal</oboInOwl:hasExactSynonym>
         <rdfs:label>gastric polypectomy</rdfs:label>
@@ -34412,8 +34469,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <obo:IAO_0000115>A determination of the number of sperm in a blood sample.</obo:IAO_0000115>
         <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2023-03-03T20:39:14Z</dce:date>
-        <oboInOwl:hasExactSynonym>sperm cell count</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>sperm cell count measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>sperm count test</oboInOwl:hasExactSynonym>
         <rdfs:label>sperm count</rdfs:label>
     </owl:Class>
@@ -34447,8 +34502,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <obo:IAO_0000115>A determination of the number of helper T cell in a blood sample.</obo:IAO_0000115>
         <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2023-03-03T20:39:14Z</dce:date>
-        <oboInOwl:hasExactSynonym>helper T cell cell count</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>helper T cell cell count measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>helper T cell count test</oboInOwl:hasExactSynonym>
         <rdfs:label>helper T cell count</rdfs:label>
     </owl:Class>
@@ -34482,8 +34535,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <obo:IAO_0000115>A determination of the number of T cell in a blood sample.</obo:IAO_0000115>
         <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2023-03-03T20:39:14Z</dce:date>
-        <oboInOwl:hasExactSynonym>T cell cell count</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>T cell cell count measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>T cell count test</oboInOwl:hasExactSynonym>
         <rdfs:label>T cell count</rdfs:label>
     </owl:Class>
@@ -34517,8 +34568,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <obo:IAO_0000115>A determination of the number of B cell in a blood sample.</obo:IAO_0000115>
         <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2023-03-03T20:39:14Z</dce:date>
-        <oboInOwl:hasExactSynonym>B cell cell count</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>B cell cell count measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>B cell count test</oboInOwl:hasExactSynonym>
         <rdfs:label>B cell count</rdfs:label>
     </owl:Class>
@@ -34552,8 +34601,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <obo:IAO_0000115>A determination of the number of natural killer cell in a blood sample.</obo:IAO_0000115>
         <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2023-03-03T20:39:14Z</dce:date>
-        <oboInOwl:hasExactSynonym>natural killer cell cell count</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>natural killer cell cell count measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>natural killer cell count test</oboInOwl:hasExactSynonym>
         <rdfs:label>natural killer cell count</rdfs:label>
     </owl:Class>
@@ -34587,8 +34634,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <obo:IAO_0000115>A determination of the number of echinocyte in a blood sample.</obo:IAO_0000115>
         <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2023-03-03T20:39:14Z</dce:date>
-        <oboInOwl:hasExactSynonym>echinocyte cell count</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>echinocyte cell count measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>echinocyte count test</oboInOwl:hasExactSynonym>
         <rdfs:label>burr cell count</rdfs:label>
     </owl:Class>
@@ -34622,8 +34667,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <obo:IAO_0000115>A determination of the number of plasma cell in a blood sample.</obo:IAO_0000115>
         <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2023-03-03T20:39:14Z</dce:date>
-        <oboInOwl:hasExactSynonym>plasma cell cell count</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>plasma cell cell count measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>plasma cell count test</oboInOwl:hasExactSynonym>
         <rdfs:label>plasma cell count</rdfs:label>
     </owl:Class>
@@ -34657,8 +34700,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <obo:IAO_0000115>A determination of the number of dendritic cell in a blood sample.</obo:IAO_0000115>
         <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2023-03-03T20:39:14Z</dce:date>
-        <oboInOwl:hasExactSynonym>dendritic cell cell count</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>dendritic cell cell count measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>dendritic cell count test</oboInOwl:hasExactSynonym>
         <rdfs:label>dendritic cell count</rdfs:label>
     </owl:Class>
@@ -34693,8 +34734,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2023-03-03T20:39:14Z</dce:date>
         <oboInOwl:hasExactSynonym>T reg cell count</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>regulatory T cell cell count</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>regulatory T cell cell count measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>regulatory T cell count test</oboInOwl:hasExactSynonym>
         <rdfs:label>regulatory T cell count</rdfs:label>
     </owl:Class>
@@ -35164,6 +35203,26 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>bladder catheterization</oboInOwl:hasExactSynonym>
         <rdfs:label>urinary catheterization</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001395 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001395">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000456"/>
+        <obo:IAO_0000115>A procedure that uses radio waves to create heat to destroy tissue.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0001-7941-2961"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-11-28T20:44:56Z</dce:date>
+        <oboInOwl:hasExactSynonym>RFA</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>radiofrequency neurotomy</oboInOwl:hasExactSynonym>
+        <rdfs:label>radiofrequency ablation therapy</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001395"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>RFA</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/maxo#ABBREVIATION"/>
+    </owl:Axiom>
     
 
 
@@ -37313,6 +37372,26 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001472 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001472">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001503"/>
+        <obo:IAO_0000115>A therapeutic surgical procedure to treat gastroesophageal reflux disease and hiatus hernia. It involves the wrapping of the fundus of the stomach around the lower esophagus to strengthen the lower esophageal sphincter.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0001-7941-2961"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-11-28T21:09:28Z</dce:date>
+        <oboInOwl:hasDbXref>NCIT:C91834</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Nissen fundoplication</oboInOwl:hasExactSynonym>
+        <rdfs:label>fundoplication</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001472"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A therapeutic surgical procedure to treat gastroesophageal reflux disease and hiatus hernia. It involves the wrapping of the fundus of the stomach around the lower esophagus to strengthen the lower esophageal sphincter.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C91834</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/MAXO_0001473 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001473">
@@ -37430,6 +37509,26 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <dce:date>2023-05-15T11:00:00Z</dce:date>
         <oboInOwl:hasExactSynonym>treatment with http://purl.obolibrary.org/obo/CHEBI_177023</oboInOwl:hasExactSynonym>
         <rdfs:label>somatostatin recepter agonist therapy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001477 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001477">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001507"/>
+        <obo:IAO_0000115>A surgery to move a testical from growin to scrotum. The procedure permanently fixes the testical to the scrotum.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0001-7941-2961"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-11-28T21:42:56Z</dce:date>
+        <oboInOwl:hasDbXref>NCIT:C111066</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:32809739</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US:85419002</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>fixation of testes</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>scrotal fixation of testes</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>scrotal orchiopexy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>testicular fixation</oboInOwl:hasExactSynonym>
+        <rdfs:comment>Orchiopexy corrects undescended testicles that have not dropped into the scrotum or testicular torsion where testicular blood supply twists and cuts off blood flow to the testicle.</rdfs:comment>
+        <rdfs:label>orchiopexy</rdfs:label>
     </owl:Class>
     
 
@@ -37554,6 +37653,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0001487 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001487">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000058"/>
         <obo:IAO_0000115>Therapeutic administration of interferon gamma</obo:IAO_0000115>
         <dce:date>2023-04-11T12:00:00Z</dce:date>
         <dcterms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
@@ -37826,7 +37926,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         </owl:equivalentClass>
         <obo:IAO_0000115>A drug or substance used as therapy to inhibit 4-hydroxyphenylpyruvate hydroxylase.</obo:IAO_0000115>
         <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
-        <dce:date>2023-08-18T11:00:00Z</dce:date>
+        <dce:date>2023-11-109T11:00:00Z</dce:date>
         <oboInOwl:hasExactSynonym>4-hydroxyphenylpyruvate hydroxylase inhibitor therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with EC 1.13.11.27 (4-hydroxyphenylpyruvate dioxygenase) inhibitor</oboInOwl:hasExactSynonym>
         <rdfs:label>HPPD inhibitor therapy</rdfs:label>
@@ -37842,6 +37942,378 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-08-21T16:57:48Z</dce:date>
         <dcterms:creator rdf:resource="https://orcid.org/0000-0001-7941-2961"/>
         <rdfs:label>tyrosine metabolism inhibitor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001503 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001503">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000012"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001007"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Any surgical procedure conducted on the digestive system.</obo:IAO_0000115>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
+        <dce:date>2023-10-19T20:39:14Z</dce:date>
+        <oboInOwl:hasExactSynonym>digestive system surgical procedure</oboInOwl:hasExactSynonym>
+        <rdfs:label>surgical procedure on digestive system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001504 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001504">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000012"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0005409"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Any surgical procedure conducted on the alimentary part of gastrointestinal system.</obo:IAO_0000115>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
+        <dce:date>2023-10-19T20:39:14Z</dce:date>
+        <oboInOwl:hasExactSynonym>alimentary part of gastrointestinal system surgical procedure</oboInOwl:hasExactSynonym>
+        <rdfs:label>surgical procedure on alimentary part of gastrointestinal system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001505 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001505">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000011"/>
+        <obo:IAO_0000115>Gross motor therapy is designed to help individuals improve their use of large muscles and the coordination of the arms, legs, and the entire body.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0001-7941-2961"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-11-30T17:16:03Z</dce:date>
+        <oboInOwl:hasExactSynonym>gross motor skills therapy</oboInOwl:hasExactSynonym>
+        <rdfs:label>gross motor therapy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001506 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001506">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000012"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001009"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Any surgical procedure conducted on the circulatory system.</obo:IAO_0000115>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
+        <dce:date>2023-10-19T20:39:14Z</dce:date>
+        <oboInOwl:hasExactSynonym>circulatory system surgical procedure</oboInOwl:hasExactSynonym>
+        <rdfs:label>surgical procedure on circulatory system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001507 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001507">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000012"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004122"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Any surgical procedure conducted on the genitourinary system.</obo:IAO_0000115>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
+        <dce:date>2023-10-19T20:39:14Z</dce:date>
+        <oboInOwl:hasExactSynonym>genitourinary system surgical procedure</oboInOwl:hasExactSynonym>
+        <rdfs:label>surgical procedure on genitourinary system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001508 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001508">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000012"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002204"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Any surgical procedure conducted on the musculoskeletal system.</obo:IAO_0000115>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
+        <dce:date>2023-10-19T20:39:14Z</dce:date>
+        <oboInOwl:hasExactSynonym>musculoskeletal system surgical procedure</oboInOwl:hasExactSynonym>
+        <rdfs:label>surgical procedure on musculoskeletal system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001509 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001509">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000146"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000070"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CL_0000081"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000829"/>
+        <obo:IAO_0000115>A determination of the number of blood cell in a blood sample.</obo:IAO_0000115>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
+        <dce:date>2023-11-01T20:39:14Z</dce:date>
+        <oboInOwl:hasExactSynonym>CBC</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>blood cell count test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>complete blood cell count</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>complete blood count</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>full blood count</oboInOwl:hasExactSynonym>
+        <rdfs:label>blood cell count</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001510 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001510">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000012"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_2001371"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Any surgical procedure conducted on the pancreatic system.</obo:IAO_0000115>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
+        <dce:date>2023-10-19T20:39:14Z</dce:date>
+        <oboInOwl:hasExactSynonym>pancreatic system surgical procedure</oboInOwl:hasExactSynonym>
+        <rdfs:label>surgical procedure on pancreatic system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001511 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001511">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000012"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004100"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Any surgical procedure conducted on the renal collecting system.</obo:IAO_0000115>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
+        <dce:date>2023-10-19T20:39:14Z</dce:date>
+        <oboInOwl:hasExactSynonym>renal collecting system surgical procedure</oboInOwl:hasExactSynonym>
+        <rdfs:label>surgical procedure on renal collecting system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001512 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001512">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000012"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000990"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Any surgical procedure conducted on the reproductive system.</obo:IAO_0000115>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
+        <dce:date>2023-10-19T20:39:14Z</dce:date>
+        <oboInOwl:hasExactSynonym>reproductive system surgical procedure</oboInOwl:hasExactSynonym>
+        <rdfs:label>surgical procedure on reproductive system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001513 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001513">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000012"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000014"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Any surgical procedure conducted on the zone of skin.</obo:IAO_0000115>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
+        <dce:date>2023-10-19T20:39:14Z</dce:date>
+        <oboInOwl:hasExactSynonym>zone of skin surgical procedure</oboInOwl:hasExactSynonym>
+        <rdfs:label>skin surgery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001514 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001514">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000012"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001004"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Any surgical procedure conducted on the respiratory system.</obo:IAO_0000115>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
+        <dce:date>2023-10-19T20:39:14Z</dce:date>
+        <oboInOwl:hasExactSynonym>respiratory system surgical procedure</oboInOwl:hasExactSynonym>
+        <rdfs:label>surgical procedure on respiratory system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001515 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001515">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000012"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0007798"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Any surgical procedure conducted on the vascular system.</obo:IAO_0000115>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
+        <dce:date>2023-10-19T20:39:14Z</dce:date>
+        <oboInOwl:hasExactSynonym>vascular system surgical procedure</oboInOwl:hasExactSynonym>
+        <rdfs:label>surgical procedure on vascular system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001516 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001516">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001351"/>
+        <obo:IAO_0000115>Therapy aids in the development and use of the small muscles of the hands for tasks such as grasping objects, writing, cutting with scissors, shoe-tying, and fastening buttons.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0001-7941-2961"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-11-30T17:19:07Z</dce:date>
+        <oboInOwl:hasExactSynonym>fine motor skills therapy</oboInOwl:hasExactSynonym>
+        <rdfs:label>fine motor therapy</rdfs:label>
     </owl:Class>
     
 
@@ -39853,9 +40325,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>fat or oil consumption avoidance</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>fat or oil restricted diet intake</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>fat or oil restriction</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>limited fat dietary intake</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>low fat dietary intake</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>non-fat dietary intake</oboInOwl:hasExactSynonym>
         <rdfs:label>dietary fat or oil intake avoidance</rdfs:label>
     </owl:Class>
     
@@ -42523,6 +42992,234 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/MAXO_0010125 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0010125">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000864"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50689"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Use of agent or drug to regulate reproduction.</obo:IAO_0000115>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
+        <dce:date>2023-11-109T11:00:00Z</dce:date>
+        <oboInOwl:hasExactSynonym>treatment with http://purl.obolibrary.org/obo/CHEBI_50689</oboInOwl:hasExactSynonym>
+        <rdfs:label>reproductive control agent therapy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0010126 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0010126">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000864"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50691"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>The use of an agent or drug to interupt pregnancy after implantation.</obo:IAO_0000115>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
+        <dce:date>2023-11-109T11:00:00Z</dce:date>
+        <oboInOwl:hasExactSynonym>treatment with http://purl.obolibrary.org/obo/CHEBI_50691</oboInOwl:hasExactSynonym>
+        <rdfs:label>aborifacient agent therapy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0010127 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0010127">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000864"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_66993"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Use of drug or agent to suppress uterine contractions thereby suppressing premature labor and birth.</obo:IAO_0000115>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
+        <dce:date>2023-11-109T11:00:00Z</dce:date>
+        <oboInOwl:hasExactSynonym>treatment with http://purl.obolibrary.org/obo/CHEBI_66993</oboInOwl:hasExactSynonym>
+        <rdfs:label>tocolytic agent therapy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0010128 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0010128">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000864"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_49323"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Use of a drug or agent to prevent or reduce probability of contraception.</obo:IAO_0000115>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
+        <dce:date>2023-11-109T11:00:00Z</dce:date>
+        <oboInOwl:hasExactSynonym>treatment with http://purl.obolibrary.org/obo/CHEBI_49323</oboInOwl:hasExactSynonym>
+        <rdfs:label>contraceptive agent therapy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0010129 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0010129">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000864"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_49324"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Use of drug or agent with contraceptive activity in females.</obo:IAO_0000115>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
+        <dce:date>2023-11-109T11:00:00Z</dce:date>
+        <oboInOwl:hasExactSynonym>treatment with http://purl.obolibrary.org/obo/CHEBI_49324</oboInOwl:hasExactSynonym>
+        <rdfs:label>female contraceptive agent therapy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0010130 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0010130">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000864"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_49325"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Use of a compound or agent to block ovulation and prevent occurance of pregnancy.</obo:IAO_0000115>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
+        <dce:date>2023-11-109T11:00:00Z</dce:date>
+        <oboInOwl:hasExactSynonym>birth control therapy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>treatment with http://purl.obolibrary.org/obo/CHEBI_49325</oboInOwl:hasExactSynonym>
+        <rdfs:comment>The use of these drugs or agents have many other uses beyond pregnancy control.</rdfs:comment>
+        <rdfs:label>oral contraceptive agent therapy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0010131 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0010131">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0009099"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001723"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Collection biological material from within the tongue with a cotton swab for use in clinical tests.</obo:IAO_0000115>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2978</obo:dcterms_creator>
+        <dce:date>2023-11-30T20:39:14Z</dce:date>
+        <oboInOwl:hasExactSynonym>swab collection of tongue</oboInOwl:hasExactSynonym>
+        <rdfs:label>tongue swab collection</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/MAXO_0010200 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0010200">
@@ -44344,7 +45041,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <obo:IAO_0000115>The radiographic examination of the spinal cord and nerve roots following the injection of a contrast medium into the spinal subarachnoid space. The X-rays taken may highlight conditions such as spinal tumors, spinal cord swelling and herniated discs.</obo:IAO_0000115>
-        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-29610</obo:dcterms_creator>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2020-04-27T20:39:14Z</dce:date>
         <oboInOwl:hasDbXref>NCIT:C20175</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>myelography</oboInOwl:hasExactSynonym>
@@ -44408,17 +45105,31 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0025001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0025001">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000012"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004535"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000012"/>
-        <obo:IAO_0000115>A surgical procedure on the heart.</obo:IAO_0000115>
+        <obo:IAO_0000115>Any surgical procedure conducted on the cardiovascular system.</obo:IAO_0000115>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
+        <dce:date>2023-10-19T20:39:14Z</dce:date>
+        <oboInOwl:hasExactSynonym>cardiac surgery</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>cardiovascular system surgical procedure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>heart surgery</oboInOwl:hasExactSynonym>
-        <rdfs:label>cardiac surgery</rdfs:label>
+        <rdfs:label>surgical procedure on cardiovascular system</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0025001"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A surgical procedure on the heart.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCIT:C157806</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -44476,18 +45187,29 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0025005 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0025005">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000012"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002392"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000012"/>
-        <obo:IAO_0000115>A surgical procedure on the nasolacrimal duct.</obo:IAO_0000115>
+        <obo:IAO_0000115>Any surgical procedure conducted on the nasolacrimal duct.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>dacryocystorhinostomy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>nasolacrimal duct surgical procedure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>tear duct surgery</oboInOwl:hasExactSynonym>
-        <rdfs:label>nasolacrimal duct surgery</rdfs:label>
+        <rdfs:label>surgical procedure on nasolacrimal duct</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0025005"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A surgical procedure on the nasolacrimal duct.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>NCIT:C157999</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -46833,6 +47555,12 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000019"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/UBERON_0000029 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000029"/>
@@ -46962,6 +47690,12 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/UBERON_0000463 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000463"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000467 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000467"/>
     
 
 
@@ -47316,6 +48050,12 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/UBERON_0001359 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001359"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0001434 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001434"/>
     
 
 
@@ -47961,6 +48701,12 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/UBERON_0004100 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0004100"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/UBERON_0004122 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0004122"/>
@@ -48006,6 +48752,12 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/UBERON_0005396 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0005396"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0005409 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0005409"/>
     
 
 
@@ -48096,6 +48848,12 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/UBERON_0007689 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0007689"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0007798 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0007798"/>
     
 
 
@@ -48204,6 +48962,12 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/UBERON_0036068 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0036068"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_2001371 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_2001371"/>
     
 
 

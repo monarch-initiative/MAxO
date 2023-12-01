@@ -25,9 +25,9 @@
         "val" : "https://creativecommons.org/licenses/by/4.0/"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2023-10-03"
+        "val" : "2023-12-01"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/maxo/releases/2023-10-03/maxo-base.json"
+      "version" : "http://purl.obolibrary.org/obo/maxo/releases/2023-12-01/maxo-base.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0000001",
@@ -362,18 +362,22 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0000012",
-      "lbl" : "surgical procedure on body region",
+      "lbl" : "surgery by body site",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
           "val" : "A surgery performed on specific region of the body."
         },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "surgical procedure on body region"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/elements/1.1/date",
           "val" : "2023-02-24T15:24:21Z"
         }, {
           "pred" : "http://purl.org/dc/terms/creator",
-          "val" : "https://orcid.org/0000-0001-7941-2961"
+          "val" : "http://orcid.org/0000-0001-7941-2961"
         } ]
       }
     }, {
@@ -718,9 +722,15 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "Any surgical procedure performed on the eye."
+          "val" : "Any surgical procedure conducted on the camera-type eye."
         },
         "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "camera-type eye surgical procedure"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "eye procedure"
+        }, {
           "pred" : "hasExactSynonym",
           "val" : "eye surgery"
         }, {
@@ -11246,7 +11256,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0000424",
-      "lbl" : "medical magnetic resonance imaging procedure",
+      "lbl" : "magnetic resonance imaging procedure",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -11261,6 +11271,12 @@
           "synonymType" : "http://purl.obolibrary.org/obo/maxo#ABBREVIATION",
           "pred" : "hasExactSynonym",
           "val" : "NMRI"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "clinical magnetic resonance imaging procedure"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "medical magnetic resonance imaging procedure"
         }, {
           "pred" : "hasExactSynonym",
           "val" : "nuclear magnetic resonance imaging for medical therapy"
@@ -12756,12 +12772,17 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A surgical procedure to treat and correct deformities, diseases, and injuries to the skeletal system, its articulations, and associated structures.",
-          "xrefs" : [ "NCIT:C16186" ]
+          "val" : "Any surgical procedure conducted on the skeletal system."
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "orthopedic surgical procedure"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "orthopedics surgery"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "skeletal system surgical procedure"
         } ],
         "xrefs" : [ {
           "val" : "NCIT:C16186"
@@ -14226,12 +14247,6 @@
           "val" : "EOS cell count"
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "eosinophil cell count"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "eosinophil cell count measurement"
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "eosinophil count test"
         } ],
         "xrefs" : [ {
@@ -14254,12 +14269,6 @@
           "val" : "A determination of the number of granulocyte in a blood sample."
         },
         "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "granulocyte cell count"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "granulocyte cell count measurement"
-        }, {
           "pred" : "hasExactSynonym",
           "val" : "granulocyte count test"
         }, {
@@ -14290,9 +14299,6 @@
           "val" : "basophil cell count"
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "basophil cell count measurement"
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "basophil count test"
         }, {
           "pred" : "hasExactSynonym",
@@ -14318,12 +14324,6 @@
           "val" : "A determination of the number of lymphocyte in a blood sample."
         },
         "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "lymphocyte cell count"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "lymphocyte cell count measurement"
-        }, {
           "pred" : "hasExactSynonym",
           "val" : "lymphocyte count test"
         } ],
@@ -21960,12 +21960,6 @@
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "reticulocyte cell count"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "reticulocyte cell count measurement"
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "reticulocyte count test"
         } ],
         "xrefs" : [ {
@@ -23354,7 +23348,7 @@
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "rental function test"
+          "val" : "renal function test"
         } ],
         "xrefs" : [ {
           "val" : "NCIT:C74972"
@@ -24483,22 +24477,28 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0000946",
-      "lbl" : "neurosurgical procedure",
+      "lbl" : "surgical procedure on nervous system",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "Any surgical procedure performed on nervous system tissue."
+          "val" : "Any surgical procedure conducted on the nervous system."
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
+          "val" : "nervous system surgical procedure"
+        }, {
+          "pred" : "hasExactSynonym",
           "val" : "neurosurgery"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "neurosurgical procedure"
         } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        }, {
           "pred" : "http://purl.org/dc/elements/1.1/date",
           "val" : "2021-08-12T19:44:10Z"
-        }, {
-          "pred" : "http://purl.org/dc/terms/creator",
-          "val" : "http://orcid.org/0000-0001-7941-2961"
         } ]
       }
     }, {
@@ -25455,39 +25455,14 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0001006",
-      "lbl" : "hematopoietic cell count",
+      "lbl" : "obsolete hematopoeitic cell count",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "A determination of the number of hematopoietic cell in a blood sample."
-        },
-        "synonyms" : [ {
-          "synonymType" : "http://purl.obolibrary.org/obo/maxo#ABBREVIATION",
-          "pred" : "hasExactSynonym",
-          "val" : "CBC"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "complete blood count"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "full blood count"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "hematopoietic cell cell count"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "hematopoietic cell cell count measurement"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "hematopoietic cell count test"
-        } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
-          "val" : "http://orcid.org/0000-0001-7941-2961"
-        }, {
-          "pred" : "http://purl.org/dc/elements/1.1/date",
-          "val" : "2019-05-16T18:20:55Z"
-        } ]
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
+          "val" : "http://purl.obolibrary.org/obo/MAXO_0001509"
+        } ],
+        "deprecated" : true
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0001007",
@@ -25498,12 +25473,6 @@
           "val" : "A determination of the number of erythrocyte in a blood sample."
         },
         "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "erythrocyte cell count"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "erythrocyte cell count measurement"
-        }, {
           "pred" : "hasExactSynonym",
           "val" : "erythrocyte count test"
         }, {
@@ -25534,12 +25503,6 @@
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "platelet cell count"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "platelet cell count measurement"
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "platelet count test"
         }, {
           "pred" : "hasExactSynonym",
@@ -25566,12 +25529,6 @@
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "neutrophil cell count"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "neutrophil cell count measurement"
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "neutrophil count test"
         } ],
         "basicPropertyValues" : [ {
@@ -25594,12 +25551,6 @@
           "synonymType" : "http://purl.obolibrary.org/obo/maxo#ABBREVIATION",
           "pred" : "hasExactSynonym",
           "val" : "WBC"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "leukocyte cell count"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "leukocyte cell count measurement"
         }, {
           "pred" : "hasExactSynonym",
           "val" : "leukocyte count test"
@@ -27899,7 +27850,7 @@
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
-          "val" : "http://orcid.org/0000-0001-7941-2962"
+          "val" : "http://orcid.org/0000-0001-7941-2961"
         }, {
           "pred" : "http://purl.org/dc/elements/1.1/date",
           "val" : "2020-06-23T20:39:14Z"
@@ -27919,7 +27870,7 @@
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
-          "val" : "http://orcid.org/0000-0001-7941-2963"
+          "val" : "http://orcid.org/0000-0001-7941-2961"
         }, {
           "pred" : "http://purl.org/dc/elements/1.1/date",
           "val" : "2020-06-23T20:39:14Z"
@@ -27945,7 +27896,7 @@
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
-          "val" : "http://orcid.org/0000-0001-7941-2964"
+          "val" : "http://orcid.org/0000-0001-7941-2961"
         }, {
           "pred" : "http://purl.org/dc/elements/1.1/date",
           "val" : "2020-06-23T20:39:14Z"
@@ -27980,7 +27931,7 @@
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
-          "val" : "http://orcid.org/0000-0001-7941-2965"
+          "val" : "http://orcid.org/0000-0001-7941-2961"
         }, {
           "pred" : "http://purl.org/dc/elements/1.1/date",
           "val" : "2020-06-23T20:39:14Z"
@@ -30551,7 +30502,7 @@
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
-          "val" : "http://orcid.org/0000-0001-7941-2965"
+          "val" : "http://orcid.org/0000-0001-7941-2961"
         }, {
           "pred" : "http://purl.org/dc/elements/1.1/date",
           "val" : "2022-03-24T20:39:14Z"
@@ -30571,7 +30522,7 @@
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
-          "val" : "http://orcid.org/0000-0001-7941-2965"
+          "val" : "http://orcid.org/0000-0001-7941-2961"
         }, {
           "pred" : "http://purl.org/dc/elements/1.1/date",
           "val" : "2022-03-24T20:39:14Z"
@@ -30591,7 +30542,7 @@
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
-          "val" : "http://orcid.org/0000-0001-7941-2965"
+          "val" : "http://orcid.org/0000-0001-7941-2961"
         }, {
           "pred" : "http://purl.org/dc/elements/1.1/date",
           "val" : "2022-03-24T20:39:14Z"
@@ -30611,7 +30562,7 @@
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
-          "val" : "http://orcid.org/0000-0001-7941-2965"
+          "val" : "http://orcid.org/0000-0001-7941-2961"
         }, {
           "pred" : "http://purl.org/dc/elements/1.1/date",
           "val" : "2022-03-24T20:39:14Z"
@@ -30631,7 +30582,7 @@
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
-          "val" : "http://orcid.org/0000-0001-7941-2965"
+          "val" : "http://orcid.org/0000-0001-7941-2961"
         }, {
           "pred" : "http://purl.org/dc/elements/1.1/date",
           "val" : "2022-03-24T20:39:14Z"
@@ -30651,7 +30602,7 @@
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
-          "val" : "http://orcid.org/0000-0001-7941-2965"
+          "val" : "http://orcid.org/0000-0001-7941-2961"
         }, {
           "pred" : "http://purl.org/dc/elements/1.1/date",
           "val" : "2022-03-24T20:39:14Z"
@@ -30671,7 +30622,7 @@
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
-          "val" : "http://orcid.org/0000-0001-7941-2965"
+          "val" : "http://orcid.org/0000-0001-7941-2961"
         }, {
           "pred" : "http://purl.org/dc/elements/1.1/date",
           "val" : "2022-03-24T20:39:14Z"
@@ -33940,12 +33891,6 @@
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "sperm cell count"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "sperm cell count measurement"
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "sperm count test"
         } ],
         "basicPropertyValues" : [ {
@@ -33965,12 +33910,6 @@
           "val" : "A determination of the number of helper T cell in a blood sample."
         },
         "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "helper T cell cell count"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "helper T cell cell count measurement"
-        }, {
           "pred" : "hasExactSynonym",
           "val" : "helper T cell count test"
         } ],
@@ -33992,12 +33931,6 @@
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "T cell cell count"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "T cell cell count measurement"
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "T cell count test"
         } ],
         "basicPropertyValues" : [ {
@@ -34017,12 +33950,6 @@
           "val" : "A determination of the number of B cell in a blood sample."
         },
         "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "B cell cell count"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "B cell cell count measurement"
-        }, {
           "pred" : "hasExactSynonym",
           "val" : "B cell count test"
         } ],
@@ -34044,12 +33971,6 @@
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "natural killer cell cell count"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "natural killer cell cell count measurement"
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "natural killer cell count test"
         } ],
         "basicPropertyValues" : [ {
@@ -34069,12 +33990,6 @@
           "val" : "A determination of the number of echinocyte in a blood sample."
         },
         "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "echinocyte cell count"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "echinocyte cell count measurement"
-        }, {
           "pred" : "hasExactSynonym",
           "val" : "echinocyte count test"
         } ],
@@ -34096,12 +34011,6 @@
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "plasma cell cell count"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "plasma cell cell count measurement"
-        }, {
-          "pred" : "hasExactSynonym",
           "val" : "plasma cell count test"
         } ],
         "basicPropertyValues" : [ {
@@ -34121,12 +34030,6 @@
           "val" : "A determination of the number of dendritic cell in a blood sample."
         },
         "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "dendritic cell cell count"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "dendritic cell cell count measurement"
-        }, {
           "pred" : "hasExactSynonym",
           "val" : "dendritic cell count test"
         } ],
@@ -34149,12 +34052,6 @@
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "T reg cell count"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "regulatory T cell cell count"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "regulatory T cell cell count measurement"
         }, {
           "pred" : "hasExactSynonym",
           "val" : "regulatory T cell count test"
@@ -34501,6 +34398,30 @@
         }, {
           "pred" : "http://purl.org/dc/terms/creator",
           "val" : "https://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001395",
+      "lbl" : "radiofrequency ablation therapy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A procedure that uses radio waves to create heat to destroy tissue."
+        },
+        "synonyms" : [ {
+          "synonymType" : "http://purl.obolibrary.org/obo/maxo#ABBREVIATION",
+          "pred" : "hasExactSynonym",
+          "val" : "RFA"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "radiofrequency neurotomy"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/creator",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-11-28T20:44:56Z"
         } ]
       }
     }, {
@@ -36039,6 +35960,30 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001472",
+      "lbl" : "fundoplication",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A therapeutic surgical procedure to treat gastroesophageal reflux disease and hiatus hernia. It involves the wrapping of the fundus of the stomach around the lower esophagus to strengthen the lower esophageal sphincter.",
+          "xrefs" : [ "NCIT:C91834" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Nissen fundoplication"
+        } ],
+        "xrefs" : [ {
+          "val" : "NCIT:C91834"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/creator",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-11-28T21:09:28Z"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0001473",
       "lbl" : "benzothiadiazine derivative therapy",
       "type" : "CLASS",
@@ -36112,6 +36057,43 @@
         }, {
           "pred" : "http://purl.org/dc/elements/1.1/date",
           "val" : "2023-05-15T11:00:00Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001477",
+      "lbl" : "orchiopexy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A surgery to move a testical from growin to scrotum. The procedure permanently fixes the testical to the scrotum."
+        },
+        "comments" : [ "Orchiopexy corrects undescended testicles that have not dropped into the scrotum or testicular torsion where testicular blood supply twists and cuts off blood flow to the testicle." ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "fixation of testes"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "scrotal fixation of testes"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "scrotal orchiopexy"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "testicular fixation"
+        } ],
+        "xrefs" : [ {
+          "val" : "NCIT:C111066"
+        }, {
+          "val" : "PMID:32809739"
+        }, {
+          "val" : "SNOMEDCT_US:85419002"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/creator",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-11-28T21:42:56Z"
         } ]
       }
     }, {
@@ -36567,7 +36549,7 @@
           "val" : "http://orcid.org/0000-0001-7941-2961"
         }, {
           "pred" : "http://purl.org/dc/elements/1.1/date",
-          "val" : "2023-08-18T11:00:00Z"
+          "val" : "2023-11-109T11:00:00Z"
         } ]
       }
     }, {
@@ -36584,6 +36566,298 @@
         }, {
           "pred" : "http://purl.org/dc/terms/creator",
           "val" : "https://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001503",
+      "lbl" : "surgical procedure on digestive system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Any surgical procedure conducted on the digestive system."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "digestive system surgical procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-10-19T20:39:14Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001504",
+      "lbl" : "surgical procedure on alimentary part of gastrointestinal system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Any surgical procedure conducted on the alimentary part of gastrointestinal system."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "alimentary part of gastrointestinal system surgical procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-10-19T20:39:14Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001505",
+      "lbl" : "gross motor therapy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Gross motor therapy is designed to help individuals improve their use of large muscles and the coordination of the arms, legs, and the entire body."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "gross motor skills therapy"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/creator",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-11-30T17:16:03Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001506",
+      "lbl" : "surgical procedure on circulatory system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Any surgical procedure conducted on the circulatory system."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "circulatory system surgical procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-10-19T20:39:14Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001507",
+      "lbl" : "surgical procedure on genitourinary system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Any surgical procedure conducted on the genitourinary system."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "genitourinary system surgical procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-10-19T20:39:14Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001508",
+      "lbl" : "surgical procedure on musculoskeletal system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Any surgical procedure conducted on the musculoskeletal system."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "musculoskeletal system surgical procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-10-19T20:39:14Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001509",
+      "lbl" : "blood cell count",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A determination of the number of blood cell in a blood sample."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "CBC"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "blood cell count test"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "complete blood cell count"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "complete blood count"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "full blood count"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-11-01T20:39:14Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001510",
+      "lbl" : "surgical procedure on pancreatic system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Any surgical procedure conducted on the pancreatic system."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "pancreatic system surgical procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-10-19T20:39:14Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001511",
+      "lbl" : "surgical procedure on renal collecting system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Any surgical procedure conducted on the renal collecting system."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "renal collecting system surgical procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-10-19T20:39:14Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001512",
+      "lbl" : "surgical procedure on reproductive system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Any surgical procedure conducted on the reproductive system."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "reproductive system surgical procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-10-19T20:39:14Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001513",
+      "lbl" : "skin surgery",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Any surgical procedure conducted on the zone of skin."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "zone of skin surgical procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-10-19T20:39:14Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001514",
+      "lbl" : "surgical procedure on respiratory system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Any surgical procedure conducted on the respiratory system."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "respiratory system surgical procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-10-19T20:39:14Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001515",
+      "lbl" : "surgical procedure on vascular system",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Any surgical procedure conducted on the vascular system."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "vascular system surgical procedure"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-10-19T20:39:14Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001516",
+      "lbl" : "fine motor therapy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Therapy aids in the development and use of the small muscles of the hands for tasks such as grasping objects, writing, cutting with scissors, shoe-tying, and fastening buttons."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "fine motor skills therapy"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/creator",
+          "val" : "https://orcid.org/0000-0001-7941-2961"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-11-30T17:19:07Z"
         } ]
       }
     }, {
@@ -38989,15 +39263,6 @@
         }, {
           "pred" : "hasExactSynonym",
           "val" : "fat or oil restriction"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "limited fat dietary intake"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "low fat dietary intake"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "non-fat dietary intake"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
@@ -42332,6 +42597,150 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0010125",
+      "lbl" : "reproductive control agent therapy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Use of agent or drug to regulate reproduction."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "treatment with http://purl.obolibrary.org/obo/CHEBI_50689"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-11-109T11:00:00Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0010126",
+      "lbl" : "aborifacient agent therapy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The use of an agent or drug to interupt pregnancy after implantation."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "treatment with http://purl.obolibrary.org/obo/CHEBI_50691"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-11-109T11:00:00Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0010127",
+      "lbl" : "tocolytic agent therapy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Use of drug or agent to suppress uterine contractions thereby suppressing premature labor and birth."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "treatment with http://purl.obolibrary.org/obo/CHEBI_66993"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-11-109T11:00:00Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0010128",
+      "lbl" : "contraceptive agent therapy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Use of a drug or agent to prevent or reduce probability of contraception."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "treatment with http://purl.obolibrary.org/obo/CHEBI_49323"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-11-109T11:00:00Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0010129",
+      "lbl" : "female contraceptive agent therapy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Use of drug or agent with contraceptive activity in females."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "treatment with http://purl.obolibrary.org/obo/CHEBI_49324"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-11-109T11:00:00Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0010130",
+      "lbl" : "oral contraceptive agent therapy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Use of a compound or agent to block ovulation and prevent occurance of pregnancy."
+        },
+        "comments" : [ "The use of these drugs or agents have many other uses beyond pregnancy control." ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "birth control therapy"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "treatment with http://purl.obolibrary.org/obo/CHEBI_49325"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-11-109T11:00:00Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0010131",
+      "lbl" : "tongue swab collection",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Collection biological material from within the tongue with a cotton swab for use in clinical tests."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "swab collection of tongue"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
+          "val" : "http://orcid.org/0000-0001-7941-2978"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-11-30T20:39:14Z"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0010200",
       "lbl" : "abdominal ultrasonography",
       "type" : "CLASS",
@@ -44304,7 +44713,7 @@
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
-          "val" : "http://orcid.org/0000-0001-7941-29610"
+          "val" : "http://orcid.org/0000-0001-7941-2961"
         }, {
           "pred" : "http://purl.org/dc/elements/1.1/date",
           "val" : "2020-04-27T20:39:14Z"
@@ -44373,16 +44782,28 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0025001",
-      "lbl" : "cardiac surgery",
+      "lbl" : "surgical procedure on cardiovascular system",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A surgical procedure on the heart.",
-          "xrefs" : [ "NCIT:C157806" ]
+          "val" : "Any surgical procedure conducted on the cardiovascular system."
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
+          "val" : "cardiac surgery"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "cardiovascular system surgical procedure"
+        }, {
+          "pred" : "hasExactSynonym",
           "val" : "heart surgery"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2023-10-19T20:39:14Z"
         } ]
       }
     }, {
@@ -44433,16 +44854,18 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0025005",
-      "lbl" : "nasolacrimal duct surgery",
+      "lbl" : "surgical procedure on nasolacrimal duct",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A surgical procedure on the nasolacrimal duct.",
-          "xrefs" : [ "NCIT:C157999" ]
+          "val" : "Any surgical procedure conducted on the nasolacrimal duct."
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "dacryocystorhinostomy"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "nasolacrimal duct surgical procedure"
         }, {
           "pred" : "hasExactSynonym",
           "val" : "tear duct surgery"
@@ -47180,7 +47603,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0000067",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000012"
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001514"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0000068",
       "pred" : "is_a",
@@ -50438,10 +50861,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0000219"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/MAXO_0001006",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000829"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0001011",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0000487"
@@ -50726,6 +51145,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0001389"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0001395",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000456"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0001421",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0001417"
@@ -50733,6 +51156,14 @@
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0001468",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0000993"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0001472",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001503"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0001477",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001507"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0001478",
       "pred" : "is_a",
@@ -50769,6 +51200,10 @@
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0001486",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0000296"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0001487",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000058"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0001488",
       "pred" : "is_a",
@@ -50817,6 +51252,18 @@
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0001502",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0000058"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0001505",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000011"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0001509",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000829"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0001516",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001351"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0002000",
       "pred" : "is_a",
@@ -52302,12 +52749,18 @@
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000007",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000595" ]
     }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000012",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000004" ]
+    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000019",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000007" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0002233",
         "fillerId" : "http://purl.obolibrary.org/obo/UBERON_0001043"
       } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000024",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000012" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000034",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000002" ]
@@ -52944,6 +53397,9 @@
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000444",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000058" ]
     }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000479",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000012" ]
+    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000493",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
     }, {
@@ -53193,6 +53649,9 @@
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000871",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000527" ]
     }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000946",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000012" ]
+    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000967",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000988" ]
     }, {
@@ -53204,9 +53663,6 @@
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0000990",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0001269" ]
-    }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001006",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000146" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001007",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000146" ]
@@ -54761,6 +55217,42 @@
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001501",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000058" ]
     }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001503",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000012" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001504",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000012" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001506",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000012" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001507",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000012" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001508",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000012" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001509",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000146" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001510",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000012" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001511",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000012" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001512",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000012" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001513",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000012" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001514",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000012" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001515",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000012" ]
+    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0009078",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0009076" ]
     }, {
@@ -55037,6 +55529,27 @@
         "fillerId" : "http://purl.obolibrary.org/obo/UBERON_0002113"
       } ]
     }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0010125",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000058" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0010126",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000058" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0010127",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000058" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0010128",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000058" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0010129",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000058" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0010130",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000058" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0010131",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0009099" ]
+    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0010200",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000072" ]
     }, {
@@ -55199,8 +55712,14 @@
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0010366",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000595" ]
     }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0025001",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000012" ]
+    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0025002",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0009072" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0025005",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000012" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0035001",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000595" ]
