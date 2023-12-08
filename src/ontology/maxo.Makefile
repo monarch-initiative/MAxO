@@ -78,17 +78,35 @@ merge_template: $(MERGE_TEMPLATE)
 
 
 
- #########################################
+##########################################
 ### Get maxo annotations            ######
 ##########################################
 # YOU MUST SET THE MAXOA_RELEASE_PASSWORD ENVRIONMENTAL VARIABLE WHEN RELEASING
 MAXOA_DIRECTORY=tmp/maxoa
 MAXOA_FILENAME=maxo-annotations.tsv
-maxoa:
+
+$(MAXOA_DIRECTORY)/$(MAXOA_FILENAME): $(SRC)
 	mkdir -p $(MAXOA_DIRECTORY)
 	@test $(MAXOA_RELEASE_PASSWORD) || "ENV MAXOA_RELEASE_PASSWORD"
-	@curl -Lk https://poet.jax.org/api/v1/export/release?key=$(MAXOA_RELEASE_PASSWORD) && echo "POET Release Success!" || echo "POET Release Failure."
-	@curl -Lk https://poet.jax.org/api/v1/export/maxo >> $(MAXOA_DIRECTORY)/$(MAXOA_FILENAME)
+	@curl -Lk https://poet.jax.org/api/v1/export/release?key=$(MAXOA_RELEASE_PASSWORD) && echo "POET Release Success!" || (echo "POET Release Failure." && exit 1)
+	@curl -Lk https://poet.jax.org/api/v1/export/maxo >> $@
+
+.PHONY: maxoa
+maxoa:
+	$(MAKE) $(MAXOA_DIRECTORY)/$(MAXOA_FILENAME)
+
+prepare_release: maxoa
+
+prepare_release_fast: maxoa
+
+RELEASE_ASSETS_AFTER_RELEASE+= $(MAXOA_DIRECTORY)/$(MAXOA_FILENAME)
+
+.PHONY: public_release
+public_release:
+	@test $(GHVERSION)
+	ls -alt $(RELEASE_ASSETS_AFTER_RELEASE)
+	gh release create $(GHVERSION) --title "$(VERSION) Release" --draft $(RELEASE_ASSETS_AFTER_RELEASE) --generate-notes
+
 
 #########################################
 ### Graveyard        ####################
