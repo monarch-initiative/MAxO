@@ -20,7 +20,7 @@ $(ONT)-base.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(IMPORT_FILES)
 	reason --reasoner ELK --equivalent-classes-allowed asserted-only --exclude-tautologies structural \
 	relax \
 	reduce -r ELK \
-	remove --base-iri $(URIBASE)/OBA --axioms external --preserve-structure false --trim false \
+	remove --base-iri $(URIBASE)/MAXO_ --axioms external --preserve-structure false --trim false \
 	$(SHARED_ROBOT_COMMANDS) \
 	annotate --link-annotation http://purl.org/dc/elements/1.1/type http://purl.obolibrary.org/obo/IAO_8000001 \
 		--ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
