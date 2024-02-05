@@ -49,6 +49,15 @@ $(MIRRORDIR)/obi.owl:
 			remove --select object-properties -o $@.tmp.owl &&\
 		mv $@.tmp.owl $@; fi
 
+# Workaround for https://github.com/FoodOntology/foodon/pull/293
+# Can be deleted after the next release of foodon
+mirror-foodon: | $(TMPDIR)
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(OBOBASE)/foodon.owl --create-dirs -o $(MIRRORDIR)/foodon.owl --retry 4 --max-time 200 &&\
+		$(ROBOT) convert -i $(MIRRORDIR)/foodon.owl -o $@.tmp.owl && \
+		$(ROBOT) remove -i $@.tmp.owl --base-iri http://purl.obolibrary.org/obo/PO_ --base-iri http://purl.obolibrary.org/obo/FOODON_ --axioms external --preserve-structure false --trim false -o $@.tmp.owl &&\
+		$(ROBOT) remove -i $@.tmp.owl --term "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" -o $@.tmp.owl &&\
+		mv $@.tmp.owl $(TMPDIR)/$@.owl; fi
+
 #########################################
 ### Custom Merge-Replace Pipeline  ######
 #########################################
@@ -95,10 +104,11 @@ merge_template: $(MERGE_TEMPLATE)
 # YOU MUST SET THE MAXOA_RELEASE_PASSWORD ENVRIONMENTAL VARIABLE WHEN RELEASING
 MAXOA_DIRECTORY=tmp/maxoa
 MAXOA_FILENAME=maxo-annotations.tsv
+MAXOA_RELEASE_PASSWORD=XXXXXXXFAKEPASSWORD
 
 $(MAXOA_DIRECTORY)/$(MAXOA_FILENAME): $(SRC)
 	mkdir -p $(MAXOA_DIRECTORY)
-	@test $(MAXOA_RELEASE_PASSWORD) || "ENV MAXOA_RELEASE_PASSWORD"
+	@test $(MAXOA_RELEASE_PASSWORD)
 	@curl -Lk https://poet.jax.org/api/v1/export/release?key=$(MAXOA_RELEASE_PASSWORD) && echo "POET Release Success!" || (echo "POET Release Failure." && exit 1)
 	@curl -Lk https://poet.jax.org/api/v1/export/maxo >> $@
 
