@@ -43,7 +43,7 @@ $(TEMPLATEDIR)/maxo-in-progress.tsv:
 # We cannot handle complex expressions in obographs in ODK 1.4
 
 $(MIRRORDIR)/obi.owl: 
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(OBOBASE)/obi.owl --create-dirs -o $(MIRRORDIR)/obi.owl --retry 4 --max-time 200 &&\
+	if [ $(MIR) = true ]; then curl -L $(OBOBASE)/obi.owl --create-dirs -o $(MIRRORDIR)/obi.owl --retry 4 --max-time 200 &&\
 		$(ROBOT) convert -i $(MIRRORDIR)/obi.owl -o $@.tmp.owl &&\
 		$(ROBOT) remove -i $@.tmp.owl --base-iri $(URIBASE)/OBI --axioms external --preserve-structure false --trim false \
 			remove --select object-properties -o $@.tmp.owl &&\
@@ -52,7 +52,7 @@ $(MIRRORDIR)/obi.owl:
 # Workaround for https://github.com/FoodOntology/foodon/pull/293
 # Can be deleted after the next release of foodon
 mirror-foodon: | $(TMPDIR)
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(OBOBASE)/foodon.owl --create-dirs -o $(MIRRORDIR)/foodon.owl --retry 4 --max-time 200 &&\
+	if [ $(MIR) = true ]; then curl -L $(OBOBASE)/foodon.owl --create-dirs -o $(MIRRORDIR)/foodon.owl --retry 4 --max-time 200 &&\
 		$(ROBOT) convert -i $(MIRRORDIR)/foodon.owl -o $@.tmp.owl && \
 		$(ROBOT) remove -i $@.tmp.owl --base-iri http://purl.obolibrary.org/obo/PO_ --base-iri http://purl.obolibrary.org/obo/FOODON_ --axioms external --preserve-structure false --trim false -o $@.tmp.owl &&\
 		$(ROBOT) remove -i $@.tmp.owl --term "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" -o $@.tmp.owl &&\
