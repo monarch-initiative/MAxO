@@ -46,7 +46,7 @@ $(MIRRORDIR)/obi.owl:
 	if [ $(MIR) = true ]; then curl -L $(OBOBASE)/obi.owl --create-dirs -o $(MIRRORDIR)/obi.owl --retry 4 --max-time 200 &&\
 		$(ROBOT) convert -i $(MIRRORDIR)/obi.owl -o $@.tmp.owl &&\
 		$(ROBOT) remove -i $@.tmp.owl --base-iri $(URIBASE)/OBI --axioms external --preserve-structure false --trim false \
-			remove --select object-properties -o $@.tmp.owl &&\
+			remove --term OBI:0000293 --term OBI:0000299 --select complement  --select object-properties -o $@.tmp.owl &&\
 		mv $@.tmp.owl $@; fi
 
 # Workaround for https://github.com/FoodOntology/foodon/pull/293
