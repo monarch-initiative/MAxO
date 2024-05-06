@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                c14d7378f03e6f3a250384c114414d8abeee904778ea4b2ef141862eb97ad9a3
+CONFIG_HASH=                fab3962b1129f1bb5cff3dd83a9e7b702976ffe614b6d7ea307b996f6663b975
 
 
 # ----------------------------------------
@@ -165,7 +165,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  omo go ro so bfo uberon foodon nbo pato hp cl chebi obi ncbitaxon pr
+IMPORTS =  omo cob go ro so bfo uberon foodon nbo pato hp cl chebi obi ncbitaxon pr
 
 IMPORT_ROOTS =  $(IMPORTDIR)/merged_import
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -375,7 +375,7 @@ $(IMPORTDIR)/merged_terms_combined.txt: $(ALL_TERMS_COMBINED)
 
 $(IMPORTDIR)/merged_import.owl: $(MIRRORDIR)/merged.owl $(IMPORTDIR)/merged_terms_combined.txt
 	if [ $(IMP) = true ]; then $(ROBOT) merge -i $< \
-		remove  --select "<http://purl.obolibrary.org/obo/GOCHE_*>" remove  --select "<http://purl.obolibrary.org/obo/NCBITaxon_Union_*>" remove  --select "<http://www.informatics.jax.org/marker/MGI:*>" remove  --select "<http://purl.obolibrary.org/obo/OBA_*>" remove  --select "<http://purl.obolibrary.org/obo/ENVO_*>" remove  --select "<http://purl.obolibrary.org/obo/MPATH_*>" remove  --select "<http://purl.obolibrary.org/obo/MOD_*>" remove  --select "<http://purl.obolibrary.org/obo/BSPO_*>" remove  --select "<http://purl.obolibrary.org/obo/CARO_*>" remove  --select "<http://www.genenames.org/cgi-bin/gene_symbol_report*>" remove  --select "<http://birdgenenames.org/cgnc/GeneReport*>" remove  --select "<http://www.ncbi.nlm.nih.gov/gene/*>" remove  --select "<http://purl.obolibrary.org/obo/foodon.owl/FOODON_*>" remove  --select "<http://purl.obolibrary.org/obo/IAO_0000109*>" remove  --select "<http://purl.obolibrary.org/obo/IAO_0000101*>"  \
+		remove  --select "<http://purl.obolibrary.org/obo/GOCHE_*>" remove  --select "<http://purl.obolibrary.org/obo/NCBITaxon_Union_*>" remove  --select "<http://www.informatics.jax.org/marker/MGI:*>" remove  --select "<http://purl.obolibrary.org/obo/OBA_*>" remove  --select "<http://purl.obolibrary.org/obo/ENVO_*>" remove  --select "<http://purl.obolibrary.org/obo/MPATH_*>" remove  --select "<http://purl.obolibrary.org/obo/SEPIO_*>" remove  --select "<http://purl.obolibrary.org/obo/MOD_*>" remove  --select "<http://purl.obolibrary.org/obo/BSPO_*>" remove  --select "<http://purl.obolibrary.org/obo/CARO_*>" remove  --select "<http://www.genenames.org/cgi-bin/gene_symbol_report*>" remove  --select "<http://birdgenenames.org/cgnc/GeneReport*>" remove  --select "<http://www.ncbi.nlm.nih.gov/gene/*>" remove  --select "<http://purl.obolibrary.org/obo/foodon.owl/FOODON_*>" remove  --select "<http://purl.obolibrary.org/obo/IAO_0000109*>" remove  --select "<http://purl.obolibrary.org/obo/IAO_0000101*>"  \
 		extract -T $(IMPORTDIR)/merged_terms_combined.txt --force true --copy-ontology-annotations true --individuals exclude --method BOT \
 		remove $(patsubst %, --term %, $(ANNOTATION_PROPERTIES)) -T $(IMPORTDIR)/merged_terms_combined.txt --select complement --select annotation-properties \
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
@@ -485,6 +485,14 @@ ifeq ($(strip $(MIR)),true)
 mirror-omo: | $(TMPDIR)
 	curl -L $(OBOBASE)/omo.owl --create-dirs -o $(TMPDIR)/omo-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/omo-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: cob
+.PHONY: mirror-cob
+.PRECIOUS: $(MIRRORDIR)/cob.owl
+mirror-cob: | $(TMPDIR)
+	curl -L $(OBOBASE)/cob.owl --create-dirs -o $(TMPDIR)/cob-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) remove -i $(TMPDIR)/cob-download.owl --base-iri $(OBOBASE)/COB --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: go
