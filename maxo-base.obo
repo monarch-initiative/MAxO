@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2024-02-05/maxo-base.owl
+data-version: maxo/releases/2024-05-07/maxo-base.owl
 ontology: maxo/maxo-base
 property_value: http://purl.org/dc/elements/1.1/creator "Leigh Carmody" xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
@@ -8,7 +8,7 @@ property_value: http://purl.org/dc/elements/1.1/title "Medical Action Ontology" 
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
 property_value: IAO:0000700 MAXO:0000001
-property_value: owl:versionInfo "2024-02-05" xsd:string
+property_value: owl:versionInfo "2024-05-07" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -401,7 +401,6 @@ property_value: http://purl.org/dc/terms/creator https://orcid.org/0000-0001-794
 id: MAXO:0000034
 name: therapeutic procedure by site
 def: "All manners of treatment to relieve illness and injury of a particular body site or system." []
-is_a: BFO:0000015
 is_a: MAXO:0000002 ! therapeutic procedure
 property_value: http://purl.org/dc/elements/1.1/date "2023-03-20T19:58:58Z" xsd:dateTime
 property_value: http://purl.org/dc/terms/creator https://orcid.org/0000-0001-7941-2961
@@ -995,7 +994,6 @@ synonym: "multivitamin preparation supplemental intake" EXACT []
 synonym: "supplementation of multivitamin preparation" EXACT []
 synonym: "supplementation with multivitamin" EXACT []
 xref: NCIT:C1654
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 intersection_of: MAXO:0000106 ! nutritional supplementation
 intersection_of: RO:0002233 FOODON:03315171
@@ -1064,7 +1062,6 @@ synonym: "dietary supplementation of food antioxidant" EXACT []
 synonym: "food antioxidant supplemental intake" EXACT []
 synonym: "supplementation of food antioxidant" EXACT []
 xref: NCIT:C67025
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2019-01-19T21:12:19Z" xsd:string
@@ -1197,7 +1194,6 @@ name: cancer screening
 def: "The use of any device, marker, or other means for the purpose of detecting the presence Neoplasm, usually in asymptomatic individuals." []
 synonym: "Neoplasm screening" EXACT []
 xref: NCIT:C15406
-is_a: BFO:0000015
 is_a: MAXO:0000124 ! disease screening
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2019-01-20T00:45:24Z" xsd:dateTime
@@ -2709,7 +2705,7 @@ synonym: "treatment with antiangiogenic medication" EXACT []
 xref: CHEBI:48422
 xref: NCIT:C1742
 is_a: MAXO:0000062 ! antineoplastic therapy
-is_a: MAXO:0000628 ! angiogenesic modulating agent therapy
+is_a: MAXO:0000628 ! angiogenesis modulating agent therapy
 property_value: http://purl.org/dc/elements/1.1/date "2019-01-22T18:50:46Z" xsd:dateTime
 property_value: http://purl.org/dc/terms/creator http://orcid.org/0000-0001-7941-2961
 
@@ -4692,7 +4688,6 @@ name: biopsy of spleen
 def: "Removal and examination of tissue, cells, or fluids from spleen for the purpose of detecting or characterizing disease." []
 synonym: "spleen biopsy" EXACT []
 is_a: MAXO:0000327 ! biopsy of abdomen
-is_a: MAXO:0001396 ! diagnostic procedure of digestive system
 is_a: MAXO:0001402 ! diagnostic procedure of hematopoietic system
 is_a: MAXO:0001446 ! diagnostic procedure of immune system
 is_a: MAXO:0001467 ! diagnostic procedure of organ
@@ -6870,7 +6865,6 @@ synonym: "D-dimer measurement" EXACT []
 synonym: "fibrin degradation fragment testing" EXACT []
 synonym: "fragment D-dimer testing" EXACT []
 xref: NCIT:C82621
-is_a: BFO:0000015
 is_a: MAXO:0000566 ! clinical chemistry assessment
 intersection_of: MAXO:0000566 ! clinical chemistry assessment
 intersection_of: RO:0002233 PR:000050369
@@ -7106,7 +7100,7 @@ property_value: http://purl.org/dc/terms/creator http://orcid.org/0000-0001-7941
 
 [Term]
 id: MAXO:0000628
-name: angiogenesic modulating agent therapy
+name: angiogenesis modulating agent therapy
 def: "Use of an agent that modulates the physiologic angiogenesis process." []
 synonym: "angiogenesis modulating drug treatment" EXACT []
 synonym: "angiogenesis modulating medication therapy" EXACT []
@@ -7118,15 +7112,9 @@ property_value: http://purl.org/dc/terms/creator http://orcid.org/0000-0001-7941
 
 [Term]
 id: MAXO:0000629
-name: angiogenesis inducing agent therapy
-def: "Use of an agent that induces or stimulates the physiologic angiogenesis process." []
-synonym: "angiogenesis inducing drug treatment" EXACT []
-synonym: "angiogenesis inducing medication therapy" EXACT []
-synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_50927" EXACT []
-xref: CHEBI:50927
-is_a: MAXO:0000628 ! angiogenesic modulating agent therapy
-property_value: http://purl.org/dc/elements/1.1/date "2020-05-26T19:05:59Z" xsd:dateTime
-property_value: http://purl.org/dc/terms/creator http://orcid.org/0000-0001-7941-2961
+name: obsolete angiogenesis inducing agent therapy
+is_obsolete: true
+replaced_by: MAXO:0000630
 
 [Term]
 id: MAXO:0000630
@@ -7138,7 +7126,7 @@ synonym: "pro-angiogenic medication treatment" EXACT []
 synonym: "proangiogenic agent therapy" EXACT []
 synonym: "treatment with pro-angiogenic agent" EXACT []
 xref: CHEBI:72571
-is_a: MAXO:0000628 ! angiogenesic modulating agent therapy
+is_a: MAXO:0000628 ! angiogenesis modulating agent therapy
 property_value: http://purl.org/dc/elements/1.1/date "2020-05-26T19:22:45Z" xsd:dateTime
 property_value: http://purl.org/dc/terms/creator http://orcid.org/0000-0001-7941-2961
 
@@ -9426,7 +9414,6 @@ name: reticulocyte count
 def: "A determination of the number of reticulocyte in a blood sample." []
 synonym: "reticulocyte count test" EXACT []
 xref: NCIT:C51947
-is_a: BFO:0000015
 is_a: MAXO:0000146 ! clinical cell count
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-16T18:20:55Z" xsd:string
@@ -10850,7 +10837,6 @@ id: MAXO:0000988
 name: diagnostic procedure by site
 def: "Procedure to evaluate the structure and/or function of a particular by part or system." []
 synonym: "diagnostic procedure by body location" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000003 ! diagnostic procedure
 property_value: http://purl.org/dc/elements/1.1/date "2023-03-29T20:10:49Z" xsd:dateTime
 property_value: http://purl.org/dc/terms/creator https://orcid.org/0000-0001-7941-2961
@@ -11067,7 +11053,6 @@ synonym: "leukocyte count test" EXACT []
 synonym: "WBC" EXACT ABBREVIATION []
 synonym: "white blood cell count" EXACT []
 xref: NCIT:C51948
-is_a: BFO:0000015
 is_a: MAXO:0000146 ! clinical cell count
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2019-05-16T18:20:55Z" xsd:string
@@ -11839,11 +11824,11 @@ id: MAXO:0001077
 name: splenectomy
 def: "The surgical removal (cutting out) of part or all of spleen." []
 synonym: "spleen surgical removal" EXACT []
+is_a: MAXO:0000012 ! surgery by body site
 is_a: MAXO:0000447 ! surgical excision
 is_a: MAXO:0001415 ! therapeutic procedure of hematopoietic system
 is_a: MAXO:0001423 ! therapeutic procedure of immune system
 is_a: MAXO:0001443 ! therapeutic procedure of organ
-is_a: MAXO:0001503 ! surgical procedure on digestive system
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2020-06-23T20:39:14Z" xsd:string
 
@@ -11961,7 +11946,6 @@ id: MAXO:0001088
 name: bullectomy
 def: "The surgical removal (cutting out) of part or all of Pulmonary bulla." []
 synonym: "Pulmonary bulla surgical removal" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000447 ! surgical excision
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2020-06-23T20:39:14Z" xsd:string
@@ -11974,7 +11958,6 @@ synonym: "bunion removal" EXACT []
 synonym: "Hallux valgus surgical removal" EXACT []
 synonym: "removal of bunion" EXACT []
 xref: NCIT:C96171
-is_a: BFO:0000015
 is_a: MAXO:0000447 ! surgical excision
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2020-06-23T20:39:14Z" xsd:string
@@ -11996,7 +11979,6 @@ id: MAXO:0001091
 name: Meckel's diverticulectomy
 def: "Surgical removal of an abnormal pouch of the lining of the small intestine (bowel)." []
 synonym: "Meckel diverticulum surgical removal" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000447 ! surgical excision
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2020-06-23T20:39:14Z" xsd:string
@@ -12006,7 +11988,6 @@ id: MAXO:0001092
 name: cardiac diverticulectomy
 def: "The surgical removal (cutting out) of part or all of Cardiac diverticulum." []
 synonym: "Cardiac diverticulum surgical removal" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000447 ! surgical excision
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2020-06-23T20:39:14Z" xsd:string
@@ -12016,7 +11997,6 @@ id: MAXO:0001093
 name: esophageal diverticulectomy
 def: "The surgical removal (cutting out) of part or all of Esophageal diverticulum." []
 synonym: "Esophageal diverticulum surgical removal" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000447 ! surgical excision
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2020-06-23T20:39:14Z" xsd:string
@@ -12026,7 +12006,6 @@ id: MAXO:0001094
 name: gastric diverticulectomy
 def: "The surgical removal (cutting out) of part or all of Gastric diverticulum." []
 synonym: "Gastric diverticulum surgical removal" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000447 ! surgical excision
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2020-06-23T20:39:14Z" xsd:string
@@ -12036,7 +12015,6 @@ id: MAXO:0001095
 name: renal diverticulectomy
 def: "The surgical removal (cutting out) of part or all of Renal diverticulum." []
 synonym: "Renal diverticulum surgical removal" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000447 ! surgical excision
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2020-06-23T20:39:14Z" xsd:string
@@ -12046,7 +12024,6 @@ id: MAXO:0001096
 name: bladder diverticulectomy
 def: "The surgical removal (cutting out) of part or all of Bladder diverticulum." []
 synonym: "Bladder diverticulum surgical removal" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000447 ! surgical excision
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2020-06-23T20:39:14Z" xsd:string
@@ -12056,7 +12033,6 @@ id: MAXO:0001097
 name: uethral diverticulectomy
 def: "The surgical removal (cutting out) of part or all of Urethral diverticulum." []
 synonym: "Urethral diverticulum surgical removal" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000447 ! surgical excision
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2020-06-23T20:39:14Z" xsd:string
@@ -12084,7 +12060,6 @@ id: MAXO:0001100
 name: spinal meningeal diverticulectomy
 def: "The surgical removal (cutting out) of part or all of Spinal meningeal diverticulum." []
 synonym: "Spinal meningeal diverticulum surgical removal" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000447 ! surgical excision
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2020-06-23T20:39:14Z" xsd:string
@@ -12094,7 +12069,6 @@ id: MAXO:0001101
 name: coronary sinus diverticulectomy
 def: "The surgical removal (cutting out) of part or all of Coronary sinus diverticulum." []
 synonym: "Coronary sinus diverticulum surgical removal" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000447 ! surgical excision
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2020-06-23T20:39:14Z" xsd:string
@@ -12113,7 +12087,6 @@ id: MAXO:0001103
 name: pulmonary embolectomy
 def: "The surgical removal (cutting out) of part or all of Pulmonary embolism." []
 synonym: "Pulmonary embolism surgical removal" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000447 ! surgical excision
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2020-06-23T20:39:14Z" xsd:string
@@ -12124,7 +12097,6 @@ name: endarterectomy
 def: "The surgical removal (cutting out) of part or all of Arterial calcification." []
 synonym: "Arterial calcification surgical removal" EXACT []
 xref: NCIT:C52002
-is_a: BFO:0000015
 is_a: MAXO:0000447 ! surgical excision
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2020-06-23T20:39:14Z" xsd:string
@@ -12182,7 +12154,6 @@ def: "The surgical removal (cutting out) of part or all of Abnormal thrombosis."
 synonym: "Abnormal thrombosis surgical removal" EXACT []
 synonym: "removal of thrombosis" EXACT []
 synonym: "thrombosis removal" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000447 ! surgical excision
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2020-06-23T20:39:14Z" xsd:string
@@ -12197,7 +12168,6 @@ synonym: "Neoplasm surgical removal" EXACT []
 synonym: "removal of tumor" EXACT []
 synonym: "tumor removal" EXACT []
 xref: NCIT:C157740
-is_a: BFO:0000015
 is_a: MAXO:0000447 ! surgical excision
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2020-06-23T20:39:14Z" xsd:string
@@ -12465,7 +12435,6 @@ def: "Addition of ascorbic acid to a diet for complete nutrition support." []
 synonym: "ascorbic acid supplemental intake" EXACT []
 synonym: "dietary supplementation of ascorbic acid" EXACT []
 synonym: "supplementation of ascorbic acid" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 intersection_of: MAXO:0000106 ! nutritional supplementation
 intersection_of: RO:0002233 CHEBI:22652
@@ -12480,7 +12449,6 @@ def: "Addition of sodium pyruvate to a diet for complete nutrition support." []
 synonym: "dietary supplementation of sodium pyruvate" EXACT []
 synonym: "sodium pyruvate supplemental intake" EXACT []
 synonym: "supplementation of sodium pyruvate" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 intersection_of: MAXO:0000106 ! nutritional supplementation
 intersection_of: RO:0002233 CHEBI:50144
@@ -12566,7 +12534,6 @@ def: "Addition of calcium carbonate to a diet for complete nutrition support." [
 synonym: "calcium carbonate supplemental intake" EXACT []
 synonym: "dietary supplementation of calcium carbonate" EXACT []
 synonym: "supplementation of calcium carbonate" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 intersection_of: MAXO:0000106 ! nutritional supplementation
 intersection_of: RO:0002233 CHEBI:3311
@@ -12581,7 +12548,6 @@ def: "Addition of glucose to a diet for complete nutrition support." []
 synonym: "dietary supplementation of glucose" EXACT []
 synonym: "glucose supplemental intake" EXACT []
 synonym: "supplementation of glucose" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 intersection_of: MAXO:0000106 ! nutritional supplementation
 intersection_of: RO:0002233 CHEBI:17234
@@ -12598,7 +12564,6 @@ synonym: "dietary supplementation of docosahexaenoic acid" EXACT []
 synonym: "docosahexaenoic acid supplemental intake" EXACT []
 synonym: "supplementation of docosahexaenoic acid" EXACT []
 synonym: "supplementation with DHA" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 intersection_of: MAXO:0000106 ! nutritional supplementation
 intersection_of: RO:0002233 CHEBI:36005
@@ -12628,7 +12593,6 @@ def: "Addition of lutein to a diet for complete nutrition support." []
 synonym: "dietary supplementation of lutein" EXACT []
 synonym: "lutein supplemental intake" EXACT []
 synonym: "supplementation of lutein" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 intersection_of: MAXO:0000106 ! nutritional supplementation
 intersection_of: RO:0002233 CHEBI:28838
@@ -12643,7 +12607,6 @@ def: "Addition of ribose to a diet for complete nutrition support." []
 synonym: "dietary supplementation of ribose" EXACT []
 synonym: "ribose supplemental intake" EXACT []
 synonym: "supplementation of ribose" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 intersection_of: MAXO:0000106 ! nutritional supplementation
 intersection_of: RO:0002233 CHEBI:33942
@@ -12658,7 +12621,6 @@ def: "Addition of fluoride to a diet for complete nutrition support." []
 synonym: "dietary supplementation of fluoride" EXACT []
 synonym: "fluoride supplemental intake" EXACT []
 synonym: "supplementation of fluoride" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 intersection_of: MAXO:0000106 ! nutritional supplementation
 intersection_of: RO:0002233 CHEBI:17051
@@ -12674,7 +12636,6 @@ synonym: "dietary supplement, fibre supplemental intake" EXACT []
 synonym: "dietary supplementation of dietary supplement, fibre" EXACT []
 synonym: "supplementation of dietary supplement, fibre" EXACT []
 synonym: "supplementation with soluble fiber" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 intersection_of: MAXO:0000106 ! nutritional supplementation
 intersection_of: RO:0002233 FOODON:03401328
@@ -12689,7 +12650,6 @@ def: "Addition of fish oil to a diet for complete nutrition support." []
 synonym: "dietary supplementation of fish oil" EXACT []
 synonym: "fish oil supplemental intake" EXACT []
 synonym: "supplementation of fish oil" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 intersection_of: MAXO:0000106 ! nutritional supplementation
 intersection_of: RO:0002233 FOODON:03306123
@@ -12836,6 +12796,7 @@ name: endocervical swab collection
 def: "Collection biological material from within the endocervix with a cotton swab for use in clinical tests." []
 synonym: "endocervical swab" EXACT []
 synonym: "swab collection of endocervix" EXACT []
+is_a: MAXO:0001407 ! diagnostic procedure of reproductive system
 is_a: MAXO:0001467 ! diagnostic procedure of organ
 is_a: MAXO:0009099 ! clinical biospecimen swab collection
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2978" xsd:string
@@ -13357,7 +13318,6 @@ id: MAXO:0001204
 name: screening for venous thrombosis
 def: "The use of any device, marker, or other means for the purpose of detecting the presence Venous thrombosis, usually in asymptomatic individuals." []
 synonym: "Venous thrombosis screening" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000124 ! disease screening
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2020-06-23T20:39:14Z" xsd:string
@@ -13376,8 +13336,7 @@ id: MAXO:0001206
 name: screening for intestinal polyps
 def: "The use of any device, marker, or other means for the purpose of detecting the presence Intestinal polyp, usually in asymptomatic individuals." []
 synonym: "Intestinal polyp screening" EXACT []
-is_a: BFO:0000015
-is_a: MAXO:0000124 ! disease screening
+is_a: MAXO:0000126 ! cancer screening
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2022-03-24T20:39:14Z" xsd:string
 
@@ -13395,7 +13354,6 @@ id: MAXO:0001208
 name: screening for cervical polyps
 def: "The use of any device, marker, or other means for the purpose of detecting the presence Cervical polyp, usually in asymptomatic individuals." []
 synonym: "Cervical polyp screening" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000124 ! disease screening
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2022-03-24T20:39:14Z" xsd:string
@@ -13414,8 +13372,7 @@ id: MAXO:0001210
 name: screening for gastric polyps
 def: "The use of any device, marker, or other means for the purpose of detecting the presence Multiple gastric polyps, usually in asymptomatic individuals." []
 synonym: "Multiple gastric polyps screening" EXACT []
-is_a: BFO:0000015
-is_a: MAXO:0000124 ! disease screening
+is_a: MAXO:0000126 ! cancer screening
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2022-03-24T20:39:14Z" xsd:string
 
@@ -13452,8 +13409,7 @@ id: MAXO:0001214
 name: intestinal polypectomy
 def: "The surgical removal (cutting out) of part or all of Intestinal polyp." []
 synonym: "Intestinal polyp surgical removal" EXACT []
-is_a: BFO:0000015
-is_a: MAXO:0000447 ! surgical excision
+is_a: MAXO:0001110 ! tumorectomy
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2022-03-24T20:39:14Z" xsd:string
 
@@ -13471,7 +13427,6 @@ id: MAXO:0001216
 name: cervical polypectomy
 def: "The surgical removal (cutting out) of part or all of Cervical polyp." []
 synonym: "Cervical polyp surgical removal" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000447 ! surgical excision
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2022-03-24T20:39:14Z" xsd:string
@@ -13499,8 +13454,7 @@ id: MAXO:0001219
 name: gastric polypectomy
 def: "The surgical removal (cutting out) of part or all of Multiple gastric polyps." []
 synonym: "Multiple gastric polyps surgical removal" EXACT []
-is_a: BFO:0000015
-is_a: MAXO:0000447 ! surgical excision
+is_a: MAXO:0001110 ! tumorectomy
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2022-03-24T20:39:14Z" xsd:string
 
@@ -13699,7 +13653,6 @@ name: chemical measurement
 def: "The determination of the amount of chemical entity present in the sample." []
 synonym: "chemical entity assessment" EXACT []
 synonym: "chemical entity test" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000566 ! clinical chemistry assessment
 intersection_of: MAXO:0000566 ! clinical chemistry assessment
 intersection_of: RO:0002233 CHEBI:24431
@@ -13962,7 +13915,6 @@ def: "Addition of cholic acid to a diet for complete nutrition support." []
 synonym: "cholic acid supplemental intake" EXACT []
 synonym: "dietary supplementation of cholic acid" EXACT []
 synonym: "supplementation of cholic acid" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 intersection_of: MAXO:0000106 ! nutritional supplementation
 intersection_of: RO:0002233 CHEBI:16359
@@ -14041,7 +13993,6 @@ def: "Addition of macronutrient to a diet for adequate and complete nutrition." 
 synonym: "dietary supplementation of macronutrient" EXACT []
 synonym: "macronutrient supplemental intake" EXACT []
 synonym: "supplementation of macronutrient" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2022-09-07T09:00:01Z" xsd:string
@@ -14053,7 +14004,6 @@ def: "Addition of micronutrient to a diet for adequate and complete nutrition." 
 synonym: "dietary supplementation of micronutrient" EXACT []
 synonym: "micronutrient supplemental intake" EXACT []
 synonym: "supplementation of micronutrient" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2022-09-07T09:00:01Z" xsd:string
@@ -14836,8 +14786,8 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:
 id: MAXO:0001332
 name: dopamine agonist therapy
 def: "Use of a drug or agent that activates dopamine signaling." []
-synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_51065" EXACT []
-is_a: MAXO:0000058 ! pharmacotherapy
+synonym: "treatment with dopamine agonist" EXACT []
+is_a: MAXO:0001331 ! dopaminergic agent therapy
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
 
@@ -14845,8 +14795,8 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:
 id: MAXO:0001333
 name: dopamine receptor D1 agonist therapy
 def: "Use of a drug or agent that activates dopamine D1 receptor signaling." []
-synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_131795" EXACT []
-is_a: MAXO:0000058 ! pharmacotherapy
+synonym: "treatment with dopamine receptor D1 agonist" EXACT []
+is_a: MAXO:0001332 ! dopamine agonist therapy
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
 
@@ -14891,8 +14841,8 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:
 id: MAXO:0001338
 name: GABAA receptor agonist therapy
 def: "Treatment with a drug or agent that activates GABAA receptor signaling." []
-synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_91016" EXACT []
-is_a: MAXO:0000058 ! pharmacotherapy
+synonym: "treatment with GABAA receptor agonist" EXACT []
+is_a: MAXO:0001337 ! GABA agonist agent therapy
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
 
@@ -14900,8 +14850,8 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:
 id: MAXO:0001339
 name: GABAB receptor agonist therapy
 def: "Treatment with a drug or agent that activates GABAB receptor signaling." []
-synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_143001" EXACT []
-is_a: MAXO:0000058 ! pharmacotherapy
+synonym: "treatment with GABAB receptor agonist" EXACT []
+is_a: MAXO:0001337 ! GABA agonist agent therapy
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
 
@@ -14909,8 +14859,8 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:
 id: MAXO:0001340
 name: GABAA receptor antagonist therapy
 def: "Treatment with a drug or agent that inhibits GABAA receptor signaling." []
-synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_145515" EXACT []
-is_a: MAXO:0000058 ! pharmacotherapy
+synonym: "treatment with GABAA receptor antagonist" EXACT []
+is_a: MAXO:0001320 ! GABA antagonist therapy
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2023-02-23T11:00:00Z" xsd:string
 
@@ -15072,7 +15022,6 @@ id: MAXO:0001356
 name: hematopoietic cell morphology measurement
 def: "A determination of the structure of hematopoietic cell." []
 synonym: "hematopoietic cell morphology assessment" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000033 ! cell morphology assessment
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
@@ -15173,7 +15122,6 @@ id: MAXO:0001367
 name: sperm count
 def: "A determination of the number of sperm in a blood sample." []
 synonym: "sperm count test" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000146 ! clinical cell count
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
@@ -15310,7 +15258,6 @@ id: MAXO:0001382
 name: germ cell morphology measurement
 def: "A determination of the structure of germ cell." []
 synonym: "germ cell morphology assessment" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000033 ! cell morphology assessment
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
@@ -15320,7 +15267,6 @@ id: MAXO:0001383
 name: glial cell morphology measurement
 def: "A determination of the structure of glial cell." []
 synonym: "glial cell morphology assessment" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000033 ! cell morphology assessment
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
@@ -15330,7 +15276,6 @@ id: MAXO:0001384
 name: kidney glomerular epithelial cell morphology measurement
 def: "A determination of the structure of kidney glomerular epithelial cell." []
 synonym: "kidney glomerular epithelial cell morphology assessment" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000033 ! cell morphology assessment
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
@@ -15359,7 +15304,6 @@ id: MAXO:0001387
 name: bone marrow cell morphology measurement
 def: "A determination of the structure of bone marrow cell." []
 synonym: "bone marrow cell morphology assessment" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000033 ! cell morphology assessment
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2023-03-03T20:39:14Z" xsd:string
@@ -16107,8 +16051,8 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-05-15T11:00:00Z" xsd:
 id: MAXO:0001470
 name: MMP inhibitor agent therapy
 def: "Use of a drug or agent that inhibits matrix metalloprotease inhibitor." []
-synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_50664" EXACT []
-is_a: MAXO:0000058 ! pharmacotherapy
+synonym: "treatment with matrix metalloproteinase inhibitor" EXACT []
+is_a: MAXO:0000648 ! enzyme inhibitor agent therapy
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2023-05-15T11:00:00Z" xsd:string
 
@@ -16116,7 +16060,8 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-05-15T11:00:00Z" xsd:
 id: MAXO:0001471
 name: tazarotene agent therapy
 def: "Treatment with a topical cream that is used to treat psoriasis." []
-is_a: MAXO:0000058 ! pharmacotherapy
+is_a: MAXO:0001421 ! keratolytic agent therapy
+is_a: MAXO:0001498 ! prodrug therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
 intersection_of: MAXO:0000864 CHEBI:32184 ! therapeutic uses
 relationship: MAXO:0000864 CHEBI:32184 ! therapeutic uses
@@ -16157,8 +16102,8 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-05-15T11:00:00Z" xsd:
 id: MAXO:0001475
 name: sodium-glucose cotransporter-2 inhibitor therapy
 def: "Treatment with a class of medicines inhibit sodium-glucose cotransporter-2. Drugs are used with diet and exercise to lower blood sugar in adults with type 2 diabetes." []
-synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_73273" EXACT []
-is_a: MAXO:0000058 ! pharmacotherapy
+synonym: "treatment with sodium-glucose transport protein subtype 2 inhibitor" EXACT []
+is_a: MAXO:0000644 ! molecular pathway modifying agent therapy
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2023-05-15T11:00:00Z" xsd:string
 
@@ -16166,7 +16111,7 @@ property_value: http://purl.org/dc/elements/1.1/date "2023-05-15T11:00:00Z" xsd:
 id: MAXO:0001476
 name: somatostatin recepter agonist therapy
 def: "Treatment with an activator to the somatostatin receptor." []
-synonym: "treatment with http://purl.obolibrary.org/obo/CHEBI_177023" EXACT []
+synonym: "treatment with somatostatin receptor agonist" EXACT []
 is_a: MAXO:0000058 ! pharmacotherapy
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 property_value: http://purl.org/dc/elements/1.1/date "2023-05-15T11:00:00Z" xsd:string
@@ -16472,7 +16417,6 @@ synonym: "CBC" EXACT []
 synonym: "complete blood cell count" EXACT []
 synonym: "complete blood count" EXACT []
 synonym: "full blood count" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000146 ! clinical cell count
 is_a: MAXO:0000829 ! blood cell measurement
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
@@ -17642,7 +17586,6 @@ synonym: "amino-acid betaine supplemental intake" EXACT []
 synonym: "dietary supplementation of amino-acid betaine" EXACT []
 synonym: "supplementation of amino-acid betaine" EXACT []
 synonym: "supplementation with betaine" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 intersection_of: MAXO:0000106 ! nutritional supplementation
 intersection_of: RO:0002233 CHEBI:22860
@@ -17700,7 +17643,6 @@ def: "Addition of creatine to a diet for complete nutrition support." []
 synonym: "creatine supplemental intake" EXACT []
 synonym: "dietary supplementation of creatine" EXACT []
 synonym: "supplementation of creatine" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 intersection_of: MAXO:0000106 ! nutritional supplementation
 intersection_of: RO:0002233 CHEBI:16919
@@ -17729,7 +17671,6 @@ def: "Addition of biotins to a diet for complete nutrition support." []
 synonym: "biotins supplemental intake" EXACT []
 synonym: "dietary supplementation of biotins" EXACT []
 synonym: "supplementation of biotins" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 intersection_of: MAXO:0000106 ! nutritional supplementation
 intersection_of: RO:0002233 CHEBI:51570
@@ -17744,7 +17685,6 @@ def: "Addition of chenodeoxycholic acid to a diet for complete nutrition support
 synonym: "chenodeoxycholic acid supplemental intake" EXACT []
 synonym: "dietary supplementation of chenodeoxycholic acid" EXACT []
 synonym: "supplementation of chenodeoxycholic acid" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 intersection_of: MAXO:0000106 ! nutritional supplementation
 intersection_of: RO:0002233 CHEBI:16755
@@ -17759,7 +17699,6 @@ def: "Addition of coenzyme Q10 to a diet for complete nutrition support." []
 synonym: "coenzyme Q10 supplemental intake" EXACT []
 synonym: "dietary supplementation of coenzyme Q10" EXACT []
 synonym: "supplementation of coenzyme Q10" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 intersection_of: MAXO:0000106 ! nutritional supplementation
 intersection_of: RO:0002233 CHEBI:46245
@@ -17789,7 +17728,6 @@ def: "Addition of N-acetyl-L-cysteine to a diet for complete nutrition support."
 synonym: "dietary supplementation of N-acetyl-L-cysteine" EXACT []
 synonym: "N-acetyl-L-cysteine supplemental intake" EXACT []
 synonym: "supplementation of N-acetyl-L-cysteine" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 intersection_of: MAXO:0000106 ! nutritional supplementation
 intersection_of: RO:0002233 CHEBI:28939
@@ -17876,7 +17814,6 @@ synonym: "amino acid supplemental intake" EXACT []
 synonym: "dietary supplementation of amino acid" EXACT []
 synonym: "supplementation of amino acid" EXACT []
 xref: NCIT:C15509
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 intersection_of: MAXO:0000106 ! nutritional supplementation
 intersection_of: RO:0002233 CHEBI:33709
@@ -17905,7 +17842,6 @@ def: "Addition of uridine to a diet for complete nutrition support." []
 synonym: "dietary supplementation of uridine" EXACT []
 synonym: "supplementation of uridine" EXACT []
 synonym: "uridine supplemental intake" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 intersection_of: MAXO:0000106 ! nutritional supplementation
 intersection_of: RO:0002233 CHEBI:16704
@@ -17920,7 +17856,6 @@ def: "Addition of medium-chain fatty acid to a diet for complete nutrition suppo
 synonym: "dietary supplementation of medium-chain fatty acid" EXACT []
 synonym: "medium-chain fatty acid supplemental intake" EXACT []
 synonym: "supplementation of medium-chain fatty acid" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 intersection_of: MAXO:0000106 ! nutritional supplementation
 intersection_of: RO:0002233 CHEBI:59554
@@ -17935,7 +17870,6 @@ def: "Addition of essential fatty acid to a diet for complete nutrition support.
 synonym: "dietary supplementation of essential fatty acid" EXACT []
 synonym: "essential fatty acid supplemental intake" EXACT []
 synonym: "supplementation of essential fatty acid" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 intersection_of: MAXO:0000106 ! nutritional supplementation
 intersection_of: RO:0002233 CHEBI:59549
@@ -17950,7 +17884,6 @@ def: "Addition of cholesterol to a diet for complete nutrition support." []
 synonym: "cholesterol supplemental intake" EXACT []
 synonym: "dietary supplementation of cholesterol" EXACT []
 synonym: "supplementation of cholesterol" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 intersection_of: MAXO:0000106 ! nutritional supplementation
 intersection_of: RO:0002233 CHEBI:16113
@@ -17969,7 +17902,6 @@ synonym: "elemental zinc supplemental intake" EXACT []
 synonym: "supplementation of elemental zinc" EXACT []
 synonym: "supplementation of zinc" EXACT []
 synonym: "zinc supplemental intake" EXACT []
-is_a: BFO:0000015
 is_a: MAXO:0000106 ! nutritional supplementation
 intersection_of: MAXO:0000106 ! nutritional supplementation
 intersection_of: RO:0002233 CHEBI:37253
@@ -19512,7 +19444,6 @@ synonym: "spleen ultrasound examination" EXACT []
 synonym: "spleen ultrasound imaging procedure" EXACT []
 synonym: "spleen ultrasound procedure" EXACT []
 synonym: "ultrasonography of spleen" EXACT []
-is_a: MAXO:0001396 ! diagnostic procedure of digestive system
 is_a: MAXO:0001402 ! diagnostic procedure of hematopoietic system
 is_a: MAXO:0001446 ! diagnostic procedure of immune system
 is_a: MAXO:0001467 ! diagnostic procedure of organ
