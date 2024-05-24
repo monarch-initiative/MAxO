@@ -105,12 +105,13 @@ merge_template: $(MERGE_TEMPLATE)
 # YOU MUST SET THE MAXOA_RELEASE_PASSWORD ENVRIONMENTAL VARIABLE WHEN RELEASING
 MAXOA_DIRECTORY=tmp/maxoa
 MAXOA_FILENAME=maxo-annotations.tsv
-MAXOA_RELEASE_PASSWORD=XXXXXXXFAKEPASSWORD
-
+MAXOA_RELEASE_PASSWORD=$(shell cat maxoa-key.txt)
 $(MAXOA_DIRECTORY)/$(MAXOA_FILENAME): $(SRC)
 	mkdir -p $(MAXOA_DIRECTORY)
 	@test $(MAXOA_RELEASE_PASSWORD)
-	@curl -Lk https://poet.jax.org/api/v1/export/release?key=$(MAXOA_RELEASE_PASSWORD) && echo "POET Release Success!" || (echo "POET Release Failure." && exit 1)
+	@release_response=$(shell curl -I -s -o /dev/null -w "%{http_code}" https://poet.jax.org/api/v1/export/release?key=$(MAXOA_RELEASE_PASSWORD))
+	@if [ "$$release_response" != "200" ]; then echo "POET Release Failure." && exit 1; fi
+	@echo "POET Release Success!"
 	@curl -Lk https://poet.jax.org/api/v1/export/maxo >> $@
 
 .PHONY: maxoa
