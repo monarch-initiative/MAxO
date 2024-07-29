@@ -12,7 +12,7 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/maxo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2024-07-28/maxo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2024-07-29/maxo-base.owl"/>
         <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000001"/>
         <dce:creator>Leigh Carmody</dce:creator>
         <dce:creator>Peter Robinson</dce:creator>
@@ -20,7 +20,7 @@
         <dce:title>Medical Action Ontology</dce:title>
         <dce:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <owl:versionInfo>2024-07-28</owl:versionInfo>
+        <owl:versionInfo>2024-07-29</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -46490,12 +46490,51 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0001483 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001483">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000058"/>
-        <obo:IAO_0000115>Therapeutic administration of an inhibitor of complement component 5.</obo:IAO_0000115>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000864"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_229668"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000644"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000864"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_229668"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Use of a drug or substance that inhibits complement 5.</obo:IAO_0000115>
+        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2023-04-11T12:00:00Z</dce:date>
+        <dce:date>2024-07-25T11:00:00Z</dce:date>
         <dcterms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <dcterms:creator rdf:resource="https://orcid.org/0000-0001-7941-2961"/>
-        <rdfs:label>complement 5 inhibitor therapy</rdfs:label>
+        <oboInOwl:hasExactSynonym>treatment with complement component 5 inhibitor</oboInOwl:hasExactSynonym>
+        <rdfs:label>complement 5 inhibitor agent therapy</rdfs:label>
     </owl:Class>
     
 
@@ -48804,6 +48843,17 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/MAXO_0001700 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001700">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000058"/>
+        <obo:IAO_0000115>Treatment with any drug or agent that regulates coenzymes.</obo:IAO_0000115>
+        <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <rdfs:label>coenzyme agent therapy</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/MAXO_0001701 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001701">
@@ -48865,56 +48915,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2024-07-25T11:00:00Z</dce:date>
         <rdfs:label>mevalonolactone therapy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/MAXO_0001703 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0001703">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MAXO_0000058"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000864"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24431"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
-                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_229668"/>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000644"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000864"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24431"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_229668"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115>Any drug or agent that inhibits complement 5.</obo:IAO_0000115>
-        <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
-        <dce:date>2024-07-25T11:00:00Z</dce:date>
-        <oboInOwl:hasExactSynonym>treatment with complement component 5 inhibitor</oboInOwl:hasExactSynonym>
-        <rdfs:label>complement 5 inhibitor agent therapy</rdfs:label>
     </owl:Class>
     
 

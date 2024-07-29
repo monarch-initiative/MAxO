@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2024-07-28
+data-version: releases/2024-07-29
 synonymtypedef: abbreviation ""
 synonymtypedef: blast_name ""
 synonymtypedef: BRAND_NAME ""
@@ -16,7 +16,7 @@ synonymtypedef: INN ""
 synonymtypedef: IUPAC_NAME ""
 synonymtypedef: layperson ""
 synonymtypedef: MISSPELLING ""
-synonymtypedef: OMO:0003000 ""
+synonymtypedef: OMO:0003000 "abbreviation"
 synonymtypedef: OMO:0003002 ""
 synonymtypedef: OMO:0003003 ""
 synonymtypedef: OMO:0003004 ""
@@ -42,7 +42,7 @@ property_value: dce:description "An ontology to represent medically relevant act
 property_value: dce:title "Medical Action Ontology" xsd:string
 property_value: dcterms:license https://creativecommons.org/licenses/by/4.0/
 property_value: IAO:0000700 MAXO:0000001
-property_value: owl:versionInfo "2024-07-28" xsd:string
+property_value: owl:versionInfo "2024-07-29" xsd:string
 
 [Term]
 id: BFO:0000001
@@ -47398,12 +47398,14 @@ property_value: dcterms:creator https://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0001483
-name: complement 5 inhibitor therapy
-def: "Therapeutic administration of an inhibitor of complement component 5." []
-is_a: MAXO:0000058 ! pharmacotherapy
+name: complement 5 inhibitor agent therapy
+def: "Use of a drug or substance that inhibits complement 5." []
+synonym: "treatment with complement component 5 inhibitor" EXACT []
+is_a: MAXO:0000644 ! molecular pathway modifying agent therapy
 property_value: dce:date "2023-04-11T12:00:00Z" xsd:string
+property_value: dce:date "2024-07-25T11:00:00Z" xsd:string
 property_value: dcterms:contributor https://orcid.org/0000-0002-0736-9199
-property_value: dcterms:creator https://orcid.org/0000-0001-7941-2961
+property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
 [Term]
 id: MAXO:0001484
@@ -48636,6 +48638,13 @@ property_value: dce:creator https://orcid.org/0000-0001-7941-2961
 property_value: dce:date "2024-07-26T09:48:42Z" xsd:dateTime
 
 [Term]
+id: MAXO:0001700
+name: coenzyme agent therapy
+def: "Treatment with any drug or agent that regulates coenzymes." []
+is_a: MAXO:0000058 ! pharmacotherapy
+property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
+
+[Term]
 id: MAXO:0001701
 name: thalidomide agent therapy
 def: "Treatment with the drug thalidomide." []
@@ -48661,15 +48670,6 @@ is_a: MAXO:0001704 ! antimyopathic agent therapy
 intersection_of: MAXO:0000058 ! pharmacotherapy
 intersection_of: MAXO:0000864 CHEBI:194429 ! therapeutic uses mevalonolactone
 relationship: MAXO:0000864 CHEBI:194429 ! therapeutic uses mevalonolactone
-property_value: dce:date "2024-07-25T11:00:00Z" xsd:string
-property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
-
-[Term]
-id: MAXO:0001703
-name: complement 5 inhibitor agent therapy
-def: "Any drug or agent that inhibits complement 5." []
-synonym: "treatment with complement component 5 inhibitor" EXACT []
-is_a: MAXO:0000644 ! molecular pathway modifying agent therapy
 property_value: dce:date "2024-07-25T11:00:00Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 

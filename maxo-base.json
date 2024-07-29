@@ -25,9 +25,9 @@
         "val" : "https://creativecommons.org/licenses/by/4.0/"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2024-07-28"
+        "val" : "2024-07-29"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/maxo/releases/2024-07-28/maxo-base.json"
+      "version" : "http://purl.obolibrary.org/obo/maxo/releases/2024-07-29/maxo-base.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/CHEBI_12777",
@@ -37374,21 +37374,28 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0001483",
-      "lbl" : "complement 5 inhibitor therapy",
+      "lbl" : "complement 5 inhibitor agent therapy",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "Therapeutic administration of an inhibitor of complement component 5."
+          "val" : "Use of a drug or substance that inhibits complement 5."
         },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "treatment with complement component 5 inhibitor"
+        } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        }, {
           "pred" : "http://purl.org/dc/elements/1.1/date",
           "val" : "2023-04-11T12:00:00Z"
         }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2024-07-25T11:00:00Z"
+        }, {
           "pred" : "http://purl.org/dc/terms/contributor",
           "val" : "https://orcid.org/0000-0002-0736-9199"
-        }, {
-          "pred" : "http://purl.org/dc/terms/creator",
-          "val" : "https://orcid.org/0000-0001-7941-2961"
         } ]
       }
     }, {
@@ -39977,6 +39984,19 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0001700",
+      "lbl" : "coenzyme agent therapy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Treatment with any drug or agent that regulates coenzymes."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/creator",
+          "val" : "http://orcid.org/0000-0001-7941-2961"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/MAXO_0001701",
       "lbl" : "thalidomide agent therapy",
       "type" : "CLASS",
@@ -40000,26 +40020,6 @@
         "definition" : {
           "val" : "Treatment with the drug mevalonolactone."
         },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
-          "val" : "http://orcid.org/0000-0001-7941-2961"
-        }, {
-          "pred" : "http://purl.org/dc/elements/1.1/date",
-          "val" : "2024-07-25T11:00:00Z"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MAXO_0001703",
-      "lbl" : "complement 5 inhibitor agent therapy",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "Any drug or agent that inhibits complement 5."
-        },
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "treatment with complement component 5 inhibitor"
-        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/dcterms_creator",
           "val" : "http://orcid.org/0000-0001-7941-2961"
@@ -59649,7 +59649,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0001483",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000058"
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000644"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0001484",
       "pred" : "is_a",
@@ -60299,6 +60299,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0000177"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0001700",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000058"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0001701",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0000167"
@@ -60342,10 +60346,6 @@
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0001702",
       "pred" : "http://purl.obolibrary.org/obo/MAXO_0000864",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_194429"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MAXO_0001703",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MAXO_0000644"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0001704",
       "pred" : "is_a",
@@ -65652,6 +65652,9 @@
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001476",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000058" ]
     }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001483",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000058" ]
+    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001498",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000058" ]
     }, {
@@ -65713,9 +65716,6 @@
         "propertyId" : "http://purl.obolibrary.org/obo/MAXO_0000864",
         "fillerId" : "http://purl.obolibrary.org/obo/CHEBI_194429"
       } ]
-    }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001703",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000058" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/MAXO_0001704",
       "genusIds" : [ "http://purl.obolibrary.org/obo/MAXO_0000058" ]
