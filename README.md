@@ -24,7 +24,7 @@ The Medical Action Ontology (MAxO) provides a broad view of medical actions and 
 
 ### Direct
 
- If you have questions, please contact leigh.carmody@jax.org or peter.robinson@jax.org
+ If you have questions, please contact peter.robinson@jax.org
 
 ### Mailing list
 
