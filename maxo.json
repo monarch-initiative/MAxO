@@ -22,9 +22,9 @@
         "val" : "https://creativecommons.org/licenses/by/4.0/"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2024-07-29"
+        "val" : "2025-04-24"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/maxo/releases/2024-07-29/maxo.json"
+      "version" : "http://purl.obolibrary.org/obo/maxo/releases/2025-04-24/maxo.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000001",
@@ -70366,6 +70366,9 @@
           "val" : "coagulant treatment therapy"
         }, {
           "pred" : "hasExactSynonym",
+          "val" : "coagulation factor replacement therapy"
+        }, {
+          "pred" : "hasExactSynonym",
           "val" : "promotion of coagulation"
         }, {
           "pred" : "hasExactSynonym",
@@ -80099,6 +80102,10 @@
           "val" : "A systemic evaluation of the body and its functions using visual inspection, palpation, percussion and auscultation. The purpose is to determine the presence or absence of physical signs of disease or abnormality for an individual's health assessment.",
           "xrefs" : [ "NCIT:C20989" ]
         },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "physical exam"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/elements/1.1/date",
           "val" : "2020-03-04T17:45:04Z"
@@ -87619,14 +87626,18 @@
       "meta" : {
         "definition" : {
           "val" : "The act of observing and recording the fetal heart rate for determining the baseline values or other abnormal findings.",
-          "xrefs" : [ "NCIT:C92929" ]
+          "xrefs" : [ "NCIT:C92929", "PMID:10323356" ]
         },
+        "comments" : [ "External fetal heart rate monitoring is performed using a hand-held Doppler ultrasound probe to auscultate and count the FHR during a uterine contraction and for 30 seconds thereafter to identify fetal response. It may also be performed using an external transducer, which is placed on the maternal abdomen and held in place by an elastic belt or girdle." ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "fetal heart monitoring"
         }, {
           "pred" : "hasExactSynonym",
           "val" : "fetal heart rate measurement"
+        }, {
+          "pred" : "hasNarrowSynonym",
+          "val" : "Fetal Doppler heart rate monitoring"
         } ],
         "xrefs" : [ {
           "val" : "NCIT:C92929"
@@ -113072,6 +113083,48 @@
         }, {
           "pred" : "http://purl.org/dc/elements/1.1/date",
           "val" : "2020-04-27T20:39:14Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0020000",
+      "lbl" : "coagulation factor VIII replacement therapy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Intravenous infusion with coagulation factor VIII.",
+          "xrefs" : [ "PMID:23809113" ]
+        },
+        "comments" : [ "Deficiency of the coagulation cofactor factor VIII (FVIII) leads to the X‐chromosomal inherited bleeding disorder hemophilia A. Current therapy for hemophilia is based on the infusion of clotting factor concentrates either at the time of bleeding (on demand therapy) or in a prophylactic schedule to prevent bleeding episodes." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0002-0736-9199"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0020001",
+      "lbl" : "coagulation factor IX replacement therapy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Intravenous infusion with coagulation factor IX."
+        },
+        "comments" : [ "Deficiency of the coagulation cofactor factor IX (FIX) leads to the X‐chromosomal inherited bleeding disorder hemophilia B. Current therapy for hemophilia is based on the infusion of clotting factor concentrates either at the time of bleeding (on demand therapy) or in a prophylactic schedule to prevent bleeding episodes." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0002-0736-9199"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MAXO_0020002",
+      "lbl" : "von Willebrand factor replacement therapy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Intravenous infusion with von Willibrand factor."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0002-0736-9199"
         } ]
       }
     }, {
@@ -190959,6 +191012,10 @@
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym",
       "lbl" : "has_broad_synonym",
       "type" : "PROPERTY",
@@ -226461,6 +226518,18 @@
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0010366",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MAXO_0001467"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0020000",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001625"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0020001",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001625"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MAXO_0020002",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MAXO_0001625"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MAXO_0025001",
       "pred" : "is_a",

@@ -19,14 +19,14 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2024-07-29/maxo.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2025-04-24/maxo.owl"/>
         <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000001"/>
         <dce:creator>Leigh Carmody</dce:creator>
         <dce:creator>Peter Robinson</dce:creator>
         <dce:description>An ontology to represent medically relevant actions, procedures, therapies, interventions, and recommendations.</dce:description>
         <dce:title>Medical Action Ontology</dce:title>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <owl:versionInfo>2024-07-29</owl:versionInfo>
+        <owl:versionInfo>2025-04-24</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -390,6 +390,12 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#created_by -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by"/>
     
 
 
@@ -109210,6 +109216,7 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T18:11:58Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>coagulant treatment therapy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>coagulation factor replacement therapy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>promotion of coagulation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>treatment with coagulant</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">coagulant agent therapy</rdfs:label>
@@ -120373,6 +120380,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>A systemic evaluation of the body and its functions using visual inspection, palpation, percussion and auscultation. The purpose is to determine the presence or absence of physical signs of disease or abnormality for an individual&apos;s health assessment.</obo:IAO_0000115>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-04T17:45:04Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>physical exam</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">physical examination</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -127097,6 +127105,8 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <oboInOwl:hasDbXref>NCIT:C92929</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>fetal heart monitoring</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>fetal heart rate measurement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>Fetal Doppler heart rate monitoring</oboInOwl:hasNarrowSynonym>
+        <rdfs:comment>External fetal heart rate monitoring is performed using a hand-held Doppler ultrasound probe to auscultate and count the FHR during a uterine contraction and for 30 seconds thereafter to identify fetal response. It may also be performed using an external transducer, which is placed on the maternal abdomen and held in place by an elastic belt or girdle.</rdfs:comment>
         <rdfs:label xml:lang="en">fetal heart rate monitoring</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -127104,6 +127114,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The act of observing and recording the fetal heart rate for determining the baseline values or other abnormal findings.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>NCIT:C92929</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:10323356</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -159744,6 +159755,47 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020000">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001625"/>
+        <obo:IAO_0000115>Intravenous infusion with coagulation factor VIII.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <rdfs:comment>Deficiency of the coagulation cofactor factor VIII (FVIII) leads to the X‐chromosomal inherited bleeding disorder hemophilia A. Current therapy for hemophilia is based on the infusion of clotting factor concentrates either at the time of bleeding (on demand therapy) or in a prophylactic schedule to prevent bleeding episodes.</rdfs:comment>
+        <rdfs:label>coagulation factor VIII replacement therapy</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0020000"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Intravenous infusion with coagulation factor VIII.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:23809113</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001625"/>
+        <obo:IAO_0000115>Intravenous infusion with coagulation factor IX.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <rdfs:comment>Deficiency of the coagulation cofactor factor IX (FIX) leads to the X‐chromosomal inherited bleeding disorder hemophilia B. Current therapy for hemophilia is based on the infusion of clotting factor concentrates either at the time of bleeding (on demand therapy) or in a prophylactic schedule to prevent bleeding episodes.</rdfs:comment>
+        <rdfs:label>coagulation factor IX replacement therapy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001625"/>
+        <obo:IAO_0000115>Intravenous infusion with von Willibrand factor.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <rdfs:label>von Willebrand factor replacement therapy</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/MAXO_0025001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0025001">
@@ -189141,7 +189193,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000059"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:nodeID="genid20334"/>
+        <rdfs:subClassOf rdf:nodeID="genid20335"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002202"/>
@@ -189177,14 +189229,14 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <oboInOwl:hasRelatedSynonym>appendix vermiformis</oboInOwl:hasRelatedSynonym>
         <rdfs:label>vermiform appendix</rdfs:label>
     </owl:Class>
-    <owl:Restriction rdf:nodeID="genid20334">
+    <owl:Restriction rdf:nodeID="genid20335">
         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002150"/>
         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001153"/>
     </owl:Restriction>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001154"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:nodeID="genid20334"/>
+        <owl:annotatedTarget rdf:nodeID="genid20335"/>
         <oboInOwl:hasDbXref>http://orcid.org/0000-0002-1572-1316</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -201594,7 +201646,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CL_0002220"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:nodeID="genid21549"/>
+        <rdfs:subClassOf rdf:nodeID="genid21550"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002433"/>
@@ -201646,14 +201698,14 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <oboInOwl:hasRelatedSynonym>stirnorgan</oboInOwl:hasRelatedSynonym>
         <rdfs:label>pineal body</rdfs:label>
     </owl:Class>
-    <owl:Restriction rdf:nodeID="genid21549">
+    <owl:Restriction rdf:nodeID="genid21550">
         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0030187"/>
     </owl:Restriction>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001905"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:nodeID="genid21549"/>
+        <owl:annotatedTarget rdf:nodeID="genid21550"/>
         <rdfs:comment>EDITOR_NOTE add secretion</rdfs:comment>
     </owl:Axiom>
     <owl:Axiom>
@@ -264821,14 +264873,14 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7742"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
-                <rdfs:subClassOf rdf:nodeID="genid28005"/>
+                <rdfs:subClassOf rdf:nodeID="genid28006"/>
             </owl:Class>
         </owl:annotatedSource>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:nodeID="genid28005"/>
+        <owl:annotatedTarget rdf:nodeID="genid28006"/>
         <oboInOwl:hasDbXref rdf:resource="https://github.com/obophenotype/cell-ontology/issues/757"/>
     </owl:Axiom>
-    <owl:Restriction rdf:nodeID="genid28005">
+    <owl:Restriction rdf:nodeID="genid28006">
         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002202"/>
         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CL_0000031"/>
     </owl:Restriction>
