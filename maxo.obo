@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2024-07-29
+data-version: releases/2025-04-24
 synonymtypedef: abbreviation ""
 synonymtypedef: blast_name ""
 synonymtypedef: BRAND_NAME ""
@@ -42,7 +42,7 @@ property_value: dce:description "An ontology to represent medically relevant act
 property_value: dce:title "Medical Action Ontology" xsd:string
 property_value: dcterms:license https://creativecommons.org/licenses/by/4.0/
 property_value: IAO:0000700 MAXO:0000001
-property_value: owl:versionInfo "2024-07-29" xsd:string
+property_value: owl:versionInfo "2025-04-24" xsd:string
 
 [Term]
 id: BFO:0000001
@@ -6556,8 +6556,8 @@ name: L-glutamate(1-)
 def: "An alpha-amino-acid anion that is the conjugate base of L-glutamic acid, having anionic carboxy groups and a cationic amino group" []
 synonym: "(2S)-2-ammoniopentanedioate" RELATED [IUPAC]
 synonym: "hydrogen L-glutamate" EXACT IUPAC_NAME [IUPAC]
-synonym: "L-glutamate" RELATED [ChEBI]
 synonym: "L-glutamate" RELATED [UniProt]
+synonym: "L-glutamate" RELATED [ChEBI]
 synonym: "L-glutamate(1-)" EXACT [JCBN]
 synonym: "L-glutamic acid monoanion" RELATED [JCBN]
 synonym: "L-glutamic acid, ion(1-)" RELATED [ChemIDplus]
@@ -32971,6 +32971,7 @@ id: MAXO:0000177
 name: coagulant agent therapy
 def: "Treatment with a drug that promotes coagulation." []
 synonym: "coagulant treatment therapy" EXACT []
+synonym: "coagulation factor replacement therapy" EXACT []
 synonym: "promotion of coagulation" EXACT []
 synonym: "treatment with coagulant" EXACT []
 is_a: MAXO:0000176 ! hematologic agent therapy
@@ -37193,6 +37194,7 @@ property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000527
 name: physical examination
 def: "A systemic evaluation of the body and its functions using visual inspection, palpation, percussion and auscultation. The purpose is to determine the presence or absence of physical signs of disease or abnormality for an individual's health assessment." [NCIT:C20989]
+synonym: "physical exam" EXACT []
 is_a: MAXO:0000526 ! examination by clinical professional
 property_value: dce:date "2020-03-04T17:45:04Z" xsd:dateTime
 property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
@@ -40352,7 +40354,9 @@ property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000796
 name: fetal heart rate monitoring
-def: "The act of observing and recording the fetal heart rate for determining the baseline values or other abnormal findings." [NCIT:C92929]
+def: "The act of observing and recording the fetal heart rate for determining the baseline values or other abnormal findings." [NCIT:C92929, PMID:10323356]
+comment: External fetal heart rate monitoring is performed using a hand-held Doppler ultrasound probe to auscultate and count the FHR during a uterine contraction and for 30 seconds thereafter to identify fetal response. It may also be performed using an external transducer, which is placed on the maternal abdomen and held in place by an elastic belt or girdle.
+synonym: "Fetal Doppler heart rate monitoring" NARROW []
 synonym: "fetal heart monitoring" EXACT []
 synonym: "fetal heart rate measurement" EXACT []
 xref: NCIT:C92929
@@ -52348,6 +52352,29 @@ is_a: MAXO:0001407 ! diagnostic procedure of reproductive system
 is_a: MAXO:0001467 ! diagnostic procedure of organ
 property_value: dce:date "2020-04-27T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
+
+[Term]
+id: MAXO:0020000
+name: coagulation factor VIII replacement therapy
+def: "Intravenous infusion with coagulation factor VIII." [PMID:23809113]
+comment: Deficiency of the coagulation cofactor factor VIII (FVIII) leads to the X‐chromosomal inherited bleeding disorder hemophilia A. Current therapy for hemophilia is based on the infusion of clotting factor concentrates either at the time of bleeding (on demand therapy) or in a prophylactic schedule to prevent bleeding episodes.
+is_a: MAXO:0001625 ! coagulation factor therapy
+created_by: https://orcid.org/0000-0002-0736-9199
+
+[Term]
+id: MAXO:0020001
+name: coagulation factor IX replacement therapy
+def: "Intravenous infusion with coagulation factor IX." []
+comment: Deficiency of the coagulation cofactor factor IX (FIX) leads to the X‐chromosomal inherited bleeding disorder hemophilia B. Current therapy for hemophilia is based on the infusion of clotting factor concentrates either at the time of bleeding (on demand therapy) or in a prophylactic schedule to prevent bleeding episodes.
+is_a: MAXO:0001625 ! coagulation factor therapy
+created_by: https://orcid.org/0000-0002-0736-9199
+
+[Term]
+id: MAXO:0020002
+name: von Willebrand factor replacement therapy
+def: "Intravenous infusion with von Willibrand factor." []
+is_a: MAXO:0001625 ! coagulation factor therapy
+created_by: https://orcid.org/0000-0002-0736-9199
 
 [Term]
 id: MAXO:0025001
