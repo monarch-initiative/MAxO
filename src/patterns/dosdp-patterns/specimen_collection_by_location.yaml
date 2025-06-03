@@ -29,8 +29,11 @@ data_vars:
   created_by: "'created_by'"
   comment: "'comment'"
   xref: "database cross reference"
+
 data_list_vars:
   syns: xsd:string
+  xrefs_def: xsd:string
+
 name:
   text: "%s specimen collection"
   vars:
@@ -72,6 +75,7 @@ exact_synonym:
 
 def:
   text: "Collecting of %s for clinical use."
+  xrefs: xrefs_def
   vars:
     - location
 

@@ -28,8 +28,11 @@ data_vars:
   created_by: "'created_by'"
   comment: "'comment'"
   xref: "database cross reference"
+
 data_list_vars:
   syns: xsd:string
+  xrefs_def: xsd:string
+
 name:
   text: "surgical repair of %s"
   vars:
@@ -66,6 +69,7 @@ exact_synonym:
 
 def:
   text: "A surgery that fixes or mends %s."
+  xrefs: xrefs_def
   vars:
     - location
 

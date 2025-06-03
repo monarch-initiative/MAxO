@@ -29,8 +29,11 @@ data_vars:
   created_by: "'created_by'"
   comment: "'comment'"
   xref: "database cross reference"
+
 data_list_vars:
   syns: xsd:string
+  xrefs_def: xsd:string
+
 name:
   text: "clinical %s"
   vars:
@@ -62,6 +65,7 @@ exact_synonym:
 
 def:
   text: "Use of %s to removal and examination of tissue, cells, or fluids from a patient purpose of detecting or characterizing disease."
+  xrefs: xrefs_def
   vars:
     - biopsy
 

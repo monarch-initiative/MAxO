@@ -28,7 +28,11 @@ data_vars:
   created_by: "'created_by'"
   comment: "'comment'"
   xref: "database cross reference"
-  
+
+data_list_vars:
+  syns: xsd:string
+  xrefs_def: xsd:string
+
 name:
   text: "%s avoidance"
   vars:
@@ -66,6 +70,7 @@ annotations:
      - xref
 def:
   text: "Avoid the administration or use of %s."
+  xrefs: xrefs_def
   vars:
     - medical_action
     

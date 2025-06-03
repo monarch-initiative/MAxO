@@ -31,8 +31,10 @@ data_vars:
   created_by: "'created_by'"
   comment: "'comment'"
   xref: "database cross reference"
+
 data_list_vars:
   syns: xsd:string
+  xrefs_def: xsd:string
 
 name:
   text: "%s transplantation"
@@ -68,6 +70,7 @@ exact_synonym:
   value: syns
 def:
   text: "The surgical transfer of some or all of a(n) %s from a donor to a patient."
+  xrefs: xrefs_def
   vars:
     - location
 
