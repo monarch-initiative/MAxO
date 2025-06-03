@@ -30,8 +30,10 @@ data_vars:
   created_by: "'created_by'"
   comment: "'comment'"
   xref: "'database_cross_reference'"
+
 data_list_vars:
   syns: xsd:string
+  xrefs_def: xsd:string
 
 name:
   text: "dietary %s intake avoidance"
@@ -87,6 +89,7 @@ exact_synonym:
   value: syns
 def:
   text: "A medical requirement or recommendation of avoiding the consumption of %s."
+  xrefs: xrefs_def
   vars:
     - avoid_food
 
