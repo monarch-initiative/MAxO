@@ -1198,6 +1198,12 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0020024>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0020025>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0020026>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0020027>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0020028>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0020029>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0020030>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0020031>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0020032>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0020033>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0025001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0025002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0025003>))
@@ -1297,6 +1303,7 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0000521>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0000864>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0001015>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/MAXO_0001027>))
+Declaration(AnnotationProperty(<hasAlternativeId>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000700>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/OMO_0003000>))
@@ -1310,6 +1317,18 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#cre
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym>))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: <hasAlternativeId> (has_alternative_id)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> <hasAlternativeId> "MAXO:0000716")
+AnnotationAssertion(dce:creator <hasAlternativeId> <https://orcid.org/0000-0002-0736-9199>)
+AnnotationAssertion(dce:date <hasAlternativeId> "2025-06-07T10:26:53Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <hasAlternativeId> "has_alternative_id")
+AnnotationAssertion(owl:deprecated <hasAlternativeId> "")
+
 
 ############################
 #   Object Properties
@@ -2331,6 +2350,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NCIT:C16546") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000130> "endoscopy")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000130> "endoscopic procedure"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000130> <http://purl.obolibrary.org/obo/MAXO_0000002>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000130> <http://purl.obolibrary.org/obo/MAXO_0000005>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000131> (endoscopy by site)
 
@@ -6572,12 +6592,13 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000618> "fluid replacement therapy"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000618> <http://purl.obolibrary.org/obo/MAXO_0000002>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000619> (ventilation with proning)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000619> (ventilation with prone positioning)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://pulmccm.org/ards-review/prone-positioning-ards-ats-sccm/>) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000619> "Prone positioning improves ventilation-perfusion matching (transferring delivered oxygen into the bloodstream more efficiently) and keeps alveolar units open and evenly distributed at end-expiration (improving gas exchange and preventing ventilator-induced lung injury).")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000619> "2020-04-08T19:45:40Z"^^xsd:dateTime)
 AnnotationAssertion(dcterms:creator <http://purl.obolibrary.org/obo/MAXO_0000619> <http://orcid.org/0000-0001-7941-2961>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000619> "ventilation with proning"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000619> "ventilation with proning")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000619> "ventilation with prone positioning"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000619> <http://purl.obolibrary.org/obo/MAXO_0000503>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000620> (central venous cannula insertion)
@@ -7137,9 +7158,9 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000664> <http://purl.obolibrary
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000665> "A procedure where a physician reviews a patient's medical history, examines the patient, and makes recommendations as to care and treatment.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000665> "2020-07-01T18:18:19Z"^^xsd:dateTime)
 AnnotationAssertion(dcterms:creator <http://purl.obolibrary.org/obo/MAXO_0000665> <http://orcid.org/0000-0001-7941-2961>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000665> "medical specialist examination")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000665> "specialty medical professional consultation")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000665> "specialty medical professional evaluation")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000665> "medical specialist examination")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000665> "medical specialist evaluation"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000665> <http://purl.obolibrary.org/obo/MAXO_0000483>)
 
@@ -7806,6 +7827,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000715> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000716> (neurologist evaluation)
 
+AnnotationAssertion(<hasAlternativeId> <http://purl.obolibrary.org/obo/MAXO_0000716> "MAXO:0009058")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "abms.org") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000716> "An evaluation a specialist who treats all types of disease or impaired function of the brain, spinal cord, peripheral nerves, muscles and autonomic nervous system, as well as the blood vessels that relate to these structures.")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0000716> "2020-07-10T16:33:00Z"^^xsd:dateTime)
 AnnotationAssertion(dcterms:creator <http://purl.obolibrary.org/obo/MAXO_0000716> <http://orcid.org/0000-0001-7941-2961>)
@@ -12607,13 +12629,15 @@ AnnotationAssertion(dcterms:creator <http://purl.obolibrary.org/obo/MAXO_0009057
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0009057> "examination by family medicine specialist"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0009057> <http://purl.obolibrary.org/obo/MAXO_0009053>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0009058> (examination by a neurologist)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0009058> (obsolete examination by a neurologist)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0009058> "A direct assessment of a patient's condition by a neurologist that is based on a physical exam, medical history, and the patient's account of symptoms.neurologist.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> <http://purl.obolibrary.org/obo/MAXO_0009058> "MAXO:0000716")
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0009058> "2022-05-02T16:30:32Z"^^xsd:dateTime)
 AnnotationAssertion(dcterms:creator <http://purl.obolibrary.org/obo/MAXO_0009058> <http://orcid.org/0000-0001-7941-2961>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0009058> "examination by a neurologist"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0009058> <http://purl.obolibrary.org/obo/MAXO_0009053>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0009058> "examination by a neurologist")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0009058> "obsolete examination by a neurologist"@en)
+AnnotationAssertion(owl:deprecated <http://purl.obolibrary.org/obo/MAXO_0009058> "true"^^xsd:boolean)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0009059> (examination by ob/gyn specialist)
 
@@ -13158,13 +13182,13 @@ AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0020017> "2025
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0020017> "cytotoxicity assay")
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0020017> <http://purl.obolibrary.org/obo/MAXO_0001446>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0020018> (Flexion MRI)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0020018> (flexion MRI)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0020018> "A type of MRI of the cervical spine designed to assess cervial myelopathy. Static views are taken with the neck in the neutral position and the mandible nearly perpendicular to the horizontal plane. To obtain the flexion/extension views, patients are instructed to perform the maximally tolerated flexion and extension actions of the neck in a non–weight-bearing position with supporting sponges placed under the head and shoulders.")
 AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/MAXO_0020018> <https://orcid.org/0000-0002-0736-9199>)
 AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0020018> "2025-06-02T05:09:11Z"^^xsd:dateTime)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0020018> "PMID:35636662")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0020018> "Flexion MRI")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0020018> "flexion MRI")
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0020018> <http://purl.obolibrary.org/obo/MAXO_0000424>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0020019> (intradermal histamine injection)
@@ -13246,6 +13270,55 @@ AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0020027> "2025
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0020027> "Therapeutic hypothermia is used in clinical situations including refractory status epilepticus.PMID:32330677")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0020027> "therapeutic hypothermia")
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0020027> <http://purl.obolibrary.org/obo/MAXO_0000002>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0020028> (doppler ultrasound evaluation of the fetoplacental circulation)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:34806234") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0020028> "Assessment of waveform patterns of blood flow in various vascular beds in the maternal, fetal, and placental circulation by Doppler ultrasonography.")
+AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/MAXO_0020028> <https://orcid.org/0000-0002-0736-9199>)
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0020028> "2025-06-07T09:15:24Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0020028> "doppler ultrasound evaluation of the fetoplacental circulation")
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0020028> <http://purl.obolibrary.org/obo/MAXO_0000520>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0020029> (cardiac scintigraphy)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:26665211") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0020029> "An imaging procedure in which a radioactive tracer such as technetium-99m pyrophosphate is injected intravenously and myocardial radiotracer uptake is evaluated by gamma cameras, which are external detectors that form two-dimensional images.")
+AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/MAXO_0020029> <https://orcid.org/0000-0002-0736-9199>)
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0020029> "2025-06-07T09:41:48Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0020029> "cardiac scintigraphy")
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0020029> <http://purl.obolibrary.org/obo/MAXO_0020005>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0020030> (transesophageal echocardiography)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:12058789") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0020030> "A type of echocardiography in which the ultrasound probe is inserted into the esophagus.")
+AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/MAXO_0020030> <https://orcid.org/0000-0002-0736-9199>)
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0020030> "2025-06-07T09:51:15Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0020030> "Transesophageal echocardiography (TEE) is the method of choice for evaluating both anatomy and function of left atrial appendage (LAA) and in particular for detecting the presence of thrombi. In contrast, in the vast majority of patients conventional transthoracic echocardiography (TTE) in fundamental frequency imaging (FFI) does not result in images of sufficient quality to explore LAA.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0020030> "transesophageal echocardiography")
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0020030> <http://purl.obolibrary.org/obo/MAXO_0010203>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0020031> (transthoracic echocardiography)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0020031> "A type of echocardiography in which the ultrasound probe is applied to the chest.")
+AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/MAXO_0020031> <https://orcid.org/0000-0002-0736-9199>)
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0020031> "2025-06-07T09:53:15Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0020031> "transthoracic echocardiography")
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0020031> <http://purl.obolibrary.org/obo/MAXO_0010203>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0020032> (MRI of the upper limb)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0020032> "A medical examination performed using of magnetic resonance imaging to image the arm.")
+AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/MAXO_0020032> <https://orcid.org/0000-0002-0736-9199>)
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0020032> "2025-06-07T10:17:01Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0020032> "MRI of the upper limb")
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0020032> <http://purl.obolibrary.org/obo/MAXO_0001311>)
+
+# Class: <http://purl.obolibrary.org/obo/MAXO_0020033> (MRI of the lower limb)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0020033> "A medical examination performed using of magnetic resonance imaging to image the leg.")
+AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/MAXO_0020033> <https://orcid.org/0000-0002-0736-9199>)
+AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/MAXO_0020033> "2025-06-07T10:17:21Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0020033> "MRI of the lower limb")
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0020033> <http://purl.obolibrary.org/obo/MAXO_0001311>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0025001> (surgical procedure on cardiovascular system)
 
@@ -13876,4 +13949,5 @@ AnnotationAssertion(dcterms:contributor <http://purl.obolibrary.org/obo/MAXO_003
 AnnotationAssertion(dcterms:creator <http://purl.obolibrary.org/obo/MAXO_0035123> <https://orcid.org/0000-0001-7941-2961>)
 
 
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0001303> "MRI of the heart")
 )
