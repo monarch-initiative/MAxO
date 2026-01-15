@@ -115,7 +115,7 @@ $(MAXOA_DIRECTORY)/$(MAXOA_FILENAME): $(SRC)
 		exit 1; \
 	fi
 	@echo "POET Release Success!"
-	@curl -Lk https://poet.jax.org/api/v1/export/maxo >> $@
+	@curl -Lk https://poet.jax.org/api/v1/export/maxo > $@
 
 .PHONY: maxoa
 maxoa:
