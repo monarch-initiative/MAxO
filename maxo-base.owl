@@ -12,7 +12,7 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/maxo/maxo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2025-04-24/maxo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/maxo/releases/2026-01-15/maxo-base.owl"/>
         <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000001"/>
         <dce:creator>Leigh Carmody</dce:creator>
         <dce:creator>Peter Robinson</dce:creator>
@@ -20,7 +20,7 @@
         <dce:title>Medical Action Ontology</dce:title>
         <dce:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <owl:versionInfo>2025-04-24</owl:versionInfo>
+        <owl:versionInfo>2026-01-15</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -123,6 +123,12 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#created_by -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasAlternativeId -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId"/>
     
 
 
@@ -5092,7 +5098,7 @@
     <!-- http://purl.obolibrary.org/obo/MAXO_0000130 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000130">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000002"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000005"/>
         <obo:IAO_0000115>A diagnostic or therapeutic procedure in which an endoscope is inserted in a tubular organ to examine the structural architecture and/or remove abnormal tissues.</obo:IAO_0000115>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-20T01:01:22Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -5135,8 +5141,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000034"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000130"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001212"/>
         <obo:IAO_0000115>A diagnostic or therapeutic procedure in which an endoscope is inserted in a tubular portion of a specific body part or body location.</obo:IAO_0000115>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-20T01:03:18Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -11708,7 +11714,6 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000990"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001396"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -11807,6 +11812,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>Removal and examination of tissue, cells, or fluids from the uterus for the purpose of detecting or characterizing disease.</obo:IAO_0000115>
         <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2019-05-19T20:39:14Z</dce:date>
+        <oboInOwl:hasExactSynonym>biopsy of uterus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>body of uterus biopsy</oboInOwl:hasExactSynonym>
         <rdfs:label>uterine biopsy</rdfs:label>
     </owl:Class>
@@ -12649,7 +12655,9 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000403"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000990"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001396"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001467"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -12923,7 +12931,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000338"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000990"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001467"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -13446,6 +13455,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000326"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000385"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -13654,7 +13664,9 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000377"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000990"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001408"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001467"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -14362,7 +14374,9 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000372"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000990"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001396"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001467"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -16817,7 +16831,9 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>Assessment by a surgeon who focuses on the preservation, investigation and restoration of the form and function of the extremities, spine and associated structures by medical, surgical and physical means. This specialist is involved with the care of patients whose musculoskeletal problems include congenital deformities, trauma, infections, tumors, metabolic disturbances of the musculoskeletal system, deformities, injuries and degenerative diseases of the spine, hands, feet, knee, hip, shoulder and elbow in children and adults. An orthopaedic surgeon is also concerned with primary and secondary muscular problems and the effects of central or peripheral nervous system lesions of the musculoskeletal system.</obo:IAO_0000115>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-20T17:50:52Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasAlternativeId>MAXO:0009062</oboInOwl:hasAlternativeId>
         <oboInOwl:hasExactSynonym>consultation with orthopedic surgeon</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>examination by orthopedist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>orthopaedic consult</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>orthopedic consult</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>orthopedic surgeon consultation</oboInOwl:hasExactSynonym>
@@ -19421,7 +19437,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001236"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000566"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -21717,9 +21733,11 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000665">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000483"/>
-        <obo:IAO_0000115>A procedure where a medical specialtist healthcare provider, who was not previously involved in a patient&apos;s treatment, reviews a patient&apos;s medical history, examines the patient, and makes recommendations as to care and treatment.</obo:IAO_0000115>
+        <obo:IAO_0000115>A procedure where a physician reviews a patient&apos;s medical history, examines the patient, and makes recommendations as to care and treatment.</obo:IAO_0000115>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-01T18:18:19Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasAlternativeId>MAXO:0009053</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasExactSynonym>medical specialist examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>specialty medical professional consultation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>specialty medical professional evaluation</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">medical specialist evaluation</rdfs:label>
@@ -21730,8 +21748,8 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000666 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000666">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000665"/>
-        <obo:IAO_0000115>An assessment by an allergist-immunologist who diagnoses and manages disorders involving immune system conditions such as asthma, anaphylaxis, rhinitis and eczema as well as adverse reactions to drugs, foods and insect stings. An allergist-immunologist also manages immune deficiency diseases and problems related to autoimmune disease, organ transplantation or malignancies of the immune system.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000680"/>
+        <obo:IAO_0000115>An assessment by an allergologist who diagnoses and manages disorders involving allergies, asthma, and related conditions.</obo:IAO_0000115>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-01T18:29:08Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasExactSynonym>allergy and immunologist consultation</oboInOwl:hasExactSynonym>
@@ -21739,6 +21757,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>allergy and immunologist doctor evaluation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>allergy and immunologist evaluation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>allergy and immunology specialist consultation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>allergy specialist evaluation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>consultation with allergy and immunologist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>referral to allergist and immunologist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>allergist consultation</oboInOwl:hasNarrowSynonym>
@@ -21748,12 +21767,12 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <oboInOwl:hasNarrowSynonym>consultation with allergist</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>evaluation by an immunologist</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>immunologist evaluation</oboInOwl:hasNarrowSynonym>
-        <rdfs:label xml:lang="en">allergy and immunology specialist evaluation</rdfs:label>
+        <rdfs:label xml:lang="en">allergologist evaluation</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000666"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An assessment by an allergist-immunologist who diagnoses and manages disorders involving immune system conditions such as asthma, anaphylaxis, rhinitis and eczema as well as adverse reactions to drugs, foods and insect stings. An allergist-immunologist also manages immune deficiency diseases and problems related to autoimmune disease, organ transplantation or malignancies of the immune system.</owl:annotatedTarget>
+        <owl:annotatedTarget>An assessment by an allergologist who diagnoses and manages disorders involving allergies, asthma, and related conditions.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ABMS.org</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -21836,10 +21855,13 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>An assessment by a physician with training and expertise in the diagnosis and medical/surgical management of diseases of the skin, hair and nails, and mucous membranes.</obo:IAO_0000115>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-01T19:12:58Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasAlternativeId>MAXO:0009055</oboInOwl:hasAlternativeId>
         <oboInOwl:hasExactSynonym>consultation with a dermatologist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>dermatologist consultation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>dermatologist evaluation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>dermatologist examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>dermatology specialist consultation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>examination by dermatologist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>referral to a dermatologist</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">dermatology specialist evaluation</rdfs:label>
     </owl:Class>
@@ -21859,9 +21881,15 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>An assessment by a physician who specializes in immediate decision making and action necessary to prevent death or any further disability both in the pre-hospital setting by directing emergency medical technicians and in the emergency department. This specialist provides immediate recognition, evaluation, care, stabilization and disposition of a generally diversified population of adult and pediatric patients in response to acute illness and injury.</obo:IAO_0000115>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-01T19:23:12Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasAlternativeId>MAXO:0009056</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasExactSynonym>ED examination</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>ER examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>assessment by emergency medicine specialist</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>emergency department physician examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>emergency medicine specialist assessment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>emergency room doctor evaluation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>emergency room physician examination</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>examination by emergency medicine specialst</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">emergency medicine specialist evaluation</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -21880,7 +21908,9 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>An assessment by a physician who provides front-line health care that is accessible, high quality, comprehensive and continuous over time for people of all ages, life stages, backgrounds and conditions. The specialists care for individuals and for entire families, from birth through the end of life, including a broad range of preventive care; healthy lifestyle counseling; mental health care; care of acute illnesses; management of chronic diseases, including patients with multi-morbidity. When needed, they also provide referral and coordination of care with other specialists.</obo:IAO_0000115>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-01T19:39:31Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasAlternativeId>MAXO:0009057</oboInOwl:hasAlternativeId>
         <oboInOwl:hasExactSynonym>consultation with family medicine specialist</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>examination by family medicine specialist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>family medicine specialist consultation</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">family medicine specialist evaluation</rdfs:label>
     </owl:Class>
@@ -22470,17 +22500,22 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>An evaluation with a specialist who focuses on the health of women before, during and after childbearing years, diagnosing and treating conditions of the reproductive system and associated disorders.</obo:IAO_0000115>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-08T17:53:55Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasAlternativeId>MAXO:0009059</oboInOwl:hasAlternativeId>
         <oboInOwl:hasExactSynonym>OB/GYN specialist consultation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>OB/GYN specialist evaluation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>consultation OB/GYN specialist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>consultation obstetrician/gynecologist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>consultation with obstetrics and gynecology specialist</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>examination by ob/gyn specialist</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>ob/gyn examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>obstetrician/gynecologist consultation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>obstetrician/gynecologist evaluation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>obstetrics and gynecology specialist consultation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>obstetrics/gynecology specialist consultation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>obstetrics/gynecology specialist evaluation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>referral to OB/GYN specialist</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>gynecologist examination</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>obstetrics examination</oboInOwl:hasNarrowSynonym>
         <rdfs:label xml:lang="en">obstetrics and gynecology specialist evaluation</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -22500,8 +22535,11 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>An evaluation by a specialist focused on the medical and surgical care of the eyes. Ophthalmologists are the only physicians medically trained to manage the complete range of the eye and vision care. They can prescribe glasses and contact lenses, dispense medications, diagnose and treat eye conditions and diseases and perform surgeries.</obo:IAO_0000115>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-08T20:14:31Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasAlternativeId>MAXO:0009060</oboInOwl:hasAlternativeId>
         <oboInOwl:hasExactSynonym>consultation with ophthalmologist</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>examination by ophthalmologist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>ophthalmologist consultation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>ophthalmologist examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>ophthalmologist referral</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>ophthalmology specialist consultation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>ophthalmology specialist evaluation</oboInOwl:hasExactSynonym>
@@ -22583,10 +22621,12 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>An assessment by a specialist who provides medical and/or surgical therapy or prevention of diseases, allergies, neoplasms, deformities, disorders and/or injuries of the ears, nose, sinuses, throat, respiratory and upper alimentary systems, face, jaws and the other head and neck systems.</obo:IAO_0000115>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-09T16:10:20Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasAlternativeId>MAXO:0009061</oboInOwl:hasAlternativeId>
         <oboInOwl:hasExactSynonym>consultation by otolaryngology specialist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>consultation with head and neck surgeon</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>consultation with otolaryngologist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>evaluation by otolaryngologist</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>examination by otolaryngologist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>head and neck surgeon consultation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>head and neck surgeon evaluation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>head and neck surgeon referral</oboInOwl:hasExactSynonym>
@@ -22623,7 +22663,10 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>An assessment by a specialist concerned with the physical, emotional, and social health of children from birth to young adulthood.</obo:IAO_0000115>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-09T17:48:27Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasAlternativeId>MAXO:0009063</oboInOwl:hasAlternativeId>
         <oboInOwl:hasExactSynonym>evaluation by pediatrician</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>examination by pediatrician</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>pediatric examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>pediatrician consultation</oboInOwl:hasExactSynonym>
         <rdfs:comment>Pediatric care encompasses a broad spectrum of health services ranging from preventive health care to the diagnosis and treatment of acute and chronic diseases. Pediatricians understand the many factors that affect the growth and development of children. They understand that children are not simply small adults. Children change rapidly, and they must be approached with an appreciation for their stage of physical and mental development.</rdfs:comment>
         <rdfs:label xml:lang="en">pediatrician evaluation</rdfs:label>
@@ -22720,11 +22763,14 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>Assessment by a specialist who treats patients with disorders or disabilities in the muscles, bones, and nervous system, including neck or back pain, sports and work injuries, stroke, brain injury, spinal cord injury, spasticity, and any other disability or disorder that affects function.</obo:IAO_0000115>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-09T19:45:07Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasAlternativeId>MAXO:0009064</oboInOwl:hasAlternativeId>
         <oboInOwl:hasExactSynonym>assessment by physiatrist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>assessment by physical medicine and rehabilitation specialist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>consultation by physiatrist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>consultation with physical medicine and rehabilitation specialist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>evaluation by physical medicine and rehabilitation specialist</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>examination by physiatrist</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>examination by physical mediciane and rehabilitation specialist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>physiatrist assessment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>physiatrist consultation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>physiatrist referral</oboInOwl:hasExactSynonym>
@@ -22781,9 +22827,11 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>Evaluation by a physician who specializes in the evaluation and treatment of mental, addictive and emotional disorders.</obo:IAO_0000115>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-09T20:37:35Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasAlternativeId>MAXO:0009066</oboInOwl:hasAlternativeId>
         <oboInOwl:hasExactSynonym>assessment by psychiatrist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>consult with psychiatrist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>evaluation by psychiatrist</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>psychiatric examination</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>psychiatrist assessment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>psychiatrist consultation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>psychiatrist referral</oboInOwl:hasExactSynonym>
@@ -22837,6 +22885,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>An evaluation a specialist who treats all types of disease or impaired function of the brain, spinal cord, peripheral nerves, muscles and autonomic nervous system, as well as the blood vessels that relate to these structures.</obo:IAO_0000115>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-10T16:33:00Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasAlternativeId>MAXO:0009058</oboInOwl:hasAlternativeId>
         <oboInOwl:hasExactSynonym>consultation with neurologist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>neurologist assessment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>neurologist consultation</oboInOwl:hasExactSynonym>
@@ -22984,12 +23033,14 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <obo:IAO_0000115>An evaluation by a specialist that focuses on diagnosing and treating disorders of the urinary tracts of males and females, and on the reproductive system of males. This specialist manages non-surgical problems such as urinary tract infections and benign prostatic hyperplasia, as well as surgical problems such as the surgical management of cancers, the correction of congenital abnormalities, and correcting stress incontinence.</obo:IAO_0000115>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-10T20:44:20Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasAlternativeId>MAXO:0009067</oboInOwl:hasAlternativeId>
         <oboInOwl:hasExactSynonym>assessment by genitourinary surgeon</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>assessment by urologist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>consultation with genitourinary surgeon</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>consultation with urologist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>evaluation by genitourinary surgeon</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>evaluation by urologist</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>examination by urologist</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>genitourinary surgeon consultation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>genitourinary surgeon evaluation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>referral to genitourinary surgeon</oboInOwl:hasExactSynonym>
@@ -23505,6 +23556,7 @@ agents that reduce the symptoms associated with IBD.</owl:annotatedTarget>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T19:13:57Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C18280</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>chromosome analysis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>cytogenetic study</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>cytogenetic testing</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">cytogenetic analysis</rdfs:label>
@@ -25314,8 +25366,8 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000605"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000778"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0020028"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -26027,7 +26079,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000793"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001154"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -26436,6 +26487,8 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000012"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000890"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001194"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001412"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001443"/>
         <obo:IAO_0000115>A ureteroscope is inserted into the ureter and a wire basket inserted through the tube to remove the stone(s). In addition, a laser or other mechanical device can be used to break up the stone(s).</obo:IAO_0000115>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-09T18:26:36Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -26929,7 +26982,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0000932 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000932">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001406"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0020031"/>
         <obo:IAO_0000115>The neurophysiologic exploration of the electrical activity of the brain by the application of electrodes to the scalp. The resulting traces are known as an electroencephalogram (EEG). This test is used to assess brain damage, epilepsy and other problems.</obo:IAO_0000115>
         <dce:date>2021-08-12T13:47:43Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
@@ -29636,7 +29689,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000447"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001443"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001504"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001503"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -30268,7 +30321,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000012"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000447"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001412"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001443"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -32378,7 +32430,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000327"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001399"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001467"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -32419,7 +32470,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001399"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001467"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0010311"/>
         <rdfs:subClassOf>
@@ -34696,7 +34746,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000131"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001418"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001405"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -34738,8 +34788,8 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000131"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000499"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001443"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001408"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001467"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -34823,8 +34873,8 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000131"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001412"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001443"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001399"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001467"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -34866,8 +34916,8 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000131"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001409"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001443"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001396"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001467"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -34909,8 +34959,8 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000131"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001420"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001443"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001407"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001467"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -34993,8 +35043,8 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000131"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000499"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001443"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001408"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001467"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -35105,8 +35155,8 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000131"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001409"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001443"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001396"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001467"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -35154,8 +35204,8 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000131"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001412"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001443"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001399"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001467"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -35197,8 +35247,8 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000131"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001409"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001443"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001396"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001467"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -35239,7 +35289,9 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001195"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000131"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001396"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001467"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -35281,7 +35333,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000131"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001409"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -35323,8 +35374,8 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000131"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001422"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001443"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001445"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001467"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -35366,8 +35417,8 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000131"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001420"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001443"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001407"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001467"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -35451,8 +35502,8 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000131"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001419"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001443"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001406"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001467"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -35494,8 +35545,8 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000131"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000499"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001443"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001408"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001467"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -39323,7 +39374,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000426"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001399"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001467"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -41141,7 +41191,9 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001344"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000965"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001443"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001503"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -41264,7 +41316,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000012"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000965"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001412"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001443"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -47250,7 +47301,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000012"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001412"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001443"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -50176,11 +50226,11 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0009053 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009053">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000526"/>
-        <obo:IAO_0000115>A direct appraisal of a patient&apos;s condition by a clinical specialist that is based on a physical exam, medical history, and the patient&apos;s account of symptoms.</obo:IAO_0000115>
+        <obo:IAO_0100001>MAXO:0000665</obo:IAO_0100001>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-02T15:54:47Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <rdfs:label xml:lang="en">medical specialist examination</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete medical specialist examination</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -50188,12 +50238,12 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0009054 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009054">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009053"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000680"/>
         <obo:IAO_0000115>A direct assessment of a patient&apos;s condition by an immunologist that is based on a physical exam, medical history, and the patient&apos;s account of symptoms.</obo:IAO_0000115>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-02T15:56:27Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
         <oboInOwl:hasDbXref>NCIT:C74803</oboInOwl:hasDbXref>
-        <rdfs:label xml:lang="en">examination by immunologist</rdfs:label>
+        <rdfs:label xml:lang="en">immunologist evaluation</rdfs:label>
     </owl:Class>
     
 
@@ -50201,12 +50251,11 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0009055 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009055">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009053"/>
-        <obo:IAO_0000115>A direct assessment of a patient&apos;s condition by a dermatologist that is based on a physical exam, medical history, and the patient&apos;s account of symptoms.</obo:IAO_0000115>
+        <obo:IAO_0100001>MAXO:0000671</obo:IAO_0100001>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-02T15:57:40Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasExactSynonym>dermatologist examination</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">examination by dermatologist</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete examination by dermatologist</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -50214,16 +50263,11 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0009056 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009056">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009053"/>
-        <obo:IAO_0000115>A direct assessment of a patient&apos;s condition by an emergency medicine specialist that is based on a physical exam, medical history, and the patient&apos;s account of symptoms.</obo:IAO_0000115>
+        <obo:IAO_0100001>MAXO:0000672</obo:IAO_0100001>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-02T16:09:47Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasExactSynonym>ED examination</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>ER examination</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>emergency medicine specialist examination</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>emergency department physician examination</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>emergency room physician examination</oboInOwl:hasNarrowSynonym>
-        <rdfs:label xml:lang="en">examination by emergency medicine specialst</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete examination by emergency medicine specialst</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -50231,11 +50275,11 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0009057 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009057">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009053"/>
-        <obo:IAO_0000115>A direct assessment of a patient&apos;s condition by a family medicine specialist that is based on a physical exam, medical history, and the patient&apos;s account of symptoms.</obo:IAO_0000115>
+        <obo:IAO_0100001>MAXO:0000673</obo:IAO_0100001>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-02T16:19:37Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <rdfs:label xml:lang="en">examination by family medicine specialist</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete examination by family medicine specialist</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -50243,11 +50287,13 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0009058 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009058">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009053"/>
         <obo:IAO_0000115>A direct assessment of a patient&apos;s condition by a neurologist that is based on a physical exam, medical history, and the patient&apos;s account of symptoms.neurologist.</obo:IAO_0000115>
+        <obo:IAO_0100001>MAXO:0000716</obo:IAO_0100001>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-02T16:30:32Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <rdfs:label xml:lang="en">examination by a neurologist</rdfs:label>
+        <oboInOwl:hasExactSynonym>examination by a neurologist</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">obsolete examination by a neurologist</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -50255,14 +50301,11 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0009059 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009059">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009053"/>
-        <obo:IAO_0000115>A direct assessment of a patient&apos;s condition by  an obstetrics and gynecologist specialist that is based on a physical exam, medical history, and the patient&apos;s account of symptoms.</obo:IAO_0000115>
+        <obo:IAO_0100001>MAXO:0000702</obo:IAO_0100001>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-02T17:30:59Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasExactSynonym>ob/gyn examination</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>gynecologist examination</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>obstetrics examination</oboInOwl:hasNarrowSynonym>
-        <rdfs:label xml:lang="en">examination by ob/gyn specialist</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete examination by ob/gyn specialist</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -50270,12 +50313,11 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0009060 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009060">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009053"/>
-        <obo:IAO_0000115>A direct appraisal of a patient&apos;s condition by a ophthalmologist that is based on a physical exam, medical history, and the patient&apos;s account of symptoms.</obo:IAO_0000115>
+        <obo:IAO_0100001>MAXO:0000703</obo:IAO_0100001>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-02T17:43:19Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasExactSynonym>ophthalmologist examination</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">examination by ophthalmologist</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete examination by ophthalmologist</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -50283,11 +50325,11 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0009061 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009061">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009053"/>
-        <obo:IAO_0000115>A direct appraisal of a patient&apos;s condition by an otolaryngologist that is based on a physical exam, medical history, and the patient&apos;s account of symptoms.</obo:IAO_0000115>
+        <obo:IAO_0100001>MAXO:0000706</obo:IAO_0100001>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-03T13:58:22Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <rdfs:label xml:lang="en">examination by otolaryngologist</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete examination by otolaryngologist</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -50295,11 +50337,11 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0009062 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009062">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009053"/>
-        <obo:IAO_0000115>A direct appraisal of a patient&apos;s condition by an orthopedic specialist that is based on a physical exam, medical history, and the patient&apos;s account of symptoms.</obo:IAO_0000115>
+        <obo:IAO_0100001>MAXO:0000478</obo:IAO_0100001>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-03T15:44:47Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <rdfs:label xml:lang="en">examination by orthopedist</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete examination by orthopedist</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -50307,12 +50349,11 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0009063 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009063">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009053"/>
-        <obo:IAO_0000115>A direct appraisal of a patient&apos;s condition by a pediatric specialist that is based on a physical exam, medical history, and the patient&apos;s account of symptoms.</obo:IAO_0000115>
+        <obo:IAO_0100001>MAXO:0000707</obo:IAO_0100001>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-03T15:45:49Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasExactSynonym>pediatric examination</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">examination by pediatrician</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete examination by pediatrician</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -50320,12 +50361,11 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0009064 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009064">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009053"/>
-        <obo:IAO_0000115>A direct appraisal of a patient&apos;s condition by a physical medicine and rehabilition specialist that is based on a physical exam, medical history, and the patient&apos;s account of symptoms.</obo:IAO_0000115>
+        <obo:IAO_0100001>MAXO:0000712</obo:IAO_0100001>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-03T15:50:43Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasExactSynonym>examination by physical mediciane and rehabilitation specialist</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">examination by physiatrist</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete examination by physiatrist</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -50359,12 +50399,11 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0009066 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009066">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009053"/>
-        <obo:IAO_0000115>A direct appraisal of a patient&apos;s condition by a psychiatric specialist that is based on a physical exam, medical history, and the patient&apos;s account of symptoms.</obo:IAO_0000115>
+        <obo:IAO_0100001>MAXO:0000714</obo:IAO_0100001>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-03T15:57:23Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <oboInOwl:hasExactSynonym>psychiatric examination</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">examination by psychiatrist</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete examination by psychiatrist</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -50372,11 +50411,11 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0009067 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0009067">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009053"/>
-        <obo:IAO_0000115>A direct appraisal of a patient&apos;s condition by a urology specialist that is based on a physical exam, medical history, and the patient&apos;s account of symptoms.</obo:IAO_0000115>
+        <obo:IAO_0100001>MAXO:0000722</obo:IAO_0100001>
         <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-03T15:57:55Z</dce:date>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-7941-2961"/>
-        <rdfs:label xml:lang="en">examination by urologist</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete examination by urologist</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -50530,8 +50569,8 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001286"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001292"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001443"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009076"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -52389,7 +52428,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001312"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001514"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0010039"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -52554,7 +52592,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001312"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001412"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -53464,15 +53501,15 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03420218"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>A medical requirement or recommendation of avoiding the consumption of organ meat.</obo:IAO_0000115>
+        <obo:IAO_0000115>A medical requirement or recommendation of avoiding the consumption of animal organ by physiological system.</obo:IAO_0000115>
         <obo:dcterms_creator>http://orcid.org/0000-0001-7941-2961</obo:dcterms_creator>
         <dce:date>2020-05-12T11:00:00Z</dce:date>
-        <oboInOwl:hasExactSynonym>avoid organ meat intake</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>avoiding dietary organ meat intake</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>organ meat consumption avoidance</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>organ meat restricted diet intake</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>organ meat restriction</oboInOwl:hasExactSynonym>
-        <rdfs:label>dietary organ meat intake avoidance</rdfs:label>
+        <oboInOwl:hasExactSynonym>animal organ by physiological system consumption avoidance</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>animal organ by physiological system restricted diet intake</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>animal organ by physiological system restriction</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>avoid animal organ by physiological system intake</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>avoiding dietary animal organ by physiological system intake</oboInOwl:hasExactSynonym>
+        <rdfs:label>dietary animal organ by physiological system intake avoidance</rdfs:label>
     </owl:Class>
     
 
@@ -55395,7 +55432,6 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001399"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001467"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0010200"/>
         <rdfs:subClassOf>
@@ -57187,6 +57223,511 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0035007"/>
+        <obo:IAO_0000115>A quantitative measurement of protein present in a cerebrospinal fluid sample.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-01T10:07:36Z</dce:date>
+        <oboInOwl:hasExactSynonym>CSF protein measurement</oboInOwl:hasExactSynonym>
+        <rdfs:label>cerebrospinal fluid protein measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000595"/>
+        <obo:IAO_0000115>Dual-Energy X-Ray Absorptiometry (DEXA) is performed using a C-arm with the x-ray source below the supine patient emitting photons at 2 distinct energy levels specific for soft tissue and cortical bone. A collimator is situated between the patient and the x-ray source to minimize scatter. The attenuations from these low- and high-energy photon emissions are detected above the patient and are combined to create a planar image to assess bone mass per unit of area (g/square cm) to determine bone mineral density (BMD). DEXA may be indicated as a tool to measure regional and whole-body fat and lean mass, such as in patients with malabsorption, cancer, or eating disorders.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-01T10:12:02Z</dce:date>
+        <oboInOwl:hasExactSynonym>DEXA</oboInOwl:hasExactSynonym>
+        <rdfs:label>Dual-energy X-ray absorptiometry procedure</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0020004"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>DEXA</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#abbreviation"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001321"/>
+        <obo:IAO_0000115>A diagnostic test in which radiopharmaceuticals are taken internally and the emitted gamma radiation is captured by gamma cameras.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-01T10:19:22Z</dce:date>
+        <oboInOwl:hasExactSynonym>gamma scan</oboInOwl:hasExactSynonym>
+        <rdfs:label>scintigraphy imaging procedure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000988"/>
+        <obo:IAO_0000115>In vitro, freshly excised airway epithelial tissues can be studied in Ussing chambers, and when the transepithelial electric potential difference (PD) is clamped to zero (short-circuited), basal patterns of ion transport can be directly determined by isotopic measurements of the transepithelial flux of specific electrolytes, including Na+ and Cl- ions. Thus, there are defined correlates of ion flux and bioelectric parameters of active ion transport and tissue (barrier) resistance. Because the PD generated by the airway epithelium reflects the relationship between the magnitude and direction of the net transepithelial active ion transport and the epithelial ion conductance, the transepithelial PD (voltage) serves as an index of ion transport and ionic conductances (permeability). Individuals with cystic fibrosis have a characteristic pattern of bioelectric properties which reflect accelerated Na+ transport (absorption), and (absent) or reduced Cl- secretion.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-01T10:28:35Z</dce:date>
+        <rdfs:label>Transepithelial nasal potential difference measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020007 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001445"/>
+        <obo:IAO_0000115>A diagnostic test that measures the compliance (mobility) of the tympanic membrane and middle ear system by varying air pressure in the ear canal. Tympanometry provides useful quantitative information about the presence of fluid in the middle ear, mobility of the middle ear system, and ear canal volume. Its use has been recommended in conjunction with more qualitative information (e.g., history, appearance, and mobility of the tympanic membrane) in the evaluation of otitis media with effusion and to a lesser extent in acute otitis media. It also can provide useful information about the patency of tympanostomy tubes.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-01T10:38:14Z</dce:date>
+        <rdfs:label>tympanometry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020008">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000493"/>
+        <obo:IAO_0000115>The tilt test is commonly used for evaluation of orthostatic syndromes and dysautonomia. Tilt test evaluates autonomic system responses to orthostatic stress induced by having the patient lie flat on a special table that creates a change in posture from lying to standing while the patient is being monitored with ECG and a blood pressure monitor that measure continuous, beat to beat, non-invasively. Established tilt testing includes monitoring of heart rate and blood pressure; adding capnography and cerebral blood flow monitoring expands its diagnostic yield and allows assessing cerebral blood flow regulation.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-01T10:46:57Z</dce:date>
+        <rdfs:label>tilt test</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000493"/>
+        <obo:IAO_0000115>The forearm ischemic exercise test (FIET) is a very important clinical tool for evaluation of patients suspected to have a metabolic disorder of muscle function. Failure to elevate lactate in blood washed out from ischemically exercised muscles confirms an abnormality of glycolytic metabolism. A normal increase of lactate on FIET is assumed to rule out a disorder of glycolytic metabolism. To perform the test, a blood pressure cuff is inflated on the arm to induce ischemia while the patient repeatedly contracts the forearm muscles for several minutes. Blood samples are drawn at baseline and at several time points after exercise.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-01T10:51:37Z</dce:date>
+        <oboInOwl:hasExactSynonym>forearm ischemic test</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>noninvasive exercise test</oboInOwl:hasExactSynonym>
+        <rdfs:comment>PMID:3476851</rdfs:comment>
+        <rdfs:label>forearm ischemic exercise test</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020010">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001406"/>
+        <obo:IAO_0000115>The autonomic nervous system is the part of the nervous system that is responsible for regulation and integration of internal organs’ functioning. Most of the tests are based on evaluation of the cardiovascular reflexes triggered by performing specific provocative manoeuvres. Stimuli that raise blood pressure, such as isometric exercise, cold pressor test or mental arithmetic, activate mainly sympathetic outflow. Moreover, blood pressure responses to orthostatic testing and Valsalva manoeuvre are in a large part a reflection of sympathetic activity. Changes in heart rate during orthostatic testing and Valsalva manoeuvre, as well as during deep breathing or diving reflex, reflect parasympathetic modulation.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-01T10:55:43Z</dce:date>
+        <rdfs:comment>PMID:22371714</rdfs:comment>
+        <rdfs:label>autonomic nervous system function evaluation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000527"/>
+        <obo:IAO_0000115>Noninvasive quantitative measurements of the body. The core elements of anthropometry are height, weight, head circumference, body mass index (BMI), body circumferences to assess for adiposity (waist, hip, and limbs), and skinfold thickness.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-01T10:58:42Z</dce:date>
+        <rdfs:comment>PMID:30726000</rdfs:comment>
+        <rdfs:label>anthropometric assessment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020012 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020012">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0035122"/>
+        <obo:IAO_0000115>A diagnostic test that measures how well platelets clump (aggregate) in response to a stimulaus. Light transmittance platelet aggregometry (LTA) in platelet‐rich plasma measures changes in light transmission as platelets aggregate. Impedance aggregometry measures changes in electrical impedance as platelets aggregate.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-01T11:06:22Z</dce:date>
+        <rdfs:comment>PMID:35510959</rdfs:comment>
+        <rdfs:label>platelet aggregometry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020013 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020013">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000829"/>
+        <obo:IAO_0000115>A quantitative measurement of metabolites present in the cytoplasm of erythrocytes.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-01T11:10:45Z</dce:date>
+        <rdfs:label>erythrocyte metabolite measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020014 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020014">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001408"/>
+        <obo:IAO_0000115>A type of scintigraphy and medical isotopes to evaluate the circulation of air and blood within a patient&apos;s lungs, in order to determine the ventilation/perfusion ratio.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-01T11:17:01Z</dce:date>
+        <rdfs:label>ventilation/perfusion lung scan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020015">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000006"/>
+        <obo:IAO_0000115>Measurement of absorption of light energy (a photon) by an indicator followed by the emission of some of this light energy (as another photon) a few nanoseconds later.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-01T11:42:28Z</dce:date>
+        <rdfs:label>fluorescence microscopy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000566"/>
+        <obo:IAO_0000115>Determination of the osmolality in the circulation. Serum osmolality reflects the concentration of solutes (like sodium, glucose, urea) in the blood and is an important marker of body fluid balance.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-01T11:45:04Z</dce:date>
+        <rdfs:label>osmolality measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020017 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020017">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001446"/>
+        <obo:IAO_0000115>A laboratory test that measures the ability of immune cells (e.g., cytotoxic T cell or natural killer cells) to kill target cells.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-01T11:54:28Z</dce:date>
+        <rdfs:label>cytotoxicity assay</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020018 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020018">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000424"/>
+        <obo:IAO_0000115>A type of MRI of the cervical spine designed to assess cervial myelopathy. Static views are taken with the neck in the neutral position and the mandible nearly perpendicular to the horizontal plane. To obtain the flexion/extension views, patients are instructed to perform the maximally tolerated flexion and extension actions of the neck in a non–weight-bearing position with supporting sponges placed under the head and shoulders.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-02T05:09:11Z</dce:date>
+        <rdfs:comment>PMID:35636662</rdfs:comment>
+        <rdfs:label>Flexion MRI</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001404"/>
+        <obo:IAO_0000115>A diagnostic procedure whereby histamine is injected into a local of the skin. This causes wheal and flare when they are injected intradermally into normal subjects and may therefore play a role in the formation of urticaria.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-02T05:15:47Z</dce:date>
+        <rdfs:comment>This response may be absent in individuals with certin types of hereditary sensory and autonomic neuropathy.</rdfs:comment>
+        <rdfs:label>intradermal histamine injection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020020 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020020">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001401"/>
+        <obo:IAO_0000115>A measurement of how well the small intestine absorbs D-xylose by analyzing the amount excreted in the urine after ingestion.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-02T05:25:23Z</dce:date>
+        <rdfs:comment>PMID:10478874</rdfs:comment>
+        <rdfs:comment>The standard 25-g D-xylose test in adults, based on analysis of 5-h urine collection and a 1-h serum sample, discriminates between normal subjects and patients with proximal small intestinal malabsorption.</rdfs:comment>
+        <rdfs:label>D-xylose urine test</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020021 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020021">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0035122"/>
+        <obo:IAO_0000115>A measurement of the activity levels of the different complexes of the mitochondrial electron transport chain.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-02T05:30:35Z</dce:date>
+        <rdfs:label>mitochondrial complex activity assessment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020022 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020022">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001578"/>
+        <obo:IAO_0000115>Photodynamic therapy (PDT) is based on the local or systemic application of a photosensitive compound, a photosensitizer. The pheotosensitizer is activated by light and accumulates in pathological tissues. The photosensitizer molecules absorb the light of the appropriate wavelength, initiating the activation processes leading to the selective destruction of the inappropriate cells. The photocytotoxic reactions occur only within the pathological tissues, in the area of photosensitizer distribution, enabling selective destruction.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-02T09:49:12Z</dce:date>
+        <rdfs:comment>PMID:30119176</rdfs:comment>
+        <rdfs:label>photodynamic therapy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020023">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000002"/>
+        <obo:IAO_0000115>Any procedure associated with treatments involving the heart or blood vessels.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-02T09:51:09Z</dce:date>
+        <rdfs:label>cardiovascular intervention</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020024 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020024">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0020023"/>
+        <obo:IAO_0000115>A procedure that blocks the blood supply to a specific area, often a tumor or abnormal tissue, by intentionally obstructing an artery. Small particles made of tiny gelatin sponges or similar material are injected into a catheter, leading to blocakge of the artery or abnormal area of tissue.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-02T09:52:00Z</dce:date>
+        <rdfs:comment>Arterial embolization is used to treat some types of liver cancer, kidney cancer, and neuroendocrine tumors. It may also be used to treat uterine fibroids, aneurysms, and other conditions. Also called TAE and transarterial embolization.</rdfs:comment>
+        <rdfs:label>arterial embolization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020025 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020025">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000009"/>
+        <obo:IAO_0000115>A type of therapy used in metabolic diseases characterized by reduced activity of a metabolic enzyme. Substrate reduction therapy (SRT) aims to reduce the amount of substrate influx to that enyzme.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-02T09:56:13Z</dce:date>
+        <rdfs:comment>An example is Gaucher disease, in which SRT aims to reduce the influx of glucocerebroside or glucosylceramide (GLC) influx into the lysosome by inhibiting the GLC-synthase enzyme, resulting in a reduction of the amount of GLC present. This is in contrast to enzyme replacement therapy, which works by supplementing the deficient or defective acid beta glucosidase to break down GLC into glucose and ceramide, which accumulates in macrophages in the absence of acid  beta glucosidase.PMID:27559188</rdfs:comment>
+        <rdfs:label>substrate reduction therapy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020026 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020026">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001593"/>
+        <obo:IAO_0000115>A type of antisense oligonucleotide therapy that is administered in the cerebrospinal fluid (i.e., intrathecally).</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-02T10:01:05Z</dce:date>
+        <rdfs:comment>PMID:39191071</rdfs:comment>
+        <rdfs:label>intrathecal antisense oligonucleotide inhibitor therapy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020027 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020027">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000002"/>
+        <obo:IAO_0000115>A medical procedure consisting of the deliberate lowering of a patient&apos;s body temperature for purposes such as protecting vital organs or reducing brain damage.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-02T10:02:59Z</dce:date>
+        <rdfs:comment>Therapeutic hypothermia is used in clinical situations including refractory status epilepticus.PMID:32330677</rdfs:comment>
+        <rdfs:label>therapeutic hypothermia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020028 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020028">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0035011"/>
+        <obo:IAO_0000115>Measurement of the activity of amount of an enzyme within the blood circulation.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-08T05:36:05Z</dce:date>
+        <rdfs:label>circulating enzyme activity testing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020029 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020029">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000566"/>
+        <obo:IAO_0000115>The determination of the amount of antibody directed against a specific target in the blood circulation. The sample is serially diluted, and the highest dilution at which a positive result is obtained is recorded as the titer (e.g., 1:40).</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-08T05:45:17Z</dce:date>
+        <rdfs:label>antibody titer measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020030">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000571"/>
+        <obo:IAO_0000115>A diagnostic procedure using computed tomography (CT) in which a radiocontrast is administered in order to increase the contrast between a lesion and the normal surrounding structures.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-08T06:22:51Z</dce:date>
+        <oboInOwl:hasExactSynonym>contrast-enhanced CT</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>contrast-enhanced computed tomography</oboInOwl:hasExactSynonym>
+        <rdfs:label>contrast-enhanced computed tomography procedure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020031">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001406"/>
+        <obo:IAO_0000115>A diagnostic procedure used to measure the electrical activity of the nervous system either spontaneously or in response to stimuli.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-08T06:30:39Z</dce:date>
+        <oboInOwl:hasExactSynonym>neurophysiological testing</oboInOwl:hasExactSynonym>
+        <rdfs:label>neurophysiological assessment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020032 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020032">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0020031"/>
+        <obo:IAO_0000115>A type of neurophysiological assessment that measures the electrical responses of the nervous system to sensory stimuli.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-08T06:32:31Z</dce:date>
+        <rdfs:label>evoked potential assessment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020033 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020033">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000424"/>
+        <obo:IAO_0000115>Magnetic resonance spectroscopy (MRS) utilizes clinical MR scanners to noninvasively quantify in vivo brain biochemical metabolites, including N-acetyl-aspartate (NAA), creatine (Cr), choline (Cho), glutamate and glutamine (Glx), and myo-inositol (mI).</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-08T06:40:18Z</dce:date>
+        <rdfs:label>magnetic resonance spectroscopy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020034 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020034">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000424"/>
+        <obo:IAO_0000115>A type of magnetic resonance imaging (MRI) procedure in which gadolinium or other contrast agent to improve the clarity and detail of MRI images.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-08T06:44:26Z</dce:date>
+        <rdfs:comment>This term can be combined with organ-specific MRI terms.</rdfs:comment>
+        <rdfs:label>contrast-enhanced magnetic resonance imaging procedure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020035 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020035">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0035007"/>
+        <obo:IAO_0000115>A laboratory test in which cerebrospinal fluid (CSF) is inoculated into culture media to assess whether infection-causing microorganisms (bacteria or fungi) are present.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-08T06:47:34Z</dce:date>
+        <oboInOwl:hasExactSynonym>CSF culture</oboInOwl:hasExactSynonym>
+        <rdfs:label>cerebrospinal fluid culture</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020036 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020036">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0035007"/>
+        <obo:IAO_0000115>A quantitative measurement of ion concentration in a cerebrospinal fluid sample.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-08T06:49:37Z</dce:date>
+        <rdfs:label>cerebrospinal fluid ion measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020037 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020037">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000424"/>
+        <obo:IAO_0000115>A medical examination performed using of magnetic resonance imaging to image the cervicomedullary junction, i.e., the region that spans the lower brainstem and upper cervical spinal cord.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-08T06:52:01Z</dce:date>
+        <rdfs:label>craniovertebral junction MRI</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020038 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020038">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001401"/>
+        <obo:IAO_0000115>The lower urinary tract (LUT) consists of the bladder and urethra and allows for the low-pressure storage of urine with conscious control of micturition. Urodynamics is the measurement of the relevant physiological parameters of the LUT to assess its function and dysfunction. The test involves noninvasive evaluation of bladder emptying, and invasive assessments of bladder storage function and bladder emptying function.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-08T06:54:54Z</dce:date>
+        <rdfs:label>urodynamic testing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020039 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020039">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000988"/>
+        <obo:IAO_0000115>The investigation of synovial fluid, the collection of fluid confined within a joint space. Synovial fluid is physiologic, and acts as a joint space lubricant of articular cartilage, and nutrient source through diffusion for surrounding structures including cartilage, meniscus, labrum, etc. Arthrocentesis is the process by which synovial fluid collection occurs by penetrating the joint space through aspiration.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-08T07:08:36Z</dce:date>
+        <rdfs:comment>PMID:30725799</rdfs:comment>
+        <rdfs:label>synovial fluid analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020040">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000595"/>
+        <obo:IAO_0000115>Panoramic radiography is an extraoral radiography modality that provides two-dimensional information about the teeth and the maxillofacial skeleton.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-09T08:45:01Z</dce:date>
+        <rdfs:label>panoramic radiograph</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0020041 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0020041">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000520"/>
+        <obo:IAO_0000115>Measurement of characterisitc of the umbilical artery flow such as end-diastolic umbilical artery flow and umbilical artery pulsatility index (PI) by fetal Doppler ultrasound.</obo:IAO_0000115>
+        <dce:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dce:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-09T08:53:07Z</dce:date>
+        <rdfs:comment>Elevated PI may indicate increased resistance in placental circulation with the risk of reduced oxygen and nutrient delivery to the fetus.</rdfs:comment>
+        <rdfs:label>umbilical artery doppler sonography assessment</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MAXO_0020041"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Measurement of characterisitc of the umbilical artery flow such as end-diastolic umbilical artery flow and umbilical artery pulsatility index (PI) by fetal Doppler ultrasound.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:30353583</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/MAXO_0025001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0025001">
@@ -57612,12 +58153,11 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0035009 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0035009">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009053"/>
-        <obo:IAO_0000115>A direct appraisal of a patient&apos;s condition by a dentist that is based on an oral exam, medical history, and the patient&apos;s account of symptoms.</obo:IAO_0000115>
+        <obo:IAO_0100001>MAXO:0035065</obo:IAO_0100001>
         <dce:date>2023-04-11T12:00:00Z</dce:date>
         <dcterms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <dcterms:creator rdf:resource="https://orcid.org/0000-0001-7941-2961"/>
-        <rdfs:label>examination by dentist</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -57625,12 +58165,11 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0035010 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0035010">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0009053"/>
-        <obo:IAO_0000115>A direct appraisal by a professional who is an expert in premature babies or newborns with high-risk or complex health conditions. The physician performs a physical exam and takes medical history.</obo:IAO_0000115>
+        <obo:IAO_0100001>MAXO:0035079</obo:IAO_0100001>
         <dce:date>2023-04-11T12:00:00Z</dce:date>
         <dcterms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <dcterms:creator rdf:resource="https://orcid.org/0000-0001-7941-2961"/>
-        <rdfs:label>examination by neonatologist</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -58052,8 +58591,8 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000131"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001409"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001443"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001396"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001467"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -58180,7 +58719,9 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001186"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000131"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001396"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001467"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -58746,6 +59287,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <dce:date>2023-04-11T12:00:00Z</dce:date>
         <dcterms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <dcterms:creator rdf:resource="https://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasAlternativeId>MAXO:0035009</oboInOwl:hasAlternativeId>
         <rdfs:label>dentist evaluation</rdfs:label>
     </owl:Class>
     
@@ -58755,6 +59297,8 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0035066">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000939"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001419"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0020032"/>
         <obo:IAO_0000115>Measurement of somatosensory evoked potentials (SEPs), which reflect the electrical activity of the brain that results from the stimulation of touch. SEP monitoring may be employed intraoperatively to identify, and ideally, avoid impending permanent damage to neurologic structures. PMID: 31335078</obo:IAO_0000115>
         <dce:date>2023-04-11T12:00:00Z</dce:date>
         <dcterms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
@@ -59039,6 +59583,8 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <dce:date>2023-04-11T12:00:00Z</dce:date>
         <dcterms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <dcterms:creator rdf:resource="https://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasAlternativeId>MAXO:0035010</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasExactSynonym>examination by neonatologist</oboInOwl:hasExactSynonym>
         <rdfs:label>neonatologist evaluation</rdfs:label>
     </owl:Class>
     
@@ -59124,6 +59670,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
         <dce:date>2023-04-11T12:00:00Z</dce:date>
         <dcterms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <dcterms:creator rdf:resource="https://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>CT urography</oboInOwl:hasExactSynonym>
         <rdfs:label>CT urogram</rdfs:label>
     </owl:Class>
     
@@ -59329,8 +59876,8 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000131"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000499"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001443"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001408"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001467"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
@@ -59356,10 +59903,12 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0035090">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000595"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0020005"/>
         <obo:IAO_0000115>An imaging procedure in which a radioactive tracer is injected intravenously. The tracer is taken up by bile producing cells and subsequently travels with the bile into the gallbladder and through the bile ducts to the small intestine. THe hepatobiliary iminodiacetic acid (HIDA) scan can be used to visualize the liver, gallbladder and bile ducts.</obo:IAO_0000115>
         <dce:date>2023-04-11T12:00:00Z</dce:date>
         <dcterms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <dcterms:creator rdf:resource="https://orcid.org/0000-0001-7941-2961"/>
+        <oboInOwl:hasExactSynonym>hepatobiliary scintigraphy</oboInOwl:hasExactSynonym>
         <rdfs:label>hepatobiliary iminodiacetic acid scan</rdfs:label>
     </owl:Class>
     
@@ -59478,7 +60027,7 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0035097 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0035097">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001406"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0020032"/>
         <obo:IAO_0000115>An evaluation of the visual pathway of the nervous system by means of analysis of electrical waves measured by electrodes that are applied to the head.</obo:IAO_0000115>
         <dce:date>2023-04-11T12:00:00Z</dce:date>
         <dcterms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
@@ -59585,7 +60134,8 @@ High-carbohydrate (45% or greater)</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/MAXO_0035104 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0035104">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000527"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0001156"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MAXO_0020032"/>
         <obo:IAO_0000115>A neurophysiological examination that monitors the corticospinal tract beginning with a stimulus at the motor cortex, which travels along the corticospinal tract of the spinal cord to the nerve root, and then the peripheral nerve before terminating in a muscle belly. PMID:35593855</obo:IAO_0000115>
         <dcterms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <dcterms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
