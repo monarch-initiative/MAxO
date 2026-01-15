@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: maxo/releases/2025-04-24/maxo-base.owl
+data-version: maxo/releases/2026-01-15/maxo-base.owl
 idspace: dce http://purl.org/dc/elements/1.1/ 
 idspace: dcterms http://purl.org/dc/terms/ 
 idspace: obda https://w3id.org/obda/vocabulary# 
@@ -12,7 +12,7 @@ property_value: dce:title "Medical Action Ontology" xsd:string
 property_value: dce:type IAO:8000001
 property_value: dcterms:license https://creativecommons.org/licenses/by/4.0/
 property_value: IAO:0000700 MAXO:0000001
-property_value: owl:versionInfo "2025-04-24" xsd:string
+property_value: owl:versionInfo "2026-01-15" xsd:string
 
 [Term]
 id: MAXO:0000001
@@ -696,7 +696,6 @@ id: MAXO:0000072
 name: ultrasonography procedure
 def: "The use of ultrasound to produce images of structures in the human body." []
 comment: 2D ultrasounds produce a flat image of the organs. 3D images show three-dimensional external images of organs or fetus. 4D ultrasounds generates an image that is continuously updated, like amoving image.
-comment: A procedure that uses high-energy sound waves to look at tissues and organs inside the body. The sound waves make echoes that form pictures of the tissues and organs on a computer screen (sonogram). Ultrasound may be used to help diagnose diseases, such as cancer. It may also be used during pregnancy to check the fetus (unborn baby) and during medical procedures, such as biopsies. Also called ultrasonography.
 synonym: "diagnostic ultrasound" EXACT []
 synonym: "medical sonography" EXACT []
 synonym: "sonography" EXACT []
@@ -1234,7 +1233,7 @@ def: "A diagnostic or therapeutic procedure in which an endoscope is inserted in
 synonym: "endoscopic exam" EXACT []
 synonym: "endoscopy" EXACT [NCIT:C16546]
 xref: NCIT:C16546
-is_a: MAXO:0000002 ! therapeutic procedure
+is_a: MAXO:0000005 ! clinical imaging procedure
 property_value: dce:date "2019-01-20T01:01:22Z" xsd:dateTime
 property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
 
@@ -1244,8 +1243,8 @@ name: endoscopy by site
 def: "A diagnostic or therapeutic procedure in which an endoscope is inserted in a tubular portion of a specific body part or body location." []
 synonym: "endoscopy by body location" EXACT []
 synonym: "location specific endoscopy" EXACT []
-is_a: MAXO:0000034 ! therapeutic procedure by site
 is_a: MAXO:0000130 ! endoscopic procedure
+is_a: MAXO:0001212 ! clinical imaging procedure by system
 property_value: dce:date "2019-01-20T01:03:18Z" xsd:dateTime
 property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
 
@@ -2155,8 +2154,6 @@ id: MAXO:0000197
 name: cephalosporin agent therapy
 def: "Use of a class of beta-lactam antibiotics differing from the penicillins in having a 6-membered, rather than a 5-membered, side ring." []
 comment: Although cephalosporins are among the most commonly used antibiotics in the treatment of routine infections, and their use is increasing over time, they can cause a range of hypersensitivity reactions, from mild, delayed-onset cutaneous reactions to life-threatening anaphylaxis in patients with immunoglobulin E (IgE)-mediated allergy. {xref="CHEBI:23066"}
-comment: treatment with cephalosporin drug
-comment: treatment with cephalosporin medication
 synonym: "cephalosporin antibacterial agent therapy" EXACT []
 synonym: "cephalosporin beta-lactam therapy" EXACT []
 synonym: "cephalosporin drug therapy" EXACT []
@@ -3965,7 +3962,6 @@ def: "Removal and examination of tissue, cells, or fluids from anus for the purp
 synonym: "anus biopsy" EXACT []
 xref: NCIT:C51586
 is_a: MAXO:0000990 ! clinical biopsy by site
-is_a: MAXO:0001396 ! diagnostic procedure of digestive system
 property_value: dce:date "2019-05-19T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
@@ -3983,6 +3979,7 @@ property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:strin
 id: MAXO:0000334
 name: uterine biopsy
 def: "Removal and examination of tissue, cells, or fluids from the uterus for the purpose of detecting or characterizing disease." []
+synonym: "biopsy of uterus" EXACT []
 synonym: "body of uterus biopsy" EXACT []
 is_a: MAXO:0000990 ! clinical biopsy by site
 is_a: MAXO:0001407 ! diagnostic procedure of reproductive system
@@ -4192,7 +4189,9 @@ id: MAXO:0000355
 name: biopsy of duodenum
 def: "Removal and examination of tissue, cells, or fluids from duodenum for the purpose of detecting or characterizing disease." []
 synonym: "duodenum biopsy" EXACT []
-is_a: MAXO:0000403 ! biopsy of small intestine
+is_a: MAXO:0000990 ! clinical biopsy by site
+is_a: MAXO:0001396 ! diagnostic procedure of digestive system
+is_a: MAXO:0001467 ! diagnostic procedure of organ
 property_value: dce:date "2019-05-19T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
@@ -4260,7 +4259,8 @@ id: MAXO:0000362
 name: biopsy of frontal lobe
 def: "Removal and examination of tissue, cells, or fluids from frontal lobe for the purpose of detecting or characterizing disease." []
 synonym: "frontal lobe biopsy" EXACT []
-is_a: MAXO:0000338 ! biopsy of brain
+is_a: MAXO:0000990 ! clinical biopsy by site
+is_a: MAXO:0001467 ! diagnostic procedure of organ
 property_value: dce:date "2019-05-19T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
@@ -4391,6 +4391,7 @@ id: MAXO:0000375
 name: biopsy of lip
 def: "Removal and examination of tissue, cells, or fluids from lip for the purpose of detecting or characterizing disease." []
 synonym: "lip biopsy" EXACT []
+is_a: MAXO:0000326 ! biopsy of head
 is_a: MAXO:0000385 ! biopsy of mouth
 property_value: dce:date "2019-05-19T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
@@ -4444,7 +4445,9 @@ id: MAXO:0000380
 name: biopsy of lung
 def: "Removal and examination of tissue, cells, or fluids from lung for the purpose of detecting or characterizing disease." []
 synonym: "lung biopsy" EXACT []
-is_a: MAXO:0000377 ! biopsy of lower respiratory tract
+is_a: MAXO:0000990 ! clinical biopsy by site
+is_a: MAXO:0001408 ! diagnostic procedure of respiratory system
+is_a: MAXO:0001467 ! diagnostic procedure of organ
 property_value: dce:date "2019-05-19T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
@@ -4621,7 +4624,9 @@ id: MAXO:0000398
 name: biopsy of rectum
 def: "Removal and examination of tissue, cells, or fluids from rectum for the purpose of detecting or characterizing disease." []
 synonym: "rectum biopsy" EXACT []
-is_a: MAXO:0000372 ! biopsy of large intestine
+is_a: MAXO:0000990 ! clinical biopsy by site
+is_a: MAXO:0001396 ! diagnostic procedure of digestive system
+is_a: MAXO:0001467 ! diagnostic procedure of organ
 property_value: dce:date "2019-05-19T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
@@ -5511,8 +5516,10 @@ property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000478
 name: orthopedic surgeon evaluation
+alt_id: MAXO:0009062
 def: "Assessment by a surgeon who focuses on the preservation, investigation and restoration of the form and function of the extremities, spine and associated structures by medical, surgical and physical means. This specialist is involved with the care of patients whose musculoskeletal problems include congenital deformities, trauma, infections, tumors, metabolic disturbances of the musculoskeletal system, deformities, injuries and degenerative diseases of the spine, hands, feet, knee, hip, shoulder and elbow in children and adults. An orthopaedic surgeon is also concerned with primary and secondary muscular problems and the effects of central or peripheral nervous system lesions of the musculoskeletal system." [abms.org]
 synonym: "consultation with orthopedic surgeon" EXACT []
+synonym: "examination by orthopedist" EXACT []
 synonym: "orthopaedic consult" EXACT []
 synonym: "orthopedic consult" EXACT []
 synonym: "orthopedic surgeon consultation" EXACT []
@@ -6273,7 +6280,6 @@ id: MAXO:0000553
 name: cytokine biomarker assessment
 def: "A chemokine that can be objectively measured and serves as an indicator for the inflammatory response." []
 comment: Cytokines are small, nonstructural proteins, including interleukins, chemokines, interferons, and tumor necrosis factors, which have a multitude of pleiotropic effects in various organs [1]. They are released in a number of paracrine, autocrine, or endocrine pathways and have been implicated in a variety of infections and immune system-affecting disorders by both proinflammatory and anti-inflammatory mechanisms. {xref="PMID:28487810"}
-comment: Macrophages and T lymphocytes (T-cells) are the primary producers of cytokines which may have predominantly pro-inflammatory (inflammation-promoting)(IL-1alpha, IL-1beta, IL-2, IL-6, Il-8, IL-12, TNF-alpha, IFN-gamma) or anti-inflammatory (inflammation-suppressive)(IL-4, IL-5, IL-10, TGF-beta) abilities. {xref="PMID:24962838"}
 synonym: "cytokine biomarker measurement" EXACT []
 is_a: MAXO:0000550 ! inflammatory biomarker assessment
 property_value: dce:date "2020-03-30T15:51:58Z" xsd:dateTime
@@ -6833,7 +6839,7 @@ def: "The determination of the amount of protein present in the sample." []
 synonym: "protein assessment" EXACT []
 synonym: "protein test" EXACT []
 xref: NCIT:C64430
-is_a: MAXO:0001236 ! chemical measurement
+is_a: MAXO:0000566 ! clinical chemistry assessment
 intersection_of: MAXO:0000566 ! clinical chemistry assessment
 intersection_of: RO:0002233 PR:000000001
 relationship: RO:0002233 PR:000000001
@@ -7490,7 +7496,6 @@ id: MAXO:0000653
 name: angiotensin receptor blocker therapy
 def: "Treatment with a class of agents that act by selectively inhibiting angiotensin II receptor activation in the renin-angiotensin-aldosterone system." []
 comment: A pharmaceutical agent that selectively inhibits angiotensin II receptor activation in the renin-angiotensin-aldosterone system reducing production and secretion of aldosterone, amongst other actions. The combined effects result in reduction of blood pressure. It is primarily used for the reduction of proteinuria and the treatment of hypertension in cases where the patient is intolerant of ACE inhibitor therapy. {xref="NCIT:C66930"}
-comment: Angiotensin II receptor antagonists bind to and block the activation of angiotensin II type 1 (AT1) receptors, thereby reducing production and secretion of aldosterone, amongst other actions. The combined effects result in reduction of blood pressure. Although this class of agents is also used in diabetic nephropathy (kidney damage due to diabetes) and congestive heart failure, it is primarily used for the treatment of hypertension in cases where the patient is intolerant of ACE inhibitor therapy. {xref="NCIT:C66930"}
 synonym: "ARB therapy" EXACT []
 synonym: "treatment with angiotensin II receptor antagonist" EXACT []
 synonym: "treatment with angiotensin II receptor blocker" EXACT []
@@ -7633,7 +7638,9 @@ property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000665
 name: medical specialist evaluation
-def: "A procedure where a medical specialtist healthcare provider, who was not previously involved in a patient's treatment, reviews a patient's medical history, examines the patient, and makes recommendations as to care and treatment." []
+alt_id: MAXO:0009053
+def: "A procedure where a physician reviews a patient's medical history, examines the patient, and makes recommendations as to care and treatment." []
+synonym: "medical specialist examination" EXACT []
 synonym: "specialty medical professional consultation" EXACT []
 synonym: "specialty medical professional evaluation" EXACT []
 is_a: MAXO:0000483 ! medical professional evaluation
@@ -7642,8 +7649,8 @@ property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0000666
-name: allergy and immunology specialist evaluation
-def: "An assessment by an allergist-immunologist who diagnoses and manages disorders involving immune system conditions such as asthma, anaphylaxis, rhinitis and eczema as well as adverse reactions to drugs, foods and insect stings. An allergist-immunologist also manages immune deficiency diseases and problems related to autoimmune disease, organ transplantation or malignancies of the immune system." [ABMS.org]
+name: allergologist evaluation
+def: "An assessment by an allergologist who diagnoses and manages disorders involving allergies, asthma, and related conditions." [ABMS.org]
 synonym: "allergist consultation" NARROW []
 synonym: "allergist doctor consultation" NARROW []
 synonym: "allergist doctor evaluation" NARROW []
@@ -7653,12 +7660,13 @@ synonym: "allergy and immunologist doctor consultation" EXACT []
 synonym: "allergy and immunologist doctor evaluation" EXACT []
 synonym: "allergy and immunologist evaluation" EXACT []
 synonym: "allergy and immunology specialist consultation" EXACT []
+synonym: "allergy specialist evaluation" EXACT []
 synonym: "consultation with allergist" NARROW []
 synonym: "consultation with allergy and immunologist" EXACT []
 synonym: "evaluation by an immunologist" NARROW []
 synonym: "immunologist evaluation" NARROW []
 synonym: "referral to allergist and immunologist" EXACT []
-is_a: MAXO:0000665 ! medical specialist evaluation
+is_a: MAXO:0000680 ! internal medicine specialist evaluation
 property_value: dce:date "2020-07-01T18:29:08Z" xsd:dateTime
 property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
 
@@ -7711,11 +7719,14 @@ property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000671
 name: dermatology specialist evaluation
+alt_id: MAXO:0009055
 def: "An assessment by a physician with training and expertise in the diagnosis and medical/surgical management of diseases of the skin, hair and nails, and mucous membranes." [abms.org]
 synonym: "consultation with a dermatologist" EXACT []
 synonym: "dermatologist consultation" EXACT []
 synonym: "dermatologist evaluation" EXACT []
+synonym: "dermatologist examination" EXACT []
 synonym: "dermatology specialist consultation" EXACT []
+synonym: "examination by dermatologist" EXACT []
 synonym: "referral to a dermatologist" EXACT []
 is_a: MAXO:0000665 ! medical specialist evaluation
 property_value: dce:date "2020-07-01T19:12:58Z" xsd:dateTime
@@ -7724,10 +7735,16 @@ property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000672
 name: emergency medicine specialist evaluation
+alt_id: MAXO:0009056
 def: "An assessment by a physician who specializes in immediate decision making and action necessary to prevent death or any further disability both in the pre-hospital setting by directing emergency medical technicians and in the emergency department. This specialist provides immediate recognition, evaluation, care, stabilization and disposition of a generally diversified population of adult and pediatric patients in response to acute illness and injury." [abms.org]
 synonym: "assessment by emergency medicine specialist" EXACT []
+synonym: "ED examination" EXACT []
+synonym: "emergency department physician examination" EXACT []
 synonym: "emergency medicine specialist assessment" EXACT []
 synonym: "emergency room doctor evaluation" EXACT []
+synonym: "emergency room physician examination" EXACT []
+synonym: "ER examination" EXACT []
+synonym: "examination by emergency medicine specialst" EXACT []
 is_a: MAXO:0000665 ! medical specialist evaluation
 property_value: dce:date "2020-07-01T19:23:12Z" xsd:dateTime
 property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
@@ -7735,8 +7752,10 @@ property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000673
 name: family medicine specialist evaluation
+alt_id: MAXO:0009057
 def: "An assessment by a physician who provides front-line health care that is accessible, high quality, comprehensive and continuous over time for people of all ages, life stages, backgrounds and conditions. The specialists care for individuals and for entire families, from birth through the end of life, including a broad range of preventive care; healthy lifestyle counseling; mental health care; care of acute illnesses; management of chronic diseases, including patients with multi-morbidity. When needed, they also provide referral and coordination of care with other specialists." [abms.org]
 synonym: "consultation with family medicine specialist" EXACT []
+synonym: "examination by family medicine specialist" EXACT []
 synonym: "family medicine specialist consultation" EXACT []
 is_a: MAXO:0000665 ! medical specialist evaluation
 property_value: dce:date "2020-07-01T19:39:31Z" xsd:dateTime
@@ -8090,15 +8109,20 @@ property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000702
 name: obstetrics and gynecology specialist evaluation
+alt_id: MAXO:0009059
 def: "An evaluation with a specialist who focuses on the health of women before, during and after childbearing years, diagnosing and treating conditions of the reproductive system and associated disorders." [abms.org]
 synonym: "consultation OB/GYN specialist" EXACT []
 synonym: "consultation obstetrician/gynecologist" EXACT []
 synonym: "consultation with obstetrics and gynecology specialist" EXACT []
+synonym: "examination by ob/gyn specialist" EXACT []
+synonym: "gynecologist examination" NARROW []
+synonym: "ob/gyn examination" EXACT []
 synonym: "OB/GYN specialist consultation" EXACT []
 synonym: "OB/GYN specialist evaluation" EXACT []
 synonym: "obstetrician/gynecologist consultation" EXACT []
 synonym: "obstetrician/gynecologist evaluation" EXACT []
 synonym: "obstetrics and gynecology specialist consultation" EXACT []
+synonym: "obstetrics examination" NARROW []
 synonym: "obstetrics/gynecology specialist consultation" EXACT []
 synonym: "obstetrics/gynecology specialist evaluation" EXACT []
 synonym: "referral to OB/GYN specialist" EXACT []
@@ -8110,9 +8134,12 @@ property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000703
 name: ophthalmologist evaluation
+alt_id: MAXO:0009060
 def: "An evaluation by a specialist focused on the medical and surgical care of the eyes. Ophthalmologists are the only physicians medically trained to manage the complete range of the eye and vision care. They can prescribe glasses and contact lenses, dispense medications, diagnose and treat eye conditions and diseases and perform surgeries." [abms.org]
 synonym: "consultation with ophthalmologist" EXACT []
+synonym: "examination by ophthalmologist" EXACT []
 synonym: "ophthalmologist consultation" EXACT []
+synonym: "ophthalmologist examination" EXACT []
 synonym: "ophthalmologist referral" EXACT []
 synonym: "ophthalmology specialist consultation" EXACT []
 synonym: "ophthalmology specialist evaluation" EXACT []
@@ -8158,12 +8185,14 @@ property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000706
 name: otolaryngologist evaluation
+alt_id: MAXO:0009061
 def: "An assessment by a specialist who provides medical and/or surgical therapy or prevention of diseases, allergies, neoplasms, deformities, disorders and/or injuries of the ears, nose, sinuses, throat, respiratory and upper alimentary systems, face, jaws and the other head and neck systems." [abms.org]
 comment: Head and neck oncology, facial plastic and reconstructive surgery and the treatment of disorders of hearing and voice are fundamental areas of expertise. {xref="abms.org"}
 synonym: "consultation by otolaryngology specialist" EXACT []
 synonym: "consultation with head and neck surgeon" EXACT []
 synonym: "consultation with otolaryngologist" EXACT []
 synonym: "evaluation by otolaryngologist" EXACT []
+synonym: "examination by otolaryngologist" EXACT []
 synonym: "head and neck surgeon consultation" EXACT []
 synonym: "head and neck surgeon evaluation" EXACT []
 synonym: "head and neck surgeon referral" EXACT []
@@ -8182,9 +8211,12 @@ property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000707
 name: pediatrician evaluation
+alt_id: MAXO:0009063
 def: "An assessment by a specialist concerned with the physical, emotional, and social health of children from birth to young adulthood." [abms.org]
 comment: Pediatric care encompasses a broad spectrum of health services ranging from preventive health care to the diagnosis and treatment of acute and chronic diseases. Pediatricians understand the many factors that affect the growth and development of children. They understand that children are not simply small adults. Children change rapidly, and they must be approached with an appreciation for their stage of physical and mental development. {xref="abms.org"}
 synonym: "evaluation by pediatrician" EXACT []
+synonym: "examination by pediatrician" EXACT []
+synonym: "pediatric examination" EXACT []
 synonym: "pediatrician consultation" EXACT []
 is_a: MAXO:0000665 ! medical specialist evaluation
 property_value: dce:date "2020-07-09T17:48:27Z" xsd:dateTime
@@ -8233,6 +8265,7 @@ property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000712
 name: physiatrist evaluation
+alt_id: MAXO:0009064
 def: "Assessment by a specialist who treats patients with disorders or disabilities in the muscles, bones, and nervous system, including neck or back pain, sports and work injuries, stroke, brain injury, spinal cord injury, spasticity, and any other disability or disorder that affects function." [abms.org]
 comment: Treatment modalities by a physiatrist may include medications, injections, therapeutic exercise, electrodiagnosis, and any equipment required for daily activities. {xref="abms.org"}
 synonym: "assessment by physiatrist" EXACT []
@@ -8240,6 +8273,8 @@ synonym: "assessment by physical medicine and rehabilitation specialist" EXACT [
 synonym: "consultation by physiatrist" EXACT []
 synonym: "consultation with physical medicine and rehabilitation specialist" EXACT []
 synonym: "evaluation by physical medicine and rehabilitation specialist" EXACT []
+synonym: "examination by physiatrist" EXACT []
+synonym: "examination by physical mediciane and rehabilitation specialist" EXACT []
 synonym: "physiatrist assessment" EXACT []
 synonym: "physiatrist consultation" EXACT []
 synonym: "physiatrist referral" EXACT []
@@ -8268,10 +8303,12 @@ property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000714
 name: psychiatrist evaluation
+alt_id: MAXO:0009066
 def: "Evaluation by a physician who specializes in the evaluation and treatment of mental, addictive and emotional disorders." [abms.org]
 synonym: "assessment by psychiatrist" EXACT []
 synonym: "consult with psychiatrist" EXACT []
 synonym: "evaluation by psychiatrist" EXACT []
+synonym: "psychiatric examination" EXACT []
 synonym: "psychiatrist assessment" EXACT []
 synonym: "psychiatrist consultation" EXACT []
 synonym: "psychiatrist referral" EXACT []
@@ -8304,6 +8341,7 @@ property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000716
 name: neurologist evaluation
+alt_id: MAXO:0009058
 def: "An evaluation a specialist who treats all types of disease or impaired function of the brain, spinal cord, peripheral nerves, muscles and autonomic nervous system, as well as the blood vessels that relate to these structures." [abms.org]
 synonym: "consultation with neurologist" EXACT []
 synonym: "neurologist assessment" EXACT []
@@ -8397,6 +8435,7 @@ property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0000722
 name: urologist evaluation
+alt_id: MAXO:0009067
 def: "An evaluation by a specialist that focuses on diagnosing and treating disorders of the urinary tracts of males and females, and on the reproductive system of males. This specialist manages non-surgical problems such as urinary tract infections and benign prostatic hyperplasia, as well as surgical problems such as the surgical management of cancers, the correction of congenital abnormalities, and correcting stress incontinence." [abms.org]
 synonym: "assessment by genitourinary surgeon" EXACT []
 synonym: "assessment by urologist" EXACT []
@@ -8404,6 +8443,7 @@ synonym: "consultation with genitourinary surgeon" EXACT []
 synonym: "consultation with urologist" EXACT []
 synonym: "evaluation by genitourinary surgeon" EXACT []
 synonym: "evaluation by urologist" EXACT []
+synonym: "examination by urologist" EXACT []
 synonym: "genitourinary surgeon consultation" EXACT []
 synonym: "genitourinary surgeon evaluation" EXACT []
 synonym: "referral to genitourinary surgeon" EXACT []
@@ -8667,6 +8707,7 @@ property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
 id: MAXO:0000745
 name: cytogenetic analysis
 def: "Techniques for analysis of chromosomal and subchromosomal properties and structures, such as those to diagnose, classify, screen for, or manage genetic diseases and abnormalities." [NCIT:C18280]
+synonym: "chromosome analysis" EXACT []
 synonym: "cytogenetic study" EXACT []
 synonym: "cytogenetic testing" EXACT []
 xref: NCIT:C18280
@@ -9218,7 +9259,6 @@ id: MAXO:0000801
 name: avoid toxoplasmosis exposure
 def: "A recommendation to avoid infection with toxoplasmosis especially when pregnant due to serious risk of passing the infection on to the baby." []
 comment: Cats play an important role in the spread of toxoplasmosis. They become infected by eating infected rodents, birds, or other small animals. The parasite is then passed in the cat’s feces. Kittens and cats can shed millions of parasites in their feces for as long as 3 weeks after infection. Mature cats are less likely to shed Toxoplasma if they have been previously infected. Cats and kittens prefer litter boxes, garden soils, and sandboxes for elimination, and you may be exposed unintentionally by touching your mouth after changing a litter box, or after gardening without gloves. Fruits and vegetables may have contact with contaminated soil or water also, and you can be infected by eating fruits and vegetables if they are not cooked, washed, or peeled. {xref="https://www.cdc.gov/parasites/toxoplasmosis/gen_info/pregnant.html"}
-comment: Risk is most profound by a pregnant mother passing toxoplasmosis to their infant.  Infected infants do not have symptoms at birth but can develop serious symptoms later in life, such as blindness or mental disability. {xref="https://www.cdc.gov/parasites/toxoplasmosis/gen_info/pregnant.html"}
 is_a: MAXO:0000043 ! communicable disease avoidance
 property_value: dce:date "2021-02-10T21:19:55Z" xsd:dateTime
 property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
@@ -9593,8 +9633,8 @@ synonym: "GPT test" EXACT []
 synonym: "serum glutamic-pyruvic transaminase test" EXACT []
 synonym: "SGPT test" EXACT []
 xref: NCIT:C64433
-is_a: MAXO:0000605 ! protein measurement
 is_a: MAXO:0000778 ! liver function testing
+is_a: MAXO:0020028 ! circulating enzyme activity testing
 intersection_of: MAXO:0000566 ! clinical chemistry assessment
 intersection_of: RO:0002233 PR:000050341
 relationship: RO:0002233 PR:000050341
@@ -9911,7 +9951,6 @@ def: "A systemic evaluation of the cervix during pregnancy to determine dilation
 synonym: "cervical exam while pregnant" EXACT []
 synonym: "obstetric examination of the cervix." EXACT []
 synonym: "pregnant cervical exam" EXACT []
-is_a: MAXO:0000793 ! pelvic examination
 is_a: MAXO:0001154 ! cervical examination
 property_value: dce:date "2021-06-07T18:34:00Z" xsd:dateTime
 property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
@@ -10159,6 +10198,8 @@ def: "A ureteroscope is inserted into the ureter and a wire basket inserted thro
 is_a: MAXO:0000012 ! surgery by body site
 is_a: MAXO:0000890 ! calculi removal
 is_a: MAXO:0001194 ! ureteroscopy
+is_a: MAXO:0001412 ! therapeutic procedure of excretory system
+is_a: MAXO:0001443 ! therapeutic procedure of organ
 property_value: dce:date "2021-08-09T18:26:36Z" xsd:dateTime
 property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
 
@@ -10454,7 +10495,7 @@ name: electroencephalography
 def: "The neurophysiologic exploration of the electrical activity of the brain by the application of electrodes to the scalp. The resulting traces are known as an electroencephalogram (EEG). This test is used to assess brain damage, epilepsy and other problems." [NCIT:C38054]
 synonym: "EEG" EXACT OMO:0003000 []
 xref: NCIT:C38054
-is_a: MAXO:0001406 ! diagnostic procedure of nervous system
+is_a: MAXO:0020031 ! neurophysiological assessment
 property_value: dce:date "2021-08-12T13:47:43Z" xsd:string
 property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
 
@@ -11535,7 +11576,7 @@ synonym: "pancreas-sparing duodenectomy" EXACT []
 synonym: "small bowel resection" EXACT []
 is_a: MAXO:0000447 ! surgical excision
 is_a: MAXO:0001443 ! therapeutic procedure of organ
-is_a: MAXO:0001504 ! surgical procedure on alimentary part of gastrointestinal system
+is_a: MAXO:0001503 ! surgical procedure on digestive system
 property_value: dce:date "2020-06-23T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
@@ -11699,7 +11740,6 @@ def: "The surgical removal (cutting out) of part or all of kidney." []
 synonym: "kidney surgical removal" EXACT []
 is_a: MAXO:0000012 ! surgery by body site
 is_a: MAXO:0000447 ! surgical excision
-is_a: MAXO:0001412 ! therapeutic procedure of excretory system
 is_a: MAXO:0001443 ! therapeutic procedure of organ
 property_value: dce:date "2020-06-23T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
@@ -12299,7 +12339,6 @@ name: biopsy of kidney
 def: "Removal and examination of tissue, cells, or fluids from kidney for the purpose of detecting or characterizing disease." []
 synonym: "kidney biopsy" EXACT []
 is_a: MAXO:0000327 ! biopsy of abdomen
-is_a: MAXO:0001399 ! diagnostic procedure of excretory system
 is_a: MAXO:0001467 ! diagnostic procedure of organ
 property_value: dce:date "2020-06-23T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
@@ -12316,7 +12355,6 @@ synonym: "kidney computerized axial tomography" EXACT []
 synonym: "kidney CT examination" EXACT []
 synonym: "renal CAT scan" EXACT []
 synonym: "renal CT" EXACT []
-is_a: MAXO:0001399 ! diagnostic procedure of excretory system
 is_a: MAXO:0001467 ! diagnostic procedure of organ
 is_a: MAXO:0010311 ! abdominal CT
 property_value: dce:date "2020-06-09T20:39:14Z" xsd:string
@@ -13081,7 +13119,7 @@ def: "Inspection of skeletal joint using an endoscope." []
 synonym: "endoscopy of skeletal joint" EXACT []
 synonym: "skeletal joint endoscope" EXACT []
 is_a: MAXO:0000131 ! endoscopy by site
-is_a: MAXO:0001418 ! therapeutic procedure of musculoskeletal system
+is_a: MAXO:0001405 ! diagnostic procedure of musculoskeletal system
 property_value: dce:date "2022-03-16T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
@@ -13093,8 +13131,8 @@ synonym: "airway endoscopy" EXACT []
 synonym: "endoscopy of lung" EXACT []
 synonym: "lung endoscope" EXACT []
 is_a: MAXO:0000131 ! endoscopy by site
-is_a: MAXO:0000499 ! therapeutic procedure of respiratory system
-is_a: MAXO:0001443 ! therapeutic procedure of organ
+is_a: MAXO:0001408 ! diagnostic procedure of respiratory system
+is_a: MAXO:0001467 ! diagnostic procedure of organ
 property_value: dce:date "2022-03-16T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
@@ -13115,8 +13153,8 @@ def: "Inspection of urinary bladder using an endoscope." []
 synonym: "endoscopy of urinary bladder" EXACT []
 synonym: "urinary bladder endoscope" EXACT []
 is_a: MAXO:0000131 ! endoscopy by site
-is_a: MAXO:0001412 ! therapeutic procedure of excretory system
-is_a: MAXO:0001443 ! therapeutic procedure of organ
+is_a: MAXO:0001399 ! diagnostic procedure of excretory system
+is_a: MAXO:0001467 ! diagnostic procedure of organ
 property_value: dce:date "2022-03-16T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
@@ -13127,8 +13165,8 @@ def: "Inspection of small intestine using an endoscope." []
 synonym: "endoscopy of small intestine" EXACT []
 synonym: "small intestine endoscope" EXACT []
 is_a: MAXO:0000131 ! endoscopy by site
-is_a: MAXO:0001409 ! therapeutic procedure of digestive system
-is_a: MAXO:0001443 ! therapeutic procedure of organ
+is_a: MAXO:0001396 ! diagnostic procedure of digestive system
+is_a: MAXO:0001467 ! diagnostic procedure of organ
 property_value: dce:date "2022-03-16T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
@@ -13139,8 +13177,8 @@ def: "Inspection of uterus using an endoscope." []
 synonym: "endoscopy of uterus" EXACT []
 synonym: "uterus endoscope" EXACT []
 is_a: MAXO:0000131 ! endoscopy by site
-is_a: MAXO:0001420 ! therapeutic procedure of reproductive system
-is_a: MAXO:0001443 ! therapeutic procedure of organ
+is_a: MAXO:0001407 ! diagnostic procedure of reproductive system
+is_a: MAXO:0001467 ! diagnostic procedure of organ
 property_value: dce:date "2022-03-16T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
@@ -13161,8 +13199,8 @@ def: "Inspection of larynx using an endoscope." []
 synonym: "endoscopy of larynx" EXACT []
 synonym: "larynx endoscope" EXACT []
 is_a: MAXO:0000131 ! endoscopy by site
-is_a: MAXO:0000499 ! therapeutic procedure of respiratory system
-is_a: MAXO:0001443 ! therapeutic procedure of organ
+is_a: MAXO:0001408 ! diagnostic procedure of respiratory system
+is_a: MAXO:0001467 ! diagnostic procedure of organ
 property_value: dce:date "2022-03-16T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
@@ -13209,8 +13247,8 @@ synonym: "upper endoscopy" EXACT []
 synonym: "upper gastrointestinal endoscopy" EXACT []
 synonym: "upper GI endoscopy" EXACT []
 is_a: MAXO:0000131 ! endoscopy by site
-is_a: MAXO:0001409 ! therapeutic procedure of digestive system
-is_a: MAXO:0001443 ! therapeutic procedure of organ
+is_a: MAXO:0001396 ! diagnostic procedure of digestive system
+is_a: MAXO:0001467 ! diagnostic procedure of organ
 property_value: dce:date "2022-03-16T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
@@ -13221,8 +13259,8 @@ def: "Inspection of ureter using an endoscope." []
 synonym: "endoscopy of ureter" EXACT []
 synonym: "ureter endoscope" EXACT []
 is_a: MAXO:0000131 ! endoscopy by site
-is_a: MAXO:0001412 ! therapeutic procedure of excretory system
-is_a: MAXO:0001443 ! therapeutic procedure of organ
+is_a: MAXO:0001399 ! diagnostic procedure of excretory system
+is_a: MAXO:0001467 ! diagnostic procedure of organ
 property_value: dce:date "2022-03-16T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
@@ -13233,8 +13271,8 @@ def: "Inspection of lower digestive tract using an endoscope." []
 synonym: "endoscopy of lower digestive tract" EXACT []
 synonym: "lower digestive tract endoscope" EXACT []
 is_a: MAXO:0000131 ! endoscopy by site
-is_a: MAXO:0001409 ! therapeutic procedure of digestive system
-is_a: MAXO:0001443 ! therapeutic procedure of organ
+is_a: MAXO:0001396 ! diagnostic procedure of digestive system
+is_a: MAXO:0001467 ! diagnostic procedure of organ
 property_value: dce:date "2022-03-16T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
@@ -13244,7 +13282,9 @@ name: rectoscopy
 def: "Inspection of rectum using an endoscope." []
 synonym: "endoscopy of rectum" EXACT []
 synonym: "rectum endoscope" EXACT []
-is_a: MAXO:0001195 ! proctoscopy
+is_a: MAXO:0000131 ! endoscopy by site
+is_a: MAXO:0001396 ! diagnostic procedure of digestive system
+is_a: MAXO:0001467 ! diagnostic procedure of organ
 property_value: dce:date "2022-03-16T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
@@ -13255,7 +13295,6 @@ def: "Inspection of anus using an endoscope." []
 synonym: "anus endoscope" EXACT []
 synonym: "endoscopy of anus" EXACT []
 is_a: MAXO:0000131 ! endoscopy by site
-is_a: MAXO:0001409 ! therapeutic procedure of digestive system
 property_value: dce:date "2022-03-16T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
@@ -13266,8 +13305,8 @@ def: "Inspection of ear using an endoscope." []
 synonym: "ear endoscope" EXACT []
 synonym: "endoscopy of ear" EXACT []
 is_a: MAXO:0000131 ! endoscopy by site
-is_a: MAXO:0001422 ! therapeutic procedure of vestibulo-auditory system
-is_a: MAXO:0001443 ! therapeutic procedure of organ
+is_a: MAXO:0001445 ! diagnostic procedure of auditory system
+is_a: MAXO:0001467 ! diagnostic procedure of organ
 property_value: dce:date "2022-03-16T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
@@ -13278,8 +13317,8 @@ def: "Inspection of fallopian tube using an endoscope." []
 synonym: "endoscopy of fallopian tube" EXACT []
 synonym: "fallopian tube endoscope" EXACT []
 is_a: MAXO:0000131 ! endoscopy by site
-is_a: MAXO:0001420 ! therapeutic procedure of reproductive system
-is_a: MAXO:0001443 ! therapeutic procedure of organ
+is_a: MAXO:0001407 ! diagnostic procedure of reproductive system
+is_a: MAXO:0001467 ! diagnostic procedure of organ
 property_value: dce:date "2022-03-16T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
@@ -13301,8 +13340,8 @@ def: "Inspection of brain using an endoscope." []
 synonym: "brain endoscope" EXACT []
 synonym: "endoscopy of brain" EXACT []
 is_a: MAXO:0000131 ! endoscopy by site
-is_a: MAXO:0001419 ! therapeutic procedure of nervous system
-is_a: MAXO:0001443 ! therapeutic procedure of organ
+is_a: MAXO:0001406 ! diagnostic procedure of nervous system
+is_a: MAXO:0001467 ! diagnostic procedure of organ
 property_value: dce:date "2022-03-16T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
@@ -13313,8 +13352,8 @@ def: "Inspection of tracheobronchial tree using an endoscope." []
 synonym: "endoscopy of tracheobronchial tree" EXACT []
 synonym: "tracheobronchial tree endoscope" EXACT []
 is_a: MAXO:0000131 ! endoscopy by site
-is_a: MAXO:0000499 ! therapeutic procedure of respiratory system
-is_a: MAXO:0001443 ! therapeutic procedure of organ
+is_a: MAXO:0001408 ! diagnostic procedure of respiratory system
+is_a: MAXO:0001467 ! diagnostic procedure of organ
 property_value: dce:date "2022-03-16T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
@@ -14510,7 +14549,6 @@ synonym: "kidney magnetic resonance imaging" EXACT []
 synonym: "kidney MRI" EXACT []
 synonym: "Nuclear magnetic resonance imaging of the kidney" EXACT []
 is_a: MAXO:0000426 ! MRI of the abdomen
-is_a: MAXO:0001399 ! diagnostic procedure of excretory system
 is_a: MAXO:0001467 ! diagnostic procedure of organ
 property_value: dce:date "2023-02-10T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
@@ -14951,7 +14989,9 @@ id: MAXO:0001347
 name: duodenostomy
 def: "The surgical formation of an external opening from the duodenum through the abdominal wall." []
 xref: NCIT:C122593
-is_a: MAXO:0001344 ! enterostomy
+is_a: MAXO:0000965 ! ostomy surgical procedure
+is_a: MAXO:0001443 ! therapeutic procedure of organ
+is_a: MAXO:0001503 ! surgical procedure on digestive system
 property_value: dce:date "2023-02-27T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
@@ -14980,7 +15020,6 @@ name: nephrostomy
 def: "The surgical formation of an external opening from the kidney through the abdominal wall." []
 is_a: MAXO:0000012 ! surgery by body site
 is_a: MAXO:0000965 ! ostomy surgical procedure
-is_a: MAXO:0001412 ! therapeutic procedure of excretory system
 is_a: MAXO:0001443 ! therapeutic procedure of organ
 property_value: dce:date "2023-02-27T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
@@ -16484,7 +16523,6 @@ name: surgical procedure on renal collecting system
 def: "Any surgical procedure conducted on the renal collecting system." []
 synonym: "renal collecting system surgical procedure" EXACT []
 is_a: MAXO:0000012 ! surgery by body site
-is_a: MAXO:0001412 ! therapeutic procedure of excretory system
 is_a: MAXO:0001443 ! therapeutic procedure of organ
 property_value: dce:date "2023-10-19T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
@@ -17644,7 +17682,6 @@ id: MAXO:0009004
 name: clinical whole-exome sequencing
 def: "A procedure that can determine the DNA sequence for all of the exons (protein coding region) in an individual." []
 comment: Clinical Exome Sequencing is a test for identifying disease-causing DNA variants within the 1% of the genome which codes for proteins (exons) or flanks the regions which code for proteins (splice junctions). {xref="https://www.uclahealth.org/"}
-comment: Sequence analysis of the exons of protein-coding genes in the genome typically performed by target enrichment or capture of exons followed by next-generation sequencing. {xref="NCBIBook:NBK5191"}
 synonym: "exome sequencing" EXACT []
 synonym: "WES" EXACT OMO:0003000 []
 synonym: "whole exome sequencing" EXACT []
@@ -18119,112 +18156,102 @@ property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0009053
-name: medical specialist examination
-def: "A direct appraisal of a patient's condition by a clinical specialist that is based on a physical exam, medical history, and the patient's account of symptoms." []
-is_a: MAXO:0000526 ! examination by clinical professional
+name: obsolete medical specialist examination
 property_value: dce:date "2022-05-02T15:54:47Z" xsd:dateTime
 property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
+is_obsolete: true
+replaced_by: MAXO:0000665
 
 [Term]
 id: MAXO:0009054
-name: examination by immunologist
+name: immunologist evaluation
 def: "A direct assessment of a patient's condition by an immunologist that is based on a physical exam, medical history, and the patient's account of symptoms." []
 xref: NCIT:C74803
-is_a: MAXO:0009053 ! medical specialist examination
+is_a: MAXO:0000680 ! internal medicine specialist evaluation
 property_value: dce:date "2022-05-02T15:56:27Z" xsd:dateTime
 property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0009055
-name: examination by dermatologist
-def: "A direct assessment of a patient's condition by a dermatologist that is based on a physical exam, medical history, and the patient's account of symptoms." []
-synonym: "dermatologist examination" EXACT []
-is_a: MAXO:0009053 ! medical specialist examination
+name: obsolete examination by dermatologist
 property_value: dce:date "2022-05-02T15:57:40Z" xsd:dateTime
 property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
+is_obsolete: true
+replaced_by: MAXO:0000671
 
 [Term]
 id: MAXO:0009056
-name: examination by emergency medicine specialst
-def: "A direct assessment of a patient's condition by an emergency medicine specialist that is based on a physical exam, medical history, and the patient's account of symptoms." []
-synonym: "ED examination" EXACT []
-synonym: "emergency department physician examination" NARROW []
-synonym: "emergency medicine specialist examination" EXACT []
-synonym: "emergency room physician examination" NARROW []
-synonym: "ER examination" EXACT []
-is_a: MAXO:0009053 ! medical specialist examination
+name: obsolete examination by emergency medicine specialst
 property_value: dce:date "2022-05-02T16:09:47Z" xsd:dateTime
 property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
+is_obsolete: true
+replaced_by: MAXO:0000672
 
 [Term]
 id: MAXO:0009057
-name: examination by family medicine specialist
-def: "A direct assessment of a patient's condition by a family medicine specialist that is based on a physical exam, medical history, and the patient's account of symptoms." []
-is_a: MAXO:0009053 ! medical specialist examination
+name: obsolete examination by family medicine specialist
 property_value: dce:date "2022-05-02T16:19:37Z" xsd:dateTime
 property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
+is_obsolete: true
+replaced_by: MAXO:0000673
 
 [Term]
 id: MAXO:0009058
-name: examination by a neurologist
+name: obsolete examination by a neurologist
 def: "A direct assessment of a patient's condition by a neurologist that is based on a physical exam, medical history, and the patient's account of symptoms.neurologist." []
-is_a: MAXO:0009053 ! medical specialist examination
+synonym: "examination by a neurologist" EXACT []
 property_value: dce:date "2022-05-02T16:30:32Z" xsd:dateTime
 property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
+is_obsolete: true
+replaced_by: MAXO:0000716
 
 [Term]
 id: MAXO:0009059
-name: examination by ob/gyn specialist
-def: "A direct assessment of a patient's condition by  an obstetrics and gynecologist specialist that is based on a physical exam, medical history, and the patient's account of symptoms." []
-synonym: "gynecologist examination" NARROW []
-synonym: "ob/gyn examination" EXACT []
-synonym: "obstetrics examination" NARROW []
-is_a: MAXO:0009053 ! medical specialist examination
+name: obsolete examination by ob/gyn specialist
 property_value: dce:date "2022-05-02T17:30:59Z" xsd:dateTime
 property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
+is_obsolete: true
+replaced_by: MAXO:0000702
 
 [Term]
 id: MAXO:0009060
-name: examination by ophthalmologist
-def: "A direct appraisal of a patient's condition by a ophthalmologist that is based on a physical exam, medical history, and the patient's account of symptoms." []
-synonym: "ophthalmologist examination" EXACT []
-is_a: MAXO:0009053 ! medical specialist examination
+name: obsolete examination by ophthalmologist
 property_value: dce:date "2022-05-02T17:43:19Z" xsd:dateTime
 property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
+is_obsolete: true
+replaced_by: MAXO:0000703
 
 [Term]
 id: MAXO:0009061
-name: examination by otolaryngologist
-def: "A direct appraisal of a patient's condition by an otolaryngologist that is based on a physical exam, medical history, and the patient's account of symptoms." []
-is_a: MAXO:0009053 ! medical specialist examination
+name: obsolete examination by otolaryngologist
 property_value: dce:date "2022-05-03T13:58:22Z" xsd:dateTime
 property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
+is_obsolete: true
+replaced_by: MAXO:0000706
 
 [Term]
 id: MAXO:0009062
-name: examination by orthopedist
-def: "A direct appraisal of a patient's condition by an orthopedic specialist that is based on a physical exam, medical history, and the patient's account of symptoms." []
-is_a: MAXO:0009053 ! medical specialist examination
+name: obsolete examination by orthopedist
 property_value: dce:date "2022-05-03T15:44:47Z" xsd:dateTime
 property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
+is_obsolete: true
+replaced_by: MAXO:0000478
 
 [Term]
 id: MAXO:0009063
-name: examination by pediatrician
-def: "A direct appraisal of a patient's condition by a pediatric specialist that is based on a physical exam, medical history, and the patient's account of symptoms." []
-synonym: "pediatric examination" EXACT []
-is_a: MAXO:0009053 ! medical specialist examination
+name: obsolete examination by pediatrician
 property_value: dce:date "2022-05-03T15:45:49Z" xsd:dateTime
 property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
+is_obsolete: true
+replaced_by: MAXO:0000707
 
 [Term]
 id: MAXO:0009064
-name: examination by physiatrist
-def: "A direct appraisal of a patient's condition by a physical medicine and rehabilition specialist that is based on a physical exam, medical history, and the patient's account of symptoms." []
-synonym: "examination by physical mediciane and rehabilitation specialist" EXACT []
-is_a: MAXO:0009053 ! medical specialist examination
+name: obsolete examination by physiatrist
 property_value: dce:date "2022-05-03T15:50:43Z" xsd:dateTime
 property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
+is_obsolete: true
+replaced_by: MAXO:0000712
 
 [Term]
 id: MAXO:0009065
@@ -18238,20 +18265,19 @@ property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
 
 [Term]
 id: MAXO:0009066
-name: examination by psychiatrist
-def: "A direct appraisal of a patient's condition by a psychiatric specialist that is based on a physical exam, medical history, and the patient's account of symptoms." []
-synonym: "psychiatric examination" EXACT []
-is_a: MAXO:0009053 ! medical specialist examination
+name: obsolete examination by psychiatrist
 property_value: dce:date "2022-05-03T15:57:23Z" xsd:dateTime
 property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
+is_obsolete: true
+replaced_by: MAXO:0000714
 
 [Term]
 id: MAXO:0009067
-name: examination by urologist
-def: "A direct appraisal of a patient's condition by a urology specialist that is based on a physical exam, medical history, and the patient's account of symptoms." []
-is_a: MAXO:0009053 ! medical specialist examination
+name: obsolete examination by urologist
 property_value: dce:date "2022-05-03T15:57:55Z" xsd:dateTime
 property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
+is_obsolete: true
+replaced_by: MAXO:0000722
 
 [Term]
 id: MAXO:0009068
@@ -18340,8 +18366,8 @@ name: cheiloplasty
 def: "A medically necessary surgery performed to restore function and conventional appearance of lip. The surgery can correct deformities created by birth defects, trauma or medical conditions and is performed by a plastic surgeon." []
 synonym: "lip surgical plastic reconstruction" EXACT []
 is_a: MAXO:0001286 ! surgical repair of digestive tract
+is_a: MAXO:0001292 ! surgical plastic reconstruction of face
 is_a: MAXO:0001443 ! therapeutic procedure of organ
-is_a: MAXO:0009076 ! reconstructive plastic surgery
 property_value: dce:date "2022-06-15T17:44:45Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
@@ -19103,7 +19129,6 @@ synonym: "whole lung transplantation surgical procedure" EXACT []
 xref: NCIT:C15274
 is_a: MAXO:0001312 ! whole organ transplantation
 is_a: MAXO:0001514 ! surgical procedure on respiratory system
-is_a: MAXO:0010039 ! organ transplantation
 intersection_of: MAXO:0000068 ! transplantation procedure
 intersection_of: RO:0002233 UBERON:0002048
 relationship: RO:0002233 UBERON:0002048
@@ -19173,7 +19198,6 @@ def: "The surgical transfer of a whole kidney from a donor to a patient." []
 synonym: "transplantation of whole kidney" EXACT []
 xref: NCIT:C15265
 is_a: MAXO:0001312 ! whole organ transplantation
-is_a: MAXO:0001412 ! therapeutic procedure of excretory system
 intersection_of: MAXO:0000068 ! transplantation procedure
 intersection_of: RO:0002233 UBERON:0002113
 relationship: RO:0002233 UBERON:0002113
@@ -19723,13 +19747,13 @@ property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:strin
 
 [Term]
 id: MAXO:0010088
-name: dietary organ meat intake avoidance
-def: "A medical requirement or recommendation of avoiding the consumption of organ meat." []
-synonym: "avoid organ meat intake" EXACT []
-synonym: "avoiding dietary organ meat intake" EXACT []
-synonym: "organ meat consumption avoidance" EXACT []
-synonym: "organ meat restricted diet intake" EXACT []
-synonym: "organ meat restriction" EXACT []
+name: dietary animal organ by physiological system intake avoidance
+def: "A medical requirement or recommendation of avoiding the consumption of animal organ by physiological system." []
+synonym: "animal organ by physiological system consumption avoidance" EXACT []
+synonym: "animal organ by physiological system restricted diet intake" EXACT []
+synonym: "animal organ by physiological system restriction" EXACT []
+synonym: "avoid animal organ by physiological system intake" EXACT []
+synonym: "avoiding dietary animal organ by physiological system intake" EXACT []
 is_a: MAXO:0000056 ! nutrition intake avoidance
 relationship: MAXO:0001027 FOODON:03420218 ! avoided food
 property_value: dce:date "2020-05-12T11:00:00Z" xsd:string
@@ -20579,7 +20603,6 @@ synonym: "kidney ultrasound imaging procedure" EXACT []
 synonym: "kidney ultrasound procedure" EXACT []
 synonym: "sonography of kidney" EXACT []
 synonym: "ultrasonography of kidney" EXACT []
-is_a: MAXO:0001399 ! diagnostic procedure of excretory system
 is_a: MAXO:0001467 ! diagnostic procedure of organ
 is_a: MAXO:0010200 ! abdominal ultrasonography
 property_value: dce:date "2020-01-24T20:39:14Z" xsd:string
@@ -21191,6 +21214,342 @@ is_a: MAXO:0001625 ! coagulation factor therapy
 created_by: https://orcid.org/0000-0002-0736-9199
 
 [Term]
+id: MAXO:0020003
+name: cerebrospinal fluid protein measurement
+def: "A quantitative measurement of protein present in a cerebrospinal fluid sample." []
+synonym: "CSF protein measurement" EXACT []
+is_a: MAXO:0035007 ! cerebrospinal fluid analysis
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-01T10:07:36Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020004
+name: Dual-energy X-ray absorptiometry procedure
+def: "Dual-Energy X-Ray Absorptiometry (DEXA) is performed using a C-arm with the x-ray source below the supine patient emitting photons at 2 distinct energy levels specific for soft tissue and cortical bone. A collimator is situated between the patient and the x-ray source to minimize scatter. The attenuations from these low- and high-energy photon emissions are detected above the patient and are combined to create a planar image to assess bone mass per unit of area (g/square cm) to determine bone mineral density (BMD). DEXA may be indicated as a tool to measure regional and whole-body fat and lean mass, such as in patients with malabsorption, cancer, or eating disorders." []
+synonym: "DEXA" EXACT abbreviation []
+is_a: MAXO:0000595 ! radiograph imaging procedure
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-01T10:12:02Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020005
+name: scintigraphy imaging procedure
+def: "A diagnostic test in which radiopharmaceuticals are taken internally and the emitted gamma radiation is captured by gamma cameras." []
+synonym: "gamma scan" EXACT []
+is_a: MAXO:0001321 ! nuclear medicine imaging procedure
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-01T10:19:22Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020006
+name: Transepithelial nasal potential difference measurement
+def: "In vitro, freshly excised airway epithelial tissues can be studied in Ussing chambers, and when the transepithelial electric potential difference (PD) is clamped to zero (short-circuited), basal patterns of ion transport can be directly determined by isotopic measurements of the transepithelial flux of specific electrolytes, including Na+ and Cl- ions. Thus, there are defined correlates of ion flux and bioelectric parameters of active ion transport and tissue (barrier) resistance. Because the PD generated by the airway epithelium reflects the relationship between the magnitude and direction of the net transepithelial active ion transport and the epithelial ion conductance, the transepithelial PD (voltage) serves as an index of ion transport and ionic conductances (permeability). Individuals with cystic fibrosis have a characteristic pattern of bioelectric properties which reflect accelerated Na+ transport (absorption), and (absent) or reduced Cl- secretion." []
+is_a: MAXO:0000988 ! diagnostic procedure by site
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-01T10:28:35Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020007
+name: tympanometry
+def: "A diagnostic test that measures the compliance (mobility) of the tympanic membrane and middle ear system by varying air pressure in the ear canal. Tympanometry provides useful quantitative information about the presence of fluid in the middle ear, mobility of the middle ear system, and ear canal volume. Its use has been recommended in conjunction with more qualitative information (e.g., history, appearance, and mobility of the tympanic membrane) in the evaluation of otitis media with effusion and to a lesser extent in acute otitis media. It also can provide useful information about the patency of tympanostomy tubes." []
+is_a: MAXO:0001445 ! diagnostic procedure of auditory system
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-01T10:38:14Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020008
+name: tilt test
+def: "The tilt test is commonly used for evaluation of orthostatic syndromes and dysautonomia. Tilt test evaluates autonomic system responses to orthostatic stress induced by having the patient lie flat on a special table that creates a change in posture from lying to standing while the patient is being monitored with ECG and a blood pressure monitor that measure continuous, beat to beat, non-invasively. Established tilt testing includes monitoring of heart rate and blood pressure; adding capnography and cerebral blood flow monitoring expands its diagnostic yield and allows assessing cerebral blood flow regulation." []
+is_a: MAXO:0000493 ! diagnostic procedure of cardiovascular system
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-01T10:46:57Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020009
+name: forearm ischemic exercise test
+def: "The forearm ischemic exercise test (FIET) is a very important clinical tool for evaluation of patients suspected to have a metabolic disorder of muscle function. Failure to elevate lactate in blood washed out from ischemically exercised muscles confirms an abnormality of glycolytic metabolism. A normal increase of lactate on FIET is assumed to rule out a disorder of glycolytic metabolism. To perform the test, a blood pressure cuff is inflated on the arm to induce ischemia while the patient repeatedly contracts the forearm muscles for several minutes. Blood samples are drawn at baseline and at several time points after exercise." []
+comment: PMID:3476851
+synonym: "forearm ischemic test" EXACT []
+synonym: "noninvasive exercise test" EXACT []
+is_a: MAXO:0000493 ! diagnostic procedure of cardiovascular system
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-01T10:51:37Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020010
+name: autonomic nervous system function evaluation
+def: "The autonomic nervous system is the part of the nervous system that is responsible for regulation and integration of internal organs’ functioning. Most of the tests are based on evaluation of the cardiovascular reflexes triggered by performing specific provocative manoeuvres. Stimuli that raise blood pressure, such as isometric exercise, cold pressor test or mental arithmetic, activate mainly sympathetic outflow. Moreover, blood pressure responses to orthostatic testing and Valsalva manoeuvre are in a large part a reflection of sympathetic activity. Changes in heart rate during orthostatic testing and Valsalva manoeuvre, as well as during deep breathing or diving reflex, reflect parasympathetic modulation." []
+comment: PMID:22371714
+is_a: MAXO:0001406 ! diagnostic procedure of nervous system
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-01T10:55:43Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020011
+name: anthropometric assessment
+def: "Noninvasive quantitative measurements of the body. The core elements of anthropometry are height, weight, head circumference, body mass index (BMI), body circumferences to assess for adiposity (waist, hip, and limbs), and skinfold thickness." []
+comment: PMID:30726000
+is_a: MAXO:0000527 ! physical examination
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-01T10:58:42Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020012
+name: platelet aggregometry
+def: "A diagnostic test that measures how well platelets clump (aggregate) in response to a stimulaus. Light transmittance platelet aggregometry (LTA) in platelet‐rich plasma measures changes in light transmission as platelets aggregate. Impedance aggregometry measures changes in electrical impedance as platelets aggregate." []
+comment: PMID:35510959
+is_a: MAXO:0035122 ! cell function assay
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-01T11:06:22Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020013
+name: erythrocyte metabolite measurement
+def: "A quantitative measurement of metabolites present in the cytoplasm of erythrocytes." []
+is_a: MAXO:0000829 ! blood cell measurement
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-01T11:10:45Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020014
+name: ventilation/perfusion lung scan
+def: "A type of scintigraphy and medical isotopes to evaluate the circulation of air and blood within a patient's lungs, in order to determine the ventilation/perfusion ratio." []
+is_a: MAXO:0001408 ! diagnostic procedure of respiratory system
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-01T11:17:01Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020015
+name: fluorescence microscopy
+def: "Measurement of absorption of light energy (a photon) by an indicator followed by the emission of some of this light energy (as another photon) a few nanoseconds later." []
+is_a: MAXO:0000006 ! clinical laboratory procedure
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-01T11:42:28Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020016
+name: osmolality measurement
+def: "Determination of the osmolality in the circulation. Serum osmolality reflects the concentration of solutes (like sodium, glucose, urea) in the blood and is an important marker of body fluid balance." []
+is_a: MAXO:0000566 ! clinical chemistry assessment
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-01T11:45:04Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020017
+name: cytotoxicity assay
+def: "A laboratory test that measures the ability of immune cells (e.g., cytotoxic T cell or natural killer cells) to kill target cells." []
+is_a: MAXO:0001446 ! diagnostic procedure of immune system
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-01T11:54:28Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020018
+name: Flexion MRI
+def: "A type of MRI of the cervical spine designed to assess cervial myelopathy. Static views are taken with the neck in the neutral position and the mandible nearly perpendicular to the horizontal plane. To obtain the flexion/extension views, patients are instructed to perform the maximally tolerated flexion and extension actions of the neck in a non–weight-bearing position with supporting sponges placed under the head and shoulders." []
+comment: PMID:35636662
+is_a: MAXO:0000424 ! magnetic resonance imaging procedure
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-02T05:09:11Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020019
+name: intradermal histamine injection
+def: "A diagnostic procedure whereby histamine is injected into a local of the skin. This causes wheal and flare when they are injected intradermally into normal subjects and may therefore play a role in the formation of urticaria." []
+comment: This response may be absent in individuals with certin types of hereditary sensory and autonomic neuropathy.
+is_a: MAXO:0001404 ! diagnostic procedure of skin
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-02T05:15:47Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020020
+name: D-xylose urine test
+def: "A measurement of how well the small intestine absorbs D-xylose by analyzing the amount excreted in the urine after ingestion." []
+comment: PMID:10478874
+is_a: MAXO:0001401 ! diagnostic procedure of genitourinary system
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-02T05:25:23Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020021
+name: mitochondrial complex activity assessment
+def: "A measurement of the activity levels of the different complexes of the mitochondrial electron transport chain." []
+is_a: MAXO:0035122 ! cell function assay
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-02T05:30:35Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020022
+name: photodynamic therapy
+def: "Photodynamic therapy (PDT) is based on the local or systemic application of a photosensitive compound, a photosensitizer. The pheotosensitizer is activated by light and accumulates in pathological tissues. The photosensitizer molecules absorb the light of the appropriate wavelength, initiating the activation processes leading to the selective destruction of the inappropriate cells. The photocytotoxic reactions occur only within the pathological tissues, in the area of photosensitizer distribution, enabling selective destruction." []
+comment: PMID:30119176
+is_a: MAXO:0001578 ! laser surgical procedure
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-02T09:49:12Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020023
+name: cardiovascular intervention
+def: "Any procedure associated with treatments involving the heart or blood vessels." []
+is_a: MAXO:0000002 ! therapeutic procedure
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-02T09:51:09Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020024
+name: arterial embolization
+def: "A procedure that blocks the blood supply to a specific area, often a tumor or abnormal tissue, by intentionally obstructing an artery. Small particles made of tiny gelatin sponges or similar material are injected into a catheter, leading to blocakge of the artery or abnormal area of tissue." []
+comment: Arterial embolization is used to treat some types of liver cancer, kidney cancer, and neuroendocrine tumors. It may also be used to treat uterine fibroids, aneurysms, and other conditions. Also called TAE and transarterial embolization.
+is_a: MAXO:0020023 ! cardiovascular intervention
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-02T09:52:00Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020025
+name: substrate reduction therapy
+def: "A type of therapy used in metabolic diseases characterized by reduced activity of a metabolic enzyme. Substrate reduction therapy (SRT) aims to reduce the amount of substrate influx to that enyzme." []
+comment: An example is Gaucher disease, in which SRT aims to reduce the influx of glucocerebroside or glucosylceramide (GLC) influx into the lysosome by inhibiting the GLC-synthase enzyme, resulting in a reduction of the amount of GLC present. This is in contrast to enzyme replacement therapy, which works by supplementing the deficient or defective acid beta glucosidase to break down GLC into glucose and ceramide, which accumulates in macrophages in the absence of acid  beta glucosidase.PMID:27559188
+is_a: MAXO:0000009 ! nutrition intervention
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-02T09:56:13Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020026
+name: intrathecal antisense oligonucleotide inhibitor therapy
+def: "A type of antisense oligonucleotide therapy that is administered in the cerebrospinal fluid (i.e., intrathecally)." []
+comment: PMID:39191071
+is_a: MAXO:0001593 ! antisense oligonucleotide inhibitor therapy
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-02T10:01:05Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020027
+name: therapeutic hypothermia
+def: "A medical procedure consisting of the deliberate lowering of a patient's body temperature for purposes such as protecting vital organs or reducing brain damage." []
+comment: Therapeutic hypothermia is used in clinical situations including refractory status epilepticus.PMID:32330677
+is_a: MAXO:0000002 ! therapeutic procedure
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-02T10:02:59Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020028
+name: circulating enzyme activity testing
+def: "Measurement of the activity of amount of an enzyme within the blood circulation." []
+is_a: MAXO:0035011 ! enzyme activity assessment
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-08T05:36:05Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020029
+name: antibody titer measurement
+def: "The determination of the amount of antibody directed against a specific target in the blood circulation. The sample is serially diluted, and the highest dilution at which a positive result is obtained is recorded as the titer (e.g., 1:40)." []
+is_a: MAXO:0000566 ! clinical chemistry assessment
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-08T05:45:17Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020030
+name: contrast-enhanced computed tomography procedure
+def: "A diagnostic procedure using computed tomography (CT) in which a radiocontrast is administered in order to increase the contrast between a lesion and the normal surrounding structures." []
+synonym: "contrast-enhanced computed tomography" EXACT []
+synonym: "contrast-enhanced CT" EXACT []
+is_a: MAXO:0000571 ! computed tomography procedure
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-08T06:22:51Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020031
+name: neurophysiological assessment
+def: "A diagnostic procedure used to measure the electrical activity of the nervous system either spontaneously or in response to stimuli." []
+synonym: "neurophysiological testing" EXACT []
+is_a: MAXO:0001406 ! diagnostic procedure of nervous system
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-08T06:30:39Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020032
+name: evoked potential assessment
+def: "A type of neurophysiological assessment that measures the electrical responses of the nervous system to sensory stimuli." []
+is_a: MAXO:0020031 ! neurophysiological assessment
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-08T06:32:31Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020033
+name: magnetic resonance spectroscopy
+def: "Magnetic resonance spectroscopy (MRS) utilizes clinical MR scanners to noninvasively quantify in vivo brain biochemical metabolites, including N-acetyl-aspartate (NAA), creatine (Cr), choline (Cho), glutamate and glutamine (Glx), and myo-inositol (mI)." []
+is_a: MAXO:0000424 ! magnetic resonance imaging procedure
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-08T06:40:18Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020034
+name: contrast-enhanced magnetic resonance imaging procedure
+def: "A type of magnetic resonance imaging (MRI) procedure in which gadolinium or other contrast agent to improve the clarity and detail of MRI images." []
+comment: This term can be combined with organ-specific MRI terms.
+is_a: MAXO:0000424 ! magnetic resonance imaging procedure
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-08T06:44:26Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020035
+name: cerebrospinal fluid culture
+def: "A laboratory test in which cerebrospinal fluid (CSF) is inoculated into culture media to assess whether infection-causing microorganisms (bacteria or fungi) are present." []
+synonym: "CSF culture" EXACT []
+is_a: MAXO:0035007 ! cerebrospinal fluid analysis
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-08T06:47:34Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020036
+name: cerebrospinal fluid ion measurement
+def: "A quantitative measurement of ion concentration in a cerebrospinal fluid sample." []
+is_a: MAXO:0035007 ! cerebrospinal fluid analysis
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-08T06:49:37Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020037
+name: craniovertebral junction MRI
+def: "A medical examination performed using of magnetic resonance imaging to image the cervicomedullary junction, i.e., the region that spans the lower brainstem and upper cervical spinal cord." []
+is_a: MAXO:0000424 ! magnetic resonance imaging procedure
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-08T06:52:01Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020038
+name: urodynamic testing
+def: "The lower urinary tract (LUT) consists of the bladder and urethra and allows for the low-pressure storage of urine with conscious control of micturition. Urodynamics is the measurement of the relevant physiological parameters of the LUT to assess its function and dysfunction. The test involves noninvasive evaluation of bladder emptying, and invasive assessments of bladder storage function and bladder emptying function." []
+is_a: MAXO:0001401 ! diagnostic procedure of genitourinary system
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-08T06:54:54Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020039
+name: synovial fluid analysis
+def: "The investigation of synovial fluid, the collection of fluid confined within a joint space. Synovial fluid is physiologic, and acts as a joint space lubricant of articular cartilage, and nutrient source through diffusion for surrounding structures including cartilage, meniscus, labrum, etc. Arthrocentesis is the process by which synovial fluid collection occurs by penetrating the joint space through aspiration." []
+comment: PMID:30725799
+is_a: MAXO:0000988 ! diagnostic procedure by site
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-08T07:08:36Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020040
+name: panoramic radiograph
+def: "Panoramic radiography is an extraoral radiography modality that provides two-dimensional information about the teeth and the maxillofacial skeleton." []
+is_a: MAXO:0000595 ! radiograph imaging procedure
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-09T08:45:01Z" xsd:dateTime
+
+[Term]
+id: MAXO:0020041
+name: umbilical artery doppler sonography assessment
+def: "Measurement of characterisitc of the umbilical artery flow such as end-diastolic umbilical artery flow and umbilical artery pulsatility index (PI) by fetal Doppler ultrasound." [PMID:30353583]
+comment: Elevated PI may indicate increased resistance in placental circulation with the risk of reduced oxygen and nutrient delivery to the fetus.
+is_a: MAXO:0000520 ! fetal ultrasonography
+property_value: dce:creator https://orcid.org/0000-0002-0736-9199
+property_value: dce:date "2025-06-09T08:53:07Z" xsd:dateTime
+
+[Term]
 id: MAXO:0025001
 name: surgical procedure on cardiovascular system
 def: "Any surgical procedure conducted on the cardiovascular system." []
@@ -21368,21 +21727,19 @@ property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:strin
 
 [Term]
 id: MAXO:0035009
-name: examination by dentist
-def: "A direct appraisal of a patient's condition by a dentist that is based on an oral exam, medical history, and the patient's account of symptoms." []
-is_a: MAXO:0009053 ! medical specialist examination
 property_value: dce:date "2023-04-11T12:00:00Z" xsd:string
 property_value: dcterms:contributor https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:creator https://orcid.org/0000-0001-7941-2961
+is_obsolete: true
+replaced_by: MAXO:0035065
 
 [Term]
 id: MAXO:0035010
-name: examination by neonatologist
-def: "A direct appraisal by a professional who is an expert in premature babies or newborns with high-risk or complex health conditions. The physician performs a physical exam and takes medical history." []
-is_a: MAXO:0009053 ! medical specialist examination
 property_value: dce:date "2023-04-11T12:00:00Z" xsd:string
 property_value: dcterms:contributor https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:creator https://orcid.org/0000-0001-7941-2961
+is_obsolete: true
+replaced_by: MAXO:0035079
 
 [Term]
 id: MAXO:0035011
@@ -21615,8 +21972,8 @@ def: "Inspection of stomach using an endoscope." []
 synonym: "endoscopy of stomach" EXACT []
 synonym: "stomach endoscope" EXACT []
 is_a: MAXO:0000131 ! endoscopy by site
-is_a: MAXO:0001409 ! therapeutic procedure of digestive system
-is_a: MAXO:0001443 ! therapeutic procedure of organ
+is_a: MAXO:0001396 ! diagnostic procedure of digestive system
+is_a: MAXO:0001467 ! diagnostic procedure of organ
 property_value: dce:date "2023-04-19T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
@@ -21666,7 +22023,9 @@ name: duodenoscopy
 def: "Inspection of duodenum using an endoscope." []
 synonym: "duodenum endoscope" EXACT []
 synonym: "endoscopy of duodenum" EXACT []
-is_a: MAXO:0001186 ! enterosccopy
+is_a: MAXO:0000131 ! endoscopy by site
+is_a: MAXO:0001396 ! diagnostic procedure of digestive system
+is_a: MAXO:0001467 ! diagnostic procedure of organ
 property_value: dce:date "2023-04-19T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
@@ -21904,6 +22263,7 @@ property_value: dcterms:creator https://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0035065
 name: dentist evaluation
+alt_id: MAXO:0035009
 def: "A procedure where a dental professional who was not previously involved in a patient's treatment, reviews a patient's medical history, examines the patient, and makes recommendations as to care and treatment." []
 is_a: MAXO:0000731 ! allied health professional evaluation
 property_value: dce:date "2023-04-11T12:00:00Z" xsd:string
@@ -21915,6 +22275,8 @@ id: MAXO:0035066
 name: somatosensory evoked potential assessment
 def: "Measurement of somatosensory evoked potentials (SEPs), which reflect the electrical activity of the brain that results from the stimulation of touch. SEP monitoring may be employed intraoperatively to identify, and ideally, avoid impending permanent damage to neurologic structures. PMID: 31335078" []
 is_a: MAXO:0000939 ! stimulation procedure
+is_a: MAXO:0001419 ! therapeutic procedure of nervous system
+is_a: MAXO:0020032 ! evoked potential assessment
 property_value: dce:date "2023-04-11T12:00:00Z" xsd:string
 property_value: dcterms:contributor https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:creator https://orcid.org/0000-0001-7941-2961
@@ -22030,7 +22392,9 @@ property_value: dcterms:creator https://orcid.org/0000-0001-7941-2961
 [Term]
 id: MAXO:0035079
 name: neonatologist evaluation
+alt_id: MAXO:0035010
 def: "Examination by a doctor who specializes in the care of newborn babies." []
+synonym: "examination by neonatologist" EXACT []
 is_a: MAXO:0000707 ! pediatrician evaluation
 property_value: dce:date "2023-04-11T12:00:00Z" xsd:string
 property_value: dcterms:contributor https://orcid.org/0000-0002-0736-9199
@@ -22061,6 +22425,7 @@ property_value: dcterms:creator http://orcid.org/0000-0001-7941-2961
 id: MAXO:0035083
 name: CT urogram
 def: "Computed tomography (CT) examination of the kidneys, ureters and bladder following administration of intravenous contrast material." []
+synonym: "CT urography" EXACT []
 is_a: MAXO:0000989 ! CT by site
 property_value: dce:date "2023-04-11T12:00:00Z" xsd:string
 property_value: dcterms:contributor https://orcid.org/0000-0002-0736-9199
@@ -22136,8 +22501,8 @@ def: "Inspection of nasal vestibule using an endoscope." []
 synonym: "endoscopy of nasal vestibule" EXACT []
 synonym: "nasal vestibule endoscope" EXACT []
 is_a: MAXO:0000131 ! endoscopy by site
-is_a: MAXO:0000499 ! therapeutic procedure of respiratory system
-is_a: MAXO:0001443 ! therapeutic procedure of organ
+is_a: MAXO:0001408 ! diagnostic procedure of respiratory system
+is_a: MAXO:0001467 ! diagnostic procedure of organ
 property_value: dce:date "2023-04-12T20:39:14Z" xsd:string
 property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:string
 
@@ -22145,7 +22510,9 @@ property_value: dcterms:creator "http://orcid.org/0000-0001-7941-2961" xsd:strin
 id: MAXO:0035090
 name: hepatobiliary iminodiacetic acid scan
 def: "An imaging procedure in which a radioactive tracer is injected intravenously. The tracer is taken up by bile producing cells and subsequently travels with the bile into the gallbladder and through the bile ducts to the small intestine. THe hepatobiliary iminodiacetic acid (HIDA) scan can be used to visualize the liver, gallbladder and bile ducts." []
+synonym: "hepatobiliary scintigraphy" EXACT []
 is_a: MAXO:0000595 ! radiograph imaging procedure
+is_a: MAXO:0020005 ! scintigraphy imaging procedure
 property_value: dce:date "2023-04-11T12:00:00Z" xsd:string
 property_value: dcterms:contributor https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:creator https://orcid.org/0000-0001-7941-2961
@@ -22210,7 +22577,7 @@ property_value: dcterms:creator https://orcid.org/0000-0001-7941-2961
 id: MAXO:0035097
 name: visual evoked potential procedure
 def: "An evaluation of the visual pathway of the nervous system by means of analysis of electrical waves measured by electrodes that are applied to the head." []
-is_a: MAXO:0001406 ! diagnostic procedure of nervous system
+is_a: MAXO:0020032 ! evoked potential assessment
 property_value: dce:date "2023-04-11T12:00:00Z" xsd:string
 property_value: dcterms:contributor https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:creator https://orcid.org/0000-0001-7941-2961
@@ -22266,7 +22633,8 @@ property_value: dcterms:date "2023-04-11T12:00:00Z" xsd:string
 id: MAXO:0035104
 name: motor evoked potential evaluation
 def: "A neurophysiological examination that monitors the corticospinal tract beginning with a stimulus at the motor cortex, which travels along the corticospinal tract of the spinal cord to the nerve root, and then the peripheral nerve before terminating in a muscle belly. PMID:35593855" []
-is_a: MAXO:0000527 ! physical examination
+is_a: MAXO:0001156 ! whole body examination
+is_a: MAXO:0020032 ! evoked potential assessment
 property_value: dcterms:contributor https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2023-04-11T12:00:00Z" xsd:string
