@@ -102,20 +102,20 @@ merge_template: $(MERGE_TEMPLATE)
 ##########################################
 ### Get maxo annotations            ######
 ##########################################
-# YOU MUST SET THE MAXOA_RELEASE_PASSWORD ENVRIONMENTAL VARIABLE WHEN RELEASING
 MAXOA_DIRECTORY=tmp/maxoa
 MAXOA_FILENAME=maxo-annotations.tsv
-MAXOA_RELEASE_PASSWORD=$(shell cat maxoa-key.txt)
+MAXOA_REPO=monarch-initiative/maxo-annotations
 $(MAXOA_DIRECTORY)/$(MAXOA_FILENAME): $(SRC)
 	mkdir -p $(MAXOA_DIRECTORY)
-	@test $(MAXOA_RELEASE_PASSWORD)
-	@release_response=$$(curl -I -s -o /dev/null -w "%{http_code}" https://poet.jax.org/api/v1/export/release?key=$(MAXOA_RELEASE_PASSWORD)); \
-	if [ "$$release_response" != "200" ]; then \
-		echo "POET Release Failure. Got HTTP $$release_response"; \
+	@echo "Fetching latest release from $(MAXOA_REPO)..."
+	@release_url=$$(curl -s https://api.github.com/repos/$(MAXOA_REPO)/releases/latest | grep -o '"browser_download_url": "[^"]*$(MAXOA_FILENAME)"' | cut -d'"' -f4); \
+	if [ -z "$$release_url" ]; then \
+		echo "Error: Could not find $(MAXOA_FILENAME) in latest release"; \
 		exit 1; \
-	fi
-	@echo "POET Release Success!"
-	@curl -Lk https://poet.jax.org/api/v1/export/maxo > $@
+	fi; \
+	echo "Downloading from $$release_url..."; \
+	curl -Lk "$$release_url" > $@
+	@echo "Successfully downloaded $(MAXOA_FILENAME)"
 
 .PHONY: maxoa
 maxoa:
