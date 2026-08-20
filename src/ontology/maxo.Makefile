@@ -102,8 +102,6 @@ merge_template: $(MERGE_TEMPLATE)
 ##########################################
 ### Get maxo annotations            ######
 ##########################################
-.DELETE_ON_ERROR:
-
 MAXOA_DIRECTORY=tmp/maxoa
 MAXOA_FILENAME=maxo-annotations.tsv
 MAXOA_REPO=monarch-initiative/maxo-annotations
