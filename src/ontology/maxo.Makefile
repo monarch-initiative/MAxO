@@ -102,19 +102,22 @@ merge_template: $(MERGE_TEMPLATE)
 ##########################################
 ### Get maxo annotations            ######
 ##########################################
+.DELETE_ON_ERROR:
+
 MAXOA_DIRECTORY=tmp/maxoa
 MAXOA_FILENAME=maxo-annotations.tsv
 MAXOA_REPO=monarch-initiative/maxo-annotations
 $(MAXOA_DIRECTORY)/$(MAXOA_FILENAME): $(SRC)
 	mkdir -p $(MAXOA_DIRECTORY)
 	@echo "Fetching latest release from $(MAXOA_REPO)..."
-	@release_url=$$(curl -s https://api.github.com/repos/$(MAXOA_REPO)/releases/latest | grep -o '"browser_download_url": "[^"]*$(MAXOA_FILENAME)"' | cut -d'"' -f4); \
-	if [ -z "$$release_url" ]; then \
-		echo "Error: Could not find $(MAXOA_FILENAME) in latest release"; \
+	@release_urls=$$(curl -s https://api.github.com/repos/$(MAXOA_REPO)/releases/latest | jq -r '.assets[] | select(.name == "$(MAXOA_FILENAME)") | .browser_download_url'); \
+	count=$$(echo "$$release_urls" | grep -c .); \
+	if [ "$$count" -ne 1 ]; then \
+		echo "Error: Expected exactly 1 asset named $(MAXOA_FILENAME) in latest release, found $$count"; \
 		exit 1; \
 	fi; \
-	echo "Downloading from $$release_url..."; \
-	curl -Lk "$$release_url" > $@
+	echo "Downloading from $$release_urls..."; \
+	curl -Lkf "$$release_urls" > $@
 	@echo "Successfully downloaded $(MAXOA_FILENAME)"
 
 .PHONY: maxoa
