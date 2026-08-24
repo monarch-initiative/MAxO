@@ -102,19 +102,26 @@ merge_template: $(MERGE_TEMPLATE)
 ##########################################
 ### Get maxo annotations            ######
 ##########################################
+.DELETE_ON_ERROR:
+
 MAXOA_DIRECTORY=tmp/maxoa
 MAXOA_FILENAME=maxo-annotations.tsv
 MAXOA_REPO=monarch-initiative/maxo-annotations
 $(MAXOA_DIRECTORY)/$(MAXOA_FILENAME): $(SRC)
 	mkdir -p $(MAXOA_DIRECTORY)
 	@echo "Fetching latest release from $(MAXOA_REPO)..."
-	@release_url=$$(curl -s https://api.github.com/repos/$(MAXOA_REPO)/releases/latest | grep -o '"browser_download_url": "[^"]*$(MAXOA_FILENAME)"' | cut -d'"' -f4); \
+	@release_json=$$(curl -sf https://api.github.com/repos/$(MAXOA_REPO)/releases/latest); \
+	if [ $$? -ne 0 ]; then \
+		echo "Error: Failed to fetch release info from $(MAXOA_REPO) (network error or rate limited)"; \
+		exit 1; \
+	fi; \
+	release_url=$$(echo "$$release_json" | jq -r '.assets[] | select(.name == "$(MAXOA_FILENAME)") | .browser_download_url'); \
 	if [ -z "$$release_url" ]; then \
-		echo "Error: Could not find $(MAXOA_FILENAME) in latest release"; \
+		echo "Error: Could not find $(MAXOA_FILENAME) in latest release from $(MAXOA_REPO)"; \
 		exit 1; \
 	fi; \
 	echo "Downloading from $$release_url..."; \
-	curl -Lk "$$release_url" > $@
+	curl -Lf "$$release_url" > $@
 	@echo "Successfully downloaded $(MAXOA_FILENAME)"
 
 .PHONY: maxoa
