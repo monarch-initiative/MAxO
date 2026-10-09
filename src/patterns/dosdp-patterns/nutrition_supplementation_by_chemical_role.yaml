@@ -8,6 +8,7 @@ contributors:
   - https://orcid.org/0000-0002-7463-6306
 
 classes:
+  thing: owl:Thing
   nutritional supplementation: MAXO:0000106
   chebi role: CHEBI:50906
 relations:
@@ -16,17 +17,17 @@ relations:
   
 annotationProperties:
   exact_synonym: oio:hasExactSynonym 
-  created_by: dcterms:creator
+  created_by: http://purl.org/dc/terms/creator
   date: dc:date
   comment: rdfs:comment
   xref: oio:hasDbXref
   
 vars:
+  created_by: "'thing'"
   supplement_role: "'chebi role'"
 
 data_vars:
   date: "'date'"
-  created_by: "'created_by'"
   comment: "'comment'"
   xref: "'xref'"
 
@@ -60,9 +61,7 @@ annotations:
      - date
      
   - annotationProperty: created_by
-    text: "%s"
-    vars:
-     - created_by
+    var: created_by
      
   - annotationProperty: comment
     text: "%s"

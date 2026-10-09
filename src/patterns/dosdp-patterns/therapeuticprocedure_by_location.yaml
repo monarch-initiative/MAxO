@@ -6,6 +6,7 @@ contributors:
   - https://orcid.org/0000-0001-7941-2961
 
 classes:
+  thing: owl:Thing
   therapeutic procedure by site: MAXO:0000034
   location: UBERON:0001062
 
@@ -15,17 +16,17 @@ relations:
   
 annotationProperties:
   exact_synonym: oio:hasExactSynonym 
-  created_by: dcterms:creator
+  created_by: http://purl.org/dc/terms/creator
   date: dc:date
   comment: rdfs:comment
   xref: oio:hasDbXref
  
 vars:
+  created_by: "'thing'"
   location: "'location'"
   
 data_vars:
   date: "'date'"
-  created_by: "'created_by'"
   comment: "'comment'"
   xref: "database cross reference"
 
@@ -50,9 +51,7 @@ annotations:
      - date
      
   - annotationProperty: created_by
-    text: "%s"
-    vars:
-     - created_by
+    var: created_by
 
   - annotationProperty: comment
     text: "%s"

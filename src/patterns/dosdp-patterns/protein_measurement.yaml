@@ -7,6 +7,7 @@ contributors:
   - https://orcid.org/0000-0002-7356-1779
 
 classes:
+  thing: owl:Thing
   clinical chemistry assessment: MAXO:0000566
   protein entity: PR:000000001
 relations:
@@ -15,17 +16,17 @@ relations:
   
 annotationProperties:
   exact_synonym: oio:hasExactSynonym 
-  created_by: dcterms:creator
+  created_by: http://purl.org/dc/terms/creator
   date: dc:date
   comment: rdfs:comment
   xref: oio:hasDbXref
   
 vars:
+  created_by: "'thing'"
   protein: "'protein entity'"
 
 data_vars:
   date: "'date'"
-  created_by: "'created_by'"
   comment: "'comment'"
   xref: "'xref'"
 
@@ -55,9 +56,7 @@ annotations:
      - date
      
   - annotationProperty: created_by
-    text: "%s"
-    vars:
-     - created_by
+    var: created_by
      
   - annotationProperty: comment
     text: "%s"

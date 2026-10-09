@@ -7,6 +7,7 @@ contributors:
   - https://orcid.org/0000-0002-7356-1779
 
 classes:
+  thing: owl:Thing
   biopsy: OBI:0002650
   clinical biopsy: MAXO:0001269
 
@@ -16,17 +17,17 @@ relations:
   
 annotationProperties:
   exact_synonym: oio:hasExactSynonym 
-  created_by: dcterms:creator
+  created_by: http://purl.org/dc/terms/creator
   date: dc:date
   comment: rdfs:comment
   xref: oio:hasDbXref
  
 vars:
+  created_by: "'thing'"
   biopsy: "'biopsy'"
   
 data_vars:
   date: "'date'"
-  created_by: "'created_by'"
   comment: "'comment'"
   xref: "database cross reference"
 
@@ -46,9 +47,7 @@ annotations:
      - date
      
   - annotationProperty: created_by
-    text: "%s"
-    vars:
-     - created_by
+    var: created_by
 
   - annotationProperty: comment
     text: "%s"

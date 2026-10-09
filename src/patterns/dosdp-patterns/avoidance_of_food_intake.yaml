@@ -8,6 +8,7 @@ contributors:
   - https://orcid.org/0000-0002-7463-6306
 
 classes:
+  thing: owl:Thing
   avoidance: MAXO:0001014
   nutrition intake avoidance: MAXO:0000056
   material entity: BFO:0000040
@@ -17,17 +18,17 @@ relations:
   
 annotationProperties:
   exact_synonym: oio:hasExactSynonym 
-  created_by: dcterms:creator
+  created_by: http://purl.org/dc/terms/creator
   date: dc:date
   comment: rdfs:comment
   xref: oio:hasDbXref
  
 vars:
+  created_by: "'thing'"
   avoid_food: "'material entity'"
   
 data_vars:
   date: "'date'"
-  created_by: "'created_by'"
   comment: "'comment'"
   xref: "'database_cross_reference'"
 
@@ -72,9 +73,7 @@ annotations:
      - date
 
   - annotationProperty: created_by
-    text: "%s"
-    vars:
-     - created_by
+    var: created_by
      
   - annotationProperty: comment
     text: "%s"
