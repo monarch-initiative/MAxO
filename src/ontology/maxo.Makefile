@@ -27,6 +27,21 @@ $(ONT)-base.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(IMPORT_FILES)
 		--output $@.tmp.owl && mv $@.tmp.owl $@
 
 #########################################
+### DOSDP: typed creation dates #########
+#########################################
+# Same as the ODK recipe, plus a SPARQL update: DOSDP writes all text annotations
+# as xsd:string, but dcterms:date must be xsd:dateTime (#724). Keep in sync with
+# the $(PATTERNDIR)/definitions.owl rule in the ODK Makefile on upgrades.
+
+ifeq ($(PAT),true)
+$(PATTERNDIR)/definitions.owl: $(DOSDP_OWL_FILES_DEFAULT)   $(DOSDP_OWL_FILES_MANUAL)
+	if [ "${DOSDP_PATTERN_NAMES_DEFAULT}" ]   || [ "${DOSDP_PATTERN_NAMES_MANUAL}" ] && [ $(PAT) = true ]; then $(ROBOT) merge $(addprefix -i , $^) \
+		query --update $(SPARQLDIR)/type-dcterms-dates.ru \
+		annotate --ontology-iri $(ONTBASE)/patterns/definitions.owl  --version-iri $(ONTBASE)/releases/$(TODAY)/patterns/definitions.owl \
+      --annotation owl:versionInfo $(VERSION) -o definitions.ofn && mv definitions.ofn $@; fi
+endif
+
+#########################################
 ### Generating all ROBOT templates ######
 #########################################
 
