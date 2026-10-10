@@ -1,0 +1,283 @@
+id: https://w3id.org/monarch-initiative/maxo-schema
+name: maxo_schema
+title: MAxO metadata schema
+description: >-
+  Minimal LinkML schema for the annotation layer of the Medical Action Ontology
+  (maxo-edit.owl plus its components). It fixes which annotation properties MAxO
+  uses and what their values must look like, so that metadata drift (dce vs
+  dcterms, http vs https ORCIDs, IRIs where literals belong, untyped dates, ...)
+  is caught by validation rather than by eye.
+
+
+  The data is produced by src/scripts/maxo_to_linkml.py, which is driven by this
+  schema: every slot_uri below is the one and only property accepted for that
+  slot. Annotation properties without a slot here are emitted under their CURIE
+  (e.g. `dce:date`, `obo:dcterms_creator`) and rejected because all classes are
+  closed. To allow a new property, add a slot with its slot_uri.
+
+
+  Value encoding used by the converter (so the schema can see what RDF had):
+  IRIs are written as CURIEs (full IRI if no prefix is known); literals as their
+  lexical form; typed literals other than xsd:string as `lexical^^xsd:type`;
+  non-English language tags as `lexical@lang`. If the RDF node kind does not
+  match the slot range, it is made visible: an IRI in a literal-valued slot is
+  written `<iri>`, a literal in an IRI-valued slot is written `"lexical"`. More
+  than one value on a single-valued slot is emitted as a list.
+license: https://creativecommons.org/publicdomain/zero/1.0/
+version: 0.1.0
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  maxo_schema: https://w3id.org/monarch-initiative/maxo-schema/
+  MAXO: http://purl.obolibrary.org/obo/MAXO_
+  OMO: http://purl.obolibrary.org/obo/OMO_
+  IAO: http://purl.obolibrary.org/obo/IAO_
+  ORCID: https://orcid.org/
+  oboInOwl: http://www.geneontology.org/formats/oboInOwl#
+  dcterms: http://purl.org/dc/terms/
+  dce: http://purl.org/dc/elements/1.1/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  owl: http://www.w3.org/2002/07/owl#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  obo: http://purl.obolibrary.org/obo/
+
+default_prefix: maxo_schema
+default_range: string
+
+imports:
+  - linkml:types
+
+classes:
+
+  Ontology:
+    tree_root: true
+    class_uri: owl:Ontology
+    description: The ontology header plus all annotated entities.
+    slots:
+      - id
+      - title
+      - description
+      - license
+      - creators
+      - contributors
+      - root_terms
+      - terms
+
+  Term:
+    class_uri: owl:Class
+    description: >-
+      A MAxO class (or any other entity that carries annotations in the MAxO
+      source, which is then flagged by the id pattern).
+    slots:
+      - id
+      - label
+      - definition
+      - comments
+      - exact_synonyms
+      - narrow_synonyms
+      - broad_synonyms
+      - related_synonyms
+      - xrefs
+      - subclass_of
+      - creators
+      - contributors
+      - date
+      - deprecated
+      - replaced_by
+      - alternative_ids
+    slot_usage:
+      id:
+        pattern: "^MAXO:\\d{7}$"
+        description: Only MAXO terms may be annotated in the MAxO source.
+      label:
+        required: true
+      definition:
+        recommended: true
+    # gen-json-schema (linkml 1.9) makes every slot named in a rule `required` and
+    # ignores min/max cardinality there, so presence is expressed with value_presence.
+    rules:
+      - description: >-
+          Obsolete terms carry an 'obsolete ' label prefix and have no asserted
+          parents; live terms have no 'obsolete ' prefix and no replaced_by.
+          (Live terms are not required to have an asserted parent: DOSDP-defined
+          terms only have an equivalence axiom.)
+        preconditions:
+          slot_conditions:
+            deprecated:
+              equals_string: "true^^xsd:boolean"
+        postconditions:
+          slot_conditions:
+            label:
+              pattern: "^obsolete "
+            subclass_of:
+              value_presence: ABSENT
+        elseconditions:
+          slot_conditions:
+            label:
+              pattern: "^(?!obsolete )"
+            replaced_by:
+              value_presence: ABSENT
+
+  AnnotatedValue:
+    abstract: true
+    description: >-
+      An annotation value together with its axiom annotations (OWL axiom
+      annotations / OBO trailing qualifiers).
+    slots:
+      - value
+
+  Definition:
+    is_a: AnnotatedValue
+    slots:
+      - xrefs
+    slot_usage:
+      value:
+        pattern: "^\\S(.*\\S)?$"
+      xrefs:
+        recommended: true
+        description: Every definition should cite at least one source.
+
+  Comment:
+    is_a: AnnotatedValue
+    slots:
+      - xrefs
+
+  Synonym:
+    is_a: AnnotatedValue
+    slots:
+      - synonym_type
+      - xrefs
+    slot_usage:
+      value:
+        pattern: "^\\S(.*\\S)?$"
+
+slots:
+
+  id:
+    identifier: true
+    range: uriorcurie
+    description: CURIE of the ontology or term.
+  value:
+    required: true
+    description: The annotation value itself.
+
+  terms:
+    range: Term
+    multivalued: true
+    inlined_as_list: true
+    description: >-
+      A list, not a dict keyed by id: linkml-validate reports only one error per
+      entry of a dict-inlined collection (anyOf + best_match). Report paths
+      /terms/<n> are mapped back to term ids by `maxo_to_linkml.py --report`.
+
+  # --- ontology header ---------------------------------------------------
+  title:
+    slot_uri: dcterms:title
+    required: true
+    description: Use dcterms:title, not dce:title.
+  description:
+    slot_uri: dcterms:description
+    required: true
+    description: Use dcterms:description, not dce:description.
+  license:
+    slot_uri: dcterms:license
+    range: uri
+    required: true
+    pattern: "^https?://creativecommons\\.org/"
+  root_terms:
+    slot_uri: IAO:0000700
+    range: uriorcurie
+    multivalued: true
+    pattern: "^MAXO:\\d{7}$"
+
+  # --- term metadata -----------------------------------------------------
+  label:
+    slot_uri: rdfs:label
+    pattern: "^\\S(?!.*\\s\\s)(.*\\S)?$"
+    description: Exactly one label, no leading/trailing or doubled whitespace.
+  definition:
+    slot_uri: IAO:0000115
+    range: Definition
+  comments:
+    slot_uri: rdfs:comment
+    range: Comment
+    multivalued: true
+    inlined_as_list: true
+  exact_synonyms:
+    slot_uri: oboInOwl:hasExactSynonym
+    range: Synonym
+    multivalued: true
+    inlined_as_list: true
+  narrow_synonyms:
+    slot_uri: oboInOwl:hasNarrowSynonym
+    range: Synonym
+    multivalued: true
+    inlined_as_list: true
+  broad_synonyms:
+    slot_uri: oboInOwl:hasBroadSynonym
+    range: Synonym
+    multivalued: true
+    inlined_as_list: true
+  related_synonyms:
+    slot_uri: oboInOwl:hasRelatedSynonym
+    range: Synonym
+    multivalued: true
+    inlined_as_list: true
+  synonym_type:
+    slot_uri: oboInOwl:hasSynonymType
+    range: SynonymTypeEnum
+    description: Synonym type, as an axiom annotation on the synonym.
+  xrefs:
+    slot_uri: oboInOwl:hasDbXref
+    multivalued: true
+    pattern: "^[A-Za-z][A-Za-z0-9_.-]*:\\S+$"
+    description: >-
+      Database cross-references are string literals in CURIE (or URL) form,
+      never IRIs.
+  subclass_of:
+    slot_uri: rdfs:subClassOf
+    range: uriorcurie
+    multivalued: true
+    description: Named asserted superclasses (anonymous class expressions are ignored).
+  creators:
+    slot_uri: dcterms:creator
+    range: uriorcurie
+    multivalued: true
+    pattern: "^ORCID:\\d{4}-\\d{4}-\\d{4}-\\d{3}[\\dX]$"
+    description: >-
+      ORCID IRIs (https://orcid.org/...), never literals. Use dcterms:creator,
+      not dce:creator or oboInOwl:created_by.
+  contributors:
+    slot_uri: dcterms:contributor
+    range: uriorcurie
+    multivalued: true
+    pattern: "^ORCID:\\d{4}-\\d{4}-\\d{4}-\\d{3}[\\dX]$"
+    description: ORCID IRIs. Use dcterms:contributor, not dce:contributor.
+  date:
+    slot_uri: dcterms:date
+    pattern: "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?Z\\^\\^xsd:dateTime$"
+    description: >-
+      Creation date as an xsd:dateTime-typed literal in UTC. Use dcterms:date,
+      not dce:date.
+  deprecated:
+    slot_uri: owl:deprecated
+    equals_string: "true^^xsd:boolean"
+    description: Only ever asserted as true, typed xsd:boolean.
+  replaced_by:
+    slot_uri: IAO:0100001
+    range: uriorcurie
+    pattern: "^[A-Za-z][A-Za-z0-9_]*:\\d+$"
+    description: Term replaced by (an IRI, not a literal; may be in another OBO ontology).
+  alternative_ids:
+    slot_uri: oboInOwl:hasAlternativeId
+    multivalued: true
+    pattern: "^MAXO:\\d{7}$"
+
+enums:
+  SynonymTypeEnum:
+    description: Synonym types MAxO uses. Extend when a new type is adopted.
+    permissible_values:
+      "OMO:0003000":
+        description: abbreviation
+        meaning: OMO:0003000

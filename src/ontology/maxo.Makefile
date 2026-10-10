@@ -157,6 +157,41 @@ public_release:
 
 
 #########################################
+### LinkML metadata validation ##########
+#########################################
+# Translates the MAxO source (edit file + components, no imports) into YAML and
+# validates it against src/schema/maxo_schema.yaml. Catches metadata drift such as
+# dce vs dcterms, http vs https ORCIDs, IRI-valued xrefs and untyped dates (#724).
+# Full report: $(REPORTDIR)/maxo-linkml-validation.txt (one line per problem).
+
+LINKML_SCHEMA =       ../schema/maxo_schema.yaml
+LINKML_CONFIG =       ../schema/validation-config.yaml
+LINKML_SOURCE =       $(TMPDIR)/maxo-linkml-source.ttl
+LINKML_DATA =         $(TMPDIR)/maxo-linkml.yaml
+LINKML_REPORT =       $(REPORTDIR)/maxo-linkml-validation.txt
+
+# Always rebuilt from the files as they are on disk: no prerequisites on $(OTHER_SRC),
+# which would otherwise trigger the DOSDP/template pipelines just to validate.
+.PHONY: linkml_source_force
+$(LINKML_SOURCE): linkml_source_force | $(TMPDIR)
+	$(ROBOT) merge -i $(SRC) $(patsubst %, -i %, $(OTHER_SRC)) --collapse-import-closure false \
+		remove --select imports --trim false \
+		convert -f ttl -o $@
+
+$(LINKML_DATA): $(LINKML_SOURCE) $(LINKML_SCHEMA) $(SCRIPTSDIR)/maxo_to_linkml.py
+	python3 $(SCRIPTSDIR)/maxo_to_linkml.py --schema $(LINKML_SCHEMA) -o $@ $<
+
+# Writes the report, prints a per-message-type summary, and fails if any ERROR remains.
+.PHONY: validate_linkml
+validate_linkml: $(LINKML_DATA) $(LINKML_CONFIG) | $(REPORTDIR)
+	linkml-validate --config $(LINKML_CONFIG) -s $(LINKML_SCHEMA) $< > $(LINKML_REPORT); \
+		status=$$?; \
+		python3 $(SCRIPTSDIR)/maxo_to_linkml.py --report $< $(LINKML_REPORT) || exit 1; \
+		sed -E -e "s/ in \/.*$$//" -e "s/'[^']*' (does not match|is not)/<value> \1/" $(LINKML_REPORT) | sort | uniq -c | sort -rn; \
+		echo "Full report: $(LINKML_REPORT)"; \
+		exit $$status
+
+#########################################
 ### Graveyard        ####################
 #########################################
 
